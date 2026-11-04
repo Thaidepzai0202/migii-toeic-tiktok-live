@@ -1057,8 +1057,11 @@ function tryConnect(force = false) {
       const msg = e.message || String(e);
       // "Room ID" = kênh chưa lên sóng → nói rõ cho người dẫn
       tiktok.error = /room ?id|offline|not.*live/i.test(msg) ? 'kênh chưa lên sóng' : msg.slice(0, 120);
-      if (tiktok.attempts % 6 === 1) console.warn(`Chưa nối được @${TIKTOK_USER} (${msg.slice(0, 90)}) — tự thử lại mỗi ${RETRY_SEC}s`);
-      scheduleConnect(RETRY_SEC);
+      // Euler giới hạn số lần nối/giờ: bị chặn mà vẫn thử mỗi 10s thì càng bị chặn lâu → lùi 2 phút
+      const limited = /rate.?limit|too many/i.test(msg);
+      if (limited) tiktok.error = 'bị giới hạn số lần nối, chờ 2 phút';
+      if (limited || tiktok.attempts % 6 === 1) console.warn(`Chưa nối được @${TIKTOK_USER} (${msg.slice(0, 90)}) — thử lại sau ${limited ? 120 : RETRY_SEC}s`);
+      scheduleConnect(limited ? 120 : RETRY_SEC);
     })
     .finally(() => {
       tiktok.connecting = false;
