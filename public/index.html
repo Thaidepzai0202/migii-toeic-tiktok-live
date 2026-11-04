@@ -1,0 +1,1452 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Đố từ tiếng Hàn · Jaemy</title>
+<!-- "Thêm vào Màn hình chính" trên điện thoại → mở toàn màn hình, không thanh địa chỉ (live chia sẻ màn hình) -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Đố từ Hàn">
+<meta name="theme-color" content="#0b1028">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;700;800;900&family=Noto+Sans+KR:wght@700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<style>
+  :root {
+    --bg1: #141b3a; --bg2: #0b1028;
+    --card: rgba(255,255,255,.06); --line: rgba(255,255,255,.12);
+    --text: #fff; --muted: #a9b0d6;
+    --orange: #ff8a1f; --orange2: #ffb34d; --green: #3ee08f; --pink: #ff5d8f; --cyan: #5cd6ff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; background: #000; overflow: hidden; }
+  body { font-family: 'Be Vietnam Pro', system-ui, sans-serif; color: var(--text); }
+  .ko { font-family: 'Noto Sans KR', 'Be Vietnam Pro', sans-serif; }
+
+  /* Khung cố định 1080×1920, co giãn vừa cửa sổ */
+  /* fixed + gốc trên-trái: khung 1080px không làm trình duyệt điện thoại nới rộng/phóng trang */
+  #stage {
+    position: fixed; left: 0; top: 0; width: 1080px; height: 1920px;
+    transform-origin: 0 0; overflow: hidden;
+    /* nền PHẲNG: live bị nén ~5 Mbps + phóng to → nền chuyển màu/chấm bi vỡ thành ô nhòe. Màu phẳng nén sạch, chữ nét hơn */
+    background: #141b3a;
+  }
+  #stage::before { /* (bỏ chấm nền) */
+    content: none; position: absolute; inset: 0; opacity: .5;
+    background-image: radial-gradient(rgba(255,255,255,.07) 2px, transparent 2px);
+    background-size: 36px 36px;
+  }
+  /* Thanh website: ngay dưới vùng ~140px mà thanh tên kênh của TikTok che */
+  .site {
+    position: absolute; left: 56px; right: 56px; top: 146px; height: 80px; z-index: 4;
+    display: flex; align-items: center; gap: 16px; padding: 0 12px 0 8px;
+    border-radius: 999px; background: #fff; color: var(--bg2); box-shadow: 0 8px 0 rgba(0,0,0,.25);
+  }
+  .site img.ic { width: 64px; height: 64px; border-radius: 16px; flex: none; }
+  .site .nm { flex: 1; min-width: 0; line-height: 1.05; }
+  .site .nm b { display: block; color: var(--orange); font-size: 36px; font-weight: 900; }
+  .site .nm span { display: block; color: #4a5180; font-weight: 800; font-size: 25px; white-space: nowrap; }
+  .site .dl { flex: none; display: flex; align-items: center; gap: 8px; font-size: 22px; font-weight: 800; color: #5a6190; }
+  .site .dl img { height: 52px; display: block; }
+  /* khung mời tải app (màn chờ + vinh danh) */
+  .appcard { margin-top: 26px; width: 100%; display: flex; align-items: center; gap: 26px; text-align: left;
+             background: #fff; color: var(--bg2); border-radius: 32px; padding: 22px 26px; box-shadow: 0 10px 0 rgba(0,0,0,.28); }
+  .appcard > img.ic { width: 150px; height: 150px; border-radius: 34px; flex: none; box-shadow: 0 6px 18px rgba(0,0,0,.18); }
+  .appcard .tx { flex: 1; min-width: 0; }
+  .appcard .t1 { font-size: 30px; font-weight: 800; color: #5a6190; }
+  .appcard .t2 { font-size: 40px; font-weight: 900; line-height: 1.1; color: var(--bg2); }
+  .appcard .t2 b { color: var(--orange); }
+  .appcard .badges { margin-top: 12px; display: flex; gap: 10px; }
+  .appcard .badges img { height: 62px; display: block; }
+  .appcard .qr { flex: none; text-align: center; font-size: 19px; font-weight: 800; color: #5a6190; }
+  .appcard .qr img { width: 150px; height: 150px; display: block; }
+  .wrap { position: relative; padding: 250px 56px 0; display: flex; flex-direction: column; align-items: center; }
+  .bb { width: 100%; display: flex; flex-direction: column; align-items: center; }
+  #lessonbox, #teacher, #room, #rank { display: none; }
+  .wrap.room #rank { display: block; }
+  #rank { position: absolute; top: 298px; right: 30px; width: 214px; z-index: 5; background: rgba(8,22,16,.72); border: 2px solid rgba(255,255,255,.22); border-radius: 20px; padding: 10px 14px 8px; }
+  #rank h3 { font-size: 21px; font-weight: 900; color: #ffd34d; margin-bottom: 4px; white-space: nowrap; }
+  #rank .ri { display: flex; align-items: center; gap: 6px; font-size: 20px; font-weight: 800; height: 29px; color: #fff; }
+  #rank .ri .md { width: 28px; text-align: center; font-size: 20px; color: var(--muted); font-weight: 900; flex: none; }
+  #rank .ri .nm { flex: 1; min-width: 0; }
+  #rank .ri .pt { color: var(--orange2); font-variant-numeric: tabular-nums; }
+  #rank .ri .x2 { font-size: 13px; padding: 1px 4px; }
+  .desk .mdl { position: absolute; top: -4px; left: 0; font-size: 34px; z-index: 3; }
+
+  /* ===== LỚP HỌC: bảng đen + cô Cáo + bàn học sinh ===== */
+  .wrap.room { padding-top: 205px; }
+  .wrap.room .panels, .wrap.room .footer, .wrap.room .prev { display: none; }
+  .wrap.room .bb { position: relative; background: radial-gradient(120% 90% at 30% 20%, #2f6b52, #1d4636 70%); border: 16px solid #8a5a2b;
+    border-radius: 30px; padding: 24px 30px 26px; box-shadow: 0 14px 0 #5e3b1a, inset 0 0 60px rgba(0,0,0,.35); }
+  .wrap.room .bb::after { content: ''; position: absolute; left: 40px; right: 40px; bottom: -16px; height: 14px; background: #a87445; border-radius: 6px; }
+  .wrap.room .pill { margin-top: 0; background: #f4f1e6; color: #1d4636; }
+  .wrap.room .q { color: #fdfbf3; text-shadow: 0 0 2px rgba(255,255,255,.4); }
+  .wrap.room .sub { color: #ffe9a8; }
+  .wrap.room .timer { margin-top: 22px; }
+  .wrap.room .opts { margin-top: 22px; }
+  .wrap.room .opt { min-height: 104px; }
+  .wrap.room .howto { margin-top: 18px; color: #e6efe9; font-size: 32px; }
+  .wrap.room.teach .opts { display: none; }
+  .wrap.room.teach #lessonbox { display: block; }
+  #lessonbox { margin-top: 18px; text-align: center; }
+  #lessonbox .mean { font-size: 76px; font-weight: 900; color: #fff; line-height: 1.1; }
+  #lessonbox .mean::before { content: '= '; color: #ffe9a8; }
+  #lessonbox .done { margin-top: 18px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  #lessonbox .done span { font-size: 28px; font-weight: 800; color: #1d4636; background: #e9f3ec; border-radius: 14px; padding: 6px 16px; }
+  .wrap.room #teacher { display: flex; }
+  #teacher { margin-top: 30px; width: 100%; align-items: center; gap: 22px; }
+  #teacher img { width: 120px; height: 120px; border-radius: 30px; flex: none; box-shadow: 0 8px 0 rgba(0,0,0,.3); }
+  #teacher .bubble { position: relative; flex: 1; background: #fff; color: #1b2142; border-radius: 30px; padding: 22px 30px; font-size: 38px; font-weight: 900; line-height: 1.2; min-height: 100px; display: flex; align-items: center; gap: 18px; }
+  #teacher .bubble::before { content: ''; position: absolute; left: -22px; top: 40px; border: 14px solid transparent; border-right: 14px solid #fff; border-left: 0; }
+  #teacher .av, .desk .av { border-radius: 50%; background: #3a4370 center/cover; display: grid; place-items: center; font-weight: 900; color: #fff; }
+  .desk:nth-child(5n+1) .av:not([style]) { background-color: #e0703a; } .desk:nth-child(5n+2) .av:not([style]) { background-color: #3a8fe0; }
+  .desk:nth-child(5n+3) .av:not([style]) { background-color: #b05ad6; } .desk:nth-child(5n+4) .av:not([style]) { background-color: #2fb37a; }
+  .desk:nth-child(5n) .av:not([style]) { background-color: #d6487a; }
+  #teacher .bubble .av { width: 76px; height: 76px; font-size: 36px; flex: none; }
+  #teacher .bubble b { color: var(--orange); }
+  #teacher .bubble.ok { background: var(--green); color: #05301b; } #teacher .bubble.ok::before { border-right-color: var(--green); }
+  #teacher .bubble.bad { background: #ffd9e3; } #teacher .bubble.bad::before { border-right-color: #ffd9e3; }
+  .wrap.room #room { display: grid; }
+  #room { margin-top: 26px; width: 100%; grid-template-columns: repeat(6, 1fr); gap: 14px 14px; }
+  .desk { position: relative; height: 160px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; }
+  .desk .tb { position: absolute; left: 0; right: 0; bottom: 0; height: 50px; background: #b07a46; border-radius: 12px 12px 6px 6px; box-shadow: 0 6px 0 #6e4521; z-index: 2; }
+  .desk .kid { position: absolute; left: 50%; bottom: 30px; width: 124px; height: 128px; transform: translateX(-50%); z-index: 1; transform-origin: 50% 100%; }
+  .desk .nm { position: relative; z-index: 3; flex: none; max-width: 100%; font-size: 20px; font-weight: 900; color: #fff; text-shadow: 0 2px 0 rgba(0,0,0,.6); padding: 0 6px 12px; text-align: center; }
+  .desk .st { position: absolute; top: 0; right: 0; font-size: 20px; font-weight: 900; color: #ffd34d; z-index: 3; text-shadow: 0 2px 0 rgba(0,0,0,.6); }
+  .desk.empty .kid { opacity: .5; }
+  .desk.called::before { content: '✋'; position: absolute; top: -4px; right: 2px; font-size: 40px; z-index: 4; animation: wave .6s ease-in-out infinite alternate; }
+  @keyframes wave { to { transform: rotate(18deg) } }
+  .desk.called .kid { animation: bob 1s ease-in-out infinite; filter: drop-shadow(0 0 10px rgba(255,170,60,.9)); }
+  .desk.right .kid { filter: drop-shadow(0 0 9px rgba(62,224,143,.95)); }
+  .desk.right::after { content: '✓'; position: absolute; top: 2px; left: 4px; font-size: 32px; font-weight: 900; color: var(--green); z-index: 3; text-shadow: 0 2px 0 rgba(0,0,0,.5); }
+  .desk.wrong .kid { filter: grayscale(.7) brightness(.8); }
+  .desk .mdl { position: absolute; top: -6px; left: 0; font-size: 34px; z-index: 3; }
+  #hall { display: none; }
+  .wrap.room #hall:not([hidden]) { display: flex; }
+  #hall { margin-top: 14px; width: 100%; flex-direction: column; align-items: center; gap: 4px; padding: 12px 18px; border-radius: 20px;
+    background: repeating-linear-gradient(90deg, rgba(255,255,255,.06) 0 40px, rgba(255,255,255,.02) 40px 80px), rgba(60,40,20,.55);
+    border: 2px dashed rgba(255,211,77,.5); text-align: center; }
+  #hall .hd { font-size: 26px; font-weight: 900; color: #ffd34d; }
+  #hall .hn { font-size: 22px; font-weight: 800; color: #fff; max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #hall .hk { font-size: 20px; font-weight: 800; color: #c3c8ea; }
+  @keyframes bob { 50% { transform: translateX(-50%) translateY(-10px) } }
+
+  .prev {
+    font-size: 32px; font-weight: 800; color: #c3c8ea;
+    background: rgba(0,0,0,.25); border: 1px solid var(--line); border-radius: 999px; padding: 12px 30px;
+    max-width: 720px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .prev b { color: var(--orange2); }
+
+  .pill {
+    margin-top: 34px; font-size: 28px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--bg2); background: var(--orange); border-radius: 999px; padding: 8px 26px;
+  }
+  .q {
+    margin-top: 22px; font-size: 104px; line-height: 1.08; font-weight: 900; text-align: center;
+    text-shadow: 0 6px 0 rgba(0,0,0,.35); max-width: 980px;
+  }
+  .q.long { font-size: 80px; }
+  .q.xlong { font-size: 62px; }
+  .sub { margin-top: 10px; font-size: 44px; font-weight: 700; color: var(--orange2); }
+
+  .timer { margin-top: 34px; width: 100%; display: flex; align-items: center; gap: 22px; }
+  .bar { flex: 1; height: 26px; border-radius: 999px; background: rgba(255,255,255,.1); overflow: hidden; }
+  .bar i { display: block; height: 100%; width: 100%; border-radius: 999px;
+           background: linear-gradient(90deg, var(--orange), var(--pink)); transform-origin: left; }
+  .secs { width: 84px; text-align: right; font-size: 56px; font-weight: 900; font-variant-numeric: tabular-nums; }
+  .secs.hot { color: var(--pink); }
+
+  .slots { margin-top: 40px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+  .slot {
+    width: 150px; height: 170px; border-radius: 26px; display: grid; place-items: center;
+    font-size: 104px; font-weight: 900; background: #fff; color: var(--bg2);
+    box-shadow: 0 10px 0 #c9cde8; transition: transform .25s;
+  }
+  .slot.empty { background: rgba(255,255,255,.08); box-shadow: inset 0 0 0 4px rgba(255,255,255,.18); }
+  .slot.cho { background: rgba(255,255,255,.14); color: var(--cyan); box-shadow: inset 0 0 0 4px var(--cyan); font-size: 88px; }
+  .slot.full { animation: pop .35s ease-out; }
+  .slots.reveal .slot { background: var(--green); color: #05301b; box-shadow: 0 10px 0 #1f9c5e; }
+  .slots.many .slot { width: 120px; height: 140px; font-size: 84px; }
+  @keyframes pop { 0% { transform: scale(.6) } 70% { transform: scale(1.12) } 100% { transform: scale(1) } }
+
+  /* Trắc nghiệm 4 đáp án */
+  .q.kw { font-size: 132px; letter-spacing: 2px; }
+  .q.kw.long { font-size: 100px; }
+  .opts { margin-top: 30px; width: 100%; display: none; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .wrap.mcq .opts { display: grid; }
+  .wrap.mcq .slots { display: none; }
+  .wrap.mcq .panel { height: 400px; }
+  .opt { position: relative; overflow: hidden; display: flex; align-items: center; gap: 16px; min-height: 118px; padding: 14px 20px;
+         border-radius: 26px; background: rgba(255,255,255,.1); box-shadow: inset 0 0 0 3px rgba(255,255,255,.16); text-align: left; }
+  .opt .n { flex: none; width: 70px; height: 70px; border-radius: 20px; display: grid; place-items: center;
+            font-size: 46px; font-weight: 900; color: var(--bg2); position: relative; }
+  .opt:nth-child(1) .n { background: var(--orange); } .opt:nth-child(2) .n { background: var(--cyan); }
+  .opt:nth-child(3) .n { background: var(--pink); }   .opt:nth-child(4) .n { background: #b68cff; }
+  .opt .t { flex: 1; min-width: 0; font-size: 38px; font-weight: 900; line-height: 1.15; position: relative;
+            display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .opt .t.sm { font-size: 31px; }
+  .opt .pct { position: relative; flex: none; font-size: 32px; font-weight: 900; font-variant-numeric: tabular-nums; }
+  .opt .bar2 { position: absolute; left: 0; top: 0; bottom: 0; width: var(--w, 0%); background: rgba(255,255,255,.12); transition: width .6s ease-out; }
+  .opts.rev .opt { opacity: .45; }
+  .opts.rev .opt.right { opacity: 1; background: var(--green); color: #05301b; box-shadow: 0 10px 0 #1f9c5e; animation: pop .35s ease-out; }
+  .opts.rev .opt.right .bar2 { background: rgba(255,255,255,.25); }
+  .howto { margin-top: 26px; font-size: 36px; font-weight: 800; color: #c3c8ea; text-align: center; min-height: 46px; }
+  .howto b { color: #fff; }
+  .howto .rom { color: var(--green); font-size: 40px; }
+
+  .panels { margin-top: 34px; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .panel { background: var(--card); border: 1px solid var(--line); border-radius: 28px; padding: 20px 22px; height: 500px; overflow: hidden; }
+  .panel h3 { font-size: 34px; font-weight: 900; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: baseline; }
+  .panel h3 small { font-size: 26px; color: var(--muted); font-weight: 700; }
+  .row { display: flex; align-items: center; gap: 12px; height: 54px; font-size: 32px; font-weight: 800; }
+  .rk { width: 40px; text-align: center; color: var(--muted); font-weight: 900; }
+  .row:nth-child(2) .rk { color: #ffd34d } .row:nth-child(3) .rk { color: #d8dcef } .row:nth-child(4) .rk { color: #e3a26b }
+  .nm { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .pt { font-variant-numeric: tabular-nums; font-weight: 900; color: var(--orange2); }
+  .x2 { font-size: 18px; background: var(--pink); color: #fff; border-radius: 8px; padding: 2px 7px; margin-left: 6px; vertical-align: 3px; }
+
+  .feed .it { display: flex; gap: 10px; align-items: center; height: 50px; font-size: 30px; font-weight: 700; color: rgba(255,255,255,.55); }
+  .feed .it .nm { flex: 0 1 auto; max-width: 56%; color: rgba(255,255,255,.75); }
+  .feed .it .tx { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .feed .it.ok { color: #fff; }
+  .feed .it.ok .nm { color: var(--green); }
+  .feed .it.ok .pt { color: var(--green); }
+  .feed .it.new { animation: slide .3s ease-out; }
+  @keyframes slide { from { transform: translateX(30px); opacity: 0 } }
+
+  .footer { margin-top: 22px; width: 100%; display: flex; justify-content: space-between; gap: 20px; font-size: 30px; font-weight: 800; color: #c3c8ea; }
+  .footer b { color: var(--pink); }
+  .brand { color: #fff; } .brand b { color: var(--orange); }
+
+  /* Thông báo quà / người mới */
+  /* Mép trên ~140px bị thanh tên kênh của TikTok che → thông báo đặt dưới bảng điểm */
+  #toasts { position: absolute; left: 0; right: 0; top: 1630px; display: flex; flex-direction: column; align-items: center; gap: 12px; pointer-events: none; }
+  .toast { font-size: 32px; font-weight: 800; padding: 14px 30px; border-radius: 999px;
+           background: linear-gradient(90deg, var(--pink), var(--orange)); box-shadow: 0 10px 30px rgba(0,0,0,.4);
+           animation: tin .35s ease-out, tout .4s ease-in 3.6s forwards; }
+  .toast.join { background: rgba(255,255,255,.12); font-size: 24px; font-weight: 700; padding: 8px 22px; }
+  @keyframes tin { from { transform: translateY(-30px) scale(.9); opacity: 0 } }
+  @keyframes tout { to { transform: translateY(-20px); opacity: 0 } }
+
+  /* Thẻ cảm ơn người tặng quà (hiện lần lượt theo hàng đợi) */
+  #thanks { position: absolute; left: 70px; right: 70px; top: 1610px; display: flex; align-items: center; gap: 26px;
+            padding: 24px 32px; border-radius: 34px; background: linear-gradient(100deg, var(--pink), var(--orange));
+            box-shadow: 0 16px 40px rgba(0,0,0,.45); opacity: 0; transform: translateY(40px) scale(.9);
+            transition: opacity .3s, transform .35s cubic-bezier(.2,1.4,.4,1); }
+  #thanks.on { opacity: 1; transform: none; }
+  #thanks .av { width: 110px; height: 110px; flex: none; border-radius: 50%; border: 5px solid #fff;
+                background: #fff3 center/cover; display: grid; place-items: center; font-size: 58px; }
+  #thanks .t1 { font-size: 46px; font-weight: 900; line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #thanks .t2 { margin-top: 6px; font-size: 28px; font-weight: 700; opacity: .95; }
+  #thanks .tx { min-width: 0; }
+  #thanks .ic { margin-left: auto; font-size: 86px; flex: none; }
+  /* quà ≥100 xu: thẻ vàng to hơn */
+  #thanks.big { background: linear-gradient(100deg, #ffcf3a, #ff8a1f 60%, #ff5d8f); top: 1580px; padding: 30px 36px; }
+  #thanks.big .t1 { font-size: 54px; }
+  #thanks.big .ic { font-size: 110px; animation: wob .6s ease-in-out infinite alternate; }
+  @keyframes wob { from { transform: rotate(-10deg) scale(1) } to { transform: rotate(10deg) scale(1.12) } }
+
+  /* quà ≥1000 xu: chữ cảm ơn giữa màn + pháo giấy */
+  #mega { position: absolute; inset: 0; z-index: 5; display: none; place-items: center; text-align: center;
+          background: radial-gradient(circle at 50% 45%, rgba(255,180,60,.55), rgba(11,16,40,.92) 65%); }
+  #mega.on { display: grid; animation: tin .4s ease-out; }
+  #mega .ic { font-size: 300px; animation: fly 1.4s ease-in-out infinite alternate; }
+  #mega .t1 { font-size: 92px; font-weight: 900; text-shadow: 0 8px 0 rgba(0,0,0,.4); padding: 0 60px; }
+  #mega .t2 { margin-top: 18px; font-size: 44px; font-weight: 800; color: var(--orange2); }
+  @keyframes fly { from { transform: translateY(20px) rotate(-6deg) } to { transform: translateY(-40px) rotate(6deg) } }
+  .confetti { position: absolute; top: -40px; width: 22px; height: 34px; border-radius: 4px; z-index: 6;
+              animation: fall linear forwards; }
+  @keyframes fall { to { transform: translateY(2000px) rotate(720deg) } }
+
+  /* Màn cảm ơn cuối phiên */
+  #thanks { z-index: 7; }
+  #outro { position: absolute; inset: 0; z-index: 4; display: none; flex-direction: column; align-items: center;
+           padding: 250px 70px 0; text-align: center;
+           background: radial-gradient(1000px 800px at 50% 20%, #3a2a78 0%, transparent 65%), linear-gradient(180deg, #161c40, #0b1028); }
+  #outro.on { display: flex; animation: tin .5s ease-out; }
+  #outro h1 { font-size: 72px; font-weight: 900; line-height: 1.05; text-shadow: 0 8px 0 rgba(0,0,0,.35); }
+  #outro h1 span { color: var(--orange); }
+  #outro .lead { margin-top: 18px; font-size: 38px; font-weight: 700; color: var(--muted); }
+  .podium { margin-top: 56px; display: flex; align-items: flex-end; justify-content: center; gap: 22px; width: 100%; }
+  .pd { flex: 1; max-width: 290px; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .pd .md { font-size: 72px; }
+  .pd .nm { font-size: 32px; font-weight: 800; max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .pd .bx { width: 100%; border-radius: 24px 24px 0 0; display: grid; place-items: center;
+            font-size: 40px; font-weight: 900; color: var(--bg2); }
+  .pd.p1 .bx { height: 230px; background: linear-gradient(#ffe27a, #ffb63a); }
+  .pd.p2 .bx { height: 170px; background: linear-gradient(#f2f4ff, #b9c0e2); }
+  .pd.p3 .bx { height: 130px; background: linear-gradient(#ffc79a, #e3955a); }
+  .gift-box { margin-top: 40px; width: 100%; background: var(--card); border: 1px solid var(--line); border-radius: 30px; padding: 26px 30px; }
+  .gift-box h3 { font-size: 34px; font-weight: 900; margin-bottom: 14px; }
+  .gift-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 14px; }
+  .gift-list span { font-size: 30px; font-weight: 700; padding: 8px 20px; border-radius: 999px; background: rgba(255,93,143,.18); color: #ffd3e1; }
+  .stats { margin-top: 34px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; width: 100%; }
+  .stats div { background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: 18px 10px; }
+  .stats b { display: block; font-size: 60px; font-weight: 900; color: var(--orange2); }
+  .stats small { font-size: 26px; font-weight: 700; color: var(--muted); }
+  #outro .next { margin-top: 36px; font-size: 40px; font-weight: 800; }
+  #outro .next b { color: var(--green); }
+  #outro .cta { margin-top: 18px; font-size: 32px; font-weight: 700; color: var(--muted); }
+  #outro .cta b { color: var(--orange); }
+
+  /* ===== CHƯƠNG TRÌNH XOAY VÒNG: nền phẳng riêng từng khung (nén live sạch) ===== */
+  #stage[data-seg="class"], #stage[data-seg="class"] .scr { background: #15261f; }
+  #stage[data-seg="quiz"], #stage[data-seg="quiz"] .scr { background: #141b3a; }
+  #stage[data-seg="scramble"], #stage[data-seg="scramble"] .scr { background: #2a1846; }
+  #stage[data-seg="listen"], #stage[data-seg="listen"] .scr { background: #0d2e3a; }
+  #stage[data-seg="type"], #stage[data-seg="type"] .scr { background: #1d2230; }
+  #stage[data-seg="team"] { background: linear-gradient(90deg, #4a1424 50%, #13285c 50%); }
+  #stage[data-seg="team"] .scr { background: linear-gradient(90deg, #4a1424 50%, #13285c 50%); }
+  #stage[data-seg="scramble"] .pill { background: #c48bff; } #stage[data-seg="listen"] .pill { background: #4fd6c9; }
+  #stage[data-seg="type"] .pill { background: #ffd34d; } #stage[data-seg="team"] .pill { background: #fff; }
+  #segchip { position: absolute; left: 56px; top: 236px; z-index: 6; font-size: 24px; font-weight: 900; padding: 6px 18px; border-radius: 999px;
+             background: rgba(0,0,0,.35); color: #fff; display: none; }
+  #segchip.on { display: block; }
+  /* lịch chương trình trên màn chờ */
+  .lineup { margin-top: 18px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+  .lineup span { font-size: 24px; font-weight: 800; padding: 6px 14px; border-radius: 999px; background: rgba(255,255,255,.08); color: var(--muted); }
+  .lineup span.now { background: var(--orange); color: var(--bg2); }
+  #breakScr .kindtag { margin-top: 10px; font-size: 34px; font-weight: 900; color: #ffd34d; }
+  /* Ghép chữ: thẻ âm tiết xáo trộn */
+  .tiles { margin-top: 40px; margin-bottom: 30px; display: none; gap: 22px; justify-content: center; flex-wrap: wrap; }
+  .wrap.scr2 .tiles { display: flex; }
+  .wrap.scr2 .slots { display: none; }
+  .tile { width: 150px; height: 160px; border-radius: 28px; display: grid; place-items: center; font-size: 100px; font-weight: 900;
+          background: #fff; color: #2a1846; box-shadow: 0 10px 0 #9b6bd6; animation: pop .35s ease-out; }
+  .tile:nth-child(2n) { transform: rotate(-4deg); } .tile:nth-child(3n) { transform: rotate(5deg); }
+  .tiles.rev .tile { background: var(--green); color: #05301b; box-shadow: 0 10px 0 #1f9c5e; transform: none; }
+  .tile { position: relative; }
+  .tile .no { position: absolute; top: -18px; left: -14px; width: 56px; height: 56px; border-radius: 50%; background: #ffd34d; color: #2a1846;
+              font: 900 36px/56px 'Be Vietnam Pro', sans-serif; font-style: normal; text-align: center; box-shadow: 0 4px 0 rgba(0,0,0,.3); }
+  .tile .hk { position: absolute; bottom: -34px; left: 0; right: 0; font: 900 22px 'Be Vietnam Pro', sans-serif; font-style: normal; color: #ffd34d; }
+  .tile.first { box-shadow: 0 10px 0 #9b6bd6, inset 0 0 0 6px #ffd34d; }
+  /* So găng 2 đội */
+  #teamBox { display: none; margin-top: 26px; width: 100%; }
+  .wrap.team #teamBox { display: block; }
+  .wrap.team .panels { display: none; }
+  .tug { position: relative; height: 70px; border-radius: 999px; overflow: hidden; display: flex; box-shadow: 0 8px 0 rgba(0,0,0,.3); }
+  .tug .a { background: #ff4d6d; transition: flex-grow .6s ease-out; display: flex; align-items: center; padding-left: 24px; font-size: 36px; font-weight: 900; }
+  .tug .b { background: #3d7bff; transition: flex-grow .6s ease-out; display: flex; align-items: center; justify-content: flex-end; padding-right: 24px; font-size: 36px; font-weight: 900; }
+  .tug .mid { position: absolute; left: 50%; top: -6px; bottom: -6px; width: 6px; background: #fff; transform: translateX(-50%); }
+  .tcols { margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .tcol { border-radius: 26px; padding: 16px 18px; min-height: 360px; background: rgba(0,0,0,.25); }
+  .tcol h3 { font-size: 40px; font-weight: 900; text-align: center; }
+  .tcol h3 small { display: block; font-size: 22px; font-weight: 800; color: var(--muted); }
+  .tcol .fans { margin-top: 10px; display: flex; flex-direction: column; gap: 8px; }
+  .tcol .fan { display: flex; align-items: center; gap: 12px; font-size: 26px; font-weight: 800; }
+  .tcol .fan .av { width: 54px; height: 54px; border-radius: 50%; flex: none; background: #3a4370 center/cover; display: grid; place-items: center; font-size: 24px; font-weight: 900; border: 3px solid #fff; }
+  .tcol .fan .nm { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .tcol .fan .pt { color: #ffd34d; }
+  .tcol .join { margin-top: 10px; text-align: center; font-size: 24px; font-weight: 800; color: #fff; opacity: .85; }
+  .teamwin { margin-top: 26px; width: 100%; border-radius: 30px; padding: 20px 24px; background: rgba(0,0,0,.3); text-align: center; }
+  .teamwin .t { font-size: 52px; font-weight: 900; color: #ffd34d; }
+  .teamwin .sc { font-size: 32px; font-weight: 800; margin-top: 4px; }
+  .teamwin .faces { margin-top: 14px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .teamwin .faces .av { width: 84px; height: 84px; border-radius: 50%; border: 4px solid #ffd34d; background: #3a4370 center/cover; display: grid; place-items: center; font-size: 36px; font-weight: 900; }
+
+  /* Màn nghỉ giữa lượt + màn vinh danh: phủ khung, dưới thẻ cảm ơn quà */
+  .scr { position: absolute; inset: 0; z-index: 3; display: none; flex-direction: column; align-items: center;
+         padding: 262px 64px 0; text-align: center; background: #141b3a; }
+  .scr.on { display: flex; animation: tin .45s ease-out; }
+  .tag { font-size: 30px; font-weight: 900; letter-spacing: 4px; text-transform: uppercase; color: var(--bg2);
+         background: var(--orange); border-radius: 999px; padding: 10px 32px; }
+  #breakScr h1 { margin-top: 22px; font-size: 84px; font-weight: 900; line-height: 1.05; text-shadow: 0 8px 0 rgba(0,0,0,.35); }
+  #breakScr h1 span { color: var(--orange2); }
+  .count { margin-top: 26px; width: 200px; height: 200px; border-radius: 50%; display: grid; place-items: center;
+           background: conic-gradient(var(--orange) var(--p, 100%), rgba(255,255,255,.1) 0); position: relative; }
+  .count::before { content: ''; position: absolute; inset: 18px; border-radius: 50%; background: #121a3c; }
+  .count b { position: relative; font-size: 92px; font-weight: 900; font-variant-numeric: tabular-nums; }
+  .count.wait b { font-size: 36px; color: var(--muted); }
+  .count-sub { margin-top: 14px; font-size: 34px; font-weight: 700; color: var(--muted); }
+  .rules { margin-top: 26px; width: 100%; background: var(--card); border: 1px solid var(--line); border-radius: 30px;
+           padding: 22px 34px; text-align: left; }
+  .rules div { font-size: 31px; font-weight: 700; line-height: 1.6; color: #dfe3ff; }
+  .rules b { color: var(--orange2); }
+  .gold { margin-top: 24px; width: 100%; background: var(--card); border: 1px solid var(--line); border-radius: 30px; padding: 20px 30px; }
+  .gold h3 { font-size: 34px; font-weight: 900; margin-bottom: 6px; }
+  .gold .row { height: 58px; font-size: 31px; }
+  .gold .row .rk { width: 48px; }
+  .gold .row .nm { text-align: left; }
+  .gold .wins { color: #ffd34d; font-size: 26px; margin-left: 10px; }
+
+  #podiumScr h1 { margin-top: 22px; font-size: 92px; font-weight: 900; line-height: 1; text-shadow: 0 8px 0 rgba(0,0,0,.35); }
+  #podiumScr h1 span { color: #ffd34d; }
+  .podium .av { width: 132px; height: 132px; border-radius: 50%; border: 6px solid #fff; background: #fff2 center/cover;
+                display: grid; place-items: center; font-size: 60px; font-weight: 900; color: #fff; }
+  .podium .p1 .av { width: 170px; height: 170px; border-color: #ffd34d; box-shadow: 0 0 0 8px rgba(255,211,77,.25), 0 0 60px rgba(255,211,77,.5); }
+  .podium .crown { font-size: 76px; margin-bottom: -16px; animation: wob .8s ease-in-out infinite alternate; }
+  .podium .bx small { display: block; font-size: 24px; font-weight: 700; opacity: .75; }
+  .awards { margin-top: 26px; width: 100%; display: flex; flex-direction: column; gap: 14px; }
+  .award { display: flex; align-items: center; gap: 18px; background: var(--card); border: 1px solid var(--line);
+           border-radius: 26px; padding: 16px 26px; font-size: 32px; font-weight: 700; text-align: left; }
+  .award .ic { font-size: 50px; } .award b { color: var(--orange2); }
+  .award .names { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .soon { margin-top: 30px; font-size: 36px; font-weight: 800; color: var(--muted); }
+  .soon b { color: var(--green); font-variant-numeric: tabular-nums; }
+  .pausechip { position: absolute; left: 50%; top: 236px; transform: translateX(-50%); z-index: 6; display: none;
+               font-size: 30px; font-weight: 900; padding: 10px 30px; border-radius: 999px; background: #ffd34d; color: var(--bg2); }
+  .pausechip.on { display: block; }
+  /* Điện thoại/trình duyệt thường chặn tiếng tới khi chạm vào trang */
+  #tapsound { position: fixed; inset: 0; z-index: 20; display: none; place-items: center; background: rgba(0,0,0,.6);
+              font: 800 22px 'Be Vietnam Pro', system-ui; color: #fff; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  #tapsound span { background: #ff8a1f; padding: 16px 26px; border-radius: 999px; box-shadow: 0 8px 24px rgba(0,0,0,.5); }
+  /* Lời đáp của AI "Cáo Jaemy" — nằm trên mép dưới 2 bảng, trên mọi màn */
+  #aibox { position: absolute; left: 56px; right: 56px; top: 1468px; z-index: 6; display: flex; gap: 18px; align-items: flex-start;
+           padding: 18px 24px; border-radius: 30px; background: #fff; color: var(--bg2); box-shadow: 0 14px 34px rgba(0,0,0,.45);
+           opacity: 0; transform: translateY(24px) scale(.96); transition: opacity .3s, transform .35s cubic-bezier(.2,1.4,.4,1); pointer-events: none; }
+  #aibox.on { opacity: 1; transform: none; }
+  #aibox img { width: 84px; height: 84px; border-radius: 22px; flex: none; }
+  #aibox .q { margin: 0; font-size: 24px; font-weight: 700; color: #6a719c; line-height: 1.25; text-align: left; text-shadow: none;
+              white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+  #aibox .q b { color: var(--orange); }
+  #aibox .a { margin-top: 4px; font-size: 32px; font-weight: 800; line-height: 1.25; }
+  #aibox .tx { min-width: 0; flex: 1; }
+  /* Tương tác: thẻ nhỏ mỗi lượt đúng + banner khoảnh khắc lớn (chuỗi đúng, lên dẫn đầu) */
+  #hits { position: absolute; right: 40px; top: 560px; z-index: 6; width: 400px; display: flex; flex-direction: column;
+          align-items: flex-end; gap: 10px; pointer-events: none; }
+  .hit { font-size: 30px; font-weight: 900; padding: 10px 22px; border-radius: 999px; background: var(--green); color: #05301b;
+         box-shadow: 0 8px 22px rgba(0,0,0,.35); white-space: nowrap; max-width: 400px; overflow: hidden; text-overflow: ellipsis;
+         animation: hin .3s cubic-bezier(.2,1.4,.4,1), hout .35s ease-in 2.4s forwards; }
+  .hit.first { background: #ffd34d; font-size: 34px; }
+  @keyframes hin { from { transform: translateX(60px) scale(.8); opacity: 0 } }
+  @keyframes hout { to { transform: translateX(40px); opacity: 0 } }
+  #moment { position: absolute; left: 50px; right: 50px; top: 236px; z-index: 7; padding: 22px 30px; border-radius: 34px; text-align: center;
+            font-size: 50px; font-weight: 900; line-height: 1.15; color: #fff; background: linear-gradient(100deg, #ff5d8f, #ff8a1f);
+            box-shadow: 0 16px 40px rgba(0,0,0,.45); opacity: 0; transform: translateY(-20px) scale(.92); pointer-events: none;
+            transition: opacity .3s, transform .4s cubic-bezier(.2,1.4,.4,1); }
+  #moment.on { opacity: 1; transform: none; }
+  #moment.lead { background: linear-gradient(100deg, #ffcf3a, #ff8a1f); color: #3a2200; }
+  .livedot { position: absolute; right: 56px; top: 236px; z-index: 6; font-size: 24px; font-weight: 800; padding: 6px 16px;
+             border-radius: 999px; background: rgba(0,0,0,.35); color: var(--muted); }
+  .livedot.live { color: #fff; background: #ff2d55; }
+  .livedot.sim { color: var(--bg2); background: #ffd34d; }
+  #conn { position: fixed; right: 12px; bottom: 12px; font: 12px system-ui; color: #888; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="site">
+    <img class="ic" src="img/appicon.png" alt="">
+    <div class="nm"><b>Jaemy</b><span>Từ điển & học tiếng Hàn</span></div>
+    <div class="dl">Tải app <img src="img/appstore.svg" alt="App Store"><img src="img/googleplay.svg" alt="Google Play"></div>
+  </div>
+  <div id="toasts"></div>
+  <div id="thanks"><div class="av"></div><div class="tx"><div class="t1"></div><div class="t2"></div></div><div class="ic"></div></div>
+  <div id="outro">
+    <h1>Cảm ơn mọi người<br>đã chơi cùng <span style="white-space:nowrap"><span>Jaemy</span>!&nbsp;💖</span></h1>
+    <div class="lead">Phiên live hôm nay đến đây là hết rồi</div>
+    <div class="podium" id="podium"></div>
+    <div class="gift-box" id="giftbox"><h3>🌹 Cảm ơn những bạn đã tặng quà</h3><div class="gift-list" id="giftlist"></div></div>
+    <div class="stats" id="ostats"></div>
+    <div class="next" id="onext"></div>
+    <div class="cta">Ôn lại các từ hôm nay trên <b>jaemy.net</b> · Follow kênh để không lỡ phiên sau</div>
+  </div>
+  <div id="mega"><div><div class="ic"></div><div class="t1"></div><div class="t2"></div></div></div>
+  <div class="livedot" id="livedot">○ offline</div>
+  <div id="segchip"></div>
+  <div id="hits"></div>
+  <div id="moment"></div>
+  <div id="aibox"><img src="img/appicon.png" alt=""><div class="tx"><div class="q"></div><div class="a"></div></div></div>
+  <div class="pausechip" id="pausechip">⏸ Tạm dừng một chút</div>
+  <div class="scr" id="breakScr">
+    <div class="tag" id="bTag">Lượt 1</div>
+    <h1>Đố từ <span>tiếng Hàn</span></h1>
+    <div class="kindtag" id="bKind"></div>
+    <div class="count" id="bCount"><b data-countdown>20</b></div>
+    <div class="count-sub" id="bSub">giây nữa bắt đầu</div>
+    <div class="rules" id="bRules"></div>
+    <div class="lineup" id="bLineup"></div>
+    <div class="gold" id="bGold"><h3>🏅 Bảng vàng hôm nay</h3><div id="bBoard"></div></div>
+    <div class="appcard">
+      <img class="ic" src="img/appicon.png" alt="">
+      <div class="tx"><div class="t1">📲 Ôn lại từ vừa chơi trên app</div><div class="t2"><b>Jaemy</b>: Từ điển &amp; học tiếng Hàn</div>
+        <div class="badges"><img src="img/appstore.svg" alt="App Store"><img src="img/googleplay.svg" alt="Google Play"></div></div>
+      <div class="qr"><img src="img/qr-app.svg" alt="">Quét để tải</div>
+    </div>
+  </div>
+  <div class="scr" id="podiumScr">
+    <div class="tag" id="pTag">Kết thúc lượt 1</div>
+    <h1>🏆 <span>Vinh danh</span></h1>
+    <div class="podium" id="pPodium"></div>
+    <div class="teamwin" id="pTeam" hidden></div>
+    <div class="awards" id="pAwards"></div>
+    <div class="appcard">
+      <img class="ic" src="img/appicon.png" alt="">
+      <div class="tx"><div class="t1">📲 Ôn lại từ vừa chơi trên app</div><div class="t2"><b>Jaemy</b>: Từ điển &amp; học tiếng Hàn</div>
+        <div class="badges"><img src="img/appstore.svg" alt="App Store"><img src="img/googleplay.svg" alt="Google Play"></div></div>
+      <div class="qr"><img src="img/qr-app.svg" alt="">Quét để tải</div>
+    </div>
+    <div class="soon" id="pSoon"></div>
+  </div>
+  <div class="wrap">
+    <div class="bb">
+    <div class="prev" id="prev">Gõ đáp án vào bình luận để ghi điểm!</div>
+    <div class="pill" id="pill">Câu 1</div>
+    <div class="q" id="q">…</div>
+    <div class="sub" id="sub">tiếng Hàn là gì?</div>
+    <div class="timer"><div class="bar"><i id="bar"></i></div><div class="secs" id="secs">15</div></div>
+    <div class="slots" id="slots"></div>
+    <div class="tiles" id="tiles"></div>
+    <div class="opts" id="opts"></div>
+    <div id="lessonbox"><div class="mean" id="lMean"></div><div class="done" id="lDone"></div></div>
+    <div class="howto" id="howto"></div>
+    </div>
+    <div id="teacher"><img src="img/appicon.png" alt=""><div class="bubble" id="tBubble"></div></div>
+    <div id="room"></div>
+    <div id="hall" hidden></div>
+    <div id="rank"><h3>🏆 Xếp hạng</h3><div id="rankL"></div></div>
+    <div id="teamBox"><div class="tug" id="tug"></div><div class="tcols" id="tcols"></div></div>
+    <div class="panels">
+      <div class="panel">
+        <h3>🏆 Bảng điểm <small id="players"></small></h3>
+        <div id="board"></div>
+      </div>
+      <div class="panel feed">
+        <h3>💬 Câu trả lời <small id="winners"></small></h3>
+        <div id="feed"></div>
+      </div>
+    </div>
+    <div class="footer">
+      <span>🎁 Tặng quà: <b>+điểm & x2 cho 3 câu</b></span>
+      <span class="brand">Ôn từ trên app <b>Jaemy</b> 📲</span>
+    </div>
+  </div>
+</div>
+<div id="tapsound"><span>🔊 Chạm để bật tiếng</span></div>
+<div id="conn"></div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+const qs = new URLSearchParams(location.search);
+// ?mute=1: bản xem trước nhúng trong màn điều khiển — không phát tiếng, không đọc
+let muted = qs.has('mute'); // server chạy thử --mute cũng ép im lặng (không lọt tiếng vào phiên live thật)
+
+// co khung 1080×1920 vừa cửa sổ
+function fit() {
+  const w = document.documentElement.clientWidth, h = document.documentElement.clientHeight;
+  const s = Math.min(w / 1080, h / 1920);
+  $('stage').style.transform = `translate(${(w - 1080 * s) / 2}px, ${(h - 1920 * s) / 2}px) scale(${s})`;
+}
+addEventListener('resize', fit); fit();
+
+let state = null, clockSkew = 0, lastPhaseKey = '', seenFeed = 0;
+
+// ---- âm thanh ----
+let actx = null;
+function beep(freq, dur = .12, vol = .15, type = 'sine') {
+  if (!actx || muted) return;
+  const o = actx.createOscillator(), g = actx.createGain();
+  o.type = type; o.frequency.value = freq;
+  g.gain.setValueAtTime(vol, actx.currentTime);
+  g.gain.exponentialRampToValueAtTime(.001, actx.currentTime + dur);
+  o.connect(g).connect(actx.destination); o.start(); o.stop(actx.currentTime + dur);
+}
+function unlockAudio() { if (muted) return; if (!actx) actx = new (window.AudioContext || window.webkitAudioContext)(); actx.resume(); startMusic(); }
+
+// ---- nhạc nền tự sinh (giống video-live): lo-fi nhẹ Am–F–C–G, 92 BPM — không dùng file nên không dính bản quyền ----
+// Muốn bài riêng: đặt public/music.mp3 (tự lặp). Tự hạ nhỏ (ducking) khi đang đọc / phát âm đáp án.
+let ducks = 0, musicBus = null, musicStarted = false;
+const musicVol = () => (state?.cfg?.music ?? 0.25);
+function applyMusic() {
+  if (muted || !musicBus || !actx) return;
+  const v = musicVol() * (ducks > 0 ? 0.3 : 1);
+  musicBus.gain.cancelScheduledValues(actx.currentTime);
+  musicBus.gain.setTargetAtTime(v, actx.currentTime, 0.15);
+}
+function duck(on) { ducks = Math.max(0, ducks + (on ? 1 : -1)); applyMusic(); }
+async function startMusic() {
+  if (muted || musicStarted || !actx) return;
+  musicStarted = true;
+  musicBus = actx.createGain();
+  musicBus.gain.value = 0;
+  musicBus.connect(actx.destination);
+  applyMusic();
+  const custom = await fetch('music.mp3', { method: 'HEAD' }).then((r) => r.ok).catch(() => false);
+  if (custom) {
+    const el = new Audio('music.mp3');
+    el.loop = true;
+    actx.createMediaElementSource(el).connect(musicBus);
+    const play = () => el.play().catch(() => setTimeout(play, 1000));
+    return play();
+  }
+  const BPM = 92, STEP = 60 / BPM / 2; // nốt móc đơn
+  const CHORDS = [[57, 60, 64], [53, 57, 60], [48, 52, 55], [55, 59, 62]]; // Am F C G (MIDI)
+  const midi = (n) => 440 * 2 ** ((n - 69) / 12);
+  const lowpass = actx.createBiquadFilter();
+  lowpass.type = 'lowpass'; lowpass.frequency.value = 1400; lowpass.connect(musicBus);
+  const noise = actx.createBuffer(1, actx.sampleRate * 0.2, actx.sampleRate);
+  const nd = noise.getChannelData(0);
+  for (let i = 0; i < nd.length; i++) nd[i] = Math.random() * 2 - 1;
+  const voice = (freq, t, dur, type, vol, attack = 0.01) => {
+    const o = actx.createOscillator(), g = actx.createGain();
+    o.type = type; o.frequency.value = freq;
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(vol, t + attack); g.gain.exponentialRampToValueAtTime(0.001, t + dur);
+    o.connect(g).connect(lowpass); o.start(t); o.stop(t + dur + 0.05);
+  };
+  const hat = (t, vol) => {
+    const src = actx.createBufferSource(), f = actx.createBiquadFilter(), g = actx.createGain();
+    src.buffer = noise; f.type = 'highpass'; f.frequency.value = 7000;
+    g.gain.setValueAtTime(vol, t); g.gain.exponentialRampToValueAtTime(0.001, t + 0.05);
+    src.connect(f).connect(g).connect(musicBus); src.start(t); src.stop(t + 0.1);
+  };
+  const kick = (t) => {
+    const o = actx.createOscillator(), g = actx.createGain();
+    o.frequency.setValueAtTime(140, t); o.frequency.exponentialRampToValueAtTime(45, t + 0.15);
+    g.gain.setValueAtTime(0.7, t); g.gain.exponentialRampToValueAtTime(0.001, t + 0.3);
+    o.connect(g).connect(musicBus); o.start(t); o.stop(t + 0.35);
+  };
+  let step = 0, nextAt = actx.currentTime + 0.1;
+  setInterval(() => {
+    if (actx.state !== 'running') return;
+    if (nextAt < actx.currentTime) nextAt = actx.currentTime + 0.05; // tab bị treo một lúc → bắt nhịp lại
+    while (nextAt < actx.currentTime + 0.2) {
+      const chord = CHORDS[Math.floor(step / 8) % CHORDS.length], beat = step % 8;
+      if (beat === 0) {
+        chord.forEach((n) => voice(midi(n), nextAt, STEP * 8, 'sawtooth', 0.05, 0.4)); // pad
+        voice(midi(chord[0] - 24), nextAt, STEP * 3, 'triangle', 0.35); // bass
+      }
+      if (beat === 4) voice(midi(chord[0] - 24), nextAt, STEP * 3, 'triangle', 0.3);
+      if (beat === 0 || beat === 4) kick(nextAt);
+      if (beat % 2 === 1) hat(nextAt, 0.08);
+      const arp = [0, 1, 2, 1, 0, 2, 1, 2][beat]; // rải hợp âm quãng tám trên
+      if (beat !== 3 && beat !== 7) voice(midi(chord[arp] + 12), nextAt, STEP * 1.6, 'triangle', 0.12);
+      nextAt += STEP; step++;
+    }
+  }, 50);
+}
+// OBS/LIVE Studio cho tự phát; trình duyệt thường (nhất là điện thoại) cần 1 cú chạm.
+try { unlockAudio(); } catch {}
+setTimeout(() => {
+  if (muted || (actx && actx.state === 'running')) return;
+  const t = $('tapsound');
+  t.style.display = 'grid';
+  t.onclick = () => {
+    unlockAudio();
+    // iOS chỉ cho đọc giọng sau cú chạm đầu tiên → đọc 1 câu ngắn ngay trong cú chạm
+    speak('Bắt đầu nào!');
+    t.style.display = 'none';
+  };
+}, 800);
+
+// ---- render ----
+function renderOutro(s) {
+  const o = $('outro');
+  if (!o.classList.contains('on')) {
+    o.classList.add('on');
+    confetti(90);
+    speak('Cảm ơn mọi người đã chơi cùng Jaemy hôm nay. Hẹn gặp lại các bạn ở phiên sau nhé!');
+  }
+  // bục: hạng 2 · hạng 1 · hạng 3
+  const order = [[1, 'p2', '🥈'], [0, 'p1', '🥇'], [2, 'p3', '🥉']];
+  $('podium').innerHTML = s.top.length
+    ? order.filter(([i]) => s.top[i]).map(([i, cls, md]) =>
+        `<div class="pd ${cls}"><div class="md">${md}</div><div class="nm">${esc(s.top[i].name)}</div><div class="bx">${s.top[i].score}</div></div>`).join('')
+    : '';
+  $('giftbox').style.display = s.gifters.length ? '' : 'none';
+  $('giftlist').innerHTML = s.gifters.map((g) => `<span>${esc(g.name)}</span>`).join('');
+  $('ostats').innerHTML =
+    `<div><b>${s.stats.rounds}</b><small>câu đã chơi</small></div>` +
+    `<div><b>${s.stats.players}</b><small>người chơi</small></div>` +
+    `<div><b>${s.stats.correct}</b><small>lượt trả lời đúng</small></div>`;
+  $('onext').innerHTML = s.next ? `Hẹn gặp lại: <b>${esc(s.next)}</b>` : 'Hẹn gặp lại ở phiên sau nhé! 👋';
+}
+
+const initial = (n) => esc([...String(n || '?')][0].toUpperCase());
+const avatar = (p) => p.avatar ? `<div class="av" style="background-image:url('${esc(p.avatar)}')"></div>` : `<div class="av">${initial(p.name)}</div>`;
+
+const isClass = (s) => (s.seg ? s.seg.id === 'class' : s.cfg.style === 'class');
+const SEG_RULES = {
+  quiz: null, class: null,
+  scramble: [`🧩 Các <b>thẻ chữ bị xáo trộn</b>, mỗi thẻ có <b>một số</b>`, `💬 Gõ <b>thứ tự số</b> đúng, vd <b>312</b> · nhanh nhất <b>+10</b>`, `☝️ Chỉ tính <b>lần gõ đầu</b> · gõ romaja cũng được`],
+  reverse: [`🔁 Hiện <b>nghĩa tiếng Việt</b>, chọn đúng <b>từ tiếng Hàn</b>`, `💬 Gõ số <b>1, 2, 3 hoặc 4</b> · nhanh nhất <b>+10</b>`, `☝️ Mỗi người chỉ tính <b>lần chọn đầu tiên</b>`],
+  listen: [`🎧 Cô <b>đọc từ</b>, không hiện chữ — nghe thật kỹ`, `💬 Gõ số <b>1–4</b> chọn nghĩa đúng · nhanh nhất <b>+10</b>`, `🔁 Mỗi câu cô đọc <b>2 lần</b>`],
+  team: [`🥊 Gõ <b>tên đội</b> vào bình luận để vào đội`, `💬 Trả lời đúng (số <b>1–4</b>) = <b>kéo điểm cho đội</b>`, `🎁 Tặng quà: đội được <b>+10 đến +100</b> điểm`, `🏆 Đội thắng: <b>cả đội +10</b> bảng vàng`],
+  type: [`✍️ Nhìn nghĩa, gõ <b class="ko">chữ Hàn</b> vào bình luận`, `🔤 Gợi ý mở dần <b class="ko">ㄱㅇㅇ</b> · gõ romaja được <b>½ điểm</b>`],
+};
+function renderBreak(s) {
+  const cls = isClass(s), nx = s.next || s.seg;
+  const prog = !!s.program;
+  $('breakScr').querySelector('h1').innerHTML = prog && nx ? `${nx.icon} <span>${esc(nx.name)}</span>` : cls ? 'Lớp học <span>tiếng Hàn</span>' : 'Đố từ <span>tiếng Hàn</span>';
+  $('bTag').textContent = cls ? `Buổi học ${s.nextGame}` : `Lượt ${s.nextGame}`;
+  $('bKind').textContent = prog && nx ? (nx.kind === 'học' ? '📚 Giờ học' : '🎉 Giờ giải trí') : '';
+  $('bLineup').innerHTML = prog ? s.program.map((x) => `<span class="${x.id === nx.id ? 'now' : ''}">${x.icon} ${esc(x.name)}</span>`).join('') : '';
+  if (prog && SEG_RULES[nx.id]) {
+    $('bRules').innerHTML = [`⏱ <b>${s.cfg.questions} câu</b> · mỗi câu <b>${s.cfg.roundSec} giây</b>`, ...SEG_RULES[nx.id], ...(nx.id === 'team' ? [] : [`🏆 Hết khung: <b>vinh danh Top 3</b> lên màn hình`])]
+      .map((x) => `<div>${x}</div>`).join('');
+  } else if (cls) {
+    $('bRules').innerHTML = [
+      `🙋 <b>Bình luận</b> để vào lớp — có chỗ ngồi riêng`,
+      `📖 Cô Cáo dạy <b>3 từ mới</b> → kiểm tra ngay`,
+      `💬 Gõ số <b>1–4</b> chọn nghĩa · đúng nhanh <b>+10</b>`,
+      `⭐ Được cô <b>gọi tên</b> mà đúng: <b>+5</b>`,
+      `🏆 Hết buổi: <b>vinh danh Top 3</b> học sinh giỏi`,
+    ].map((x) => `<div>${x}</div>`).join('');
+  } else $('bRules').innerHTML = [
+    `⏱ <b>${s.cfg.questions} câu</b> · mỗi câu <b>${s.cfg.roundSec} giây</b>`,
+    ...(s.cfg.mode === 'mcq' ? [
+      `💬 Gõ số <b>1, 2, 3 hoặc 4</b> vào bình luận — đúng nhanh nhất <b>+10</b>`,
+      `☝️ Mỗi người chỉ tính <b>lần chọn đầu tiên</b>`,
+    ] : [
+      `💬 Gõ <b class="ko">chữ Hàn</b> vào bình luận — nhanh nhất <b>+10</b>`,
+      `🔤 Gõ romaja được <b>½ điểm</b> · gợi ý mở dần <b class="ko">ㄱㅇㅇ</b>`,
+    ]),
+    `🎁 Tặng quà: <b>+điểm & x2</b> cho 3 câu tới`,
+    `🏆 Hết lượt: <b>vinh danh Top 3</b> lên màn hình`,
+  ].map((x) => `<div>${x}</div>`).join('');
+  $('bGold').style.display = s.board.length ? '' : 'none';
+  $('bBoard').innerHTML = s.board.map((p, i) =>
+    `<div class="row"><span class="rk">${i + 1}</span><span class="nm">${esc(p.name)}${p.wins ? `<span class="wins">🏆×${p.wins}</span>` : ''}</span><span class="pt">${p.score}</span></div>`).join('');
+}
+
+function renderPodium(s, entering) {
+  const p = s.podium;
+  $('pTag').textContent = p.seg && s.program ? `Kết thúc ${p.seg.icon} ${p.seg.name}` : `Kết thúc lượt ${p.no}`;
+  const pt = $('pTeam');
+  pt.hidden = !p.teams;
+  if (p.teams) {
+    const w = p.teamWin != null ? p.teams[p.teamWin] : null;
+    pt.innerHTML = w
+      ? `<div class="t">${w.icon} Đội ${esc(w.name)} thắng!</div><div class="sc">${p.teams[0].icon} ${p.teams[0].score} — ${p.teams[1].score} ${p.teams[1].icon} · cả đội +10 điểm bảng vàng</div>` +
+        `<div class="faces">${w.top.slice(0, 6).map(avatar).join('')}</div>`
+      : `<div class="t">🤝 Hai đội hoà!</div><div class="sc">${p.teams[0].icon} ${p.teams[0].score} — ${p.teams[1].score} ${p.teams[1].icon}</div>`;
+  }
+  const order = [[1, 'p2', '🥈'], [0, 'p1', '🥇'], [2, 'p3', '🥉']];
+  $('pPodium').innerHTML = p.top.length
+    ? order.filter(([i]) => p.top[i]).map(([i, cls, md]) => {
+        const x = p.top[i];
+        return `<div class="pd ${cls}">${i === 0 ? '<div class="crown">👑</div>' : ''}${avatar(x)}` +
+          `<div class="nm">${md} ${esc(x.name)}</div><div class="bx">${x.score}<small>${x.correct} câu đúng</small></div></div>`;
+      }).join('')
+    : '<div class="soon" style="margin-top:80px">Lượt này chưa ai ghi điểm 😅<br>Lượt sau gõ đáp án vào bình luận nhé!</div>';
+  const aw = [];
+  if (p.fastest) aw.push(`<div class="award"><span class="ic">⚡</span><span class="names">Nhanh tay nhất: <b>${esc(p.fastest.name)}</b></span><span>${p.fastest.first} lần đầu tiên</span></div>`);
+  if (p.gifters.length) aw.push(`<div class="award"><span class="ic">🌹</span><span class="names">Cảm ơn quà: <b>${p.gifters.map((g) => esc(g.name)).join(', ')}</b></span></div>`);
+  aw.push(`<div class="award"><span class="ic">📊</span><span class="names">${p.stats.questions} câu · ${p.stats.players} người chơi · ${p.stats.correct} lượt đúng</span></div>`);
+  $('pAwards').innerHTML = aw.join('');
+  if (entering) {
+    confetti(110);
+    [523, 659, 784, 1046, 1318].forEach((f, i) => setTimeout(() => beep(f, .28, .16, 'triangle'), i * 150));
+    say(LINES.podium(p), { interrupt: true });
+  }
+}
+
+function render() {
+  const s = state;
+  if (!s || s.phase === 'idle') return;
+  if (s.phase === 'outro') { $('breakScr').classList.remove('on'); $('podiumScr').classList.remove('on'); return renderOutro(s); }
+  $('outro').classList.remove('on');
+  const key = (s.game ? s.game.no + '.' + s.game.qNo : '') + s.phase;
+  const changed = key !== lastPhaseKey;
+  if (changed) lastPhaseKey = key;
+  $('pausechip').classList.toggle('on', !!s.paused);
+  const segId = s.phase === 'break' || s.phase === 'podium' ? (s.phase === 'podium' && s.podium?.seg ? s.podium.seg.id : s.next?.id) : s.seg?.id;
+  if (s.program && segId) $('stage').dataset.seg = segId; else delete $('stage').dataset.seg;
+  const sc = $('segchip');
+  sc.classList.remove('on'); // (bỏ 04/11: đè dòng "câu trước"; tên khung đã nằm trên thanh câu hỏi)
+  if (s.seg) sc.textContent = `${s.seg.icon} ${s.seg.name} · ${s.seg.kind === 'học' ? 'Giờ học' : 'Giờ giải trí'}`;
+  const ld = $('livedot');
+  ld.className = 'livedot ' + s.live;
+  ld.textContent = { live: '● LIVE', sim: '● THỬ', off: '○ offline' }[s.live];
+  $('breakScr').classList.toggle('on', s.phase === 'break');
+  $('podiumScr').classList.toggle('on', s.phase === 'podium');
+  if (s.phase === 'break') { if (changed && s.endsAt != null) say(LINES.intro(s), { interrupt: true }); return renderBreak(s); }
+  if (s.phase === 'podium') return renderPodium(s, changed);
+  const room = isClass(s);
+  document.querySelector('.wrap').classList.toggle('room', room);
+  document.querySelector('.wrap').classList.toggle('team', !!s.teams);
+  document.querySelector('.wrap').classList.toggle('scr2', s.q?.mode === 'scramble');
+  if (s.teams) renderTeams(s);
+  document.querySelector('.wrap').classList.toggle('teach', s.phase === 'teach');
+  if (room) renderRoom(s);
+  if (s.phase === 'teach') return renderTeach(s, changed);
+  if (changed) {
+    if (s.phase === 'question') {
+      beep(660, .12); setTimeout(() => beep(990, .18), 120); seenFeed = 0;
+      say(room ? LINES.classQuestion(s) : LINES.question(s), { interrupt: true });
+    }
+    if (s.phase === 'reveal') say(room && s.q.mode === 'mcq' ? LINES.classReveal(s) : LINES.reveal(s), { interrupt: true });
+  }
+
+  $('prev').innerHTML = s.prev
+    ? `Câu trước: <b class="ko">${esc(s.prev.w)}</b> = ${esc(s.prev.m)} · ${s.prev.n} người đúng`
+    : 'Gõ đáp án vào bình luận để ghi điểm!';
+  $('pill').textContent = room ? `✏️ Kiểm tra · Câu ${s.game.qNo}/${s.game.total}` : s.program && s.seg ? `${s.seg.icon} ${s.seg.name} · Câu ${s.game.qNo}/${s.game.total}` : `Lượt ${s.game.no} · Câu ${s.game.qNo}/${s.game.total}`;
+  const mcq = s.q.mode === 'mcq';
+  document.querySelector('.wrap').classList.toggle('mcq', mcq);
+  if (mcq) { renderMcq(s); return renderSide(s); }
+  if (s.q.mode === 'scramble') return renderScramble(s);
+  const q = s.q.m;
+  $('q').textContent = q.charAt(0).toUpperCase() + q.slice(1);
+  $('q').className = 'q' + (q.length > 18 ? ' xlong' : q.length > 11 ? ' long' : '');
+  $('sub').textContent = 'tiếng Hàn là gì?';
+
+  const sl = $('slots');
+  sl.className = 'slots' + (s.phase === 'reveal' ? ' reveal' : '') + (s.q.slots.length > 5 ? ' many' : '');
+  const html = s.q.slots.map((x) => `<div class="slot ${x.kind} ko">${esc(x.ch)}</div>`).join('');
+  if (sl.innerHTML !== html) sl.innerHTML = html;
+
+  $('howto').innerHTML = s.phase === 'reveal'
+    ? `<span class="rom">/${esc(s.q.r || '')}/</span>`
+    : 'Gõ <b class="ko">chữ Hàn</b> vào bình luận · romaja được ½ điểm';
+  renderSide(s);
+}
+
+// ---- Ghép chữ ----
+function renderScramble(s) {
+  const rev = s.phase === 'reveal', q = s.q;
+  $('q').textContent = q.m.charAt(0).toUpperCase() + q.m.slice(1);
+  $('q').className = 'q' + (q.m.length > 18 ? ' xlong' : q.m.length > 11 ? ' long' : '');
+  $('sub').innerHTML = rev ? `<span class="ko">${esc(q.w)}</span> <span style="color:var(--green)">/${esc(q.r || '')}/</span>` : 'Xếp các thẻ cho đúng thứ tự 👇';
+  const t = $('tiles');
+  t.className = 'tiles' + (rev ? ' rev' : '');
+  const hint = q.hint || [];
+  // công bố: xếp thẻ theo đúng thứ tự, vẫn giữ số gốc trên thẻ
+  const order = rev && q.answer ? [...q.answer].map((d) => +d - 1) : q.tiles.map((_, i) => i);
+  const html = order.map((i) => {
+    const h = hint.indexOf(i);
+    return `<div class="tile ko${h >= 0 ? ' first' : ''}"><i class="no">${i + 1}</i>${esc(q.tiles[i])}${h >= 0 ? `<i class="hk">${h === 0 ? 'đầu' : 'thứ ' + (h + 1)}</i>` : ''}</div>`;
+  }).join('');
+  if (t.innerHTML !== html) t.innerHTML = html;
+  const ex = q.tiles.map((_, i) => i + 1).reverse().join('');
+  $('howto').innerHTML = rev ? `Đáp án: <b style="color:var(--green)">${esc(q.answer)}</b> · ${s.winners} người ghép đúng` :
+    `Gõ <b>thứ tự số</b> các thẻ, vd <b>${ex}</b> · hoặc gõ romaja`;
+  renderSide(s);
+}
+
+// ---- So găng 2 đội ----
+function renderTeams(s) {
+  const [a, b] = s.teams, tot = a.score + b.score;
+  const fa = tot ? Math.max(.12, Math.min(.88, a.score / tot)) : .5;
+  $('tug').innerHTML = `<div class="a" style="flex-grow:${fa}">${a.icon} ${a.score}</div><div class="b" style="flex-grow:${1 - fa}">${b.score} ${b.icon}</div><i class="mid"></i>`;
+  const col = (t) => `<div class="tcol"><h3>${t.icon} Đội ${esc(t.name)}<small>${t.n} thành viên</small></h3><div class="fans">` +
+    (t.top.length ? t.top.map((p) => `<div class="fan">${p.avatar ? `<div class="av" style="background-image:url('${esc(p.avatar)}')"></div>` : `<div class="av">${initial(p.name)}</div>`}` +
+      `<span class="nm">${esc(p.name)}${p.gift ? ' 🎁' : ''}</span><span class="pt">${p.score}</span></div>`).join('') : '') +
+    `</div><div class="join">Gõ “<b>${esc(t.name)}</b>” để vào đội</div></div>`;
+  const html = col(a) + col(b);
+  if ($('tcols').innerHTML !== html) $('tcols').innerHTML = html;
+}
+
+// ---- Lớp học ----
+function renderTeach(s, changed) {
+  const L = s.lesson;
+  $('pill').textContent = `📖 ${L.title || 'Từ mới'} · Từ ${L.i + 1}/${L.n}`;
+  $('q').textContent = L.w; $('q').className = 'q ko kw' + ([...L.w].length > 5 ? ' long' : '');
+  $('sub').innerHTML = L.r ? `/${esc(L.r)}/` : '';
+  $('lMean').textContent = L.m.charAt(0).toUpperCase() + L.m.slice(1);
+  $('lDone').innerHTML = L.done.map((x) => `<span><b class="ko">${esc(x.w)}</b> ${esc(x.m)}</span>`).join('');
+  $('howto').innerHTML = '🗣 Đọc to theo cô nào! Lát nữa <b>kiểm tra</b> đó 😉';
+  bubble(L.i === 0 ? `Cô dạy <b>${L.n} từ mới</b>, nghe kỹ để lát trả lời nhé!` : `Từ thứ <b>${L.i + 1}</b> nè, cả lớp chú ý!`);
+  if (changed) {
+    beep(523, .1); setTimeout(() => beep(784, .14), 110);
+    say(LINES.teach(s), { interrupt: true });
+  }
+}
+function bubble(html, cls = '', who) {
+  const b = $('tBubble');
+  b.className = 'bubble ' + cls;
+  const h = (who ? avatar(who) : '') + `<span>${html}</span>`;
+  if (b.innerHTML !== h) b.innerHTML = h;
+}
+// Học sinh hình người: tóc/áo/da theo số ghế; có ảnh TikTok thì làm mặt; được gọi tên thì giơ tay
+const SHIRTS = ['#3a8fe0', '#e0703a', '#2fb37a', '#b05ad6', '#d6487a', '#f2b632', '#4fc3c9', '#7b6cf0'];
+const HAIRS = ['#2b1d16', '#4a2c1a', '#1b1b25', '#6b3d22', '#3b2a20', '#8a5a2b'];
+const SKINS = ['#ffd9b8', '#f6c9a0', '#eebf94', '#ffe0c4'];
+function kid(i, x, hand) {
+  const shirt = SHIRTS[i % SHIRTS.length], hair = HAIRS[(i * 7) % HAIRS.length], skin = SKINS[(i * 3) % SKINS.length];
+  const girl = (i * 5) % 3 === 0 || i % 4 === 1;
+  if (!x) return `<svg class="kid" viewBox="0 0 120 130"><rect x="30" y="40" width="60" height="70" rx="12" fill="#6e4521"/><rect x="36" y="46" width="48" height="58" rx="8" fill="#8a5a2b"/></svg>`;
+  const face = x.avatar
+    ? `<clipPath id="f${i}"><circle cx="60" cy="51" r="27"/></clipPath><image href="${esc(x.avatar)}" x="33" y="24" width="54" height="54" clip-path="url(#f${i})" preserveAspectRatio="xMidYMid slice"/>`
+    : `<circle cx="60" cy="51" r="27" fill="${skin}"/>` +
+      (girl ? `<path d="M33 52 Q31 22 60 21 Q89 22 87 52 Q80 34 60 33 Q40 34 33 52Z" fill="${hair}"/>`
+            : `<path d="M34 46 Q34 22 60 22 Q86 22 86 46 Q78 33 64 35 Q50 31 34 46Z" fill="${hair}"/>`) +
+      `<circle cx="50" cy="54" r="3.2" fill="#2b2b2b"/><circle cx="70" cy="54" r="3.2" fill="#2b2b2b"/>` +
+      `<circle cx="44" cy="62" r="4" fill="#ff8fa3" opacity=".55"/><circle cx="76" cy="62" r="4" fill="#ff8fa3" opacity=".55"/>` +
+      `<path d="M53 64 Q60 70 67 64" stroke="#7a3b2b" stroke-width="2.6" fill="none" stroke-linecap="round"/>`;
+  // 04/11: bỏ thân, chỉ còn khuôn mặt to (mặt nhỏ quá khó nhìn trên điện thoại); viền màu theo chỗ ngồi
+  return `<svg class="kid" viewBox="28 18 64 66"><circle cx="60" cy="51" r="30" fill="${shirt}"/>${face}</svg>`;
+}
+// Xếp chỗ phía màn live (04/11): lớp 24 ghế. Ưu tiên ghế: bạn đang được gọi → top điểm lượt → người vừa hoạt động.
+// Không lọt vào thì "ngồi ngoài hành lang"; lên top là được mời vào lớp. Chỗ đã ngồi giữ nguyên vị trí (không nhảy bàn).
+const known = new Map(); // name -> {name, avatar, at}
+const deskOf = new Map(); // name -> idx bàn
+let hallSet = new Set();
+function seen(name, avatar, bump) {
+  if (!name) return;
+  let k = known.get(name);
+  if (!k) known.set(name, (k = { name, avatar: avatar || '', at: Date.now() }));
+  if (avatar) k.avatar = avatar;
+  if (bump) k.at = Date.now();
+}
+let lastFeedKey = '';
+function arrangeRoom(s) {
+  const srv = new Map((s.seats || []).map((x) => [x.name, x]));
+  for (const x of s.seats || []) seen(x.name, x.avatar, false);
+  const board = (s.board || []).filter((p) => p.score > 0);
+  for (const p of board) seen(p.name, p.avatar, false);
+  const fk = (s.feed || []).map((f) => f.name).join('|');
+  if (fk !== lastFeedKey) { for (const f of (s.feed || []).slice(-6)) seen(f.name, f.avatar, true); lastFeedKey = fk; }
+  if (s.called) seen(s.called.name, s.called.avatar, true);
+  const cut = Date.now() - 6 * 60000;
+  const recent = [...known.values()].filter((k) => k.at > cut || srv.has(k.name)).sort((a, b) => b.at - a.at);
+  const want = [];
+  const add = (n) => { if (n && !want.includes(n) && want.length < 24) want.push(n); };
+  add(s.called?.name);
+  board.forEach((p) => add(p.name));
+  [...deskOf.keys()].filter((n) => srv.has(n) || recent.some((k) => k.name === n)).forEach(add); // đang ngồi thì giữ chỗ
+  recent.forEach((k) => add(k.name));
+  const inSet = new Set(want);
+  const wasHall = hallSet;
+  for (const n of [...deskOf.keys()]) if (!inSet.has(n)) deskOf.delete(n);
+  const taken = new Set(deskOf.values());
+  for (const n of want) if (!deskOf.has(n)) {
+    const i = [...Array(24).keys()].find((j) => !taken.has(j));
+    deskOf.set(n, i); taken.add(i);
+    if (wasHall.has(n) && board.some((p) => p.name === n)) toast(`🎉 ${esc(n)} lên top — được mời vào lớp!`, 'join');
+  }
+  hallSet = new Set(recent.map((k) => k.name).filter((n) => !inSet.has(n)));
+  const seatsOut = [...deskOf].map(([name, idx]) => {
+    const k = known.get(name) || {}, x = srv.get(name) || {};
+    return { name, idx, avatar: x.avatar || k.avatar || '', stars: x.stars || 0, called: s.called?.name === name };
+  });
+  return { seatsOut, hall: [...hallSet] };
+}
+const roomFull = () => deskOf.size >= 24;
+
+function renderRoom(s) {
+  const { seatsOut: seats, hall } = arrangeRoom(s);
+  const right = new Set(s.right || []), wrong = new Set(s.wrongNames || []);
+  const by = new Map(seats.map((x) => [x.idx, x]));
+  const board = s.board || [];
+  const medal = new Map(board.slice(0, 3).filter((p) => p.score > 0).map((p, i) => [p.name, ['🥇', '🥈', '🥉'][i]]));
+  const rl = board.slice(0, 5).map((p, i) => `<div class="ri"><span class="md">${['🥇', '🥈', '🥉'][i] || i + 1}</span><span class="nm">${esc(p.name)}${p.x2 ? '<span class="x2">x2</span>' : ''}</span><span class="pt">${p.score}</span></div>`).join('')
+    || '<div class="ri" style="color:var(--muted)">Chưa có ai</div>';
+  if ($('rankL').innerHTML !== rl) $('rankL').innerHTML = rl;
+  const html = Array.from({ length: 24 }, (_, i) => {
+    const x = by.get(i);
+    if (!x) return `<div class="desk empty">${kid(i)}<div class="nm" style="opacity:0">.</div><i class="tb"></i></div>`;
+    const cls = [x.called && s.phase !== 'teach' ? 'called' : '', right.has(x.name) ? 'right' : wrong.has(x.name) ? 'wrong' : ''].join(' ');
+    return `<div class="desk ${cls}">${medal.has(x.name) ? `<span class="mdl">${medal.get(x.name)}</span>` : ''}${x.stars ? `<span class="st">★${x.stars}</span>` : ''}${kid(i, x, x.called && s.phase === 'question')}<div class="nm">${esc(x.name)}</div><i class="tb"></i></div>`;
+  }).join('');
+  if ($('room').innerHTML !== html) $('room').innerHTML = html;
+  const hh = hall.length
+    ? `<span class="hd">🚪 Hành lang · ${hall.length} bạn đang đứng ngoài học</span><span class="hn">${hall.slice(0, 6).map(esc).join(' · ')}${hall.length > 6 ? ' …' : ''}</span><span class="hk">Trả lời đúng, lên top là được vào lớp! ⬆️</span>`
+    : '';
+  $('hall').hidden = !hall.length;
+  if ($('hall').innerHTML !== hh) $('hall').innerHTML = hh;
+  if (s.phase === 'question' || s.phase === 'reveal') {
+    const c = s.called;
+    if (s.phase === 'question') bubble(c ? `Mời bạn <b>${esc(c.name)}</b> trả lời! Cả lớp cũng gõ số nhé` : 'Kiểm tra bài cũ! Gõ số <b>1–4</b> vào bình luận', '', c);
+    else if (c?.result === 'right') bubble(`Giỏi lắm <b style="color:#05301b">${esc(c.name)}</b>! +5 điểm thưởng ⭐`, 'ok', c);
+    else if (c?.result === 'wrong') bubble(`Chưa đúng rồi ${esc(c.name)}, nhớ kỹ từ này nhé!`, 'bad', c);
+    else if (c) bubble(`${esc(c.name)} chưa kịp trả lời rồi 😅`, 'bad', c);
+    else bubble(`Đáp án là số <b>${s.q.answer + 1}</b>!`, 'ok');
+  }
+}
+
+function renderMcq(s) {
+  const rev = s.phase === 'reveal';
+  const q = $('q');
+  if (s.q.rev) {
+    // Chọn từ Hàn: câu hỏi là NGHĨA tiếng Việt, 4 lựa chọn là từ Hàn
+    const m = s.q.mean || s.q.m || '';
+    q.textContent = m.charAt(0).toUpperCase() + m.slice(1);
+    q.className = 'q' + (m.length > 18 ? ' xlong' : m.length > 11 ? ' long' : '');
+  } else if (s.q.w) { q.textContent = s.q.w; q.className = 'q ko kw' + ([...s.q.w].length > 5 ? ' long' : ''); }
+  else { q.textContent = '🎧'; q.className = 'q kw'; }
+  $('sub').innerHTML = s.q.rev ? (rev ? `<span class="ko">${esc(s.q.w)}</span> <span style="color:var(--green)">/${esc(s.q.r || '')}/</span>` : 'tiếng Hàn là từ nào?')
+    : s.q.listen && !rev ? 'Nghe và chọn nghĩa đúng' :
+    `${s.q.r ? `<span style="color:var(--green)">/${esc(s.q.r)}/</span> · ` : ''}nghĩa là gì?`;
+  const total = rev ? s.q.votes.reduce((a, b) => a + b, 0) || 1 : 0;
+  const html = s.q.options.map((o, i) => {
+    const pct = rev ? Math.round((s.q.votes[i] / total) * 100) : 0;
+    return `<div class="opt ${rev && i === s.q.answer ? 'right' : ''}" style="--w:${pct}%"><i class="bar2"></i>` +
+      `<span class="n">${i + 1}</span><span class="t ${o.length > 22 ? 'sm' : ''} ${s.q.rev ? 'ko' : ''}">${esc(o)}</span>${rev ? `<span class="pct">${pct}%</span>` : ''}</div>`;
+  }).join('');
+  const op = $('opts');
+  op.className = 'opts' + (rev ? ' rev' : '');
+  if (op.innerHTML !== html) op.innerHTML = html;
+  $('howto').innerHTML = rev ? `${s.winners} người chọn đúng` :
+    `Gõ số <b>1</b>, <b>2</b>, <b>3</b> hoặc <b>4</b> vào bình luận${s.answered ? ` · ${s.answered} người đã chọn` : ''}`;
+}
+
+function renderSide(s) {
+  $('board').innerHTML = s.board.length
+    ? s.board.map((p, i) => `<div class="row"><span class="rk">${i + 1}</span><span class="nm">${esc(p.name)}${p.x2 ? '<span class="x2">x2</span>' : ''}</span><span class="pt">${p.score}</span></div>`).join('')
+    : '<div class="row" style="color:var(--muted)">Chưa có ai — trả lời đi nào!</div>';
+  $('players').textContent = s.players ? `${s.players} người chơi` : '';
+  $('winners').textContent = s.winners ? `${s.winners} đúng` : '';
+  renderFeed(s.feed);
+}
+
+function renderFeed(feed) {
+  $('feed').innerHTML = feed.slice(-9).reverse().map((f, i) =>
+    `<div class="it ${f.ok ? 'ok' : ''} ${i < feed.length - seenFeed ? 'new' : ''}">` +
+    `<span class="nm">${esc(f.name)}</span><span class="tx ${f.ok ? 'ko' : ''}">${f.ok ? '✓' : f.choice ? 'đã chọn' : esc(f.text)}</span>` +
+    (f.ok ? `<span class="pt">+${f.pts}</span>` : '') + '</div>').join('');
+  seenFeed = feed.length;
+}
+
+// đồng hồ chạy mượt giữa các lần server gửi trạng thái
+function frame() {
+  const now = state && (state.paused ? state.pausedAt : Date.now() + clockSkew);
+  if (state && (state.phase === 'break' || state.phase === 'podium')) {
+    const wait = state.endsAt == null;
+    const left = wait ? 0 : Math.max(0, state.endsAt - now);
+    const sec = Math.ceil(left / 1000);
+    if (state.phase === 'break') {
+      const c = $('bCount');
+      c.classList.toggle('wait', wait);
+      c.querySelector('b').textContent = wait ? 'Sắp bắt đầu' : sec;
+      c.style.setProperty('--p', wait ? '100%' : (left / (state.endsAt - state.startedAt)) * 100 + '%');
+      $('bSub').textContent = wait ? 'chờ một chút nhé…' : 'giây nữa bắt đầu';
+      if (!wait && !state.paused && sec <= 3 && sec > 0 && sec !== frame.last) { frame.last = sec; beep(sec === 1 ? 880 : 520, .12, .12, 'square'); }
+    } else {
+      $('pSoon').innerHTML = `Lượt ${state.podium.no + 1} sắp bắt đầu… 🔥`;
+    }
+  }
+  if (state && state.phase === 'teach') {
+    const total = state.endsAt - state.startedAt, left = Math.max(0, state.endsAt - now);
+    $('bar').style.transform = `scaleX(${left / total})`;
+    $('secs').textContent = state.paused ? '⏸' : '📖'; $('secs').className = 'secs';
+  }
+  if (state && (state.phase === 'question' || state.phase === 'reveal')) {
+    const total = state.endsAt - state.startedAt;
+    const left = Math.max(0, state.endsAt - now);
+    const sec = Math.ceil(left / 1000);
+    const isQ = state.phase === 'question';
+    $('bar').style.transform = `scaleX(${isQ ? left / total : 0})`;
+    $('secs').textContent = isQ ? sec : '✓';
+    $('secs').className = 'secs' + (isQ && sec <= 5 ? ' hot' : '');
+    if (state.paused) $('secs').textContent = '⏸';
+    if (isQ && !state.paused && sec <= 5 && sec !== frame.last) { frame.last = sec; beep(440, .06, .08, 'square'); }
+  }
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+
+function toast(html, cls = '') {
+  const t = document.createElement('div');
+  t.className = 'toast ' + cls; t.innerHTML = html;
+  $('toasts').appendChild(t);
+  setTimeout(() => t.remove(), 4100);
+  while ($('toasts').children.length > 3) $('toasts').firstChild.remove();
+}
+
+// ---- cảm ơn quà: mỗi thẻ 4s, quà dồn dập thì gộp theo người để hàng đợi không dài vô hạn ----
+const thankQueue = [];
+let thanking = false;
+// ---- Giọng đọc: VieNeu-TTS "Ngọc Linh" qua /api/tts (server), không có thì giọng trình duyệt ----
+// say([câu, số_ms_nghỉ, câu…], {interrupt}) — interrupt: cắt lời đang đọc (câu hỏi mới); không thì xếp hàng.
+const voiceQ = [];
+let vSpeaking = false, vGen = 0, vEl = null, vUtt = null, vCur = null, neuOK = true;
+const voiceOn = () => !muted && state?.cfg?.voice !== false;
+// Tên đọc được: bỏ emoji/ký tự lạ/chữ Hàn, bỏ dãy số dài (user9439123837400), rỗng → "bạn"
+function spokenName(n) {
+  let t = String(n || '').replace(/\s*\(.*\)\s*/g, ' ').replace(/\d{4,}/g, ' ')
+    .replace(/[^\p{Script=Latin}\d\s]/gu, ' ').replace(/\s+/g, ' ').trim();
+  t = t.split(' ').slice(0, 3).join(' ').slice(0, 24).trim();
+  return (t.match(/\p{L}/gu) || []).length >= 2 && !/^user$/i.test(t) ? t : 'bạn';
+}
+// Câu đọc: chỉ giữ chữ Latin/Việt, số, dấu câu thường (emoji, chữ Hàn, ký hiệu lạ bỏ hết)
+const cleanSay = (t) => String(t).replace(/[^\p{Script=Latin}\d\s.,!?…:;'"%\-–]/gu, ' ').replace(/\s+([,.!?])/g, '$1').replace(/\s+/g, ' ').trim();
+function browserUtt(text) {
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'vi-VN';
+  const t = text.trim();
+  u.rate = t.endsWith('!') ? 1.08 : 1.02; u.pitch = t.endsWith('?') ? 1.15 : t.endsWith('!') ? 1.1 : 1;
+  const vs = speechSynthesis.getVoices().filter((x) => x.lang?.startsWith('vi'));
+  const v = vs.find((x) => /premium|enhanced|nâng cao/i.test(x.name)) || vs[0];
+  if (v) u.voice = v;
+  return u;
+}
+function prepare(parts, keep) {
+  // gộp các câu liền nhau thành 1 lần gọi VieNeu (đọc liền mạch); bắt đầu sinh/tải ngay.
+  // {audio: url} = phát file (âm đáp án tiếng Hàn) — đi chung hàng đợi nên không bao giờ đè giọng dẫn.
+  const out = [];
+  for (let p of parts) {
+    const last = out[out.length - 1];
+    if (typeof p === 'string') { p = cleanSay(p); if (!p) continue; if (last?.text != null) last.text += ' ' + p; else out.push({ text: p }); }
+    else if (typeof p === 'number' && last?.text != null && p < 600) { /* nghỉ ngắn: để VieNeu tự ngắt theo dấu câu */ }
+    else out.push(p);
+  }
+  for (const it of out) {
+    if (it?.audio) { it.el = new Audio(it.audio); it.el.preload = 'auto'; }
+    else if (it?.text != null && neuOK && state?.cfg?.neu) {
+      it.el = new Audio('api/tts?text=' + encodeURIComponent(it.text));
+      it.el.preload = 'auto';
+    }
+  }
+  for (const it of out) if (typeof it === 'object') { it.t = Date.now(); if (keep) it.keep = true; }
+  return out;
+}
+function playNext(g) {
+  if (g !== vGen) return;
+  const seg = voiceQ.shift();
+  vCur = null;
+  if (seg === undefined) { vSpeaking = false; vEl = null; duck(false); return; }
+  if (typeof seg === 'number') return setTimeout(() => playNext(g), seg);
+  if (typeof seg === 'object' && seg.text != null && !seg.keep && Date.now() - seg.t > 20000) return playNext(g); // lời phụ quá cũ
+  vCur = seg;
+  let done = false, watchdog;
+  const next = () => { if (done) return; done = true; clearTimeout(watchdog); setTimeout(() => playNext(g), 120); };
+  const viaBrowser = () => {
+    clearTimeout(watchdog);
+    try {
+      const u = vUtt = browserUtt(seg.text); // giữ tham chiếu: Chrome có thể dọn mất utterance → không báo onend
+      watchdog = setTimeout(next, 2500 + seg.text.length * 110);
+      u.onend = u.onerror = next;
+      speechSynthesis.speak(u);
+    } catch { next(); }
+  };
+  if (seg.audio) {
+    const el = vEl = seg.el;
+    watchdog = setTimeout(next, 6000);
+    el.onended = el.onerror = next;
+    el.play().catch(next);
+    return;
+  }
+  if (seg.el) {
+    const el = vEl = seg.el;
+    const fallback = () => { if (done) return; console.warn('VieNeu chậm/lỗi → bỏ câu:', seg.text); next(); }; // KHÔNG đổi sang giọng Chrome
+    watchdog = setTimeout(fallback, 12000 + seg.text.length * 50); // sinh quá lâu
+    el.onended = next;
+    el.onerror = fallback;
+    el.onplaying = () => { clearTimeout(watchdog); watchdog = setTimeout(next, (Number.isFinite(el.duration) && el.duration > 0 ? el.duration : 20) * 1000 + 3000); };
+    el.play().catch(() => { if (el.error) fallback(); else el.oncanplay = () => el.play().catch(fallback); });
+    return;
+  }
+  viaBrowser();
+}
+// keep: lời không được bỏ khi bị cắt (AI trả lời, cảm ơn quà) — chỉ lùi ra sau lời mới.
+function say(parts, { interrupt = false, keep = false } = {}) {
+  if (muted) return; // ?mute=1 (xem trước trong màn điều khiển): tuyệt đối không phát gì, kể cả âm đáp án
+  if (!voiceOn() && !parts.some((p) => p?.audio)) return;
+  const items = prepare(voiceOn() ? parts : parts.filter((p) => p?.audio), keep);
+  if (interrupt) {
+    const kept = voiceQ.filter((x) => x?.keep);
+    // lời quan trọng bị cắt GIỮA CHỪNG → đọc lại sau (phần tử Audio mới; cái cũ bỏ hẳn)
+    if (vCur?.keep && !(vCur.el && vCur.el.ended)) kept.unshift({ ...vCur, el: vCur.el ? new Audio(vCur.el.src) : undefined });
+    vGen++; voiceQ.length = 0;
+    try { speechSynthesis.cancel(); } catch {}
+    if (vEl) { vEl.onended = vEl.onerror = vEl.onplaying = vEl.oncanplay = null; vEl.pause(); } // gỡ handler: không tự phát lại
+    vEl = null; vCur = null;
+    if (vSpeaking) { vSpeaking = false; duck(false); }
+    voiceQ.push(...items, 250, ...kept.flatMap((x) => [x, 250]));
+  } else {
+    if (!keep && voiceQ.length > 10) return; // dồn nhiều quá thì bỏ lời phụ
+    voiceQ.push(...items, 250);
+  }
+  if (!vSpeaking) { vSpeaking = true; duck(true); const g = vGen; setTimeout(() => playNext(g), 80); }
+}
+const speak = (text, opt) => say([text], opt);
+
+// ---- Lời dẫn (mỗi loại nhiều câu, không lặp câu vừa nói) ----
+const pickOne = (() => {
+  const last = {};
+  return (key, list) => {
+    const opts = list.length > 1 ? list.filter((_, i) => i !== last[key]) : list;
+    const it = opts[Math.floor(Math.random() * opts.length)];
+    last[key] = list.indexOf(it);
+    return it;
+  };
+})();
+const PROMO = [400, 'Muốn ôn lại các từ vừa chơi?', 250, 'Tải app Jaemy, từ điển và học tiếng Hàn, trên App Store hoặc Google Play nhé!'];
+const SEG_INTRO = {
+  class: ['Đến giờ học rồi cả lớp ơi!', 300, 'Cô Cáo dạy từ mới, lát kiểm tra và gọi tên từng bạn nhé!'],
+  quiz: ['Giờ giải trí! Đố nhanh nào!', 300, 'Gõ số một đến bốn, ai nhanh nhất được nhiều điểm nhất!'],
+  scramble: ['Tiếp theo là trò ghép chữ!', 300, 'Các thẻ chữ bị xáo trộn, mọi người gõ thứ tự số đúng vào bình luận nhé!'],
+  reverse: ['Giờ học: chọn từ tiếng Hàn!', 300, 'Cô đọc nghĩa tiếng Việt, mọi người gõ số một đến bốn chọn đúng từ tiếng Hàn nha!'],
+  listen: ['Giờ luyện tai nè!', 300, 'Cô chỉ đọc, không hiện chữ. Nghe thật kỹ rồi chọn nghĩa đúng nha!'],
+  team: ['So găng hai đội bắt đầu!', 300, 'Gõ tên đội vào bình luận để chọn phe. Trả lời đúng và tặng quà để kéo điểm cho đội mình!'],
+  type: ['Thử thách gõ chữ Hàn!', 300, 'Nhìn nghĩa rồi gõ chữ Hàn vào bình luận, có gợi ý mở dần nhé!'],
+};
+const LINES = {
+  intro: (s) => s.program && s.next && SEG_INTRO[s.next.id] ? SEG_INTRO[s.next.id] : pickOne('intro', [
+    ['Xin chào cả nhà!', 300, 'Chào mừng mọi người đến với game đố từ tiếng Hàn của Jaemy!', 300, 'Gõ đáp án bằng chữ Hàn vào bình luận để ghi điểm nha!'],
+    ['Hello mọi người ơi!', 300, `Lượt ${s.nextGame} sắp bắt đầu rồi.`, 300, 'Ai trả lời đúng nhanh nhất được nhiều điểm nhất đó!'],
+    ['Mọi người chuẩn bị nha!', 300, `Lượt này có ${s.cfg.questions} câu, mỗi câu ${s.cfg.roundSec} giây.`, 300, 'Hết lượt sẽ vinh danh ba bạn cao điểm nhất!'],
+  ]),
+  question: (s) => {
+    const m = s.q.m, g = s.game;
+    const lead = g.qNo === 1 ? [`Lượt ${g.no} bắt đầu!`, 300] : g.qNo === g.total ? ['Câu cuối cùng rồi!', 300] : [];
+    if (s.q.mode === 'mcq') {
+      if (s.q.rev) return [...lead, `${s.q.mean}.`, 300, pickOne('qrv', ['Tiếng Hàn là từ nào?', 'Từ nào đúng nhỉ? Chọn số một đến bốn!', 'Gõ số từ đúng vào bình luận nha!'])];
+      if (s.q.listen) return [...lead, pickOne('ql', ['Câu nghe nè, nghe kỹ nhé!', 'Lắng nghe nào!']), 200, { audio: s.q.audio }, 500, { audio: s.q.audio }, 300, 'Từ này nghĩa là gì?'];
+      return [...lead, ...pickOne('qm', [
+        ['Câu tiếp theo nè!', 200, { audio: s.q.audio }, 300, 'nghĩa là gì nhỉ?'],
+        [`Câu ${g.qNo}.`, 200, { audio: s.q.audio }, 300, 'Chọn số một, hai, ba hay bốn?'],
+        ['Từ này nghĩa là gì?', 200, { audio: s.q.audio }],
+        ['Ai biết không?', 200, { audio: s.q.audio }, 300, 'Gõ số vào bình luận nha!'],
+      ])];
+    }
+    if (s.q.mode === 'scramble') return [...lead, pickOne('qs', [`${m}.`, `Từ có nghĩa là ${m}.`]), 250, pickOne('qs2', ['Gõ thứ tự số các thẻ nào!', 'Ai ghép được không? Gõ số nhé!', 'Xếp thẻ cho đúng nha!'])];
+    return [...lead, ...pickOne('q', [
+      ['Câu tiếp theo nè!', 300, `${m}.`, 300, 'Tiếng Hàn là gì nhỉ?'],
+      ['Nào, cùng đoán nhé!', 300, `${m}...`, 300, 'nói bằng tiếng Hàn thế nào?'],
+      ['Ai biết không?', 250, `${m}!`, 300, 'Gõ đáp án vào bình luận nha!'],
+      [`${m}.`, 300, 'Từ này tiếng Hàn là gì ta?'],
+      [`Câu ${g.qNo}.`, 250, `${m}, tiếng Hàn là gì?`],
+    ])];
+  },
+  teach: (s) => {
+    const L = s.lesson;
+    const lead = L.i === 0 ? [pickOne('tl', [`Cô dạy ${L.n} từ mới nha, nghe kỹ để lát trả lời đúng nhé!`, `Học từ mới nào cả lớp! Có ${L.n} từ, chú ý nghe nhé!`]), 250] : [];
+    return [...lead, pickOne('tw', ['Từ này là', 'Từ tiếp theo', 'Nghe nè']), 150, { audio: L.audio }, 250,
+      `nghĩa là ${L.m}.`, 300, pickOne('tr', ['Cả lớp đọc theo cô!', 'Đọc theo nào!', 'Nhắc lại nhé!']), 150, { audio: L.audio }, 700, { audio: L.audio }];
+  },
+  classQuestion: (s) => {
+    const c = s.called;
+    return [...(c ? [pickOne('cq', [`Mời bạn ${spokenName(c.name)} trả lời!`, `Bạn ${spokenName(c.name)} ơi, câu này dành cho bạn!`, `Cô gọi bạn ${spokenName(c.name)} nhé!`])] : ['Kiểm tra bài cũ nè!']),
+      200, { audio: s.q.audio }, 250, 'nghĩa là gì?', 200, pickOne('cq2', ['Cả lớp cũng gõ số nhé!', 'Ai biết gõ số vào bình luận nha!'])];
+  },
+  classReveal: (s) => {
+    const c = s.called, n = c && spokenName(c.name);
+    const line = !c ? [] : c.result === 'right' ? [pickOne('cr', [`Giỏi lắm ${n}! Cộng năm điểm thưởng!`, `Chính xác! ${n} học bài kỹ ghê!`])]
+      : c.result === 'wrong' ? [`Chưa đúng rồi ${n}, nhớ kỹ từ này nhé!`] : [`${n} chưa kịp trả lời rồi.`];
+    return [`Đáp án là số ${s.q.answer + 1}, ${s.q.m}!`, ...line, ...fx.callout(s, c?.name).slice(0, 1)];
+  },
+  firstCorrect: (name) => pickOne('fc', [
+    ['Chính xác!', 200, `${name} trả lời đúng đầu tiên!`],
+    [`Wow, ${name} nhanh quá!`],
+    [`${name} đã có đáp án đúng!`, 200, 'Còn ai nữa không nào?'],
+  ]),
+  reveal: (s) => s.q.mode === 'scramble' ? [`Thứ tự đúng là ${[...(s.q.answer || '')].join(' ')}.`, 200, { audio: s.q.audio }]
+    : s.q.rev ? [`Đáp án là số ${s.q.answer + 1}!`, 150, { audio: s.q.audio }, ...fx.callout(s)]
+    : s.q.mode === 'mcq'
+    ? [`${pickOne('rvm', ['Đáp án là', 'Đáp án đúng là', 'Chính là'])} số ${s.q.answer + 1}, ${s.q.m}!`, ...fx.callout(s)]
+    : [pickOne('rv', ['Đáp án là...', 'Đáp án đúng là...', 'Đáp án nè!']), 150, { audio: s.q.audio }],
+  podium: (p) => [
+    ...(p.teams ? [p.teamWin != null ? `Đội ${p.teams[p.teamWin].name} chiến thắng! Cả đội được cộng mười điểm!` : 'Hai đội hoà nhau!', 300] : []),
+    ...(p.top[0] ? ['Xin chúc mừng!', 300, `${spokenName(p.top[0].name)} vô địch lượt ${p.no} với ${p.top[0].score} điểm!`] : ['Lượt này chưa ai ghi điểm.']),
+    300, 'Lượt mới sắp bắt đầu rồi, chuẩn bị tinh thần nào!', ...PROMO,
+  ],
+};
+// Biểu tượng theo tên quà (tên tiếng Việt lẫn tiếng Anh vì TikTok trả theo ngôn ngữ tài khoản)
+const GIFT_ICONS = [
+  [/hồng|rose/i, '🌹'], [/tên lửa|rocket/i, '🚀'], [/sư tử|lion/i, '🦁'], [/thiên hà|galaxy/i, '🌌'],
+  [/súng|money gun/i, '💸'], [/corgi/i, '🐶'], [/tim|heart/i, '🫶'], [/donut|doughnut/i, '🍩'],
+  [/nước hoa|perfume/i, '🧴'], [/kem|ice cream/i, '🍦'], [/tiktok/i, '🎵'], [/xe|car/i, '🏎️'],
+  [/vương miện|crown/i, '👑'], [/kim cương|diamond/i, '💎'], [/gấu|bear/i, '🧸'],
+];
+const giftIcon = (name) => (GIFT_ICONS.find(([re]) => re.test(name)) || [, '🎁'])[1];
+
+function confetti(n = 70) {
+  const colors = ['#ff8a1f', '#ffd34d', '#ff5d8f', '#3ee08f', '#5cd6ff', '#fff'];
+  for (let i = 0; i < n; i++) {
+    const c = document.createElement('div');
+    c.className = 'confetti';
+    c.style.left = Math.random() * 1080 + 'px';
+    c.style.background = colors[i % colors.length];
+    c.style.animationDuration = 2.2 + Math.random() * 2 + 's';
+    c.style.animationDelay = Math.random() * .8 + 's';
+    $('stage').appendChild(c);
+    setTimeout(() => c.remove(), 5200);
+  }
+}
+
+function nextThanks() {
+  const m = thankQueue.shift();
+  const box = $('thanks');
+  if (!m) { thanking = false; box.classList.remove('on'); return; }
+  thanking = true;
+  // gộp các quà cùng loại còn chờ của cùng người vào thẻ này
+  for (let i = thankQueue.length - 1; i >= 0; i--) {
+    const o = thankQueue[i];
+    if (o.name === m.name && o.gift === m.gift) {
+      m.count += o.count; m.bonus += o.bonus; m.diamonds += o.diamonds; thankQueue.splice(i, 1);
+    }
+  }
+  const icon = giftIcon(m.gift);
+  const what = `${m.count > 1 ? m.count + '× ' : ''}${m.gift}`;
+  const busy = thankQueue.length > 3;
+
+  if (m.diamonds >= 1000) {
+    // quà rất to: phủ cả màn, pháo giấy, giữ 7s
+    const mg = $('mega');
+    mg.querySelector('.ic').textContent = icon;
+    mg.querySelector('.t1').textContent = `Cảm ơn ${m.name}!`;
+    mg.querySelector('.t2').textContent = `đã tặng ${what} 💖 +${m.bonus} điểm`;
+    mg.classList.add('on');
+    confetti();
+    [523, 659, 784, 1046].forEach((f, i) => setTimeout(() => beep(f, .25, .18, 'triangle'), i * 140));
+    say([`Ôi! Cảm ơn ${spokenName(m.name)} đã tặng ${m.gift}! Cảm ơn bạn rất nhiều!`], { keep: true });
+    setTimeout(() => { mg.classList.remove('on'); setTimeout(nextThanks, 400); }, busy ? 4500 : 7000);
+    return;
+  }
+
+  const big = m.diamonds >= 100;
+  const av = box.querySelector('.av');
+  av.style.backgroundImage = m.avatar ? `url("${m.avatar}")` : '';
+  av.textContent = m.avatar ? '' : '💖';
+  box.querySelector('.ic').textContent = icon;
+  box.querySelector('.t1').textContent = `Cảm ơn ${m.name}!`;
+  box.querySelector('.t2').textContent = `đã tặng ${what} · +${m.bonus} điểm · x2 ${m.boost} câu tới`;
+  box.className = big ? 'big' : '';
+  void box.offsetWidth; box.classList.add('on');
+  if (big) { confetti(30); [659, 880, 1175].forEach((f, i) => setTimeout(() => beep(f, .18, .15), i * 120)); }
+  else { beep(784, .1); setTimeout(() => beep(1046, .2), 110); }
+  say([`Cảm ơn ${spokenName(m.name)} đã tặng ${m.gift}`], { keep: true });
+  setTimeout(() => { box.classList.remove('on'); setTimeout(nextThanks, 400); }, busy ? 2500 : big ? 5500 : 4000);
+}
+
+// ---- AI "Cáo Jaemy": hiện lời đáp + đọc to, lần lượt ----
+const aiQueue = [];
+let aiShowing = false;
+function nextAi() {
+  const m = aiQueue.shift();
+  const box = $('aibox');
+  if (!m) { aiShowing = false; box.classList.remove('on'); return; }
+  aiShowing = true;
+  box.querySelector('.q').innerHTML = `<b>${esc(m.name)}</b>: ${esc(m.q)}`;
+  box.querySelector('.a').textContent = '🦊 ' + m.reply;
+  box.classList.add('on');
+  say([m.reply], { keep: true });
+  const ms = Math.min(11000, 4000 + m.reply.length * 70);
+  setTimeout(() => { box.classList.remove('on'); setTimeout(nextAi, 400); }, ms);
+}
+
+// ---- Tương tác với người chơi: ai đúng, ai nhanh nhất, chuỗi đúng liên tiếp, ai lên dẫn đầu ----
+// Chạy hoàn toàn ở trang (dựa trên sự kiện 'correct' + bảng điểm server đã gửi) — không cần đổi server.
+// Lời khen bằng giọng chỉ dành cho người thật (m.bot = người chơi ảo → chỉ hiện thẻ nhỏ).
+const fx = (() => {
+  let key = '', fastest = null, inRound = new Map(), lastLeader = null, lastLeadQ = -9, momentT = null;
+  const streak = new Map(); // tên -> số câu đúng liên tiếp
+  const momentQ = [];
+  let momentOn = false;
+  function moment(text, cls = '') {
+    momentQ.push({ text, cls });
+    if (!momentOn) nextMoment();
+  }
+  function nextMoment() {
+    const m = momentQ.shift(), el = $('moment');
+    if (!m) { momentOn = false; el.classList.remove('on'); return; }
+    momentOn = true;
+    el.className = m.cls; el.textContent = m.text;
+    void el.offsetWidth; el.classList.add('on');
+    beep(880, .1, .12); setTimeout(() => beep(1320, .16, .12), 110);
+    clearTimeout(momentT);
+    momentT = setTimeout(() => { el.classList.remove('on'); setTimeout(nextMoment, 350); }, 3000);
+  }
+  function chip(text, cls = '') {
+    const c = document.createElement('div');
+    c.className = 'hit ' + cls; c.textContent = text;
+    $('hits').prepend(c);
+    while ($('hits').children.length > 5) $('hits').lastChild.remove();
+    setTimeout(() => c.remove(), 2900);
+  }
+  const short = spokenName;
+  const names = (arr) => arr.length <= 1 ? arr.join('') : arr.slice(0, -1).join(', ') + ' và ' + arr[arr.length - 1];
+  // chào người mới vào: gom 6s rồi đọc 1 câu, tối đa 1 lần / 20s
+  let joinBuf = [], joinT = null, lastGreet = 0, lastRealAt = Date.now(), lastNudge = 0;
+  function flushJoin() {
+    joinT = null;
+    const list = [...new Set(joinBuf)].slice(0, 3); joinBuf = [];
+    if (!list.length || Date.now() - lastGreet < 20000) return;
+    lastGreet = Date.now();
+    say([`Chào ${names(list.map(short))}!`, 200, pickOne('jg', ['Gõ số từ 1 đến 4 vào bình luận để chơi cùng nha!', 'Vào chơi luôn nè, gõ số 1, 2, 3 hoặc 4 nhé!', 'Trả lời đúng nhanh nhất được 10 điểm đó!'])]);
+  }
+  return {
+    get fastest() { return fastest; },
+    onJoin(name) {
+      if (!name) return;
+      joinBuf.push(name);
+      if (!joinT) joinT = setTimeout(flushJoin, 6000);
+    },
+    // Lời gọi tên người thật lúc công bố đáp án (người chơi ảo không được gọi tên)
+    callout(s, skip) {
+      const right = [...inRound].filter(([n, bot]) => !bot && n !== skip).map(([n]) => n);
+      const wrong = (s.feed || []).filter((f) => f.choice && !f.ok && !f.bot && f.name !== skip).map((f) => f.name).filter((n) => !right.includes(n));
+      if (right.length || wrong.length) lastRealAt = Date.now();
+      const out = [];
+      if (right.length) out.push(`${right.length > 3 ? `${right.length} bạn đã đúng, chúc mừng ` : 'Chúc mừng '}${names([...new Set(right)].slice(0, 3).map(short))}!`);
+      else if (fastest) out.push(`${short(fastest)} nhanh nhất!`);
+      if (wrong.length && out.length < 2) out.push(`Tiếc quá ${names([...new Set(wrong)].slice(0, 2).map(short))}, câu sau cố lên nhé!`);
+      // lâu không có người thật trả lời → mời gọi (tối đa 1 lần / 2 phút)
+      if (!out.length && Date.now() - lastRealAt > 60000 && Date.now() - lastNudge > 120000) {
+        lastNudge = Date.now();
+        out.push(pickOne('nudge', ['Mọi người đang xem ơi, gõ số 1 đến 4 vào bình luận để chơi cùng nha!', 'Ai đang xem thì thử sức đi nào, chỉ cần gõ một con số thôi!']));
+      }
+      return out;
+    },
+    onCorrect(m) {
+      const first = m.rank === 1 && !m.bot;
+      if (first) fastest = m.name;
+      inRound.set(m.name, !!m.bot);
+      chip(`${first ? '⚡' : '✅'} ${m.name} +${m.pts}${first ? ' · nhanh nhất!' : ''}`, first ? 'first' : '');
+    },
+    onState(s) {
+      if (s.phase !== 'question' && s.phase !== 'reveal') return;
+      const k = s.game.no + '.' + s.game.qNo;
+      if (k !== key && s.phase === 'question') {
+        // sang câu mới: chốt chuỗi đúng của câu trước
+        if (key) {
+          for (const n of [...streak.keys()]) if (!inRound.has(n)) streak.delete(n);
+          for (const [n, bot] of inRound) {
+            const c = (streak.get(n) || 0) + 1;
+            streak.set(n, c);
+            if (!bot && [3, 5, 10, 15, 20].includes(c)) {
+              moment(`🔥 ${n} đúng ${c} câu liên tiếp!`);
+              say([`Quá đỉnh! ${n} đã đúng ${c} câu liên tiếp!`], { keep: true });
+            }
+          }
+        }
+        if (s.game.qNo === 1) { streak.clear(); lastLeader = null; }
+        key = k; fastest = null; inRound = new Map();
+      }
+      // đổi người dẫn đầu (người thật, có điểm, không quá dày: cách nhau ≥ 2 câu)
+      const top = s.board?.[0];
+      if (top && top.score > 0 && top.name !== lastLeader) {
+        const prevLeader = lastLeader;
+        lastLeader = top.name;
+        if (prevLeader && !top.bot && s.game.qNo - lastLeadQ >= 2) {
+          lastLeadQ = s.game.qNo;
+          moment(`👑 ${top.name} vươn lên dẫn đầu!`, 'lead');
+          say([`${spokenName(top.name)} đã vươn lên dẫn đầu với ${top.score} điểm!`], { keep: true });
+        }
+      }
+    },
+  };
+})();
+
+// ---- WebSocket ----
+function connect() {
+  const ws = new WebSocket(`ws://${location.host}`);
+  ws.onopen = () => ($('conn').textContent = '');
+  ws.onclose = () => { $('conn').textContent = 'mất kết nối…'; setTimeout(connect, 1500); };
+  ws.onmessage = (e) => {
+    const m = JSON.parse(e.data);
+    if (m.type === 'state') {
+      if (m.cfg?.mute && !muted) { muted = true; try { actx?.suspend(); speechSynthesis.cancel(); document.querySelectorAll('audio').forEach((a) => a.pause()); } catch {} }
+      state = m; clockSkew = m.now - Date.now(); render(); applyMusic(); fx.onState(m);
+    } else if (m.type === 'feed' && state) {
+      state.feed = m.feed; renderFeed(m.feed);
+    } else if (m.type === 'correct') {
+      beep(m.rank === 1 ? 1180 : 880, .1, .12);
+      if (m.rank === 1 && !m.bot && !m.called) say(LINES.firstCorrect(spokenName(m.name)));
+      fx.onCorrect(m);
+    } else if (m.type === 'teamJoin') {
+      toast(`${m.icon} ${esc(m.name)} vào đội ${esc(m.tname)}`, 'join');
+    } else if (m.type === 'gift') {
+      thankQueue.push(m); if (!thanking) nextThanks();
+    } else if (m.type === 'reload') {
+      location.reload();
+    } else if (m.type === 'ai') {
+      aiQueue.push(m); if (!aiShowing) nextAi();
+    } else if (m.type === 'join') {
+      fx.onJoin(m.name);
+      if (document.querySelector('.wrap.room')) {
+        seen(m.name, m.avatar, true);
+        toast(roomFull() && !deskOf.has(m.name) ? `🚪 ${esc(m.name)} đang ngồi ngoài hành lang học` : `👋 ${esc(m.name)} vào lớp`, 'join');
+      } else toast(`👋 ${esc(m.name)} vừa vào`, 'join');
+    }
+  };
+}
+connect();
+
+</script>
+</body>
+</html>

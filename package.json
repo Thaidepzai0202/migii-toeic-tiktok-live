@@ -1,0 +1,18 @@
+{
+  "name": "tiktok-live-quiz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "demo": "node server.js --sim",
+    "live": "./go_live.sh studio",
+    "control": "open http://localhost:8787/control"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "tiktok-live-connector": "^2.5.0",
+    "ws": "^8.22.1"
+  }
+}

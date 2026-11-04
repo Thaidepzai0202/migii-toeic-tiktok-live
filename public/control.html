@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Điều khiển · Đố từ Hàn</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- font tải không chặn: mạng chậm thì trang vẫn chạy ngay, không kẹt "đang nối…" -->
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800&family=Noto+Sans+KR:wght@700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<style>
+  :root {
+    --bg: #0d1226; --panel: #151b36; --panel2: #1c2346; --line: #2a3260; --text: #eef0ff; --muted: #9098c4;
+    --orange: #ff8a1f; --green: #3ee08f; --pink: #ff5d8f; --yellow: #ffd34d; --cyan: #5cd6ff; --red: #ff5a5a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font: 600 14px/1.4 'Be Vietnam Pro', system-ui, sans-serif; min-height: 100vh; }
+  .ko { font-family: 'Noto Sans KR', 'Be Vietnam Pro', sans-serif; }
+  header { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 12px 16px; border-bottom: 1px solid var(--line);
+           position: sticky; top: 0; background: var(--bg); z-index: 5; }
+  header h1 { font-size: 17px; font-weight: 800; margin-right: auto; }
+  header h1 b { color: var(--orange); }
+  .chip { padding: 5px 11px; border-radius: 999px; background: var(--panel2); color: var(--muted); font-size: 13px; font-weight: 700; white-space: nowrap; }
+  .chip.ok { background: rgba(62,224,143,.15); color: var(--green); }
+  .chip.bad { background: rgba(255,90,90,.15); color: var(--red); }
+  .chip.warn { background: rgba(255,211,77,.15); color: var(--yellow); }
+  .chip.click { cursor: pointer; text-decoration: underline dotted; }
+  main { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 16px; padding: 16px; max-width: 1280px; margin: 0 auto; }
+  /* Màn hẹp / điện thoại: nút điều khiển lên đầu, xem trước xuống dưới và nhỏ lại */
+  @media (max-width: 860px) { main { grid-template-columns: 1fr; padding: 10px; } .preview { max-width: 260px; margin: 0 auto; } }
+  .col { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
+  .card h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 12px; display: flex; justify-content: space-between; gap: 8px; }
+  .card h2 small { text-transform: none; letter-spacing: 0; }
+
+  /* hiện trạng */
+  .now { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 14px; align-items: center; }
+  .phase { display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; padding: 4px 10px; border-radius: 8px; background: var(--panel2); }
+  .phase.question { background: var(--orange); color: #111; } .phase.reveal { background: var(--green); color: #052; }
+  .phase.podium { background: var(--yellow); color: #111; } .phase.break { background: var(--cyan); color: #022; } .phase.outro { background: var(--pink); }
+  .where { margin-left: 8px; color: var(--muted); font-weight: 700; }
+  .mean { margin-top: 10px; font-size: 26px; font-weight: 800; }
+  .ans { margin-top: 4px; font-size: 34px; font-weight: 900; color: var(--green); }
+  .ans small { font: 700 17px 'Be Vietnam Pro'; color: var(--muted); margin-left: 8px; }
+  .meta { margin-top: 6px; color: var(--muted); font-size: 13px; }
+  .clock { width: 112px; height: 112px; border-radius: 50%; display: grid; place-items: center; position: relative;
+           background: conic-gradient(var(--orange) var(--p, 0%), var(--panel2) 0); }
+  .clock::before { content: ''; position: absolute; inset: 9px; border-radius: 50%; background: var(--panel); }
+  .clock b { position: relative; font-size: 36px; font-weight: 900; font-variant-numeric: tabular-nums; }
+  .clock.paused b { color: var(--yellow); font-size: 28px; }
+  .progress { margin-top: 14px; height: 8px; border-radius: 99px; background: var(--panel2); overflow: hidden; }
+  .progress i { display: block; height: 100%; background: linear-gradient(90deg, var(--orange), var(--pink)); width: 0; transition: width .3s; }
+
+  /* nút */
+  .btns { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; margin-top: 16px; }
+  button { font: 700 14px 'Be Vietnam Pro', system-ui; color: var(--text); background: var(--panel2); border: 1px solid var(--line);
+           border-radius: 11px; padding: 11px 12px; cursor: pointer; text-align: center; }
+  button:hover:not(:disabled) { border-color: var(--muted); }
+  button:disabled { opacity: .35; cursor: not-allowed; }
+  button.primary { background: var(--orange); color: #111; border-color: var(--orange); }
+  button.go { background: var(--green); color: #052; border-color: var(--green); }
+  button.danger { background: transparent; color: var(--red); border-color: rgba(255,90,90,.5); }
+  .kbd { display: block; font-size: 11px; opacity: .6; font-weight: 600; margin-top: 2px; }
+
+  .restart { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--line); }
+  .restart .note { color: var(--muted); font-size: 12px; flex: 1; min-width: 200px; }
+  /* cấu hình */
+  .cfg { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; }
+  label.f { display: flex; flex-direction: column; gap: 5px; color: var(--muted); font-size: 12px; font-weight: 700; }
+  input, select { font: 700 15px 'Be Vietnam Pro', system-ui; color: var(--text); background: var(--bg); border: 1px solid var(--line);
+                  border-radius: 9px; padding: 8px 10px; width: 100%; }
+  input[type=range] { padding: 0; accent-color: var(--orange); }
+  .rangeval { color: var(--text); font-size: 15px; }
+  .switch { flex-direction: row; align-items: center; gap: 8px; color: var(--text); font-size: 14px; cursor: pointer; }
+  .switch input { width: 18px; height: 18px; accent-color: var(--green); }
+  .sound { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; align-items: end; margin-top: 14px; }
+  .cfgfoot { display: flex; gap: 10px; align-items: center; margin-top: 14px; flex-wrap: wrap; }
+  .cfgfoot .note { color: var(--muted); font-size: 12px; flex: 1; min-width: 200px; }
+  .dirty { color: var(--yellow) !important; }
+
+  /* bảng */
+  .boards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 600px) { .boards { grid-template-columns: 1fr; } }
+  .row { display: flex; gap: 8px; align-items: center; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.04); }
+  .row .rk { width: 22px; color: var(--muted); font-weight: 800; text-align: right; }
+  .row .nm { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .row .pt { font-weight: 800; color: var(--orange); font-variant-numeric: tabular-nums; }
+  .row .sm { color: var(--muted); font-size: 12px; }
+  .empty { color: var(--muted); padding: 6px 0; }
+  .x2 { font-size: 10px; background: var(--pink); border-radius: 5px; padding: 1px 5px; margin-left: 4px; }
+
+  /* bình luận */
+  #feed { max-height: 330px; overflow-y: auto; display: flex; flex-direction: column-reverse; }
+  .it { display: flex; gap: 8px; padding: 4px 0; font-size: 13px; color: var(--muted); }
+  .it .t { font-size: 11px; opacity: .6; width: 44px; flex: none; font-variant-numeric: tabular-nums; }
+  .it .nm { color: var(--text); flex: none; max-width: 40%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .it .tx { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+  .it.ok .tx { color: var(--green); } .it.ai .nm, .it.ai .tx { color: var(--orange); } .it.gift .tx { color: var(--pink); }
+
+  /* bên phải: xem trước */
+  .side .card { padding: 12px; }
+  .preview { position: relative; width: 100%; aspect-ratio: 9 / 16; border-radius: 12px; overflow: hidden; background: #000; }
+  .preview iframe { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; border: 0; transform-origin: 0 0; pointer-events: none; }
+  .links { margin-top: 10px; font-size: 12px; color: var(--muted); word-break: break-all; }
+  .links a { color: var(--cyan); }
+  .test { display: grid; gap: 8px; }
+  .test .r { display: flex; gap: 6px; }
+  .test .r > * { min-width: 0; }
+  .test button { padding: 8px 10px; flex: none; }
+  #denied { display: none; padding: 40px 20px; text-align: center; color: var(--muted); font-size: 16px; }
+  #toast { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); background: var(--panel2); border: 1px solid var(--line);
+           padding: 10px 18px; border-radius: 12px; opacity: 0; transition: opacity .2s; pointer-events: none; z-index: 10; }
+  #toast.on { opacity: 1; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🎮 Điều khiển · <b>Đố từ tiếng Hàn</b></h1>
+  <span class="chip" id="cConn">đang nối…</span>
+  <span class="chip" id="cTiktok">TikTok</span>
+  <span class="chip" id="cViewers">👀 0</span>
+  <span class="chip" id="cPlayers">👥 0</span>
+  <span class="chip" id="cSession">⏱ 0'</span>
+</header>
+<div id="denied">⛔ Màn điều khiển chỉ mở được trên máy chạy server, hoặc thêm <code>?key=…</code> (CONTROL_KEY trong .env).</div>
+<main id="app">
+  <div class="col">
+    <section class="card">
+      <div class="now">
+        <div>
+          <span class="phase" id="phase">…</span><span class="where" id="where"></span>
+          <div class="mean" id="mean"></div>
+          <div class="ans ko" id="ans"></div>
+          <div class="meta" id="meta"></div>
+        </div>
+        <div class="clock" id="clock"><b id="clockTxt">–</b></div>
+      </div>
+      <div class="progress"><i id="prog"></i></div>
+      <div class="btns">
+        <button id="bPause">⏸ Tạm dừng<span class="kbd">Space</span></button>
+        <button id="bNext" class="primary">⏭ Tiếp<span class="kbd">N</span></button>
+        <button id="bReplace">🔄 Đổi từ khác<span class="kbd">R</span></button>
+        <button id="bExtend">➕ Thêm 10 giây<span class="kbd">E</span></button>
+        <button id="bEnd">🏁 Kết thúc lượt → vinh danh</button>
+        <button id="bStart" class="go">▶ Bắt đầu</button>
+      </div>
+      <div class="restart">
+        <button id="bRestart" class="danger">🔁 Chơi lại từ đầu</button>
+        <label class="f switch"><input type="checkbox" id="fClearDay"> Xoá cả bảng vàng hôm nay</label>
+        <span class="note">Bỏ lượt đang chơi, về màn chờ Lượt 1 và <b>đứng chờ tới khi bấm Bắt đầu</b>. Từ đã hỏi vẫn không lặp lại.</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Cài đặt lượt chơi <small id="cfgState"></small></h2>
+      <div class="cfg">
+        <label class="f">Số câu mỗi lượt: <span class="rangeval" id="vQ"></span>
+          <input type="range" id="fQ" min="5" max="50" step="1"></label>
+        <label class="f">Giây mỗi câu<input type="number" id="fRound" min="5" max="60"></label>
+        <label class="f">Giây dừng giữa 2 câu<input type="number" id="fReveal" min="2" max="20"></label>
+        <label class="f">Giây màn vinh danh<input type="number" id="fPodium" min="5" max="60"></label>
+        <label class="f">Giây nghỉ trước lượt mới<input type="number" id="fBreak" min="5" max="180"></label>
+        <label class="f">Mức từ vựng
+          <select id="fLevel"><option value="easy">Dễ (sơ cấp + đời sống)</option><option value="mid">Trung bình</option><option value="all">Tất cả</option></select></label>
+      </div>
+      <div class="sound">
+        <label class="f">🏫 Thể loại live (đổi từ lượt sau)
+          <select id="fStyle"><option value="program">🔄 Chương trình xoay vòng (học ↔ giải trí)</option><option value="quiz">Đố từ liên tục</option><option value="class">Lớp học: cô giảng → kiểm tra, gọi tên</option></select></label>
+        <div id="segInfo" style="font-size:13px;opacity:.85;margin:2px 0 8px;line-height:1.5"></div>
+        <label class="f">🎮 Kiểu chơi (đổi từ câu sau)
+          <select id="fMode"><option value="mcq">Trắc nghiệm: gõ số 1–4 (dễ)</option><option value="type">Gõ chữ Hàn (khó)</option></select></label>
+        <label class="f">🎵 Nhạc nền: <span class="rangeval" id="vMusic"></span>
+          <input type="range" id="fMusic" min="0" max="100" step="5"></label>
+        <label class="f switch"><input type="checkbox" id="fVoice"> 🗣 Giọng đọc câu hỏi &amp; lời dẫn</label>
+        <label class="f switch"><input type="checkbox" id="fAi"> 🦊 AI trả lời bình luận</label>
+        <label class="f">🤖 Người chơi ảo mỗi câu (0 = tắt): <span class="rangeval" id="vBots"></span>
+          <input type="range" id="fBots" min="0" max="12" step="1"></label>
+        <span class="note" id="aiInfo" style="color:var(--muted);font-size:12px"></span>
+      </div>
+      <div class="cfgfoot">
+        <label class="f switch"><input type="checkbox" id="fAuto"> Tự động chuyển lượt</label>
+        <span class="note" id="cfgNote">Số câu & mức từ áp dụng từ lượt sau. Giây áp dụng từ câu sau.</span>
+        <button id="bApplyNow" title="Đổi luôn tổng số câu của lượt đang chơi">Áp dụng cả lượt này</button>
+        <button id="bApply" class="primary">Lưu cài đặt</button>
+      </div>
+    </section>
+
+    <section class="boards">
+      <div class="card"><h2>🏆 Lượt này <small id="gCount"></small></h2><div id="gBoard"></div></div>
+      <div class="card"><h2>🏅 Bảng vàng hôm nay <small id="dCount"></small></h2><div id="dBoard"></div></div>
+    </section>
+
+    <section class="card">
+      <h2>💬 Bình luận <small>✓ = trả lời đúng</small></h2>
+      <div id="feed"></div>
+    </section>
+  </div>
+
+  <div class="col side">
+    <section class="card">
+      <h2>Màn livestream <small>xem trước, tắt tiếng</small></h2>
+      <div class="preview" id="preview"><iframe id="pv" src="/?mute=1" title="Xem trước"></iframe></div>
+      <div class="links">Mở cho OBS / điện thoại: <a id="liveLink" target="_blank"></a></div>
+    </section>
+
+    <section class="card">
+      <h2>Thử bình luận / quà</h2>
+      <div class="test">
+        <div class="r"><input id="tName" value="Bro" style="width:80px"><input id="tText" placeholder="gõ bình luận rồi Enter"></div>
+        <div class="r"><button id="tAnswer" title="Gửi đáp án đúng của câu hiện tại">✓ Gửi đáp án đúng</button></div>
+        <div class="r"><select id="tGift"></select><input id="tCount" type="number" value="1" min="1" style="width:60px"><button id="tSend">🎁</button></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Kết thúc phiên live</h2>
+      <div class="test">
+        <input id="oNext" placeholder="Hẹn phiên sau, vd: 20h tối mai">
+        <button id="bOutro" class="danger">Chiếu màn cảm ơn cuối phiên</button>
+        <button id="bResumeLive">↩ Quay lại chơi</button>
+        <button id="bReloadStage" title="Tải lại trang trên cửa sổ game (sau khi cập nhật giao diện)">🔄 Tải lại màn live</button>
+      </div>
+    </section>
+  </div>
+</main>
+<div id="toast"></div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+const key = new URLSearchParams(location.search).get('key') || '';
+const PHASE = { teach: 'Cô đang giảng', break: 'Nghỉ giữa lượt', question: 'Đang hỏi', reveal: 'Đáp án', podium: 'Vinh danh', outro: 'Cảm ơn cuối phiên' };
+const LEVEL = { easy: 'dễ', mid: 'trung bình', all: 'tất cả' };
+let S = null, skew = 0, ws = null, cfgDirty = false, gotControl = false;
+
+function toast(t) { const el = $('toast'); el.textContent = t; el.classList.add('on'); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove('on'), 1600); }
+function send(cmd, extra = {}) {
+  if (!ws || ws.readyState !== 1) return toast('Chưa nối được server');
+  ws.send(JSON.stringify({ type: 'cmd', cmd, ...extra }));
+}
+
+// ---- xem trước: co khung 1080×1920 vừa ô ----
+function fitPreview() { const w = $('preview').clientWidth; $('pv').style.transform = `scale(${w / 1080})`; }
+addEventListener('resize', fitPreview); fitPreview();
+const live = `${location.protocol}//${location.host}/`;
+$('liveLink').href = live; $('liveLink').textContent = live;
+
+// ---- render ----
+function board(list, el, game) {
+  $(el).innerHTML = list.length ? list.map((p, i) =>
+    `<div class="row"><span class="rk">${i + 1}</span><span class="nm">${p.bot ? '🤖 ' : ''}${esc(p.name)}${p.x2 ? `<span class="x2">x2·${p.x2}</span>` : ''}</span>` +
+    `<span class="sm">${game ? `${p.correct}✓${p.first ? ` · ${p.first}⚡` : ''}` : `${p.correct}✓${p.wins ? ` · 🏆${p.wins}` : ''}`}</span><span class="pt">${p.score}</span></div>`).join('')
+    : '<div class="empty">Chưa có ai ghi điểm</div>';
+}
+
+function render() {
+  const s = S;
+  const ph = s.phase || 'break';
+  $('phase').textContent = (PHASE[ph] || ph) + (s.seg && s.cfg?.style === 'program' ? ` · ${s.seg.icon} ${s.seg.name}` : '');
+  if ($('segInfo')) $('segInfo').innerHTML = s.cfg?.style === 'program' && s.next
+    ? `Khung tiếp theo: <b>${s.next.icon} ${s.next.name}</b> · thứ tự: ${(s.program || []).join(' → ')} <button onclick="send('config',{cfg:{skipSeg:true}})">⏭ Bỏ qua khung này</button>`
+    + (s.teams ? `<br>🥊 ${s.teams.map((t) => `${t.icon} ${t.name}: <b>${t.score}</b> (${t.n} người)`).join(' · ')}` : '') : '';
+  $('phase').className = 'phase ' + ph;
+  const g = s.game;
+  const inGame = ph === 'question' || ph === 'reveal' || ph === 'teach';
+  $('where').textContent = inGame ? `Lượt ${g.no} · Câu ${g.qNo}/${g.total}` : ph === 'break' ? `Chờ lượt ${s.gameNo + 1}` : ph === 'podium' ? `Hết lượt ${s.podium?.no}` : '';
+  $('prog').style.width = inGame ? (g.qNo / g.total) * 100 + '%' : ph === 'podium' ? '100%' : '0';
+
+  if (ph === 'teach' && s.lesson) {
+    const L = s.lesson;
+    $('mean').innerHTML = `📖 <span class="ko">${esc(L.w)}</span> = ${esc(L.m)}`;
+    $('ans').innerHTML = `Từ ${L.i + 1}/${L.n}<small>${esc(L.title || '')}</small>`;
+    $('meta').textContent = 'Giảng xong nhóm này sẽ kiểm tra từng từ (gọi tên học sinh)';
+  } else if (s.answer && s.answer.mode === 'mcq') {
+    const a = s.answer;
+    $('mean').innerHTML = `<span class="ko">${esc(a.w)}</span> <small style="color:var(--muted);font-size:16px">/${esc(a.r || '')}/${a.listen ? ' · 🎧 câu nghe' : ''}</small>`;
+    $('ans').innerHTML = `Đáp án: số ${a.answerIdx + 1}<small>${esc(a.options[a.answerIdx])}</small>`;
+    $('meta').textContent = (a.called ? `🙋 Gọi: ${a.called.name}${a.called.bot ? ' 🤖' : ''}${a.called.result ? ` → ${a.called.result === 'right' ? 'đúng' : a.called.result === 'wrong' ? 'sai' : 'không trả lời'}` : ''} · ` : '') + a.options.map((o, i) => `${i + 1}. ${o} (${a.votes[i]})`).join(' · ') + ` · ${a.answered} người đã chọn`;
+  } else if (s.answer) {
+    $('mean').textContent = s.answer.m;
+    $('ans').innerHTML = `${esc(s.answer.w)}<small>/${esc(s.answer.r || '')}/</small>`;
+    $('meta').textContent = `${s.answer.course || ''} · ${s.answer.winners} người đúng · gợi ý mức ${s.answer.hint}/2`;
+  } else if (ph === 'podium' && s.podium) {
+    $('mean').textContent = s.podium.top.length ? `🥇 ${s.podium.top.map((p) => `${p.name} (${p.score})`).join(' · ')}` : 'Lượt này chưa ai ghi điểm';
+    $('ans').textContent = '';
+    $('meta').textContent = `${s.podium.stats.players} người chơi · ${s.podium.stats.correct} lượt đúng`;
+  } else if (ph === 'break') {
+    $('mean').textContent = s.endsAt == null ? '⏳ Đang chờ bạn bấm “Bắt đầu lượt”' : 'Màn chờ: luật chơi + bảng vàng hôm nay';
+    $('ans').textContent = '';
+    $('meta').textContent = `Lượt tới: ${s.cfg.questions} câu · ${s.cfg.roundSec}s/câu · từ ${LEVEL[s.cfg.level]} (còn ${s.bankLeft.toLocaleString('vi')}/${s.bankSize.toLocaleString('vi')} từ chưa hỏi)`;
+  } else if (ph === 'outro') {
+    $('mean').textContent = 'Đang chiếu màn cảm ơn — game đứng yên';
+    $('ans').textContent = ''; $('meta').textContent = s.outroNext ? `Hẹn: ${s.outroNext}` : '';
+  }
+
+  // nút theo pha
+  const live = ph !== 'outro';
+  $('bPause').disabled = !live;
+  $('bPause').firstChild.textContent = s.paused ? '▶ Tiếp tục ' : '⏸ Tạm dừng ';
+  $('bPause').className = s.paused ? 'go' : '';
+  $('bNext').disabled = !live;
+  $('bNext').firstChild.textContent = { question: '⏭ Công bố đáp án ', reveal: g && g.qNo >= g.total ? '🏆 Sang vinh danh ' : '⏭ Câu tiếp ', podium: '⏭ Sang màn chờ ', teach: '⏭ Từ tiếp / kiểm tra ', break: '▶ Bắt đầu lượt ' }[ph] || '⏭ Tiếp ';
+  $('bReplace').disabled = ph !== 'question';
+  $('tAnswer').title = s.answer?.mode === 'mcq' ? 'Gửi số đáp án đúng' : 'Gửi đáp án đúng';
+  $('bExtend').disabled = !live || ph === 'reveal' && false;
+  $('bEnd').disabled = !inGame;
+  $('bStart').disabled = !(ph === 'break' || ph === 'podium');
+  $('bResumeLive').disabled = ph !== 'outro';
+  $('bOutro').disabled = ph === 'outro';
+  $('tAnswer').disabled = ph !== 'question';
+
+  // header
+  const t = s.tiktok;
+  const tc = $('cTiktok');
+  if (t.mode === 'sim') { tc.textContent = '🧪 Khán giả ảo (--sim)'; tc.className = 'chip warn'; }
+  else if (t.mode === 'none') { tc.textContent = 'Không nối TikTok'; tc.className = 'chip'; }
+  else if (t.connected) { tc.textContent = `🔴 @${t.user} đã nối · phòng …${String(t.roomId || '').slice(-4)} · bấm để nối lại`; tc.className = 'chip ok click'; tc.title = 'Tắt/bật live trên TikTok là đổi phòng — không thấy bình luận thật thì bấm để nối lại'; }
+  else if (t.connecting) { tc.textContent = `⏳ Đang nối @${t.user}…`; tc.className = 'chip warn'; }
+  else {
+    const left = t.nextTry ? Math.max(0, Math.ceil((t.nextTry - Date.now() - skew) / 1000)) : 0;
+    tc.textContent = `@${t.user}: ${t.error || 'chưa nối'} · thử lại ${left}s · bấm để nối ngay`;
+    tc.title = t.error || ''; tc.className = 'chip bad click';
+  }
+  $('cViewers').textContent = `👀 ${s.viewers}`;
+  $('cPlayers').textContent = `👥 ${s.dayPlayers} hôm nay`;
+  $('cSession').textContent = `⏱ ${s.stats.minutes}' · ${s.stats.games} lượt · ${s.stats.questions} câu`;
+
+  board(s.gameBoard, 'gBoard', true);
+  board(s.dayBoard, 'dBoard', false);
+  $('gCount').textContent = g ? `lượt ${g.no}` : '';
+  $('dCount').textContent = `${s.dayPlayers} người`;
+
+  const atBottom = true;
+  $('feed').innerHTML = s.feed.slice().reverse().map((f) => {
+    const tm = new Date(f.at).toLocaleTimeString('vi', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    const cls = f.ok ? 'ok' : f.gift ? 'gift' : f.ai ? 'ai' : '';
+    const tx = f.ok ? `✓ ${esc(f.text)} +${f.pts}${f.romaja ? ' (romaja)' : ''}` : f.gift ? `🎁 ${f.count > 1 ? f.count + '× ' : ''}${esc(f.gift)} (${f.diamonds} xu)` : esc(f.text);
+    return `<div class="it ${cls}"><span class="t">${tm.slice(3)}</span><span class="nm">${f.bot ? '🤖 ' : ''}${esc(f.name)}</span><span class="tx ko">${tx}</span></div>`;
+  }).join('') || '<div class="empty">Chưa có bình luận</div>';
+
+  if (!cfgDirty) fillCfg(s.cfg);
+}
+
+function fillCfg(c) {
+  $('fQ').value = c.questions; $('vQ').textContent = `${c.questions} câu`;
+  $('fRound').value = c.roundSec; $('fReveal').value = c.revealSec; $('fPodium').value = c.podiumSec; $('fBreak').value = c.breakSec;
+  $('fLevel').value = c.level; $('fAuto').checked = c.autoNext;
+  if (document.activeElement !== $('fMusic')) { $('fMusic').value = Math.round(c.music * 100); $('vMusic').textContent = c.music ? Math.round(c.music * 100) + '%' : 'tắt'; }
+  $('fVoice').checked = c.voice;
+  if (document.activeElement !== $('fMode')) $('fMode').value = c.mode;
+  if (document.activeElement !== $('fStyle')) $('fStyle').value = c.style || 'quiz';
+  if (document.activeElement !== $('fBots')) { $('fBots').value = c.bots; $('vBots').textContent = c.bots ? `${c.bots} (tự giảm khi đông người thật · không lên vinh danh/bảng vàng · 🤖 chỉ hiện ở đây)` : 'tắt'; }
+  const a = S.ai;
+  $('fAi').checked = a.enabled; $('fAi').disabled = !a.ready;
+  $('aiInfo').textContent = !a.ready ? 'Thiếu token gateway (claude-api/.env)' :
+    `${a.model} · đã đáp ${a.replied}/${a.asked}${a.lastMs ? ` · ${(a.lastMs / 1000).toFixed(1)}s` : ''}${a.errors ? ` · lỗi ${a.errors}: ${a.lastError}` : ''}`;
+  const per = c.roundSec + c.revealSec;
+  $('cfgState').textContent = `~${Math.round((c.questions * per) / 60)} phút/lượt + ${c.podiumSec + c.breakSec}s chờ`;
+  $('cfgState').classList.remove('dirty');
+}
+function readCfg() {
+  return { questions: +$('fQ').value, roundSec: +$('fRound').value, revealSec: +$('fReveal').value, podiumSec: +$('fPodium').value,
+           breakSec: +$('fBreak').value, level: $('fLevel').value, autoNext: $('fAuto').checked };
+}
+document.querySelectorAll('.cfg input, .cfg select, #fAuto').forEach((el) => el.addEventListener('input', () => {
+  cfgDirty = true;
+  $('vQ').textContent = `${$('fQ').value} câu`;
+  $('cfgState').textContent = 'chưa lưu'; $('cfgState').classList.add('dirty');
+}));
+// âm thanh: áp dụng ngay, không cần bấm Lưu
+$('fMusic').oninput = () => { const v = +$('fMusic').value; $('vMusic').textContent = v ? v + '%' : 'tắt'; send('config', { cfg: { music: v / 100 } }); };
+$('fVoice').onchange = () => send('config', { cfg: { voice: $('fVoice').checked } });
+$('fBots').oninput = () => { $('vBots').textContent = +$('fBots').value || 'tắt'; send('config', { cfg: { bots: +$('fBots').value } }); };
+$('fStyle').onchange = () => { send('config', { cfg: { style: $('fStyle').value } }); toast({ class: 'Lớp học bắt đầu từ lượt sau', quiz: 'Đố từ liên tục từ lượt sau', program: 'Chương trình xoay vòng từ lượt sau' }[$('fStyle').value]); };
+$('fMode').onchange = () => { send('config', { cfg: { mode: $('fMode').value } }); toast('Đổi kiểu chơi từ câu sau'); };
+$('fAi').onchange = () => send('config', { cfg: { ai: $('fAi').checked } });
+$('bApply').onclick = () => { send('config', { cfg: readCfg() }); cfgDirty = false; toast('Đã lưu cài đặt'); };
+$('bApplyNow').onclick = () => { send('config', { cfg: { ...readCfg(), applyNow: true } }); cfgDirty = false; toast('Đã áp dụng cả lượt này'); };
+
+// đồng hồ
+function frame() {
+  if (S) {
+    const s = S, c = $('clock');
+    const now = s.paused ? s.pausedAt : Date.now() + skew;
+    c.classList.toggle('paused', !!s.paused);
+    if (s.phase === 'outro' || !s.phase) { $('clockTxt').textContent = '–'; c.style.setProperty('--p', '0%'); }
+    else if (s.endsAt == null) { $('clockTxt').textContent = s.paused ? '⏸' : '∞'; c.style.setProperty('--p', '100%'); }
+    else {
+      const left = Math.max(0, s.endsAt - now);
+      $('clockTxt').textContent = s.paused ? '⏸' : Math.ceil(left / 1000);
+      c.style.setProperty('--p', (left / (s.endsAt - s.startedAt)) * 100 + '%');
+    }
+  }
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+
+// nút
+$('bPause').onclick = () => send(S?.paused ? 'resume' : 'pause');
+$('bNext').onclick = () => send('next');
+$('bReplace').onclick = () => send('replace');
+$('bExtend').onclick = () => send('extend');
+$('bEnd').onclick = () => confirm('Kết thúc lượt này ngay và chiếu màn vinh danh?') && send('endGame');
+$('bStart').onclick = () => {
+  send('startGame');
+  if (S?.tiktok.mode === 'tiktok' && !S.tiktok.connected) toast('Đang nối TikTok… (kênh phải đang LIVE)');
+};
+$('cTiktok').onclick = () => S?.tiktok.mode === 'tiktok' && (send('connect'), toast('Đang nối lại TikTok…'));
+$('bRestart').onclick = () => {
+  const clearDay = $('fClearDay').checked;
+  if (!confirm(clearDay ? 'Chơi lại từ Lượt 1 và XOÁ bảng vàng hôm nay?' : 'Bỏ lượt đang chơi và chơi lại từ Lượt 1?')) return;
+  send('restart', { clearDay });
+  $('fClearDay').checked = false;
+  toast('Đã về Lượt 1 — bấm Bắt đầu để chạy');
+};
+$('bOutro').onclick = () => confirm('Chiếu màn cảm ơn cuối phiên? Game sẽ dừng.') && send('outro', { next: $('oNext').value });
+$('bResumeLive').onclick = () => send('resumeLive');
+$('bReloadStage').onclick = () => { send('reloadStage'); toast('Đã tải lại màn live'); };
+$('tText').onkeydown = (e) => {
+  if (e.key !== 'Enter' || !e.target.value.trim()) return;
+  send('chat', { name: $('tName').value, text: e.target.value }); e.target.value = '';
+};
+$('tAnswer').onclick = () => S?.answer && send('chat', { name: $('tName').value, text: S.answer.mode === 'mcq' ? String(S.answer.answerIdx + 1) : S.answer.w });
+fetch('/gifts').then((r) => r.json()).then((list) => {
+  $('tGift').innerHTML = list.map((g) => `<option value="${g.diamonds}">${esc(g.name)} · ${g.diamonds} xu</option>`).join('') +
+    '<option value="100">Quà vừa · 100 xu</option><option value="1000">Quà to · 1000 xu</option>';
+});
+$('tSend').onclick = () => {
+  const o = $('tGift').selectedOptions[0];
+  send('gift', { name: $('tName').value, gift: o.textContent.replace(/ · .*$/, ''), diamonds: +o.value, count: +$('tCount').value || 1 });
+};
+// phím tắt (không bắt khi đang gõ)
+addEventListener('keydown', (e) => {
+  if (/INPUT|SELECT|TEXTAREA/.test(document.activeElement?.tagName) || e.metaKey || e.ctrlKey) return;
+  const k = e.key.toLowerCase();
+  if (k === ' ') { e.preventDefault(); $('bPause').click(); }
+  else if (k === 'n' && !$('bNext').disabled) $('bNext').click();
+  else if (k === 'r' && !$('bReplace').disabled) $('bReplace').click();
+  else if (k === 'e' && !$('bExtend').disabled) $('bExtend').click();
+});
+
+// ---- WebSocket ----
+function connect() {
+  gotControl = false;
+  ws = new WebSocket(`${location.protocol === 'https:' ? 'wss' : 'ws'}://${location.host}`);
+  const me = ws;
+  ws.onopen = () => {
+    ws.send(JSON.stringify({ type: 'hello', role: 'control', key }));
+    // 4s chưa nhận trạng thái điều khiển → đóng và nối lại
+    setTimeout(() => { if (me === ws && !gotControl) { $('cConn').textContent = 'nối lại…'; ws.close(); } }, 4000);
+  };
+  ws.onclose = () => { $('cConn').textContent = 'mất kết nối…'; $('cConn').className = 'chip bad'; setTimeout(connect, 1500); };
+  ws.onmessage = (e) => {
+    const m = JSON.parse(e.data);
+    if (m.type === 'denied') { $('app').style.display = 'none'; $('denied').style.display = 'block'; ws.onclose = null; ws.close(); }
+    else if (m.type === 'control') {
+      if (!gotControl) { gotControl = true; $('cConn').textContent = 'đã nối'; $('cConn').className = 'chip ok'; }
+      S = m; skew = m.now - Date.now(); render();
+    }
+  };
+}
+connect();
+</script>
+</body>
+</html>
