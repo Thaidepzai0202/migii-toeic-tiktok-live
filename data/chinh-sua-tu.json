@@ -1,0 +1,11 @@
+{
+  "_huong_dan": "Sửa xong chạy: npm run build:bank. bo = bỏ từ khỏi kho; sua = ghi đè trường của từ (m nghĩa, r phiên âm, pos từ loại, ex câu ví dụ, exm nghĩa câu ví dụ; null = xoá trường); them = thêm từ app chưa có (bắt buộc w, m; cid 1 Basic, 2 500-650, 3 650-800, 4 800+). Ví dụ ở _vi_du, build bỏ qua.",
+  "_vi_du": {
+    "bo": ["fine"],
+    "sua": { "year": { "m": "năm", "ex": null, "exm": null } },
+    "them": [{ "w": "procurement", "m": "việc mua sắm", "r": "prəˈkjʊəmənt", "pos": "n", "cid": "3" }]
+  },
+  "bo": [],
+  "sua": {},
+  "them": []
+}

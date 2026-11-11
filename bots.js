@@ -9,7 +9,7 @@ const NAMES = [
 const rand = (a, b) => a + Math.random() * (b - a);
 const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
-// Gõ sai kiểu người thật: thiếu 1 âm tiết hoặc đảo 2 âm tiết
+// Gõ sai kiểu người thật: thiếu 1 chữ cái hoặc đảo 2 chữ cái
 function typo(w) {
   const c = [...w];
   if (c.length < 2) return w + w;
@@ -31,7 +31,7 @@ exports.create = ({ onChat }) => {
       timers.splice(0).forEach(clearTimeout);
       if (active <= 0) return;
       const sec = round.sec;
-      const { w, r } = round.word;
+      const { w } = round.word;
       const mcq = round.mode === 'mcq';
       const names = [...NAMES].sort(() => Math.random() - 0.5).slice(0, active);
       for (const n of names) {
@@ -52,9 +52,9 @@ exports.create = ({ onChat }) => {
           continue;
         }
         if (Math.random() < 0.5) {
-          // Đúng: phần lớn đợi gợi ý (sau 35% thời gian); thỉnh thoảng gõ sai trước rồi sửa; ít khi gõ romaja
+          // Đúng: phần lớn đợi gợi ý (sau 35% thời gian); thỉnh thoảng gõ sai chính tả trước rồi sửa
           if (Math.random() < 0.2) at(rand(0.2, 0.45) * sec, typo(w));
-          at(rand(0.4 * sec, sec - 1.5), r && Math.random() < 0.15 ? r : w);
+          at(rand(0.4 * sec, sec - 1.5), w);
         } else {
           at(rand(0.2 * sec, sec - 1.5), Math.random() < 0.6 ? pick(bank()).w : typo(w));
         }

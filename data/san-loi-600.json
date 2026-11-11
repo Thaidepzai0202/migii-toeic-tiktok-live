@@ -1,0 +1,2125 @@
+{
+ "moc": 600,
+ "questions": [
+  {
+   "w": "coupon",
+   "s": "Show this cupon at the checkout counter to get twenty percent off your next purchase.",
+   "wrong": "cupon",
+   "right": "coupon",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: từ đúng là \"coupon\" (phiếu giảm giá), có chữ \"o\" sau \"c\" đầu tiên.",
+   "tip": "cou-pon: có chữ o sau c"
+  },
+  {
+   "w": "aggressive",
+   "s": "Our sales team took a very aggressively approach to winning the new contract last quarter.",
+   "wrong": "aggressively",
+   "right": "aggressive",
+   "loai": "ngu_phap",
+   "why": "Trước danh từ \"approach\" cần tính từ, không dùng trạng từ: \"aggressive\" (quyết liệt).",
+   "tip": "tính từ + danh từ; trạng từ bổ nghĩa động từ"
+  },
+  {
+   "w": "weakness",
+   "s": "During the interview, he honestly described his greatest weekness and explained how he was improving it.",
+   "wrong": "weekness",
+   "right": "weakness",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: \"weakness\" gồm \"weak\" (yếu) + -ness, không phải \"week\" (tuần).",
+   "tip": "weak + ness"
+  },
+  {
+   "w": "equation",
+   "s": "The students solved the difficult equate on the whiteboard before the bell rang.",
+   "wrong": "equate",
+   "right": "equation",
+   "loai": "ngu_phap",
+   "why": "Sau \"the difficult\" cần danh từ, không phải động từ: \"equation\" (phương trình).",
+   "tip": "the + tính từ + danh từ",
+   "accept": [
+    "equations"
+   ]
+  },
+  {
+   "w": "celebration",
+   "s": "The whole office joined the celebraton for our manager's promotion in the cafeteria on Friday.",
+   "wrong": "celebraton",
+   "right": "celebration",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ \"i\"; từ đúng là \"celebration\" (lễ kỷ niệm), đuôi -ation.",
+   "tip": "celebr + ation"
+  },
+  {
+   "w": "script",
+   "s": "The scripts writer is still working on the final scene of the new comedy series.",
+   "wrong": "scripts",
+   "right": "script",
+   "loai": "ngu_phap",
+   "why": "Danh từ đứng trước danh từ khác ở dạng số ít: \"script writer\" (người viết kịch bản).",
+   "tip": "danh từ bổ nghĩa thường ở số ít"
+  },
+  {
+   "w": "fortune",
+   "s": "He made a fortun by selling handmade furniture online to customers around the world.",
+   "wrong": "fortun",
+   "right": "fortune",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ \"e\" cuối; từ đúng là \"fortune\" (khối tài sản lớn).",
+   "tip": "for-tune, kết thúc bằng e"
+  },
+  {
+   "w": "pride",
+   "s": "She takes great proud in her team's work and always shares the credit with everyone.",
+   "wrong": "proud",
+   "right": "pride",
+   "loai": "ngu_phap",
+   "why": "Sau tính từ \"great\" cần danh từ: \"pride\" (niềm tự hào), không phải tính từ \"proud\".",
+   "tip": "take pride in = tự hào về"
+  },
+  {
+   "w": "twist",
+   "s": "The movie had an unexpected twsit at the end that surprised the whole audience.",
+   "wrong": "twsit",
+   "right": "twist",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: đảo chữ; từ đúng là \"twist\" (tình tiết bất ngờ), viết tw-i-st.",
+   "tip": "twist: tw + ist"
+  },
+  {
+   "w": "menu",
+   "s": "The restaurant changes its menue every season, so the dishes are always fresh and local.",
+   "wrong": "menue",
+   "right": "menu",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thừa chữ \"e\" cuối; từ đúng là \"menu\" (thực đơn), chỉ có bốn chữ cái.",
+   "tip": "menu chỉ có 4 chữ cái"
+  },
+  {
+   "w": "jeans",
+   "s": "These jean are too tight, so I would like to try a bigger size, please.",
+   "wrong": "jean",
+   "right": "jeans",
+   "loai": "ngu_phap",
+   "why": "\"Jeans\" (quần jean) luôn ở dạng số nhiều, đi với \"These ... are\": cần \"jeans\".",
+   "tip": "jeans, pants, shorts luôn có -s"
+  },
+  {
+   "w": "liability",
+   "s": "The contract states that the company has no liabilty for any items left in the room.",
+   "wrong": "liabilty",
+   "right": "liability",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ \"i\"; từ đúng là \"liability\" (trách nhiệm pháp lý).",
+   "tip": "li-a-bil-i-ty: 5 âm tiết"
+  },
+  {
+   "w": "emission",
+   "s": "The city plans to cut traffic emisions by encouraging more people to ride bikes to work.",
+   "wrong": "emisions",
+   "right": "emissions",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: \"emissions\" (khí thải) có hai chữ \"s\" ở giữa, không phải một.",
+   "tip": "-ssion: emission, permission"
+  },
+  {
+   "w": "cluster",
+   "s": "A clustered of small shops opened near the station last year and quickly became popular.",
+   "wrong": "clustered",
+   "right": "cluster",
+   "loai": "ngu_phap",
+   "why": "Sau mạo từ \"A\" và trước \"of\" cần danh từ: \"cluster\" (cụm), không dùng dạng quá khứ \"clustered\".",
+   "tip": "a cluster of = một cụm"
+  },
+  {
+   "w": "sometime",
+   "s": "Let's meet sometim next week to discuss the budget for the new marketing project.",
+   "wrong": "sometim",
+   "right": "sometime",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ \"e\" cuối; từ đúng là \"sometime\" (vào lúc nào đó), gồm some + time.",
+   "tip": "some + time"
+  },
+  {
+   "w": "carpet",
+   "s": "The hotel will replace the worn carpit in the hallway before the summer tourist season begins.",
+   "wrong": "carpit",
+   "right": "carpet",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: \"carpet\" (tấm thảm) kết thúc bằng \"-pet\", không phải \"-pit\".",
+   "tip": "car + pet"
+  },
+  {
+   "w": "continuous",
+   "s": "The machine needs continuously power to keep the temperature stable throughout the whole night.",
+   "wrong": "continuously",
+   "right": "continuous",
+   "loai": "ngu_phap",
+   "why": "Trước danh từ \"power\" cần tính từ: \"continuous\" (liên tục), không dùng trạng từ \"continuously\".",
+   "tip": "tính từ + danh từ"
+  },
+  {
+   "w": "cellphone",
+   "s": "Please turn off your celphone during the meeting so that nobody is disturbed.",
+   "wrong": "celphone",
+   "right": "cellphone",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu một chữ \"l\"; từ đúng là \"cellphone\" (điện thoại di động), gồm cell + phone.",
+   "tip": "cell có hai chữ l"
+  },
+  {
+   "w": "widespread",
+   "s": "There was widespred confusion at the airport after all the morning flights were suddenly delayed.",
+   "wrong": "widespred",
+   "right": "widespread",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ \"a\"; từ đúng là \"widespread\" (lan rộng), gồm wide + spread.",
+   "tip": "wide + spread"
+  },
+  {
+   "w": "personnel",
+   "s": "All new personel must attend the safety training on their first day at the plant.",
+   "wrong": "personel",
+   "right": "personnel",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu một chữ \"n\"; từ đúng là \"personnel\" (nhân sự) có hai chữ \"n\".",
+   "tip": "person + nel: hai chữ n"
+  },
+  {
+   "w": "mere",
+   "s": "The whole repair cost a merely fifty dollars, so nobody was worried about the bill.",
+   "wrong": "merely",
+   "right": "mere",
+   "loai": "ngu_phap",
+   "why": "Đứng trước số tiền cần tính từ: \"a mere fifty dollars\" (chỉ có 50 đô), không dùng trạng từ \"merely\".",
+   "tip": "a mere + số tiền/số lượng"
+  },
+  {
+   "w": "consumption",
+   "s": "Reducing the electricity consume in our office will save the company a lot of money.",
+   "wrong": "consume",
+   "right": "consumption",
+   "loai": "ngu_phap",
+   "why": "Sau \"the electricity\" cần danh từ: \"consumption\" (mức tiêu thụ), không phải động từ \"consume\".",
+   "tip": "electricity consumption"
+  },
+  {
+   "w": "organizational",
+   "s": "Good organizatonal skills are essential for anyone who wants to work as an event planner.",
+   "wrong": "organizatonal",
+   "right": "organizational",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ \"i\"; từ đúng là \"organizational\" (thuộc về tổ chức, sắp xếp).",
+   "tip": "organization + al"
+  },
+  {
+   "w": "genetic",
+   "s": "Scientists are studying the genetics factors that make some plants grow faster than others.",
+   "wrong": "genetics",
+   "right": "genetic",
+   "loai": "ngu_phap",
+   "why": "Trước danh từ \"factors\" cần tính từ: \"genetic\" (thuộc di truyền), không phải danh từ \"genetics\".",
+   "tip": "genetic factors"
+  },
+  {
+   "w": "dominant",
+   "s": "Red is the dominent color in the new logo, and it appears on every page of the site.",
+   "wrong": "dominent",
+   "right": "dominant",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: đuôi đúng là -ant; từ đúng là \"dominant\" (chiếm ưu thế).",
+   "tip": "dominant, important, relevant"
+  },
+  {
+   "w": "reckon",
+   "s": "I rekon the meeting will finish early, so we can all go home on time.",
+   "wrong": "rekon",
+   "right": "reckon",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: \"reckon\" (đoán là, nghĩ rằng) có \"ck\", không phải \"k\" đơn.",
+   "tip": "reckon: rec + k + on"
+  },
+  {
+   "w": "revise",
+   "s": "Please revising the report and send it back to me before five o'clock this afternoon.",
+   "wrong": "revising",
+   "right": "revise",
+   "loai": "ngu_phap",
+   "why": "Câu mệnh lệnh dùng động từ nguyên mẫu sau \"Please\": \"revise\" (chỉnh sửa), không thêm -ing.",
+   "tip": "Please + động từ nguyên mẫu"
+  },
+  {
+   "w": "leather",
+   "s": "She bought a beautiful lether handbag at the market and paid less than she expected.",
+   "wrong": "lether",
+   "right": "leather",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: \"leather\" (da thuộc) có \"ea\" ở giữa, đọc là /ˈleðər/.",
+   "tip": "ea đọc /e/ như weather, feather"
+  },
+  {
+   "w": "renovation",
+   "s": "The renovaton of the old library will take about six months and cost two million dollars.",
+   "wrong": "renovaton",
+   "right": "renovation",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ \"i\"; từ đúng là \"renovation\" (việc cải tạo), đuôi -ation.",
+   "tip": "renov + ation"
+  },
+  {
+   "w": "hook",
+   "s": "Please hang your coat on the hooked next to the door, then take a seat in the waiting area.",
+   "wrong": "hooked",
+   "right": "hook",
+   "loai": "ngu_phap",
+   "why": "Sau \"the\" cần danh từ: \"hook\" (móc treo), không dùng dạng quá khứ \"hooked\".",
+   "tip": "on the hook(s) = trên móc",
+   "accept": [
+    "hooks"
+   ]
+  },
+  {
+   "w": "bicycle",
+   "s": "He rides his bycicle to work every day because the bus is always crowded.",
+   "wrong": "bycicle",
+   "right": "bicycle",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: \"bicycle\" bắt đầu bằng \"bi-\" (hai) + cycle (bánh xe), không phải \"by\".",
+   "tip": "bi (hai) + cycle"
+  },
+  {
+   "w": "friendship",
+   "s": "Their friend lasted for more than twenty years, even though they lived in different cities.",
+   "wrong": "friend",
+   "right": "friendship",
+   "loai": "ngu_phap",
+   "why": "Cần danh từ trừu tượng \"friendship\" (tình bạn) mới \"kéo dài hai mươi năm\"; \"friend\" chỉ người bạn.",
+   "tip": "friend = người; friendship = tình bạn"
+  },
+  {
+   "w": "chamber",
+   "s": "The museum keeps its oldest paintings in a special chamer where the temperature never changes.",
+   "wrong": "chamer",
+   "right": "chamber",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ \"b\"; từ đúng là \"chamber\" (phòng, buồng).",
+   "tip": "cham + ber"
+  },
+  {
+   "w": "clue",
+   "s": "We have no clueless why the website stopped working in the middle of the night.",
+   "wrong": "clueless",
+   "right": "clue",
+   "loai": "ngu_phap",
+   "why": "Sau \"no\" cần danh từ: \"no clue\" (không có manh mối), không dùng tính từ \"clueless\".",
+   "tip": "have no clue = không biết gì"
+  },
+  {
+   "w": "rental",
+   "s": "We need to book a rent car for the trip before the prices go up this weekend.",
+   "wrong": "rent",
+   "right": "rental",
+   "loai": "ngu_phap",
+   "why": "Bổ nghĩa cho danh từ \"car\" dùng \"rental\" (cho thuê): \"a rental car\", không dùng động từ \"rent\".",
+   "tip": "a rental car = xe cho thuê"
+  },
+  {
+   "w": "overwhelm",
+   "s": "The amount of work was so overwhelm that she had to ask her manager for more help.",
+   "wrong": "overwhelm",
+   "right": "overwhelming",
+   "loai": "ngu_phap",
+   "why": "Sau \"was so\" cần tính từ: \"overwhelming\" (quá sức) mô tả khối lượng công việc, không dùng động từ.",
+   "tip": "-ing mô tả sự việc; -ed mô tả người"
+  },
+  {
+   "w": "moon",
+   "s": "Last night we saw a beautiful full moom rising over the sea from our hotel balcony.",
+   "wrong": "moom",
+   "right": "moon",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: \"moon\" (mặt trăng) kết thúc bằng chữ \"n\", không phải \"m\".",
+   "tip": "moon = hai chữ o + n"
+  },
+  {
+   "w": "receptionist",
+   "s": "The receptionest will give you a visitor badge and show you to the meeting room.",
+   "wrong": "receptionest",
+   "right": "receptionist",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: đuôi chỉ người làm nghề là -ist; từ đúng là \"receptionist\" (lễ tân).",
+   "tip": "-ist: dentist, artist, receptionist"
+  },
+  {
+   "w": "leisure",
+   "s": "In his leasure time, he enjoys cycling, cooking, and learning how to play the guitar.",
+   "wrong": "leasure",
+   "right": "leisure",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: \"leisure\" (thời gian rảnh) viết \"ei\", không phải \"ea\".",
+   "tip": "lei-sure: ei như trong weird"
+  },
+  {
+   "w": "eighteen",
+   "s": "Employees must be at least eightteen years old to work night shifts at the warehouse.",
+   "wrong": "eightteen",
+   "right": "eighteen",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thừa một chữ \"t\"; \"eighteen\" chỉ có một chữ \"t\" ở giữa.",
+   "tip": "eight + teen, bỏ bớt một chữ t"
+  },
+  {
+   "w": "lobby",
+   "s": "Please wait for me in the lobbies area near the main entrance of the hotel.",
+   "wrong": "lobbies",
+   "right": "lobby",
+   "loai": "ngu_phap",
+   "why": "Danh từ đứng trước danh từ khác ở dạng số ít: \"lobby area\" (khu vực sảnh).",
+   "tip": "danh từ bổ nghĩa thường ở số ít"
+  },
+  {
+   "w": "roughly",
+   "s": "The trip to the airport takes rough forty minutes if there is no traffic on the highway.",
+   "wrong": "rough",
+   "right": "roughly",
+   "loai": "ngu_phap",
+   "why": "Bổ nghĩa cho số lượng \"forty minutes\" cần trạng từ: \"roughly\" (khoảng), không phải tính từ \"rough\".",
+   "tip": "roughly = khoảng, xấp xỉ",
+   "accept": [
+    "about",
+    "around"
+   ]
+  },
+  {
+   "w": "flash",
+   "s": "The camera has a built-in flahs, so you can take clear photos in dark rooms.",
+   "wrong": "flahs",
+   "right": "flash",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: đảo chữ; từ đúng là \"flash\" (đèn nháy), viết fl-a-sh.",
+   "tip": "flash kết thúc bằng -sh"
+  },
+  {
+   "w": "historic",
+   "s": "The city is famous for its historically buildings and narrow cobblestone streets.",
+   "wrong": "historically",
+   "right": "historic",
+   "loai": "ngu_phap",
+   "why": "Trước danh từ \"buildings\" cần tính từ: \"historic\" (có ý nghĩa lịch sử), không dùng trạng từ.",
+   "tip": "tính từ + danh từ",
+   "accept": [
+    "historical"
+   ]
+  },
+  {
+   "w": "clause",
+   "s": "Please read the clouse about late payments carefully before you sign the contract.",
+   "wrong": "clouse",
+   "right": "clause",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: \"clause\" (điều khoản) viết \"au\", không phải \"ou\".",
+   "tip": "clause, pause, cause đều có au"
+  },
+  {
+   "w": "modify",
+   "s": "Customers are allowed to modified their reservations online up to one day before departure.",
+   "wrong": "modified",
+   "right": "modify",
+   "loai": "ngu_phap",
+   "why": "Sau \"to\" dùng động từ nguyên mẫu: \"to modify\" (thay đổi), không dùng dạng quá khứ \"modified\".",
+   "tip": "to + động từ nguyên mẫu"
+  },
+  {
+   "w": "coin",
+   "s": "Each coins in this collection comes with a small card that explains where it was made.",
+   "wrong": "coins",
+   "right": "coin",
+   "loai": "ngu_phap",
+   "why": "Sau \"Each\" cần danh từ số ít (đi với \"comes\"): \"Each coin\" (mỗi đồng xu).",
+   "tip": "each + danh từ số ít"
+  },
+  {
+   "w": "mutual",
+   "s": "We reached a mutal agreement about the schedule, and both teams were very happy.",
+   "wrong": "mutal",
+   "right": "mutual",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ \"u\"; từ đúng là \"mutual\" (chung của hai bên), đuôi -ual.",
+   "tip": "mut + ual"
+  },
+  {
+   "w": "expenditure",
+   "s": "Our total expendature on office supplies went down by ten percent this year.",
+   "wrong": "expendature",
+   "right": "expenditure",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: từ đúng là \"expenditure\" (khoản chi tiêu), đuôi -iture, không phải -ature.",
+   "tip": "expend + iture"
+  },
+  {
+   "w": "shed",
+   "s": "He keeps the garden tools in a small shedding behind the house.",
+   "wrong": "shedding",
+   "right": "shed",
+   "loai": "ngu_phap",
+   "why": "Sau \"a small\" cần danh từ: \"shed\" (nhà kho nhỏ), không dùng dạng -ing \"shedding\".",
+   "tip": "a small shed = một nhà kho nhỏ"
+  },
+  {
+   "w": "bite",
+   "s": "Let's grab a quick bitten to eat before the meeting starts at noon.",
+   "wrong": "bitten",
+   "right": "bite",
+   "loai": "ngu_phap",
+   "why": "Sau \"a quick\" cần danh từ: \"a quick bite\" (bữa ăn nhanh), không dùng quá khứ phân từ \"bitten\".",
+   "tip": "grab a bite to eat"
+  },
+  {
+   "w": "precede",
+   "s": "A short welcome speech will precedes the main presentation at the conference tomorrow.",
+   "wrong": "precedes",
+   "right": "precede",
+   "loai": "ngu_phap",
+   "why": "Sau \"will\" dùng động từ nguyên mẫu không \"to\": \"will precede\" (diễn ra trước), không thêm -s.",
+   "tip": "will + động từ nguyên mẫu"
+  },
+  {
+   "w": "amendment",
+   "s": "The lawyer suggested an amendmant to the contract before both sides signed it.",
+   "wrong": "amendmant",
+   "right": "amendment",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: đuôi đúng là -ment; từ đúng là \"amendment\" (điều khoản sửa đổi).",
+   "tip": "amend + ment"
+  },
+  {
+   "w": "therapy",
+   "s": "After her knee injury, she attended physical therapist twice a week to regain her strength.",
+   "wrong": "therapist",
+   "right": "therapy",
+   "loai": "ngu_phap",
+   "why": "Cần danh từ chỉ liệu pháp: \"physical therapy\" (vật lý trị liệu); \"therapist\" là người làm nghề trị liệu.",
+   "tip": "therapy = liệu pháp; therapist = nhà trị liệu"
+  },
+  {
+   "w": "substitute",
+   "s": "You can use honey as a substitue for sugar in this recipe.",
+   "wrong": "substitue",
+   "right": "substitute",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ \"t\"; từ đúng là \"substitute\" (vật thay thế), đuôi -tute.",
+   "tip": "sub + sti + tute"
+  },
+  {
+   "w": "technician",
+   "s": "A technican will visit your home tomorrow morning to fix the internet connection.",
+   "wrong": "technican",
+   "right": "technician",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ \"i\"; từ đúng là \"technician\" (kỹ thuật viên), đuôi -ician.",
+   "tip": "tech + nic + ian"
+  },
+  {
+   "w": "mixture",
+   "s": "Stir the mixtures gently until it becomes smooth, then pour it into the pan.",
+   "wrong": "mixtures",
+   "right": "mixture",
+   "loai": "ngu_phap",
+   "why": "Đại từ \"it\" cho thấy chỉ một hỗn hợp nên dùng số ít: \"the mixture\" (hỗn hợp), không thêm -s.",
+   "tip": "it → danh từ số ít"
+  },
+  {
+   "w": "summarize",
+   "s": "Could you summary the main points of the report in two short paragraphs?",
+   "wrong": "summary",
+   "right": "summarize",
+   "loai": "ngu_phap",
+   "why": "Sau \"Could you\" cần động từ nguyên mẫu, không phải danh từ: \"summarize\" (tóm tắt).",
+   "tip": "Could you + động từ nguyên mẫu",
+   "accept": [
+    "summarise"
+   ]
+  },
+  {
+   "w": "depart",
+   "s": "This express train to the airport depart from platform three at nine thirty every morning.",
+   "wrong": "depart",
+   "right": "departs",
+   "loai": "ngu_phap",
+   "why": "Chủ ngữ \"This express train\" là số ít, thì hiện tại đơn nên động từ phải thêm -s: \"departs\".",
+   "tip": "chủ ngữ số ít + động từ thêm -s"
+  },
+  {
+   "w": "infrastructure",
+   "s": "The city plans to invest heavily in public infrastucture over the next five years.",
+   "wrong": "infrastucture",
+   "right": "infrastructure",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ \"r\", từ đúng là \"infrastructure\" (cơ sở hạ tầng).",
+   "tip": "infra + structure"
+  },
+  {
+   "w": "outdoor",
+   "s": "Our hotel has a large outdoors swimming pool that stays open all summer.",
+   "wrong": "outdoors",
+   "right": "outdoor",
+   "loai": "ngu_phap",
+   "why": "Trước danh từ \"swimming pool\" cần tính từ \"outdoor\" (ngoài trời); \"outdoors\" là trạng từ/danh từ.",
+   "tip": "outdoor pool, nhưng play outdoors"
+  },
+  {
+   "w": "evaluation",
+   "s": "Each employee receives a written evaluate of his or her performance twice a year.",
+   "wrong": "evaluate",
+   "right": "evaluation",
+   "loai": "ngu_phap",
+   "why": "Sau \"a written\" cần danh từ, không phải động từ: \"evaluation\" (bản đánh giá).",
+   "tip": "a + tính từ + danh từ"
+  },
+  {
+   "w": "scholar",
+   "s": "The young schollar spent three years researching ancient trade routes across Asia.",
+   "wrong": "schollar",
+   "right": "scholar",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thừa chữ \"l\", từ đúng là \"scholar\" (học giả) chỉ có một chữ \"l\".",
+   "tip": "scholar có một l, scholarship cũng vậy"
+  },
+  {
+   "w": "hint",
+   "s": "The manager dropped a subtle hinted that the project might be cancelled soon.",
+   "wrong": "hinted",
+   "right": "hint",
+   "loai": "ngu_phap",
+   "why": "Sau \"a subtle\" cần danh từ số ít: \"hint\" (lời gợi ý), không dùng dạng quá khứ của động từ.",
+   "tip": "drop a hint = nói bóng gió"
+  },
+  {
+   "w": "pencil",
+   "s": "Please bring a pencel and a notebook to the training session tomorrow morning.",
+   "wrong": "pencel",
+   "right": "pencil",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: đuôi từ là \"-cil\", từ đúng là \"pencil\" (bút chì).",
+   "tip": "pen + cil"
+  },
+  {
+   "w": "curious",
+   "s": "The children were very curiosity about how the new machine in the lab works.",
+   "wrong": "curiosity",
+   "right": "curious",
+   "loai": "ngu_phap",
+   "why": "Sau \"were very\" cần tính từ: \"curious\" (tò mò), không phải danh từ \"curiosity\".",
+   "tip": "be + very + tính từ"
+  },
+  {
+   "w": "silly",
+   "s": "It would be sily to buy a new laptop when the old one still works.",
+   "wrong": "sily",
+   "right": "silly",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu một chữ \"l\", từ đúng là \"silly\" (ngớ ngẩn).",
+   "tip": "silly: hai chữ l"
+  },
+  {
+   "w": "conscious",
+   "s": "She is very concious of the cost of every item she buys.",
+   "wrong": "concious",
+   "right": "conscious",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ \"s\" sau \"con\", từ đúng là \"conscious\" (ý thức được).",
+   "tip": "con + science: con-sci-ous"
+  },
+  {
+   "w": "concrete",
+   "s": "The manager asked for concretely evidence that the new method really saves money.",
+   "wrong": "concretely",
+   "right": "concrete",
+   "loai": "ngu_phap",
+   "why": "Trước danh từ \"evidence\" cần tính từ \"concrete\" (cụ thể), không dùng trạng từ \"concretely\".",
+   "tip": "tính từ + danh từ, không dùng trạng từ"
+  },
+  {
+   "w": "noon",
+   "s": "The post office closes at noone on Saturdays, so please arrive early.",
+   "wrong": "noone",
+   "right": "noon",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thừa chữ \"e\", từ đúng là \"noon\" (buổi trưa, 12 giờ).",
+   "tip": "noon: hai chữ o, không có e"
+  },
+  {
+   "w": "exhaust",
+   "s": "After the long flight, all the passengers felt completely exhaust.",
+   "wrong": "exhaust",
+   "right": "exhausted",
+   "loai": "ngu_phap",
+   "why": "Sau \"felt completely\" cần tính từ chỉ cảm giác: \"exhausted\" (kiệt sức), không phải động từ nguyên mẫu.",
+   "tip": "cảm thấy kiệt sức: exhausted"
+  },
+  {
+   "w": "mortgage",
+   "s": "They signed the morgage papers at the bank on Thursday afternoon.",
+   "wrong": "morgage",
+   "right": "mortgage",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ \"t\", từ đúng là \"mortgage\" (khoản vay thế chấp mua nhà).",
+   "tip": "chữ t câm: mor-t-gage"
+  },
+  {
+   "w": "basketball",
+   "s": "My son practices baskteball at the community center every Saturday morning.",
+   "wrong": "baskteball",
+   "right": "basketball",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: đảo chữ, từ đúng là \"basketball\" gồm \"basket\" + \"ball\".",
+   "tip": "basket + ball"
+  },
+  {
+   "w": "upward",
+   "s": "Sales have been moving upwardly since we launched the new website in spring.",
+   "wrong": "upwardly",
+   "right": "upward",
+   "loai": "ngu_phap",
+   "why": "Sau động từ \"moving\", dùng \"upward\" hoặc \"upwards\" để chỉ hướng đi lên, không dùng \"upwardly\".",
+   "tip": "move upward(s) = đi lên",
+   "accept": [
+    "upwards",
+    "up"
+   ]
+  },
+  {
+   "w": "buyer",
+   "s": "The buy who signed the contract yesterday will pick up the keys on Monday.",
+   "wrong": "buy",
+   "right": "buyer",
+   "loai": "ngu_phap",
+   "why": "Sau \"The\" cần danh từ chỉ người: \"buyer\" (người mua), \"buy\" là động từ.",
+   "tip": "buy (mua) - buyer (người mua)",
+   "accept": [
+    "buyers"
+   ]
+  },
+  {
+   "w": "accomplish",
+   "s": "With good planning, our small team can accomplished a great deal in just one month.",
+   "wrong": "accomplished",
+   "right": "accomplish",
+   "loai": "ngu_phap",
+   "why": "Sau động từ khuyết thiếu \"can\" dùng động từ nguyên mẫu: \"accomplish\" (hoàn thành).",
+   "tip": "can + động từ nguyên mẫu"
+  },
+  {
+   "w": "gallery",
+   "s": "The art galery downtown is free to visit on the first Sunday of every month.",
+   "wrong": "galery",
+   "right": "gallery",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu một chữ \"l\", từ đúng là \"gallery\" (phòng trưng bày).",
+   "tip": "gallery: hai chữ l"
+  },
+  {
+   "w": "stimulate",
+   "s": "The new advertising campaign should stimulation sales during the holiday season.",
+   "wrong": "stimulation",
+   "right": "stimulate",
+   "loai": "ngu_phap",
+   "why": "Sau \"should\" cần động từ nguyên mẫu: \"stimulate\" (kích thích), không phải danh từ \"stimulation\".",
+   "tip": "should + động từ nguyên mẫu"
+  },
+  {
+   "w": "supermarket",
+   "s": "I stopped at the supermaket to buy bread, milk, and some fresh vegetables.",
+   "wrong": "supermaket",
+   "right": "supermarket",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ \"r\", từ đúng là \"supermarket\" gồm \"super\" + \"market\".",
+   "tip": "super + market"
+  },
+  {
+   "w": "shine",
+   "s": "Both lamps in the lobby shines very brightly at night.",
+   "wrong": "shines",
+   "right": "shine",
+   "loai": "ngu_phap",
+   "why": "Chủ ngữ \"Both lamps\" là số nhiều nên động từ không thêm -s: \"shine\" (chiếu sáng).",
+   "tip": "both + danh từ số nhiều + động từ nguyên mẫu"
+  },
+  {
+   "w": "presumably",
+   "s": "The package will presumable arrive by Friday, since it was shipped on Monday morning.",
+   "wrong": "presumable",
+   "right": "presumably",
+   "loai": "ngu_phap",
+   "why": "Bổ nghĩa cho động từ \"arrive\" cần trạng từ: \"presumably\" (có lẽ), không phải tính từ \"presumable\".",
+   "tip": "trạng từ bổ nghĩa động từ: đuôi -ly"
+  },
+  {
+   "w": "umbrella",
+   "s": "Don't forget your umbrela because the weather report says it will rain tonight.",
+   "wrong": "umbrela",
+   "right": "umbrella",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu một chữ \"l\", từ đúng là \"umbrella\" (cái ô).",
+   "tip": "umbrella: hai chữ l"
+  },
+  {
+   "w": "grandmother",
+   "s": "My grandmohter bakes fresh bread every Sunday morning for the whole family.",
+   "wrong": "grandmohter",
+   "right": "grandmother",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: đảo chữ, từ đúng là \"grandmother\" gồm \"grand\" + \"mother\".",
+   "tip": "grand + mother"
+  },
+  {
+   "w": "weigh",
+   "s": "Please weighing the package at the counter before you fill in the shipping form.",
+   "wrong": "weighing",
+   "right": "weigh",
+   "loai": "ngu_phap",
+   "why": "Câu mệnh lệnh với \"Please\" dùng động từ nguyên mẫu: \"weigh\" (cân), không dùng dạng -ing.",
+   "tip": "Please + động từ nguyên mẫu"
+  },
+  {
+   "w": "regardless",
+   "s": "We will hold the outdoor event regardles of the weather forecast.",
+   "wrong": "regardles",
+   "right": "regardless",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu một chữ \"s\" cuối, từ đúng là \"regardless\" (bất kể).",
+   "tip": "regardless of = bất kể"
+  },
+  {
+   "w": "assign",
+   "s": "The supervisor will assignment each new employee to a training group on Monday.",
+   "wrong": "assignment",
+   "right": "assign",
+   "loai": "ngu_phap",
+   "why": "Sau \"will\" cần động từ nguyên mẫu: \"assign\" (phân công), không phải danh từ \"assignment\".",
+   "tip": "will + động từ nguyên mẫu"
+  },
+  {
+   "w": "outstanding",
+   "s": "She received an award for her outstaning performance during the busy season.",
+   "wrong": "outstaning",
+   "right": "outstanding",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ \"d\", từ đúng là \"outstanding\" (xuất sắc).",
+   "tip": "out + standing"
+  },
+  {
+   "w": "extract",
+   "s": "The software can automatically extraction the key dates from long contracts.",
+   "wrong": "extraction",
+   "right": "extract",
+   "loai": "ngu_phap",
+   "why": "Sau \"can automatically\" cần động từ nguyên mẫu: \"extract\" (trích xuất), không phải danh từ.",
+   "tip": "can + trạng từ + động từ nguyên mẫu"
+  },
+  {
+   "w": "liquid",
+   "s": "Airline rules limit the amount of liqiud you can carry in your hand luggage.",
+   "wrong": "liqiud",
+   "right": "liquid",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: đảo chữ, từ đúng là \"liquid\" (chất lỏng), viết \"qu\" rồi mới đến \"id\".",
+   "tip": "liquid: li-qu-id"
+  },
+  {
+   "w": "stranger",
+   "s": "A friendly strange helped me carry my suitcases up the stairs at the station.",
+   "wrong": "strange",
+   "right": "stranger",
+   "loai": "ngu_phap",
+   "why": "Sau \"A friendly\" cần danh từ chỉ người: \"stranger\" (người lạ), \"strange\" là tính từ (kỳ lạ).",
+   "tip": "strange (lạ) - stranger (người lạ)"
+  },
+  {
+   "w": "clever",
+   "s": "That was a very cleverly idea, and it saved us a lot of time.",
+   "wrong": "cleverly",
+   "right": "clever",
+   "loai": "ngu_phap",
+   "why": "Trước danh từ \"idea\" cần tính từ \"clever\" (thông minh), không dùng trạng từ \"cleverly\".",
+   "tip": "a very + tính từ + danh từ"
+  },
+  {
+   "w": "automatically",
+   "s": "The door opens automaticaly when someone walks up to the entrance.",
+   "wrong": "automaticaly",
+   "right": "automatically",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: tính từ \"automatic\" + \"-ally\" nên trạng từ là \"automatically\" (hai chữ l).",
+   "tip": "automatic + ally"
+  },
+  {
+   "w": "workplace",
+   "s": "Everyone should feel safe and respected in the workplase every single day.",
+   "wrong": "workplase",
+   "right": "workplace",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: đuôi từ viết \"-place\" chứ không phải \"-plase\", từ đúng là \"workplace\" (nơi làm việc).",
+   "tip": "work + place"
+  },
+  {
+   "w": "recipient",
+   "s": "The recipeint of the package must sign the delivery form at the door.",
+   "wrong": "recipeint",
+   "right": "recipient",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: nhầm thứ tự \"ie/ei\", từ đúng là \"recipient\" (người nhận).",
+   "tip": "recipient: -pi-ent, như patient"
+  },
+  {
+   "w": "comedy",
+   "s": "We watched a funny commedy on the plane to pass the time.",
+   "wrong": "commedy",
+   "right": "comedy",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thừa một chữ \"m\", từ đúng là \"comedy\" (phim hài).",
+   "tip": "comedy chỉ có một m"
+  },
+  {
+   "w": "functional",
+   "s": "The new office layout is both attractive and function for the whole team.",
+   "wrong": "function",
+   "right": "functional",
+   "loai": "ngu_phap",
+   "why": "Sau \"both attractive and\" cần tính từ song song: \"functional\" (tiện dụng), không phải danh từ \"function\".",
+   "tip": "both A and B: cùng loại từ"
+  },
+  {
+   "w": "chocolate",
+   "s": "I bought a box of choclate cookies as a small gift for my coworkers.",
+   "wrong": "choclate",
+   "right": "chocolate",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ \"o\" sau \"c\", từ đúng là \"chocolate\" (sô-cô-la).",
+   "tip": "choc-o-late"
+  },
+  {
+   "w": "alliance",
+   "s": "The two companies formed an allied to share the cost of new research.",
+   "wrong": "allied",
+   "right": "alliance",
+   "loai": "ngu_phap",
+   "why": "Sau \"formed an\" cần danh từ: \"alliance\" (liên minh), \"allied\" là tính từ.",
+   "tip": "form an alliance = lập liên minh"
+  },
+  {
+   "w": "worldwide",
+   "s": "Our company ships its products wordwide to more than forty countries.",
+   "wrong": "wordwide",
+   "right": "worldwide",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ \"l\", từ đúng là \"worldwide\" gồm \"world\" + \"wide\" (trên toàn thế giới).",
+   "tip": "world + wide"
+  },
+  {
+   "w": "genuine",
+   "s": "This store only sells genuinely leather bags and shoes imported from Italy.",
+   "wrong": "genuinely",
+   "right": "genuine",
+   "loai": "ngu_phap",
+   "why": "Trước danh từ \"leather\" cần tính từ \"genuine\" (thật, chính hiệu), không dùng trạng từ \"genuinely\".",
+   "tip": "tính từ + danh từ, không dùng trạng từ"
+  },
+  {
+   "w": "infer",
+   "s": "From the graph, we can inference that sales rise during the summer months.",
+   "wrong": "inference",
+   "right": "infer",
+   "loai": "ngu_phap",
+   "why": "Sau \"we can\" cần động từ nguyên mẫu: \"infer\" (suy ra), không phải danh từ \"inference\".",
+   "tip": "can + động từ nguyên mẫu"
+  },
+  {
+   "w": "reschedule",
+   "s": "Can we reschedual tomorrow's team meeting to Thursday afternoon instead?",
+   "wrong": "reschedual",
+   "right": "reschedule",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: đuôi từ là \"-ule\", từ đúng là \"reschedule\" (dời lịch).",
+   "tip": "re + schedule"
+  },
+  {
+   "w": "coworker",
+   "s": "My cowoker helped me finish the monthly report before the deadline.",
+   "wrong": "cowoker",
+   "right": "coworker",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ \"r\", từ đúng là \"coworker\" gồm \"co\" + \"worker\" (đồng nghiệp).",
+   "tip": "co + worker"
+  },
+  {
+   "w": "convenience",
+   "s": "The new shop offers free parking and a lounge for your convienience.",
+   "wrong": "convienience",
+   "right": "convenience",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: nhầm \"ie\" vào giữa từ, từ đúng là \"convenience\" (sự tiện lợi).",
+   "tip": "con-ven-ience: ven-ience"
+  },
+  {
+   "w": "vulnerable",
+   "s": "Small businesses are especially vunerable to sudden changes in fuel prices.",
+   "wrong": "vunerable",
+   "right": "vulnerable",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ \"l\", từ đúng là \"vulnerable\" (dễ bị tổn thương).",
+   "tip": "vul-ner-able"
+  },
+  {
+   "w": "respondent",
+   "s": "Each respond to the survey will receive a small gift card by email.",
+   "wrong": "respond",
+   "right": "respondent",
+   "loai": "ngu_phap",
+   "why": "Sau \"Each\" cần danh từ chỉ người: \"respondent\" (người trả lời khảo sát), \"respond\" là động từ.",
+   "tip": "respond (trả lời) - respondent (người trả lời)",
+   "accept": [
+    "responder"
+   ]
+  },
+  {
+   "w": "battery",
+   "s": "My phone battary only lasts about four hours when I use the camera.",
+   "wrong": "battary",
+   "right": "battery",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: đuôi từ là \"-ery\", từ đúng là \"battery\" (pin).",
+   "tip": "battery kết thúc bằng -ery"
+  },
+  {
+   "w": "captain",
+   "s": "The captian announced that we would land about twenty minutes ahead of schedule.",
+   "wrong": "captian",
+   "right": "captain",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: đảo chữ \"ai\", từ đúng là \"captain\" (cơ trưởng).",
+   "tip": "captain: -tain, như contain"
+  },
+  {
+   "w": "flag",
+   "s": "The accounting system will flagged any payment that looks unusually large.",
+   "wrong": "flagged",
+   "right": "flag",
+   "loai": "ngu_phap",
+   "why": "Sau \"will\" cần động từ nguyên mẫu: \"flag\" (đánh dấu cảnh báo), không chia quá khứ.",
+   "tip": "will + động từ nguyên mẫu"
+  },
+  {
+   "w": "apple",
+   "s": "She eats an appel and a handful of nuts every afternoon at her desk.",
+   "wrong": "appel",
+   "right": "apple",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: đảo chữ cuối, từ đúng là \"apple\" (quả táo), kết thúc bằng \"-le\".",
+   "tip": "apple: pp + le"
+  },
+  {
+   "w": "instructor",
+   "s": "Our instruction, a friendly woman from Hanoi, handed out name tags before the session began.",
+   "wrong": "instruction",
+   "right": "instructor",
+   "loai": "ngu_phap",
+   "why": "\"a friendly woman\" chỉ một người nên cần danh từ chỉ người: \"instructor\" (giảng viên), không phải \"instruction\".",
+   "tip": "instruction = hướng dẫn, instructor = người dạy"
+  },
+  {
+   "w": "golf",
+   "s": "My manager plays glof with clients almost every weekend.",
+   "wrong": "glof",
+   "right": "golf",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: đảo chữ, từ đúng là \"golf\" (môn đánh gôn).",
+   "tip": "golf: g-o-l-f"
+  },
+  {
+   "w": "newsletter",
+   "s": "Please subscribe to our monthly newsleter to receive the latest offers and travel tips.",
+   "wrong": "newsleter",
+   "right": "newsletter",
+   "loai": "chinh_ta",
+   "why": "Thiếu một chữ \"t\": \"newsletter\" = news + letter nên có hai chữ \"t\" liền nhau.",
+   "tip": "news + letter"
+  },
+  {
+   "w": "server",
+   "s": "The company moved all its customer data to a new servar located in a secure building.",
+   "wrong": "servar",
+   "right": "server",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: đuôi đúng là \"-er\", từ đúng là \"server\" (máy chủ).",
+   "tip": "serve + r"
+  },
+  {
+   "w": "warehouse",
+   "s": "The goods are stored in a large warehose near the airport until the trucks arrive.",
+   "wrong": "warehose",
+   "right": "warehouse",
+   "loai": "chinh_ta",
+   "why": "Thiếu chữ \"u\": \"warehouse\" = ware + house (kho hàng).",
+   "tip": "ware + house"
+  },
+  {
+   "w": "disable",
+   "s": "You can disabled the notifications at any time in the settings menu of the app.",
+   "wrong": "disabled",
+   "right": "disable",
+   "loai": "ngu_phap",
+   "why": "Sau động từ khuyết thiếu \"can\" dùng động từ nguyên mẫu: \"disable\", không thêm -d.",
+   "tip": "can + động từ nguyên mẫu"
+  },
+  {
+   "w": "comprise",
+   "s": "This new complex comprise a hotel, two restaurants, and a small shopping mall.",
+   "wrong": "comprise",
+   "right": "comprises",
+   "loai": "ngu_phap",
+   "why": "Chủ ngữ \"This new complex\" là số ít nên động từ ở hiện tại phải thêm -s: \"comprises\".",
+   "tip": "chủ ngữ số ít + động từ thêm -s",
+   "accept": [
+    "comprised"
+   ]
+  },
+  {
+   "w": "embarrass",
+   "s": "I felt embarassed when I forgot my colleague's name during the presentation.",
+   "wrong": "embarassed",
+   "right": "embarrassed",
+   "loai": "chinh_ta",
+   "why": "Thiếu một chữ \"r\": \"embarrassed\" có hai chữ \"r\" và hai chữ \"s\".",
+   "tip": "double r, double s"
+  },
+  {
+   "w": "toilet",
+   "s": "Excuse me, where is the nearest toliet in this shopping center?",
+   "wrong": "toliet",
+   "right": "toilet",
+   "loai": "chinh_ta",
+   "why": "Đảo chữ: từ đúng là \"toilet\" (t-o-i-l-e-t), chữ \"i\" đứng trước \"l\".",
+   "tip": "toi + let"
+  },
+  {
+   "w": "dessert",
+   "s": "We ordered a chocolate desert after the main course at the hotel restaurant.",
+   "wrong": "desert",
+   "right": "dessert",
+   "loai": "ngu_phap",
+   "why": "\"Desert\" nghĩa là sa mạc; món tráng miệng là \"dessert\" (hai chữ \"s\").",
+   "tip": "dessert có hai s, như Sweet"
+  },
+  {
+   "w": "password",
+   "s": "Please change your pasword every three months to keep your account safe.",
+   "wrong": "pasword",
+   "right": "password",
+   "loai": "chinh_ta",
+   "why": "Thiếu chữ \"s\": \"password\" = pass + word (hai chữ \"s\" liền nhau).",
+   "tip": "pass + word"
+  },
+  {
+   "w": "praise",
+   "s": "The manager gave her team a lot of praised after they finished the project early.",
+   "wrong": "praised",
+   "right": "praise",
+   "loai": "ngu_phap",
+   "why": "Sau \"a lot of\" cần danh từ: \"praise\" (lời khen), không phải động từ quá khứ \"praised\".",
+   "tip": "a lot of + danh từ"
+  },
+  {
+   "w": "banquet",
+   "s": "The company will hold a farewell banqet for the retiring director next Friday evening.",
+   "wrong": "banqet",
+   "right": "banquet",
+   "loai": "chinh_ta",
+   "why": "Thiếu chữ \"u\": \"banquet\" (tiệc lớn), chữ \"q\" luôn đi cùng \"u\".",
+   "tip": "q luôn đi với u"
+  },
+  {
+   "w": "alongside",
+   "s": "The new cafe is located allongside the river, so many tourists stop there for lunch.",
+   "wrong": "allongside",
+   "right": "alongside",
+   "loai": "chinh_ta",
+   "why": "Thừa chữ \"l\": \"alongside\" chỉ có một chữ \"l\" (along + side).",
+   "tip": "along + side"
+  },
+  {
+   "w": "gaze",
+   "s": "He stood by the window and gaze at the busy street below for several minutes.",
+   "wrong": "gaze",
+   "right": "gazed",
+   "loai": "ngu_phap",
+   "why": "Câu kể ở quá khứ (\"stood\") nên động từ nối sau \"and\" cũng chia quá khứ: \"gazed\".",
+   "tip": "hai động từ nối bằng \"and\" cùng thì"
+  },
+  {
+   "w": "suspend",
+   "s": "The airline had to suspended all flights because of the heavy storm last night.",
+   "wrong": "suspended",
+   "right": "suspend",
+   "loai": "ngu_phap",
+   "why": "Sau \"had to\" dùng động từ nguyên mẫu: \"suspend\" (đình chỉ), không thêm -ed.",
+   "tip": "have/had to + động từ nguyên mẫu"
+  },
+  {
+   "w": "tenant",
+   "s": "The tennant on the second floor complained about the noise from the construction site.",
+   "wrong": "tennant",
+   "right": "tenant",
+   "loai": "chinh_ta",
+   "why": "Thừa một chữ \"n\": \"tenant\" (người thuê nhà) viết là t-e-n-a-n-t.",
+   "tip": "ten + ant"
+  },
+  {
+   "w": "photographer",
+   "s": "The wedding photograph arrived early to take pictures of the beautiful garden.",
+   "wrong": "photograph",
+   "right": "photographer",
+   "loai": "ngu_phap",
+   "why": "Người đến chụp ảnh phải là người: \"photographer\" (nhiếp ảnh gia), \"photograph\" là bức ảnh.",
+   "tip": "-er chỉ người làm nghề"
+  },
+  {
+   "w": "exclusive",
+   "s": "The hotel offers an exclusively discount to members who book three nights or more.",
+   "wrong": "exclusively",
+   "right": "exclusive",
+   "loai": "ngu_phap",
+   "why": "Trước danh từ \"discount\" cần tính từ \"exclusive\" (độc quyền), không dùng trạng từ \"exclusively\".",
+   "tip": "tính từ + danh từ"
+  },
+  {
+   "w": "organic",
+   "s": "All the vegetables in this store are grown with organically methods and without chemicals.",
+   "wrong": "organically",
+   "right": "organic",
+   "loai": "ngu_phap",
+   "why": "Trước danh từ \"methods\" cần tính từ \"organic\" (hữu cơ), không dùng trạng từ \"organically\".",
+   "tip": "tính từ đứng trước danh từ"
+  },
+  {
+   "w": "commonly",
+   "s": "It is a commonly mistake to forget your passport at home when you travel abroad.",
+   "wrong": "commonly",
+   "right": "common",
+   "loai": "ngu_phap",
+   "why": "Trước danh từ \"mistake\" cần tính từ \"common\" (phổ biến), không dùng trạng từ \"commonly\".",
+   "tip": "a + tính từ + danh từ"
+  },
+  {
+   "w": "postpone",
+   "s": "The manager decided to postponed the meeting until next Tuesday because several people were sick.",
+   "wrong": "postponed",
+   "right": "postpone",
+   "loai": "ngu_phap",
+   "why": "Sau \"decided to\" dùng động từ nguyên mẫu: \"postpone\" (hoãn), không thêm -ed.",
+   "tip": "decide to + động từ nguyên mẫu"
+  },
+  {
+   "w": "complimentary",
+   "s": "Every guest receives a complimentery breakfast and free parking during the stay.",
+   "wrong": "complimentery",
+   "right": "complimentary",
+   "loai": "chinh_ta",
+   "why": "Đuôi đúng là \"-ary\": \"complimentary\" (miễn phí, tặng kèm).",
+   "tip": "compliment + ary"
+  },
+  {
+   "w": "enthusiasm",
+   "s": "The new interns were very enthusiasm about learning new skills during their first week.",
+   "wrong": "enthusiasm",
+   "right": "enthusiastic",
+   "loai": "ngu_phap",
+   "why": "Sau \"were very\" cần tính từ: \"enthusiastic\" (hăng hái), không phải danh từ \"enthusiasm\".",
+   "tip": "be + very + tính từ"
+  },
+  {
+   "w": "shore",
+   "s": "The passengers were allowed to go shore for two hours while the ship waited in port.",
+   "wrong": "shore",
+   "right": "ashore",
+   "loai": "ngu_phap",
+   "why": "Sau \"go\" cần trạng từ chỉ hướng: \"go ashore\" (lên bờ), không dùng danh từ \"shore\".",
+   "tip": "go ashore = lên bờ",
+   "accept": [
+    "onshore"
+   ]
+  },
+  {
+   "w": "overnight",
+   "s": "We took the overnite bus to the coast and arrived early the next morning.",
+   "wrong": "overnite",
+   "right": "overnight",
+   "loai": "chinh_ta",
+   "why": "Viết theo cách đọc: từ đúng là \"overnight\", vần \"-ight\" như trong \"night\".",
+   "tip": "night viết là n-i-g-h-t"
+  },
+  {
+   "w": "refund",
+   "s": "The store gave me a refunded after I returned the damaged jacket within seven days.",
+   "wrong": "refunded",
+   "right": "refund",
+   "loai": "ngu_phap",
+   "why": "Sau \"a\" cần danh từ: \"a refund\" (khoản hoàn tiền), không phải động từ quá khứ \"refunded\".",
+   "tip": "a + danh từ"
+  },
+  {
+   "w": "dock",
+   "s": "The cargo ship will docks at the port tomorrow morning to unload its containers.",
+   "wrong": "docks",
+   "right": "dock",
+   "loai": "ngu_phap",
+   "why": "Sau \"will\" dùng động từ nguyên mẫu: \"dock\" (cập bến), không thêm -s.",
+   "tip": "will + động từ nguyên mẫu"
+  },
+  {
+   "w": "cabinet",
+   "s": "Please put the files back into the filing cabnet when you finish reading them.",
+   "wrong": "cabnet",
+   "right": "cabinet",
+   "loai": "chinh_ta",
+   "why": "Thiếu chữ \"i\": \"cabinet\" (tủ) viết là c-a-b-i-n-e-t.",
+   "tip": "cab + in + et"
+  },
+  {
+   "w": "calculation",
+   "s": "The accountant checked the calculate twice before she sent the invoice to the client.",
+   "wrong": "calculate",
+   "right": "calculation",
+   "loai": "ngu_phap",
+   "why": "Sau \"the\" cần danh từ: \"calculation\" (phép tính), không phải động từ \"calculate\".",
+   "tip": "-tion tạo danh từ"
+  },
+  {
+   "w": "hypothesis",
+   "s": "The scientist tested her hipothesis in the laboratory for three months.",
+   "wrong": "hipothesis",
+   "right": "hypothesis",
+   "loai": "chinh_ta",
+   "why": "Sai chữ thứ hai: \"hypothesis\" bắt đầu bằng \"hy\" (gốc Hy Lạp hypo-), không phải \"hi\".",
+   "tip": "hypo- = bên dưới"
+  },
+  {
+   "w": "mystery",
+   "s": "The cause of the power cut is still a mistery to the local engineers.",
+   "wrong": "mistery",
+   "right": "mystery",
+   "loai": "chinh_ta",
+   "why": "Sai nguyên âm: từ đúng là \"mystery\", chữ \"y\" ở âm tiết đầu.",
+   "tip": "m-y-s-t-e-r-y"
+  },
+  {
+   "w": "upstairs",
+   "s": "The manager's office is upstiars, next to the large conference room.",
+   "wrong": "upstiars",
+   "right": "upstairs",
+   "loai": "chinh_ta",
+   "why": "Đảo chữ: từ đúng là \"upstairs\" (up + stairs).",
+   "tip": "up + stairs"
+  },
+  {
+   "w": "scope",
+   "s": "The scoped of this project is too broad for a team of only three people.",
+   "wrong": "scoped",
+   "right": "scope",
+   "loai": "ngu_phap",
+   "why": "Sau \"The\" cần danh từ: \"scope\" (phạm vi), không phải động từ quá khứ \"scoped\".",
+   "tip": "the + danh từ"
+  },
+  {
+   "w": "supplement",
+   "s": "Many people take a vitamin suplement every morning to stay healthy during winter.",
+   "wrong": "suplement",
+   "right": "supplement",
+   "loai": "chinh_ta",
+   "why": "Thiếu một chữ \"p\": \"supplement\" (thực phẩm bổ sung) có hai chữ \"p\".",
+   "tip": "sup-ple-ment: hai p"
+  },
+  {
+   "w": "founder",
+   "s": "The company was started by a young found who sold its first products from his garage.",
+   "wrong": "found",
+   "right": "founder",
+   "loai": "ngu_phap",
+   "why": "Sau \"a young\" cần danh từ chỉ người: \"founder\" (người sáng lập), không phải động từ \"found\".",
+   "tip": "-er chỉ người"
+  },
+  {
+   "w": "punishment",
+   "s": "The company has no strict punisment for employees who arrive a few minutes late.",
+   "wrong": "punisment",
+   "right": "punishment",
+   "loai": "chinh_ta",
+   "why": "Thiếu chữ \"h\": \"punishment\" = punish + ment (hình phạt).",
+   "tip": "punish + ment"
+  },
+  {
+   "w": "laptop",
+   "s": "Please bring your own labtop to the training session on Wednesday morning.",
+   "wrong": "labtop",
+   "right": "laptop",
+   "loai": "chinh_ta",
+   "why": "Sai chữ: từ đúng là \"laptop\" (lap + top), viết bằng \"p\" chứ không phải \"b\".",
+   "tip": "lap (đùi) + top (trên)"
+  },
+  {
+   "w": "cooperation",
+   "s": "The project succeeded thanks to the close coperation between the sales and marketing teams.",
+   "wrong": "coperation",
+   "right": "cooperation",
+   "loai": "chinh_ta",
+   "why": "Thiếu một chữ \"o\": \"cooperation\" = co + operation, bắt đầu bằng \"coo\".",
+   "tip": "co + operation"
+  },
+  {
+   "w": "tackle",
+   "s": "We need to find a way to tackling this problem before the deadline next week.",
+   "wrong": "tackling",
+   "right": "tackle",
+   "loai": "ngu_phap",
+   "why": "Sau \"to\" dùng động từ nguyên mẫu: \"to tackle\" (giải quyết), không dùng V-ing.",
+   "tip": "way to + động từ nguyên mẫu"
+  },
+  {
+   "w": "publisher",
+   "s": "The author finally met the publish who agreed to print her first novel next spring.",
+   "wrong": "publish",
+   "right": "publisher",
+   "loai": "ngu_phap",
+   "why": "Sau \"the\" cần danh từ chỉ người: \"publisher\" (nhà xuất bản), không phải động từ \"publish\".",
+   "tip": "-er chỉ người/tổ chức làm việc đó"
+  },
+  {
+   "w": "residential",
+   "s": "Most apartments in this residencial area are close to schools and supermarkets.",
+   "wrong": "residencial",
+   "right": "residential",
+   "loai": "chinh_ta",
+   "why": "Đuôi đúng là \"-tial\": \"residential\" (thuộc khu dân cư), không phải \"-cial\".",
+   "tip": "-tial: residential, essential"
+  },
+  {
+   "w": "relieve",
+   "s": "This medicine can releive headaches within thirty minutes if you take it with water.",
+   "wrong": "releive",
+   "right": "relieve",
+   "loai": "chinh_ta",
+   "why": "Nhầm \"ie/ei\": \"relieve\" viết \"ie\" vì không đứng sau chữ \"c\".",
+   "tip": "i trước e, trừ sau c"
+  },
+  {
+   "w": "civilian",
+   "s": "The old airfield now welcomes civillian flights and cargo planes.",
+   "wrong": "civillian",
+   "right": "civilian",
+   "loai": "chinh_ta",
+   "why": "Thừa một chữ \"l\": \"civilian\" (dân thường) chỉ có một chữ \"l\" (c-i-v-i-l-i-a-n).",
+   "tip": "civil + ian"
+  },
+  {
+   "w": "filter",
+   "s": "You should replace the water filtering every six months to keep the water clean.",
+   "wrong": "filtering",
+   "right": "filter",
+   "loai": "ngu_phap",
+   "why": "Sau \"the water\" cần danh từ chỉ vật lọc: \"filter\" (bộ lọc), không phải dạng V-ing \"filtering\".",
+   "tip": "the + danh từ",
+   "accept": [
+    "filters"
+   ]
+  },
+  {
+   "w": "instant",
+   "s": "Many people prefer instantly coffee because it is quick and easy to prepare.",
+   "wrong": "instantly",
+   "right": "instant",
+   "loai": "ngu_phap",
+   "why": "Trước danh từ \"coffee\" cần tính từ \"instant\" (ăn liền, pha nhanh), không dùng trạng từ \"instantly\".",
+   "tip": "instant coffee = cà phê hòa tan"
+  },
+  {
+   "w": "carbon",
+   "s": "Our factory is trying to reduce its crabon emissions by using solar panels.",
+   "wrong": "crabon",
+   "right": "carbon",
+   "loai": "chinh_ta",
+   "why": "Đảo chữ: từ đúng là \"carbon\" (c-a-r-b-o-n), \"car\" đứng trước \"bon\".",
+   "tip": "car + bon"
+  },
+  {
+   "w": "maker",
+   "s": "The coffee make in the staff kitchen stopped working yesterday, so we bought a new one.",
+   "wrong": "make",
+   "right": "maker",
+   "loai": "ngu_phap",
+   "why": "\"Coffee maker\" là danh từ ghép (máy pha cà phê): cần \"maker\", không phải động từ \"make\".",
+   "tip": "động từ + -er = người/máy làm việc đó"
+  },
+  {
+   "w": "website",
+   "s": "Customers can check the delivery status on our wesbite at any time of the day.",
+   "wrong": "wesbite",
+   "right": "website",
+   "loai": "chinh_ta",
+   "why": "Đảo chữ: từ đúng là \"website\" (web + site).",
+   "tip": "web + site"
+  },
+  {
+   "w": "logo",
+   "s": "Our designer added the company loggo to the top corner of every page.",
+   "wrong": "loggo",
+   "right": "logo",
+   "loai": "chinh_ta",
+   "why": "Thừa chữ \"g\": \"logo\" chỉ có một chữ \"g\" ở giữa (lo + go).",
+   "tip": "lo + go"
+  },
+  {
+   "w": "cart",
+   "s": "Each shopping carts in this supermarket has a small seat for young children.",
+   "wrong": "carts",
+   "right": "cart",
+   "loai": "ngu_phap",
+   "why": "Sau \"Each\" danh từ phải ở số ít: \"Each shopping cart\", khớp với động từ \"has\".",
+   "tip": "each + danh từ số ít"
+  },
+  {
+   "w": "indication",
+   "s": "The report gave no indicate of when the factory would reopen after the repairs.",
+   "wrong": "indicate",
+   "right": "indication",
+   "loai": "ngu_phap",
+   "why": "Sau \"no\" cần danh từ: \"indication\" (dấu hiệu), không phải động từ \"indicate\".",
+   "tip": "indicate (v) → indication (n)"
+  },
+  {
+   "w": "cabin",
+   "s": "Each passenger may bring one small bag into the cabbin of the plane.",
+   "wrong": "cabbin",
+   "right": "cabin",
+   "loai": "chinh_ta",
+   "why": "Thừa một chữ \"b\": \"cabin\" (khoang) chỉ có một chữ \"b\".",
+   "tip": "cab + in"
+  },
+  {
+   "w": "chat",
+   "s": "We spent the whole evening chat about our travel plans for the summer holiday.",
+   "wrong": "chat",
+   "right": "chatting",
+   "loai": "ngu_phap",
+   "why": "Sau \"spend + thời gian\" dùng V-ing: \"spent the evening chatting\".",
+   "tip": "spend time + V-ing"
+  },
+  {
+   "w": "technological",
+   "s": "Rapid technologial change has made many office jobs easier and faster.",
+   "wrong": "technologial",
+   "right": "technological",
+   "loai": "chinh_ta",
+   "why": "Thiếu chữ \"c\": \"technological\" = technology + -ical (technolog-i-c-al).",
+   "tip": "technolog + ical"
+  },
+  {
+   "w": "organizer",
+   "s": "The event organizor announced that the conference would start thirty minutes late.",
+   "wrong": "organizor",
+   "right": "organizer",
+   "loai": "chinh_ta",
+   "why": "Đuôi đúng là \"-er\": \"organizer\" (người tổ chức), không phải \"-or\".",
+   "tip": "organize + r"
+  },
+  {
+   "w": "mechanic",
+   "s": "The mechanical checked the brakes and told us that the car was safe to drive.",
+   "wrong": "mechanical",
+   "right": "mechanic",
+   "loai": "ngu_phap",
+   "why": "Chủ ngữ phải là danh từ chỉ người: \"mechanic\" (thợ máy), không phải tính từ \"mechanical\".",
+   "tip": "the + danh từ chỉ người"
+  },
+  {
+   "w": "abstract",
+   "s": "Please submit a short abstact of your research paper before the end of the month.",
+   "wrong": "abstact",
+   "right": "abstract",
+   "loai": "chinh_ta",
+   "why": "Thiếu chữ \"r\": \"abstract\" (bản tóm tắt) viết là abs-tract.",
+   "tip": "abs + tract"
+  },
+  {
+   "w": "fountain",
+   "s": "Many tourists take photos in front of the fountian in the middle of the square.",
+   "wrong": "fountian",
+   "right": "fountain",
+   "loai": "chinh_ta",
+   "why": "Đảo chữ \"ia\": từ đúng là \"fountain\" (đuôi -ain).",
+   "tip": "đuôi -ain: fountain, mountain"
+  },
+  {
+   "w": "wooden",
+   "s": "The old restaurant has a beautiful wodden floor and large windows facing the river.",
+   "wrong": "wodden",
+   "right": "wooden",
+   "loai": "chinh_ta",
+   "why": "Sai chữ: \"wooden\" = wood + en, có hai chữ \"o\" và chỉ một chữ \"d\".",
+   "tip": "wood + en"
+  },
+  {
+   "w": "caller",
+   "s": "The caler asked to speak with someone in the billing department about an incorrect charge.",
+   "wrong": "caler",
+   "right": "caller",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: \"caler\" thiếu một chữ l. Từ đúng là \"caller\" (người gọi điện), gồm call + er.",
+   "tip": "call + er = caller (hai chữ l)"
+  },
+  {
+   "w": "headline",
+   "s": "The newspaper ran a bold hedline about the new subway station on its front page.",
+   "wrong": "hedline",
+   "right": "headline",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: viết theo cách đọc. Từ đúng là \"headline\" (tiêu đề), gồm head + line.",
+   "tip": "head (đầu) + line (dòng) = tiêu đề"
+  },
+  {
+   "w": "catalog",
+   "s": "The new catolog lists more than two hundred products for the spring season.",
+   "wrong": "catolog",
+   "right": "catalog",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ a. Từ đúng là \"catalog\" (hoặc \"catalogue\"), nghĩa là cuốn danh mục sản phẩm.",
+   "tip": "cat-a-log: có chữ a ở giữa",
+   "accept": [
+    "catalogue"
+   ]
+  },
+  {
+   "w": "destination",
+   "s": "We finally reached our destinaton after a long flight and a slow bus ride.",
+   "wrong": "destinaton",
+   "right": "destination",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ i. Từ đúng là \"destination\" (điểm đến), đuôi -ation.",
+   "tip": "đuôi -nation giống \"nation\""
+  },
+  {
+   "w": "overtime",
+   "s": "Employees who work ovetime on public holidays receive one and a half times their normal pay.",
+   "wrong": "ovetime",
+   "right": "overtime",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ r. Từ đúng là \"overtime\" (giờ làm thêm), gồm over + time.",
+   "tip": "over + time = overtime"
+  },
+  {
+   "w": "embrace",
+   "s": "Our company decided to embracing the new technology to improve its customer service this year.",
+   "wrong": "embracing",
+   "right": "embrace",
+   "loai": "ngu_phap",
+   "why": "Sau \"decided to\" dùng động từ nguyên mẫu: \"embrace\" (đón nhận), không dùng dạng -ing.",
+   "tip": "to + động từ nguyên mẫu"
+  },
+  {
+   "w": "fence",
+   "s": "We built a tall wooden fenced around the garden to keep the rabbits out.",
+   "wrong": "fenced",
+   "right": "fence",
+   "loai": "ngu_phap",
+   "why": "Sau \"a tall wooden\" cần danh từ: \"fence\" (hàng rào), không phải dạng quá khứ \"fenced\".",
+   "tip": "a + tính từ + danh từ"
+  },
+  {
+   "w": "sole",
+   "s": "The solely reason for the late delivery was heavy traffic on the main road.",
+   "wrong": "solely",
+   "right": "sole",
+   "loai": "ngu_phap",
+   "why": "Trước danh từ \"reason\" cần tính từ \"sole\" (duy nhất), không dùng trạng từ \"solely\".",
+   "tip": "tính từ + danh từ; \"solely\" là trạng từ",
+   "accept": [
+    "only"
+   ]
+  },
+  {
+   "w": "photography",
+   "s": "Her hobby is photografy, and she often shares pictures of old buildings online.",
+   "wrong": "photografy",
+   "right": "photography",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: \"ph\" chứ không phải \"f\". Từ đúng là \"photography\" (nhiếp ảnh).",
+   "tip": "photo, photograph, photography đều có \"ph\""
+  },
+  {
+   "w": "compromise",
+   "s": "After a long discussion, both sides agreed to compromised on the price and signed the contract.",
+   "wrong": "compromised",
+   "right": "compromise",
+   "loai": "ngu_phap",
+   "why": "Sau \"agreed to\" dùng động từ nguyên mẫu: \"compromise\" (thỏa hiệp), không thêm -ed.",
+   "tip": "to + động từ nguyên mẫu"
+  },
+  {
+   "w": "explanatory",
+   "s": "The manual includes a short explanitory note for each step of the installation process.",
+   "wrong": "explanitory",
+   "right": "explanatory",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: đúng là \"explanatory\" (có tính giải thích), gốc từ \"explanation\": chữ a ở giữa, không phải i.",
+   "tip": "explanation → explanatory (a, không phải i)"
+  },
+  {
+   "w": "clothing",
+   "s": "The charity collects warm clothign for families in need before every winter.",
+   "wrong": "clothign",
+   "right": "clothing",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: đảo hai chữ cuối. Từ đúng là \"clothing\" (quần áo), đuôi -ing.",
+   "tip": "cloth + ing = clothing"
+  },
+  {
+   "w": "shame",
+   "s": "It is a shamed that the outdoor concert was postponed because of the heavy rain.",
+   "wrong": "shamed",
+   "right": "shame",
+   "loai": "ngu_phap",
+   "why": "Cấu trúc \"It is a shame that...\" (thật đáng tiếc): sau \"a\" dùng danh từ \"shame\", không dùng \"shamed\".",
+   "tip": "It's a shame that + mệnh đề"
+  },
+  {
+   "w": "verify",
+   "s": "Please verification your email address by clicking the link in the message we just sent.",
+   "wrong": "verification",
+   "right": "verify",
+   "loai": "ngu_phap",
+   "why": "Sau \"Please\" cần động từ nguyên mẫu: \"verify\" (xác minh), không dùng danh từ \"verification\".",
+   "tip": "verify (động từ) → verification (danh từ)"
+  },
+  {
+   "w": "ceremony",
+   "s": "The graduation cermony will begin at ten o'clock in the main hall of the university.",
+   "wrong": "cermony",
+   "right": "ceremony",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ e ở giữa. Từ đúng là \"ceremony\" (buổi lễ).",
+   "tip": "cer-e-mo-ny: đọc từng âm tiết để nhớ"
+  },
+  {
+   "w": "certificate",
+   "s": "Each participant will receive a sertificate at the end of the training course.",
+   "wrong": "sertificate",
+   "right": "certificate",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: viết theo cách đọc. Từ đúng là \"certificate\" (chứng chỉ), bắt đầu bằng \"c\".",
+   "tip": "bắt đầu bằng \"cert\" như \"certain\""
+  },
+  {
+   "w": "vessel",
+   "s": "The cargo vesel will leave the port as soon as the last container is loaded.",
+   "wrong": "vesel",
+   "right": "vessel",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu một chữ s. Từ đúng là \"vessel\" (tàu thuyền), có hai chữ s.",
+   "tip": "vessel: hai chữ s"
+  },
+  {
+   "w": "uncle",
+   "s": "My unkle works as an engineer at a large construction company in the city.",
+   "wrong": "unkle",
+   "right": "uncle",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: \"uncle\" viết bằng \"c\", không phải \"k\". Nghĩa là chú, bác, cậu.",
+   "tip": "uncle: u-n-c-l-e"
+  },
+  {
+   "w": "transformation",
+   "s": "The new manager led a complete transformed of our customer service department last year.",
+   "wrong": "transformed",
+   "right": "transformation",
+   "loai": "ngu_phap",
+   "why": "Sau \"a complete\" cần danh từ: \"transformation\" (sự chuyển đổi), không phải dạng quá khứ \"transformed\".",
+   "tip": "a + tính từ + danh từ"
+  },
+  {
+   "w": "dose",
+   "s": "Each doses of the medicine is measured carefully before the nurse gives it to a patient.",
+   "wrong": "doses",
+   "right": "dose",
+   "loai": "ngu_phap",
+   "why": "\"Each\" đi với danh từ số ít (và động từ \"is\"): \"Each dose\" (mỗi liều), không phải \"doses\".",
+   "tip": "Each + danh từ số ít"
+  },
+  {
+   "w": "logic",
+   "s": "There is no logical behind the decision to close our store on Saturdays.",
+   "wrong": "logical",
+   "right": "logic",
+   "loai": "ngu_phap",
+   "why": "Sau \"no\" cần danh từ: \"logic\" (lý lẽ), không phải tính từ \"logical\".",
+   "tip": "logic (danh từ), logical (tính từ)"
+  },
+  {
+   "w": "ceiling",
+   "s": "The painters will repaint the cieling and the walls of the meeting room this weekend.",
+   "wrong": "cieling",
+   "right": "ceiling",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: sau \"c\" viết \"ei\". Từ đúng là \"ceiling\" (trần nhà).",
+   "tip": "i before e, except after c"
+  },
+  {
+   "w": "brush",
+   "s": "Dentists say you should brushing your teeth for at least two minutes every morning and night.",
+   "wrong": "brushing",
+   "right": "brush",
+   "loai": "ngu_phap",
+   "why": "Sau \"should\" dùng động từ nguyên mẫu: \"should brush\" (đánh răng), không dùng dạng -ing.",
+   "tip": "động từ khuyết thiếu + động từ nguyên mẫu"
+  },
+  {
+   "w": "mayor",
+   "s": "The mayer opened the new library and thanked all of the volunteers for their hard work.",
+   "wrong": "mayer",
+   "right": "mayor",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: đuôi đúng là -or. Từ đúng là \"mayor\" (thị trưởng).",
+   "tip": "mayor: đuôi -or"
+  },
+  {
+   "w": "advisor",
+   "s": "Our financial advsor explained the risks of the new investment plan very clearly.",
+   "wrong": "advsor",
+   "right": "advisor",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ i. Từ đúng là \"advisor\" (cố vấn); \"adviser\" cũng được chấp nhận.",
+   "tip": "advise → advisor",
+   "accept": [
+    "adviser"
+   ]
+  },
+  {
+   "w": "uncertainty",
+   "s": "There is a lot of uncertain about the housing market this year, so many buyers are waiting.",
+   "wrong": "uncertain",
+   "right": "uncertainty",
+   "loai": "ngu_phap",
+   "why": "Sau \"a lot of\" cần danh từ: \"uncertainty\" (sự không chắc chắn), không phải tính từ \"uncertain\".",
+   "tip": "uncertain (tính từ) → uncertainty (danh từ)"
+  },
+  {
+   "w": "scenario",
+   "s": "In one possible senario, our flight would be delayed by more than six hours.",
+   "wrong": "senario",
+   "right": "scenario",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ c. Từ đúng là \"scenario\" (kịch bản, tình huống), bắt đầu bằng \"sc\".",
+   "tip": "scenario: s-c-e-n-a-r-i-o"
+  },
+  {
+   "w": "shipment",
+   "s": "The shippment of office chairs should arrive at our warehouse by next Wednesday afternoon.",
+   "wrong": "shippment",
+   "right": "shipment",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thừa một chữ p. Từ đúng là \"shipment\" (lô hàng), gồm ship + ment.",
+   "tip": "ship + ment, chỉ một chữ p ở giữa"
+  },
+  {
+   "w": "picnic",
+   "s": "Our whole family is going to have a picnik by the lake this Sunday afternoon.",
+   "wrong": "picnik",
+   "right": "picnic",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: viết theo cách đọc. Từ đúng là \"picnic\" (buổi dã ngoại), kết thúc bằng \"-ic\".",
+   "tip": "đuôi -ic: picnic"
+  },
+  {
+   "w": "universe",
+   "s": "Scientists are still learning how the universal began billions of years ago.",
+   "wrong": "universal",
+   "right": "universe",
+   "loai": "ngu_phap",
+   "why": "Sau \"the\" cần danh từ: \"universe\" (vũ trụ), không phải tính từ \"universal\" (phổ biến).",
+   "tip": "the + danh từ"
+  },
+  {
+   "w": "injure",
+   "s": "Two workers were injure when a shelf fell in the warehouse yesterday.",
+   "wrong": "injure",
+   "right": "injured",
+   "loai": "ngu_phap",
+   "why": "Câu bị động \"were + V3\": \"were injured\" (bị thương), không dùng động từ nguyên mẫu \"injure\".",
+   "tip": "be + quá khứ phân từ"
+  },
+  {
+   "w": "intent",
+   "s": "She has no intend of leaving the company before the end of the year.",
+   "wrong": "intend",
+   "right": "intent",
+   "loai": "ngu_phap",
+   "why": "Sau \"no\" cần danh từ: \"intent\" (ý định), không phải động từ \"intend\".",
+   "tip": "have no intent/intention of + V-ing",
+   "accept": [
+    "intention"
+   ]
+  },
+  {
+   "w": "horrible",
+   "s": "The weather was horribly yesterday, so we decided to stay at the hotel and rest all day.",
+   "wrong": "horribly",
+   "right": "horrible",
+   "loai": "ngu_phap",
+   "why": "Sau \"was\" cần tính từ: \"horrible\" (khủng khiếp), không dùng trạng từ \"horribly\".",
+   "tip": "be + tính từ"
+  },
+  {
+   "w": "evolve",
+   "s": "Online shopping habits will evolved quickly over the next few years, so we must stay flexible.",
+   "wrong": "evolved",
+   "right": "evolve",
+   "loai": "ngu_phap",
+   "why": "Sau \"will\" dùng động từ nguyên mẫu: \"will evolve\" (phát triển, tiến hóa), không dùng quá khứ.",
+   "tip": "will + động từ nguyên mẫu"
+  },
+  {
+   "w": "oval",
+   "s": "The conference room has a large ovel table that can seat twelve people comfortably.",
+   "wrong": "ovel",
+   "right": "oval",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: \"oval\" có đuôi -al, không phải -el. Nghĩa là hình bầu dục.",
+   "tip": "oval: o-v-a-l"
+  },
+  {
+   "w": "occupancy",
+   "s": "The hotel reported a high occupency rate during the summer holiday season.",
+   "wrong": "occupency",
+   "right": "occupancy",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: đuôi đúng là -ancy. Từ đúng là \"occupancy\" (tỷ lệ lấp đầy), từ \"occupant\".",
+   "tip": "occupant → occupancy (a, không phải e)"
+  },
+  {
+   "w": "spite",
+   "s": "In spight of the heavy rain, thousands of fans came to the stadium.",
+   "wrong": "spight",
+   "right": "spite",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: không có \"gh\". Từ đúng là \"spite\" (\"in spite of\" = mặc dù).",
+   "tip": "in spite of = mặc dù"
+  },
+  {
+   "w": "grip",
+   "s": "These new boots grips the wet floor much better than my old ones.",
+   "wrong": "grips",
+   "right": "grip",
+   "loai": "ngu_phap",
+   "why": "Chủ ngữ \"These new boots\" là số nhiều nên động từ không thêm -s: \"grip\" (bám chắc).",
+   "tip": "chủ ngữ số nhiều + động từ nguyên mẫu"
+  },
+  {
+   "w": "diverse",
+   "s": "Our sales team is very diversity, with members from twelve different countries.",
+   "wrong": "diversity",
+   "right": "diverse",
+   "loai": "ngu_phap",
+   "why": "Sau \"very\" cần tính từ: \"diverse\" (đa dạng), không phải danh từ \"diversity\".",
+   "tip": "diverse (tính từ) → diversity (danh từ)"
+  },
+  {
+   "w": "leap",
+   "s": "Our online sales leap by forty percent last year after we launched the new mobile app.",
+   "wrong": "leap",
+   "right": "leaped",
+   "loai": "ngu_phap",
+   "why": "Có \"last year\" nên động từ ở quá khứ: \"leaped\" (hoặc \"leapt\"), không dùng \"leap\".",
+   "tip": "last year → thì quá khứ đơn",
+   "accept": [
+    "leapt"
+   ]
+  },
+  {
+   "w": "thereby",
+   "s": "The company cut its packaging costs, therby saving more than ten thousand dollars a year.",
+   "wrong": "therby",
+   "right": "thereby",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ e. Từ đúng là \"thereby\" (nhờ đó), gồm there + by.",
+   "tip": "there + by = thereby"
+  },
+  {
+   "w": "cartridge",
+   "s": "Please replace the empty ink cartrige before you print the final report.",
+   "wrong": "cartrige",
+   "right": "cartridge",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ d. Từ đúng là \"cartridge\" (hộp mực), có \"dge\".",
+   "tip": "đuôi -dge như bridge, badge"
+  },
+  {
+   "w": "exceed",
+   "s": "Please do not exceeded the maximum weight of twenty kilograms for each suitcase.",
+   "wrong": "exceeded",
+   "right": "exceed",
+   "loai": "ngu_phap",
+   "why": "Sau \"do not\" dùng động từ nguyên mẫu: \"exceed\" (vượt quá), không dùng quá khứ.",
+   "tip": "do not + động từ nguyên mẫu"
+  },
+  {
+   "w": "sweater",
+   "s": "Bring a warm sweter because the evenings in the mountains get quite cold.",
+   "wrong": "sweter",
+   "right": "sweater",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thiếu chữ a. Từ đúng là \"sweater\" (áo len), gồm sweat + er.",
+   "tip": "sweat + er; đừng nhầm với \"sweeter\""
+  },
+  {
+   "w": "wipe",
+   "s": "Please wiped the tables with a clean cloth after each customer leaves the restaurant.",
+   "wrong": "wiped",
+   "right": "wipe",
+   "loai": "ngu_phap",
+   "why": "Câu mệnh lệnh với \"Please\" dùng động từ nguyên mẫu: \"wipe\" (lau), không dùng quá khứ.",
+   "tip": "Please + động từ nguyên mẫu"
+  },
+  {
+   "w": "compel",
+   "s": "All employees are compel to wear safety helmets on the construction site.",
+   "wrong": "compel",
+   "right": "compelled",
+   "loai": "ngu_phap",
+   "why": "Câu bị động \"are + V3\": \"are compelled\" (bị buộc phải), không dùng động từ nguyên mẫu \"compel\".",
+   "tip": "be + quá khứ phân từ"
+  },
+  {
+   "w": "stimulus",
+   "s": "The new discount is meant to stimulus sales during the quiet winter months.",
+   "wrong": "stimulus",
+   "right": "stimulate",
+   "loai": "ngu_phap",
+   "why": "Sau \"to\" cần động từ: \"stimulate\" (kích thích), không phải danh từ \"stimulus\" (tác nhân).",
+   "tip": "stimulus (danh từ) → stimulate (động từ)"
+  },
+  {
+   "w": "domain",
+   "s": "Our website's domian name expires at the end of next month, so we must renew it soon.",
+   "wrong": "domian",
+   "right": "domain",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: đảo chữ i và a. Từ đúng là \"domain\" (tên miền), đuôi -ain.",
+   "tip": "domain: đuôi -ain như \"main\""
+  },
+  {
+   "w": "refreshment",
+   "s": "Light refreshements will be served in the lobby after the presentation ends.",
+   "wrong": "refreshements",
+   "right": "refreshments",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thừa chữ e. Từ đúng là \"refreshments\" (đồ ăn nhẹ), gồm refresh + ments.",
+   "tip": "refresh + ments, không có e ở giữa"
+  },
+  {
+   "w": "entity",
+   "s": "The two companies are separate legal entity and each has its own bank account.",
+   "wrong": "entity",
+   "right": "entities",
+   "loai": "ngu_phap",
+   "why": "\"The two companies\" là số nhiều nên cần \"entities\" (pháp nhân), không phải \"entity\".",
+   "tip": "danh từ đuôi -ty: số nhiều -ties"
+  },
+  {
+   "w": "accommodate",
+   "s": "This hotel can accommodation up to two hundred guests during the busy summer season.",
+   "wrong": "accommodation",
+   "right": "accommodate",
+   "loai": "ngu_phap",
+   "why": "Sau \"can\" cần động từ nguyên mẫu: \"accommodate\" (chứa được), không phải danh từ \"accommodation\".",
+   "tip": "can + động từ nguyên mẫu"
+  },
+  {
+   "w": "format",
+   "s": "The system will automatically formatted all the dates in the report.",
+   "wrong": "formatted",
+   "right": "format",
+   "loai": "ngu_phap",
+   "why": "Sau \"will automatically\" dùng động từ nguyên mẫu: \"format\" (định dạng), không dùng quá khứ.",
+   "tip": "will + động từ nguyên mẫu"
+  },
+  {
+   "w": "cumulative",
+   "s": "The cummulative effect of small savings can be surprisingly large over many years.",
+   "wrong": "cummulative",
+   "right": "cumulative",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thừa một chữ m. Từ đúng là \"cumulative\" (tích lũy).",
+   "tip": "cumulative: chỉ một chữ m ở giữa"
+  },
+  {
+   "w": "compensation",
+   "s": "Passengers whose luggage was lost will receive a full compensate from the airline.",
+   "wrong": "compensate",
+   "right": "compensation",
+   "loai": "ngu_phap",
+   "why": "Sau \"a full\" cần danh từ: \"compensation\" (tiền bồi thường), không phải động từ \"compensate\".",
+   "tip": "compensate (động từ) → compensation"
+  },
+  {
+   "w": "bulletin",
+   "s": "Please read the weekly bullettin on the notice board before you leave the office.",
+   "wrong": "bullettin",
+   "right": "bulletin",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: thừa chữ t. Từ đúng là \"bulletin\" (bản tin), có hai chữ l và một chữ t.",
+   "tip": "bulletin: l đôi, t đơn"
+  },
+  {
+   "w": "highway",
+   "s": "A truck broke down on the hiway this morning, so traffic was slow for hours.",
+   "wrong": "hiway",
+   "right": "highway",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: viết theo cách đọc. Từ đúng là \"highway\" (đường cao tốc), gồm high + way.",
+   "tip": "high + way = highway"
+  },
+  {
+   "w": "relocate",
+   "s": "The firm will relocated its head office to a larger building next spring.",
+   "wrong": "relocated",
+   "right": "relocate",
+   "loai": "ngu_phap",
+   "why": "Sau \"will\" dùng động từ nguyên mẫu: \"relocate\" (chuyển địa điểm), không dùng quá khứ.",
+   "tip": "will + động từ nguyên mẫu"
+  },
+  {
+   "w": "insight",
+   "s": "The workshop gave us a valuable insightful into how customers choose their products.",
+   "wrong": "insightful",
+   "right": "insight",
+   "loai": "ngu_phap",
+   "why": "Sau \"a valuable\" cần danh từ: \"insight\" (cái nhìn sâu sắc), không phải tính từ \"insightful\".",
+   "tip": "insight (danh từ), insightful (tính từ)"
+  },
+  {
+   "w": "sheep",
+   "s": "Farmers in the valley keep hundreds of sheap and a few goats on the green hills.",
+   "wrong": "sheap",
+   "right": "sheep",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: \"sheep\" viết \"ee\", không phải \"ea\". Số ít và số nhiều đều là \"sheep\".",
+   "tip": "one sheep, two sheep"
+  },
+  {
+   "w": "coalition",
+   "s": "A coalision of local businesses has started a campaign to clean up the riverside park.",
+   "wrong": "coalision",
+   "right": "coalition",
+   "loai": "chinh_ta",
+   "why": "Sai chính tả: đuôi đúng là -tion. Từ đúng là \"coalition\" (liên minh), như \"competition\".",
+   "tip": "đuôi -tion: coalition"
+  }
+ ]
+}

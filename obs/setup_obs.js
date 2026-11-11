@@ -1,4 +1,4 @@
-// Ghi profile + scene collection "JaemyLive" cho OBS (khung dọc 1080×1920, 1 nguồn trình duyệt có tiếng).
+// Ghi profile + scene collection "MigiiToeicLive" cho OBS (khung dọc 1080×1920, 1 nguồn trình duyệt có tiếng).
 // Chạy khi OBS đang TẮT (OBS đang mở sẽ ghi đè lúc thoát):  node obs/setup_obs.js
 // Stream key không ghi ở đây — go_live.sh đọc từ .env và ghi service.json ngay trước khi phát.
 const fs = require('fs');
@@ -6,8 +6,8 @@ const os = require('os');
 const path = require('path');
 const crypto = require('crypto');
 
-const NAME = 'JaemyLive';
-const PORT = process.env.QUIZ_PORT || 8787;
+const NAME = 'MigiiToeicLive';
+const PORT = process.env.QUIZ_PORT || 8788;
 // OBS_VCAM=1: OBS chỉ làm CAMERA ẢO nét 1080×1920 cho TikTok LIVE Studio (màn hình Mac 1080p chụp cửa sổ bị mờ).
 // Trang trong OBS tắt tiếng (?mute=1) — tiếng vẫn do cửa sổ game Chrome phát, LIVE Studio thu như cũ.
 const VCAM = process.env.OBS_VCAM === '1';

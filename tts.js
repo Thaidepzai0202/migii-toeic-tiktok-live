@@ -8,8 +8,8 @@ const path = require('path');
 const crypto = require('crypto');
 const readline = require('readline');
 
-// Mặc định dùng venv của auto-demo-tool (đã cài vieneu)
-const PY = process.env.VIENEU_PY || path.join(__dirname, '../../jaemy-feature-guide/auto-demo-tool/server/.venv/bin/python');
+// Cần một môi trường Python đã cài vieneu: VIENEU_PY=/đường/dẫn/.venv/bin/python (không đặt → dùng giọng trình duyệt)
+const PY = process.env.VIENEU_PY || '';
 const VOICE = process.env.VIENEU_VOICE || 'Ngọc Linh';
 const CACHE = path.join(__dirname, 'data', 'tts-cache');
 const SERVER = String.raw`
@@ -29,7 +29,7 @@ for line in sys.stdin:
     sys.stdout.flush()
 `;
 
-const enabled = process.env.VIENEU !== '0' && fs.existsSync(PY);
+const enabled = process.env.VIENEU !== '0' && !!PY && fs.existsSync(PY);
 let proc = null;
 let ready = null;
 let nextLine = null;
@@ -57,7 +57,7 @@ function start() {
   return ready;
 }
 
-// VieNeu là giọng tiếng Việt: chữ Hàn đọc sai → bỏ chữ Hàn (đã có romaja/âm CDN đi kèm), gọn khoảng trắng.
+// VieNeu là giọng tiếng Việt: từ tiếng Anh được phát bằng file phát âm riêng (en_audio.js), ở đây chỉ dọn emoji/khoảng trắng.
 const clean = (t) =>
   String(t)
     .replace(/[ᄀ-ᇿ㄰-㆏가-힯]+/g, '')

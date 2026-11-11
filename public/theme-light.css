@@ -1,0 +1,352 @@
+/* Giao diện SÁNG cho màn live, theo design system Migii (migii_design_system/docs/design/design-tokens.json, bản light).
+ * Bật bằng <html data-theme="light"> (luôn bật, không còn bản tối).
+ * Chỉ ghi đè CSS của index.html, không đụng JS. Luật: không đổ bóng, không viền, nền phẳng một màu (+ vệt sáng teal ở đáy),
+ * thẻ trắng (surface) trên nền #EDF3F1, phần tử trong thẻ #E4EDEA (surfaceInner), teal cho hành động, cam #A85600 chỉ 1 điểm nhấn.
+ * Bản thiết kế đầy đủ cho Figma nằm ở design/ (xem design/src/README.md).
+ * 11/11/2026: phần cuối file áp bản Figma "Migii-Toeic" (node 45:6916) và ghi đè các luật trên ở những chỗ thiết kế khác:
+ * font Avenir Next, nền trắng phủ teal, đáp án và hai bảng có bóng nhẹ. */
+
+html[data-theme="light"] {
+  --bg1: #edf3f1; --bg2: #10201e;           /* bg2 = chữ tối trên nền sáng */
+  --card: #ffffff; --line: transparent;
+  --text: #10201e; --muted: #3b524e;
+  --orange: #a85600; --orange2: #1c7a6c;    /* accent; orange2 dùng cho chữ nhấn (điểm, phụ đề) → teal đậm */
+  --green: #1c7a6c; --pink: #d33a49; --cyan: #1c7a6c;
+  --teal: #48bcaa; --teal-ink: #1c7a6c;
+}
+html[data-theme="light"], html[data-theme="light"] body { background: #dfe5e3; }
+
+/* ---------- Nền: một màu cho mọi khung + vệt sáng teal ở đáy ---------- */
+html[data-theme="light"] #stage,
+html[data-theme="light"] #stage[data-seg],
+html[data-theme="light"] #stage .scr,
+html[data-theme="light"] #stage[data-seg] .scr {
+  background: radial-gradient(ellipse 120% 22% at 50% 88%, rgba(72, 188, 170, .16) 0%, rgba(72, 188, 170, 0) 62%), #edf3f1;
+}
+html[data-theme="light"] #outro {
+  background: radial-gradient(ellipse 120% 22% at 50% 88%, rgba(72, 188, 170, .16) 0%, rgba(72, 188, 170, 0) 62%), #edf3f1;
+}
+
+/* ---------- Thanh thương hiệu + câu miễn trừ ETS ---------- */
+html[data-theme="light"] .site { box-shadow: none; background: #fff; }
+html[data-theme="light"] .site .dl { display: none; }
+html[data-theme="light"] .site .nm span { color: #506762; font-weight: 700; }
+/* ETS: xuống đáy vùng nhìn thấy (y 1536–1600), 2 dòng, đủ chữ (bản cũ 17px cắt bằng dấu …) */
+html[data-theme="light"] #ets { top: 1536px; left: 56px; right: 56px; text-align: left; font-size: 26px; line-height: 32px; font-weight: 500;
+  color: #506762; white-space: normal; overflow: visible; text-overflow: clip; }
+
+/* ---------- Thẻ câu hỏi (surface) ---------- */
+html[data-theme="light"] .bb { background: #fff; border-radius: 84px; padding: 28px 40px 28px; margin-top: 10px; }
+html[data-theme="light"] .prev { background: none; border: 0; padding: 0; font-size: 28px; font-weight: 500; color: #506762; max-width: 100%; }
+html[data-theme="light"] .prev b { color: #1c7a6c; }
+html[data-theme="light"] .pill, html[data-theme="light"] #stage[data-seg] .pill,
+html[data-theme="light"] .wrap.room .pill { margin-top: 18px; font-size: 26px; letter-spacing: 1.5px; padding: 8px 26px; background: #d3eee8; color: #1c7a6c; }
+html[data-theme="light"] .q { text-shadow: none; font-weight: 800; color: #10201e; }
+html[data-theme="light"] .sub { color: #1c7a6c; font-weight: 700; }
+html[data-theme="light"] .timer { margin-top: 24px; }
+html[data-theme="light"] .bar { background: #e4edea; height: 24px; }
+html[data-theme="light"] .bar i { background: #48bcaa; }
+html[data-theme="light"] .secs { font-size: 48px; }
+html[data-theme="light"] .secs.hot { color: #d33a49; }
+
+/* ---------- Đáp án: hàng surfaceInner, số tròn trắng; đáp án đúng nền teal nhạt ---------- */
+html[data-theme="light"] .opts { gap: 16px; margin-top: 22px; }
+html[data-theme="light"] .opt { background: #e4edea; box-shadow: none; border-radius: 78px; min-height: 112px; padding: 12px 24px 12px 14px; color: #10201e; }
+html[data-theme="light"] .opt .n { width: 76px; height: 76px; border-radius: 50%; background: #fff; color: #3b524e; font-size: 40px; }
+html[data-theme="light"] .opt .t { font-weight: 700; }
+html[data-theme="light"] .opt .bar2 { background: rgba(72, 188, 170, .2); }
+html[data-theme="light"] .opts.rev .opt { opacity: .5; }
+html[data-theme="light"] .opts.rev .opt.right { opacity: 1; background: #d3eee8; color: #10201e; box-shadow: none; }
+html[data-theme="light"] .opts.rev .opt.right .n { background: #48bcaa; color: #06201c; }
+html[data-theme="light"] .opts.rev .opt.right .bar2 { background: rgba(72, 188, 170, .25); }
+html[data-theme="light"] .howto { color: #3b524e; font-size: 32px; font-weight: 600; margin-top: 16px; }
+html[data-theme="light"] .howto b { color: #10201e; }
+
+/* ---------- Bảng điểm + câu trả lời ---------- */
+html[data-theme="light"] .panels { margin-top: 16px; gap: 16px; }
+html[data-theme="light"] .panel { background: #fff; border: 0; border-radius: 66px; padding: 26px 30px; }
+html[data-theme="light"] .panel { height: 382px; }
+html[data-theme="light"] .panel h3 { font-size: 30px; color: #10201e; }
+html[data-theme="light"] .panel h3 small { color: #506762; font-size: 24px; }
+html[data-theme="light"] .rk, html[data-theme="light"] .row:nth-child(n) .rk { color: #1c7a6c; }
+html[data-theme="light"] .pt { color: #1c7a6c; }
+html[data-theme="light"] .x2 { background: #a85600; color: #fff; }
+html[data-theme="light"] .feed .it { color: #506762; }
+html[data-theme="light"] .feed .it .nm { color: #3b524e; }
+html[data-theme="light"] .feed .it.ok { color: #10201e; }
+html[data-theme="light"] .feed .it.ok .nm, html[data-theme="light"] .feed .it.ok .pt { color: #1c7a6c; }
+html[data-theme="light"] .footer { margin-top: 12px; color: #3b524e; font-size: 28px; }
+html[data-theme="light"] .footer b { color: #a85600; }
+html[data-theme="light"] .brand { color: #3b524e; } html[data-theme="light"] .brand b { color: #1c7a6c; }
+
+/* ---------- Ghép chữ, chính tả ---------- */
+html[data-theme="light"] .slot { background: #e4edea; color: #10201e; box-shadow: none; }
+html[data-theme="light"] .slot.empty { background: #e4edea; box-shadow: none; }
+html[data-theme="light"] .slot.cho { background: #d3eee8; color: #1c7a6c; box-shadow: inset 0 0 0 4px #48bcaa; }
+html[data-theme="light"] .slots.reveal .slot { background: #d3eee8; color: #10201e; box-shadow: none; }
+html[data-theme="light"] .tile { background: #e4edea; color: #10201e; box-shadow: none; font-family: 'Migii Serif', Georgia, serif; }
+html[data-theme="light"] .tile .no { background: #48bcaa; color: #06201c; box-shadow: none; }
+html[data-theme="light"] .tile .hk { color: #1c7a6c; }
+html[data-theme="light"] .tile.first { box-shadow: inset 0 0 0 6px #48bcaa; }
+html[data-theme="light"] .tiles.rev .tile { background: #d3eee8; color: #10201e; box-shadow: none; }
+
+/* ---------- Lớp học (Giờ học): thẻ trắng thay bảng đen ---------- */
+html[data-theme="light"] .wrap.room .bb { background: #fff; border: 0; box-shadow: none; border-radius: 84px; padding: 34px 40px 36px; }
+html[data-theme="light"] .wrap.room .bb::after { display: none; }
+html[data-theme="light"] .wrap.room .q { color: #10201e; text-shadow: none; }
+html[data-theme="light"] .wrap.room .sub { color: #1c7a6c; }
+html[data-theme="light"] .wrap.room .howto { color: #3b524e; }
+html[data-theme="light"] #lessonbox .mean { color: #10201e; font-family: 'Migii Serif', Georgia, serif; }
+html[data-theme="light"] #lessonbox .mean::before { color: #1c7a6c; }
+html[data-theme="light"] #lessonbox .ex { color: #10201e; }
+html[data-theme="light"] #lessonbox .ex i { color: #506762; }
+html[data-theme="light"] #lessonbox .done span { background: #d3eee8; color: #1c7a6c; }
+html[data-theme="light"] #teacher img { box-shadow: none; background: #fff; }
+html[data-theme="light"] #teacher .bubble { background: #fff; color: #10201e; }
+html[data-theme="light"] #teacher .bubble b { color: #a85600; }
+html[data-theme="light"] #teacher .bubble.ok { background: #d3eee8; color: #10201e; } html[data-theme="light"] #teacher .bubble.ok::before { border-right-color: #d3eee8; }
+html[data-theme="light"] #teacher .bubble.bad { background: #fbe3e6; } html[data-theme="light"] #teacher .bubble.bad::before { border-right-color: #fbe3e6; }
+html[data-theme="light"] .desk .tb { background: #fff; box-shadow: none; border-radius: 22px; }
+html[data-theme="light"] .desk .nm { color: #10201e; text-shadow: none; font-weight: 800; }
+html[data-theme="light"] .desk .st { color: #1c7a6c; text-shadow: none; }
+html[data-theme="light"] .desk.right::after { color: #1c7a6c; text-shadow: none; }
+html[data-theme="light"] #hall { background: #d3eee8; border: 0; }
+html[data-theme="light"] #hall .hd { color: #1c7a6c; } html[data-theme="light"] #hall .hn { color: #10201e; } html[data-theme="light"] #hall .hk { color: #3b524e; }
+html[data-theme="light"] #rank { background: #fff; border: 0; }
+html[data-theme="light"] #rank h3 { color: #1c7a6c; } html[data-theme="light"] #rank .ri { color: #10201e; }
+html[data-theme="light"] #rank .ri .md { color: #506762; } html[data-theme="light"] #rank .ri .pt { color: #1c7a6c; }
+
+/* ---------- Màn chờ + vinh danh ---------- */
+html[data-theme="light"] .tag { background: #d3eee8; color: #1c7a6c; }
+html[data-theme="light"] #breakScr h1, html[data-theme="light"] #podiumScr h1, html[data-theme="light"] #outro h1 { text-shadow: none; color: #10201e; }
+html[data-theme="light"] #breakScr h1 span, html[data-theme="light"] #outro h1 span { color: #1c7a6c; }
+html[data-theme="light"] #podiumScr h1 span { color: #a85600; }
+html[data-theme="light"] #breakScr .kindtag { color: #1c7a6c; }
+html[data-theme="light"] .count { background: conic-gradient(#48bcaa var(--p, 100%), #e4edea 0); }
+html[data-theme="light"] .count::before { background: #edf3f1; }
+html[data-theme="light"] .count b { color: #1c7a6c; } html[data-theme="light"] .count.wait b { color: #506762; }
+html[data-theme="light"] .count-sub, html[data-theme="light"] .soon { color: #3b524e; }
+html[data-theme="light"] .soon b { color: #1c7a6c; }
+html[data-theme="light"] .rules div { color: #10201e; } html[data-theme="light"] .rules b { color: #1c7a6c; }
+html[data-theme="light"] .gold .wins { color: #a85600; }
+html[data-theme="light"] .lineup span { background: #e4edea; color: #3b524e; }
+html[data-theme="light"] .lineup span.now { background: #48bcaa; color: #06201c; }
+html[data-theme="light"] .appcard { box-shadow: none; }
+html[data-theme="light"] .appcard > img.ic { box-shadow: none; }
+html[data-theme="light"] .appcard .t1, html[data-theme="light"] .appcard .qr { color: #506762; }
+html[data-theme="light"] .podium .av { border: 0; background-color: #d3eee8; color: #10201e; }
+html[data-theme="light"] .podium .p1 .av { border: 8px solid #48bcaa; box-shadow: none; }
+html[data-theme="light"] .pd .bx { color: #032220; }
+html[data-theme="light"] .pd.p1 .bx { background: #2fa18f; } html[data-theme="light"] .pd.p2 .bx { background: #62c6b3; } html[data-theme="light"] .pd.p3 .bx { background: #93d6c7; }
+html[data-theme="light"] .award b { color: #1c7a6c; }
+html[data-theme="light"] .gift-list span { background: #d3eee8; color: #1c7a6c; }
+html[data-theme="light"] .stats b { color: #1c7a6c; }
+html[data-theme="light"] #outro .next b, html[data-theme="light"] #outro .cta b { color: #1c7a6c; }
+
+/* ---------- Thông báo nổi (phẳng, không bóng) ---------- */
+html[data-theme="light"] .toast { background: #48bcaa; color: #06201c; box-shadow: none; }
+html[data-theme="light"] .toast.join { background: #e4edea; color: #3b524e; }
+html[data-theme="light"] #thanks { background: #48bcaa; color: #06201c; box-shadow: none; }
+html[data-theme="light"] #thanks.big { background: #a85600; color: #fff; }
+html[data-theme="light"] #mega { background: rgba(237, 243, 241, .96); }
+html[data-theme="light"] #mega .t1 { text-shadow: none; color: #10201e; } html[data-theme="light"] #mega .t2 { color: #a85600; }
+html[data-theme="light"] #aibox { background: #d3eee8; color: #10201e; box-shadow: none; }
+html[data-theme="light"] #aibox .q { color: #3b524e; } html[data-theme="light"] #aibox .q b { color: #a85600; }
+html[data-theme="light"] .hit { background: #d3eee8; color: #1c7a6c; box-shadow: none; }
+html[data-theme="light"] .hit.first { background: #a85600; color: #fff; }
+html[data-theme="light"] #moment, html[data-theme="light"] #moment.lead { background: #a85600; color: #fff; box-shadow: none; }
+html[data-theme="light"] .livedot { top: 168px; right: 76px; background: #e4edea; color: #3b524e; }
+html[data-theme="light"] .livedot.live { background: #d33a49; color: #fff; }
+html[data-theme="light"] .livedot.sim { background: #d3eee8; color: #1c7a6c; }
+html[data-theme="light"] #segchip { background: #e4edea; color: #3b524e; }
+html[data-theme="light"] .pausechip { background: #a85600; color: #fff; }
+
+/* ---------- Bổ sung sau lần kiểm tra đầu ---------- */
+/* Màn chờ / vinh danh / cảm ơn dài hơn y 1600: ETS về lại ngay dưới thanh thương hiệu, 1 dòng (như bản cũ) */
+html[data-theme="light"] #stage:has(.scr.on) #ets,
+html[data-theme="light"] #stage:has(#outro.on) #ets { top: 232px; font-size: 19px; line-height: 24px; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* Lớp học: bàn học thấp lại để nằm trên dòng ETS; ghế trống bớt nâu.
+   11/11/2026: lớp đủ 24 bạn (4 hàng) ở màn kiểm tra từng đè ETS 57px → bóng thoại Ninja, bàn, khoảng cách hàng gọn lại */
+html[data-theme="light"] .wrap.room #teacher { margin-top: 18px; }
+html[data-theme="light"] .wrap.room #teacher img { width: 100px; height: 100px; }
+html[data-theme="light"] .wrap.room #teacher .bubble { padding: 16px 26px; font-size: 34px; min-height: 92px; }
+html[data-theme="light"] #room { margin-top: 10px; gap: 4px 12px; }
+html[data-theme="light"] .wrap.room .desk { height: 92px; }
+html[data-theme="light"] .desk .tb { height: 34px; }
+html[data-theme="light"] .wrap.room .desk .kid { width: 64px; height: 66px; bottom: 22px; }
+html[data-theme="light"] .desk .nm { font-size: 18px; padding: 0 4px 8px; }
+html[data-theme="light"] .desk.empty .kid rect { fill: #e4edea; }
+html[data-theme="light"] #rank { background: #e4edea; }
+
+/* Bảng điểm chỉ hiện top 5 (đủ chỗ trong thẻ, không cắt dở dòng) */
+html[data-theme="light"] #board .row:nth-child(n+6) { display: none; }
+html[data-theme="light"] .feed .it { height: 45px; font-size: 28px; }
+
+/* Ô chữ / thẻ chữ vừa lòng thẻ trắng (rộng 888px): không xuống 2 hàng, không đẩy dòng quà đè lên ETS */
+html[data-theme="light"] .slot { width: 130px; height: 150px; font-size: 90px; border-radius: 40px; }
+html[data-theme="light"] .slots { gap: 20px; margin-top: 30px; }
+html[data-theme="light"] .slots.many { gap: 14px; } html[data-theme="light"] .slots.many .slot { width: 104px; height: 128px; font-size: 72px; border-radius: 34px; }
+html[data-theme="light"] .slots.xmany { gap: 8px; } html[data-theme="light"] .slots.xmany .slot { width: 66px; height: 96px; font-size: 52px; border-radius: 24px; }
+html[data-theme="light"] .tile { border-radius: 40px; }
+html[data-theme="light"] .tiles.many { gap: 12px; } html[data-theme="light"] .tiles.many .tile { width: 96px; height: 116px; font-size: 66px; border-radius: 32px; }
+
+/* ---------- So găng 2 đội: thẻ trắng, chữ tối, gọn để không đè câu ETS (y 1536+) ---------- */
+html[data-theme="light"] .tug { height: 60px; box-shadow: none; }
+html[data-theme="light"] .tug .a { background: #e8556b; color: #fff; font-size: 32px; }
+html[data-theme="light"] .tug .b { background: #3d7bff; color: #fff; font-size: 32px; }
+html[data-theme="light"] .tcols { margin-top: 14px; gap: 18px; }
+html[data-theme="light"] .tcol { background: #fff; padding: 12px 16px; min-height: 0; }
+html[data-theme="light"] .tcol h3 { font-size: 34px; color: #10201e; }
+html[data-theme="light"] .tcol h3 small { font-size: 20px; color: #3b524e; }
+html[data-theme="light"] .tcol .fans { gap: 4px; margin-top: 6px; }
+html[data-theme="light"] .tcol .fan { font-size: 24px; color: #10201e; }
+html[data-theme="light"] .tcol .fan .av { width: 42px; height: 42px; border: 0; background-color: #e4edea; color: #1c7a6c; font-size: 20px; }
+html[data-theme="light"] .tcol .fan .pt { color: #a85600; }
+html[data-theme="light"] .tcol .join { color: #3b524e; opacity: 1; font-size: 22px; margin-top: 6px; }
+html[data-theme="light"] .teamwin { background: #fff; }
+html[data-theme="light"] .teamwin .t { color: #a85600; }
+html[data-theme="light"] .teamwin .sc { color: #10201e; }
+html[data-theme="light"] .teamwin .faces .av { border-color: #48bcaa; background-color: #e4edea; color: #1c7a6c; }
+
+/* ===== Hiệu ứng (11/11/2026, theo góp ý chơi thử): đồng hồ đổi đỏ khi quá nửa, 3 giây cuối có lửa + số lớn, đúng/sai có hiệu ứng ===== */
+html[data-theme="light"] .bar i { transition: background-color .5s; }
+html[data-theme="light"] .timer.half .bar i { background: #e5484d; }
+html[data-theme="light"] .timer.final .bar { animation: barPulse .5s ease-in-out infinite alternate; }
+@keyframes barPulse { to { box-shadow: 0 0 0 6px rgba(229, 72, 77, .25); } }
+html[data-theme="light"] .timer.half .secs { color: #d33a49; }
+/* 3 giây cuối: số giây thành huy hiệu đồng hồ có lửa, rung theo nhịp */
+html[data-theme="light"] .secs.fire { position: relative; width: 116px; height: 84px; margin: -14px 0; border-radius: 26px; display: grid; place-items: center;
+  background: linear-gradient(180deg, #ff9a3d, #e5484d); color: #fff; font-size: 50px; text-align: center; animation: secShake .5s ease-in-out infinite; }
+html[data-theme="light"] .secs.fire::before { content: '🔥'; position: absolute; top: -44px; left: 50%; transform: translateX(-50%); font-size: 46px; animation: flame .35s ease-in-out infinite alternate; }
+@keyframes secShake { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-6deg) scale(1.06); } 75% { transform: rotate(6deg) scale(1.06); } }
+@keyframes flame { from { transform: translateX(-50%) scale(1, .9); } to { transform: translateX(-50%) scale(1.12, 1.15); } }
+/* số đếm lớn giữa màn mỗi giây (3, 2, 1): hiện rồi mờ nhanh để không che chữ lâu */
+#hurry { position: absolute; left: 0; right: 0; top: 470px; z-index: 7; display: grid; place-items: center; pointer-events: none; }
+#hurry .hn { display: flex; align-items: center; gap: 10px; font-size: 190px; font-weight: 900; line-height: 1; color: #e5484d;
+  -webkit-text-stroke: 10px #fff; paint-order: stroke fill; filter: drop-shadow(0 12px 24px rgba(229, 72, 77, .45)); animation: hurryPop .9s cubic-bezier(.2, 1.3, .4, 1) both; }
+#hurry .hn i { font-style: normal; font-size: 100px; -webkit-text-stroke: 0; }
+@keyframes hurryPop { 0% { transform: scale(2.2); opacity: 0; } 25% { transform: scale(1); opacity: .95; } 70% { opacity: .85; } 100% { transform: scale(.85); opacity: 0; } }
+/* Săn từ, Săn lỗi, Nghe – chép: số lớn nằm đúng chỗ bảng chữ / câu / hàng ô chữ người chơi đang dò trong 3 giây cuối → bỏ số lớn,
+   vẫn giữ huy hiệu lửa, viền đỏ và tiếng tích tắc */
+#stage[data-seg="hunt"] #hurry, #stage[data-seg="errhunt"] #hurry, #stage[data-seg="dictate"] #hurry { display: none; }
+/* viền đỏ nhấp nháy quanh màn trong 3 giây cuối */
+#stage.final::after { content: ''; position: absolute; inset: 0; z-index: 7; pointer-events: none; box-shadow: inset 0 0 0 14px rgba(229, 72, 77, .55), inset 0 0 120px rgba(229, 72, 77, .35);
+  animation: edge .5s ease-in-out infinite alternate; }
+@keyframes edge { from { opacity: .35; } to { opacity: 1; } }
+
+/* bình luận đúng: dòng loé xanh, điểm bay lên; sai: dòng đỏ rung */
+html[data-theme="light"] .feed .it.ok.new { animation: okFlash .9s ease-out; border-radius: 12px; }
+@keyframes okFlash { 0% { background: rgba(72, 188, 170, .55); transform: scale(1.06); } 100% { background: transparent; transform: none; } }
+html[data-theme="light"] .feed .it.bad .tx { color: #d33a49; font-weight: 900; }
+html[data-theme="light"] .feed .it.bad.new { animation: badShake .5s ease-in-out; border-radius: 12px; }
+@keyframes badShake { 0%, 100% { transform: none; background: transparent; } 15% { background: rgba(229, 72, 77, .18); } 20%, 60% { transform: translateX(-10px); } 40%, 80% { transform: translateX(10px); } }
+.ptfly { position: absolute; z-index: 8; pointer-events: none; font-size: 54px; font-weight: 900; color: #16805f; -webkit-text-stroke: 6px #fff; paint-order: stroke fill;
+  animation: ptFly 1.1s cubic-bezier(.2, .9, .3, 1) forwards; }
+.ptfly.top { font-size: 72px; color: #e08a00; }
+@keyframes ptFly { 0% { transform: translate(-50%, 0) scale(.4); opacity: 0; } 20% { transform: translate(-50%, -30px) scale(1.15); opacity: 1; } 100% { transform: translate(-50%, -170px) scale(1); opacity: 0; } }
+.spark { position: absolute; z-index: 8; pointer-events: none; width: 16px; height: 16px; border-radius: 50%; margin: -8px 0 0 -8px; animation: spark .8s ease-out forwards; }
+.spark.star { border-radius: 3px; transform: rotate(45deg); }
+@keyframes spark { from { transform: translate(0, 0) scale(1); opacity: 1; } to { transform: translate(var(--dx), var(--dy)) scale(.2); opacity: 0; } }
+/* công bố: đáp án đúng nảy lên + vòng sáng; phương án sai rung nhẹ */
+html[data-theme="light"] .opts.rev .opt.right { opacity: 1; animation: rightPop .7s cubic-bezier(.2, 1.4, .4, 1) both, rightGlow 1.2s .7s ease-in-out 3 alternate; }
+@keyframes rightPop { 0% { transform: scale(.92); } 60% { transform: scale(1.07); } 100% { transform: none; } }
+@keyframes rightGlow { to { box-shadow: 0 0 0 8px rgba(72, 188, 170, .35); } }
+html[data-theme="light"] .opts.rev .opt:not(.right) { animation: wrongNudge .45s ease-in-out both; }
+html[data-theme="light"] .opts.rev .opt:not(.right) .n { background: #f6d5d7; color: #b4232f; }
+@keyframes wrongNudge { 25% { transform: translateX(-8px); } 75% { transform: translateX(8px); } }
+/* thẻ "✅ tên +điểm": chỉ 3 người đúng đầu, nằm ngay trên ô Bảng điểm / Câu trả lời (top đặt bằng JS) để không che đáp án */
+html[data-theme="light"] #hits { left: 0; right: 0; width: auto; align-items: center; flex-direction: column; gap: 8px; }
+html[data-theme="light"] .timer .secs.fire { color: #fff; }
+html[data-theme="light"] #hits .hit { max-width: 900px; }
+
+/* ===== Theo Figma "Migii-Toeic" node 45:6916 (11/11/2026): font Avenir Next, nền trắng phủ teal nhạt, câu hỏi không có thẻ,
+   đáp án là viên trắng bo tròn bóng nhẹ, bảng điểm/câu trả lời có bóng nhẹ + gạch dưới tiêu đề, top 3 tô màu.
+   Vị trí vẫn giữ vùng an toàn TikTok (y 150–1600), khác bản Figma: ở Figma thanh tên nằm y 56 (bị thanh tên kênh che)
+   và hai bảng xuống tới y 1864 (bị khung bình luận che). Câu miễn trừ ETS và dòng hướng dẫn cách chơi vẫn giữ. ===== */
+
+/* Avenir Next có sẵn trên macOS (máy chạy live), gọi bằng local(), không nhúng file font vào web.
+   Máy không có (Windows…) thì về Be Vietnam Pro. Gom độ đậm theo Figma: ≤500 → Medium, 600–700 → Demi Bold, ≥800 → Bold (chữ Figma ghi Bold thì đặt 800) */
+@font-face { font-family: 'Migii UI'; font-weight: 100 549; src: local('AvenirNext-Medium'), local('Avenir Next Medium'); }
+@font-face { font-family: 'Migii UI'; font-weight: 550 749; src: local('AvenirNext-DemiBold'), local('Avenir Next Demi Bold'); }
+@font-face { font-family: 'Migii UI'; font-weight: 750 1000; src: local('AvenirNext-Bold'), local('Avenir Next Bold'); }
+html[data-theme="light"] body, html[data-theme="light"] .ko, html[data-theme="light"] .serif,
+html[data-theme="light"] #breakScr h1, html[data-theme="light"] #podiumScr h1, html[data-theme="light"] #outro h1,
+html[data-theme="light"] #lessonbox .mean, html[data-theme="light"] .tile, html[data-theme="light"] .tile .no, html[data-theme="light"] .tile .hk {
+  font-family: 'Migii UI', 'Be Vietnam Pro', system-ui, sans-serif; }
+
+/* nền: trắng, phủ teal 16% ở trên nhạt dần xuống đáy */
+html[data-theme="light"] #stage, html[data-theme="light"] #stage[data-seg], html[data-theme="light"] #stage .scr,
+html[data-theme="light"] #stage[data-seg] .scr, html[data-theme="light"] #outro {
+  background: linear-gradient(180deg, rgba(72, 188, 170, .16) 20.5%, rgba(72, 188, 170, 0) 104.2%), #fff; }
+
+/* thanh tên app + chip LIVE */
+html[data-theme="light"] .site { padding: 0 12px; gap: 16px; }
+html[data-theme="light"] .site .nm b { font-size: 36px; line-height: 37.8px; font-weight: 800; color: #1c7a6c; }
+html[data-theme="light"] .site .nm span { font-size: 25px; line-height: 26.25px; font-weight: 500; color: #506762; }
+html[data-theme="light"] .livedot { top: 163px; right: 80px; padding: 6px 12px; font-size: 24px; font-weight: 600; }
+html[data-theme="light"] .livedot.live { background: #d33a49; color: #fff; }
+html[data-theme="light"] #ets { font-weight: 500; }
+
+/* khung game (trừ Giờ học): câu hỏi nằm giữa khoảng trống, hai bảng sát đáy (kết thúc y 1516, trên dòng ETS 1536) */
+html[data-theme="light"] .wrap:not(.room) { height: 1516px; padding-top: 236px; }
+html[data-theme="light"] .wrap:not(.room) .bb { flex: 1 0 auto; justify-content: center; background: transparent; margin-top: 0; padding: 28px 40px; }
+html[data-theme="light"] .wrap:not(.room) .prev, html[data-theme="light"] .wrap:not(.room) .pill, html[data-theme="light"] .wrap:not(.room) .footer { display: none; }
+html[data-theme="light"] .panels, html[data-theme="light"] #fillx { flex: none; }
+
+/* câu hỏi */
+html[data-theme="light"] .q { font-weight: 600; color: #10201e; line-height: 1.08; }
+html[data-theme="light"] .sub { margin-top: 10px; font-size: 40px; font-weight: 500; color: #1c7a6c; }
+html[data-theme="light"] .timer { margin-top: 24px; }
+html[data-theme="light"] .bar { height: 18px; }
+html[data-theme="light"] .secs { font-size: 40px; font-weight: 500; color: #10201e; }
+
+/* đáp án A–D: viên trắng, chữ cái trong ô tròn xám xanh */
+html[data-theme="light"] .opts { margin-top: 62px; gap: 16px; }
+html[data-theme="light"] .opt { background: #fff; box-shadow: 2px 2px 10px rgba(72, 188, 170, .2); border-radius: 78px; min-height: 112px; padding: 12px 24px 12px 14px; gap: 16px; }
+html[data-theme="light"] .opt .n { width: 76px; height: 76px; border-radius: 38px; background: #e4edea; color: #3b524e; font-size: 32px; font-weight: 600; }
+html[data-theme="light"] .opt .t { font-size: 32px; line-height: 43.7px; font-weight: 500; color: #10201e; }
+html[data-theme="light"] .opt .t.sm { font-size: 28px; line-height: 38px; }
+html[data-theme="light"] .opt .pct { font-size: 28px; font-weight: 600; }
+html[data-theme="light"] .howto { margin-top: 24px; font-size: 28px; font-weight: 500; color: #506762; }
+html[data-theme="light"] .howto b { color: #10201e; font-weight: 600; }
+
+/* bảng điểm / câu trả lời */
+html[data-theme="light"] .panels { margin-top: 16px; gap: 16px; }
+html[data-theme="light"] .panel, html[data-theme="light"] #fillx { border: 0; border-radius: 50px; padding: 26px 30px; box-shadow: 2px 2px 20px rgba(28, 122, 108, .2); }
+html[data-theme="light"] #fillx { font-weight: 500; }
+html[data-theme="light"] .panel h3 { align-items: center; gap: 12px; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid #1c7a6c;
+  font-size: 30px; font-weight: 800; color: #1c7a6c; }
+html[data-theme="light"] .panel h3 small { display: flex; align-items: center; gap: 4px; font-size: 24px; font-weight: 600; color: #506762; }
+html[data-theme="light"] .panel h3 .hic { flex: none; width: 34px; height: 34px; background: currentColor;
+  -webkit-mask: var(--ic) center / contain no-repeat; mask: var(--ic) center / contain no-repeat; }
+html[data-theme="light"] .hic-cup { color: #ffd000; --ic: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M7 2h10v2h4v3a5 5 0 0 1-4.6 5A5 5 0 0 1 13 15.9V19h4v3H7v-3h4v-3.1A5 5 0 0 1 7.6 12 5 5 0 0 1 3 7V4h4V2zM5 6v1a3 3 0 0 0 2 2.8V6H5zm12 0v3.8A3 3 0 0 0 19 7V6h-2z'/></svg>"); }
+html[data-theme="light"] .hic-chat { color: #1c7a6c; --ic: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linejoin='round'><path d='M2.5 4.5h12v8.5H8l-4 3v-3H2.5z'/><path d='M17 8.5h4.5V17H20v3l-4-3h-5.5v-1.5'/></svg>"); }
+html[data-theme="light"] #players:not(:empty)::after { content: ''; width: 26px; height: 26px; background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='12' cy='7' r='4.5'/><path d='M3 21.5a9 7.5 0 0 1 18 0z'/></svg>") center / contain no-repeat;
+  mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='12' cy='7' r='4.5'/><path d='M3 21.5a9 7.5 0 0 1 18 0z'/></svg>") center / contain no-repeat; }
+html[data-theme="light"] #winners { color: #1c7a6c; }
+html[data-theme="light"] #winners:not(:empty)::after { content: '✓'; font-size: 28px; font-weight: 800; }
+/* top 1 đỏ đậm, top 2 vàng, top 3 xanh dương, còn lại xám */
+html[data-theme="light"] #board .row { font-size: 28px; font-weight: 500; color: #506762; }
+html[data-theme="light"] #board .row .rk, html[data-theme="light"] #board .row .pt { color: inherit; font-weight: inherit; }
+html[data-theme="light"] #board .row:nth-child(1) { font-size: 32px; font-weight: 800; color: #ff0004; }
+html[data-theme="light"] #board .row:nth-child(2) { font-size: 30px; font-weight: 600; color: #cbb700; }
+html[data-theme="light"] #board .row:nth-child(3) { color: #0062ff; }
+/* câu trả lời: đúng teal, sai đỏ (tên + ✗) */
+html[data-theme="light"] .feed .it { height: 45px; font-size: 28px; font-weight: 600; color: #506762; }
+html[data-theme="light"] .feed .it .nm { color: #3b524e; }
+html[data-theme="light"] .feed .it.ok, html[data-theme="light"] .feed .it.ok .nm, html[data-theme="light"] .feed .it.ok .pt { color: #1c7a6c; }
+html[data-theme="light"] .feed .it.ok .pt { font-weight: 800; }
+html[data-theme="light"] .feed .it.bad .nm, html[data-theme="light"] .feed .it.bad .tx { color: #d33a49; }
+
+/* thông báo "👑 … vươn lên dẫn đầu": nhãn cam sát mép phải */
+html[data-theme="light"] #moment { left: auto; right: 0; top: 246px; max-width: 820px; padding: 12px 24px; border-radius: 20px 0 0 20px;
+  font-size: 32px; font-weight: 500; line-height: 1.5; text-align: left; }
+/* 6 dòng câu trả lời vừa khít ô cao 400px (dòng thứ 7 bị cắt nửa) */
+html[data-theme="light"] #feed .it:nth-child(n+7) { display: none; }
+/* Đọc nhanh: bố cục mới còn chỗ → hai bảng cao 350px (bản cũ 280px làm cắt nửa hàng); 4 hàng điểm, 5 câu trả lời.
+   Đo với bài dài nhất trong kho (doc-nhanh-800 #66: 292 ký tự) vẫn nằm trên dòng ETS */
+html[data-theme="light"] .wrap.readq .panel { height: 350px; }
+html[data-theme="light"] .wrap.readq #board .row:nth-child(n+5), html[data-theme="light"] .wrap.readq #feed .it:nth-child(n+6) { display: none; }
+/* dòng chờ "Chưa có ai — trả lời đi nào!" (có style màu riêng) không tô như hạng 1 */
+html[data-theme="light"] #board .row[style] { font-size: 28px; font-weight: 500; }

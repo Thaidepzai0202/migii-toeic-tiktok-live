@@ -8,3 +8,12 @@ data/tts-cache/
 data/backup*/
 data/*.bak*
 .DS_Store
+data/tmp/
+data/server.pid
+data/en-audio/
+
+# Bản HTML cho Figma có nhúng font SVN-Avo (giấy phép chưa xác nhận): không đưa lên git
+design/out/
+
+# Kỷ lục chuỗi Thế chữ (có tên người xem)
+data/the-chu-record.json

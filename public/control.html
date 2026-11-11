@@ -3,32 +3,36 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Điều khiển · Đố từ Hàn</title>
+<meta name="color-scheme" content="light">
+<title>Điều khiển · Đố từ TOEIC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <!-- font tải không chặn: mạng chậm thì trang vẫn chạy ngay, không kẹt "đang nối…" -->
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800&family=Noto+Sans+KR:wght@700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <style>
   :root {
-    --bg: #0d1226; --panel: #151b36; --panel2: #1c2346; --line: #2a3260; --text: #eef0ff; --muted: #9098c4;
-    --orange: #ff8a1f; --green: #3ee08f; --pink: #ff5d8f; --yellow: #ffd34d; --cyan: #5cd6ff; --red: #ff5a5a;
+    color-scheme: light;
+    --bg: #eaf1ef; --panel: #ffffff; --panel2: #e4edea; --line: #d6e3e0; --text: #10201e; --muted: #5b716d;
+    --orange: #ffb347; --green: #48bcaa; --pink: #ff9fbd; --yellow: #ffd34d; --cyan: #7ad3f0; --red: #c53030;
+    /* bản đậm của các màu nhấn, dùng cho chữ trên nền sáng */
+    --orange-t: #b45f00; --green-t: #1c7a6c; --pink-t: #b8164f; --yellow-t: #8a6100; --cyan-t: #0b6d8f;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: var(--bg); color: var(--text); font: 600 14px/1.4 'Be Vietnam Pro', system-ui, sans-serif; min-height: 100vh; }
-  .ko { font-family: 'Noto Sans KR', 'Be Vietnam Pro', sans-serif; }
+  .ko { font-family: 'Be Vietnam Pro', sans-serif; }
   header { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 12px 16px; border-bottom: 1px solid var(--line);
            position: sticky; top: 0; background: var(--bg); z-index: 5; }
   header h1 { font-size: 17px; font-weight: 800; margin-right: auto; }
-  header h1 b { color: var(--orange); }
+  header h1 b { color: var(--orange-t); }
   .chip { padding: 5px 11px; border-radius: 999px; background: var(--panel2); color: var(--muted); font-size: 13px; font-weight: 700; white-space: nowrap; }
-  .chip.ok { background: rgba(62,224,143,.15); color: var(--green); }
-  .chip.bad { background: rgba(255,90,90,.15); color: var(--red); }
-  .chip.warn { background: rgba(255,211,77,.15); color: var(--yellow); }
+  .chip.ok { background: rgba(28,122,108,.13); color: var(--green-t); }
+  .chip.bad { background: rgba(197,48,48,.11); color: var(--red); }
+  .chip.warn { background: rgba(138,97,0,.13); color: var(--yellow-t); }
   .chip.click { cursor: pointer; text-decoration: underline dotted; }
   main { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 16px; padding: 16px; max-width: 1280px; margin: 0 auto; }
   /* Màn hẹp / điện thoại: nút điều khiển lên đầu, xem trước xuống dưới và nhỏ lại */
   @media (max-width: 860px) { main { grid-template-columns: 1fr; padding: 10px; } .preview { max-width: 260px; margin: 0 auto; } }
   .col { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
-  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px; box-shadow: 0 1px 3px rgba(16,32,30,.05); }
   .card h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 12px; display: flex; justify-content: space-between; gap: 8px; }
   .card h2 small { text-transform: none; letter-spacing: 0; }
 
@@ -39,14 +43,14 @@
   .phase.podium { background: var(--yellow); color: #111; } .phase.break { background: var(--cyan); color: #022; } .phase.outro { background: var(--pink); }
   .where { margin-left: 8px; color: var(--muted); font-weight: 700; }
   .mean { margin-top: 10px; font-size: 26px; font-weight: 800; }
-  .ans { margin-top: 4px; font-size: 34px; font-weight: 900; color: var(--green); }
+  .ans { margin-top: 4px; font-size: 34px; font-weight: 900; color: var(--green-t); }
   .ans small { font: 700 17px 'Be Vietnam Pro'; color: var(--muted); margin-left: 8px; }
   .meta { margin-top: 6px; color: var(--muted); font-size: 13px; }
   .clock { width: 112px; height: 112px; border-radius: 50%; display: grid; place-items: center; position: relative;
            background: conic-gradient(var(--orange) var(--p, 0%), var(--panel2) 0); }
   .clock::before { content: ''; position: absolute; inset: 9px; border-radius: 50%; background: var(--panel); }
   .clock b { position: relative; font-size: 36px; font-weight: 900; font-variant-numeric: tabular-nums; }
-  .clock.paused b { color: var(--yellow); font-size: 28px; }
+  .clock.paused b { color: var(--yellow-t); font-size: 28px; }
   .progress { margin-top: 14px; height: 8px; border-radius: 99px; background: var(--panel2); overflow: hidden; }
   .progress i { display: block; height: 100%; background: linear-gradient(90deg, var(--orange), var(--pink)); width: 0; transition: width .3s; }
 
@@ -58,7 +62,7 @@
   button:disabled { opacity: .35; cursor: not-allowed; }
   button.primary { background: var(--orange); color: #111; border-color: var(--orange); }
   button.go { background: var(--green); color: #052; border-color: var(--green); }
-  button.danger { background: transparent; color: var(--red); border-color: rgba(255,90,90,.5); }
+  button.danger { background: transparent; color: var(--red); border-color: rgba(197,48,48,.45); }
   .kbd { display: block; font-size: 11px; opacity: .6; font-weight: 600; margin-top: 2px; }
 
   .restart { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--line); }
@@ -75,15 +79,15 @@
   .sound { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; align-items: end; margin-top: 14px; }
   .cfgfoot { display: flex; gap: 10px; align-items: center; margin-top: 14px; flex-wrap: wrap; }
   .cfgfoot .note { color: var(--muted); font-size: 12px; flex: 1; min-width: 200px; }
-  .dirty { color: var(--yellow) !important; }
+  .dirty { color: var(--yellow-t) !important; }
 
   /* bảng */
   .boards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   @media (max-width: 600px) { .boards { grid-template-columns: 1fr; } }
-  .row { display: flex; gap: 8px; align-items: center; padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.04); }
+  .row { display: flex; gap: 8px; align-items: center; padding: 5px 0; border-bottom: 1px solid rgba(16,32,30,.07); }
   .row .rk { width: 22px; color: var(--muted); font-weight: 800; text-align: right; }
   .row .nm { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .row .pt { font-weight: 800; color: var(--orange); font-variant-numeric: tabular-nums; }
+  .row .pt { font-weight: 800; color: var(--orange-t); font-variant-numeric: tabular-nums; }
   .row .sm { color: var(--muted); font-size: 12px; }
   .empty { color: var(--muted); padding: 6px 0; }
   .x2 { font-size: 10px; background: var(--pink); border-radius: 5px; padding: 1px 5px; margin-left: 4px; }
@@ -94,14 +98,14 @@
   .it .t { font-size: 11px; opacity: .6; width: 44px; flex: none; font-variant-numeric: tabular-nums; }
   .it .nm { color: var(--text); flex: none; max-width: 40%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .it .tx { flex: 1; min-width: 0; overflow-wrap: anywhere; }
-  .it.ok .tx { color: var(--green); } .it.ai .nm, .it.ai .tx { color: var(--orange); } .it.gift .tx { color: var(--pink); }
+  .it.ok .tx { color: var(--green-t); } .it.ai .nm, .it.ai .tx { color: var(--orange-t); } .it.gift .tx { color: var(--pink-t); }
 
   /* bên phải: xem trước */
   .side .card { padding: 12px; }
-  .preview { position: relative; width: 100%; aspect-ratio: 9 / 16; border-radius: 12px; overflow: hidden; background: #000; }
+  .preview { position: relative; width: 100%; aspect-ratio: 9 / 16; border-radius: 12px; overflow: hidden; background: var(--panel2); }
   .preview iframe { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; border: 0; transform-origin: 0 0; pointer-events: none; }
   .links { margin-top: 10px; font-size: 12px; color: var(--muted); word-break: break-all; }
-  .links a { color: var(--cyan); }
+  .links a { color: var(--cyan-t); }
   .test { display: grid; gap: 8px; }
   .test .r { display: flex; gap: 6px; }
   .test .r > * { min-width: 0; }
@@ -114,7 +118,7 @@
 </head>
 <body>
 <header>
-  <h1>🎮 Điều khiển · <b>Đố từ tiếng Hàn</b></h1>
+  <h1>🎮 Điều khiển · <b>Đố từ vựng TOEIC</b></h1>
   <span class="chip" id="cConn">đang nối…</span>
   <span class="chip" id="cTiktok">TikTok</span>
   <span class="chip" id="cViewers">👀 0</span>
@@ -160,18 +164,18 @@
         <label class="f">Giây màn vinh danh<input type="number" id="fPodium" min="5" max="60"></label>
         <label class="f">Giây nghỉ trước lượt mới<input type="number" id="fBreak" min="5" max="180"></label>
         <label class="f">Mức từ vựng
-          <select id="fLevel"><option value="easy">Dễ (sơ cấp + đời sống)</option><option value="mid">Trung bình</option><option value="all">Tất cả</option></select></label>
+          <select id="fLevel"><option value="easy">Dễ (Basic)</option><option value="mid">Vừa (Basic + 500–650)</option><option value="hard">Khó (500–800+)</option><option value="all">Tất cả</option></select></label>
       </div>
       <div class="sound">
         <label class="f">🏫 Thể loại live (đổi từ lượt sau)
           <select id="fStyle"><option value="program">🔄 Chương trình xoay vòng (học ↔ giải trí)</option><option value="quiz">Đố từ liên tục</option><option value="class">Lớp học: cô giảng → kiểm tra, gọi tên</option></select></label>
         <div id="segInfo" style="font-size:13px;opacity:.85;margin:2px 0 8px;line-height:1.5"></div>
         <label class="f">🎮 Kiểu chơi (đổi từ câu sau)
-          <select id="fMode"><option value="mcq">Trắc nghiệm: gõ số 1–4 (dễ)</option><option value="type">Gõ chữ Hàn (khó)</option></select></label>
+          <select id="fMode"><option value="mcq">Trắc nghiệm: gõ số 1–4 (dễ)</option><option value="type">Nghe &amp; gõ từ tiếng Anh (khó)</option></select></label>
         <label class="f">🎵 Nhạc nền: <span class="rangeval" id="vMusic"></span>
           <input type="range" id="fMusic" min="0" max="100" step="5"></label>
         <label class="f switch"><input type="checkbox" id="fVoice"> 🗣 Giọng đọc câu hỏi &amp; lời dẫn</label>
-        <label class="f switch"><input type="checkbox" id="fAi"> 🦊 AI trả lời bình luận</label>
+        <label class="f switch"><input type="checkbox" id="fAi"> 🥷 AI trả lời bình luận</label>
         <label class="f">🤖 Người chơi ảo mỗi câu (0 = tắt): <span class="rangeval" id="vBots"></span>
           <input type="range" id="fBots" min="0" max="12" step="1"></label>
         <span class="note" id="aiInfo" style="color:var(--muted);font-size:12px"></span>
@@ -198,7 +202,7 @@
   <div class="col side">
     <section class="card">
       <h2>Màn livestream <small>xem trước, tắt tiếng</small></h2>
-      <div class="preview" id="preview"><iframe id="pv" src="/?mute=1" title="Xem trước"></iframe></div>
+      <div class="preview" id="preview"><iframe id="pv" src="./?mute=1" title="Xem trước"></iframe></div>
       <div class="links">Mở cho OBS / điện thoại: <a id="liveLink" target="_blank"></a></div>
     </section>
 
@@ -229,7 +233,7 @@ const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 const key = new URLSearchParams(location.search).get('key') || '';
 const PHASE = { teach: 'Cô đang giảng', break: 'Nghỉ giữa lượt', question: 'Đang hỏi', reveal: 'Đáp án', podium: 'Vinh danh', outro: 'Cảm ơn cuối phiên' };
-const LEVEL = { easy: 'dễ', mid: 'trung bình', all: 'tất cả' };
+const LEVEL = { easy: 'dễ', mid: 'vừa', hard: 'khó', all: 'tất cả' };
 let S = null, skew = 0, ws = null, cfgDirty = false, gotControl = false;
 
 function toast(t) { const el = $('toast'); el.textContent = t; el.classList.add('on'); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove('on'), 1600); }
@@ -241,7 +245,7 @@ function send(cmd, extra = {}) {
 // ---- xem trước: co khung 1080×1920 vừa ô ----
 function fitPreview() { const w = $('preview').clientWidth; $('pv').style.transform = `scale(${w / 1080})`; }
 addEventListener('resize', fitPreview); fitPreview();
-const live = `${location.protocol}//${location.host}/`;
+const live = `${location.protocol}//${location.host}${location.pathname.replace(/[^/]*$/, '')}`;
 $('liveLink').href = live; $('liveLink').textContent = live;
 
 // ---- render ----
@@ -272,13 +276,19 @@ function render() {
     $('meta').textContent = 'Giảng xong nhóm này sẽ kiểm tra từng từ (gọi tên học sinh)';
   } else if (s.answer && s.answer.mode === 'mcq') {
     const a = s.answer;
-    $('mean').innerHTML = `<span class="ko">${esc(a.w)}</span> <small style="color:var(--muted);font-size:16px">/${esc(a.r || '')}/${a.listen ? ' · 🎧 câu nghe' : ''}</small>`;
-    $('ans').innerHTML = `Đáp án: số ${a.answerIdx + 1}<small>${esc(a.options[a.answerIdx])}</small>`;
+    $('mean').innerHTML = a.readQ ? esc(a.readQ) : a.fillS ? esc(a.fillS) : `<span class="ko">${esc(a.w)}</span> <small style="color:var(--muted);font-size:16px">${a.r ? `/${esc(a.r)}/` : ''}${a.listen ? ' · 🎧 câu nghe' : ''}</small>`;
+    $('ans').innerHTML = `Đáp án: ${a.wq ? 'ABCD'[a.answerIdx] : 'số ' + (a.answerIdx + 1)}<small>${esc(a.options[a.answerIdx])}</small>`;
     $('meta').textContent = (a.called ? `🙋 Gọi: ${a.called.name}${a.called.bot ? ' 🤖' : ''}${a.called.result ? ` → ${a.called.result === 'right' ? 'đúng' : a.called.result === 'wrong' ? 'sai' : 'không trả lời'}` : ''} · ` : '') + a.options.map((o, i) => `${i + 1}. ${o} (${a.votes[i]})`).join(' · ') + ` · ${a.answered} người đã chọn`;
   } else if (s.answer) {
-    $('mean').textContent = s.answer.m;
-    $('ans').innerHTML = `${esc(s.answer.w)}<small>/${esc(s.answer.r || '')}/</small>`;
-    $('meta').textContent = `${s.answer.course || ''} · ${s.answer.winners} người đúng · gợi ý mức ${s.answer.hint}/2`;
+    const A = s.answer;
+    $('mean').textContent = A.mode === 'dictate' ? A.dictS : A.mode === 'errhunt' ? A.errS : A.mode === 'cross' ? (A.cross.stage === 'key' ? `🔑 Vòng từ khoá (${A.cross.key.length} chữ cái)` : `Hàng ${A.cross.idx + 1}/${A.cross.n}`) : A.m;
+    $('ans').innerHTML = A.mode === 'dictate' ? 'Nghe – chép' : A.mode === 'errhunt' ? `${esc(A.m.replace(' → ', ' - '))}` : A.mode === 'cross' ? esc(A.cross.stage === 'key' ? A.cross.key.toUpperCase() : A.m) : `${esc(A.w)}${A.r ? `<small>/${esc(A.r)}/</small>` : ''}`;
+    $('meta').textContent = A.mode === 'dictate' ? `🎙️ Nghe – chép · ${A.winners} người đã gõ đúng cả câu · cứ 2 giây hiện thêm 1 chữ cái` : A.mode === 'errhunt' ? `🔍 Săn lỗi · ${A.winners} người đã gõ đúng cặp từ sai - từ đúng`
+      : A.mode === 'cross' ? `🔠 Giải ô chữ · đã giải ${A.cross.solved}/${A.cross.n} hàng · ${A.cross.open ? '🔓 đã mở từ khoá (CHỮ HOA)' : '🔒 chưa mở từ khoá'} · từ khoá: ${A.cross.key.toUpperCase()} · ${A.winners} người đúng`
+      : s.answer.mode === 'chain' ? `🔗 Thế chữ · ${{ lobby: 'sảnh chờ', turn: 'đang đấu', over: 'hết phiên' }[s.answer.chain.stage] || ''} · chuỗi ${s.answer.chain.len} từ · lượt: ${s.answer.chain.turn || '—'} · ⚫ ${s.answer.chain.black} người, ⚪ ${s.answer.chain.white} người`
+      : s.answer.mode === 'hunt' ? `🔎 Săn từ · ${s.answer.winners} người đã tìm đủ 5 từ · đáp án mẫu: ${s.answer.demo}`
+      : s.answer.mode === 'startend' ? `🎯 Start or End · ${s.answer.winners} người đã gõ đủ 5 từ đúng · đáp án mẫu: ${s.answer.demo}`
+      : `${s.answer.course || ''} · ${s.answer.winners} người đúng · gợi ý mức ${s.answer.hint}/2`;
   } else if (ph === 'podium' && s.podium) {
     $('mean').textContent = s.podium.top.length ? `🥇 ${s.podium.top.map((p) => `${p.name} (${p.score})`).join(' · ')}` : 'Lượt này chưa ai ghi điểm';
     $('ans').textContent = '';
@@ -333,7 +343,7 @@ function render() {
   $('feed').innerHTML = s.feed.slice().reverse().map((f) => {
     const tm = new Date(f.at).toLocaleTimeString('vi', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
     const cls = f.ok ? 'ok' : f.gift ? 'gift' : f.ai ? 'ai' : '';
-    const tx = f.ok ? `✓ ${esc(f.text)} +${f.pts}${f.romaja ? ' (romaja)' : ''}` : f.gift ? `🎁 ${f.count > 1 ? f.count + '× ' : ''}${esc(f.gift)} (${f.diamonds} xu)` : esc(f.text);
+    const tx = f.ok ? `✓ ${esc(f.text)} +${f.pts}` : f.gift ? `🎁 ${f.count > 1 ? f.count + '× ' : ''}${esc(f.gift)} (${f.diamonds} xu)` : esc(f.text);
     return `<div class="it ${cls}"><span class="t">${tm.slice(3)}</span><span class="nm">${f.bot ? '🤖 ' : ''}${esc(f.name)}</span><span class="tx ko">${tx}</span></div>`;
   }).join('') || '<div class="empty">Chưa có bình luận</div>';
 
@@ -419,8 +429,8 @@ $('tText').onkeydown = (e) => {
   if (e.key !== 'Enter' || !e.target.value.trim()) return;
   send('chat', { name: $('tName').value, text: e.target.value }); e.target.value = '';
 };
-$('tAnswer').onclick = () => S?.answer && send('chat', { name: $('tName').value, text: S.answer.mode === 'mcq' ? String(S.answer.answerIdx + 1) : S.answer.w });
-fetch('/gifts').then((r) => r.json()).then((list) => {
+$('tAnswer').onclick = () => S?.answer && send('chat', { name: $('tName').value, text: S.answer.mode === 'mcq' ? String(S.answer.answerIdx + 1) : S.answer.demo || S.answer.w });
+fetch('gifts').then((r) => r.json()).then((list) => {
   $('tGift').innerHTML = list.map((g) => `<option value="${g.diamonds}">${esc(g.name)} · ${g.diamonds} xu</option>`).join('') +
     '<option value="100">Quà vừa · 100 xu</option><option value="1000">Quà to · 1000 xu</option>';
 });
@@ -441,7 +451,7 @@ addEventListener('keydown', (e) => {
 // ---- WebSocket ----
 function connect() {
   gotControl = false;
-  ws = new WebSocket(`${location.protocol === 'https:' ? 'wss' : 'ws'}://${location.host}`);
+  ws = new WebSocket(`${location.protocol === 'https:' ? 'wss' : 'ws'}://${location.host}${location.pathname.replace(/[^/]*$/, '')}`);
   const me = ws;
   ws.onopen = () => {
     ws.send(JSON.stringify({ type: 'hello', role: 'control', key }));

@@ -1,46 +1,39 @@
-// AI dẫn chương trình "Cáo Jaemy": đọc bình luận (không phải đáp án), chọn câu đáng trả lời rồi đáp bằng chữ + giọng.
+// AI dẫn chương trình "Ninja Migii": đọc bình luận (không phải đáp án), chọn câu đáng trả lời rồi đáp bằng chữ + giọng.
 // LLM đi qua gateway nội bộ claude-api (gói thuê bao, KHÔNG API trả tiền theo token) — mặc định Claude Haiku ~6s/câu.
 //   AI_GATEWAY_URL (mặc định http://127.0.0.1:8765) · AI_MODEL (mặc định claude-haiku-5-5)
-//   Token: CLAUDE_API_TOKEN trong env hoặc ../../claude-api/.env
-const fs = require('fs');
-const path = require('path');
-
+//   Token: CLAUDE_API_TOKEN trong .env. Không có token → AI tự tắt, game vẫn chạy.
 const GATEWAY = (process.env.AI_GATEWAY_URL || 'http://127.0.0.1:8765').replace(/\/$/, '');
 const MODEL = process.env.AI_MODEL || 'claude-haiku-5-5';
 const GAP_MS = 9000; // tối thiểu giữa 2 câu trả lời (không nói át game)
 const MAX_AGE_MS = 25000; // bình luận cũ hơn thì bỏ, trả lời muộn vô duyên
 
-function token() {
-  if (process.env.CLAUDE_API_TOKEN) return process.env.CLAUDE_API_TOKEN;
-  try {
-    const env = fs.readFileSync(path.join(__dirname, '../../claude-api/.env'), 'utf8');
-    return env.match(/^CLAUDE_API_TOKEN=(.+)$/m)?.[1].trim();
-  } catch {
-    return null;
-  }
-}
+const token = () => process.env.CLAUDE_API_TOKEN || null;
 
 // Chấm điểm bình luận: câu hỏi / gọi bot / nhờ giúp được ưu tiên; spam, 1-2 ký tự, toàn emoji thì bỏ.
 function interest(text) {
   const t = text.toLowerCase();
   if (t.replace(/[\p{Emoji}\s\p{P}]/gu, '').length < 3) return 0;
-  if (/^[가-힣ㄱ-ㅎㅏ-ㅣ\s]+$/.test(t) || /^[a-z\s]{2,14}$/.test(t)) return 0; // đoán đáp án (chữ Hàn / romaja) — không phải để AI đáp
+  if (/^[a-z'\-\s]{2,14}$/.test(t)) return 0; // đoán đáp án (1–2 từ tiếng Anh) — không phải để AI đáp
   let s = 1;
   if (/\?|là gì|nghĩa|sao|thế nào|như nào|cách|tại sao|why|how|what/.test(t)) s += 3;
-  if (/\b(bot|ad|admin|cáo|jaemy|mc|chị|anh ơi|em ơi)\b/.test(t)) s += 3;
-  if (/gợi ý|khó|dễ|app|tải|học|topik|eps|hàn quốc|tiếng hàn/.test(t)) s += 2;
+  if (/\b(bot|ad|admin|ninja|migii|mc|thầy|cô ơi|chị ơi|anh ơi|em ơi)\b/.test(t)) s += 3;
+  if (/gợi ý|khó|dễ|app|tải|học|toeic|ielts|part|ngữ pháp|grammar|listening|reading|từ vựng|điểm/.test(t)) s += 2;
   if (/xin chào|hello|hi |chào/.test(t)) s += 1;
   return s;
 }
 
-const SYSTEM = `Bạn là "Cáo Jaemy" — MC AI dễ thương của livestream TikTok "Đố từ tiếng Hàn" do app Jaemy (từ điển & học tiếng Hàn) tổ chức.
-Người xem gõ đáp án tiếng Hàn vào bình luận để ghi điểm; bạn trò chuyện với họ.
+// Luật nội dung lấy từ migii_toeic_docs/01-tong-quan/thuong-hieu.md (quảng bá có chữ TOEIC) — sửa ở đây nếu thương hiệu đổi.
+const SYSTEM = `Bạn là "Ninja Migii" — MC AI vui tính của livestream TikTok "Đố từ vựng TOEIC" do app Migii TOEIC (luyện thi TOEIC trên điện thoại) tổ chức.
+Người xem gõ số đáp án hoặc gõ từ tiếng Anh vào bình luận để ghi điểm; bạn trò chuyện với họ.
 Luật trả lời:
-- Tiếng Việt, thân thiện, vui, xưng "Cáo" gọi người xem là "bạn" hoặc tên. TỐI ĐA 22 từ, 1 câu (2 câu nếu thật cần).
+- Tiếng Việt, thân thiện, vui, xưng "Ninja" gọi người xem là "bạn" hoặc tên. TỐI ĐA 22 từ, 1 câu (2 câu nếu thật cần).
 - Gọi đúng tên người hỏi ở đầu câu.
-- TUYỆT ĐỐI không nói ra đáp án câu đang đố (kể cả romaja, tách chữ, gợi ý quá lộ). Được gợi ý nhẹ: số âm tiết, chủ đề.
-- Câu hỏi về tiếng Hàn khác (từ khác, ngữ pháp, phát âm, TOPIK, EPS): trả lời ngắn, đúng.
-- Thỉnh thoảng (không phải mọi câu) nhắc khéo: tải app Jaemy để ôn lại từ vừa chơi.
+- TUYỆT ĐỐI không nói ra đáp án câu đang đố (kể cả đánh vần, chữ cái đầu, số thứ tự đáp án, gợi ý quá lộ). Được gợi ý nhẹ: số chữ cái, từ loại, chủ đề.
+- Câu hỏi về tiếng Anh/TOEIC khác (từ khác, ngữ pháp, phát âm, cấu trúc đề, mẹo làm bài): trả lời ngắn, đúng. Không chắc thì nói không chắc.
+- Thỉnh thoảng (không phải mọi câu) nhắc khéo: tải app Migii TOEIC để ôn lại từ vừa chơi.
+- KHÔNG hứa hay khẳng định "dự đoán chính xác điểm"; nếu nói về điểm thì dùng chữ "ước tính".
+- Nếu hỏi miễn phí hay không: Part 1, 2, 5 luyện miễn phí; các phần khác cần Premium. Không bịa giá, khuyến mãi hay tính năng khác.
+- KHÔNG nói app được ETS xác nhận/hợp tác. Không nhắc gia sư AI hay lộ trình học mới.
 - Bình luận tục tĩu, chính trị, quấy rối, đòi thông tin cá nhân, hay không cần đáp: đặt "skip": true.
 Trả về JSON đúng dạng: {"skip": false, "reply": "..."}`;
 

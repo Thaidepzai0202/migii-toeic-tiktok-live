@@ -1,18 +1,39 @@
 {
-  "name": "tiktok-live-quiz",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "migii-toeic-tiktok-live",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Game livestream TikTok đố từ vựng TOEIC cho app Migii TOEIC (fork từ tiktok-live-quiz của Jaemy)",
   "scripts": {
     "demo": "node server.js --sim",
+    "demo:duoi450": "node server.js --sim --program-order word,startend,hunt,chain --word-file data/word-300.json,data/word-400.json",
+    "demo:450-650": "node server.js --sim --program-order word,fillin,listenmean,errhunt,crossword --word-file data/word-500.json,data/word-600.json --err-file data/san-loi-600.json --cross-file data/o-chu-600.json",
+    "demo:650-800": "node server.js --sim --program-order word,speedread,dictate --word-file data/word-700.json --read-file data/doc-nhanh-700.json --dict-file data/nghe-chep-700.json",
+    "demo:tren800": "node server.js --sim --program-order word,speedread --word-file data/word-800.json,data/word-900.json --read-file data/doc-nhanh-800.json",
+    "build:word300": "node build_word.js 300",
+    "build:word400": "node build_word.js 400",
+    "build:word500": "node build_word.js 500",
+    "build:word600": "node build_word.js 600",
+    "build:word700": "node build_word.js 700",
+    "build:word800": "node build_word.js 800",
+    "build:word900": "node build_word.js 900",
+    "build:ochu600": "node build_o_chu.js",
+    "build:audio700": "node build_audio.js --sentences data/nghe-chep-700.json",
+    "demo:all": "node gateway.js --port 8789",
+    "design:figma": "node design/src/xuat_man_that.js",
     "live": "./go_live.sh studio",
-    "control": "open http://localhost:8787/control"
+    "control": "open http://localhost:8788/control",
+    "build:bank": "node build_bank.js",
+    "build:audio": "node build_audio.js",
+    "build:qr": "node build_qr.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "license": "UNLICENSED",
   "dependencies": {
+    "dictionary-en": "^4.0.0",
+    "nspell": "^2.1.5",
     "tiktok-live-connector": "^2.5.0",
     "ws": "^8.22.1"
+  },
+  "devDependencies": {
+    "qrcode": "^1.5.4"
   }
 }

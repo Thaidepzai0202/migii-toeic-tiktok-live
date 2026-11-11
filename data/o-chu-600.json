@@ -1,0 +1,991 @@
+{
+ "moc": 600,
+ "puzzles": [
+  {
+   "key": "tragedy",
+   "keyVi": "thảm kịch",
+   "rows": [
+    {
+     "w": "frustrate",
+     "pos": 7,
+     "vi": "làm bực bội"
+    },
+    {
+     "w": "brochure",
+     "pos": 6,
+     "vi": "tờ rơi",
+     "acc": [
+      "pamphlet"
+     ]
+    },
+    {
+     "w": "classical",
+     "pos": 7,
+     "vi": "cổ điển"
+    },
+    {
+     "w": "disagree",
+     "pos": 4,
+     "vi": "không đồng ý"
+    },
+    {
+     "w": "defective",
+     "pos": 8,
+     "vi": "bị lỗi"
+    },
+    {
+     "w": "steadily",
+     "pos": 4,
+     "vi": "đều đặn"
+    },
+    {
+     "w": "liability",
+     "pos": 8,
+     "vi": "khoản nợ"
+    }
+   ]
+  },
+  {
+   "key": "comedy",
+   "keyVi": "hài kịch",
+   "rows": [
+    {
+     "w": "appliance",
+     "pos": 7,
+     "vi": "thiết bị gia dụng"
+    },
+    {
+     "w": "inventory",
+     "pos": 6,
+     "vi": "hàng tồn kho"
+    },
+    {
+     "w": "tournament",
+     "pos": 6,
+     "vi": "giải đấu"
+    },
+    {
+     "w": "supplement",
+     "pos": 7,
+     "vi": "phần bổ sung"
+    },
+    {
+     "w": "tremendous",
+     "pos": 6,
+     "vi": "to lớn"
+    },
+    {
+     "w": "ceremony",
+     "pos": 7,
+     "vi": "buổi lễ"
+    }
+   ]
+  },
+  {
+   "key": "suitcase",
+   "keyVi": "va li",
+   "rows": [
+    {
+     "w": "sometime",
+     "pos": 0,
+     "vi": "vào một lúc nào đó"
+    },
+    {
+     "w": "guidance",
+     "pos": 1,
+     "vi": "sự hướng dẫn"
+    },
+    {
+     "w": "disposal",
+     "pos": 1,
+     "vi": "sự thải bỏ"
+    },
+    {
+     "w": "textbook",
+     "pos": 0,
+     "vi": "sách giáo khoa"
+    },
+    {
+     "w": "confront",
+     "pos": 0,
+     "vi": "đối mặt"
+    },
+    {
+     "w": "backward",
+     "pos": 1,
+     "vi": "về phía sau"
+    },
+    {
+     "w": "semester",
+     "pos": 0,
+     "vi": "học kỳ"
+    },
+    {
+     "w": "reinforce",
+     "pos": 1,
+     "vi": "củng cố"
+    }
+   ]
+  },
+  {
+   "key": "stack",
+   "keyVi": "chồng",
+   "rows": [
+    {
+     "w": "classify",
+     "pos": 4,
+     "vi": "phân loại"
+    },
+    {
+     "w": "eighteen",
+     "pos": 4,
+     "vi": "mười tám"
+    },
+    {
+     "w": "annually",
+     "pos": 4,
+     "vi": "hằng năm"
+    },
+    {
+     "w": "photocopy",
+     "pos": 5,
+     "vi": "bản photo"
+    },
+    {
+     "w": "coworker",
+     "pos": 5,
+     "vi": "đồng nghiệp"
+    }
+   ]
+  },
+  {
+   "key": "diversity",
+   "keyVi": "sự đa dạng",
+   "rows": [
+    {
+     "w": "download",
+     "pos": 0,
+     "vi": "tải xuống"
+    },
+    {
+     "w": "literary",
+     "pos": 1,
+     "vi": "thuộc văn chương"
+    },
+    {
+     "w": "voluntary",
+     "pos": 0,
+     "vi": "tự nguyện"
+    },
+    {
+     "w": "amendment",
+     "pos": 2,
+     "vi": "sự sửa đổi"
+    },
+    {
+     "w": "worldwide",
+     "pos": 2,
+     "vi": "trên toàn thế giới"
+    },
+    {
+     "w": "shipment",
+     "pos": 0,
+     "vi": "lô hàng vận chuyển"
+    },
+    {
+     "w": "withdrawal",
+     "pos": 1,
+     "vi": "việc rút tiền"
+    },
+    {
+     "w": "attendance",
+     "pos": 2,
+     "vi": "sự tham dự"
+    },
+    {
+     "w": "physician",
+     "pos": 2,
+     "vi": "bác sĩ (nội khoa)"
+    }
+   ]
+  },
+  {
+   "key": "leather",
+   "keyVi": "da thuộc",
+   "rows": [
+    {
+     "w": "bulletin",
+     "pos": 2,
+     "vi": "bản tin"
+    },
+    {
+     "w": "envelope",
+     "pos": 3,
+     "vi": "phong bì"
+    },
+    {
+     "w": "treasure",
+     "pos": 3,
+     "vi": "kho báu"
+    },
+    {
+     "w": "postpone",
+     "pos": 3,
+     "vi": "hoãn lại"
+    },
+    {
+     "w": "machinery",
+     "pos": 3,
+     "vi": "máy móc"
+    },
+    {
+     "w": "interrupt",
+     "pos": 3,
+     "vi": "ngắt lời"
+    },
+    {
+     "w": "workshop",
+     "pos": 2,
+     "vi": "xưởng sản xuất"
+    }
+   ]
+  },
+  {
+   "key": "remote",
+   "keyVi": "từ xa",
+   "rows": [
+    {
+     "w": "distress",
+     "pos": 4,
+     "vi": "nỗi đau khổ"
+    },
+    {
+     "w": "presenter",
+     "pos": 4,
+     "vi": "người thuyết trình"
+    },
+    {
+     "w": "minimize",
+     "pos": 4,
+     "vi": "giảm thiểu"
+    },
+    {
+     "w": "keyboard",
+     "pos": 4,
+     "vi": "bàn phím"
+    },
+    {
+     "w": "downtown",
+     "pos": 4,
+     "vi": "khu trung tâm thành phố"
+    },
+    {
+     "w": "assembly",
+     "pos": 3,
+     "vi": "sự lắp ráp"
+    }
+   ]
+  },
+  {
+   "key": "ambition",
+   "keyVi": "tham vọng",
+   "rows": [
+    {
+     "w": "cafeteria",
+     "pos": 1,
+     "vi": "căng-tin"
+    },
+    {
+     "w": "motivate",
+     "pos": 0,
+     "vi": "tạo động lực"
+    },
+    {
+     "w": "observer",
+     "pos": 1,
+     "vi": "người quan sát"
+    },
+    {
+     "w": "lifestyle",
+     "pos": 1,
+     "vi": "lối sống"
+    },
+    {
+     "w": "optional",
+     "pos": 2,
+     "vi": "tùy chọn"
+    },
+    {
+     "w": "signature",
+     "pos": 1,
+     "vi": "chữ ký"
+    },
+    {
+     "w": "confusion",
+     "pos": 1,
+     "vi": "sự bối rối"
+    },
+    {
+     "w": "entertain",
+     "pos": 1,
+     "vi": "chiêu đãi"
+    }
+   ]
+  },
+  {
+   "key": "execute",
+   "keyVi": "thực hiện",
+   "rows": [
+    {
+     "w": "underline",
+     "pos": 3,
+     "vi": "nhấn mạnh",
+     "acc": [
+      "emphasize"
+     ]
+    },
+    {
+     "w": "sixteen",
+     "pos": 2,
+     "vi": "mười sáu"
+    },
+    {
+     "w": "interior",
+     "pos": 3,
+     "vi": "nội thất"
+    },
+    {
+     "w": "calculator",
+     "pos": 3,
+     "vi": "máy tính bỏ túi"
+    },
+    {
+     "w": "regulate",
+     "pos": 3,
+     "vi": "điều tiết"
+    },
+    {
+     "w": "portfolio",
+     "pos": 3,
+     "vi": "danh mục đầu tư"
+    },
+    {
+     "w": "overtime",
+     "pos": 2,
+     "vi": "giờ làm thêm"
+    }
+   ]
+  },
+  {
+   "key": "interrupt",
+   "keyVi": "ngắt lời",
+   "rows": [
+    {
+     "w": "diversity",
+     "pos": 1,
+     "vi": "sự đa dạng"
+    },
+    {
+     "w": "necessity",
+     "pos": 0,
+     "vi": "điều thiết yếu"
+    },
+    {
+     "w": "attraction",
+     "pos": 1,
+     "vi": "điểm tham quan"
+    },
+    {
+     "w": "emission",
+     "pos": 0,
+     "vi": "khí thải"
+    },
+    {
+     "w": "horrible",
+     "pos": 2,
+     "vi": "kinh khủng",
+     "acc": [
+      "terrible"
+     ]
+    },
+    {
+     "w": "parliament",
+     "pos": 2,
+     "vi": "quốc hội"
+    },
+    {
+     "w": "guideline",
+     "pos": 1,
+     "vi": "nguyên tắc hướng dẫn"
+    },
+    {
+     "w": "prescribe",
+     "pos": 0,
+     "vi": "kê đơn thuốc"
+    },
+    {
+     "w": "attendee",
+     "pos": 2,
+     "vi": "người tham dự"
+    }
+   ]
+  },
+  {
+   "key": "rainy",
+   "keyVi": "có mưa",
+   "rows": [
+    {
+     "w": "traveler",
+     "pos": 7,
+     "vi": "du khách"
+    },
+    {
+     "w": "dominant",
+     "pos": 5,
+     "vi": "chiếm ưu thế"
+    },
+    {
+     "w": "motivation",
+     "pos": 7,
+     "vi": "động lực"
+    },
+    {
+     "w": "vacation",
+     "pos": 7,
+     "vi": "kỳ nghỉ"
+    },
+    {
+     "w": "therapy",
+     "pos": 6,
+     "vi": "liệu pháp"
+    }
+   ]
+  },
+  {
+   "key": "equity",
+   "keyVi": "vốn cổ phần",
+   "rows": [
+    {
+     "w": "delicious",
+     "pos": 1,
+     "vi": "ngon"
+    },
+    {
+     "w": "quietly",
+     "pos": 0,
+     "vi": "một cách yên lặng"
+    },
+    {
+     "w": "upcoming",
+     "pos": 0,
+     "vi": "sắp tới"
+    },
+    {
+     "w": "interval",
+     "pos": 0,
+     "vi": "khoảng thời gian giữa hai sự kiện"
+    },
+    {
+     "w": "automobile",
+     "pos": 2,
+     "vi": "ô tô"
+    },
+    {
+     "w": "boyfriend",
+     "pos": 2,
+     "vi": "bạn trai"
+    }
+   ]
+  },
+  {
+   "key": "gallery",
+   "keyVi": "phòng trưng bày tranh",
+   "rows": [
+    {
+     "w": "clothing",
+     "pos": 7,
+     "vi": "quần áo"
+    },
+    {
+     "w": "functional",
+     "pos": 8,
+     "vi": "có chức năng"
+    },
+    {
+     "w": "editorial",
+     "pos": 8,
+     "vi": "bài xã luận"
+    },
+    {
+     "w": "personnel",
+     "pos": 8,
+     "vi": "nhân sự"
+    },
+    {
+     "w": "strengthen",
+     "pos": 8,
+     "vi": "làm mạnh thêm"
+    },
+    {
+     "w": "conductor",
+     "pos": 8,
+     "vi": "người soát vé"
+    },
+    {
+     "w": "hopefully",
+     "pos": 8,
+     "vi": "hy vọng là"
+    }
+   ]
+  },
+  {
+   "key": "carbon",
+   "keyVi": "cacbon",
+   "rows": [
+    {
+     "w": "recession",
+     "pos": 2,
+     "vi": "suy thoái kinh tế"
+    },
+    {
+     "w": "paragraph",
+     "pos": 1,
+     "vi": "đoạn văn"
+    },
+    {
+     "w": "retailer",
+     "pos": 0,
+     "vi": "nhà bán lẻ"
+    },
+    {
+     "w": "ambition",
+     "pos": 2,
+     "vi": "tham vọng"
+    },
+    {
+     "w": "overlook",
+     "pos": 0,
+     "vi": "bỏ sót"
+    },
+    {
+     "w": "container",
+     "pos": 2,
+     "vi": "thùng chứa"
+    }
+   ]
+  },
+  {
+   "key": "disagree",
+   "keyVi": "không đồng ý",
+   "rows": [
+    {
+     "w": "alongside",
+     "pos": 7,
+     "vi": "bên cạnh"
+    },
+    {
+     "w": "economist",
+     "pos": 6,
+     "vi": "nhà kinh tế học"
+    },
+    {
+     "w": "embarrass",
+     "pos": 7,
+     "vi": "làm xấu hổ"
+    },
+    {
+     "w": "ultimate",
+     "pos": 5,
+     "vi": "tối thượng"
+    },
+    {
+     "w": "beverage",
+     "pos": 6,
+     "vi": "đồ uống"
+    },
+    {
+     "w": "departure",
+     "pos": 7,
+     "vi": "sự khởi hành"
+    },
+    {
+     "w": "announcer",
+     "pos": 7,
+     "vi": "người thông báo"
+    },
+    {
+     "w": "province",
+     "pos": 7,
+     "vi": "tỉnh (đơn vị hành chính)"
+    }
+   ]
+  },
+  {
+   "key": "piano",
+   "keyVi": "dương cầm",
+   "rows": [
+    {
+     "w": "peaceful",
+     "pos": 0,
+     "vi": "yên bình"
+    },
+    {
+     "w": "friendship",
+     "pos": 2,
+     "vi": "tình bạn"
+    },
+    {
+     "w": "elaborate",
+     "pos": 2,
+     "vi": "nói rõ thêm"
+    },
+    {
+     "w": "contradict",
+     "pos": 2,
+     "vi": "nói ngược lại"
+    },
+    {
+     "w": "fountain",
+     "pos": 1,
+     "vi": "đài phun nước"
+    }
+   ]
+  },
+  {
+   "key": "stimulate",
+   "keyVi": "kích thích",
+   "rows": [
+    {
+     "w": "password",
+     "pos": 2,
+     "vi": "mật khẩu"
+    },
+    {
+     "w": "duration",
+     "pos": 4,
+     "vi": "khoảng thời gian"
+    },
+    {
+     "w": "alliance",
+     "pos": 3,
+     "vi": "liên minh"
+    },
+    {
+     "w": "terminal",
+     "pos": 3,
+     "vi": "nhà ga"
+    },
+    {
+     "w": "trousers",
+     "pos": 3,
+     "vi": "quần dài"
+    },
+    {
+     "w": "satellite",
+     "pos": 5,
+     "vi": "vệ tinh"
+    },
+    {
+     "w": "renovate",
+     "pos": 5,
+     "vi": "cải tạo"
+    },
+    {
+     "w": "portrait",
+     "pos": 3,
+     "vi": "bức chân dung"
+    },
+    {
+     "w": "reschedule",
+     "pos": 5,
+     "vi": "dời lịch"
+    }
+   ]
+  },
+  {
+   "key": "inquire",
+   "keyVi": "hỏi thăm",
+   "rows": [
+    {
+     "w": "midnight",
+     "pos": 4,
+     "vi": "nửa đêm"
+    },
+    {
+     "w": "romantic",
+     "pos": 4,
+     "vi": "lãng mạn"
+    },
+    {
+     "w": "squeeze",
+     "pos": 1,
+     "vi": "ép"
+    },
+    {
+     "w": "enthusiasm",
+     "pos": 4,
+     "vi": "sự nhiệt tình"
+    },
+    {
+     "w": "recipient",
+     "pos": 3,
+     "vi": "người nhận"
+    },
+    {
+     "w": "literally",
+     "pos": 4,
+     "vi": "theo nghĩa đen"
+    },
+    {
+     "w": "correctly",
+     "pos": 4,
+     "vi": "một cách chính xác"
+    }
+   ]
+  },
+  {
+   "key": "lounge",
+   "keyVi": "phòng chờ",
+   "rows": [
+    {
+     "w": "elevator",
+     "pos": 1,
+     "vi": "thang máy"
+    },
+    {
+     "w": "complexity",
+     "pos": 1,
+     "vi": "sự phức tạp"
+    },
+    {
+     "w": "universe",
+     "pos": 0,
+     "vi": "vũ trụ"
+    },
+    {
+     "w": "ingredient",
+     "pos": 1,
+     "vi": "nguyên liệu"
+    },
+    {
+     "w": "generous",
+     "pos": 0,
+     "vi": "hào phóng"
+    },
+    {
+     "w": "weakness",
+     "pos": 1,
+     "vi": "điểm yếu"
+    }
+   ]
+  },
+  {
+   "key": "stimulus",
+   "keyVi": "sự kích thích",
+   "rows": [
+    {
+     "w": "subscribe",
+     "pos": 0,
+     "vi": "đăng ký dài hạn"
+    },
+    {
+     "w": "automatic",
+     "pos": 2,
+     "vi": "tự động"
+    },
+    {
+     "w": "briefcase",
+     "pos": 2,
+     "vi": "cặp tài liệu"
+    },
+    {
+     "w": "commander",
+     "pos": 2,
+     "vi": "chỉ huy"
+    },
+    {
+     "w": "superior",
+     "pos": 1,
+     "vi": "cấp trên"
+    },
+    {
+     "w": "reliable",
+     "pos": 2,
+     "vi": "đáng tin cậy"
+    },
+    {
+     "w": "vulnerable",
+     "pos": 1,
+     "vi": "dễ bị tổn thương"
+    },
+    {
+     "w": "stranger",
+     "pos": 0,
+     "vi": "người lạ"
+    }
+   ]
+  },
+  {
+   "key": "precise",
+   "keyVi": "chính xác",
+   "rows": [
+    {
+     "w": "comprise",
+     "pos": 3,
+     "vi": "bao gồm"
+    },
+    {
+     "w": "paperwork",
+     "pos": 4,
+     "vi": "công việc giấy tờ"
+    },
+    {
+     "w": "fourteen",
+     "pos": 5,
+     "vi": "mười bốn"
+    },
+    {
+     "w": "productive",
+     "pos": 5,
+     "vi": "năng suất"
+    },
+    {
+     "w": "conscious",
+     "pos": 5,
+     "vi": "có ý thức về"
+    },
+    {
+     "w": "admission",
+     "pos": 4,
+     "vi": "phí vào cửa"
+    },
+    {
+     "w": "lifetime",
+     "pos": 3,
+     "vi": "cả đời"
+    }
+   ]
+  },
+  {
+   "key": "portfolio",
+   "keyVi": "danh mục đầu tư",
+   "rows": [
+    {
+     "w": "promptly",
+     "pos": 0,
+     "vi": "nhanh chóng"
+    },
+    {
+     "w": "biological",
+     "pos": 2,
+     "vi": "thuộc sinh học"
+    },
+    {
+     "w": "darkness",
+     "pos": 2,
+     "vi": "bóng tối"
+    },
+    {
+     "w": "technician",
+     "pos": 0,
+     "vi": "kỹ thuật viên"
+    },
+    {
+     "w": "fitness",
+     "pos": 0,
+     "vi": "thể lực"
+    },
+    {
+     "w": "composer",
+     "pos": 1,
+     "vi": "nhà soạn nhạc"
+    },
+    {
+     "w": "celebrity",
+     "pos": 2,
+     "vi": "người nổi tiếng"
+    },
+    {
+     "w": "immigrant",
+     "pos": 0,
+     "vi": "người nhập cư"
+    },
+    {
+     "w": "workplace",
+     "pos": 1,
+     "vi": "nơi làm việc"
+    }
+   ]
+  },
+  {
+   "key": "media",
+   "keyVi": "truyền thông",
+   "rows": [
+    {
+     "w": "commonly",
+     "pos": 3,
+     "vi": "thường"
+    },
+    {
+     "w": "spokesman",
+     "pos": 4,
+     "vi": "người phát ngôn (nam)"
+    },
+    {
+     "w": "regardless",
+     "pos": 5,
+     "vi": "bất chấp"
+    },
+    {
+     "w": "coordinate",
+     "pos": 5,
+     "vi": "điều phối"
+    },
+    {
+     "w": "occupation",
+     "pos": 5,
+     "vi": "nghề nghiệp",
+     "acc": [
+      "profession"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "drawer",
+   "keyVi": "ngăn kéo",
+   "rows": [
+    {
+     "w": "identical",
+     "pos": 1,
+     "vi": "giống hệt"
+    },
+    {
+     "w": "pregnancy",
+     "pos": 1,
+     "vi": "thai kỳ"
+    },
+    {
+     "w": "facilitate",
+     "pos": 1,
+     "vi": "tạo điều kiện thuận lợi"
+    },
+    {
+     "w": "waitress",
+     "pos": 0,
+     "vi": "nữ phục vụ bàn"
+    },
+    {
+     "w": "equation",
+     "pos": 0,
+     "vi": "phương trình"
+    },
+    {
+     "w": "reflection",
+     "pos": 0,
+     "vi": "hình phản chiếu"
+    }
+   ]
+  }
+ ]
+}

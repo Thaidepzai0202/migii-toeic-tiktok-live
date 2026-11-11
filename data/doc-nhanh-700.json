@@ -1,0 +1,2165 @@
+{
+ "moc": 700,
+ "nguon": "Bài do AI viết mới (kiểu TOEIC Part 7, dùng từ vựng mốc 700 trong migii_toeic_svc · vocab), đã kiểm chứng mù 2 lượt (lượt 2 đã xáo vị trí đáp án); cần người của Migii duyệt trước khi lên sóng",
+ "questions": [
+  {
+   "w": "appreciation",
+   "kind": "email",
+   "title": "Subject: Staff appreciation lunch",
+   "p": "To thank everyone for a busy quarter, we will hold a staff appreciation lunch on Thursday, June 12. It will start at 12:30 p.m. in the third-floor lounge. Please tell Ms. Ortiz about any food allergies by Tuesday.",
+   "q": "By when should staff report any food allergies?",
+   "o": [
+    "By Tuesday",
+    "By Thursday",
+    "By June 12",
+    "By Wednesday"
+   ],
+   "a": "By Tuesday",
+   "key": "Please tell Ms. Ortiz about any food allergies by Tuesday.",
+   "why": "Câu cuối: báo dị ứng thực phẩm cho Ms. Ortiz trước thứ Ba (by Tuesday).",
+   "wrong": {
+    "By Thursday": "Thứ Năm là ngày diễn ra bữa trưa, không phải hạn báo.",
+    "By June 12": "12/6 chính là ngày tổ chức (thứ Năm), không phải hạn chót.",
+    "By Wednesday": "Bài không nhắc thứ Tư; bẫy chọn ngày nằm giữa hai mốc."
+   },
+   "tip": "Bài có hai mốc ngày: ngày sự kiện và hạn chót. Thấy 'by' là hạn chót."
+  },
+  {
+   "w": "blueprint",
+   "kind": "email",
+   "title": "Subject: Revised office blueprints",
+   "p": "Hi Mr. Patel, the architect sent the revised blueprints for our new office this morning. I have left two printed copies at the front desk. Please review them before our meeting on Friday at 3 p.m. and mark any changes in red.",
+   "q": "Where can Mr. Patel find the printed blueprints?",
+   "o": [
+    "At the front desk",
+    "In the meeting room",
+    "At the architect's office",
+    "On his own desk"
+   ],
+   "a": "At the front desk",
+   "key": "I have left two printed copies at the front desk.",
+   "why": "Câu thứ hai: hai bản in được để ở quầy lễ tân (front desk).",
+   "wrong": {
+    "In the meeting room": "Bài chỉ nhắc cuộc họp thứ Sáu, không nói bản vẽ để ở phòng họp.",
+    "At the architect's office": "Kiến trúc sư chỉ gửi bản vẽ; bản in không nằm ở văn phòng của họ.",
+    "On his own desk": "Bẫy chữ desk: bài ghi front desk (quầy lễ tân), không phải bàn của ông."
+   }
+  },
+  {
+   "w": "enjoyable",
+   "kind": "email",
+   "title": "Subject: Thank you for the tour",
+   "p": "Dear Ms. Kim, thank you for an enjoyable tour of your factory last Wednesday. Our team learned a lot from seeing your packaging line. As promised, I am attaching our price list, and I will call you on Monday to discuss an order of 500 units.",
+   "q": "What is attached to the email?",
+   "o": [
+    "A price list",
+    "An order form",
+    "A tour schedule",
+    "A packaging design"
+   ],
+   "a": "A price list",
+   "key": "I am attaching our price list",
+   "why": "Người viết ghi rõ 'I am attaching our price list': tệp đính kèm là bảng giá.",
+   "wrong": {
+    "An order form": "Đơn 500 sản phẩm sẽ được bàn qua điện thoại vào thứ Hai, không đính kèm.",
+    "A tour schedule": "Chuyến tham quan đã diễn ra thứ Tư tuần trước, không gửi lịch.",
+    "A packaging design": "Bài chỉ nhắc dây chuyền đóng gói mà nhóm đã xem."
+   },
+   "tip": "Câu hỏi về tệp đính kèm: dò động từ attach / enclose."
+  },
+  {
+   "w": "verbal",
+   "kind": "email",
+   "title": "Subject: Contract for signature",
+   "p": "Dear Mr. Lopez, thank you for your verbal approval of our proposal during today's call. To make it official, please sign the attached contract and return it by May 3. Installation of the new shelves at your Harbor Street store will begin on May 10.",
+   "q": "By what date must Mr. Lopez return the contract?",
+   "o": [
+    "May 3",
+    "May 10",
+    "May 13",
+    "May 1"
+   ],
+   "a": "May 3",
+   "key": "please sign the attached contract and return it by May 3",
+   "why": "Câu thứ hai: ký hợp đồng đính kèm và gửi lại trước ngày 3/5 (by May 3).",
+   "wrong": {
+    "May 10": "Ngày 10/5 là ngày bắt đầu lắp kệ, không phải hạn gửi hợp đồng.",
+    "May 13": "Bẫy ghép số: bài có 3 và 10, không có ngày 13.",
+    "May 1": "Bài không nhắc ngày 1/5."
+   }
+  },
+  {
+   "w": "concierge",
+   "kind": "notice",
+   "title": "GUEST INFORMATION",
+   "p": "The concierge desk in the main lobby is open from 7 a.m. to 11 p.m. daily. Staff there can book taxis, restaurant tables, and city tours. After 11 p.m., please dial 0 from your room to reach the front desk.",
+   "q": "What time does the concierge desk open?",
+   "o": [
+    "7 a.m.",
+    "11 a.m.",
+    "11 p.m.",
+    "7 p.m."
+   ],
+   "a": "7 a.m.",
+   "key": "is open from 7 a.m. to 11 p.m. daily",
+   "why": "Quầy concierge mở từ 7 giờ sáng đến 11 giờ đêm mỗi ngày, nên giờ mở cửa là 7 a.m.",
+   "wrong": {
+    "11 a.m.": "Bẫy ghép số: 11 đi với p.m., là giờ đóng cửa.",
+    "11 p.m.": "Đây là giờ đóng cửa; sau giờ này khách gọi số 0.",
+    "7 p.m.": "Bẫy đổi a.m./p.m.: bài ghi 7 a.m."
+   },
+   "tip": "Mẫu 'from X to Y': X là giờ mở, Y là giờ đóng."
+  },
+  {
+   "w": "hazardous",
+   "kind": "notice",
+   "title": "SPECIAL COLLECTION DAY",
+   "p": "Residents may drop off hazardous items such as old batteries and paint cans on Saturday, April 20. Collection will take place in Parking Lot C from 9 a.m. to 1 p.m. Regular household trash will not be accepted.",
+   "q": "Where will the collection take place?",
+   "o": [
+    "Parking Lot C",
+    "Parking Lot B",
+    "The building lobby",
+    "The main entrance"
+   ],
+   "a": "Parking Lot C",
+   "key": "Collection will take place in Parking Lot C",
+   "why": "Câu thứ hai: điểm thu gom đặt ở bãi đỗ xe C, từ 9 giờ sáng đến 1 giờ chiều.",
+   "wrong": {
+    "Parking Lot B": "Bẫy nhớ nhầm chữ cái: bài ghi bãi C.",
+    "The building lobby": "Bài không nhắc sảnh toà nhà.",
+    "The main entrance": "Bài không nhắc cổng chính."
+   }
+  },
+  {
+   "w": "irregular",
+   "kind": "notice",
+   "title": "NOTICE: LIBRARY HOURS",
+   "p": "Please note that the library will have irregular hours next week. On Monday and Tuesday, it will close at 4 p.m. instead of 8 p.m. It will be closed all day Wednesday, and normal hours resume on Thursday.",
+   "q": "On which day will the library be closed all day?",
+   "o": [
+    "Wednesday",
+    "Tuesday",
+    "Thursday",
+    "Monday"
+   ],
+   "a": "Wednesday",
+   "key": "It will be closed all day Wednesday",
+   "why": "Bài ghi thư viện đóng cửa cả ngày thứ Tư; thứ Hai và thứ Ba chỉ đóng sớm lúc 4 giờ chiều.",
+   "wrong": {
+    "Tuesday": "Thứ Ba vẫn mở, chỉ đóng sớm lúc 4 p.m.",
+    "Thursday": "Thứ Năm là ngày trở lại giờ bình thường.",
+    "Monday": "Thứ Hai vẫn mở, chỉ đóng sớm lúc 4 p.m."
+   }
+  },
+  {
+   "w": "motorcycle",
+   "kind": "notice",
+   "title": "PARKING CHANGE",
+   "p": "Starting October 1, motorcycle parking will move from the north side of the building to Level B2 of the underground garage. The space is free for employees, but a parking sticker is required. Stickers are available from the security office on Level 1.",
+   "q": "Where will motorcycles park starting October 1?",
+   "o": [
+    "Level B2",
+    "Level B1",
+    "The north side",
+    "Level 1"
+   ],
+   "a": "Level B2",
+   "key": "motorcycle parking will move from the north side of the building to Level B2",
+   "why": "Bãi xe máy chuyển từ phía bắc toà nhà xuống tầng B2 của hầm đỗ xe.",
+   "wrong": {
+    "Level B1": "Bẫy gần giống: bài ghi B2.",
+    "The north side": "Đây là vị trí cũ, trước khi chuyển.",
+    "Level 1": "Tầng 1 là nơi có phòng bảo vệ để nhận tem gửi xe."
+   },
+   "tip": "Mẫu 'move from A to B': B mới là chỗ mới."
+  },
+  {
+   "w": "restroom",
+   "kind": "notice",
+   "title": "MAINTENANCE NOTICE",
+   "p": "The restrooms on the fifth floor will be closed for repairs on Tuesday from 10 a.m. to 2 p.m. During this time, please use the restrooms on the fourth or sixth floor. We apologize for any inconvenience.",
+   "q": "Which floor's restrooms will be closed on Tuesday?",
+   "o": [
+    "The fifth floor",
+    "The fourth floor",
+    "The sixth floor",
+    "The second floor"
+   ],
+   "a": "The fifth floor",
+   "key": "The restrooms on the fifth floor will be closed for repairs",
+   "why": "Câu đầu: nhà vệ sinh tầng 5 đóng để sửa chữa từ 10 giờ sáng đến 2 giờ chiều thứ Ba.",
+   "wrong": {
+    "The fourth floor": "Tầng 4 là nơi được gợi ý dùng tạm.",
+    "The sixth floor": "Tầng 6 cũng là nơi được gợi ý dùng tạm.",
+    "The second floor": "Bẫy nhớ nhầm số 2 trong giờ 2 p.m.; bài không nhắc tầng 2."
+   }
+  },
+  {
+   "w": "blanket",
+   "kind": "ad",
+   "title": "WINTER SALE",
+   "p": "Stay warm this winter with our soft wool blankets, now just $45, down from $60. The sale runs until January 15 at all our stores. Buy two blankets and get a matching pillow cover for free.",
+   "q": "What is the sale price of a wool blanket?",
+   "o": [
+    "$45",
+    "$60",
+    "$54",
+    "$15"
+   ],
+   "a": "$45",
+   "key": "now just $45, down from $60",
+   "why": "Bài ghi 'now just $45, down from $60': giá đang bán là 45 đô.",
+   "wrong": {
+    "$60": "Đây là giá trước khi giảm.",
+    "$54": "Bẫy đảo chữ số của 45.",
+    "$15": "Số 15 là ngày kết thúc đợt giảm giá (15/1)."
+   },
+   "tip": "'down from' đi kèm giá cũ; giá mới đứng ngay trước nó."
+  },
+  {
+   "w": "boast",
+   "kind": "ad",
+   "title": "GRAND OPENING",
+   "p": "Our newly opened hotel boasts 120 rooms, a rooftop pool, and a restaurant open until midnight. Book before March 31 to receive 20 percent off your stay. Free airport shuttles run every 30 minutes.",
+   "q": "How many rooms does the hotel have?",
+   "o": [
+    "120",
+    "20",
+    "30",
+    "210"
+   ],
+   "a": "120",
+   "key": "Our newly opened hotel boasts 120 rooms",
+   "why": "Câu đầu: khách sạn có (boasts) 120 phòng, kèm hồ bơi trên sân thượng và nhà hàng.",
+   "wrong": {
+    "20": "20 là mức giảm 20% khi đặt phòng trước 31/3.",
+    "30": "30 là số phút giữa các chuyến xe đưa đón sân bay.",
+    "210": "Bẫy đảo chữ số của 120."
+   },
+   "tip": "'boast' trong quảng cáo nghĩa là 'có, tự hào sở hữu', không phải khoe khoang."
+  },
+  {
+   "w": "butter",
+   "kind": "ad",
+   "title": "FRESH FROM OUR OVEN",
+   "p": "Our bakery on Harbor Street now offers butter croissants baked fresh every morning at 6 a.m. Each croissant is $2, or you can get a box of six for $10. Orders for large events must be placed two days in advance.",
+   "q": "How much does a box of six croissants cost?",
+   "o": [
+    "$10",
+    "$12",
+    "$6",
+    "$2"
+   ],
+   "a": "$10",
+   "key": "you can get a box of six for $10",
+   "why": "Bài ghi hộp 6 chiếc giá 10 đô; mua lẻ thì mỗi chiếc 2 đô.",
+   "wrong": {
+    "$12": "Bẫy tính nhẩm 6 × $2; bài ghi giá hộp là $10.",
+    "$6": "Số 6 là số chiếc trong hộp và giờ nướng bánh (6 a.m.).",
+    "$2": "Đây là giá một chiếc mua lẻ."
+   }
+  },
+  {
+   "w": "notebook",
+   "kind": "ad",
+   "title": "BACK-TO-SCHOOL SPECIAL",
+   "p": "This week only, all notebooks in our store are 30 percent off. Members receive an extra 10 percent discount at checkout. The offer ends on Sunday, August 24, and online orders over $25 ship for free.",
+   "q": "What extra discount do members receive?",
+   "o": [
+    "10 percent",
+    "30 percent",
+    "25 percent",
+    "20 percent"
+   ],
+   "a": "10 percent",
+   "key": "Members receive an extra 10 percent discount at checkout.",
+   "why": "Câu thứ hai: hội viên được giảm thêm 10% khi thanh toán, ngoài mức 30% cho mọi khách.",
+   "wrong": {
+    "30 percent": "30% là mức giảm chung cho mọi khách, không phải phần thêm.",
+    "25 percent": "Số 25 là mốc đơn online $25 được miễn phí giao hàng.",
+    "20 percent": "Bài không nhắc mức 20%."
+   }
+  },
+  {
+   "w": "rebate",
+   "kind": "ad",
+   "title": "LIMITED-TIME OFFER",
+   "p": "Buy any new washing machine from our store before May 31 and receive a $50 rebate. To claim it, submit the online form and a copy of your receipt within 30 days of purchase. Rebates are sent by check in six to eight weeks.",
+   "q": "How long do customers have to submit the rebate form?",
+   "o": [
+    "30 days",
+    "31 days",
+    "Six weeks",
+    "Eight weeks"
+   ],
+   "a": "30 days",
+   "key": "submit the online form and a copy of your receipt within 30 days of purchase",
+   "why": "Bài ghi phải nộp đơn và bản sao hoá đơn trong vòng 30 ngày kể từ ngày mua.",
+   "wrong": {
+    "31 days": "Số 31 là mốc ngày 31/5 của đợt khuyến mãi (before May 31), không phải thời hạn nộp đơn.",
+    "Six weeks": "6–8 tuần là thời gian gửi séc hoàn tiền, không phải hạn nộp đơn.",
+    "Eight weeks": "6–8 tuần là thời gian gửi séc hoàn tiền, không phải hạn nộp đơn."
+   }
+  },
+  {
+   "w": "overhead",
+   "kind": "memo",
+   "title": "MEMO: Office lighting",
+   "p": "To: All accounting staff. Workers will replace the overhead lights in our department on Saturday, March 8. Please clear your desks before leaving on Friday. The work should be finished by noon, and the office will reopen as usual on Monday.",
+   "q": "What are staff asked to do before leaving on Friday?",
+   "o": [
+    "Clear their desks",
+    "Turn off the lights",
+    "Replace the lights",
+    "Work until noon"
+   ],
+   "a": "Clear their desks",
+   "key": "Please clear your desks before leaving on Friday.",
+   "why": "Bản ghi nhớ yêu cầu nhân viên dọn trống bàn làm việc trước khi về vào thứ Sáu.",
+   "wrong": {
+    "Turn off the lights": "Bài không yêu cầu tắt đèn.",
+    "Replace the lights": "Thay đèn trần là việc của thợ, làm vào thứ Bảy.",
+    "Work until noon": "'By noon' là giờ thợ làm xong, không phải việc của nhân viên."
+   }
+  },
+  {
+   "w": "alternate",
+   "kind": "memo",
+   "title": "MEMO: Road closure",
+   "p": "Elm Avenue will be closed for road work from June 3 to June 14. Drivers coming to the office should use Oak Street as an alternate route. Shuttle buses will still stop at the main gate every 20 minutes.",
+   "q": "Which road should drivers use as an alternate route?",
+   "o": [
+    "Oak Street",
+    "Elm Avenue",
+    "Oak Avenue",
+    "Elm Street"
+   ],
+   "a": "Oak Street",
+   "key": "Drivers coming to the office should use Oak Street as an alternate route.",
+   "why": "Câu thứ hai: tài xế nên đi đường Oak Street thay thế vì Elm Avenue đang sửa.",
+   "wrong": {
+    "Elm Avenue": "Đây là con đường đang bị đóng để sửa.",
+    "Oak Avenue": "Bẫy ghép nhầm: Oak đi với Street, còn Avenue thuộc về Elm.",
+    "Elm Street": "Bẫy ghép nhầm tên hai con đường trong bài."
+   },
+   "tip": "Hai tên đường dễ lẫn: nhớ cả cặp tên + loại đường (Street/Avenue)."
+  },
+  {
+   "w": "downturn",
+   "kind": "memo",
+   "title": "MEMO: Business travel",
+   "p": "Because of the recent downturn in sales, all business trips must now be approved by Ms. Grant in Finance, not by department managers. Requests should be sent at least two weeks in advance. Online meetings are encouraged whenever possible.",
+   "q": "Who must now approve business trips?",
+   "o": [
+    "Ms. Grant",
+    "Department managers",
+    "The sales director",
+    "The travel agent"
+   ],
+   "a": "Ms. Grant",
+   "key": "all business trips must now be approved by Ms. Grant in Finance",
+   "why": "Do doanh số giảm, mọi chuyến công tác giờ phải được Ms. Grant ở phòng Tài chính duyệt.",
+   "wrong": {
+    "Department managers": "Bài ghi rõ 'not by department managers': quản lý phòng không còn duyệt.",
+    "The sales director": "Chữ sales chỉ nói doanh số giảm; bài không nhắc giám đốc kinh doanh.",
+    "The travel agent": "Bài không nhắc đại lý du lịch."
+   }
+  },
+  {
+   "w": "beforehand",
+   "kind": "text",
+   "title": "Text from Ms. Lee",
+   "p": "Hi Tom, the client moved our meeting to 2:30 p.m. tomorrow instead of 10 a.m. Could you print the sales report beforehand? I'll be at the airport until noon, so please text me if anything changes.",
+   "q": "What time is the meeting now?",
+   "o": [
+    "2:30 p.m.",
+    "10 a.m.",
+    "Noon",
+    "10:30 a.m."
+   ],
+   "a": "2:30 p.m.",
+   "key": "the client moved our meeting to 2:30 p.m. tomorrow instead of 10 a.m.",
+   "why": "Khách đã dời cuộc họp sang 2:30 chiều mai thay cho giờ cũ 10 giờ sáng.",
+   "wrong": {
+    "10 a.m.": "Đây là giờ cũ trước khi dời ('instead of').",
+    "Noon": "Trưa là lúc Ms. Lee còn ở sân bay.",
+    "10:30 a.m.": "Bẫy ghép số: 10 và :30 thuộc hai giờ khác nhau."
+   },
+   "tip": "'moved to X instead of Y': X là giờ mới, Y là giờ cũ."
+  },
+  {
+   "w": "mechanical",
+   "kind": "text",
+   "title": "Text from Ms. Ruiz",
+   "p": "Hi Ken, my train is delayed because of a mechanical problem, so I'll arrive around 9:45 instead of 9. Could you start the training session without me? The handouts are in the top drawer of my desk.",
+   "q": "Where are the handouts?",
+   "o": [
+    "In the top drawer",
+    "In the bottom drawer",
+    "On top of her desk",
+    "In the training room"
+   ],
+   "a": "In the top drawer",
+   "key": "The handouts are in the top drawer of my desk.",
+   "why": "Câu cuối: tài liệu phát tay nằm trong ngăn kéo trên cùng của bàn Ms. Ruiz.",
+   "wrong": {
+    "In the bottom drawer": "Bẫy đảo vị trí: bài ghi top drawer (ngăn trên cùng).",
+    "On top of her desk": "Bẫy chữ top: tài liệu ở trong ngăn kéo, không để trên mặt bàn.",
+    "In the training room": "Bài không nói tài liệu để ở phòng đào tạo; chúng nằm trong bàn của Ms. Ruiz."
+   }
+  },
+  {
+   "w": "expiration",
+   "kind": "text",
+   "title": "Text from your fitness center",
+   "p": "Reminder: the expiration date of your gym membership is March 31. Renew by March 15 to keep your current rate of $35 a month. After that, the monthly fee will rise to $42.",
+   "q": "What is the member's current monthly rate?",
+   "o": [
+    "$35",
+    "$42",
+    "$31",
+    "$15"
+   ],
+   "a": "$35",
+   "key": "to keep your current rate of $35 a month",
+   "why": "Tin nhắn ghi mức phí hiện tại là 35 đô một tháng; gia hạn sau ngày 15/3 sẽ tăng lên 42 đô.",
+   "wrong": {
+    "$42": "Đây là mức phí mới nếu gia hạn sau ngày 15/3.",
+    "$31": "Số 31 là ngày hết hạn thẻ (31/3), không phải giá.",
+    "$15": "Số 15 là hạn gia hạn (15/3), không phải giá."
+   }
+  },
+  {
+   "w": "rack",
+   "kind": "text",
+   "title": "Text from Facilities",
+   "p": "Hi Ms. Cho, the new bike rack is now installed behind Building A, next to the loading dock. It holds 12 bikes. Please remind your team that bikes left in the lobby after Friday will be moved.",
+   "q": "Where is the new bike rack?",
+   "o": [
+    "Behind Building A",
+    "In the lobby",
+    "Behind Building B",
+    "In front of Building A"
+   ],
+   "a": "Behind Building A",
+   "key": "the new bike rack is now installed behind Building A",
+   "why": "Giá để xe đạp mới được lắp phía sau toà A, cạnh khu bốc dỡ hàng.",
+   "wrong": {
+    "In the lobby": "Sảnh là nơi xe đạp sẽ bị dọn đi sau thứ Sáu.",
+    "Behind Building B": "Bẫy nhớ nhầm chữ cái: bài ghi toà A.",
+    "In front of Building A": "Bẫy đảo vị trí: bài ghi behind (phía sau)."
+   }
+  },
+  {
+   "w": "graphics",
+   "kind": "schedule",
+   "title": "DESIGN WORKSHOP: DAY 1",
+   "p": "9:00 a.m. Welcome talk (Room 201). 10:30 a.m. Graphics software basics (Computer Lab 3). 12:30 p.m. Lunch (Garden Café). 2:00 p.m. Poster design practice (Room 201). Please bring a laptop for the lab session.",
+   "q": "Where will the graphics software session be held?",
+   "o": [
+    "Computer Lab 3",
+    "Room 201",
+    "Garden Café",
+    "Room 301"
+   ],
+   "a": "Computer Lab 3",
+   "key": "10:30 a.m. Graphics software basics (Computer Lab 3).",
+   "why": "Lịch ghi buổi 10:30 sáng 'Graphics software basics' diễn ra ở Computer Lab 3.",
+   "wrong": {
+    "Room 201": "Phòng 201 dành cho bài chào mừng và buổi thực hành áp phích.",
+    "Garden Café": "Garden Café là nơi ăn trưa.",
+    "Room 301": "Bẫy ghép số: bài có Room 201 và Lab 3, không có phòng 301."
+   },
+   "tip": "Lịch trình: tìm đúng dòng có từ khoá rồi đọc tiếp phần trong ngoặc."
+  },
+  {
+   "w": "boardroom",
+   "kind": "schedule",
+   "title": "VISITOR SCHEDULE",
+   "p": "Partner visit, Monday. 9:30 a.m. Coffee in the main lobby. 10:00 a.m. Product presentation in the fifth-floor boardroom. 12:00 p.m. Lunch with Mr. Diaz in the Lakeview Room. 2:00 p.m. Factory tour led by Ms. Wu.",
+   "q": "What will take place in the boardroom?",
+   "o": [
+    "A product presentation",
+    "Lunch with Mr. Diaz",
+    "A factory tour",
+    "Coffee and greetings"
+   ],
+   "a": "A product presentation",
+   "key": "10:00 a.m. Product presentation in the fifth-floor boardroom.",
+   "why": "Lịch ghi lúc 10 giờ sáng có buổi giới thiệu sản phẩm ở phòng họp lớn tầng 5.",
+   "wrong": {
+    "Lunch with Mr. Diaz": "Bữa trưa diễn ra ở Lakeview Room.",
+    "A factory tour": "Tham quan nhà máy lúc 2 giờ chiều, do Ms. Wu dẫn.",
+    "Coffee and greetings": "Uống cà phê ở sảnh chính lúc 9:30."
+   }
+  },
+  {
+   "w": "recruitment",
+   "kind": "schedule",
+   "title": "CAMPUS JOB FAIR",
+   "p": "Our recruitment team will be on campus on April 9. Information session: 1:00 p.m., Hall C. Group interviews: 3:00 p.m., Room 12. Students should bring two copies of their résumé to the interviews.",
+   "q": "Where will the group interviews be held?",
+   "o": [
+    "Room 12",
+    "Hall C",
+    "Room 9",
+    "Room 3"
+   ],
+   "a": "Room 12",
+   "key": "Group interviews: 3:00 p.m., Room 12.",
+   "why": "Lịch ghi phỏng vấn nhóm lúc 3 giờ chiều tại phòng 12.",
+   "wrong": {
+    "Hall C": "Hội trường C là nơi diễn ra buổi giới thiệu lúc 1 giờ chiều.",
+    "Room 9": "Số 9 là ngày 9/4, không phải số phòng.",
+    "Room 3": "Số 3 là giờ phỏng vấn (3:00 p.m.), không phải số phòng."
+   }
+  },
+  {
+   "w": "biology",
+   "kind": "schedule",
+   "title": "SCIENCE CENTER: SATURDAY",
+   "p": "10:00 a.m. Marine biology talk, Hall 2. 11:30 a.m. Robot building for kids, Lab 4. 1:00 p.m. Space film, Dome Theater. 3:00 p.m. Plant science walk, starting at the north entrance. All programs are free with admission.",
+   "q": "What time does the marine biology talk start?",
+   "o": [
+    "10:00 a.m.",
+    "11:30 a.m.",
+    "1:00 p.m.",
+    "2:00 p.m."
+   ],
+   "a": "10:00 a.m.",
+   "key": "10:00 a.m. Marine biology talk, Hall 2.",
+   "why": "Dòng đầu lịch: buổi nói chuyện về sinh học biển bắt đầu lúc 10 giờ sáng ở Hall 2.",
+   "wrong": {
+    "11:30 a.m.": "11:30 là giờ lắp ráp robot cho trẻ em.",
+    "1:00 p.m.": "1 giờ chiều là giờ chiếu phim về vũ trụ.",
+    "2:00 p.m.": "Bẫy nhớ số: 2 là số hội trường (Hall 2), không phải giờ."
+   }
+  },
+  {
+   "w": "correction",
+   "kind": "email",
+   "title": "Subject: Correction to workshop time",
+   "p": "Please note a correction to yesterday's message. The client workshop will begin at 2:30 p.m., not 3:30 p.m. It will still be held in Room 410. Coffee will be served at 2:00 p.m. in the lounge next door.",
+   "q": "What time will the client workshop begin?",
+   "o": [
+    "2:30 p.m.",
+    "3:30 p.m.",
+    "2:00 p.m.",
+    "3:00 p.m."
+   ],
+   "a": "2:30 p.m.",
+   "key": "The client workshop will begin at 2:30 p.m., not 3:30 p.m.",
+   "why": "Email đính chính: hội thảo bắt đầu lúc 2:30 chiều (2:30 p.m.), không phải 3:30 như tin hôm qua.",
+   "wrong": {
+    "3:30 p.m.": "Đây là giờ cũ đã bị đính chính (not 3:30 p.m.).",
+    "2:00 p.m.": "Đây là giờ phục vụ cà phê, không phải giờ bắt đầu.",
+    "3:00 p.m.": "Bài không nhắc tới giờ này; bẫy gần giống."
+   },
+   "tip": "Gặp correction hay not: nhớ giờ MỚI, bỏ giờ cũ."
+  },
+  {
+   "w": "objection",
+   "kind": "email",
+   "title": "Subject: Team meeting day",
+   "p": "If there are no objections, I'd like to move our weekly team meeting from Tuesday to Thursday, starting next week. The time will stay at 10:00 a.m., but we'll meet in Conference Room C instead of Room A. Please reply by Friday.",
+   "q": "By what day should team members reply?",
+   "o": [
+    "Friday",
+    "Tuesday",
+    "Thursday",
+    "Next week"
+   ],
+   "a": "Friday",
+   "key": "Please reply by Friday.",
+   "why": "Câu cuối email ghi rõ Please reply by Friday: hạn trả lời là thứ Sáu.",
+   "wrong": {
+    "Tuesday": "Đây là ngày họp cũ trước khi đổi.",
+    "Thursday": "Đây là ngày họp mới, không phải hạn trả lời.",
+    "Next week": "Đây là lúc lịch họp mới bắt đầu áp dụng."
+   },
+   "tip": "Câu hỏi By what day: dò cụm reply by / submit by ở cuối thư."
+  },
+  {
+   "w": "remainder",
+   "kind": "email",
+   "title": "Subject: Your catering order",
+   "p": "Thank you for your deposit of $150 for the June 12 office lunch. The remainder of $350 is due five days before the event. Payments can be made online or at our Harbor Street location.",
+   "q": "How much does the customer still need to pay?",
+   "o": [
+    "$350",
+    "$150",
+    "$500",
+    "$250"
+   ],
+   "a": "$350",
+   "key": "The remainder of $350 is due five days before the event.",
+   "why": "Bài ghi phần tiền còn lại (the remainder) là $350, phải trả 5 ngày trước bữa tiệc.",
+   "wrong": {
+    "$150": "Đây là tiền đặt cọc khách đã trả rồi.",
+    "$500": "Đây là tổng cả đơn (150 + 350), không phải phần còn nợ.",
+    "$250": "Bài không nhắc tới số tiền này."
+   },
+   "tip": "remainder = phần còn lại; deposit = tiền đặt cọc đã trả trước."
+  },
+  {
+   "w": "spouse",
+   "kind": "email",
+   "title": "Subject: Year-end dinner",
+   "p": "Our year-end dinner will be held on Friday, December 12, at 7 p.m. Each employee may bring a spouse or one guest. Tell Ms. Patel in Human Resources how many seats you need. Parking passes are available from Mr. Cho.",
+   "q": "Who should employees tell how many seats they need?",
+   "o": [
+    "Ms. Patel",
+    "Mr. Cho",
+    "Ms. Cho",
+    "The hotel staff"
+   ],
+   "a": "Ms. Patel",
+   "key": "Tell Ms. Patel in Human Resources how many seats you need.",
+   "why": "Bài ghi rõ báo số ghế cho Ms. Patel ở phòng Nhân sự (Human Resources).",
+   "wrong": {
+    "Mr. Cho": "Mr. Cho chỉ phát thẻ gửi xe (parking passes).",
+    "Ms. Cho": "Bẫy ghép nhầm tên: bài có Mr. Cho và Ms. Patel.",
+    "The hotel staff": "Bài không nói liên hệ nhân viên khách sạn."
+   },
+   "tip": "Bài có 2 tên người: gắn mỗi tên với một việc ngay khi đọc."
+  },
+  {
+   "w": "cargo",
+   "kind": "notice",
+   "title": "NOTICE: Cargo elevator",
+   "p": "The cargo elevator at the rear of the building will be closed for repairs on Wednesday from 8 a.m. to 3 p.m. During this time, large deliveries should be brought in through the side entrance and taken up in Elevator 2.",
+   "q": "Which elevator should be used for large deliveries on Wednesday?",
+   "o": [
+    "Elevator 2",
+    "The cargo elevator",
+    "Elevator 3",
+    "The side elevator"
+   ],
+   "a": "Elevator 2",
+   "key": "taken up in Elevator 2",
+   "why": "Trong lúc sửa thang hàng, hàng lớn đi cửa hông rồi lên bằng thang máy số 2 (Elevator 2).",
+   "wrong": {
+    "The cargo elevator": "Đây là thang đang đóng để sửa.",
+    "Elevator 3": "Bẫy nhớ nhầm số: bài ghi Elevator 2; số 3 là giờ mở lại (3 p.m.).",
+    "The side elevator": "Bẫy ghép chữ: side đi với cửa hông (side entrance), không phải thang."
+   },
+   "tip": "Thông báo sửa chữa: phương án thay thế thường nằm sau During this time."
+  },
+  {
+   "w": "grace",
+   "kind": "notice",
+   "title": "LIBRARY NOTICE: Late fees",
+   "p": "Books from the community library are due 21 days after checkout. A three-day grace period follows, so no late fee is charged during that time. After that, the fee is 25 cents per book per day, up to $5.",
+   "q": "How long is the grace period?",
+   "o": [
+    "Three days",
+    "21 days",
+    "Four days",
+    "25 days"
+   ],
+   "a": "Three days",
+   "key": "A three-day grace period follows",
+   "why": "Bài ghi sau hạn trả sách có 3 ngày ân hạn (a three-day grace period), không tính phí trễ.",
+   "wrong": {
+    "21 days": "Đây là thời hạn mượn sách, không phải thời gian ân hạn.",
+    "Four days": "Bài không nhắc; bẫy gần giống số 3.",
+    "25 days": "Bẫy số 25: đó là phí 25 xu mỗi sách mỗi ngày."
+   },
+   "tip": "grace period = thời gian ân hạn: quá hạn nhưng chưa bị phạt."
+  },
+  {
+   "w": "parade",
+   "kind": "notice",
+   "title": "ROAD CLOSURE NOTICE",
+   "p": "Because of the Spring Parade on Saturday, Main Avenue will be closed from 9 a.m. to 1 p.m. Bus 12 will use Oak Street instead. The parade begins at 10 a.m. near City Hall.",
+   "q": "What time does the parade begin?",
+   "o": [
+    "10 a.m.",
+    "9 a.m.",
+    "1 p.m.",
+    "12 p.m."
+   ],
+   "a": "10 a.m.",
+   "key": "The parade begins at 10 a.m. near City Hall.",
+   "why": "Câu cuối ghi cuộc diễu hành bắt đầu lúc 10 giờ sáng (begins at 10 a.m.).",
+   "wrong": {
+    "9 a.m.": "Đây là giờ bắt đầu cấm đường, sớm hơn giờ diễu hành.",
+    "1 p.m.": "Đây là giờ đường Main Avenue mở lại.",
+    "12 p.m.": "Bẫy số 12: đó là số tuyến xe buýt phải đổi đường."
+   },
+   "tip": "Bài có nhiều giờ: gắn mỗi giờ với việc của nó (cấm đường, bắt đầu)."
+  },
+  {
+   "w": "sender",
+   "kind": "notice",
+   "title": "MAILROOM NOTICE",
+   "p": "Packages that are not picked up within 10 days will be returned to the sender. The mailroom on the first floor is open from 8:30 a.m. to 5:30 p.m. on weekdays. Please bring a photo ID.",
+   "q": "What happens to packages not picked up within 10 days?",
+   "o": [
+    "Returned to the sender",
+    "Moved to the first floor",
+    "Kept at the front desk",
+    "Held for another 10 days"
+   ],
+   "a": "Returned to the sender",
+   "key": "will be returned to the sender",
+   "why": "Câu đầu ghi gói hàng quá 10 ngày không nhận sẽ bị trả lại người gửi (returned to the sender).",
+   "wrong": {
+    "Moved to the first floor": "Tầng 1 là nơi đặt phòng thư, không phải nơi chuyển gói tới.",
+    "Kept at the front desk": "Bài không nhắc tới quầy lễ tân.",
+    "Held for another 10 days": "Bẫy số 10: đó là hạn nhận hàng, bài không nói gia hạn."
+   },
+   "tip": "sender = người gửi; recipient = người nhận."
+  },
+  {
+   "w": "sticker",
+   "kind": "notice",
+   "title": "NOTICE: New parking stickers",
+   "p": "All residents must display the new blue parking sticker on their windshield by May 15. Stickers are free and can be picked up at the management office in Building A. Cars with the old green sticker may be towed after that date.",
+   "q": "What color is the new parking sticker?",
+   "o": [
+    "Blue",
+    "Green",
+    "White",
+    "Red"
+   ],
+   "a": "Blue",
+   "key": "display the new blue parking sticker",
+   "why": "Bài ghi rõ tem gửi xe mới màu xanh dương (the new blue parking sticker).",
+   "wrong": {
+    "Green": "Đây là màu tem cũ; xe còn dán tem này có thể bị kéo đi.",
+    "White": "Bài không nhắc tới màu trắng.",
+    "Red": "Bài không nhắc tới màu đỏ."
+   },
+   "tip": "new/old đứng sát màu sắc: nhớ cả cặp tính từ đi liền nhau."
+  },
+  {
+   "w": "creativity",
+   "kind": "ad",
+   "title": "WEEKEND ART CLASSES",
+   "p": "Bring out your creativity at our community art studio! The beginner painting class meets every Saturday from 10 a.m. to noon. The six-week course costs $120, and all materials are included. Sign up before June 1 and save $20.",
+   "q": "How much does the six-week course cost?",
+   "o": [
+    "$120",
+    "$20",
+    "$10",
+    "$60"
+   ],
+   "a": "$120",
+   "key": "The six-week course costs $120",
+   "why": "Bài ghi khóa học sáu tuần có giá $120, đã gồm vật liệu.",
+   "wrong": {
+    "$20": "Đây là số tiền được giảm khi đăng ký trước 1/6, không phải giá khóa học.",
+    "$10": "Số 10 là giờ bắt đầu lớp (10 a.m.), không phải giá.",
+    "$60": "Bài không nhắc tới số tiền này."
+   },
+   "tip": "Quảng cáo hay có 2 con số: giá gốc (costs) và mức giảm (save)."
+  },
+  {
+   "w": "maximize",
+   "kind": "ad",
+   "title": "SPACE-SAVING SHELVES",
+   "p": "Maximize your office space with our wall-mounted shelving units. Each unit holds up to 40 kilograms and is available in white or gray. Order this week to get free installation. Regular delivery takes three business days.",
+   "q": "What do customers get if they order this week?",
+   "o": [
+    "Free installation",
+    "Free delivery",
+    "A gray unit",
+    "Three free shelves"
+   ],
+   "a": "Free installation",
+   "key": "Order this week to get free installation.",
+   "why": "Bài ghi đặt hàng trong tuần này được lắp đặt miễn phí (free installation).",
+   "wrong": {
+    "Free delivery": "Bài chỉ nói giao hàng mất 3 ngày, không nói miễn phí.",
+    "A gray unit": "Màu xám chỉ là một lựa chọn màu cho mọi đơn hàng.",
+    "Three free shelves": "Bẫy số 3: đó là số ngày giao hàng."
+   },
+   "tip": "Ưu đãi thường nằm sau cụm Order/Sign up ... to get."
+  },
+  {
+   "w": "suburb",
+   "kind": "ad",
+   "title": "GRAND OPENING",
+   "p": "Our bakery is opening a second shop in the quiet suburb of Pine Hill on April 3. To celebrate, all bread will be 30% off for the first week. The new shop opens at 7 a.m. and closes at 6 p.m. daily.",
+   "q": "What time does the new shop open?",
+   "o": [
+    "7 a.m.",
+    "6 p.m.",
+    "3 p.m.",
+    "6 a.m."
+   ],
+   "a": "7 a.m.",
+   "key": "The new shop opens at 7 a.m. and closes at 6 p.m. daily.",
+   "why": "Câu cuối ghi tiệm mới mở cửa lúc 7 giờ sáng (opens at 7 a.m.).",
+   "wrong": {
+    "6 p.m.": "Đây là giờ đóng cửa (closes at 6 p.m.).",
+    "3 p.m.": "Bẫy số 3: đó là ngày khai trương 3/4.",
+    "6 a.m.": "Bẫy ghép nhầm: số 6 là giờ đóng cửa buổi chiều."
+   },
+   "tip": "opens và closes đứng sát nhau: nhìn kỹ động từ trước mỗi giờ."
+  },
+  {
+   "w": "seventy",
+   "kind": "ad",
+   "title": "WAREHOUSE CLEARANCE SALE",
+   "p": "Our warehouse clearance sale runs this Friday through Sunday only. Desks and chairs are up to seventy percent off, and printers are half price. The first fifty customers each day will receive a free tote bag.",
+   "q": "How much are desks and chairs discounted?",
+   "o": [
+    "Up to 70% off",
+    "Half price",
+    "Up to 50% off",
+    "Up to 17% off"
+   ],
+   "a": "Up to 70% off",
+   "key": "Desks and chairs are up to seventy percent off",
+   "why": "Bài ghi bàn ghế giảm tới 70% (up to seventy percent off).",
+   "wrong": {
+    "Half price": "Giảm nửa giá là mức của máy in (printers).",
+    "Up to 50% off": "Bẫy số 50: đó là 50 khách đầu tiên được tặng túi.",
+    "Up to 17% off": "Bẫy đọc nhầm seventy (70) thành seventeen (17)."
+   },
+   "tip": "Số viết bằng chữ: seventy = 70, seventeen = 17, fifty = 50."
+  },
+  {
+   "w": "comply",
+   "kind": "memo",
+   "title": "MEMO: Visitor policy",
+   "p": "To comply with new safety rules, all visitors must sign in at the front desk and wear a badge at all times. Badges must be returned before leaving. Team leaders should send visitor names to Security by noon the day before.",
+   "q": "What should team leaders do by noon the day before a visit?",
+   "o": [
+    "Send visitor names to Security",
+    "Sign in at the front desk",
+    "Return visitor badges",
+    "Meet visitors at the entrance"
+   ],
+   "a": "Send visitor names to Security",
+   "key": "Team leaders should send visitor names to Security by noon the day before.",
+   "why": "Câu cuối: trưởng nhóm gửi tên khách cho bộ phận An ninh trước 12 giờ trưa hôm trước.",
+   "wrong": {
+    "Sign in at the front desk": "Đây là việc của khách (visitors), không phải của trưởng nhóm.",
+    "Return visitor badges": "Khách trả thẻ trước khi về; không phải việc làm trước một ngày.",
+    "Meet visitors at the entrance": "Bài không nhắc tới việc ra đón khách."
+   },
+   "tip": "Câu hỏi về một đối tượng: dò đúng chủ ngữ (visitors hay team leaders)."
+  },
+  {
+   "w": "legacy",
+   "kind": "memo",
+   "title": "MEMO: Old billing system",
+   "p": "Our legacy billing system will be shut down on September 30. All invoices must be entered in the new system starting October 1. Training sessions will be held in Room 205 on September 22 and 24. Contact Mr. Diaz with questions.",
+   "q": "When will the legacy billing system be shut down?",
+   "o": [
+    "September 30",
+    "October 1",
+    "September 22",
+    "September 24"
+   ],
+   "a": "September 30",
+   "key": "Our legacy billing system will be shut down on September 30.",
+   "why": "Câu đầu ghi hệ thống thanh toán cũ (legacy) ngừng chạy ngày 30/9 (September 30).",
+   "wrong": {
+    "October 1": "Đây là ngày bắt đầu dùng hệ thống mới.",
+    "September 22": "Đây là ngày của buổi tập huấn đầu tiên.",
+    "September 24": "Đây là ngày của buổi tập huấn thứ hai."
+   },
+   "tip": "legacy system = hệ thống cũ đang dùng, sắp được thay."
+  },
+  {
+   "w": "reimburse",
+   "kind": "memo",
+   "title": "MEMO: Travel expenses",
+   "p": "Staff who travel for client visits will be reimbursed for meals up to $40 per day. Please submit receipts to the Accounting Department within 14 days of your trip. Hotel costs must be approved by your manager in advance.",
+   "q": "Where should staff submit their receipts?",
+   "o": [
+    "The Accounting Department",
+    "Their manager",
+    "The hotel front desk",
+    "Human Resources"
+   ],
+   "a": "The Accounting Department",
+   "key": "Please submit receipts to the Accounting Department within 14 days of your trip.",
+   "why": "Bài ghi nộp hoá đơn cho phòng Kế toán (Accounting Department) trong 14 ngày sau chuyến đi.",
+   "wrong": {
+    "Their manager": "Quản lý chỉ duyệt trước chi phí khách sạn, không nhận hoá đơn.",
+    "The hotel front desk": "Bài không nói nộp hoá đơn ở khách sạn.",
+    "Human Resources": "Bài không nhắc tới phòng Nhân sự."
+   },
+   "tip": "reimburse = hoàn tiền; thường đi kèm submit receipts (nộp hoá đơn)."
+  },
+  {
+   "w": "surplus",
+   "kind": "memo",
+   "title": "MEMO: Free office furniture",
+   "p": "After the move, we have a surplus of chairs and filing cabinets. Employees may take items for home use free of charge. Items are stored in Room 118 and can be collected on Thursday between 3 and 5 p.m.",
+   "q": "When can employees collect the items?",
+   "o": [
+    "Thursday, 3 to 5 p.m.",
+    "Tuesday, 3 to 5 p.m.",
+    "Thursday, 1 to 3 p.m.",
+    "Thursday, after 5 p.m."
+   ],
+   "a": "Thursday, 3 to 5 p.m.",
+   "key": "can be collected on Thursday between 3 and 5 p.m.",
+   "why": "Câu cuối ghi đồ dư được nhận vào thứ Năm, từ 3 đến 5 giờ chiều.",
+   "wrong": {
+    "Tuesday, 3 to 5 p.m.": "Bẫy nhầm thứ: bài ghi Thursday (thứ Năm), không phải Tuesday.",
+    "Thursday, 1 to 3 p.m.": "Sai khung giờ: bài ghi từ 3 đến 5 giờ chiều.",
+    "Thursday, after 5 p.m.": "5 giờ là lúc kết thúc, không phải lúc bắt đầu nhận đồ."
+   },
+   "tip": "Tuesday và Thursday rất dễ lẫn: nhìn chữ cái thứ hai (u hay h)."
+  },
+  {
+   "w": "handful",
+   "kind": "text",
+   "title": "Text from Ms. Lee",
+   "p": "Hi Sam, only a handful of seats are left for Friday's sales seminar. I booked two for us in Row D. It starts at 9:15, so let's meet in the lobby at 8:45. I'll bring the tickets.",
+   "q": "What time will Ms. Lee and Sam meet?",
+   "o": [
+    "8:45",
+    "9:15",
+    "8:15",
+    "9:45"
+   ],
+   "a": "8:45",
+   "key": "let's meet in the lobby at 8:45",
+   "why": "Ms. Lee hẹn gặp Sam ở sảnh lúc 8:45, trước giờ hội thảo bắt đầu (9:15).",
+   "wrong": {
+    "9:15": "Đây là giờ hội thảo bắt đầu, không phải giờ hẹn gặp.",
+    "8:15": "Bẫy ghép nhầm: số 15 thuộc giờ bắt đầu 9:15.",
+    "9:45": "Bẫy ghép nhầm: số 45 thuộc giờ hẹn 8:45."
+   },
+   "tip": "Tin nhắn hẹn gặp: dò cụm let's meet ... at."
+  },
+  {
+   "w": "landlord",
+   "kind": "text",
+   "title": "Text from your landlord",
+   "p": "Hi, this is Mr. Owens, your landlord. A plumber will come to fix the kitchen sink on Tuesday between 1 and 3 p.m. If you won't be home, the building manager can let him in. Please clear the area under the sink.",
+   "q": "Who can let the plumber in if the tenant is not home?",
+   "o": [
+    "The building manager",
+    "The landlord",
+    "A neighbor",
+    "The plumber's assistant"
+   ],
+   "a": "The building manager",
+   "key": "If you won't be home, the building manager can let him in.",
+   "why": "Tin nhắn ghi nếu người thuê vắng nhà, quản lý toà nhà (building manager) sẽ mở cửa cho thợ.",
+   "wrong": {
+    "The landlord": "Chủ nhà (Mr. Owens) chỉ là người gửi tin nhắn.",
+    "A neighbor": "Bài không nhắc tới hàng xóm.",
+    "The plumber's assistant": "Bài không nhắc tới trợ lý của thợ sửa ống nước."
+   },
+   "tip": "Câu If you won't be home thường dẫn tới người thay thế."
+  },
+  {
+   "w": "await",
+   "kind": "text",
+   "title": "Text from IT Help Desk",
+   "p": "Hello Ms. Kim, your new laptop has arrived and awaits pickup at the IT Help Desk on the fourth floor. The desk is open until 6 p.m. today. Please bring your old laptop and charger so we can recycle them.",
+   "q": "What should Ms. Kim bring to the IT Help Desk?",
+   "o": [
+    "Her old laptop and charger",
+    "Her new laptop",
+    "Her employee ID",
+    "A recycling form"
+   ],
+   "a": "Her old laptop and charger",
+   "key": "Please bring your old laptop and charger",
+   "why": "Tin nhắn dặn mang theo laptop cũ và bộ sạc (old laptop and charger) để bộ phận IT tái chế.",
+   "wrong": {
+    "Her new laptop": "Laptop mới đang chờ ở bàn IT; cô ấy tới để nhận nó.",
+    "Her employee ID": "Bài không yêu cầu thẻ nhân viên.",
+    "A recycling form": "Bài chỉ nói tái chế máy cũ, không nhắc tới mẫu đơn nào."
+   },
+   "tip": "awaits pickup = đang chờ người tới nhận."
+  },
+  {
+   "w": "flexibility",
+   "kind": "text",
+   "title": "Text from Mr. Grant",
+   "p": "Thanks for your flexibility, Nina. The client asked to move our call from 2 p.m. to 4:30 p.m. today. I'll send the new link by noon. Could you print ten copies of the price list before the call?",
+   "q": "How many copies of the price list should Nina print?",
+   "o": [
+    "Ten",
+    "Two",
+    "Four",
+    "Twelve"
+   ],
+   "a": "Ten",
+   "key": "Could you print ten copies of the price list before the call?",
+   "why": "Mr. Grant nhờ Nina in 10 bản bảng giá (ten copies of the price list) trước cuộc gọi.",
+   "wrong": {
+    "Two": "Bẫy số 2: đó là giờ cũ của cuộc gọi (2 p.m.).",
+    "Four": "Bẫy số 4: đó là giờ mới của cuộc gọi (4:30 p.m.).",
+    "Twelve": "Bẫy noon (12 giờ trưa): đó là hạn gửi link mới."
+   },
+   "tip": "Số viết bằng chữ (ten) dễ bị các giờ dạng số xung quanh lấn át."
+  },
+  {
+   "w": "punctual",
+   "kind": "schedule",
+   "title": "NEW STAFF ORIENTATION",
+   "p": "Orientation for new staff, Monday. 8:30 Check-in at the main lobby. 9:00 Welcome talk in Room 301. 10:30 Building tour. 12:00 Lunch in the cafeteria. Please be punctual: doors to Room 301 close at 9:00 sharp.",
+   "q": "Where will the welcome talk be held?",
+   "o": [
+    "Room 301",
+    "The main lobby",
+    "The cafeteria",
+    "Room 310"
+   ],
+   "a": "Room 301",
+   "key": "9:00 Welcome talk in Room 301.",
+   "why": "Dòng 9:00 ghi buổi chào mừng (Welcome talk) diễn ra ở phòng 301.",
+   "wrong": {
+    "The main lobby": "Sảnh chính là nơi đăng ký lúc 8:30.",
+    "The cafeteria": "Căng tin là nơi ăn trưa lúc 12:00.",
+    "Room 310": "Bẫy đảo số: bài ghi phòng 301."
+   },
+   "tip": "punctual = đúng giờ; có câu này thì giờ đóng cửa rất quan trọng."
+  },
+  {
+   "w": "statistical",
+   "kind": "schedule",
+   "title": "DATA SKILLS TRAINING – Day 2",
+   "p": "Training Day 2. 9:00 Basic statistical tools, led by Dr. Ortiz, in Lab 3. 10:30 Coffee break. 10:45 Group project in Room B. 12:15 Lunch on the terrace. 1:30 Closing remarks by Ms. Hall.",
+   "q": "Where is the session on statistical tools?",
+   "o": [
+    "Lab 3",
+    "Room B",
+    "Lab 2",
+    "Room 3"
+   ],
+   "a": "Lab 3",
+   "key": "9:00 Basic statistical tools, led by Dr. Ortiz, in Lab 3.",
+   "why": "Dòng 9:00 ghi buổi công cụ thống kê do Dr. Ortiz dạy ở phòng Lab 3.",
+   "wrong": {
+    "Room B": "Room B là nơi làm dự án nhóm lúc 10:45.",
+    "Lab 2": "Bẫy số 2: đó là Ngày 2 (Day 2) của khoá học.",
+    "Room 3": "Bẫy ghép nhầm: số 3 đi với Lab, không phải Room."
+   },
+   "tip": "Lịch trình: đọc theo dòng, mỗi dòng gồm giờ – việc – nơi."
+  },
+  {
+   "w": "managerial",
+   "kind": "schedule",
+   "title": "LEADERSHIP PROGRAM",
+   "p": "Managerial Skills Program, spring term. Week 1: Leading meetings, March 4. Week 2: Giving feedback, March 11. Week 3: Managing budgets, March 18. All sessions run from 6 to 8 p.m. in Room 12. Registration closes February 25.",
+   "q": "When is the session on giving feedback?",
+   "o": [
+    "March 11",
+    "March 4",
+    "March 18",
+    "February 25"
+   ],
+   "a": "March 11",
+   "key": "Week 2: Giving feedback, March 11.",
+   "why": "Lịch ghi tuần 2 học kỹ năng góp ý (Giving feedback) vào ngày 11/3.",
+   "wrong": {
+    "March 4": "Đây là buổi tuần 1 về điều hành cuộc họp.",
+    "March 18": "Đây là buổi tuần 3 về quản lý ngân sách.",
+    "February 25": "Đây là hạn chót đăng ký."
+   },
+   "tip": "Lịch theo tuần: nhớ cặp chủ đề – ngày, đừng chỉ nhớ dãy ngày."
+  },
+  {
+   "w": "statistics",
+   "kind": "schedule",
+   "title": "SALES MEETING AGENDA",
+   "p": "Sales meeting agenda, Thursday, Room 6. 2:00 October sales statistics, presented by Mr. Reyes. 2:30 New product update, Ms. Gray. 3:15 Customer survey results, Ms. Ito. 3:45 Questions and close.",
+   "q": "Who will present the October sales statistics?",
+   "o": [
+    "Mr. Reyes",
+    "Ms. Gray",
+    "Ms. Ito",
+    "Mr. Gray"
+   ],
+   "a": "Mr. Reyes",
+   "key": "2:00 October sales statistics, presented by Mr. Reyes.",
+   "why": "Dòng 2:00 ghi Mr. Reyes trình bày số liệu bán hàng tháng 10 (sales statistics).",
+   "wrong": {
+    "Ms. Gray": "Ms. Gray cập nhật sản phẩm mới lúc 2:30.",
+    "Ms. Ito": "Ms. Ito báo cáo kết quả khảo sát khách hàng lúc 3:15.",
+    "Mr. Gray": "Bẫy ghép nhầm: bài có Ms. Gray, không có Mr. Gray."
+   },
+   "tip": "Agenda: mỗi dòng gồm giờ – chủ đề – người trình bày."
+  },
+  {
+   "w": "accustom",
+   "kind": "memo",
+   "title": "MEMO: New expense system",
+   "p": "Starting October 1, all expense reports must be submitted through the new online system. To help staff get accustomed to it, Ms. Chen will lead a short training session in Room 204 on September 24 at 3 p.m.",
+   "q": "When will the training session be held?",
+   "o": [
+    "September 24",
+    "October 1",
+    "September 4",
+    "October 24"
+   ],
+   "a": "September 24",
+   "key": "Ms. Chen will lead a short training session in Room 204 on September 24 at 3 p.m.",
+   "why": "Câu cuối ghi buổi tập huấn do Ms. Chen phụ trách diễn ra ngày 24/9, lúc 3 giờ chiều, ở phòng 204.",
+   "wrong": {
+    "October 1": "Đây là ngày bắt đầu dùng hệ thống mới, không phải ngày tập huấn.",
+    "September 4": "Bẫy nhớ nhầm số: bài ghi ngày 24, còn 204 là số phòng.",
+    "October 24": "Bẫy ghép: lấy tháng 10 của ngày áp dụng ghép với số 24."
+   },
+   "tip": "Bài có hai mốc ngày: ngày áp dụng và ngày tập huấn. Nhớ gắn ngày với việc."
+  },
+  {
+   "w": "administer",
+   "kind": "notice",
+   "title": "SAFETY CERTIFICATION EXAM",
+   "p": "The annual safety certification exam will be administered on Thursday, March 12, in the second-floor training room. Doors open at 8:30 a.m., and the exam begins at 9:00 a.m. Please bring your employee ID card.",
+   "q": "What time does the exam begin?",
+   "o": [
+    "9:00 a.m.",
+    "8:30 a.m.",
+    "9:30 a.m.",
+    "12:00 p.m."
+   ],
+   "a": "9:00 a.m.",
+   "key": "Doors open at 8:30 a.m., and the exam begins at 9:00 a.m.",
+   "why": "Bài ghi phòng thi mở cửa lúc 8:30, còn bài thi bắt đầu lúc 9 giờ sáng (the exam begins at 9:00 a.m.).",
+   "wrong": {
+    "8:30 a.m.": "Đây là giờ mở cửa phòng thi, không phải giờ bắt đầu thi.",
+    "9:30 a.m.": "Bẫy ghép: lấy số 9 của giờ thi với :30 của giờ mở cửa.",
+    "12:00 p.m.": "Bẫy số 12: đó là ngày 12/3, không phải giờ."
+   },
+   "tip": "Phân biệt 'doors open' (mở cửa) với 'begins' (bắt đầu)."
+  },
+  {
+   "w": "advancement",
+   "kind": "schedule",
+   "title": "SEMINAR PROGRAM",
+   "p": "Career Advancement Seminar, May 14. 9:00 a.m. Registration (Lobby). 9:30 a.m. Building leadership skills, Ms. Patel (Room 201). 11:00 a.m. Asking for a promotion, Mr. Wong (Room 105). 12:30 p.m. Lunch (Cafeteria).",
+   "q": "Where is the session on asking for a promotion?",
+   "o": [
+    "Room 105",
+    "Room 201",
+    "Room 150",
+    "The Lobby"
+   ],
+   "a": "Room 105",
+   "key": "11:00 a.m. Asking for a promotion, Mr. Wong (Room 105).",
+   "why": "Lịch ghi phần 'Asking for a promotion' của Mr. Wong lúc 11 giờ sáng ở phòng 105.",
+   "wrong": {
+    "Room 201": "Đây là phòng của phần kỹ năng lãnh đạo do Ms. Patel phụ trách.",
+    "Room 150": "Bẫy đảo chữ số: bài ghi phòng 105.",
+    "The Lobby": "Sảnh là nơi đăng ký lúc 9 giờ."
+   },
+   "tip": "Đọc lịch theo từng dòng: giờ – nội dung – người – phòng."
+  },
+  {
+   "w": "advisory",
+   "kind": "notice",
+   "title": "NOTICE: Early closing today",
+   "p": "Because of a snow advisory issued for this afternoon, the office will close at 3:00 p.m. today instead of 6:00 p.m. The shuttle bus will leave from the north entrance at 3:15 p.m. Staff may work from home tomorrow if needed.",
+   "q": "What time will the office close today?",
+   "o": [
+    "3:00 p.m.",
+    "6:00 p.m.",
+    "3:15 p.m.",
+    "5:00 p.m."
+   ],
+   "a": "3:00 p.m.",
+   "key": "the office will close at 3:00 p.m. today instead of 6:00 p.m.",
+   "why": "Vì có cảnh báo tuyết, hôm nay văn phòng đóng cửa lúc 3 giờ chiều thay vì 6 giờ như mọi ngày.",
+   "wrong": {
+    "6:00 p.m.": "Đây là giờ đóng cửa thường ngày, đã bị thay (instead of 6:00 p.m.).",
+    "3:15 p.m.": "Đây là giờ xe đưa đón rời lối vào phía bắc.",
+    "5:00 p.m.": "Bài không nhắc tới 5 giờ chiều."
+   },
+   "tip": "Sau 'instead of' là thông tin cũ đã bị thay, không phải đáp án."
+  },
+  {
+   "w": "breakdown",
+   "kind": "email",
+   "title": "Subject: Trade fair budget",
+   "p": "Hi Ken, I've attached a cost breakdown for the trade fair booth. The total comes to $4,800, which is $300 under our budget. Could you review it and send me your comments by Wednesday? I'll present it to the director on Friday.",
+   "q": "What is the total cost of the booth?",
+   "o": [
+    "$4,800",
+    "$5,100",
+    "$4,500",
+    "$300"
+   ],
+   "a": "$4,800",
+   "key": "The total comes to $4,800, which is $300 under our budget.",
+   "why": "Email ghi tổng chi phí gian hàng là 4.800 đô, thấp hơn ngân sách 300 đô.",
+   "wrong": {
+    "$5,100": "Bẫy cộng số: 4.800 + 300 là mức ngân sách, không phải chi phí.",
+    "$4,500": "Bẫy trừ số: bài không nói chi phí là 4.500 đô.",
+    "$300": "Đây là số tiền thấp hơn ngân sách, không phải tổng chi phí."
+   }
+  },
+  {
+   "w": "circulation",
+   "kind": "memo",
+   "title": "MEMO: Newsletter changes",
+   "p": "Thanks to strong demand, our monthly newsletter's circulation has grown to 5,000 copies. Starting in June, it will be printed on the 1st of each month instead of the 15th. Article ideas should be sent to Ms. Romero in Marketing.",
+   "q": "Starting in June, when will the newsletter be printed?",
+   "o": [
+    "On the 1st of each month",
+    "On the 15th of each month",
+    "On the 5th of each month",
+    "At the end of each month"
+   ],
+   "a": "On the 1st of each month",
+   "key": "it will be printed on the 1st of each month instead of the 15th",
+   "why": "Ghi nhớ nói từ tháng 6, bản tin được in vào ngày 1 hằng tháng thay cho ngày 15.",
+   "wrong": {
+    "On the 15th of each month": "Đây là ngày in cũ, đã bị thay (instead of the 15th).",
+    "On the 5th of each month": "Bẫy số 5: 5.000 là số bản phát hành.",
+    "At the end of each month": "Bài không nhắc tới cuối tháng."
+   }
+  },
+  {
+   "w": "consultation",
+   "kind": "ad",
+   "title": "HOME DESIGN STUDIO",
+   "p": "Planning a new look for your home? Book a free 30-minute consultation with one of our designers. We are open Tuesday to Saturday, 10 a.m. to 7 p.m. Customers who sign up this month will receive 15% off their first order.",
+   "q": "How long is the free consultation?",
+   "o": [
+    "30 minutes",
+    "15 minutes",
+    "One hour",
+    "10 minutes"
+   ],
+   "a": "30 minutes",
+   "key": "Book a free 30-minute consultation with one of our designers.",
+   "why": "Quảng cáo ghi buổi tư vấn miễn phí với nhà thiết kế kéo dài 30 phút (a free 30-minute consultation).",
+   "wrong": {
+    "15 minutes": "Bẫy số 15: đó là mức giảm 15% cho đơn hàng đầu tiên.",
+    "One hour": "Bài không nhắc tới thời lượng một giờ.",
+    "10 minutes": "Bẫy số 10: đó là giờ mở cửa 10 giờ sáng."
+   }
+  },
+  {
+   "w": "conversion",
+   "kind": "notice",
+   "title": "NOTICE: Fourth-floor changes",
+   "p": "The conversion of the fourth-floor storage room into a quiet work area will begin on Monday. Items stored there must be moved to Room 112 by Friday at noon. Questions may be directed to Mr. Owens at extension 418.",
+   "q": "Where must the stored items be moved?",
+   "o": [
+    "Room 112",
+    "Room 418",
+    "The quiet work area",
+    "Room 121"
+   ],
+   "a": "Room 112",
+   "key": "Items stored there must be moved to Room 112 by Friday at noon.",
+   "why": "Bài yêu cầu chuyển đồ trong kho sang phòng 112 trước trưa thứ Sáu.",
+   "wrong": {
+    "Room 418": "Bẫy số: 418 là số máy lẻ của Mr. Owens, không phải số phòng.",
+    "The quiet work area": "Đây là khu mà nhà kho sẽ được cải tạo thành, không phải nơi chuyển đồ đến.",
+    "Room 121": "Bẫy đảo chữ số: bài ghi phòng 112."
+   }
+  },
+  {
+   "w": "coordinator",
+   "kind": "text",
+   "title": "Text from Ms. Lee",
+   "p": "Hi Sam, the event coordinator just called. The client dinner has moved from 6:30 to 7:00 p.m., but it's still in the Garden Room. Can you pick up the name cards from the front desk before 5? Thanks!",
+   "q": "What time will the client dinner start now?",
+   "o": [
+    "7:00 p.m.",
+    "6:30 p.m.",
+    "5:00 p.m.",
+    "7:30 p.m."
+   ],
+   "a": "7:00 p.m.",
+   "key": "The client dinner has moved from 6:30 to 7:00 p.m.",
+   "why": "Tin nhắn báo bữa tối với khách đã dời từ 6:30 sang 7 giờ tối, vẫn ở Garden Room.",
+   "wrong": {
+    "6:30 p.m.": "Đây là giờ cũ trước khi dời lịch (moved from 6:30).",
+    "5:00 p.m.": "Đây là hạn lấy thẻ tên ở quầy lễ tân.",
+    "7:30 p.m.": "Bẫy ghép: lấy 7 giờ mới với :30 của giờ cũ."
+   },
+   "tip": "'moved from A to B': B mới là thông tin hiện tại."
+  },
+  {
+   "w": "disruption",
+   "kind": "notice",
+   "title": "NOTICE: Elevator maintenance",
+   "p": "The building's elevators will undergo maintenance on Sunday, June 9, from 8 a.m. to 2 p.m. To minimize disruption, only one elevator will be stopped at a time. The freight elevator near Gate C will remain available all day.",
+   "q": "What time will the maintenance end?",
+   "o": [
+    "2 p.m.",
+    "8 a.m.",
+    "9 a.m.",
+    "12 p.m."
+   ],
+   "a": "2 p.m.",
+   "key": "on Sunday, June 9, from 8 a.m. to 2 p.m.",
+   "why": "Bài ghi bảo trì thang máy từ 8 giờ sáng đến 2 giờ chiều, nên kết thúc lúc 2 giờ chiều.",
+   "wrong": {
+    "8 a.m.": "Đây là giờ bắt đầu bảo trì.",
+    "9 a.m.": "Bẫy số 9: đó là ngày 9/6.",
+    "12 p.m.": "Bài không nhắc tới 12 giờ trưa."
+   }
+  },
+  {
+   "w": "dividend",
+   "kind": "email",
+   "title": "Subject: Dividend payment",
+   "p": "Dear shareholders, the board has approved a dividend of $1.20 per share, up from $1.05 last year. Payments will be made on April 30 to shareholders of record as of April 15. Details are available on our investor page.",
+   "q": "How much is this year's dividend per share?",
+   "o": [
+    "$1.20",
+    "$1.05",
+    "$1.15",
+    "$0.15"
+   ],
+   "a": "$1.20",
+   "key": "the board has approved a dividend of $1.20 per share, up from $1.05 last year",
+   "why": "Email ghi hội đồng quản trị duyệt cổ tức 1,20 đô mỗi cổ phiếu, tăng từ 1,05 đô năm ngoái.",
+   "wrong": {
+    "$1.05": "Đây là mức cổ tức năm ngoái (up from $1.05).",
+    "$1.15": "Bẫy số 15: đó là ngày chốt danh sách cổ đông 15/4.",
+    "$0.15": "Đây là mức tăng so với năm ngoái, không phải mức cổ tức."
+   },
+   "tip": "'up from' đứng trước con số cũ; con số mới nằm ngay trước nó."
+  },
+  {
+   "w": "donor",
+   "kind": "notice",
+   "title": "BOOK DONATION DRIVE",
+   "p": "Our library is collecting gently used children's books until November 20. Donors should bring books to the information desk on the first floor, not the return box at the entrance. All books will be given to local schools.",
+   "q": "Where should donors bring their books?",
+   "o": [
+    "The information desk",
+    "The return box",
+    "A local school",
+    "The second-floor desk"
+   ],
+   "a": "The information desk",
+   "key": "Donors should bring books to the information desk on the first floor",
+   "why": "Bài dặn người tặng sách mang tới quầy thông tin ở tầng 1, không bỏ vào hộp trả sách.",
+   "wrong": {
+    "The return box": "Bài nói rõ không bỏ vào hộp trả sách ở lối vào (not the return box).",
+    "A local school": "Trường học là nơi sách được chuyển tới sau, không phải nơi nộp.",
+    "The second-floor desk": "Bẫy nhớ nhầm tầng: quầy thông tin ở tầng 1."
+   }
+  },
+  {
+   "w": "enthusiastic",
+   "kind": "email",
+   "title": "Subject: Job offer",
+   "p": "Dear Ms. Kim, thank you for your enthusiastic presentation last Tuesday. We are pleased to offer you the position of marketing assistant. Your first day will be Monday, July 8, and orientation starts at 9:30 a.m. in Room 5B.",
+   "q": "When is Ms. Kim's first day of work?",
+   "o": [
+    "Monday, July 8",
+    "Last Tuesday",
+    "Monday, July 5",
+    "Tuesday, July 9"
+   ],
+   "a": "Monday, July 8",
+   "key": "Your first day will be Monday, July 8",
+   "why": "Email ghi ngày làm việc đầu tiên là thứ Hai, 8/7; buổi định hướng bắt đầu lúc 9:30 sáng.",
+   "wrong": {
+    "Last Tuesday": "Đây là ngày cô Kim thuyết trình, không phải ngày đi làm.",
+    "Monday, July 5": "Bẫy số 5: đó là tên phòng 5B.",
+    "Tuesday, July 9": "Bẫy nhớ nhầm: bài ghi thứ Hai, ngày 8."
+   }
+  },
+  {
+   "w": "fabric",
+   "kind": "ad",
+   "title": "SUMMER FABRIC SALE",
+   "p": "Our summer fabric sale runs from June 3 to June 16. All cotton fabrics are 40% off, and linen is 25% off. Free sewing classes are held every Saturday at 11 a.m. Visit us at 22 Harbor Street.",
+   "q": "What is the discount on linen?",
+   "o": [
+    "25%",
+    "40%",
+    "22%",
+    "16%"
+   ],
+   "a": "25%",
+   "key": "All cotton fabrics are 40% off, and linen is 25% off.",
+   "why": "Quảng cáo ghi vải lanh (linen) giảm 25%; mức 40% là của vải cotton.",
+   "wrong": {
+    "40%": "Đây là mức giảm cho vải cotton, không phải vải lanh.",
+    "22%": "Bẫy số 22: đó là số nhà trên Harbor Street.",
+    "16%": "Bẫy số 16: đó là ngày kết thúc đợt giảm giá 16/6."
+   }
+  },
+  {
+   "w": "lengthy",
+   "kind": "memo",
+   "title": "MEMO: Weekly meetings",
+   "p": "Many staff members feel our weekly meetings have become too lengthy. Starting next week, they will be cut from 90 to 45 minutes and will still begin at 9:30 a.m. Please send agenda items to Ms. Ito by Monday at noon.",
+   "q": "How long will the weekly meetings be from next week?",
+   "o": [
+    "45 minutes",
+    "90 minutes",
+    "30 minutes",
+    "60 minutes"
+   ],
+   "a": "45 minutes",
+   "key": "they will be cut from 90 to 45 minutes",
+   "why": "Ghi nhớ nói từ tuần sau, cuộc họp hằng tuần được rút từ 90 xuống 45 phút.",
+   "wrong": {
+    "90 minutes": "Đây là thời lượng cũ trước khi rút ngắn (cut from 90).",
+    "30 minutes": "Bẫy số 30: đó là giờ bắt đầu 9:30 sáng.",
+    "60 minutes": "Bài không nhắc tới 60 phút."
+   }
+  },
+  {
+   "w": "lunchtime",
+   "kind": "schedule",
+   "title": "FACTORY VISIT ITINERARY",
+   "p": "8:30 a.m. Bus leaves from the hotel's main gate. 10:00 a.m. Guided factory tour. 12:15 p.m. Lunchtime break at the Visitor Café. 1:30 p.m. Product demonstration (Hall C). 4:00 p.m. Bus returns to the hotel.",
+   "q": "Where will the lunchtime break take place?",
+   "o": [
+    "The Visitor Café",
+    "The hotel restaurant",
+    "Hall C",
+    "The main gate"
+   ],
+   "a": "The Visitor Café",
+   "key": "12:15 p.m. Lunchtime break at the Visitor Café.",
+   "why": "Lịch trình ghi giờ nghỉ trưa lúc 12:15 diễn ra ở Visitor Café.",
+   "wrong": {
+    "The hotel restaurant": "Khách sạn chỉ là nơi xe đón và trả khách.",
+    "Hall C": "Đây là nơi trình diễn sản phẩm lúc 1:30.",
+    "The main gate": "Đây là điểm xe buýt khởi hành lúc 8:30."
+   }
+  },
+  {
+   "w": "postcard",
+   "kind": "ad",
+   "title": "CUSTOM POSTCARD PRINTING",
+   "p": "Promote your business with custom postcards! Orders of 500 postcards cost just $89, and orders of 1,000 cost $149. Most orders are ready in three business days. Order before May 31 to get free delivery.",
+   "q": "How much does an order of 1,000 postcards cost?",
+   "o": [
+    "$149",
+    "$89",
+    "$178",
+    "$139"
+   ],
+   "a": "$149",
+   "key": "orders of 1,000 cost $149",
+   "why": "Quảng cáo ghi đơn 1.000 tấm bưu thiếp giá 149 đô; 89 đô là giá đơn 500 tấm.",
+   "wrong": {
+    "$89": "Đây là giá cho đơn 500 tấm.",
+    "$178": "Bẫy nhân đôi giá đơn 500 tấm (89 × 2).",
+    "$139": "Bẫy gần giống: bài ghi 149 đô, không phải 139."
+   }
+  },
+  {
+   "w": "quarterly",
+   "kind": "memo",
+   "title": "MEMO: Quarterly reports",
+   "p": "All department heads must submit their quarterly reports by Friday, October 4. Please send them to Mr. Silva in Finance rather than to your direct manager. The results will be discussed at the board meeting on October 18.",
+   "q": "To whom should the reports be sent?",
+   "o": [
+    "Mr. Silva in Finance",
+    "Their direct managers",
+    "The board members",
+    "The department heads"
+   ],
+   "a": "Mr. Silva in Finance",
+   "key": "Please send them to Mr. Silva in Finance rather than to your direct manager.",
+   "why": "Ghi nhớ yêu cầu gửi báo cáo cho Mr. Silva ở phòng Tài chính, không gửi cho quản lý trực tiếp.",
+   "wrong": {
+    "Their direct managers": "Bài nói rõ không gửi cho quản lý trực tiếp (rather than).",
+    "The board members": "Hội đồng chỉ thảo luận kết quả ở cuộc họp ngày 18/10.",
+    "The department heads": "Trưởng phòng là người nộp báo cáo, không phải người nhận."
+   }
+  },
+  {
+   "w": "referral",
+   "kind": "ad",
+   "title": "MAPLE FITNESS CLUB",
+   "p": "Bring a friend and save! For every successful referral, you will receive one free month of membership, and your friend will get 50% off the joining fee. Membership starts at $35 per month. Offer ends August 31.",
+   "q": "What do members get for each successful referral?",
+   "o": [
+    "One free month of membership",
+    "50% off the joining fee",
+    "$35 off",
+    "A free training session"
+   ],
+   "a": "One free month of membership",
+   "key": "For every successful referral, you will receive one free month of membership",
+   "why": "Quảng cáo ghi mỗi lượt giới thiệu thành công, hội viên được tặng một tháng tập miễn phí.",
+   "wrong": {
+    "50% off the joining fee": "Đây là ưu đãi dành cho người bạn được giới thiệu.",
+    "$35 off": "Bẫy số 35: đó là giá hội viên mỗi tháng.",
+    "A free training session": "Bài không nhắc tới buổi tập miễn phí."
+   }
+  },
+  {
+   "w": "remodel",
+   "kind": "text",
+   "title": "Text from Mr. Dawson",
+   "p": "Hi Ana, the contractor says the lobby remodel will finish on Thursday, not Tuesday as planned. The new chairs arrive tomorrow at 8 a.m. Could you open the side door for the delivery crew? I'll be in meetings until 2.",
+   "q": "What is Ana asked to do?",
+   "o": [
+    "Open the side door",
+    "Call the contractor",
+    "Pick up the new chairs",
+    "Join a meeting at 2"
+   ],
+   "a": "Open the side door",
+   "key": "Could you open the side door for the delivery crew?",
+   "why": "Tin nhắn nhờ Ana mở cửa hông cho đội giao hàng (Could you open the side door...?).",
+   "wrong": {
+    "Call the contractor": "Nhà thầu chỉ là người báo tin, Ana không được nhờ gọi.",
+    "Pick up the new chairs": "Ghế mới được giao tới tận nơi, Ana không phải đi lấy.",
+    "Join a meeting at 2": "Người gửi họp tới 2 giờ, Ana không được mời họp."
+   },
+   "tip": "Câu hỏi về việc được nhờ: tìm câu bắt đầu bằng Could you / Can you / Please."
+  },
+  {
+   "w": "seeker",
+   "kind": "schedule",
+   "title": "SPRING JOB FAIR – APRIL 6",
+   "p": "10:00 a.m. Registration (Main Lobby). 10:30 a.m. Talk for job seekers: writing a strong résumé (Room 2). 1:00 p.m. Interviews with employers (Hall B). 3:30 p.m. Career advice sessions (Room 4).",
+   "q": "What time do the interviews with employers begin?",
+   "o": [
+    "1:00 p.m.",
+    "10:30 a.m.",
+    "3:30 p.m.",
+    "10:00 a.m."
+   ],
+   "a": "1:00 p.m.",
+   "key": "1:00 p.m. Interviews with employers (Hall B).",
+   "why": "Lịch ghi phần phỏng vấn với nhà tuyển dụng bắt đầu lúc 1 giờ chiều ở Hall B.",
+   "wrong": {
+    "10:30 a.m.": "Đây là giờ buổi nói chuyện về cách viết sơ yếu lý lịch.",
+    "3:30 p.m.": "Đây là giờ các buổi tư vấn nghề nghiệp.",
+    "10:00 a.m.": "Đây là giờ bắt đầu đăng ký."
+   }
+  },
+  {
+   "w": "spacious",
+   "kind": "ad",
+   "title": "OFFICE FOR RENT",
+   "p": "A spacious 120-square-meter office is available on the third floor of the Oakwood Building. Rent is $2,400 per month, including electricity. Parking costs $80 extra, and the space comes unfurnished. Call Ms. Grant at 555-0147 to arrange a viewing.",
+   "q": "What is included in the rent?",
+   "o": [
+    "Electricity",
+    "Parking",
+    "Furniture",
+    "Internet service"
+   ],
+   "a": "Electricity",
+   "key": "Rent is $2,400 per month, including electricity.",
+   "why": "Quảng cáo ghi tiền thuê 2.400 đô mỗi tháng đã bao gồm tiền điện (including electricity).",
+   "wrong": {
+    "Parking": "Đỗ xe phải trả thêm 80 đô (Parking costs $80 extra).",
+    "Furniture": "Bài nói văn phòng không có sẵn nội thất (unfurnished).",
+    "Internet service": "Bài không nhắc tới internet."
+   }
+  },
+  {
+   "w": "unavailable",
+   "kind": "text",
+   "title": "Text from Ms. Moreno",
+   "p": "Hi Jake, Conference Room A is unavailable this afternoon because of a client visit. I've booked Room C on the fifth floor for our 3:30 meeting instead. Please bring the sales figures and ten printed copies of the agenda.",
+   "q": "Where will the 3:30 meeting be held?",
+   "o": [
+    "Room C on the fifth floor",
+    "Conference Room A",
+    "Room C on the third floor",
+    "Room A on the fifth floor"
+   ],
+   "a": "Room C on the fifth floor",
+   "key": "I've booked Room C on the fifth floor for our 3:30 meeting instead.",
+   "why": "Tin nhắn nói phòng A bận vì có khách tới, nên đã đặt phòng C ở tầng 5 cho cuộc họp 3:30.",
+   "wrong": {
+    "Conference Room A": "Phòng A bận suốt chiều nay vì có khách tới thăm.",
+    "Room C on the third floor": "Bẫy số 3 của giờ họp 3:30; phòng C ở tầng 5.",
+    "Room A on the fifth floor": "Bẫy ghép: tên phòng A (đang bận) với tầng 5 của phòng C."
+   }
+  },
+  {
+   "w": "vase",
+   "kind": "ad",
+   "title": "GRAND OPENING SALE",
+   "p": "Celebrate the grand opening of our home goods store at 14 Pine Avenue! All glass vases are $12 each, down from $20. The first 50 customers on Saturday will receive a free candle. We open at 9 a.m. and close at 8 p.m.",
+   "q": "How much is a glass vase during the opening sale?",
+   "o": [
+    "$12",
+    "$20",
+    "$14",
+    "$8"
+   ],
+   "a": "$12",
+   "key": "All glass vases are $12 each, down from $20.",
+   "why": "Quảng cáo ghi bình thuỷ tinh giá 12 đô mỗi chiếc, giảm từ 20 đô.",
+   "wrong": {
+    "$20": "Đây là giá cũ trước khi giảm (down from $20).",
+    "$14": "Bẫy số 14: đó là số nhà trên Pine Avenue.",
+    "$8": "Đây là số tiền được giảm (20 − 12), cũng trùng giờ đóng cửa 8 giờ tối."
+   },
+   "tip": "Quảng cáo hay có hai giá: nhớ giá nào là giá đang bán."
+  },
+  {
+   "w": "steer",
+   "kind": "email",
+   "title": "Subject: Recycling program",
+   "p": "Dear all, Ms. Alvarez from Facilities will steer our new office recycling program, which begins on March 3. Sorting bins will be placed next to each kitchen. Please attend a 20-minute briefing in Room 310 on February 27 at 11 a.m.",
+   "q": "When does the recycling program begin?",
+   "o": [
+    "March 3",
+    "February 27",
+    "March 27",
+    "March 20"
+   ],
+   "a": "March 3",
+   "key": "our new office recycling program, which begins on March 3",
+   "why": "Email ghi chương trình tái chế do Ms. Alvarez phụ trách bắt đầu ngày 3/3; 27/2 là ngày họp phổ biến.",
+   "wrong": {
+    "February 27": "Đây là ngày họp phổ biến, không phải ngày bắt đầu chương trình.",
+    "March 27": "Bẫy ghép: tháng 3 của ngày bắt đầu với số 27 của ngày họp.",
+    "March 20": "Bẫy số 20: đó là thời lượng buổi họp 20 phút."
+   }
+  },
+  {
+   "w": "accelerate",
+   "kind": "memo",
+   "title": "MEMO: Expense reports",
+   "p": "To accelerate reimbursement, the Finance Department will accept expense reports online starting March 3. Paper forms will no longer be processed after March 14. Questions should be directed to Ms. Ortiz in Room 210.",
+   "q": "When will the Finance Department start accepting reports online?",
+   "o": [
+    "March 3",
+    "March 14",
+    "March 30",
+    "May 3"
+   ],
+   "a": "March 3",
+   "key": "will accept expense reports online starting March 3",
+   "why": "Bản ghi nhớ nói phòng Tài chính nhận báo cáo chi phí trực tuyến bắt đầu từ ngày 3/3 (starting March 3).",
+   "wrong": {
+    "March 14": "Đây là ngày ngừng xử lý mẫu giấy, không phải ngày bắt đầu nộp online.",
+    "March 30": "Bẫy nhìn gần giống: bài ghi ngày 3, không phải 30.",
+    "May 3": "Bẫy đổi tháng: bài ghi tháng Ba (March), không phải tháng Năm."
+   },
+   "tip": "Bài có hai mốc ngày: gắn mỗi ngày với cụm đi kèm (starting / after)."
+  },
+  {
+   "w": "amateur",
+   "kind": "ad",
+   "title": "AMATEUR PHOTO CONTEST",
+   "p": "The Riverside Arts Center invites amateur photographers to enter its annual contest. Entries are due by June 20, and the entry fee is $15. Winners will be announced on July 5 and receive a $200 gift card.",
+   "q": "What is the deadline for contest entries?",
+   "o": [
+    "June 20",
+    "July 5",
+    "June 5",
+    "July 20"
+   ],
+   "a": "June 20",
+   "key": "Entries are due by June 20",
+   "why": "Quảng cáo ghi bài dự thi phải nộp trước ngày 20/6 (Entries are due by June 20).",
+   "wrong": {
+    "July 5": "Đây là ngày công bố người thắng giải, không phải hạn nộp.",
+    "June 5": "Bẫy ghép nhầm: tháng của hạn nộp với ngày của lễ công bố.",
+    "July 20": "Bẫy ghép nhầm: tháng của lễ công bố với ngày của hạn nộp."
+   },
+   "tip": "due by = hạn chót; announced = ngày công bố. Đừng lẫn hai mốc."
+  },
+  {
+   "w": "bulk",
+   "kind": "ad",
+   "title": "OFFICE SUPPLY SALE",
+   "p": "Save on bulk orders at Maple Office Supply this month. Customers who buy 50 or more boxes of paper receive 20 percent off, and orders over $300 ship free. The offer ends on Saturday, October 12.",
+   "q": "How many boxes must customers buy to get the discount?",
+   "o": [
+    "50 or more",
+    "20 or more",
+    "12 or more",
+    "30 or more"
+   ],
+   "a": "50 or more",
+   "key": "Customers who buy 50 or more boxes of paper receive 20 percent off",
+   "why": "Quảng cáo ghi khách mua từ 50 hộp giấy trở lên được giảm 20% (buy 50 or more boxes).",
+   "wrong": {
+    "20 or more": "20 là mức giảm giá (20 percent off), không phải số hộp.",
+    "12 or more": "12 là ngày kết thúc ưu đãi (October 12).",
+    "30 or more": "Bẫy nhớ nhầm từ con số $300, mức đơn hàng được miễn phí giao."
+   },
+   "tip": "Bài nhiều con số: gắn mỗi số với danh từ ngay sau nó (boxes, percent, $)."
+  },
+  {
+   "w": "conveniently",
+   "kind": "ad",
+   "title": "NOW OPEN: GREENLEAF BAKERY",
+   "p": "Greenleaf Bakery is now open at 48 Harbor Street, conveniently located next to the Central Library. We open at 7 a.m. on weekdays and 8 a.m. on weekends. Show this ad for a free coffee with any pastry.",
+   "q": "What time does the bakery open on weekends?",
+   "o": [
+    "8 a.m.",
+    "7 a.m.",
+    "9 a.m.",
+    "8:30 a.m."
+   ],
+   "a": "8 a.m.",
+   "key": "8 a.m. on weekends",
+   "why": "Quảng cáo ghi tiệm mở cửa 7 giờ sáng ngày thường và 8 giờ sáng cuối tuần (8 a.m. on weekends).",
+   "wrong": {
+    "7 a.m.": "Đây là giờ mở cửa ngày thường (weekdays).",
+    "9 a.m.": "Bài không nhắc tới 9 giờ.",
+    "8:30 a.m.": "Bẫy gần giống: bài ghi đúng 8 giờ, không có 30 phút."
+   },
+   "tip": "Hai giờ mở cửa: phân biệt weekdays (ngày thường) và weekends (cuối tuần)."
+  },
+  {
+   "w": "culinary",
+   "kind": "schedule",
+   "title": "Culinary Workshop Schedule",
+   "p": "Saturday Culinary Workshop, Room 4: 9:00 a.m. Knife skills with Chef Moreno. 10:30 a.m. Fresh pasta with Chef Lin. 12:00 p.m. Lunch break. 1:00 p.m. Simple desserts with Chef Moreno.",
+   "q": "What time does the fresh pasta session start?",
+   "o": [
+    "10:30 a.m.",
+    "9:00 a.m.",
+    "1:00 p.m.",
+    "12:00 p.m."
+   ],
+   "a": "10:30 a.m.",
+   "key": "10:30 a.m. Fresh pasta with Chef Lin",
+   "why": "Lịch ghi buổi làm mì tươi (Fresh pasta) bắt đầu lúc 10:30 sáng, do đầu bếp Lin dạy.",
+   "wrong": {
+    "9:00 a.m.": "Đây là giờ buổi kỹ năng dùng dao (Knife skills).",
+    "1:00 p.m.": "Đây là giờ buổi làm món tráng miệng (Simple desserts).",
+    "12:00 p.m.": "Đây là giờ nghỉ trưa (Lunch break)."
+   },
+   "tip": "Lịch trình: nhớ theo cặp giờ – hoạt động, đừng chỉ nhớ con số."
+  },
+  {
+   "w": "disrupt",
+   "kind": "notice",
+   "title": "NOTICE: Elevator maintenance",
+   "p": "Maintenance work on the east elevators may disrupt service on Thursday from 10 a.m. to 2 p.m. During this time, please use the west elevators or the stairs. The freight elevator will remain available for deliveries.",
+   "q": "Which elevators may have service disrupted on Thursday?",
+   "o": [
+    "The east elevators",
+    "The west elevators",
+    "The freight elevator",
+    "The north elevators"
+   ],
+   "a": "The east elevators",
+   "key": "Maintenance work on the east elevators may disrupt service",
+   "why": "Thông báo ghi việc bảo trì thang máy phía đông (east elevators) có thể làm gián đoạn dịch vụ thứ Năm.",
+   "wrong": {
+    "The west elevators": "Đây là thang máy được khuyên dùng thay thế trong lúc bảo trì.",
+    "The freight elevator": "Thang chở hàng vẫn hoạt động bình thường cho việc giao hàng.",
+    "The north elevators": "Bài không nhắc tới thang máy phía bắc."
+   },
+   "tip": "disrupt = làm gián đoạn: tìm danh từ đứng trước cụm này."
+  },
+  {
+   "w": "durable",
+   "kind": "ad",
+   "title": "LAPTOP BACKPACK SALE",
+   "p": "Our durable laptop backpacks are now $38, down from $52. Each bag comes with a two-year warranty and fits laptops up to 15 inches. Order online by Sunday to receive free shipping.",
+   "q": "What is the current price of the backpacks?",
+   "o": [
+    "$38",
+    "$52",
+    "$15",
+    "$14"
+   ],
+   "a": "$38",
+   "key": "Our durable laptop backpacks are now $38, down from $52",
+   "why": "Câu đầu ghi ba lô hiện có giá $38, giảm từ $52.",
+   "wrong": {
+    "$52": "Là giá cũ trước khi giảm (down from $52).",
+    "$15": "Số 15 là cỡ laptop tối đa (15 inches), không phải giá.",
+    "$14": "Là số tiền được giảm, phải tự tính; bài không hỏi số này."
+   },
+   "tip": "now = giá hiện tại; down from / was = giá cũ."
+  },
+  {
+   "w": "exclusively",
+   "kind": "email",
+   "title": "Subject: Members-only preview",
+   "p": "Dear member, our new fall collection will be available exclusively to members from September 8 to 10. The store will open early at 8 a.m. on those days. Sales to the general public begin on September 11.",
+   "q": "When can the general public start buying the collection?",
+   "o": [
+    "September 11",
+    "September 8",
+    "September 10",
+    "September 18"
+   ],
+   "a": "September 11",
+   "key": "Sales to the general public begin on September 11",
+   "why": "Email ghi khách thường được mua từ ngày 11/9; ngày 8–10/9 chỉ dành riêng cho hội viên.",
+   "wrong": {
+    "September 8": "Đây là ngày bắt đầu đợt bán dành riêng cho hội viên.",
+    "September 10": "Đây là ngày cuối của đợt bán dành riêng cho hội viên.",
+    "September 18": "Bài không có ngày 18; bẫy lẫn số 8 và 11."
+   },
+   "tip": "exclusively to members = chỉ hội viên; câu hỏi về general public thì tìm mốc khác."
+  },
+  {
+   "w": "formally",
+   "kind": "memo",
+   "title": "MEMO: New sales director",
+   "p": "Ms. Grant, our new sales director, begins work on Wednesday. She will be formally introduced at the staff meeting on Friday at 3 p.m. in Conference Room A. Team leaders will meet with her individually next Monday.",
+   "q": "When will Ms. Grant be formally introduced?",
+   "o": [
+    "On Friday",
+    "On Wednesday",
+    "On Monday",
+    "On Thursday"
+   ],
+   "a": "On Friday",
+   "key": "She will be formally introduced at the staff meeting on Friday",
+   "why": "Bản ghi nhớ nói bà Grant được giới thiệu chính thức ở cuộc họp nhân viên thứ Sáu, 3 giờ chiều.",
+   "wrong": {
+    "On Wednesday": "Đây là ngày bà Grant bắt đầu đi làm.",
+    "On Monday": "Đây là ngày các trưởng nhóm gặp riêng bà Grant.",
+    "On Thursday": "Bài không nhắc tới thứ Năm."
+   },
+   "tip": "Ba thứ trong tuần, ba việc khác nhau: gắn mỗi thứ với động từ của nó."
+  },
+  {
+   "w": "frankly",
+   "kind": "text",
+   "title": "Text from Mr. Patel",
+   "p": "Hi Dana, I read the brochure draft. Frankly, the second page is too crowded, so please cut it to three short paragraphs. The cover looks great. Can you send the new version by 4 p.m. tomorrow?",
+   "q": "Which part of the brochure does Mr. Patel want changed?",
+   "o": [
+    "The second page",
+    "The cover",
+    "The third page",
+    "The back page"
+   ],
+   "a": "The second page",
+   "key": "Frankly, the second page is too crowded, so please cut it to three short paragraphs",
+   "why": "Ông Patel nói thẳng trang thứ hai quá dày chữ và nhờ rút lại còn ba đoạn ngắn.",
+   "wrong": {
+    "The cover": "Ông Patel khen trang bìa (looks great), không yêu cầu sửa.",
+    "The third page": "Bẫy số: three là số đoạn văn cần rút gọn, không phải số trang.",
+    "The back page": "Bài không nhắc tới trang cuối."
+   }
+  },
+  {
+   "w": "gallon",
+   "kind": "notice",
+   "title": "NOTICE: Drinking water",
+   "p": "Starting Monday, five-gallon water bottles will be delivered every Tuesday instead of Thursday. Empty bottles should be left beside the kitchen door on the third floor. Contact Mr. Ruiz at extension 214 with questions.",
+   "q": "On what day will water bottles be delivered from now on?",
+   "o": [
+    "Tuesday",
+    "Thursday",
+    "Monday",
+    "Wednesday"
+   ],
+   "a": "Tuesday",
+   "key": "will be delivered every Tuesday instead of Thursday",
+   "why": "Thông báo ghi từ thứ Hai này, bình nước 5 gallon được giao vào mỗi thứ Ba thay vì thứ Năm.",
+   "wrong": {
+    "Thursday": "Đây là ngày giao cũ, đã bị thay (instead of Thursday).",
+    "Monday": "Thứ Hai là ngày thay đổi bắt đầu áp dụng, không phải ngày giao.",
+    "Wednesday": "Bài không nhắc tới thứ Tư."
+   },
+   "tip": "A instead of B: A là cái mới, B là cái cũ bị thay."
+  },
+  {
+   "w": "glove",
+   "kind": "memo",
+   "title": "MEMO: Warehouse safety",
+   "p": "Beginning May 1, all warehouse staff must wear gloves when handling boxes in Zone C. New gloves can be picked up from the supply desk near Entrance 2. Safety glasses remain required in Zone D only.",
+   "q": "In which area must staff wear gloves?",
+   "o": [
+    "Zone C",
+    "Zone D",
+    "Entrance 2",
+    "Zone B"
+   ],
+   "a": "Zone C",
+   "key": "must wear gloves when handling boxes in Zone C",
+   "why": "Bản ghi nhớ yêu cầu nhân viên kho đeo găng tay khi bốc thùng hàng ở khu C (Zone C).",
+   "wrong": {
+    "Zone D": "Khu D là nơi bắt buộc đeo kính bảo hộ, không phải găng tay.",
+    "Entrance 2": "Đây là nơi gần quầy phát găng tay mới, không phải nơi bắt buộc đeo.",
+    "Zone B": "Bẫy chữ cái gần giống: bài ghi khu C."
+   }
+  },
+  {
+   "w": "hobby",
+   "kind": "schedule",
+   "title": "Hobby Classes: Fall Schedule",
+   "p": "Hobby classes at Oakwood Community Center: Painting, Mondays, 6 p.m., Room 3. Guitar, Wednesdays, 7 p.m., Room 5. Knitting, Fridays, 6 p.m., Room 3. Each class costs $10 per session. Register at the front desk.",
+   "q": "When is the guitar class held?",
+   "o": [
+    "Wednesdays at 7 p.m.",
+    "Mondays at 6 p.m.",
+    "Fridays at 6 p.m.",
+    "Wednesdays at 6 p.m."
+   ],
+   "a": "Wednesdays at 7 p.m.",
+   "key": "Guitar, Wednesdays, 7 p.m., Room 5",
+   "why": "Lịch ghi lớp guitar học vào thứ Tư lúc 7 giờ tối, ở phòng 5.",
+   "wrong": {
+    "Mondays at 6 p.m.": "Đây là lịch lớp vẽ (Painting).",
+    "Fridays at 6 p.m.": "Đây là lịch lớp đan len (Knitting).",
+    "Wednesdays at 6 p.m.": "Đúng thứ nhưng sai giờ: lớp guitar lúc 7 giờ, hai lớp kia mới lúc 6 giờ."
+   }
+  },
+  {
+   "w": "humidity",
+   "kind": "notice",
+   "title": "NOTICE: Archive room closed",
+   "p": "Because of high humidity, the basement archive room will be closed from June 2 to June 4 while new dehumidifiers are installed. During this time, staff may request copies of old files from Ms. Kim in Room 105.",
+   "q": "Where can staff request copies of old files?",
+   "o": [
+    "Room 105",
+    "Room 150",
+    "The archive room",
+    "The basement lobby"
+   ],
+   "a": "Room 105",
+   "key": "staff may request copies of old files from Ms. Kim in Room 105",
+   "why": "Thông báo ghi nhân viên cần bản sao hồ sơ cũ thì gặp chị Kim ở phòng 105.",
+   "wrong": {
+    "Room 150": "Bẫy đảo chữ số: bài ghi phòng 105.",
+    "The archive room": "Phòng lưu trữ đang đóng cửa vì độ ẩm cao.",
+    "The basement lobby": "Tầng hầm là nơi có phòng lưu trữ; bài không nhắc tới sảnh tầng hầm."
+   },
+   "tip": "Số phòng dễ bị đảo chữ số: đọc chậm từng chữ số một."
+  },
+  {
+   "w": "instruct",
+   "kind": "email",
+   "title": "Subject: Visitor check-in",
+   "p": "Dear team, building security has instructed us to send all visitors to the front desk on the first floor, not the fifth-floor reception area. Guests must show a photo ID. This rule takes effect on April 2.",
+   "q": "Where should visitors be sent when they arrive?",
+   "o": [
+    "The first-floor front desk",
+    "The fifth-floor reception area",
+    "The security office",
+    "The second-floor lobby"
+   ],
+   "a": "The first-floor front desk",
+   "key": "send all visitors to the front desk on the first floor",
+   "why": "Email ghi bảo vệ toà nhà yêu cầu đưa mọi khách tới quầy lễ tân tầng 1, không phải khu tiếp tân tầng 5.",
+   "wrong": {
+    "The fifth-floor reception area": "Bài nói rõ không đưa khách tới đây nữa (not the fifth-floor...).",
+    "The security office": "Bảo vệ là bên đưa ra yêu cầu, không phải nơi đón khách.",
+    "The second-floor lobby": "Bẫy số: 2 là ngày áp dụng (April 2), không phải tầng."
+   },
+   "tip": "Thấy cấu trúc A, not B thì đáp án là A."
+  },
+  {
+   "w": "introductory",
+   "kind": "ad",
+   "title": "HILLCREST FITNESS CLUB",
+   "p": "Join Hillcrest Fitness this month and pay an introductory rate of $25 for your first month. After that, memberships cost $40 per month. The offer is valid for new members only and ends on January 31.",
+   "q": "How much will new members pay for the first month?",
+   "o": [
+    "$25",
+    "$40",
+    "$31",
+    "$65"
+   ],
+   "a": "$25",
+   "key": "pay an introductory rate of $25 for your first month",
+   "why": "Quảng cáo ghi hội viên mới trả giá giới thiệu 25 đô cho tháng đầu tiên.",
+   "wrong": {
+    "$40": "Đây là phí hằng tháng từ tháng thứ hai trở đi (After that).",
+    "$31": "31 là ngày kết thúc ưu đãi (January 31), không phải giá.",
+    "$65": "Bẫy cộng hai mức giá 25 + 40; bài không có số này."
+   },
+   "tip": "introductory rate = giá ưu đãi lúc mới đăng ký, khác giá thường."
+  },
+  {
+   "w": "mileage",
+   "kind": "memo",
+   "title": "MEMO: Travel reimbursement",
+   "p": "Employees who use their own cars for business trips should submit a mileage form to Mr. Hassan in Accounting by the fifth of each month. The company pays 60 cents per mile. Parking receipts should be sent to Ms. Wu in Human Resources.",
+   "q": "Who should receive the mileage forms?",
+   "o": [
+    "Mr. Hassan",
+    "Ms. Wu",
+    "Mr. Hayes",
+    "A team manager"
+   ],
+   "a": "Mr. Hassan",
+   "key": "submit a mileage form to Mr. Hassan in Accounting",
+   "why": "Bản ghi nhớ yêu cầu nộp mẫu kê số dặm cho ông Hassan ở phòng Kế toán trước ngày 5 hằng tháng.",
+   "wrong": {
+    "Ms. Wu": "Chị Wu ở phòng Nhân sự chỉ nhận hoá đơn gửi xe.",
+    "Mr. Hayes": "Bẫy tên gần giống: bài ghi Mr. Hassan.",
+    "A team manager": "Bài không nhắc tới quản lý nhóm."
+   },
+   "tip": "Hai người, hai loại giấy tờ: gắn mỗi tên với thứ họ nhận."
+  },
+  {
+   "w": "shorten",
+   "kind": "notice",
+   "title": "NOTICE: Store hours",
+   "p": "Store hours will be shortened during inventory week. From March 3 to March 7, we will open at 10 a.m. and close at 5 p.m. instead of 9 p.m. Regular hours return on Saturday, March 8.",
+   "q": "What time will the store close during inventory week?",
+   "o": [
+    "5 p.m.",
+    "9 p.m.",
+    "10 p.m.",
+    "7 p.m."
+   ],
+   "a": "5 p.m.",
+   "key": "close at 5 p.m. instead of 9 p.m.",
+   "why": "Thông báo ghi trong tuần kiểm kho, cửa hàng đóng cửa lúc 5 giờ chiều thay vì 9 giờ tối.",
+   "wrong": {
+    "9 p.m.": "Đây là giờ đóng cửa bình thường, đã bị thay (instead of 9 p.m.).",
+    "10 p.m.": "10 là giờ mở cửa (10 a.m.), không phải giờ đóng.",
+    "7 p.m.": "7 là ngày cuối tuần kiểm kho (March 7), không phải giờ."
+   }
+  },
+  {
+   "w": "sketch",
+   "kind": "email",
+   "title": "Subject: Logo sketches",
+   "p": "Hi Ms. Lee, thank you for the three logo sketches. Our team prefers the second one, but we would like it in dark blue instead of green. Could you send the revised design by Thursday? We plan to print it on Monday.",
+   "q": "What color does the team want for the logo?",
+   "o": [
+    "Dark blue",
+    "Green",
+    "Light blue",
+    "Dark green"
+   ],
+   "a": "Dark blue",
+   "key": "we would like it in dark blue instead of green",
+   "why": "Email ghi nhóm chọn mẫu thứ hai nhưng muốn đổi sang màu xanh dương đậm (dark blue) thay vì xanh lá.",
+   "wrong": {
+    "Green": "Đây là màu hiện tại cần đổi (instead of green).",
+    "Light blue": "Gần giống nhưng bài ghi dark blue (đậm), không phải nhạt.",
+    "Dark green": "Bẫy ghép chữ: dark của màu mới với green của màu cũ."
+   }
+  },
+  {
+   "w": "solar",
+   "kind": "notice",
+   "title": "NOTICE TO RESIDENTS",
+   "p": "Solar panels will be installed on the roof of Building B from August 12 to 16. Workers will arrive at 8 a.m. each day. The rooftop garden will be closed during this time, but the gym on the second floor will stay open.",
+   "q": "What will be closed during the installation?",
+   "o": [
+    "The rooftop garden",
+    "The gym",
+    "Building B",
+    "The parking lot"
+   ],
+   "a": "The rooftop garden",
+   "key": "The rooftop garden will be closed during this time",
+   "why": "Thông báo ghi vườn trên sân thượng đóng cửa trong thời gian lắp tấm pin mặt trời.",
+   "wrong": {
+    "The gym": "Phòng gym tầng 2 vẫn mở cửa (will stay open).",
+    "Building B": "Toà B là nơi lắp pin trên mái, bài không nói cả toà đóng cửa.",
+    "The parking lot": "Bài không nhắc tới bãi đỗ xe."
+   },
+   "tip": "Chữ but thường đổi chiều: vế sau but là thông tin ngược với vế trước."
+  },
+  {
+   "w": "specialty",
+   "kind": "ad",
+   "title": "GRAND OPENING: MAPLE CUP CAFÉ",
+   "p": "Maple Cup Café opens on Elm Avenue this Friday. Try our specialty iced tea, made fresh every morning. All drinks are half price from 2 p.m. to 4 p.m. during opening week, and the café closes at 8 p.m. daily.",
+   "q": "When are drinks half price?",
+   "o": [
+    "From 2 p.m. to 4 p.m.",
+    "From 4 p.m. to 8 p.m.",
+    "From 8 a.m. to 2 p.m.",
+    "All day Friday"
+   ],
+   "a": "From 2 p.m. to 4 p.m.",
+   "key": "All drinks are half price from 2 p.m. to 4 p.m. during opening week",
+   "why": "Quảng cáo ghi trong tuần khai trương, mọi đồ uống giảm nửa giá từ 2 đến 4 giờ chiều.",
+   "wrong": {
+    "From 4 p.m. to 8 p.m.": "8 giờ tối là giờ đóng cửa, không phải khung giảm giá.",
+    "From 8 a.m. to 2 p.m.": "Bẫy ghép số: bài không có khung giờ này.",
+    "All day Friday": "Thứ Sáu là ngày khai trương, không phải ngày giảm giá cả ngày."
+   }
+  },
+  {
+   "w": "stapler",
+   "kind": "text",
+   "title": "Text from Ms. Chen",
+   "p": "Hi Tom, the stapler in the copy room is broken again. Could you get a new one from the supply closet on the fourth floor? The key is with Mr. Ford at the front desk. I need it before the 2 p.m. meeting.",
+   "q": "Where should Tom get a new stapler?",
+   "o": [
+    "The fourth-floor supply closet",
+    "The copy room",
+    "The front desk",
+    "The second-floor supply closet"
+   ],
+   "a": "The fourth-floor supply closet",
+   "key": "Could you get a new one from the supply closet on the fourth floor?",
+   "why": "Tin nhắn nhờ Tom lấy dập ghim mới ở tủ đồ dùng tầng 4; chìa khoá tủ do ông Ford giữ.",
+   "wrong": {
+    "The copy room": "Đây là nơi có cái dập ghim bị hỏng.",
+    "The front desk": "Quầy lễ tân là nơi lấy chìa khoá, không phải nơi lấy dập ghim.",
+    "The second-floor supply closet": "Bẫy số: 2 là giờ họp (2 p.m.); tủ đồ ở tầng 4."
+   }
+  },
+  {
+   "w": "steak",
+   "kind": "text",
+   "title": "Text from Ms. Lee",
+   "p": "Hi Mark, I reserved a table for six at Willow Grill on Friday at 7 p.m., not 6:30 as planned. The client loves their steak, so I ordered it in advance. Please meet us in the hotel lobby at 6:40.",
+   "q": "What time is the dinner reservation?",
+   "o": [
+    "7 p.m.",
+    "6:30 p.m.",
+    "6:40 p.m.",
+    "6 p.m."
+   ],
+   "a": "7 p.m.",
+   "key": "I reserved a table for six at Willow Grill on Friday at 7 p.m., not 6:30 as planned",
+   "why": "Tin nhắn ghi đã đặt bàn lúc 7 giờ tối thứ Sáu, không phải 6:30 như dự định ban đầu.",
+   "wrong": {
+    "6:30 p.m.": "Đây là giờ dự định cũ, đã bị đổi (not 6:30).",
+    "6:40 p.m.": "Đây là giờ hẹn gặp nhau ở sảnh khách sạn.",
+    "6 p.m.": "Bẫy số: six là số người của bàn, không phải giờ."
+   },
+   "tip": "Sau chữ not là thông tin bị bác bỏ: đừng chọn nó."
+  },
+  {
+   "w": "tablet",
+   "kind": "email",
+   "title": "Subject: Your tablet repair",
+   "p": "Dear Mr. Novak, your tablet is ready for pickup at our Pine Avenue store. We replaced the screen for $60, and the battery passed our test, so it was not replaced. Please bring your receipt. We close at 7 p.m. today.",
+   "q": "What part of the tablet was replaced?",
+   "o": [
+    "The screen",
+    "The battery",
+    "The charger",
+    "The keyboard"
+   ],
+   "a": "The screen",
+   "key": "We replaced the screen for $60",
+   "why": "Email ghi cửa hàng đã thay màn hình (replaced the screen) với giá 60 đô.",
+   "wrong": {
+    "The battery": "Pin đã qua kiểm tra nên không phải thay (was not replaced).",
+    "The charger": "Bài không nhắc tới bộ sạc.",
+    "The keyboard": "Bài không nhắc tới bàn phím."
+   }
+  },
+  {
+   "w": "unload",
+   "kind": "schedule",
+   "title": "Loading Dock Schedule: Monday",
+   "p": "Monday deliveries, Loading Dock 2: 7:00 a.m. Paper supplies. 9:30 a.m. Furniture (please unload at Dock 3). 11:00 a.m. Kitchen equipment. 2:00 p.m. Computer monitors. Contact Mr. Diaz with any changes.",
+   "q": "Which delivery should be unloaded at Dock 3?",
+   "o": [
+    "Furniture",
+    "Paper supplies",
+    "Kitchen equipment",
+    "Computer monitors"
+   ],
+   "a": "Furniture",
+   "key": "9:30 a.m. Furniture (please unload at Dock 3)",
+   "why": "Lịch ghi riêng chuyến đồ nội thất lúc 9:30 sáng được dỡ ở bến 3; các chuyến còn lại dỡ ở bến 2.",
+   "wrong": {
+    "Paper supplies": "Chuyến giấy lúc 7 giờ sáng dỡ ở bến 2 như tiêu đề lịch.",
+    "Kitchen equipment": "Chuyến thiết bị bếp lúc 11 giờ dỡ ở bến 2.",
+    "Computer monitors": "Chuyến màn hình lúc 2 giờ chiều dỡ ở bến 2."
+   },
+   "tip": "Lịch có ghi chú trong ngoặc: đó thường là ngoại lệ hay bị hỏi."
+  }
+ ]
+}

@@ -1,0 +1,1155 @@
+{
+ "moc": 700,
+ "questions": [
+  {
+   "w": "accessory",
+   "s": "This store sells a matching belt as an accessory for every dress.",
+   "vi": "Cửa hàng này bán kèm một chiếc thắt lưng hợp tông làm phụ kiện cho mọi chiếc váy."
+  },
+  {
+   "w": "airfare",
+   "s": "Our company will pay for your airfare if you book early.",
+   "vi": "Công ty chúng tôi sẽ trả tiền vé máy bay của bạn nếu bạn đặt sớm."
+  },
+  {
+   "w": "amenity",
+   "s": "A swimming pool is the most popular amenity at this hotel.",
+   "vi": "Hồ bơi là tiện ích được ưa chuộng nhất tại khách sạn này."
+  },
+  {
+   "w": "appendix",
+   "s": "The appendix at the back of the manual lists all the spare parts.",
+   "vi": "Phần phụ lục ở cuối sách hướng dẫn liệt kê mọi bộ phận dự phòng."
+  },
+  {
+   "w": "apprentice",
+   "s": "The new apprentice learns how to repair machines from an experienced worker.",
+   "vi": "Người học việc mới học cách sửa máy từ một công nhân lâu năm."
+  },
+  {
+   "w": "artistic",
+   "s": "An artistic display of colorful hats filled the shop window.",
+   "vi": "Những chiếc mũ nhiều màu được trưng bày rất nghệ thuật, lấp đầy tủ kính cửa hàng."
+  },
+  {
+   "w": "badge",
+   "s": "Visitors should wear a badge at all times while they are here.",
+   "vi": "Khách đến thăm nên đeo thẻ mọi lúc khi có mặt ở đây."
+  },
+  {
+   "w": "bankrupt",
+   "s": "The small bakery went bankrupt after the big supermarket opened nearby.",
+   "vi": "Tiệm bánh nhỏ bị phá sản sau khi siêu thị lớn mở cửa gần đó."
+  },
+  {
+   "w": "breach",
+   "s": "Giving private customer data to others is a major breach of company rules.",
+   "vi": "Đưa dữ liệu riêng tư của khách hàng cho người khác là vi phạm lớn quy định của công ty."
+  },
+  {
+   "w": "charitable",
+   "s": "She made a charitable donation to help the local school buy books.",
+   "vi": "Cô ấy quyên góp từ thiện để giúp trường học địa phương mua sách."
+  },
+  {
+   "w": "checkup",
+   "s": "I have a medical checkup tomorrow morning at the clinic.",
+   "vi": "Sáng mai tôi có buổi khám sức khỏe tổng quát tại phòng khám."
+  },
+  {
+   "w": "congestion",
+   "s": "Heavy traffic congestion made many workers late for the morning meeting.",
+   "vi": "Tình trạng kẹt xe nặng khiến nhiều nhân viên đến trễ buổi họp sáng."
+  },
+  {
+   "w": "crane",
+   "s": "A large crane at the port lifts heavy boxes onto the ship.",
+   "vi": "Một chiếc cần cẩu lớn ở cảng nâng những thùng hàng nặng lên tàu."
+  },
+  {
+   "w": "dedication",
+   "s": "The manager thanked every employee for their hard work and dedication.",
+   "vi": "Người quản lý cảm ơn từng nhân viên vì sự chăm chỉ và tận tâm của họ."
+  },
+  {
+   "w": "detach",
+   "s": "Please detach the bottom part of the form and keep it for your records.",
+   "vi": "Vui lòng xé phần dưới của biểu mẫu và giữ lại để lưu hồ sơ."
+  },
+  {
+   "w": "discontinue",
+   "s": "The company will discontinue this old model at the end of the year.",
+   "vi": "Công ty sẽ ngừng sản xuất mẫu cũ này vào cuối năm."
+  },
+  {
+   "w": "duplicate",
+   "s": "Could you make a duplicate of this document for our files?",
+   "vi": "Bạn có thể làm một bản sao của tài liệu này để lưu hồ sơ của chúng tôi không?"
+  },
+  {
+   "w": "embassy",
+   "s": "You need to visit the embassy to renew your travel documents.",
+   "vi": "Bạn cần đến đại sứ quán để gia hạn giấy tờ đi lại của mình."
+  },
+  {
+   "w": "endorse",
+   "s": "Many dentists endorse this toothpaste because it protects teeth well.",
+   "vi": "Nhiều nha sĩ giới thiệu loại kem đánh răng này vì nó bảo vệ răng tốt."
+  },
+  {
+   "w": "excursion",
+   "s": "The hotel offers a bus excursion to the nearby hills every morning.",
+   "vi": "Khách sạn tổ chức chuyến tham quan bằng xe buýt đến những ngọn đồi gần đó vào mỗi sáng."
+  },
+  {
+   "w": "execution",
+   "s": "Careful planning and smooth execution made the event a big success.",
+   "vi": "Việc lên kế hoạch cẩn thận và thực hiện suôn sẻ đã giúp sự kiện thành công lớn."
+  },
+  {
+   "w": "faculty",
+   "s": "The faculty at this language school meets every week to plan lessons.",
+   "vi": "Đội ngũ giảng viên của trường ngoại ngữ này họp mỗi tuần để lên kế hoạch bài giảng."
+  },
+  {
+   "w": "faithfully",
+   "s": "He has faithfully served our company for more than twenty years.",
+   "vi": "Ông ấy đã tận tụy phục vụ công ty chúng tôi hơn hai mươi năm."
+  },
+  {
+   "w": "fasten",
+   "s": "Please fasten the lid tightly so the soup does not spill.",
+   "vi": "Vui lòng đóng chặt nắp để món súp không bị đổ ra ngoài."
+  },
+  {
+   "w": "finalize",
+   "s": "We will finalize the budget for next year by tomorrow afternoon.",
+   "vi": "Chúng tôi sẽ chốt ngân sách cho năm tới trước chiều mai."
+  },
+  {
+   "w": "forum",
+   "s": "Customers can ask questions and share ideas on our online forum.",
+   "vi": "Khách hàng có thể đặt câu hỏi và đóng góp ý tưởng trên diễn đàn trực tuyến của chúng tôi."
+  },
+  {
+   "w": "genre",
+   "s": "What is your favorite genre of music to play on weekends?",
+   "vi": "Bạn thích mở thể loại nhạc nào nhất vào cuối tuần?"
+  },
+  {
+   "w": "graphic",
+   "s": "The designer added a colorful graphic to the front of the brochure.",
+   "vi": "Nhà thiết kế đã thêm một hình ảnh đồ họa nhiều màu vào mặt trước tờ rơi."
+  },
+  {
+   "w": "intrigue",
+   "s": "The strange title of the book will intrigue many readers.",
+   "vi": "Tiêu đề lạ lùng của cuốn sách sẽ khiến nhiều độc giả tò mò."
+  },
+  {
+   "w": "librarian",
+   "s": "The librarian helped me find several books about home gardening.",
+   "vi": "Thủ thư đã giúp tôi tìm vài cuốn sách về làm vườn tại nhà."
+  },
+  {
+   "w": "loyal",
+   "s": "Loyal customers receive a special discount every time they visit the store.",
+   "vi": "Khách hàng thân thiết nhận được ưu đãi đặc biệt mỗi lần họ đến cửa hàng."
+  },
+  {
+   "w": "mainstream",
+   "s": "This shop sells mainstream products that appeal to a wide range of customers.",
+   "vi": "Cửa hàng này bán những sản phẩm đại chúng, phù hợp với nhiều đối tượng khách hàng."
+  },
+  {
+   "w": "meaningful",
+   "s": "She wanted a job that felt meaningful and helped other people.",
+   "vi": "Cô ấy muốn một công việc có ý nghĩa và giúp ích cho người khác."
+  },
+  {
+   "w": "misplace",
+   "s": "I often misplace my keys when I leave the house in a hurry.",
+   "vi": "Tôi hay để đâu đó rồi quên mất chìa khóa khi vội vã ra khỏi nhà."
+  },
+  {
+   "w": "oral",
+   "s": "The language exam has a written test and an oral interview.",
+   "vi": "Kỳ thi ngoại ngữ có bài thi viết và buổi vấn đáp."
+  },
+  {
+   "w": "overview",
+   "s": "A short overview of the main services is at the start of this guide.",
+   "vi": "Phần tổng quan ngắn gọn về các dịch vụ chính nằm ở đầu cuốn hướng dẫn này."
+  },
+  {
+   "w": "palm",
+   "s": "She held the small coin in the palm of her hand.",
+   "vi": "Cô ấy giữ đồng xu nhỏ trên lòng bàn tay."
+  },
+  {
+   "w": "payable",
+   "s": "The full amount is payable within thirty days of the invoice date.",
+   "vi": "Toàn bộ số tiền phải được thanh toán trong vòng ba mươi ngày kể từ ngày lập hóa đơn."
+  },
+  {
+   "w": "pill",
+   "s": "Take one pill after each meal with a glass of water.",
+   "vi": "Uống một viên thuốc sau mỗi bữa ăn cùng một ly nước."
+  },
+  {
+   "w": "pity",
+   "s": "It is a pity that you cannot join us for dinner tonight.",
+   "vi": "Thật tiếc là bạn không thể cùng ăn tối với chúng tôi tối nay."
+  },
+  {
+   "w": "plug",
+   "s": "Please plug the laptop into the wall before the battery runs out.",
+   "vi": "Vui lòng cắm máy tính xách tay vào ổ điện trên tường trước khi hết pin."
+  },
+  {
+   "w": "postal",
+   "s": "Most packages sent by postal service arrive within three business days.",
+   "vi": "Hầu hết các gói hàng gửi qua dịch vụ bưu chính đến nơi trong vòng ba ngày làm việc."
+  },
+  {
+   "w": "practically",
+   "s": "The new phone is practically the same as the old model.",
+   "vi": "Chiếc điện thoại mới gần như giống hệt mẫu cũ."
+  },
+  {
+   "w": "promotional",
+   "s": "Every customer gets a promotional gift from the store this weekend.",
+   "vi": "Mỗi khách hàng đều nhận được một món quà khuyến mãi từ cửa hàng vào cuối tuần này."
+  },
+  {
+   "w": "pronounce",
+   "s": "Could you pronounce your last name slowly for the new clerk?",
+   "vi": "Bạn có thể phát âm họ của mình thật chậm cho nhân viên mới không?"
+  },
+  {
+   "w": "resignation",
+   "s": "She handed her letter of resignation to the director this morning.",
+   "vi": "Sáng nay cô ấy đã nộp đơn từ chức cho giám đốc."
+  },
+  {
+   "w": "seaside",
+   "s": "We spent a relaxing weekend at a small hotel by the seaside.",
+   "vi": "Chúng tôi đã trải qua một cuối tuần thư giãn tại một khách sạn nhỏ ven biển."
+  },
+  {
+   "w": "seventeen",
+   "s": "Our team needs seventeen chairs for the meeting tomorrow morning.",
+   "vi": "Nhóm chúng tôi cần mười bảy chiếc ghế cho cuộc họp sáng mai."
+  },
+  {
+   "w": "spectrum",
+   "s": "Customers can choose from a wide spectrum of paint colors.",
+   "vi": "Khách hàng có thể chọn từ một dải rộng các màu sơn."
+  },
+  {
+   "w": "suspicion",
+   "s": "The strange email raised suspicion, so the employee called the bank.",
+   "vi": "Email lạ này làm dấy lên sự ngờ vực nên nhân viên đã gọi cho ngân hàng."
+  },
+  {
+   "w": "toll",
+   "s": "Drivers must pay a toll before they cross the new bridge.",
+   "vi": "Tài xế phải trả phí cầu đường trước khi qua cây cầu mới."
+  },
+  {
+   "w": "trash",
+   "s": "Please take the trash out before you leave the office tonight.",
+   "vi": "Vui lòng đem rác ra ngoài trước khi bạn rời văn phòng tối nay."
+  },
+  {
+   "w": "tunnel",
+   "s": "Just before the station, the train goes through a long tunnel.",
+   "vi": "Sát trước khi đến ga, tàu đi qua một đường hầm dài."
+  },
+  {
+   "w": "usage",
+   "s": "The monthly report shows a sharp rise in electricity usage at the office.",
+   "vi": "Báo cáo hằng tháng cho thấy lượng điện sử dụng tại văn phòng tăng mạnh."
+  },
+  {
+   "w": "vendor",
+   "s": "Every morning, the vendor delivers fresh vegetables to our restaurant.",
+   "vi": "Mỗi sáng, nhà cung cấp giao rau tươi đến nhà hàng của chúng tôi."
+  },
+  {
+   "w": "visa",
+   "s": "You must apply for a visa before you travel to that country.",
+   "vi": "Bạn phải xin thị thực trước khi đi đến quốc gia đó."
+  },
+  {
+   "w": "youngster",
+   "s": "Every youngster in the program receives a free ticket to the museum.",
+   "vi": "Mọi em nhỏ ở chương trình này đều được tặng một vé miễn phí vào bảo tàng."
+  },
+  {
+   "w": "apology",
+   "s": "We received a written apology from the store about the late delivery.",
+   "vi": "Chúng tôi nhận được lời xin lỗi bằng văn bản từ cửa hàng về việc hàng đến trễ."
+  },
+  {
+   "w": "bean",
+   "s": "The shop grinds fresh coffee beans every morning for its customers.",
+   "vi": "Cửa hàng xay hạt cà phê tươi mỗi sáng cho khách của mình."
+  },
+  {
+   "w": "browse",
+   "s": "You are welcome to browse our shelves while we prepare your order.",
+   "vi": "Quý khách cứ thoải mái xem các kệ hàng, đơn của quý khách đang được chuẩn bị."
+  },
+  {
+   "w": "closure",
+   "s": "The closure of the main road caused long delays this morning.",
+   "vi": "Việc đóng cửa con đường chính đã gây ra sự chậm trễ kéo dài sáng nay."
+  },
+  {
+   "w": "consistently",
+   "s": "Our team consistently delivers orders on time, even during busy weeks.",
+   "vi": "Nhóm chúng tôi luôn giao đơn hàng đúng hạn, kể cả trong những tuần bận rộn."
+  },
+  {
+   "w": "customize",
+   "s": "You can customize the color of your phone case online.",
+   "vi": "Bạn có thể tùy chỉnh màu ốp điện thoại của mình trên mạng."
+  },
+  {
+   "w": "dependable",
+   "s": "We need a dependable driver who arrives on time every day.",
+   "vi": "Chúng tôi cần một tài xế đáng tin cậy, ngày nào cũng đến đúng giờ."
+  },
+  {
+   "w": "diagnose",
+   "s": "The doctor needs more tests to diagnose the cause of your headache.",
+   "vi": "Bác sĩ cần làm thêm một số kiểm tra để chẩn đoán nguyên nhân khiến bạn đau đầu."
+  },
+  {
+   "w": "diplomatic",
+   "s": "She gave a diplomatic answer when the customer complained about the long wait.",
+   "vi": "Cô ấy trả lời khéo léo khi khách phàn nàn về việc phải chờ lâu."
+  },
+  {
+   "w": "discourse",
+   "s": "Respectful discourse between colleagues helps the team solve problems more quickly.",
+   "vi": "Cuộc trao đổi tôn trọng giữa các đồng nghiệp giúp cả nhóm giải quyết vấn đề nhanh hơn."
+  },
+  {
+   "w": "dislike",
+   "s": "Many customers dislike waiting in line for more than ten minutes.",
+   "vi": "Nhiều khách hàng không thích phải xếp hàng chờ hơn mười phút."
+  },
+  {
+   "w": "distributor",
+   "s": "Our distributor ships fresh fruit to grocery stores every morning.",
+   "vi": "Nhà phân phối của chúng tôi gửi trái cây tươi đến các cửa hàng tạp hóa mỗi sáng."
+  },
+  {
+   "w": "enforcement",
+   "s": "Strict enforcement of safety rules protects every worker at the factory.",
+   "vi": "Việc áp dụng chặt chẽ các quy tắc an toàn giúp bảo vệ mọi công nhân ở nhà máy."
+  },
+  {
+   "w": "excessive",
+   "s": "The hotel charged an excessive fee for a late checkout.",
+   "vi": "Khách sạn tính một khoản phí quá cao cho việc trả phòng muộn."
+  },
+  {
+   "w": "firefighter",
+   "s": "A firefighter visited our school to teach students about fire safety.",
+   "vi": "Một lính cứu hỏa đã đến trường của chúng tôi để dạy học trò về an toàn phòng cháy."
+  },
+  {
+   "w": "freelance",
+   "s": "He works as a freelance designer and meets new clients each week.",
+   "vi": "Anh ấy làm nhà thiết kế tự do và gặp khách hàng mới mỗi tuần."
+  },
+  {
+   "w": "freely",
+   "s": "Guests can walk freely around the garden during their stay.",
+   "vi": "Khách có thể thoải mái đi dạo khắp khu vườn suốt kỳ nghỉ."
+  },
+  {
+   "w": "gasoline",
+   "s": "The price of gasoline went up again this month.",
+   "vi": "Giá xăng lại tăng nữa vào tháng này."
+  },
+  {
+   "w": "happily",
+   "s": "The clerk happily helped me find a gift for my sister.",
+   "vi": "Nhân viên bán hàng vui vẻ giúp tôi chọn một món quà cho chị gái."
+  },
+  {
+   "w": "heal",
+   "s": "The cut on my finger took a week to heal.",
+   "vi": "Vết cắt trên ngón tay tôi mất một tuần mới lành."
+  },
+  {
+   "w": "hourly",
+   "s": "The new cashier earns an hourly wage that is paid every week.",
+   "vi": "Nhân viên thu ngân mới được trả lương theo giờ và nhận lương hằng tuần."
+  },
+  {
+   "w": "inevitably",
+   "s": "When many people shop at once, long lines will inevitably form.",
+   "vi": "Khi nhiều người mua sắm cùng lúc, hàng dài chắc chắn sẽ hình thành."
+  },
+  {
+   "w": "influential",
+   "s": "She is an influential leader who inspires everyone on the team.",
+   "vi": "Cô ấy là một nhà lãnh đạo có sức ảnh hưởng, luôn tạo động lực cho cả nhóm."
+  },
+  {
+   "w": "informative",
+   "s": "The guide gave an informative talk about the history of the old market.",
+   "vi": "Hướng dẫn viên đã trình bày một bài nói chuyện bổ ích về lịch sử của khu chợ cũ."
+  },
+  {
+   "w": "intervene",
+   "s": "The supervisor had to intervene when two coworkers began arguing loudly.",
+   "vi": "Người giám sát phải can thiệp khi hai đồng nghiệp bắt đầu cãi nhau to tiếng."
+  },
+  {
+   "w": "listener",
+   "s": "The radio host thanked every listener who called in with a question.",
+   "vi": "Người dẫn chương trình trên đài cảm ơn mọi thính giả đã gọi điện đặt câu hỏi."
+  },
+  {
+   "w": "magnificent",
+   "s": "From our hotel window, we enjoyed a magnificent view of the beach.",
+   "vi": "Từ cửa sổ khách sạn, chúng tôi được ngắm một cảnh bãi biển tuyệt đẹp."
+  },
+  {
+   "w": "massage",
+   "s": "After a long flight, a massage at the hotel spa felt wonderful.",
+   "vi": "Sau chặng bay dài, một buổi mát xa tại khu spa của khách sạn thật tuyệt."
+  },
+  {
+   "w": "melt",
+   "s": "The ice cream started to melt before we reached the park.",
+   "vi": "Kem bắt đầu tan chảy trước khi chúng tôi đến công viên."
+  },
+  {
+   "w": "messenger",
+   "s": "A messenger delivered the signed contract to our office this afternoon.",
+   "vi": "Một nhân viên chuyển phát đã mang bản hợp đồng đã ký đến văn phòng chúng tôi chiều nay."
+  },
+  {
+   "w": "needle",
+   "s": "Please pass me a needle and some thread to sew this button back on.",
+   "vi": "Làm ơn đưa giúp tôi cây kim và ít chỉ để đính lại chiếc cúc áo này."
+  },
+  {
+   "w": "nomination",
+   "s": "The nomination for employee of the year was announced at the meeting today.",
+   "vi": "Đề cử cho nhân viên của năm đã được công bố tại cuộc họp hôm nay."
+  },
+  {
+   "w": "optimistic",
+   "s": "The sales team feels optimistic about the launch of the new product.",
+   "vi": "Nhóm bán hàng cảm thấy lạc quan về việc ra mắt sản phẩm mới."
+  },
+  {
+   "w": "orchestra",
+   "s": "The orchestra practiced every afternoon before the concert in the park.",
+   "vi": "Dàn nhạc luyện tập mỗi buổi chiều trước buổi hòa nhạc ở công viên."
+  },
+  {
+   "w": "oven",
+   "s": "Please heat the oven before you put the bread inside.",
+   "vi": "Hãy làm nóng lò nướng trước khi cho bánh mì vào lò."
+  },
+  {
+   "w": "partial",
+   "s": "We received only a partial refund for the damaged chair.",
+   "vi": "Chúng tôi chỉ nhận được khoản hoàn tiền một phần cho chiếc ghế bị hư."
+  },
+  {
+   "w": "payroll",
+   "s": "Please send your hours to the payroll department by noon tomorrow.",
+   "vi": "Vui lòng gửi số giờ làm của bạn cho phòng tính lương trước trưa mai."
+  },
+  {
+   "w": "pharmacy",
+   "s": "I picked up my medicine at the pharmacy next to the bank.",
+   "vi": "Tôi đã lấy thuốc ở hiệu thuốc cạnh ngân hàng."
+  },
+  {
+   "w": "plausible",
+   "s": "His explanation for the late delivery sounded plausible to the manager.",
+   "vi": "Lời giải thích của anh ấy về việc hàng đến trễ có vẻ hợp lý với người quản lý."
+  },
+  {
+   "w": "practitioner",
+   "s": "A health practitioner will explain the treatment options when you visit.",
+   "vi": "Một nhân viên y tế sẽ giải thích các cách điều trị khi bạn đến khám."
+  },
+  {
+   "w": "preliminary",
+   "s": "The committee will share the preliminary results of the survey next week.",
+   "vi": "Ủy ban sẽ công bố kết quả sơ bộ của cuộc khảo sát vào tuần tới."
+  },
+  {
+   "w": "prospective",
+   "s": "We showed the prospective tenants around the apartment this morning.",
+   "vi": "Sáng nay chúng tôi dẫn những người thuê tiềm năng đi xem căn hộ."
+  },
+  {
+   "w": "psychology",
+   "s": "She studied psychology at college before working in human resources.",
+   "vi": "Cô ấy học ngành tâm lý học ở trường đại học trước khi làm việc ở bộ phận nhân sự."
+  },
+  {
+   "w": "purse",
+   "s": "She left her purse on a chair in the restaurant.",
+   "vi": "Cô ấy để quên chiếc ví trên ghế ở nhà hàng."
+  },
+  {
+   "w": "pursuit",
+   "s": "He quit his job in pursuit of a career in teaching.",
+   "vi": "Anh ấy bỏ việc để hướng tới nghề dạy học."
+  },
+  {
+   "w": "sensitivity",
+   "s": "Please show more sensitivity when you give feedback to new employees.",
+   "vi": "Hãy tế nhị hơn khi bạn đưa ra nhận xét cho các nhân viên mới."
+  },
+  {
+   "w": "separation",
+   "s": "The separation of the two departments will take effect next month.",
+   "vi": "Việc tách hai phòng ban ra riêng sẽ có hiệu lực vào tháng tới."
+  },
+  {
+   "w": "showroom",
+   "s": "Our car showroom opens at nine tomorrow morning.",
+   "vi": "Phòng trưng bày xe của chúng tôi mở cửa lúc chín giờ sáng mai."
+  },
+  {
+   "w": "sunshine",
+   "s": "We spent the afternoon in the sunshine at an outdoor market.",
+   "vi": "Chúng tôi đã dành buổi chiều dưới ánh nắng ở một khu chợ ngoài trời."
+  },
+  {
+   "w": "sympathy",
+   "s": "The staff expressed sympathy to the customer whose luggage was lost.",
+   "vi": "Nhân viên bày tỏ sự cảm thông với vị khách bị thất lạc hành lý."
+  },
+  {
+   "w": "temporarily",
+   "s": "The front door is temporarily closed, so please use the side entrance.",
+   "vi": "Cửa chính tạm thời đóng, vì vậy xin hãy dùng cửa phụ."
+  },
+  {
+   "w": "tidy",
+   "s": "Please leave your desk tidy when you finish work for the day.",
+   "vi": "Vui lòng để bàn làm việc gọn gàng khi bạn kết thúc công việc trong ngày."
+  },
+  {
+   "w": "transmit",
+   "s": "This device can transmit the data to the main computer in seconds.",
+   "vi": "Thiết bị này có thể gửi dữ liệu đến máy tính chính chỉ sau vài giây."
+  },
+  {
+   "w": "tuition",
+   "s": "The college will raise tuition next year for all students.",
+   "vi": "Trường đại học sẽ tăng học phí vào năm sau cho toàn bộ người học."
+  },
+  {
+   "w": "undermine",
+   "s": "Constant delays can undermine the trust that customers have in our company.",
+   "vi": "Những lần chậm trễ liên tục có thể làm suy giảm niềm tin của khách hàng đối với công ty chúng tôi."
+  },
+  {
+   "w": "undoubtedly",
+   "s": "This is undoubtedly the best hotel we have stayed at.",
+   "vi": "Đây chắc chắn là khách sạn tốt nhất mà chúng tôi từng ở."
+  },
+  {
+   "w": "unnecessary",
+   "s": "Please avoid unnecessary changes to the report after the manager approves it.",
+   "vi": "Vui lòng tránh những chỉnh sửa không cần thiết đối với bản báo cáo sau khi người quản lý duyệt."
+  },
+  {
+   "w": "vegetarian",
+   "s": "The restaurant offers a vegetarian menu with many fresh dishes.",
+   "vi": "Nhà hàng có thực đơn chay với nhiều món tươi ngon."
+  },
+  {
+   "w": "yoga",
+   "s": "I joined a yoga class near my office to relax after work.",
+   "vi": "Tôi đã đăng ký một lớp yoga gần văn phòng để thư giãn sau giờ làm."
+  },
+  {
+   "w": "absent",
+   "s": "Several employees were absent from the morning meeting because of heavy traffic.",
+   "vi": "Vài nhân viên vắng mặt tại cuộc họp buổi sáng vì kẹt xe nặng."
+  },
+  {
+   "w": "adoption",
+   "s": "The adoption of the new software saved our team many hours each week.",
+   "vi": "Việc áp dụng phần mềm mới đã giúp nhóm chúng tôi tiết kiệm nhiều giờ mỗi tuần."
+  },
+  {
+   "w": "anytime",
+   "s": "You can call our help desk anytime if you have a question.",
+   "vi": "Bạn có thể gọi cho bộ phận hỗ trợ của chúng tôi bất cứ lúc nào nếu có thắc mắc."
+  },
+  {
+   "w": "astonish",
+   "s": "The low price of the new phone will astonish many customers.",
+   "vi": "Mức giá thấp của chiếc điện thoại mới sẽ khiến nhiều khách hàng sửng sốt."
+  },
+  {
+   "w": "bake",
+   "s": "We usually bake fresh bread every morning before the shop opens.",
+   "vi": "Chúng tôi thường nướng bánh mì tươi mỗi sáng trước khi cửa hàng mở cửa."
+  },
+  {
+   "w": "bang",
+   "s": "The door closed with a loud bang, and the whole office looked up.",
+   "vi": "Cánh cửa đóng sầm một tiếng lớn và cả văn phòng ngẩng lên nhìn."
+  },
+  {
+   "w": "booth",
+   "s": "Please visit our booth at the trade show to see the new products.",
+   "vi": "Mời bạn ghé quầy trưng bày của chúng tôi tại hội chợ thương mại để xem các sản phẩm mới."
+  },
+  {
+   "w": "broker",
+   "s": "A real estate broker showed us three apartments near the station last week.",
+   "vi": "Một nhà môi giới bất động sản đã dẫn chúng tôi xem ba căn hộ gần nhà ga tuần trước."
+  },
+  {
+   "w": "bubble",
+   "s": "Wrap each glass in bubble wrap before you pack the box.",
+   "vi": "Hãy bọc từng chiếc ly bằng màng xốp hơi trước khi xếp vào thùng."
+  },
+  {
+   "w": "clash",
+   "s": "The new training session may clash with the sales meeting tomorrow.",
+   "vi": "Buổi tập huấn mới có thể trùng giờ với cuộc họp bán hàng vào ngày mai."
+  },
+  {
+   "w": "cognitive",
+   "s": "Learning a new language can improve cognitive skills in people of all ages.",
+   "vi": "Học một ngôn ngữ mới có thể cải thiện kỹ năng nhận thức ở mọi lứa tuổi."
+  },
+  {
+   "w": "confidential",
+   "s": "Please keep this report confidential until the manager announces the plan.",
+   "vi": "Vui lòng giữ bí mật báo cáo này cho đến khi quản lý công bố kế hoạch."
+  },
+  {
+   "w": "cooler",
+   "s": "It will be cooler tomorrow, so please bring a light jacket.",
+   "vi": "Ngày mai trời sẽ mát hơn, nên hãy mang theo một chiếc áo khoác mỏng."
+  },
+  {
+   "w": "cooperate",
+   "s": "All departments must cooperate to finish the project on time.",
+   "vi": "Tất cả các phòng ban phải phối hợp để hoàn thành dự án đúng hạn."
+  },
+  {
+   "w": "costume",
+   "s": "Each child wore a colorful costume in the school play.",
+   "vi": "Mỗi em nhỏ mặc một bộ trang phục nhiều màu sắc trong vở kịch của trường."
+  },
+  {
+   "w": "depict",
+   "s": "The poster will depict a happy family enjoying a day at the beach.",
+   "vi": "Tấm áp phích sẽ khắc họa một gia đình vui vẻ đang tận hưởng một ngày ở biển."
+  },
+  {
+   "w": "descriptive",
+   "s": "The menu uses descriptive language to help guests choose a dish.",
+   "vi": "Thực đơn dùng ngôn từ mô tả để giúp khách chọn món."
+  },
+  {
+   "w": "diminish",
+   "s": "Regular exercise can diminish stress and help you sleep better.",
+   "vi": "Tập thể dục đều đặn có thể giảm bớt căng thẳng và giúp bạn ngủ tốt hơn."
+  },
+  {
+   "w": "downstairs",
+   "s": "The meeting room is downstairs, next to the cafeteria.",
+   "vi": "Phòng họp ở tầng dưới, cạnh căng tin."
+  },
+  {
+   "w": "eager",
+   "s": "Our new employees are eager to learn about the company products.",
+   "vi": "Các nhân viên mới của chúng tôi rất háo hức tìm hiểu về sản phẩm của công ty."
+  },
+  {
+   "w": "earthquake",
+   "s": "The hotel staff practiced an earthquake drill so guests would feel safe.",
+   "vi": "Nhân viên khách sạn đã diễn tập ứng phó động đất để khách cảm thấy an toàn."
+  },
+  {
+   "w": "economical",
+   "s": "This small car is economical because it uses very little fuel.",
+   "vi": "Chiếc xe nhỏ này tiết kiệm vì dùng rất ít nhiên liệu."
+  },
+  {
+   "w": "exotic",
+   "s": "The restaurant serves exotic fruit that many guests have never tried before.",
+   "vi": "Nhà hàng phục vụ các loại trái cây lạ mà nhiều thực khách chưa từng thử."
+  },
+  {
+   "w": "handsome",
+   "s": "He looked very handsome in his new gray suit at the interview.",
+   "vi": "Anh ấy trông rất đẹp trai trong bộ com-lê xám mới tại buổi phỏng vấn."
+  },
+  {
+   "w": "internet",
+   "s": "Guests can enjoy free internet in every room and the lobby.",
+   "vi": "Khách có thể dùng mạng miễn phí ở mọi phòng và sảnh."
+  },
+  {
+   "w": "kilometer",
+   "s": "The airport is about ten kilometers from the main train station.",
+   "vi": "Sân bay cách ga tàu chính khoảng mười ki-lô-mét."
+  },
+  {
+   "w": "locally",
+   "s": "We buy our vegetables locally to keep them fresh and support nearby farms.",
+   "vi": "Chúng tôi mua rau ở địa phương để giữ độ tươi và ủng hộ các nông trại gần đây."
+  },
+  {
+   "w": "module",
+   "s": "Each training module takes about thirty minutes to finish.",
+   "vi": "Mỗi học phần đào tạo mất khoảng ba mươi phút để hoàn thành."
+  },
+  {
+   "w": "monument",
+   "s": "Tourists often take photos of the stone monument in the town square.",
+   "vi": "Du khách thường chụp ảnh tượng đài bằng đá ở quảng trường thị trấn."
+  },
+  {
+   "w": "namely",
+   "s": "Two things matter most to our customers, namely price and quality.",
+   "vi": "Hai điều khách hàng của chúng tôi coi trọng nhất, cụ thể là giá cả và chất lượng."
+  },
+  {
+   "w": "nightmare",
+   "s": "Finding a parking space downtown during rush hour is a nightmare.",
+   "vi": "Tìm chỗ đậu xe ở nội thành vào giờ cao điểm quả là một cơn ác mộng."
+  },
+  {
+   "w": "noisy",
+   "s": "The dining room was too noisy, so we ate lunch outside.",
+   "vi": "Phòng ăn quá ồn nên chúng tôi ra ngoài ăn trưa."
+  },
+  {
+   "w": "pizza",
+   "s": "We ordered a large pizza for the team after the long workshop.",
+   "vi": "Chúng tôi đã gọi một chiếc bánh pizza cỡ lớn cho cả nhóm sau buổi hội thảo dài."
+  },
+  {
+   "w": "profound",
+   "s": "Good service can have a profound effect on how customers see a store.",
+   "vi": "Dịch vụ tốt có thể tác động sâu sắc đến cách khách hàng nhìn nhận một cửa hàng."
+  },
+  {
+   "w": "recreational",
+   "s": "The park offers many recreational activities for families on weekends.",
+   "vi": "Công viên có nhiều hoạt động giải trí cho các gia đình vào cuối tuần."
+  },
+  {
+   "w": "repeatedly",
+   "s": "I called the store repeatedly, but nobody answered the phone.",
+   "vi": "Tôi đã gọi đến cửa hàng nhiều lần liên tục nhưng không ai bắt máy."
+  },
+  {
+   "w": "sack",
+   "s": "He carried a heavy sack of rice from the market to the kitchen.",
+   "vi": "Anh ấy vác một bao gạo nặng từ chợ về nhà bếp."
+  },
+  {
+   "w": "salesman",
+   "s": "The salesman explained the features of the washing machine in simple words.",
+   "vi": "Nhân viên bán hàng đã giải thích các tính năng của máy giặt bằng lời lẽ đơn giản."
+  },
+  {
+   "w": "satisfactory",
+   "s": "The test results were satisfactory, so the factory will begin production next week.",
+   "vi": "Kết quả kiểm tra đạt yêu cầu nên nhà máy sẽ bắt đầu sản xuất vào tuần tới."
+  },
+  {
+   "w": "screw",
+   "s": "A loose screw on the chair leg should be tightened before anyone sits down.",
+   "vi": "Con ốc vít lỏng ở chân ghế cần được siết chặt trước khi có ai ngồi xuống."
+  },
+  {
+   "w": "separately",
+   "s": "The two items will be shipped separately, so please check your email.",
+   "vi": "Hai mặt hàng sẽ được gửi riêng, vì vậy vui lòng kiểm tra email của bạn."
+  },
+  {
+   "w": "sheer",
+   "s": "The sheer size of the shopping mall surprised every visitor.",
+   "vi": "Kích thước đồ sộ của khu mua sắm khiến mọi du khách bất ngờ."
+  },
+  {
+   "w": "soap",
+   "s": "Someone should refill the soap in the restroom before the guests arrive.",
+   "vi": "Cần có người châm thêm xà phòng ở nhà vệ sinh trước khi khách đến."
+  },
+  {
+   "w": "spill",
+   "s": "Staff must clean up any spill on the kitchen floor right away.",
+   "vi": "Nhân viên phải lập tức lau sạch chỗ nước đổ trên sàn bếp."
+  },
+  {
+   "w": "surf",
+   "s": "Many tourists come to this beach to surf in the summer.",
+   "vi": "Nhiều du khách đến bãi biển này để lướt sóng vào mùa hè."
+  },
+  {
+   "w": "tide",
+   "s": "Always check the tide chart before you plan a walk along the shore.",
+   "vi": "Hãy luôn xem bảng thủy triều trước khi lên kế hoạch đi dạo dọc bờ biển."
+  },
+  {
+   "w": "trader",
+   "s": "A trader at the market sold us fresh fruit at a good price.",
+   "vi": "Một tiểu thương ở chợ đã bán cho chúng tôi trái cây tươi với giá tốt."
+  },
+  {
+   "w": "ugly",
+   "s": "The old building looked ugly, so the owner painted it a bright color.",
+   "vi": "Tòa nhà cũ trông xấu xí nên chủ nhà đã sơn lại bằng một màu tươi sáng."
+  },
+  {
+   "w": "unattended",
+   "s": "Do not leave your luggage unattended at the airport.",
+   "vi": "Đừng để hành lý của bạn mà không có người trông coi tại sân bay."
+  },
+  {
+   "w": "underneath",
+   "s": "The spare key is hidden underneath the flower pot by the front door.",
+   "vi": "Chìa khóa dự phòng được giấu bên dưới chậu hoa cạnh cửa trước."
+  },
+  {
+   "w": "unfortunate",
+   "s": "It was unfortunate that the train left before the guests reached the station.",
+   "vi": "Thật không may là tàu đã rời đi trước khi các vị khách đến ga."
+  },
+  {
+   "w": "unspecified",
+   "s": "The invoice shows an unspecified charge, so please ask the accounting office.",
+   "vi": "Hóa đơn có một khoản phí chưa được nêu rõ nên vui lòng hỏi phòng kế toán."
+  },
+  {
+   "w": "virtual",
+   "s": "The interview will be virtual, so candidates can join from home.",
+   "vi": "Buổi phỏng vấn sẽ diễn ra trực tuyến, nên ứng viên có thể dự từ nhà."
+  },
+  {
+   "w": "walkway",
+   "s": "A covered walkway connects the parking lot to the main entrance.",
+   "vi": "Một lối đi có mái che nối bãi đậu xe với lối vào chính."
+  },
+  {
+   "w": "ward",
+   "s": "Visitors must sign in at the desk before entering the hospital ward.",
+   "vi": "Khách đến thăm phải đăng ký tại quầy trước khi vào khu điều trị của bệnh viện."
+  },
+  {
+   "w": "yearly",
+   "s": "Every employee receives a yearly health check at no cost.",
+   "vi": "Mỗi nhân viên được kiểm tra sức khỏe hằng năm miễn phí."
+  },
+  {
+   "w": "allegation",
+   "s": "The company denied the allegation and promised to review its hiring process.",
+   "vi": "Công ty phủ nhận cáo buộc và hứa sẽ xem xét lại quy trình tuyển dụng."
+  },
+  {
+   "w": "approximate",
+   "s": "Please give us an approximate time for when the repairs will be finished.",
+   "vi": "Vui lòng cho chúng tôi biết khoảng mấy giờ việc sửa chữa sẽ hoàn tất."
+  },
+  {
+   "w": "array",
+   "s": "This store offers a wide array of kitchen tools at low prices.",
+   "vi": "Cửa hàng này bán nhiều loại dụng cụ nhà bếp với giá thấp."
+  },
+  {
+   "w": "artificial",
+   "s": "This juice contains no artificial colors or added sugar.",
+   "vi": "Loại nước ép này không chứa màu nhân tạo hay đường thêm."
+  },
+  {
+   "w": "assert",
+   "s": "Our manager will assert that the budget cannot be increased this year.",
+   "vi": "Quản lý của chúng tôi sẽ khẳng định rằng ngân sách năm nay không thể tăng."
+  },
+  {
+   "w": "bakery",
+   "s": "The bakery near my office sells fresh bread every morning.",
+   "vi": "Tiệm bánh gần văn phòng tôi bán bánh mì tươi mỗi sáng."
+  },
+  {
+   "w": "bare",
+   "s": "Her room was bare except for a small desk and one chair.",
+   "vi": "Phòng của cô ấy trống trơn, chỉ có một cái bàn nhỏ và một chiếc ghế."
+  },
+  {
+   "w": "basket",
+   "s": "She put the fruit and vegetables into her shopping basket.",
+   "vi": "Cô ấy bỏ trái cây và rau củ vào giỏ mua sắm của mình."
+  },
+  {
+   "w": "beginner",
+   "s": "This cooking class is perfect for any beginner who wants to learn slowly.",
+   "vi": "Lớp nấu ăn này rất phù hợp với người mới bắt đầu muốn học từ từ."
+  },
+  {
+   "w": "blank",
+   "s": "Please leave this line blank and sign at the bottom of the form.",
+   "vi": "Vui lòng để trống dòng này và ký tên ở cuối mẫu đơn."
+  },
+  {
+   "w": "bold",
+   "s": "A bold red color was chosen for the title of the poster.",
+   "vi": "Màu đỏ đậm nổi bật được chọn cho tiêu đề của tấm áp phích."
+  },
+  {
+   "w": "certify",
+   "s": "The school will certify that you completed the training course.",
+   "vi": "Nhà trường sẽ xác nhận rằng bạn đã hoàn thành khóa đào tạo."
+  },
+  {
+   "w": "checkout",
+   "s": "The checkout line at the grocery store was very long this evening.",
+   "vi": "Hàng chờ ở quầy tính tiền của cửa hàng tạp hóa tối nay rất dài."
+  },
+  {
+   "w": "commodity",
+   "s": "Water is a valuable commodity in many dry parts of the world.",
+   "vi": "Nước là một loại hàng hóa quý ở nhiều vùng khô hạn trên thế giới."
+  },
+  {
+   "w": "compatible",
+   "s": "Please make sure this charger is compatible with your phone.",
+   "vi": "Vui lòng đảm bảo bộ sạc này tương thích với điện thoại của bạn."
+  },
+  {
+   "w": "cosmetic",
+   "s": "She bought a few cosmetic products at the pharmacy on her way home.",
+   "vi": "Cô ấy mua vài sản phẩm mỹ phẩm ở hiệu thuốc trên đường về nhà."
+  },
+  {
+   "w": "costly",
+   "s": "Fixing the old printer would be more costly than buying a new one.",
+   "vi": "Sửa chiếc máy in cũ sẽ tốn kém hơn mua một chiếc mới."
+  },
+  {
+   "w": "discharge",
+   "s": "The hospital gave her the discharge form, and she went home that afternoon.",
+   "vi": "Bệnh viện đưa cô ấy giấy xuất viện và chiều hôm đó cô ấy về nhà."
+  },
+  {
+   "w": "escort",
+   "s": "A security guard will escort visitors to the meeting room on the third floor.",
+   "vi": "Một nhân viên bảo vệ sẽ dẫn khách đến phòng họp ở tầng ba."
+  },
+  {
+   "w": "fame",
+   "s": "The singer found fame early, but she still practiced every day.",
+   "vi": "Ca sĩ ấy nổi tiếng từ sớm nhưng cô vẫn luyện tập mỗi ngày."
+  },
+  {
+   "w": "fantasy",
+   "s": "My daughter loves to read fantasy books before she goes to bed.",
+   "vi": "Con gái tôi thích đọc sách giả tưởng trước khi đi ngủ."
+  },
+  {
+   "w": "flesh",
+   "s": "The flesh of this ripe mango is sweet and very juicy.",
+   "vi": "Phần thịt của quả xoài chín này ngọt và rất mọng nước."
+  },
+  {
+   "w": "fragment",
+   "s": "A small fragment of plastic was found on the kitchen floor.",
+   "vi": "Người ta tìm thấy một mảnh nhựa nhỏ trên sàn bếp."
+  },
+  {
+   "w": "furnish",
+   "s": "The company will furnish each new employee with a laptop and a desk.",
+   "vi": "Công ty sẽ cấp cho mỗi nhân viên mới một máy tính xách tay và một cái bàn."
+  },
+  {
+   "w": "grasp",
+   "s": "It took me a while to grasp how the new software works.",
+   "vi": "Tôi mất một lúc mới hiểu được phần mềm mới hoạt động ra sao."
+  },
+  {
+   "w": "harmful",
+   "s": "Too much sun can be harmful to your skin, so wear a hat.",
+   "vi": "Phơi nắng quá nhiều có thể gây hại cho da, vì vậy hãy đội mũ."
+  },
+  {
+   "w": "healthcare",
+   "s": "Good healthcare should be easy to find for every family in the city.",
+   "vi": "Dịch vụ chăm sóc sức khỏe tốt cần dễ tiếp cận với mọi gia đình ở thành phố."
+  },
+  {
+   "w": "horizon",
+   "s": "We watched the sun slowly sink below the horizon from our hotel balcony.",
+   "vi": "Chúng tôi ngắm mặt trời từ từ lặn xuống đường chân trời từ ban công khách sạn."
+  },
+  {
+   "w": "insect",
+   "s": "A small insect landed on the menu while we waited for lunch.",
+   "vi": "Một con côn trùng nhỏ đậu lên thực đơn khi chúng tôi chờ bữa trưa."
+  },
+  {
+   "w": "insert",
+   "s": "Please insert your card into the machine and enter your code.",
+   "vi": "Vui lòng đưa thẻ vào máy và nhập mã của bạn."
+  },
+  {
+   "w": "interact",
+   "s": "Children learn a lot when they interact with others at school.",
+   "vi": "Trẻ em học được nhiều điều khi các em tương tác với bạn bè ở trường."
+  },
+  {
+   "w": "layout",
+   "s": "Our new office layout gives everyone more space to work.",
+   "vi": "Cách bố trí văn phòng mới giúp mọi người có chỗ làm việc rộng hơn."
+  },
+  {
+   "w": "loyalty",
+   "s": "Shops often give discounts to customers as a reward for their loyalty.",
+   "vi": "Các cửa hàng thường giảm giá cho khách như phần thưởng cho sự gắn bó lâu dài."
+  },
+  {
+   "w": "mandatory",
+   "s": "Attendance at the safety training session is mandatory for all staff.",
+   "vi": "Việc có mặt tại buổi tập huấn an toàn là bắt buộc với toàn bộ nhân viên."
+  },
+  {
+   "w": "minimal",
+   "s": "The hotel room was small, but the noise from the street was minimal.",
+   "vi": "Phòng khách sạn khá nhỏ nhưng tiếng ồn từ đường phố rất ít."
+  },
+  {
+   "w": "pant",
+   "s": "My dog began to pant after running in the park on a hot day.",
+   "vi": "Con chó của tôi bắt đầu thở hổn hển sau khi chạy ở công viên vào một ngày nóng."
+  },
+  {
+   "w": "parcel",
+   "s": "The delivery driver left a small parcel at the front door this morning.",
+   "vi": "Người đưa hàng để lại một gói nhỏ trước cửa nhà vào sáng nay."
+  },
+  {
+   "w": "particle",
+   "s": "A tiny particle of dust got into my eye while I was cleaning.",
+   "vi": "Một hạt bụi nhỏ bay vào mắt tôi khi tôi đang dọn dẹp."
+  },
+  {
+   "w": "pasta",
+   "s": "We ordered a plate of pasta with cream sauce for lunch.",
+   "vi": "Chúng tôi gọi một đĩa mì Ý sốt kem cho bữa trưa."
+  },
+  {
+   "w": "patent",
+   "s": "The inventor applied for a patent to protect her new kitchen tool.",
+   "vi": "Người sáng chế đã nộp đơn xin cấp bằng sáng chế để bảo vệ dụng cụ nhà bếp mới của cô."
+  },
+  {
+   "w": "pole",
+   "s": "Please hold the pole when the bus starts to move.",
+   "vi": "Vui lòng nắm chắc cột khi xe buýt bắt đầu chạy."
+  },
+  {
+   "w": "projector",
+   "s": "Please turn off the projector when the meeting is over.",
+   "vi": "Vui lòng tắt máy chiếu khi buổi họp kết thúc."
+  },
+  {
+   "w": "provoke",
+   "s": "Changing the schedule again may provoke complaints from the staff.",
+   "vi": "Việc đổi lịch làm việc lần nữa có thể gây ra phàn nàn từ nhân viên."
+  },
+  {
+   "w": "reproduce",
+   "s": "Please do not reproduce this report without written permission from the author.",
+   "vi": "Vui lòng không sao chép báo cáo này khi chưa có sự cho phép bằng văn bản của tác giả."
+  },
+  {
+   "w": "rubbish",
+   "s": "Please put your rubbish in the bin before you leave the room.",
+   "vi": "Vui lòng bỏ rác của bạn vào thùng trước khi rời khỏi phòng."
+  },
+  {
+   "w": "scarf",
+   "s": "She wore a warm wool scarf on the cold morning walk to work.",
+   "vi": "Cô ấy quàng chiếc khăn len ấm trên đường đi bộ đến chỗ làm vào buổi sáng lạnh."
+  },
+  {
+   "w": "scholarship",
+   "s": "He won a scholarship to study design at a university abroad.",
+   "vi": "Anh ấy giành được học bổng để học thiết kế tại một trường đại học ở nước ngoài."
+  },
+  {
+   "w": "seasonal",
+   "s": "The cafe offers a seasonal menu that changes every three months.",
+   "vi": "Quán cà phê có thực đơn riêng cho từng mùa và đổi món sau mỗi ba tháng."
+  },
+  {
+   "w": "smoothly",
+   "s": "The meeting ran smoothly because everyone had read the report beforehand.",
+   "vi": "Cuộc họp diễn ra suôn sẻ vì mọi người đã đọc báo cáo từ trước."
+  },
+  {
+   "w": "spectacular",
+   "s": "We had a spectacular view of the city from our hotel room.",
+   "vi": "Chúng tôi có tầm nhìn ngoạn mục ra thành phố từ phòng khách sạn."
+  },
+  {
+   "w": "spokesperson",
+   "s": "The company spokesperson answered questions from reporters about the new product.",
+   "vi": "Người phát ngôn của công ty trả lời câu hỏi của các phóng viên về sản phẩm mới."
+  },
+  {
+   "w": "steep",
+   "s": "The road to the hotel is steep, so take a bus.",
+   "vi": "Con đường đến khách sạn khá dốc, vì vậy hãy đi xe buýt."
+  },
+  {
+   "w": "strictly",
+   "s": "Food and drinks are strictly forbidden inside the museum gallery.",
+   "vi": "Đồ ăn và thức uống bị cấm tuyệt đối ở phòng trưng bày của bảo tàng."
+  },
+  {
+   "w": "swell",
+   "s": "My feet often swell after a long day at work, so I rest.",
+   "vi": "Chân tôi thường bị sưng sau một ngày dài ở chỗ làm nên tôi nghỉ ngơi."
+  },
+  {
+   "w": "testify",
+   "s": "The former manager will testify at the hearing next week.",
+   "vi": "Người quản lý cũ sẽ làm chứng tại phiên điều trần vào tuần sau."
+  },
+  {
+   "w": "timer",
+   "s": "Set the timer for ten minutes and take the cake out then.",
+   "vi": "Hãy đặt hẹn giờ mười phút rồi lấy bánh ra khi hết giờ."
+  },
+  {
+   "w": "translator",
+   "s": "We hired a translator to help us work with our new clients.",
+   "vi": "Chúng tôi thuê một phiên dịch viên để giúp làm việc với các khách hàng mới."
+  },
+  {
+   "w": "vacate",
+   "s": "Guests must vacate their rooms by noon on the day they leave.",
+   "vi": "Khách phải trả phòng trước buổi trưa vào ngày họ rời đi."
+  }
+ ]
+}

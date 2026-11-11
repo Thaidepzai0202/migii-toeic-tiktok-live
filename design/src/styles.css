@@ -1,0 +1,196 @@
+/* Migii TOEIC Live · giao diện màn live theo Design System (sáng / tối)
+ *
+ * Mọi số viết bằng dp, đúng đơn vị trong design-tokens.json. build.py đổi 1dp = 3px khi ghi file
+ * (khung 360 × 640dp = 1080 × 1920px, đúng khung TikTok LIVE). Màu chép từ design-tokens.json bản dark.
+ * Luật: không đổ bóng, không viền; 3 lớp nền background → surface → surfaceInner; chỉ 1 điểm cam mỗi màn.
+ */
+
+/* ---------- Token ---------- */
+/* Màu theo theme do build.py sinh từ design-tokens.json (light / dark) */
+:root {
+{{TOKENS}}
+  --sans: "SVN-Avo", system-ui, sans-serif;
+  --serif: "Migii Serif", Georgia, serif;
+  /* SVN-Avo không có ký tự phiên âm IPA: dùng font hệ thống cho riêng phần này */
+  --ipa: "Helvetica Neue", Arial, "SF Pro Text", system-ui, sans-serif;
+  --ui: -apple-system, "SF Pro Text", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; }
+body { background: var(--canvas); color: var(--canvasText); font-family: var(--ui); }
+img, svg { display: block; }
+
+/* ---------- Bảng vẽ (không thuộc game) ---------- */
+.page-head { padding: 80px 96px 24px; display: grid; gap: 14px; max-width: 2400px; }
+.page-head h1 { font: 700 44px/1.2 var(--ui); color: var(--canvasTitle); }
+.page-head p { font: 400 24px/1.55 var(--ui); max-width: 92ch; }
+.page-head code { font: 22px ui-monospace, Menlo, monospace; color: var(--canvasCode); }
+.board { display: flex; flex-wrap: wrap; gap: 120px 96px; padding: 56px 96px 160px; width: {{BOARD_W}}px; }
+.slot { display: flex; flex-direction: column; gap: 20px; }
+.slot-label { font: 600 30px/1.3 var(--ui); color: var(--canvasTitle); }
+.slot-label small { display: block; font: 400 22px ui-monospace, Menlo, monospace; opacity: .6; margin-top: 4px; }
+
+/* ---------- Khung màn live ---------- */
+.frame { position: relative; width: 360dp; height: 640dp; overflow: hidden; flex: none; background: var(--background);
+  color: var(--textPrimary); font-family: var(--sans); display: flex; flex-direction: column; padding: 52dp 0 107dp; }
+.glow { position: absolute; left: 0; top: 0; width: 360dp; height: 640dp;
+  background: radial-gradient(ellipse 120% 42% at 50% 90%, var(--glow) 0%, rgba(72, 188, 170, 0) 62%); }
+/* Vùng TikTok che (xem CLAUDE.md): nội dung chính nằm trong y 150–1600px. Ẩn/xoá lớp này khi xuất. */
+.tt-guide { position: absolute; left: 0; right: 0; display: flex; align-items: center; justify-content: center;
+  background: var(--guide); font: 400 12dp/16dp var(--sans); color: var(--textHint); }
+.tt-guide.top { top: 0; height: 50dp; }
+.tt-guide.bottom { top: 533.3333dp; bottom: 0; }
+.frame.sheet { padding: 24dp 0; }
+.frame.sheet .body { gap: 6dp; }
+.body { position: relative; flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 8dp; padding: 0 20dp; }
+.body.center { justify-content: center; }
+
+/* ---------- Kiểu chữ (thang v2) ---------- */
+.t-display { font: 700 40dp/44dp var(--sans); color: var(--textPrimary); }
+.t-title { font: 700 24dp/30dp var(--serif); color: var(--textPrimary); }
+.t-heading { font: 700 18dp/24dp var(--sans); color: var(--textPrimary); }
+.t-body { font: 400 16dp/24dp var(--sans); color: var(--textPrimary); }
+.t-bodyStrong { font: 700 16dp/24dp var(--sans); color: var(--textPrimary); }
+.t-support { font: 400 14dp/20dp var(--sans); color: var(--textSecondary); }
+.t-label { font: 700 12dp/16dp var(--sans); letter-spacing: .5dp; text-transform: uppercase; color: var(--primaryText); }
+.ipa { font-family: var(--ipa); }
+.c-hint { color: var(--textHint); } .c-primary { color: var(--primaryText); } .c-accent { color: var(--accent); }
+.center-text { text-align: center; }
+.ic { flex: none; }
+
+/* ---------- Thanh thương hiệu ---------- */
+.topbar { flex: none; height: 44dp; display: flex; align-items: center; gap: 10dp; padding: 6dp 8dp 6dp 6dp;
+  border-radius: 22dp; background: var(--surface); }
+.topbar .logo { width: 32dp; height: 32dp; border-radius: 9dp; }
+.topbar .brand { flex: 1; white-space: nowrap; font: 700 16dp/24dp var(--sans); color: var(--textPrimary); }
+.tag { flex: none; display: flex; align-items: center; gap: 6dp; height: 32dp; padding: 0 12dp; border-radius: 16dp;
+  background: var(--primarySurface); color: var(--primaryText); }
+.tag .t-label { color: inherit; }
+.dot { width: 4dp; height: 4dp; border-radius: 2dp; background: currentColor; flex: none; opacity: .7; }
+
+/* ---------- Thẻ ---------- */
+.card { background: var(--surface); border-radius: 28dp; padding: 20dp; display: flex; flex-direction: column; }
+.card.sm { padding: 16dp; }
+.qcard { align-items: center; text-align: center; gap: 2dp; }
+.qcard .meta { display: flex; align-items: center; gap: 8dp; }
+.qcard .meta .ipa { font-size: 18dp; line-height: 24dp; font-weight: 400; color: var(--primaryText); }
+.pos { display: inline-flex; align-items: center; justify-content: center; min-width: 24dp; height: 24dp; padding: 0 8dp;
+  border-radius: 12dp; background: var(--surfaceInner); font: 400 14dp/20dp var(--sans); color: var(--textSecondary); }
+.qcard .prompt { margin-top: 2dp; }
+
+/* Đồng hồ */
+.timer { width: 100%; display: flex; align-items: center; gap: 12dp; margin-top: 8dp; }
+.bar { flex: 1; height: 8dp; border-radius: 4dp; background: var(--surfaceInner); overflow: hidden; display: flex; }
+.bar .fill { height: 100%; border-radius: 4dp; background: var(--primary); }
+.timer .secs { width: 24dp; text-align: right; font: 700 16dp/20dp var(--sans); color: var(--textPrimary); }
+
+/* ---------- Đáp án ---------- */
+.opts { display: grid; grid-template-columns: 1fr 1fr; gap: 8dp; }
+.opts.one { grid-template-columns: 1fr; }
+.opt { min-height: 52dp; border-radius: 26dp; background: var(--surface); display: flex; align-items: center; gap: 8dp;
+  padding: 10dp 8dp 10dp 10dp; font: 400 16dp/24dp var(--sans); color: var(--textPrimary); }
+.opt .n { width: 32dp; height: 32dp; border-radius: 16dp; flex: none; background: var(--surfaceInner); color: var(--textSecondary);
+  display: flex; align-items: center; justify-content: center; font: 700 16dp/24dp var(--sans); }
+.opt .tx { flex: 1; min-width: 0; }
+.opt.ok { background: var(--stateCorrect); font-weight: 700; }
+.opt.ok .n { background: var(--primary); color: var(--textOnPrimary); }
+.opt.dim { color: var(--textHint); }
+.opt.dim .n { color: var(--textHint); }
+
+.hintrow { display: flex; align-items: center; justify-content: space-between; gap: 8dp; min-height: 20dp; }
+.hintrow .gift { display: flex; align-items: center; gap: 6dp; color: var(--accent); font: 700 14dp/20dp var(--sans); }
+
+/* ---------- Bảng điểm top 3 (3 ô) ---------- */
+.cells { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8dp; }
+.cell { background: var(--surface); border-radius: 22dp; padding: 12dp 8dp 12dp 10dp; display: flex; flex-direction: column; gap: 4dp; min-width: 0; }
+.cell .top { display: flex; align-items: center; justify-content: space-between; gap: 6dp; }
+.cell .top b { font: 700 18dp/24dp var(--sans); color: var(--textPrimary); }
+.cell .nm { font: 400 14dp/20dp var(--sans); color: var(--textSecondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.delta { display: inline-flex; align-items: center; height: 20dp; padding: 0 8dp; border-radius: 10dp; background: var(--primarySurface);
+  font: 700 12dp/16dp var(--sans); color: var(--primaryText); }
+.cell.empty { align-items: center; justify-content: center; min-height: 72dp; background: var(--surface); }
+.av { flex: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--sans); font-weight: 700; }
+
+/* ---------- Chân màn ---------- */
+.foot { margin-top: auto; display: flex; flex-direction: column; gap: 4dp; }
+.hintrow .t-support { flex: 1; }
+.ets { font: 400 12dp/16dp var(--sans); color: var(--textHint); }
+.promo { display: flex; align-items: center; gap: 6dp; color: var(--accent); font: 700 14dp/20dp var(--sans); }
+
+/* ---------- Ghép chữ ---------- */
+.tiles { display: flex; justify-content: center; gap: 8dp; width: 100%; margin-top: 12dp; }
+.tile { position: relative; width: 40dp; height: 56dp; border-radius: 16dp; background: var(--surfaceInner); display: flex;
+  align-items: center; justify-content: center; font: 700 24dp/30dp var(--serif); color: var(--textPrimary); }
+.tile .no { position: absolute; left: -4dp; top: -6dp; width: 20dp; height: 20dp; border-radius: 10dp; background: var(--primary);
+  color: var(--textOnPrimary); display: flex; align-items: center; justify-content: center; font: 700 12dp/16dp var(--sans); }
+
+/* ---------- Gõ chính tả ---------- */
+.letters { display: flex; justify-content: center; gap: 6dp; width: 100%; margin-top: 12dp; }
+.letter { width: 38dp; height: 48dp; border-radius: 12dp; background: var(--surfaceInner); display: flex; align-items: center;
+  justify-content: center; font: 700 24dp/30dp var(--serif); color: var(--primaryText); }
+
+/* ---------- Luyện tai ---------- */
+.wave { position: relative; width: 88dp; height: 88dp; border-radius: 44dp; background: var(--ramp1); display: flex; align-items: center; justify-content: center; }
+.wave .r2 { width: 68dp; height: 68dp; border-radius: 34dp; background: var(--ramp2); display: flex; align-items: center; justify-content: center; }
+.wave .r3 { width: 48dp; height: 48dp; border-radius: 24dp; background: var(--primary); display: flex; align-items: center; justify-content: center; color: var(--textOnPrimary); }
+
+/* ---------- Giờ học ---------- */
+.lesson { gap: 0; }
+.lesson .meaning { margin-top: 12dp; }
+.lesson .ex { margin-top: 10dp; text-align: center; }
+.steps { display: flex; gap: 6dp; margin-top: 14dp; }
+.steps i { width: 24dp; height: 6dp; border-radius: 3dp; background: var(--surfaceInner); }
+.steps i.on { background: var(--primary); }
+.teacher { display: flex; align-items: center; gap: 12dp; }
+.teacher img { width: 56dp; height: 56dp; border-radius: 28dp; flex: none; background: var(--surfaceInner); object-fit: cover; }
+.bubble { flex: 1; background: var(--surfaceInner); border-radius: 20dp; padding: 10dp 14dp; font: 700 16dp/24dp var(--sans); color: var(--textPrimary); }
+.seats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8dp; justify-items: center; }
+.seat { width: 40dp; height: 40dp; border-radius: 20dp; background: var(--surface); }
+
+/* ---------- Màn chờ / vinh danh / cảm ơn ---------- */
+.hero { flex-direction: row; align-items: center; gap: 12dp; padding: 16dp; }
+.hero img { width: 96dp; height: 96dp; object-fit: contain; flex: none; }
+.hero .tx { flex: 1; display: flex; flex-direction: column; gap: 6dp; align-items: flex-start; min-width: 0; }
+.count { display: flex; align-items: center; gap: 14dp; padding: 12dp 20dp; }
+.count .num { font: 700 40dp/44dp var(--sans); color: var(--primaryText); width: 56dp; text-align: center; }
+.count .col { flex: 1; display: flex; flex-direction: column; gap: 8dp; }
+.count .bar { flex: none; width: 100%; }
+.rules { gap: 8dp; padding: 12dp 16dp; }
+.rule { display: flex; align-items: center; gap: 12dp; }
+.rule .ico { width: 24dp; height: 24dp; border-radius: 12dp; background: var(--primarySurface); color: var(--primaryText); display: flex; align-items: center; justify-content: center; flex: none; }
+.appcard { display: flex; align-items: center; gap: 12dp; padding: 10dp 12dp 10dp 12dp; border-radius: 28dp; background: var(--surface); }
+.appcard img.logo { width: 48dp; height: 48dp; border-radius: 12dp; flex: none; }
+.appcard .tx { flex: 1; display: flex; flex-direction: column; gap: 2dp; min-width: 0; }
+.qr { flex: none; width: 64dp; height: 64dp; padding: 4dp; border-radius: 12dp; background: #fff; }
+.qr svg { width: 100%; height: 100%; }
+
+.podium { display: flex; align-items: flex-end; justify-content: center; gap: 8dp; }
+.pcol { width: 100dp; display: flex; flex-direction: column; align-items: center; gap: 4dp; }
+.pcol .pillar { width: 100%; border-radius: 22dp 22dp 0 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 10dp; gap: 2dp; }
+.pcol .nm { max-width: 100dp; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pcol .crown { color: var(--accent); }
+.row-card { display: flex; align-items: center; gap: 12dp; min-height: 48dp; padding: 6dp 16dp; border-radius: 22dp; background: var(--surface); }
+.row-card .ico { width: 32dp; height: 32dp; border-radius: 16dp; background: var(--surfaceInner); color: var(--primaryText); display: flex; align-items: center; justify-content: center; flex: none; }
+.row-card .grow { flex: 1; min-width: 0; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8dp; }
+.stat { background: var(--surface); border-radius: 22dp; padding: 12dp 8dp; display: flex; flex-direction: column; align-items: center; gap: 0; }
+.stat b { font: 700 18dp/24dp var(--sans); color: var(--primaryText); }
+.chips { display: flex; flex-wrap: wrap; gap: 8dp; }
+.chip { display: inline-flex; align-items: center; gap: 8dp; height: 32dp; padding: 0 12dp 0 4dp; border-radius: 16dp; background: var(--surfaceInner); font: 400 14dp/20dp var(--sans); color: var(--textPrimary); }
+.chip.plain { padding: 0 12dp; }
+
+/* ---------- Bảng tham chiếu ---------- */
+.swatches { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8dp; }
+.sw { border-radius: 16dp; background: var(--surface); padding: 8dp; display: flex; flex-direction: column; gap: 2dp; min-width: 0; }
+.sw .chipc { height: 36dp; border-radius: 10dp; }
+.sw b { font: 700 12dp/16dp var(--sans); color: var(--textPrimary); }
+.sw span { font: 400 12dp/16dp var(--ipa); color: var(--textHint); }
+.specimen { display: flex; align-items: baseline; justify-content: space-between; gap: 8dp; }
+.specimen small { font: 400 12dp/16dp var(--ipa); color: var(--textHint); flex: none; }
+.toast { display: flex; align-items: center; gap: 12dp; padding: 10dp 16dp 10dp 10dp; border-radius: 20dp; background: var(--surface); }
+.toast .tx { flex: 1; min-width: 0; }
+.sheet-title { padding-top: 4dp; }
+
+/* ---------- Nút chính ---------- */
+.btn { height: 48dp; border-radius: 20dp; background: var(--primary); color: var(--textOnPrimary); display: flex; align-items: center;
+  justify-content: center; font: 700 16dp/24dp var(--sans); }
