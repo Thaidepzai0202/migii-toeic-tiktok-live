@@ -20,6 +20,13 @@ Ghi ra `design/out/migii-live-man-that.html` (mọi khung trên một bảng v�
 (mỗi khung một file 1080 × 1920). Chữ dùng Be Vietnam Pro (Google Fonts, Figma có sẵn). Tên người chơi là tên ảo của `sim.js`.
 Chip góc phải đổi thành "● LIVE" như trên sóng thật. Thêm game hay đổi kênh thì sửa bảng `GROUPS` trong script (chép từ `gateway.js`).
 
+## Phương án màn vinh danh (`vinh_danh_mau.js`)
+
+`node design/src/vinh_danh_mau.js` vẽ 4 phương án màn vinh danh (bục 3 bậc, quán quân + Ninja, bảng xếp hạng, thẻ chúc mừng)
+theo ngôn ngữ màn chuẩn bị đã duyệt (Figma 46:12, thẻ tải app 46:119), ra `design/out/vinh-danh-phuong-an.html` và
+`design/out/vinh-danh-phuong-an/<a–d>.html`. Màn vinh danh đang chạy: `node design/src/xuat_man_that.js --only vinh-danh --file man-vinh-danh`
+(script chơi ~40 giây rồi gửi lệnh kết thúc game để vào màn vinh danh).
+
 ## Dựng lại file
 
 Chạy từ thư mục gốc repo:
@@ -61,3 +68,16 @@ một điểm cam (accent). Chữ chỉ có 2 độ đậm 400 và 700, Migii Se
 
 SVN-Avo không có ký tự phiên âm IPA, ®, dấu `·`, `–`, `→`, `✓`. Phiên âm dùng font hệ thống; các dấu phân cách đã thay bằng hình vẽ.
 Tên nội bộ trong file font SVN-Avo là "UTM Aptima": Figma cần cài font này (và Migii Serif) thì chữ mới đúng.
+
+## 10 phương án màn vinh danh (`vinh_danh_10.js`)
+
+`node design/src/vinh_danh_10.js` ghi `design/out/vinh-danh-10.html` (cả 10 khung thu nhỏ, bấm để xem cỡ lớn) và `design/out/vinh-danh-10/<số>.html`.
+Người dùng chọn bản nào thì port bản đó vào `#podiumScr` (`public/index.html` + `public/theme-light.css`).
+
+## Ba thẻ bài: 5 biến thể (`vinh_danh_the_bai.js`)
+
+Người dùng chọn phương án 7 (ba thẻ bài) ngày 13/11/2026. `node design/src/vinh_danh_the_bai.js` ghi `design/out/vinh-danh-the-bai.html` và 5 file cỡ lớn; dùng chung mảnh ghép của `vinh_danh_10.js`.
+
+**Đã chốt (13/11/2026):** người dùng chọn bản 2 "Thẻ sưu tầm ánh kim", tự chỉnh trên canvas Claude Design rồi cho đưa vào game.
+Màn đang chạy: `renderPodium()` trong `public/index.html`, kiểu dáng và hiệu ứng xuất hiện ở cuối `public/theme-light.css` (khối "Màn vinh danh: ba thẻ bài ánh kim").
+Khác bản vẽ: bỏ nhãn "Kết thúc <game>", chữ "Vinh danh" kim loại (Playfair Display, tải từ Google Fonts), nội dung giữ trong y 262–1590 thay vì kéo xuống 1756 như trên canvas.

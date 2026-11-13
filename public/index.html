@@ -13,7 +13,7 @@
 <!-- Giao diện sáng theo design system (public/theme-light.css); không còn bản tối -->
 <meta name="color-scheme" content="light">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;700;800;900&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <style>
   /* Migii Serif (SIL OFL 1.1, fonts/OFL-MigiiSerif.txt) — chỉ cho tiêu đề lớn, theo design system Migii.
      Chữ thường dùng Be Vietnam Pro: SVN-Avo của app chưa xác nhận bản quyền dùng trên web (CAN-CUNG-CAP.md). */
@@ -65,7 +65,7 @@
   .appcard .tx { flex: 1; min-width: 0; }
   .appcard .t1 { font-size: 30px; font-weight: 800; color: #3b524e; }
   .appcard .t2 { font-size: 40px; font-weight: 900; line-height: 1.1; color: var(--bg2); }
-  .appcard .t2 b { color: var(--teal-ink); }
+  .appcard .t2 b { color: var(--teal-ink); } .appcard .t2 em { font-style: normal; }
   /* Câu miễn trừ ETS: BẮT BUỘC trên mọi nội dung quảng bá có chữ TOEIC (migii_toeic_docs/01-tong-quan/thuong-hieu.md) */
   #ets { position: absolute; left: 56px; right: 56px; top: 230px; z-index: 6; text-align: center; font-size: 17px; font-weight: 700;
          line-height: 22px; color: rgba(255,255,255,.62); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; pointer-events: none; }
@@ -339,48 +339,40 @@
   .wrap.hunt .panels { margin-top: 18px; } .wrap.hunt .panel { height: 190px; } .wrap.hunt .row { height: 46px; }
   .hgrid { margin-top: 14px; display: grid; grid-template-columns: repeat(10, 58px); gap: 4px; }
   .hc { width: 58px; height: 58px; display: grid; place-items: center; border-radius: 12px; font-size: 36px; font-weight: 900; text-transform: uppercase; background: #e4edea; color: #10201e; }
+  /* từ vừa được tìm ra: từng chữ nổi to rồi thu lại và đổi màu, lần lượt từ chữ đầu (--d = độ trễ của chữ, --from = màu ô trước đó) */
+  .hc.pop { position: relative; z-index: 2; animation: huntPop .6s cubic-bezier(.2, 1.4, .4, 1) var(--d, 0ms) backwards; }
+  .hc.intro { animation: huntIntro .5s cubic-bezier(.2, 1.4, .4, 1) calc(var(--base, 0ms) + var(--i, 0) * 45ms) backwards; }
+  @keyframes huntIntro { 0% { transform: scale(.2); opacity: 0; } 55% { transform: scale(1.35); opacity: 1; background: #bfe6de; } 100% { transform: none; } }
+  @keyframes huntPop { 0% { transform: none; background: var(--from, #e4edea); box-shadow: none; }
+    40% { transform: scale(1.7) rotate(-5deg); box-shadow: 0 10px 24px rgba(16, 32, 30, .28); } 100% { transform: none; box-shadow: none; } }
   .hchips { margin-top: 12px; display: flex; flex-wrap: nowrap; gap: 8px; justify-content: center; height: 46px; overflow: hidden; }
   .hchips.rev { flex-wrap: wrap; height: 100px; }
   .hchip { padding: 2px 16px; border-radius: 999px; font-size: 28px; white-space: nowrap; font-weight: 800; color: #10201e; background: #e4edea; }
   .f0 { background: #ffd34d; } .f1 { background: #7fdcc8; } .f2 { background: #ff9eb5; } .f3 { background: #9ec5ff; }
   .f4 { background: #ffb347; } .f5 { background: #c9a7ff; } .f6 { background: #a3e07c; } .f7 { background: #ff8a7a; }
   .hx { background: #48bcaa; color: #06201c; } /* từ giấu không ai tìm ra (hiện khi công bố) */
-  /* Thế chữ: chuỗi từ theo màu đội, nhật ký lượt thử, bảng đội */
+  /* Thế chữ (luật 13/11: không đội): chuỗi từ, nhật ký lượt thử, thẻ người giữ từ ngay dưới từ */
   .wrap.chain .prev { display: none; }
-  #chainPanels { display: none; } .wrap.chain #chainPanels { display: grid; } .wrap.chain .panels:not(#chainPanels) { display: none; }
   .cchips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; max-height: 112px; overflow: hidden; padding: 0 8px; }
-  .cchip { padding: 4px 16px; border-radius: 999px; font-size: 30px; font-weight: 800; border: 3px solid #1f2a28; }
-  .cchip.black { background: #1f2a28; color: #fff; } .cchip.white { background: #fff; color: #1f2a28; } .cchip.start { background: #d3eee8; color: #10201e; border-color: #d3eee8; }
-  .cchip.cur { box-shadow: 0 0 0 4px #ffb347; }
+  .cchip { padding: 4px 16px; border-radius: 999px; font-size: 30px; font-weight: 800; border: 3px solid #1c7a6c; background: #fff; color: #10201e; }
+  .cchip.start { background: #d3eee8; color: #10201e; border-color: #d3eee8; }
+  .cchip.cur { background: #1c7a6c; color: #fff; box-shadow: 0 0 0 4px #ffb347; }
   .clog { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 4px 16px; justify-content: center; font-size: 26px; font-weight: 700; max-height: 70px; overflow: hidden; }
   .clog .ok { color: #16805f; } .clog .bad { color: #c2410c; }
-  /* bảng đội: Black nền đen, White nền trắng viền đen; đội đang đến lượt có viền vàng */
-  .cteam { transition: box-shadow .25s; }
-  /* id + !important: theme-light.css đặt nền trắng cho mọi .panel nên luật theo class không thắng được */
-  #cbP { background: #1f2a28 !important; border: 3px solid #1f2a28 !important; color: #fff !important; }
-  #cbP h3, #cbP .crow { color: #fff !important; }
-  #cwP { background: #fff !important; border: 3px solid #1f2a28 !important; color: #10201e !important; }
-  #cwP h3, #cwP .crow { color: #10201e !important; }
-  .cteam.turn { box-shadow: 0 0 0 6px #ffb347; }
-  .cteam h3 small { white-space: nowrap; } .cteam h3 { gap: 6px; }
-  #cbP .tdot { background: #1f2a28; box-shadow: inset 0 0 0 .09em #fff; }
-  .cteam h3 em { font-style: normal; font-size: 22px; color: #ffb347; background: rgba(255,179,71,.18); border-radius: 999px; padding: 2px 12px; margin-left: 8px; }
-  #cbP h3 small { color: #b9d0ca !important; } #cwP h3 small { color: #3b524e !important; }
-  .cnames { display: flex; flex-wrap: wrap; gap: 8px; }
-  .cn { padding: 3px 14px; border-radius: 999px; font-size: 26px; font-weight: 700; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .tb .cn { background: rgba(255,255,255,.16); } .tw .cn { background: #e4edea; }
-  .cn.more { background: transparent !important; opacity: .75; }
-  .crow { display: flex; align-items: center; gap: 10px; height: 46px; font-size: 28px; font-weight: 700; }
-  .crow .nm { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .crow .st { font-size: 24px; opacity: .75; }
-  .crow.mvp .nm::after { content: ' 👑'; }
-  .tdot { display: inline-block; width: .62em; height: .62em; border-radius: 50%; background: #1f2a28; margin-right: .22em; vertical-align: -.02em; }
-  .tdot.white { background: #fff; box-shadow: inset 0 0 0 .09em #1f2a28; }
-  /* từ hiện tại thành các ô chữ; ô vừa đổi bay vào theo màu đội vừa đổi, chữ cũ rơi ra */
+  /* thẻ người giữ từ: ảnh + tên, nảy lên mỗi lần đổi người */
+  .holder { display: inline-flex; align-items: center; gap: 16px; max-width: 900px; padding: 10px 30px 10px 10px; border-radius: 999px; background: #fff; box-shadow: 0 6px 0 rgba(16,32,30,.10), 0 0 0 4px #ffb347;
+    font-size: 40px; font-weight: 700; color: #10201e; }
+  .holder .av { width: 84px; height: 84px; flex: none; border-radius: 50%; background: #48bcaa center/cover; display: grid; place-items: center; font-size: 42px; font-weight: 900; color: #fff; }
+  .holder b { font-weight: 900; color: #1c7a6c; max-width: 480px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .holder.new { animation: holderPop .6s cubic-bezier(.2,1.5,.4,1) both; }
+  .holder.none { box-shadow: none; background: transparent; padding: 10px 20px; color: #1c7a6c; }
+  .holder.win { box-shadow: 0 6px 0 rgba(16,32,30,.10), 0 0 0 6px #ffb347; font-size: 44px; }
+  .holder.win .av { width: 110px; height: 110px; font-size: 54px; }
+  @keyframes holderPop { 0% { transform: translateY(40px) scale(.6); opacity: 0; } 60% { transform: scale(1.12); opacity: 1; } 100% { transform: none; } }
+  /* từ hiện tại thành các ô chữ; ô vừa đổi bay vào (nền teal), chữ cũ rơi ra */
   .q.cw { display: flex; gap: 14px; justify-content: center; perspective: 700px; text-shadow: none; font-size: 0; }
   .cl { position: relative; width: 168px; height: 188px; display: grid; place-items: center; font-size: 124px; font-weight: 900; line-height: 1; text-transform: uppercase; border-radius: 30px; background: #e4edea; color: #10201e; box-shadow: 0 8px 0 rgba(16,32,30,.14); }
-  .cl.black { background: #1f2a28; color: #fff; }
-  .cl.white { background: #fff; color: #1f2a28; box-shadow: inset 0 0 0 6px #1f2a28, 0 8px 0 rgba(16,32,30,.14); }
+  .cl.swap { background: #1c7a6c; color: #fff; }
   .cl.in { animation: tileIn .5s cubic-bezier(.2,1.4,.4,1) both; animation-delay: calc(var(--i) * 80ms); }
   .cl.swap { animation: tileSwap .75s cubic-bezier(.2,1.3,.4,1) both; z-index: 1; }
   .cl.swap::before { content: attr(data-old); position: absolute; inset: 0; display: grid; place-items: center; color: #10201e; opacity: 0; animation: oldOut .6s ease-in both; }
@@ -529,18 +521,8 @@
   .gold .row .nm { text-align: left; }
   .gold .wins { color: #ffd34d; font-size: 26px; margin-left: 10px; }
 
-  #podiumScr h1 { margin-top: 22px; font-size: 92px; font-weight: 900; line-height: 1; text-shadow: 0 8px 0 rgba(0,0,0,.35); }
-  #podiumScr h1 span { color: #ffd34d; }
-  .podium .av { width: 132px; height: 132px; border-radius: 50%; border: 6px solid #fff; background: #fff2 center/cover;
-                display: grid; place-items: center; font-size: 60px; font-weight: 900; color: #fff; }
-  .podium .p1 .av { width: 170px; height: 170px; border-color: #ffd34d; box-shadow: 0 0 0 8px rgba(255,211,77,.25), 0 0 60px rgba(255,211,77,.5); }
-  .podium .crown { font-size: 76px; margin-bottom: -16px; animation: wob .8s ease-in-out infinite alternate; }
-  .podium .bx small { display: block; font-size: 24px; font-weight: 700; opacity: .75; }
+  /* màn vinh danh (ba thẻ bài ánh kim): kiểu dáng nằm cuối theme-light.css */
   .awards { margin-top: 26px; width: 100%; display: flex; flex-direction: column; gap: 14px; }
-  .award { display: flex; align-items: center; gap: 18px; background: var(--card); border: 1px solid var(--line);
-           border-radius: 26px; padding: 16px 26px; font-size: 32px; font-weight: 700; text-align: left; }
-  .award .ic { font-size: 50px; } .award b { color: var(--orange2); }
-  .award .names { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .soon { margin-top: 30px; font-size: 36px; font-weight: 800; color: var(--muted); }
   .soon b { color: var(--green); font-variant-numeric: tabular-nums; }
   .pausechip { position: absolute; left: 50%; top: 236px; transform: translateX(-50%); z-index: 6; display: none;
@@ -608,35 +590,37 @@
   <div id="segchip"></div>
   <div id="hits"></div>
   <div id="hurry"></div>
+  <div id="dash"><img alt=""></div>
   <div id="moment"></div>
   <div id="aibox"><img src="img/ninja.png" alt=""><div class="tx"><div class="q"></div><div class="a"></div></div></div>
   <div class="pausechip" id="pausechip">⏸ Tạm dừng một chút</div>
+  <!-- Màn chuẩn bị vào chơi: bố cục theo Figma "Migii-Toeic" node 46:12 (12/11/2026) — tên game, Ninja + vòng đếm ngược,
+       bảng vàng, luật chơi, thẻ tải app. Nhãn lượt, nhãn Giờ học/giải trí, dãy game vẫn giữ trong DOM (theme-light.css ẩn) -->
   <div class="scr" id="breakScr">
     <div class="tag" id="bTag">Lượt 1</div>
-    <img class="hero" src="img/ninja-hero.png" alt="">
     <h1>Đố từ vựng <span>TOEIC</span></h1>
     <div class="kindtag" id="bKind"></div>
-    <div class="count" id="bCount"><b data-countdown>20</b></div>
-    <div class="count-sub" id="bSub">giây nữa bắt đầu</div>
+    <div class="bhero"><img class="hero" src="img/ninja-hero.png" alt="">
+      <div class="bcd"><div class="count" id="bCount"><b data-countdown>20</b></div><div class="count-sub" id="bSub">giây nữa bắt đầu</div></div></div>
+    <div class="gold" id="bGold"><h3>🏅 Bảng vàng hôm nay</h3><div id="bBoard"></div></div>
     <div class="rules" id="bRules"></div>
     <div class="lineup" id="bLineup"></div>
-    <div class="gold" id="bGold"><h3>🏅 Bảng vàng hôm nay</h3><div id="bBoard"></div></div>
     <div class="appcard">
       <img class="ic" src="img/appicon.png" alt="">
-      <div class="tx"><div class="t1">📲 Ôn lại từ vừa chơi trong app</div><div class="t2"><b>Migii TOEIC</b>: Luyện thi TOEIC trên điện thoại</div>
+      <div class="tx"><div class="t1">📲 Ôn lại từ vừa chơi trong app</div><div class="t2"><b>Migii TOEIC</b><em>:</em> Luyện thi TOEIC trên điện thoại</div>
         <div class="badges"><img src="img/appstore.svg" alt="App Store"><img src="img/googleplay.svg" alt="Google Play"></div></div>
       <div class="qr"><img src="img/qr-app.svg" alt="" onerror="this.parentNode.style.display='none'">Quét để tải</div>
     </div>
   </div>
   <div class="scr" id="podiumScr">
     <div class="tag" id="pTag">Kết thúc lượt 1</div>
-    <h1>🏆 <span>Vinh danh</span></h1>
-    <div class="podium" id="pPodium"></div>
+    <h1 class="ptitle"><span class="g">Vinh danh</span><span class="in" aria-hidden="true">Vinh danh</span><span class="sh" aria-hidden="true">Vinh danh</span></h1>
+    <div class="pfan" id="pPodium"></div>
     <div class="teamwin" id="pTeam" hidden></div>
     <div class="awards" id="pAwards"></div>
     <div class="appcard">
       <img class="ic" src="img/appicon.png" alt="">
-      <div class="tx"><div class="t1">📲 Ôn lại từ vừa chơi trong app</div><div class="t2"><b>Migii TOEIC</b>: Luyện thi TOEIC trên điện thoại</div>
+      <div class="tx"><div class="t1">📲 Ôn lại từ vừa chơi trong app</div><div class="t2"><b>Migii TOEIC</b><em>:</em> Luyện thi TOEIC trên điện thoại</div>
         <div class="badges"><img src="img/appstore.svg" alt="App Store"><img src="img/googleplay.svg" alt="Google Play"></div></div>
       <div class="qr"><img src="img/qr-app.svg" alt="" onerror="this.parentNode.style.display='none'">Quét để tải</div>
     </div>
@@ -671,10 +655,6 @@
         <h3><i class="hic hic-chat"></i><span>Câu trả lời</span><small id="winners"></small></h3>
         <div id="feed"></div>
       </div>
-    </div>
-    <div class="panels" id="chainPanels">
-      <div class="panel cteam tb" id="cbP"><h3><b id="cbT"></b> <small id="cbN"></small></h3><div id="cbL"></div></div>
-      <div class="panel cteam tw" id="cwP"><h3><b id="cwT"></b> <small id="cwN"></small></h3><div id="cwL"></div></div>
     </div>
     <div id="fillx"></div>
     <div class="footer">
@@ -835,7 +815,8 @@ const SEG_RULES = {
   listen: [`🎧 Ninja <b>đọc từ tiếng Anh</b>, không hiện chữ — nghe thật kỹ`, `💬 Gõ số <b>1–4</b> chọn nghĩa đúng · nhanh nhất <b>+10</b>`, `🔁 Mỗi câu Ninja đọc <b>2 lần</b>`],
   team: [`🥊 Gõ <b>tên đội</b> vào bình luận để vào đội`, `💬 Trả lời đúng (số <b>1–4</b>) = <b>kéo điểm cho đội</b>`, `🎁 Tặng quà: đội được <b>+10 đến +100</b> điểm`, `🏆 Đội thắng: <b>cả đội +10</b> bảng vàng`],
   type: [`🎧 Nghe Ninja đọc + nhìn <b>nghĩa tiếng Việt</b>`, `✍️ Gõ <b>từ tiếng Anh</b> vào bình luận · nhanh nhất <b>+10</b>`, `🔤 Gợi ý mở dần <b>c _ _ _ _ _ t</b> · phải đúng chính tả`],
-  word: [`🔤 Chọn <b>nghĩa</b>, chọn <b>từ</b>, tìm từ <b>đồng nghĩa</b> hoặc <b>trái nghĩa</b>`, `💬 Gõ <b>A, B, C hoặc D</b> · mỗi người chỉ tính <b>lần chọn đầu</b>`, `⚡ Đúng nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
+  // chữ theo Figma node 46:12 (12/11/2026)
+  word: [`✅ Chọn <b>đáp án đúng</b>`, `💬 Gõ <b>A, B, C</b> hoặc <b>D</b>`, `⚡ Đúng nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
   hunt: [`🔎 Ma trận <b>10×10</b>: tìm từ theo <b>mọi hướng</b>, cả ngược`, `💬 Gõ từ vào bình luận · ai tìm đủ <b>5 từ</b> trước ăn điểm`, `⚡ Về đích nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
   speedread: [`📰 Hiện <b>một văn bản ngắn</b> (email, thông báo, quảng cáo…) kèm <b>1 câu hỏi</b>`, `🔎 Tìm chi tiết trong bài rồi gõ <b>A, B, C</b> hoặc <b>D</b>`, `⚡ Nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
   dictate: [`🎧 Nghe <b>một câu tiếng Anh</b>, phát lặp lại, cách nhau 5 giây`, `💬 Gõ lại <b>cả câu</b> vào bình luận, cứ <b>2 giây</b> hiện thêm 1 chữ cái`, `⚡ Nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
@@ -843,20 +824,31 @@ const SEG_RULES = {
   crossword: [`🔠 Mỗi hàng là <b>một từ tiếng Anh</b> theo nghĩa tiếng Việt, cột cam ghép thành <b>từ khoá</b>`, `💬 Gõ <b>chữ thường</b> giải hàng (<b>+10, +5, +3, +1</b>) · <b>CHỮ HOA</b> đoán từ khoá (<b>+50</b>)`, `🔓 Giải hơn <b>một nửa</b> số hàng mới được đoán từ khoá`],
   fillin: [`✏️ Hiện <b>câu thiếu 1 từ</b>, chọn từ điền vào chỗ trống`, `💬 Gõ <b>A, B, C hoặc D</b> · nhanh nhất <b>+10</b>, rồi <b>+5</b>, <b>+3</b>, còn lại <b>+1</b>`, `🧠 Sau mỗi câu có <b>lời giải</b> và các lỗi hay nhầm`],
   listenmean: [`🎧 Nghe audio <b>một lần</b> · chữ cái hiện dần mỗi <b>2 giây</b>`, `💬 Gõ <b>A, B, C hoặc D</b> chọn nghĩa đúng`, `⚡ Nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
-  chain: [`🔗 Hai đội <b>Black</b> và <b>White</b> luân phiên đổi <b>1 chữ cái</b> để ra từ mới`, `💬 Gõ <b>join</b> để vào đội · mỗi đội cần <b>ít nhất 2 người</b>`, `⏱ <b>8 giây</b> mỗi lượt · hết giờ là thua · không lặp từ`],
+  chain: [`🔗 Mọi người cùng chơi: đổi <b>1 chữ cái</b> để ra từ mới`, `⚡ Ai nhanh tay thế được từ thì <b>giữ từ</b> · người khác thế được thì đổi người giữ`, `🏆 Hết <b>12 giây</b> không ai thế được: người giữ từ thắng ván <b>+10</b>`],
   startend: [`🎯 Tìm <b>5 từ</b> bắt đầu / kết thúc bằng chữ cho trước`, `💬 Gõ cả 5 từ trong <b>một</b> bình luận, cách nhau bằng <b>dấu cách</b> hoặc <b>dấu phẩy</b>`, `⚡ Đúng nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
 };
+// Dòng luật trên màn chuẩn bị: emoji đầu dòng đổi thành biểu tượng nét (theme-light.css vẽ bằng mask SVG, theo Figma node 46:12);
+// emoji chưa có biểu tượng thì giữ nguyên trong ô biểu tượng.
+const RULE_IC = { '⏱': 'clock', '✅': 'check', '🔤': 'check', '💬': 'chat', '✍️': 'chat', '⚡': 'bolt', '🏆': 'cup' };
+function ruleRow(x) {
+  const m = x.match(/^(\p{Extended_Pictographic}\uFE0F?)\s*/u);
+  if (!m) return `<div><span>${x}</span></div>`;
+  const ic = RULE_IC[m[1]] || RULE_IC[m[1].replace('\uFE0F', '')];
+  return `<div><i class="ri${ic ? ' ri-' + ic : ''}">${ic ? '' : m[1]}</i><span>${x.slice(m[0].length)}</span></div>`;
+}
 function renderBreak(s) {
   const cls = isClass(s), nx = s.next || s.seg;
   const prog = !!s.program;
-  $('breakScr').querySelector('h1').innerHTML = prog && nx ? `${nx.icon} <span>${esc(nx.name)}</span>` : cls ? 'Lớp học <span>TOEIC</span>' : 'Đố từ vựng <span>TOEIC</span>';
+  $('breakScr').querySelector('h1').innerHTML = prog && nx ? `<i class="ic">${nx.icon}</i> <span>${esc(nx.name)}</span>` : cls ? 'Lớp học <span>TOEIC</span>' : 'Đố từ vựng <span>TOEIC</span>';
   $('bTag').textContent = cls ? `Buổi học ${s.nextGame}` : `Lượt ${s.nextGame}`;
   $('bKind').textContent = prog && nx ? (nx.kind === 'học' ? '📚 Giờ học' : '🎉 Giờ giải trí') : '';
   $('bLineup').innerHTML = prog ? s.program.map((x) => `<span class="${x.id === nx.id ? 'now' : ''}">${x.icon} ${esc(x.name)}</span>`).join('') : '';
   if (prog && SEG_RULES[nx.id]) {
-    $('bRules').innerHTML = [nx.id === 'chain' ? `🔗 <b>${nx.total} phiên</b> · mỗi lượt <b>${nx.sec} giây</b>` : nx.id === 'crossword' ? `🔠 <b>1 ô chữ</b> · mỗi hàng <b>${nx.sec} giây</b>` : nx.id === 'speedread' ? `📰 <b>${nx.total} bài</b> · mỗi bài <b>${nx.sec} giây</b>` : `⏱ <b>${nx.total || s.cfg.questions} ${nx.id === 'hunt' ? 'bảng' : 'câu'}</b> · mỗi ${nx.id === 'hunt' ? 'bảng' : 'câu'} <b>${nx.sec || s.cfg.roundSec} giây</b>`, ...SEG_RULES[nx.id],
-      ...(nx.id === 'team' ? [] : [nx.id === 'chain' ? `🏆 Hết khung: tổng kết <b>đội thắng, kỷ lục, MVP</b>` : `🏆 Hết khung: <b>vinh danh Top 3</b> lên màn hình`])]
-      .map((x) => `<div>${x}</div>`).join('');
+    // dòng đầu (số câu · giây mỗi câu) và dòng cuối (Top 3) theo Figma node 46:12: "10 câu · 10s/câu", "Top 3 người điểm cao nhất…"
+    const don = nx.id === 'hunt' ? 'bảng' : 'câu';
+    $('bRules').innerHTML = [nx.id === 'chain' ? `🔗 <b>${nx.total} ván</b> · mỗi lượt <b>${nx.sec} giây</b>` : nx.id === 'crossword' ? `🔠 <b>1 ô chữ</b> · mỗi hàng <b>${nx.sec} giây</b>` : nx.id === 'speedread' ? `📰 <b>${nx.total}</b> bài - ${nx.sec}s/bài` : `⏱ <b>${nx.total || s.cfg.questions}</b> ${don} - ${nx.sec || s.cfg.roundSec}s/${don}`, ...SEG_RULES[nx.id],
+      ...(nx.id === 'team' ? [] : [`🏆 <b>Top 3</b> người điểm cao nhất sẽ được vinh danh`])]
+      .map(ruleRow).join('');
   } else if (cls) {
     $('bRules').innerHTML = [
       `🙋 <b>Bình luận</b> để vào lớp — có chỗ ngồi riêng`,
@@ -864,7 +856,7 @@ function renderBreak(s) {
       `💬 Gõ số <b>1–4</b> chọn nghĩa · đúng nhanh <b>+10</b>`,
       `⭐ Được Ninja <b>gọi tên</b> mà đúng: <b>+5</b>`,
       `🏆 Hết buổi: <b>vinh danh Top 3</b> học sinh giỏi`,
-    ].map((x) => `<div>${x}</div>`).join('');
+    ].map(ruleRow).join('');
   } else $('bRules').innerHTML = [
     `⏱ <b>${s.cfg.questions} câu</b> · mỗi câu <b>${s.cfg.roundSec} giây</b>`,
     ...(s.cfg.mode === 'mcq' ? [
@@ -876,61 +868,115 @@ function renderBreak(s) {
     ]),
     `🎁 Tặng quà: <b>+điểm & x2</b> cho 3 câu tới`,
     `🏆 Hết lượt: <b>vinh danh Top 3</b> lên màn hình`,
-  ].map((x) => `<div>${x}</div>`).join('');
+  ].map(ruleRow).join('');
   $('bGold').style.display = s.board.length ? '' : 'none';
   $('bBoard').innerHTML = s.board.map((p, i) =>
     `<div class="row"><span class="rk">${i + 1}</span><span class="nm">${esc(p.name)}${p.wins ? `<span class="wins">🏆×${p.wins}</span>` : ''}</span><span class="pt">${p.score}</span></div>`).join('');
 }
 
+// Màn vinh danh "ba thẻ bài ánh kim" (người dùng chốt 13/11/2026 trên canvas Claude Design; bản vẽ gốc: design/src/vinh_danh_the_bai.js bản 2).
+// Kiểu dáng và hiệu ứng xuất hiện nằm cuối theme-light.css (#podiumScr). Chỉ dựng lại DOM khi dữ liệu đổi: dựng lại là hiệu ứng chạy lại từ đầu.
+const P_IC = {
+  bolt: '<path d="M13.5 2.5L5 13.5h6.5L10.5 21.5 19 10.5h-6.5z"/>',
+  users: '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.5-3.5 3.2-5.5 6.5-5.5s6 2 6.5 5.5"/><circle cx="17" cy="9" r="2.8"/><path d="M16.5 14.6c2.6.2 4.6 1.9 5 4.9"/>',
+  link: '<path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1.2 1.2"/><path d="M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1.2-1.2"/>',
+  gift: '<rect x="3.5" y="9" width="17" height="11.5" rx="2"/><path d="M3.5 13.5h17M12 9v11.5"/><path d="M12 9C11 5.5 6.5 5 6.5 7.5S10 9 12 9zm0 0c1-3.5 5.5-4 5.5-1.5S14 9 12 9z"/>',
+  key: '<circle cx="8" cy="15.5" r="4.5"/><path d="M11.3 12.2L20 3.5M16 7.5l3 3"/>',
+};
+const pIcon = (k, size = 34) => `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="#1c7a6c" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${P_IC[k]}</svg>`;
+const pTile = (ic, lb, v, sub) => `<div class="ptile"><div class="ic">${pIcon(ic)}</div><div class="tx"><div class="pl">${lb}</div><div class="pv">${v}</div><div class="ps">${sub}</div></div></div>`;
+// số chạy từ 0 lên. Dùng setInterval chứ không dùng requestAnimationFrame: cửa sổ bị che thì rAF đứng, số sẽ kẹt ở 0
+function countUp(el, to, delay, dur = 800) {
+  if (!(to > 0)) return;
+  el.textContent = 0;
+  setTimeout(() => {
+    const t1 = Date.now();
+    const iv = setInterval(() => {
+      const k = Math.min(1, (Date.now() - t1) / dur);
+      el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3)));
+      if (k >= 1) clearInterval(iv);
+    }, 40);
+  }, delay);
+}
+
 function renderPodium(s, entering) {
-  const p = s.podium;
+  const p = s.podium, scr = $('podiumScr');
   $('pTag').textContent = p.seg && s.program ? `Kết thúc ${p.seg.icon} ${p.seg.name}` : `Kết thúc lượt ${p.no}`;
-  const pt = $('pTeam');
-  pt.hidden = !p.teams;
-  if (p.teams) {
-    const w = p.teamWin != null ? p.teams[p.teamWin] : null;
-    pt.innerHTML = w
-      ? `<div class="t">${w.icon} Đội ${esc(w.name)} thắng!</div><div class="sc">${p.teams[0].icon} ${p.teams[0].score} — ${p.teams[1].score} ${p.teams[1].icon} · cả đội +10 điểm bảng vàng</div>` +
-        `<div class="faces">${w.top.slice(0, 6).map(avatar).join('')}</div>`
-      : `<div class="t">🤝 Hai đội hoà!</div><div class="sc">${p.teams[0].icon} ${p.teams[0].score} — ${p.teams[1].score} ${p.teams[1].icon}</div>`;
+  const key = JSON.stringify([p.no, p.top, p.fastest, p.gifters, p.cross, p.chain, p.stats, p.teams, p.teamWin]);
+  if (scr.dataset.k !== key) {
+    scr.dataset.k = key;
+    const pt = $('pTeam');
+    pt.hidden = !p.teams;
+    scr.classList.toggle('team', !!p.teams);
+    if (p.teams) {
+      const w = p.teamWin != null ? p.teams[p.teamWin] : null;
+      pt.innerHTML = w
+        ? `<div class="t">${w.icon} Đội ${esc(w.name)} thắng!</div><div class="sc">${p.teams[0].icon} ${p.teams[0].score} — ${p.teams[1].score} ${p.teams[1].icon} · cả đội +10 điểm bảng vàng</div>` +
+          `<div class="faces">${w.top.slice(0, 6).map(avatar).join('')}</div>`
+        : `<div class="t">🤝 Hai đội hoà!</div><div class="sc">${p.teams[0].icon} ${p.teams[0].score} — ${p.teams[1].score} ${p.teams[1].icon}</div>`;
+    }
+    // ba thẻ: hạng 2 bên trái, hạng 3 bên phải, quán quân ở giữa nằm trên cùng. Thiếu người thì bỏ thẻ đó
+    const unit = p.chain ? 'THẮNG' : 'ĐÚNG';
+    const card = (i) => { const x = p.top[i]; return !x ? '' : `<div class="pcard c${i + 1}"><i class="shine"></i><div class="in">` +
+      `<div class="hd"><span class="no">${i + 1}</span>${i ? '' : '<span class="lab">QUÁN QUÂN</span>'}</div>${avatar(x)}` +
+      `<div class="nmw"><div class="nm${[...x.name].length > 10 ? ' long' : ''}">${esc(x.name)}</div></div>` +
+      `<div class="st"><div class="a"><b data-n="${x.score}">${x.score}</b><span>ĐIỂM</span></div><div class="b"><b>${x.correct}</b><span>${unit}</span></div></div></div></div>`; };
+    const fan = $('pPodium');
+    fan.classList.toggle('empty', !p.top.length);
+    fan.innerHTML = p.top.length ? `<i class="pburst"></i>${card(1)}${card(2)}${card(0)}`
+      : '<div class="pwait">Bục vinh danh đang chờ bạn!<span>Lượt sau gõ đáp án vào bình luận nhé!</span></div>';
+    // hai ô thông tin + các dòng phụ (quà, từ khoá ô chữ)
+    const tiles = [], lines = [];
+    if (p.chain) tiles.push(pTile('link', 'Chuỗi dài nhất', `${p.chain.longest} từ`, `kỷ lục: ${p.chain.record.len || 0} từ`));
+    else if (p.fastest) tiles.push(pTile('bolt', 'Nhanh tay nhất', esc(p.fastest.name), `${p.fastest.first} lần trả lời đầu tiên`));
+    tiles.push(pTile('users', 'Lượt này', `${p.stats.players} người chơi`, p.chain ? `${p.chain.matches.length} ván` : `${p.stats.questions} câu · ${p.stats.correct} lượt đúng`));
+    if (p.gifters.length) lines.push(`${pIcon('gift', 30)}<span class="names">Cảm ơn quà: <b>${p.gifters.map((g) => esc(g.name)).join(', ')}</b></span>`);
+    if (p.cross) lines.push(`${pIcon('key', 30)}<span class="names">Từ khoá: <b>${esc(p.cross.key.toUpperCase())}</b> · ${p.cross.keyBy ? `giải bởi <b>${esc(p.cross.keyBy)}</b>` : 'chưa ai giải được'}</span><span>${p.cross.solved}/${p.cross.n} hàng</span>`);
+    $('pAwards').innerHTML = `<div class="ptiles">${tiles.join('')}</div>` + lines.map((l, i) => `<div class="pline" style="--i:${i + 1}">${l}</div>`).join('');
+    scr.classList.toggle('dense', lines.length > 1); // hai dòng phụ: ẩn dòng "lượt sau sắp bắt đầu" cho vừa vùng an toàn
   }
-  if (p.chain) { // Thế chữ không có điểm: tỉ số các phiên, kỷ lục, MVP
-    const c = p.chain, b = c.wins.black, w = c.wins.white;
-    pt.hidden = false;
-    pt.innerHTML = `<div class="t">${b === w ? '🤝 Hai đội hoà!' : b > w ? '⚫ Black thắng!' : '⚪ White thắng!'}</div><div class="sc">⚫ ${b} — ${w} ⚪ · ${c.matches.length} phiên · ${c.players} người chơi</div>`;
-    $('pPodium').innerHTML = '';
-    const aw = [`<div class="award"><span class="ic">🔗</span><span class="names">Chuỗi dài nhất lượt này: <b>${c.longest} từ</b></span></div>`,
-      `<div class="award"><span class="ic">🏆</span><span class="names">Kỷ lục từ trước tới nay: <b>${c.record.len || 0} từ</b>${c.record.at ? ` (${esc(c.record.at)})` : ''}</span></div>`];
-    if (c.mvp) aw.push(`<div class="award"><span class="ic">👑</span><span class="names">MVP: <b>${esc(c.mvp.name)}</b> (${c.mvp.team === 'black' ? '⚫' : '⚪'})</span><span>${c.mvp.adopted} từ được dùng</span></div>`);
-    $('pAwards').innerHTML = aw.join('');
-    if (entering) { confetti(110); [523, 659, 784, 1046, 1318].forEach((f, i) => setTimeout(() => beep(f, .28, .16, 'triangle'), i * 150)); say(LINES.podium(p), { interrupt: true }); }
-    return;
-  }
-  const order = [[1, 'p2', '🥈'], [0, 'p1', '🥇'], [2, 'p3', '🥉']];
-  $('pPodium').innerHTML = p.top.length
-    ? order.filter(([i]) => p.top[i]).map(([i, cls, md]) => {
-        const x = p.top[i];
-        return `<div class="pd ${cls}">${i === 0 ? '<div class="crown">👑</div>' : ''}${avatar(x)}` +
-          `<div class="nm">${md} ${esc(x.name)}</div><div class="bx">${x.score}<small>${x.correct} câu đúng</small></div></div>`;
-      }).join('')
-    : '<div class="soon" style="margin-top:80px">Lượt này chưa ai ghi điểm 😅<br>Lượt sau gõ đáp án vào bình luận nhé!</div>';
-  const aw = [];
-  if (p.fastest) aw.push(`<div class="award"><span class="ic">⚡</span><span class="names">Nhanh tay nhất: <b>${esc(p.fastest.name)}</b></span><span>${p.fastest.first} lần đầu tiên</span></div>`);
-  if (p.gifters.length) aw.push(`<div class="award"><span class="ic">🌹</span><span class="names">Cảm ơn quà: <b>${p.gifters.map((g) => esc(g.name)).join(', ')}</b></span></div>`);
-  if (p.cross) aw.push(`<div class="award"><span class="ic">🔑</span><span class="names">Từ khoá: <b>${esc(p.cross.key.toUpperCase())}</b> · ${p.cross.keyBy ? `giải bởi <b>${esc(p.cross.keyBy)}</b>` : 'chưa ai giải được'}</span><span>${p.cross.solved}/${p.cross.n} hàng</span></div>`);
-  aw.push(`<div class="award"><span class="ic">📊</span><span class="names">${p.stats.questions} câu · ${p.stats.players} người chơi · ${p.stats.correct} lượt đúng</span></div>`);
-  $('pAwards').innerHTML = aw.join('');
   if (entering) {
-    confetti(110);
-    [523, 659, 784, 1046, 1318].forEach((f, i) => setTimeout(() => beep(f, .28, .16, 'triangle'), i * 150));
+    // Ninja đang lướt qua (dashFx) thì chờ lớp trắng tan rồi mới mở thẻ. Thứ tự mở: hạng 3 → hạng 2 → quán quân (theme-light.css)
+    const t0 = $('dash').classList.contains('on') ? 1450 : 0;
+    scr.style.setProperty('--t0', t0 + 'ms');
+    [['.c3', 800], ['.c2', 1100], ['.c1', 1650]].forEach(([c, d]) => { const b = scr.querySelector(`.pcard${c} .a b`); if (b) countUp(b, +b.dataset.n, t0 + d); });
+    // pháo giấy + nhạc mừng nổ đúng lúc thẻ quán quân lật ra
+    setTimeout(() => {
+      if (state?.phase !== 'podium') return;
+      confetti(110);
+      [523, 659, 784, 1046, 1318].forEach((f, i) => setTimeout(() => beep(f, .28, .16, 'triangle'), i * 150));
+    }, p.top.length ? t0 + 1450 : t0);
     say(LINES.podium(p), { interrupt: true });
   }
+}
+
+// Đổi màn (chờ ↔ chơi ↔ vinh danh ↔ màn cuối): Ninja lướt qua giữa màn (img/ninja-dash.gif, 12 khung, 1,92 giây).
+// Không chạy giữa các câu trong cùng một game (sẽ che câu hỏi). Đổi src kèm số đếm để GIF chạy lại từ khung đầu.
+function dashFx(screen) {
+  const prev = dashFx.screen;
+  dashFx.screen = screen;
+  if (!prev || prev === screen) return; // lần đầu mở trang: không chạy
+  const el = $('dash');
+  clearTimeout(dashFx.t);
+  el.classList.remove('on');
+  el.querySelector('img').src = `img/ninja-dash.gif?n=${(dashFx.n = (dashFx.n || 0) + 1)}`;
+  void el.offsetWidth;
+  el.classList.add('on');
+  dashFx.t = setTimeout(() => el.classList.remove('on'), 1900);
+  // màn mới: các khối bay từ ngoài vào ghép lại (theme-light.css: #stage.fly), bắt đầu lúc lớp trắng của Ninja tan
+  const st = $('stage');
+  clearTimeout(dashFx.t2);
+  st.classList.remove('fly');
+  void st.offsetWidth;
+  st.classList.add('fly');
+  dashFx.t2 = setTimeout(() => st.classList.remove('fly'), 3400);
 }
 
 function render() {
   const s = state;
   if (pendingReload && (!s || ['idle', 'break', 'podium'].includes(s.phase))) return location.reload();
   if (!s || s.phase === 'idle') return;
+  dashFx(['break', 'podium', 'outro'].includes(s.phase) ? s.phase : 'play');
   if (s.phase === 'outro') { $('breakScr').classList.remove('on'); $('podiumScr').classList.remove('on'); return renderOutro(s); }
   $('outro').classList.remove('on');
   const key = (s.game ? s.game.no + '.' + s.game.qNo : '') + s.phase + (s.q?.turnKey || ''); // Thế chữ: mỗi lượt đổi từ là một "câu" mới
@@ -979,7 +1025,7 @@ function render() {
   $('prev').innerHTML = s.prev
     ? `Câu trước: <b class="ko">${esc(s.prev.w)}</b> = ${esc(s.prev.m)} · ${s.prev.n} người đúng`
     : 'Gõ đáp án vào bình luận để ghi điểm!';
-  $('pill').textContent = room ? `✏️ Kiểm tra · Câu ${s.game.qNo}/${s.game.total}` : s.program && s.seg ? `${s.seg.icon} ${s.seg.name} · ${{ hunt: 'Bảng', chain: 'Phiên' }[s.seg.id] || 'Câu'} ${s.q?.mode === 'chain' ? s.q.match : s.game.qNo}/${s.game.total}` : `Lượt ${s.game.no} · Câu ${s.game.qNo}/${s.game.total}`;
+  $('pill').textContent = room ? `✏️ Kiểm tra · Câu ${s.game.qNo}/${s.game.total}` : s.program && s.seg ? `${s.seg.icon} ${s.seg.name} · ${{ hunt: 'Bảng', chain: 'Ván' }[s.seg.id] || 'Câu'} ${s.q?.mode === 'chain' ? s.q.match : s.game.qNo}/${s.game.total}` : `Lượt ${s.game.no} · Câu ${s.game.qNo}/${s.game.total}`;
   const mcq = s.q.mode === 'mcq' || s.q.mode === 'startend' || s.q.mode === 'chain' || s.q.mode === 'errhunt' || s.q.mode === 'dictate'; // Start or End, Thế chữ dùng chung bố cục khung trắc nghiệm (ô dưới thay 4 đáp án)
   document.querySelector('.wrap').classList.toggle('mcq', mcq);
   if (s.q.mode === 'startend') { renderStartEnd(s); return renderSide(s); }
@@ -1327,8 +1373,52 @@ function renderHunt(s) {
   const paint = (list, cl) => list.forEach((f, i) => { const [dr, dc] = HDIR[f.d]; for (let k = 0; k < f.w.length; k++) cls.set(`${f.r + dr * k},${f.c + dc * k}`, cl(f, i)); });
   if (rev) paint(q.hidden, () => 'hx');                 // từ giấu không ai tìm ra: xanh ngọc
   paint(q.found, (f, i) => 'f' + (i % 8));              // từ đã có người tìm: mỗi từ một màu (đè lên nếu trùng ô)
-  const html = q.grid.map((row, r) => [...row].map((ch, c) => `<div class="hc ${cls.get(r + ',' + c) || ''}">${esc(ch)}</div>`).join('')).join('');
-  if ($('hgrid').innerHTML !== html) $('hgrid').innerHTML = html;
+  // Dựng ô một lần cho mỗi bảng, sau đó chỉ đổi màu từng ô (không thay cả lưới) để hiệu ứng nổi chữ không bị cắt ngang.
+  const g = $('hgrid'), gkey = q.grid.join('|'), W = q.grid[0].length;
+  const fresh = g.dataset.key !== gkey;
+  if (fresh) {
+    // bảng mới hiện ra: cả ma trận nổi lên theo làn sóng chéo từ góc trên trái (--i = hàng + cột). Đang đổi màn (Ninja lướt,
+    // các khối bay vào) thì chờ ~2,3 giây cho bảng vào chỗ rồi mới nổi.
+    const base = $('stage').classList.contains('fly') ? 2300 : 0;
+    g.innerHTML = q.grid.map((row, r) => [...row].map((ch, c) => `<div class="hc intro" style="--i:${r + c};--base:${base}ms">${esc(ch)}</div>`).join('')).join('');
+    g.onanimationend = (e) => e.target.classList.remove('intro', 'pop');
+    g.dataset.key = gkey;
+    renderHunt.seen = new Set();
+  }
+  // Từ vừa được tìm ra: từng chữ nổi to rồi thu lại, đổi sang màu của từ, lần lượt từ chữ đầu tới chữ cuối.
+  // Công bố đáp án: nổi lần lượt TỪNG TỪ một (cả từ đã có người tìm lẫn từ chưa ai tìm), hết từ này mới tới từ kế, gói trong ~7 giây.
+  // Mở trang giữa chừng (fresh) thì tô luôn, không nổi lại.
+  const seen = renderHunt.seen, popAt = new Map();
+  const walk = (f, start, step) => { const [dr, dc] = HDIR[f.d]; for (let k = 0; k < f.w.length; k++) popAt.set(`${f.r + dr * k},${f.c + dc * k}`, start + k * step); };
+  for (const f of q.found) {
+    if (seen.has(f.w)) continue;
+    seen.add(f.w);
+    if (!fresh && !rev) walk(f, 0, 110);
+  }
+  if (rev && !seen.has('#rev')) {
+    seen.add('#rev');
+    if (!fresh) {
+      const GAP = 160, letters = q.hidden.reduce((n, f) => n + f.w.length, 0);
+      const step = Math.max(40, Math.min(110, (7000 - q.hidden.length * GAP) / letters));
+      let t = 0;
+      for (const f of q.hidden) { walk(f, t, step); t += f.w.length * step + GAP; }
+    }
+  }
+  [...g.children].forEach((el, i) => {
+    const pos = `${Math.floor(i / W)},${i % W}`, cl = cls.get(pos) || '', k = popAt.get(pos);
+    if (k != null) {
+      el.style.setProperty('--from', getComputedStyle(el).backgroundColor);
+      el.style.setProperty('--d', Math.round(k) + 'ms');
+      el.classList.remove('pop');
+      void el.offsetWidth;
+      el.className = `hc ${cl} pop`;
+      el.dataset.c = cl;
+    } else if (el.dataset.c !== cl && (el.dataset.c || cl)) {
+      el.classList.remove(...(el.dataset.c ? [el.dataset.c] : []));
+      if (cl) el.classList.add(cl);
+      el.dataset.c = cl;
+    }
+  });
   const idx = new Map(q.found.map((f, i) => [f.w, i]));
   const chips = rev ? q.hidden.map((f) => `<span class="hchip ${idx.has(f.w) ? 'f' + (idx.get(f.w) % 8) : 'hx'} ko">${esc(f.w)}</span>`)
     : q.found.slice(-6).map((f) => `<span class="hchip f${idx.get(f.w) % 8} ko">${esc(f.w)}</span>`);
@@ -1339,68 +1429,58 @@ function renderHunt(s) {
   $('howto').innerHTML = rev ? `${q.finished} người tìm đủ ${q.need} từ` : `Tìm <b>${q.total} từ</b> giấu (cả ngược) · đủ <b>${q.need} từ</b> trước ăn điểm`;
 }
 
-// ---- Thế chữ: Black vs White đổi 1 chữ cái, 8 giây mỗi lượt ----
-const TEAMNAME = { black: 'BLACK', white: 'WHITE' };
-const dot = (t) => `<i class="tdot ${t}"></i>`; // chấm đen/trắng vẽ bằng CSS (emoji ⚪ gần như vô hình trên nền sáng)
-let chainPrev = { word: '', match: 0 }, chainAnim = null;
-// Từ hiện tại thành các ô chữ. Từ mới xuất hiện: nếu hơn từ trước đúng 1 chữ cái thì ô đó bay vào theo màu đội vừa đổi (chữ cũ rơi ra),
-// còn từ đầu phiên thì các ô lần lượt hiện ra. Cùng một từ thì trả về đúng chuỗi cũ để DOM không bị thay (animation không chạy lại).
+// ---- Thế chữ (luật 13/11): mọi người chơi chung, ai thế được từ thì giữ từ (hiện hình dưới từ), hết giờ không ai thế thì người giữ thắng ván ----
+let chainPrev = { word: '', match: 0 }, chainAnim = null, chainHolder = '';
+// Từ hiện tại thành các ô chữ. Từ mới xuất hiện: nếu khác từ trước đúng 1 chữ cái thì ô đó bay vào (chữ cũ rơi ra),
+// còn từ đầu ván thì các ô lần lượt hiện ra. Cùng một từ thì trả về đúng chuỗi cũ để DOM không bị thay (animation không chạy lại).
 function chainTiles(q) {
   const word = q.cur, last = q.chain[q.chain.length - 1];
   if (word !== chainPrev.word || q.match !== chainPrev.match) {
     let idx = -1, old = '';
-    if (chainPrev.word.length === word.length && q.match === chainPrev.match && last?.team)
+    if (chainPrev.word.length === word.length && q.match === chainPrev.match && last?.by)
       for (let i = 0; i < word.length; i++) if (word[i] !== chainPrev.word[i]) { idx = i; old = chainPrev.word[i]; }
-    chainAnim = { idx, old, team: last?.team || '', start: idx < 0, chipNew: idx >= 0 };
+    chainAnim = { idx, old, start: idx < 0, chipNew: idx >= 0 };
     chainPrev = { word, match: q.match };
   }
   const a = chainAnim;
-  return [...word].map((ch, i) => `<span class="cl ${a.start ? 'in' : a.idx === i ? 'swap ' + a.team : ''}" style="--i:${i}"${a.idx === i ? ` data-old="${esc(a.old)}"` : ''}>${esc(ch)}</span>`).join('');
+  return [...word].map((ch, i) => `<span class="cl ${a.start ? 'in' : a.idx === i ? 'swap' : ''}" style="--i:${i}"${a.idx === i ? ` data-old="${esc(a.old)}"` : ''}>${esc(ch)}</span>`).join('');
 }
 function renderChain(s) {
   const q = s.q, rev = s.phase === 'reveal', st = q.stats;
-  const turnNow = !rev && q.stage === 'turn';
   let big, sub, body, how, tiles = null;
   const chips = (list) => {
-    const newChip = turnNow && chainAnim?.chipNew; chainAnim && (chainAnim.chipNew = false); // chip mới chỉ "nảy" ở lần vẽ đầu tiên của từ đó
-    return list.map((c, i) => `<span class="cchip ${c.team || 'start'}${i === list.length - 1 && !rev ? ' cur' : ''}${i === list.length - 1 && newChip ? ' new' : ''} ko">${esc(c.w)}</span>`).join('');
+    const newChip = !rev && chainAnim?.chipNew; chainAnim && (chainAnim.chipNew = false); // chip mới chỉ "nảy" ở lần vẽ đầu tiên của từ đó
+    return list.map((c, i) => `<span class="cchip ${c.by ? '' : 'start'}${i === list.length - 1 && !rev ? ' cur' : ''}${i === list.length - 1 && newChip ? ' new' : ''} ko">${esc(c.w)}</span>`).join('');
   };
-  if (q.stage === 'lobby') {
-    big = 'Gõ JOIN';
-    sub = `để vào đội · mỗi đội cần ít nhất <b>${q.min}</b> người`;
-    body = `<div class="se-rules"><div>${dot('black')}<b>Black</b>: ${q.teams.black.n}/${q.min} người</div><div>${dot('white')}<b>White</b>: ${q.teams.white.n}/${q.min} người</div><div>🔗 Đổi <b>1 chữ cái</b> để ra từ mới · không lặp từ</div></div>`;
-    how = q.waited ? `Đang chờ đủ người… (đã chờ ${q.waited}s)` : `Phiên ${q.match}/${q.matches} bắt đầu khi mỗi đội đủ người`;
-  } else if (!rev) {
+  if (!rev) {
     tiles = chainTiles(q);
-    sub = `Lượt của ${dot(q.turn)}<b>${TEAMNAME[q.turn]}</b>: đổi <b>1 chữ cái</b>`;
+    // thẻ người giữ từ: nảy lên khi đổi người (so khoá ván + số từ để cùng một người giữ lại lần nữa vẫn nảy)
+    const hk = q.holder ? `${q.match}.${q.chainLen}` : '';
+    const isNew = hk && hk !== chainHolder;
+    chainHolder = hk;
+    sub = q.holder ? `<span class="holder${isNew ? ' new' : ''}">${avatar(q.holder)}<span><b>${esc(q.holder.name)}</b> đang giữ từ</span></span>`
+      : `<span class="holder none">Đổi <b>1 chữ cái</b> để giành từ này</span>`;
     body = `<div class="cchips">${chips(q.chain)}</div><div class="clog">${q.log.map((l) => `<span class="${l.ok ? 'ok' : 'bad'}">${esc(l.name)}: ${esc(l.w)} ${l.ok ? '✓' : '✗ ' + esc(l.why)}</span>`).join('')}</div>`;
-    how = `Chuỗi <b>${q.chainLen}</b> từ · kỷ lục <b>${q.record.len}</b> · gõ từ mới trong 8 giây`;
+    how = q.holder ? `Thế được từ trong <b>${q.sec} giây</b> để giành · không ai thế được thì <b>${esc(q.holder.name)}</b> thắng <b>+${q.pts}</b>`
+      : `Chuỗi <b>${q.chainLen}</b> từ · kỷ lục <b>${q.record.len}</b> · gõ từ mới trong <b>${q.sec} giây</b>`;
   } else {
-    big = `${dot(st.winner)}${TEAMNAME[st.winner]} thắng!`;
-    sub = `Chuỗi <b>${st.len}</b> từ${st.isNew ? ' · 🎉 <b>KỶ LỤC MỚI</b>' : ` · kỷ lục ${st.record}`}`;
-    body = `<div class="cchips">${chips(q.chain)}</div>` + (st.mvp ? `<div class="clog"><span class="ok">👑 MVP: <b>${esc(st.mvp.name)}</b> · ${st.mvp.adopted} từ được dùng</span></div>` : '');
-    how = `Phiên ${q.match}/${q.matches} · tỉ số <b>${q.wins.black} — ${q.wins.white}</b> · phiên mới sau ít giây`;
+    chainHolder = '';
+    big = st.winner ? '🏆 Thắng ván!' : 'Chưa ai thế được từ';
+    sub = st.winner ? `<span class="holder win new">${avatar(st.winner)}<span><b>${esc(st.winner.name)}</b> +${st.pts} điểm</span></span>` : `<span class="holder none">Ván này không có người thắng</span>`;
+    body = `<div class="cchips">${chips(q.chain)}</div>`;
+    how = `Ván ${q.match}/${q.matches} · chuỗi <b>${st.len}</b> từ${st.isNew ? ' · 🎉 <b>KỶ LỤC MỚI</b>' : ` · kỷ lục ${st.record}`}${q.match < q.matches ? ' · ván mới sau ít giây' : ''}`;
   }
   const qe = $('q');
   if (tiles != null) { qe.className = 'q cw'; if (qe.innerHTML !== tiles) qe.innerHTML = tiles; }
   else { qe.className = 'q ko kw' + kwSize(big.replace(/<[^>]*>/g, '')); if (qe.innerHTML !== big) qe.innerHTML = big; }
-  $('sub').innerHTML = sub;
+  // thẻ người giữ từ: chỉ thay DOM khi nội dung đổi (bỏ lớp "new" khi so) để hiệu ứng nảy không chạy lại mỗi lần server gửi trạng thái
+  const se = $('sub'), subKey = sub.replace(' new">', '">');
+  if (se.dataset.k !== subKey || !se.querySelector('.holder')) { se.dataset.k = subKey; se.innerHTML = sub; } // game khác đã ghi đè #sub thì vẽ lại
   const op = $('opts');
   op.className = 'opts se' + (rev ? ' rev' : '');
   if (op.innerHTML !== body) op.innerHTML = body;
   $('howto').innerHTML = how;
-  // hai bảng đội: tên + số người luôn khớp danh sách (hiện tối đa 8 tên, còn lại ghi "+N"); cuối phiên hiện tỉ lệ hợp lệ và số từ được dùng
-  for (const [t, k] of [['black', 'b'], ['white', 'w']]) {
-    const isTurn = turnNow && q.turn === t;
-    $('c' + k + 'P').className = 'panel cteam t' + k + (isTurn ? ' turn' : '');
-    $('c' + k + 'T').innerHTML = `${dot(t)}${TEAMNAME[t]}${isTurn ? '<em>▶ lượt</em>' : ''}`;
-    $('c' + k + 'N').textContent = `${q.teams[t].n} người${q.wins[t] ? ` · 🏆 ${q.wins[t]}` : ''}`;
-    const names = q.teams[t].names, more = q.teams[t].n - Math.min(names.length, 8);
-    const html = rev
-      ? (st[t].rows.length ? st[t].rows.map((r) => `<div class="crow ${r.name === st[t].mvp ? 'mvp' : ''}"><span class="nm">${esc(r.name)}</span><span class="st">${r.adopted} từ · ${r.attempts ? Math.round((100 * r.valid) / r.attempts) : 0}%</span></div>`).join('') : '<div class="crow"><span class="st">Chưa ai gõ từ</span></div>')
-      : (names.length ? `<div class="cnames">${names.slice(0, 8).map((n) => `<span class="cn">${esc(n)}</span>`).join('')}${more > 0 ? `<span class="cn more">+${more} người nữa</span>` : ''}</div>` : '<div class="crow"><span class="st">Chưa có ai · gõ join</span></div>');
-    if ($('c' + k + 'L').innerHTML !== html) $('c' + k + 'L').innerHTML = html;
-  }
+  renderSide(s);
 }
 
 // ---- Start or End: tìm 5 từ bắt đầu / kết thúc bằng chữ cho trước ----
@@ -1434,7 +1514,7 @@ function renderFeed(feed) {
   $('feed').innerHTML = feed.slice(-9).reverse().map((f, i) =>
     `<div class="it ${f.ok ? 'ok' : f.choice ? 'bad' : ''} ${i < fresh ? 'new' : ''}">` +
     `<span class="nm">${esc(f.name)}</span><span class="tx ${f.ok ? 'ko' : ''}">${f.ok ? (f.words ? esc(f.words) : '✓') : f.choice ? '✗' : esc(f.text)}</span>` +
-    (f.ok ? `<span class="pt">+${f.pts}</span>` : '') + '</div>').join('');
+    (f.ok && f.pts ? `<span class="pt">+${f.pts}</span>` : '') + '</div>').join(''); // Thế chữ: thế được từ chưa có điểm (chỉ người thắng ván +10)
   if (fresh > 0 && feed.slice(-fresh).some((f) => f.choice && !f.ok) && Date.now() - lastBuzz > 700) { lastBuzz = Date.now(); beep(196, .14, .06, 'sawtooth'); }
   seenFeed = feed.length;
 }
@@ -1451,10 +1531,15 @@ function frame() {
       c.classList.toggle('wait', wait);
       c.querySelector('b').textContent = wait ? 'Sắp bắt đầu' : sec;
       c.style.setProperty('--p', wait ? '100%' : (left / (state.endsAt - state.startedAt)) * 100 + '%');
-      $('bSub').textContent = wait ? 'chờ một chút nhé…' : 'giây nữa bắt đầu';
+      // 5 giây cuối: màn đổi sang tông đỏ cam, số đếm nảy mỗi giây, chữ dưới vòng giục (theme-light.css: #breakScr.urgent)
+      const gap = !wait && !state.paused && sec <= 5 && sec > 0;
+      $('breakScr').classList.toggle('urgent', gap);
+      if (gap && sec !== frame.bsec) { const b = c.querySelector('b'); b.classList.remove('tick'); void b.offsetWidth; b.classList.add('tick'); }
+      frame.bsec = gap ? sec : 0;
+      $('bSub').textContent = wait ? 'chờ một chút nhé…' : gap ? 'giây nữa · sẵn sàng nhé!' : 'giây nữa bắt đầu';
       if (!wait && !state.paused && sec <= 3 && sec > 0 && sec !== frame.last) { frame.last = sec; beep(sec === 1 ? 880 : 520, .12, .12, 'square'); }
     } else {
-      $('pSoon').innerHTML = `Lượt ${state.podium.no + 1} sắp bắt đầu… 🔥`;
+      $('pSoon').textContent = `Lượt ${state.podium.no + 1} sắp bắt đầu…`;
     }
   }
   if (state && state.phase === 'teach') {
@@ -1464,7 +1549,7 @@ function frame() {
   }
   if (state && (state.phase === 'question' || state.phase === 'reveal')) {
     const total = state.endsAt - state.startedAt;
-    const left = Math.max(0, state.endsAt - now);
+    const left = Math.min(total, Math.max(0, state.endsAt - now)); // Thế chữ: chưa tới startedAt (4 giây nghỉ sau mỗi từ) thì đồng hồ đứng ở mức đầy
     const sec = Math.ceil(left / 1000);
     const isQ = state.phase === 'question';
     $('bar').style.transform = `scaleX(${isQ ? left / total : 0})`;
@@ -1478,9 +1563,41 @@ function frame() {
     if (state.paused) $('secs').textContent = '⏸';
     if (isQ && !state.paused && sec <= 5 && sec !== frame.last) { frame.last = sec; if (fin) { beep(sec === 1 ? 1046 : 784, .14, .16, 'square'); setTimeout(() => beep(sec === 1 ? 1318 : 988, .1, .1, 'square'), 140); } else beep(440, .06, .08, 'square'); }
   } else timerFx(false, false);
+  heatFx(state ? heatOf(state, now) : 0);
   requestAnimationFrame(frame);
 }
 requestAnimationFrame(frame);
+
+// Đếm ngược (câu hỏi + màn chuẩn bị vào game): nền xanh (teal của Figma) → vàng (giữa giờ) → đỏ (hết giờ), chuyển dần;
+// chữ đề bài (#q) đen → đỏ dần, về cuối đỏ nhanh hơn (mũ 1.5). Hết giờ / công bố đáp án / màn khác: lùi dần về xanh.
+// theme-light.css đọc các biến --bg-a, --bg-b, --ink (mặc định = xanh, chữ đen).
+function heatOf(s, now) {
+  if (s.endsAt == null || !s.startedAt || !(s.phase === 'question' || s.phase === 'break')) return 0;
+  const total = s.endsAt - s.startedAt;
+  if (!(total > 0)) return 0;
+  return Math.min(1, Math.max(0, 1 - (s.endsAt - now) / total));
+}
+const HEAT = {           // var: [độ cong, [[mốc 0–1, [r, g, b, độ đậm]], …]]
+  '--bg-a': [1, [[0, [72, 188, 170, .16]], [.5, [255, 199, 44, .24]], [1, [229, 57, 70, .30]]]],
+  '--bg-b': [1, [[0, [72, 188, 170, 0]], [.5, [255, 199, 44, .08]], [1, [229, 57, 70, .14]]]],
+  '--ink': [1.5, [[0, [16, 32, 30, 1]], [1, [211, 58, 73, 1]]]],
+};
+function heatColor([ease, stops], t) {
+  const x = Math.pow(t, ease);
+  let i = 0; while (i < stops.length - 2 && x > stops[i + 1][0]) i++;
+  const [p0, a] = stops[i], [p1, b] = stops[i + 1], k = Math.min(1, Math.max(0, (x - p0) / (p1 - p0)));
+  const c = a.map((v, j) => v + (b[j] - v) * k);
+  return `rgba(${c[0] | 0}, ${c[1] | 0}, ${c[2] | 0}, ${c[3].toFixed(3)})`;
+}
+function heatFx(target) {
+  const h = frame.heat ?? 0;
+  const v = Math.abs(target - h) < .002 ? target : h + (target - h) * .12; // mượt cả khi nhảy từ đỏ về xanh
+  frame.heat = v;
+  if (frame.heatSet != null && Math.abs(v - frame.heatSet) < .004 && (v !== target || v === frame.heatSet)) return;
+  frame.heatSet = v;
+  const st = $('stage').style;
+  for (const k in HEAT) st.setProperty(k, heatColor(HEAT[k], v));
+}
 
 function timerFx(half, fin) {
   const t = document.querySelector('.timer');
@@ -1678,7 +1795,7 @@ const SEG_INTRO = {
   crossword: ['Đến giờ giải ô chữ!', 300, 'Gõ chữ thường để giải từng hàng. Giải được hơn nửa số hàng thì gõ chữ hoa để đoán từ khoá hàng dọc, được thưởng năm mươi điểm!'],
   fillin: ['Đến giờ điền từ!', 300, 'Mỗi câu thiếu một từ, gõ A, B, C hoặc D để chọn. Sau mỗi câu Ninja sẽ giải thích vì sao đúng và vì sao mọi người hay nhầm!'],
   listenmean: ['Đến giờ nghe và chọn nghĩa!', 300, 'Ninja chỉ đọc một lần, chữ cái sẽ hiện dần. Nghe thật kỹ rồi chọn nghĩa đúng nha!'],
-  chain: ['Đến giờ Thế chữ!', 300, 'Hai đội Black và White luân phiên đổi một chữ cái để ra từ mới. Gõ join để vào đội, mỗi đội cần ít nhất hai người nhé!'],
+  chain: ['Đến giờ Thế chữ!', 300, 'Mọi người cùng chơi nhé. Đổi một chữ cái để ra từ mới, ai nhanh tay thì giữ từ.', 250, 'Hết mười hai giây không ai thế được thì người giữ từ thắng, cộng mười điểm!'],
   startend: ['Thử thách Start or End!', 300, 'Gõ năm từ tiếng Anh bắt đầu hoặc kết thúc bằng chữ cho trước, cách nhau bằng dấu cách. Ai nhanh nhất được nhiều điểm nhất!'],
 };
 const LINES = {
@@ -1697,8 +1814,7 @@ const LINES = {
     if (s.q.mode === 'errhunt') return [...lead, pickOne('qe', ['Tìm từ sai trong câu nhé!', 'Câu này sai ở đâu nhỉ?']), 250, 'Gõ từ sai, dấu gạch, rồi từ đúng!'];
     if (s.q.mode === 'cross') return s.q.stage === 'key' ? ['Vòng từ khoá! Gõ chữ hoa để đoán từ khoá hàng dọc nhé!'] : [`Hàng số ${s.q.clue.no}.`, 200, s.q.clue.vi, 250, `${s.q.clue.len} chữ cái.`];
     if (s.q.mode === 'hunt') return [...lead, pickOne('qh', ['Săn từ nào! Ma trận có mười từ giấu, tìm đủ năm từ trước để ăn điểm!', 'Ai tìm được từ nào? Đọc xuôi hay ngược đều được!']), 300, 'Gõ từ bạn thấy vào bình luận nhé!'];
-    if (s.q.mode === 'chain') return s.q.stage === 'lobby' ? (s.q.waited ? [] : ['Gõ join để vào đội nào!'])
-      : s.q.chainLen <= 1 ? [`Phiên ${s.q.match}!`, 200, `Đội ${s.q.turn === 'black' ? 'Black' : 'White'} đi trước, đổi một chữ cái nhé!`] : [];
+    if (s.q.mode === 'chain') return s.q.chainLen <= 1 ? [`Ván ${s.q.match}!`, 200, 'Đổi một chữ cái để giành từ nhé!'] : [];
     if (s.q.mode === 'startend') return [...lead, pickOne('qse', ['Tìm năm từ tiếng Anh, bắt đầu hoặc kết thúc bằng chữ trên màn hình!', 'Ai tìm được năm từ nào?']), 300, 'Gõ cả năm từ trong một bình luận nhé!'];
     if (s.q.mode === 'mcq') {
       if (s.q.wq) {
@@ -1754,7 +1870,7 @@ const LINES = {
     : s.q.mode === 'cross' ? (s.q.done ? ['Từ khoá là', 150, { audio: `api/say?w=${encodeURIComponent(s.q.key.word)}` }, 250, `${s.q.keyBy} giải được từ khoá, cộng năm mươi điểm!`]
       : s.q.result ? [s.q.result.by ? 'Đáp án là' : 'Hết giờ! Đáp án là', 150, { audio: `api/say?w=${encodeURIComponent(s.q.result.answer)}` }, ...(s.q.result.by ? [200, `${s.q.result.by} giải đúng đầu tiên!`] : [])]
       : s.q.key.word ? ['Từ khoá là', 150, { audio: `api/say?w=${encodeURIComponent(s.q.key.word)}` }] : [])
-    : s.q.mode === 'chain' ? [`Đội ${s.q.stats.winner === 'black' ? 'Black' : 'White'} thắng! Chuỗi ${s.q.stats.len} từ!`, ...(s.q.stats.isNew ? [200, 'Kỷ lục mới luôn!'] : [])]
+    : s.q.mode === 'chain' ? [s.q.stats.winner ? `${spokenName(s.q.stats.winner.name)} thắng ván! Cộng mười điểm!` : 'Ván này chưa ai thế được từ!', ...(s.q.stats.len > 2 ? [200, `Chuỗi ${s.q.stats.len} từ!`] : []), ...(s.q.stats.isNew ? [200, 'Kỷ lục mới luôn!'] : [])]
     : s.q.mode === 'hunt' ? ['Hết giờ! Đây là các từ giấu trong ma trận.']
     : s.q.mode === 'startend' ? ['Hết giờ! Ví dụ đáp án nè.', 200, ...(s.q.examples || []).slice(0, 3).flatMap((w) => [250, { audio: `api/say?w=${encodeURIComponent(w)}` }])]
     : s.q.wq?.t === 'fill' ? (() => {
@@ -1774,8 +1890,7 @@ const LINES = {
     : [pickOne('rv', ['Đáp án là...', 'Đáp án đúng là...', 'Đáp án nè!']), 150, { audio: s.q.audio }],
   podium: (p) => [
     ...(p.teams ? [p.teamWin != null ? `Đội ${p.teams[p.teamWin].name} chiến thắng! Cả đội được cộng mười điểm!` : 'Hai đội hoà nhau!', 300] : []),
-    ...(p.chain ? [p.chain.wins.black === p.chain.wins.white ? 'Hai đội hoà nhau!' : `Đội ${p.chain.wins.black > p.chain.wins.white ? 'Black' : 'White'} chiến thắng!`, ...(p.chain.mvp ? [300, `MVP là ${spokenName(p.chain.mvp.name)}!`] : [])]
-      : p.top[0] ? ['Xin chúc mừng!', 300, `${spokenName(p.top[0].name)} vô địch lượt ${p.no} với ${p.top[0].score} điểm!`] : ['Lượt này chưa ai ghi điểm.']),
+    ...(p.top[0] ? ['Xin chúc mừng!', 300, `${spokenName(p.top[0].name)} vô địch lượt ${p.no} với ${p.top[0].score} điểm!`] : ['Bục vinh danh đang chờ bạn đấy!']),
     300, 'Lượt mới sắp bắt đầu rồi, chuẩn bị tinh thần nào!', ...PROMO,
   ],
 };

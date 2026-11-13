@@ -5,6 +5,7 @@
   "description": "Game livestream TikTok đố từ vựng TOEIC cho app Migii TOEIC (fork từ tiktok-live-quiz của Jaemy)",
   "scripts": {
     "demo": "node server.js --sim",
+    "demo:bot": "node server.js --autostart --tag demo-bot",
     "demo:duoi450": "node server.js --sim --program-order word,startend,hunt,chain --word-file data/word-300.json,data/word-400.json",
     "demo:450-650": "node server.js --sim --program-order word,fillin,listenmean,errhunt,crossword --word-file data/word-500.json,data/word-600.json --err-file data/san-loi-600.json --cross-file data/o-chu-600.json",
     "demo:650-800": "node server.js --sim --program-order word,speedread,dictate --word-file data/word-700.json --read-file data/doc-nhanh-700.json --dict-file data/nghe-chep-700.json",

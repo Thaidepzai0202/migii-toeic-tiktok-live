@@ -6,6 +6,7 @@
 //   node design/src/xuat_man_that.js                     tất cả (khoảng 4–5 phút, Săn từ chờ lâu nhất)
 //   node design/src/xuat_man_that.js --only word,hunt    vài game (bảng vẽ chỉ gồm các game đó)
 //   node design/src/xuat_man_that.js --ref <thư mục>     lưu thêm ảnh chụp màn thật cùng lúc (540×960) để đối chiếu
+//   node design/src/xuat_man_that.js --only cho-word --file man-chuan-bi-word   chỉ màn chuẩn bị vào chơi của Word, ghi file riêng
 //
 // Ghi ra design/out/ (nằm ngoài git):
 //   migii-live-man-that.html     mọi khung trên một bảng vẽ, nhóm theo kênh
@@ -26,6 +27,10 @@ const argv = process.argv.slice(2);
 const arg = (n, d) => { const i = argv.indexOf('--' + n); return i < 0 ? d : argv[i + 1]; };
 const ONLY = arg('only', '') ? String(arg('only')).split(',') : null;
 const REF = arg('ref', '') ? path.resolve(arg('ref')) : null;
+// --file <tên>: ghi bảng vẽ ra design/out/<tên>.html và từng khung ra design/out/<tên>/ (mặc định migii-live-man-that + man-that/),
+// để xuất riêng vài màn mà không đè bộ đầy đủ
+const NAME = String(arg('file', 'migii-live-man-that')).replace(/[^\w.-]/g, '');
+const FRAMES = NAME === 'migii-live-man-that' ? 'man-that' : NAME;
 const CHROME = process.env.CHROME || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const BASE_PORT = Number(arg('base-port', 18950));
 const PARALLEL = Number(arg('parallel', 6));
@@ -39,7 +44,8 @@ const SHOT = {
   fin: '3 giây cuối',
   reveal: 'công bố đáp án',
   teach: 'Ninja dạy từ',
-  break: 'giới thiệu game kế tiếp',
+  break: 'màn chuẩn bị, đếm ngược',
+  breakFin: '5 giây cuối trước khi vào game',
   podium: 'vinh danh sau mỗi game',
   outro: 'cảm ơn, cuối phiên',
 };
@@ -69,10 +75,22 @@ const GROUPS = [
     { id: 'type', name: 'Nghe & gõ chính tả', args: '--program-order type' },
     { id: 'team', name: 'So găng 2 đội (đang không chơi)', args: '--program-order team' },
   ] },
+  // Màn chuẩn bị vào chơi (đếm ngược trước mỗi game): chạy cả kênh để thấy dãy game, nạp sẵn bảng vàng mẫu (seed),
+  // nghỉ 20 giây như lúc live, chỉ chụp khi game sắp vào là `breakFor`. Làm màn Word trước, các game khác theo sau (12/11/2026).
+  { title: 'Màn chuẩn bị vào chơi', games: [
+    { id: 'cho-word', name: 'Word (kênh dưới 450)', args: `--program-order word,startend,hunt,chain ${W(300, 400)}`, shots: ['break', 'breakFin'], breakFor: 'word', brk: 20, seed: true },
+  ] },
+  // Vinh danh: game Word chạy đủ lượt lâu hơn giờ chờ chụp, nên chơi ~40 giây rồi gửi lệnh kết thúc game (endGame) để vào màn vinh danh.
+  { title: 'Màn vinh danh', games: [
+    { id: 'vinh-danh', name: 'Vinh danh sau game Word', args: `--program-order word,startend ${W(300, 400)}`, shots: ['podium'] },
+  ] },
   { title: 'Màn chung', games: [
-    { id: 'chung', name: 'Giữa các game và cuối phiên', args: `--program-order word,startend ${W(300, 400)} --questions 5`, shots: ['podium', 'break', 'outro'] },
+    { id: 'chung', name: 'Cuối phiên', args: `--program-order word,startend ${W(300, 400)} --questions 5`, shots: ['outro'] },
   ] },
 ];
+// Bảng vàng mẫu cho màn chuẩn bị (tên ảo kiểu sim.js), ghi vào file điểm của server chụp trước khi bật, xoá khi xong.
+const SEED = [['Tuấn Kiệt', 100, 1], ['trung.ielts', 94, 2], ['Lan Anh', 72, 0], ['Mai Phương', 65, 0], ['tranvy.2k3', 51, 0]]
+  .map(([name, score, wins], i) => ({ uid: `sim:${90 + i}`, name, avatar: '', score, correct: Math.round(score / 3), wins }));
 const GAMES = GROUPS.flatMap((g) => g.games).filter((g) => !ONLY || ONLY.includes(g.id));
 GAMES.forEach((g, i) => { g.port = BASE_PORT + i; g.shots = g.shots || ['play', 'reveal']; });
 
@@ -83,13 +101,14 @@ const COND = {
   fin: { when: `s.phase === 'question' && !s.paused && left > 1500 && left < 2600`, wait: 0 },
   reveal: { when: `s.phase === 'reveal'`, wait: 1200 },
   teach: { when: `s.phase === 'teach' && (late || document.querySelectorAll('#room .desk:not(.empty)').length >= 10)`, wait: 3000 }, // lớp đã đông
-  break: { when: `s.phase === 'break'`, wait: 1500 },
-  podium: { when: `s.phase === 'podium'`, wait: 2000 },
+  break: { when: `s.phase === 'break'`, wait: 1500, brk: true },
+  breakFin: { when: `s.phase === 'break' && !s.paused && left > 3000 && left < 4300`, wait: 0, brk: true }, // màn đổi tông đỏ (.urgent)
+  podium: { when: `s.phase === 'podium'`, wait: 2500, pre: 40000, cmd: { cmd: 'endGame' } }, // pre: chờ khán giả ảo ghi điểm rồi mới kết thúc game
   outro: { when: `s.phase === 'outro'`, wait: 2500, cmd: { cmd: 'outro', next: '20:00 tối mai' } },
 };
-const condExpr = (c, late) => `(() => { const s = typeof state === 'undefined' ? null : state; if (!s) return false;
+const condExpr = (c, late, g) => `(() => { const s = typeof state === 'undefined' ? null : state; if (!s) return false;
   const left = Math.max(0, s.endsAt - (Date.now() + clockSkew)), total = s.endsAt - s.startedAt, f = total > 0 ? left / total : 0, late = ${late};
-  return !!(${c.when}); })()`;
+  return !!(${c.when}${c.brk && g.breakFor ? ` && (s.next || s.seg || {}).id === ${JSON.stringify(g.breakFor)}` : ''}); })()`;
 
 // Chụp khung trong trang: cho hiệu ứng đang chạy về trạng thái cuối, bỏ phần đang ẩn, trả HTML của #stage (không JS).
 // Chạy một lần đồng bộ nên JS của trang không chen vào giữa chừng.
@@ -113,8 +132,9 @@ const SNAP = `(() => {
     const cs = getComputedStyle(el);
     if (cs.display === 'none' || Number(cs.opacity) === 0) { drop.push(c); return; }
     if (filled.has(el)) { c.style.opacity = cs.opacity; c.style.transform = cs.transform; }
-    // 'Migii UI' là tên tạm trỏ tới Avenir Next (theme-light.css); Figma không biết tên này → ghi thẳng Avenir Next + độ đậm đã gom
-    if (/Migii UI/.test(cs.fontFamily)) { const w = Number(cs.fontWeight); c.style.fontFamily = "'Avenir Next', 'Be Vietnam Pro', sans-serif"; c.style.fontWeight = w < 550 ? '500' : w < 750 ? '600' : '700'; }
+    // theme-light.css gom độ đậm Avenir Next bằng @font-face (≤549 Medium, 550–749 Demi Bold, ≥750 Bold); Figma đọc số đậm gốc
+    // (800/900 thành Heavy) → ghi thẳng độ đậm đã gom vào từng chữ
+    if (/Avenir Next/.test(cs.fontFamily)) { const w = Number(cs.fontWeight); c.style.fontFamily = "'Avenir Next', 'Be Vietnam Pro', sans-serif"; c.style.fontWeight = w < 550 ? '500' : w < 750 ? '600' : '700'; }
     for (const at of [...c.attributes]) if (/^on/i.test(at.name)) c.removeAttribute(at.name);
   });
   drop.forEach((c) => c.remove());
@@ -150,8 +170,8 @@ const inlineAssets = (s) => s
 // ------------------------------------------------------------------ chạy server + Chrome, chụp từng game
 function startServer(g) {
   const log = fs.openSync(path.join(TMP, `${g.id}.log`), 'w');
-  g.proc = spawn(process.execPath, ['server.js', '--sim', '--no-ai', '--autostart', '--mute', '--port', String(g.port), '--tag', `figma-${g.id}`,
-    '--break', '6', '--podium', '8', ...g.args.split(/\s+/)], { cwd: ROOT, stdio: ['ignore', log, log] });
+  g.proc = spawn(process.execPath, ['server.js', '--sim', '--no-ai', '--autostart', '--mute', '--no-stats', '--port', String(g.port), '--tag', `figma-${g.id}`,
+    '--break', String(g.brk || 6), '--podium', '8', ...g.args.split(/\s+/)], { cwd: ROOT, stdio: ['ignore', log, log] });
 }
 
 async function captureGame(g) {
@@ -175,11 +195,12 @@ async function captureGame(g) {
     await sleep(['play', 'teach'].includes(g.shots[0]) ? 20000 : 2500); // chờ khán giả ảo vào đủ để bảng điểm, lớp học không trống
     for (const shot of g.shots) {
       const c = COND[shot];
+      if (c.pre) await sleep(c.pre);
       if (c.cmd) await post(g.port, '/cmd', c.cmd);
       const t0 = Date.now();
       let ok = false;
       while (Date.now() - t0 < 160000) {
-        if (await evalJS(condExpr(c, Date.now() - t0 > 90000))) { ok = true; break; }
+        if (await evalJS(condExpr(c, Date.now() - t0 > 90000, g))) { ok = true; break; }
         await sleep(60);
       }
       if (!ok) { console.log(`  ⚠️  ${g.id}: không gặp lúc "${SHOT[shot]}", bỏ khung này`); continue; }
@@ -204,7 +225,7 @@ function pageCss() {
   const src = fs.readFileSync(path.join(PUB, 'index.html'), 'utf8');
   const inline = [...src.matchAll(/<style>([\s\S]*?)<\/style>/g)].map((m) => m[1]).join('\n');
   const theme = fs.readFileSync(path.join(PUB, 'theme-light.css'), 'utf8');
-  return inlineAssets(`${inline}\n/* ===== theme-light.css ===== */\n${theme}`).replace(/'Migii UI', /g, "'Avenir Next', ");
+  return inlineAssets(`${inline}\n/* ===== theme-light.css ===== */\n${theme}`);
 }
 const BOARD_CSS = `
 /* ===== bảng vẽ (chỉ cho file xuất, không thuộc màn live) ===== */
@@ -240,6 +261,8 @@ async function main() {
   const chainRec = path.join(ROOT, 'data', 'the-chu-record.json');
   const chainRecBefore = fs.existsSync(chainRec) ? fs.readFileSync(chainRec) : null;
   const dataBefore = new Set(fs.readdirSync(path.join(ROOT, 'data')));
+  // bảng vàng mẫu: cùng tên file điểm server.js đọc lúc bật (--sim, --tag figma-<id>, ngày UTC)
+  for (const g of GAMES.filter((x) => x.seed)) fs.writeFileSync(path.join(ROOT, 'data', `scores-sim-figma-${g.id}-${new Date().toISOString().slice(0, 10)}.json`), JSON.stringify(SEED));
   console.log(`Chụp ${GAMES.length} game, ${GAMES.reduce((n, g) => n + g.shots.length, 0)} khung (log server ở ${TMP})`);
   GAMES.forEach(startServer);
   const stop = () => GAMES.forEach((g) => g.proc?.kill());
@@ -262,8 +285,8 @@ async function main() {
   }
 
   const css = pageCss();
-  fs.rmSync(path.join(OUT, 'man-that'), { recursive: true, force: true });
-  fs.mkdirSync(path.join(OUT, 'man-that'), { recursive: true });
+  fs.rmSync(path.join(OUT, FRAMES), { recursive: true, force: true });
+  fs.mkdirSync(path.join(OUT, FRAMES), { recursive: true });
   let n = 0, body = '';
   for (const grp of GROUPS) {
     const games = grp.games.filter((g) => g.frames?.length);
@@ -276,7 +299,7 @@ async function main() {
         const label = `${g.name.replace(/ \(.*\)$/, '')} · ${SHOT[f.shot]}`;
         body += `<figure class="fr"><figcaption>${esc(SHOT[f.shot])}</figcaption>${stage}</figure>`;
         const file = `${String(++n).padStart(2, '0')}-${g.id}-${f.shot}.html`;
-        fs.writeFileSync(path.join(OUT, 'man-that', file), `${head(`${label} · Migii TOEIC Live`, css)}\n<body class="one">${stage}</body>\n</html>\n`);
+        fs.writeFileSync(path.join(OUT, FRAMES, file), `${head(`${label} · Migii TOEIC Live`, css)}\n<body class="one">${stage}</body>\n</html>\n`);
       }
       body += '</div></div>';
     }
@@ -291,10 +314,10 @@ ${body}
 </body>
 </html>
 `;
-  const boardFile = path.join(OUT, 'migii-live-man-that.html');
+  const boardFile = path.join(OUT, `${NAME}.html`);
   fs.writeFileSync(boardFile, board);
   const urls = [...board.matchAll(/https?:\/\/[^\s"')]+/g)].map((m) => m[0]).filter((u) => !u.startsWith('https://fonts.g') && !u.startsWith('http://www.w3.org/')); // xmlns của SVG không phải tải ngoài
-  console.log(`\nXong: ${n} khung → ${path.relative(ROOT, boardFile)} (${(fs.statSync(boardFile).size / 1048576).toFixed(1)} MB) và design/out/man-that/`);
+  console.log(`\nXong: ${n} khung → ${path.relative(ROOT, boardFile)} (${(fs.statSync(boardFile).size / 1048576).toFixed(1)} MB) và design/out/${FRAMES}/`);
   if (urls.length) console.log(`⚠️  còn ${urls.length} liên kết ngoài chưa nhúng, ví dụ ${urls[0]}`);
   fs.rmSync(TMP, { recursive: true, force: true });
 }

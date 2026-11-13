@@ -64,8 +64,9 @@ const CFG = {
   ai: !arg('no-ai', false), // AI "Ninja Migii" trả lời bình luận (ai.js)
   // mcq = trắc nghiệm: hiện từ tiếng Anh (+ đọc), chọn nghĩa 1–4 bằng bình luận; type = nghe + gõ từ tiếng Anh
   mode: arg('mode') === 'type' ? 'type' : 'mcq',
-  // người chơi ảo 🤖 mỗi câu (bots.js). MẶC ĐỊNH TẮT ở bản Migii: trên màn live không gắn nhãn bot → xem CAN-CUNG-CAP.md
-  bots: clamp(arg('bots', 0), 0, 12, 0),
+  // người chơi ảo 🤖 mỗi câu (bots.js), chỉ ở live thật. 12/11/2026 người dùng chốt cần bot để mọi khung chạy được lúc mới mở live
+  // → mặc định 6 (tự giảm khi đông người thật, tối thiểu 2). Tên không gắn nhãn trên màn live. Tắt: --bots 0 hoặc kéo thanh trên màn điều khiển.
+  bots: clamp(arg('bots', 6), 0, 12, 6),
   // style: quiz = đố liên tục · class = LỚP HỌC: Ninja Migii giảng nhóm từ cùng bài (teach) rồi kiểm tra từng từ, gọi tên học sinh,
   // người xem bình luận/vào live được xếp chỗ ngồi trong lớp. Bật: --class hoặc đổi trong màn điều khiển (áp dụng từ lượt sau).
   // program = CHƯƠNG TRÌNH XOAY VÒNG (04/11): mỗi lượt một khung khác nhau (giờ học ↔ giải trí), giữa các khung có vinh danh.
@@ -94,8 +95,8 @@ const SEGMENTS = {
   startend: { icon: '🎯', name: 'Start or End', kind: 'giải trí', rule: 'Gõ 5 từ tiếng Anh bắt đầu hoặc kết thúc bằng chữ cho trước', sec: 45, total: 5, reveal: 8 },
   // Săn từ: 120 giây mỗi bảng, 3 bảng mỗi lượt. Điểm 10/5/3/1.
   hunt: { icon: '🔎', name: 'Săn từ', kind: 'giải trí', rule: 'Ma trận 10×10: tìm từ nối liền theo mọi hướng, ai tìm đủ 5 từ trước ăn điểm', sec: 120, total: 3, reveal: 10 },
-  // Thế chữ: Black vs White, mỗi lượt 8 giây đổi đúng 1 chữ cái. KHÔNG có điểm: chỉ thắng/thua, kỷ lục chuỗi, tỉ lệ hợp lệ, MVP. total = số phiên mỗi lượt.
-  chain: { icon: '🔗', name: 'Thế chữ', kind: 'giải trí', rule: 'Hai đội Black và White luân phiên đổi 1 chữ cái để ra từ mới, hết 8 giây là thua', sec: 8, total: 3, reveal: 10 },
+  // Thế chữ: Black vs White, mỗi lượt 12 giây đổi đúng 1 chữ cái (13/11: người dùng tăng từ 8 lên 12 và thêm 4 giây nghỉ trước khi đếm, CHAIN_GRACE). Luật 13/11: không chia đội, người giữ từ cuối cùng thắng ván +10 (xem khối Thế chữ bên dưới). total = số ván mỗi lượt.
+  chain: { icon: '🔗', name: 'Thế chữ', kind: 'giải trí', rule: 'Mọi người cùng chơi: đổi 1 chữ cái để ra từ mới và giữ từ; hết 12 giây không ai thế được thì người giữ từ thắng +10', sec: 12, total: 3, reveal: 10 },
   // Điền từ (kênh 450–650, câu dùng từ mốc 500). Điểm 10/5/3/1 (như Word).
   fillin: { icon: '✏️', name: 'Điền từ', kind: 'học', rule: 'Câu thiếu 1 từ: chọn A, B, C hoặc D; có lời giải và các lỗi hay nhầm', sec: 20, total: 5, reveal: 18 },
   listenmean: { icon: '🎧', name: 'Nghe – nghĩa', kind: 'học', rule: 'Nghe audio một lần, chữ cái hiện dần mỗi 2 giây, chọn nghĩa đúng', sec: 12, total: 8, reveal: 4 },
@@ -281,6 +282,7 @@ function startCrossClue(idx) {
   setPhase('question', round.sec);
   push();
   sim?.onCross?.(round, C);
+  botsCross(round);
 }
 function startCrossKey() { // vòng cuối: mọi hàng đã có kết quả, đã >50% nhưng chưa ai giải từ khoá
   const C = game.cross;
@@ -292,6 +294,7 @@ function startCrossKey() { // vòng cuối: mọi hàng đã có kết quả, đ
   setPhase('question', round.sec);
   push();
   sim?.onCross?.(round, C);
+  botsCross(round);
 }
 function advanceCross() { // hết giờ một hàng (hoặc người dẫn bấm "Công bố"): hàng chưa ai giải thì thành "hết giờ"
   const C = game.cross;
@@ -417,17 +420,23 @@ function lmSlots(rev) { // chỉ gửi những chữ ĐÃ hiện, chữ chưa hi
 }
 
 // ---------- khung 🔗 Thế chữ (mốc 400) ----------
-// Phiên = một chuỗi: ra một từ 4 chữ, hai đội luân phiên (Black đi trước ở phiên lẻ, White ở phiên chẵn) đổi ĐÚNG 1 chữ cái của từ hiện tại
-// thành từ có nghĩa (toàn từ điển, dict.js), không lặp từ nào đã dùng trong phiên. Trong CHAIN_SEC giây người nào TRONG ĐỘI ĐANG ĐẾN LƯỢT gõ
-// được từ hợp lệ đầu tiên thì từ đó thành đề bài của lượt sau (đội kia); hết giờ mà chưa có từ hợp lệ thì đội đó thua phiên.
-// Không có điểm: chỉ thắng/thua, kỷ lục chuỗi (lưu data/the-chu-record.json), tỉ lệ hợp lệ của từng người và MVP (nhiều từ được dùng nhất).
-// Vào đội: gõ "join" hoặc "tham gia" → tự vào đội ít người hơn (bằng nhau thì Black). Mỗi đội cần ít nhất CHAIN_MIN_TEAM người mới bắt đầu phiên.
+// Luật từ 13/11/2026 (người dùng đổi): KHÔNG chia đội, mọi người chơi chung. Ván = một chuỗi: ra một từ 4 chữ, ai nhanh tay đổi ĐÚNG 1 chữ cái
+// thành từ có nghĩa (toàn từ điển, dict.js; không lặp từ đã dùng trong ván) thì từ đó thay vào ngay và người đó thành NGƯỜI GIỮ TỪ
+// (hiện hình ngay dưới từ). Lượt kế, người KHÁC thế được thì thay người giữ. Hết CHAIN_SEC giây không ai thế được → người giữ từ thắng ván,
+// chỉ người thắng được +CHAIN_WIN điểm. Chưa ai thế được từ đầu tiên thì ván không có người thắng.
+// Nhịp mỗi lượt: đồng hồ đứng CHAIN_GRACE giây (từ mới vừa hiện) → đếm ngược CHAIN_SEC giây → về 0 thì NGẦM chờ thêm CHAIN_LATE giây
+// (TikTok trễ ~4 giây so với màn live: cứu bình luận gõ kịp giờ nhưng tới muộn). Trong lúc đồng hồ đứng vẫn nhận từ; bot chờ hết mới gõ.
+// Kỷ lục chuỗi lưu data/the-chu-record.json (chuỗi toàn bot không tính).
 const CHAIN_SEC = SEGMENTS.chain.sec;
-const CHAIN_MIN_TEAM = 2;
-const CHAIN_LOBBY_SEC = 10; // sảnh chờ / khoảng nghỉ trước phiên mới
-const CHAIN_LOBBY_MAX = 90; // chờ quá ngần này giây mà chưa đủ người thì kết thúc lượt, sang khung khác
+const CHAIN_GRACE = 4;
+const CHAIN_LATE = 3;
+const CHAIN_WIN = 10;
+function chainClock() {
+  setPhase('question', CHAIN_SEC);
+  timer.startedAt += CHAIN_GRACE * 1000; // màn live: chưa tới startedAt thì đồng hồ đứng ở CHAIN_SEC
+  timer.endsAt += (CHAIN_GRACE + CHAIN_LATE) * 1000; // màn live nhận endsAt đã trừ CHAIN_LATE (publicState) nên thấy 0 rồi mới hết thật
+}
 const CHAIN_REC_FILE = path.join(__dirname, 'data', 'the-chu-record.json');
-const JOIN_RE = /^\s*(?:join|tham\s*gia|thamgia)\s*[!.~]*\s*$/i;
 let chainRec = { len: 0 };
 try { chainRec = JSON.parse(fs.readFileSync(CHAIN_REC_FILE, 'utf8')); } catch {}
 const CHAIN_LETTERS = 'abcdefghijklmnopqrstuvwxyz';
@@ -443,131 +452,103 @@ function chainDict() { // mọi chuỗi 4 chữ cái là từ hợp lệ (~2.700
   try { pool = loadWordQ().words; } catch {}
   if (!pool.length) pool = BANK_ALL.map((x) => x.w);
   const starts = [...new Set(pool.map((w) => String(w).toLowerCase()))].filter((w) => w.length === 4 && set.has(w) && neighbors(w).length >= 3);
-  CHAINDICT = { set, neighbors, starts, recent: [] };
+  const common = new Set(pool.map((w) => String(w).toLowerCase()).filter((w) => w.length === 4 && set.has(w)));
+  CHAINDICT = { set, neighbors, starts, common, recent: [] };
   console.log(`🔗 Thế chữ: ${set.size} từ 4 chữ hợp lệ, ${starts.length} từ bắt đầu · kỷ lục hiện tại ${chainRec.len || 0} từ`);
   return CHAINDICT;
 }
-const otherTeam = (t) => (t === 'black' ? 'white' : 'black');
-const chainMembers = (team) => [...game.chain.members.values()].filter((m) => !team || m.team === team);
-const teamsReady = () => chainMembers('black').length >= CHAIN_MIN_TEAM && chainMembers('white').length >= CHAIN_MIN_TEAM;
-
-function chainJoin(user) {
-  const C = game.chain;
-  if (C.members.has(user.uid)) return;
-  const b = chainMembers('black').length, w = chainMembers('white').length;
-  const team = w < b ? 'white' : 'black'; // đội ít người hơn; bằng nhau → Black
-  const z = () => ({ attempts: 0, valid: 0, adopted: 0 });
-  C.members.set(user.uid, { uid: user.uid, name: user.name, avatar: user.avatar || '', team, cur: z(), tot: z() });
-  logFeed({ name: user.name, avatar: user.avatar, text: `→ vào đội ${team === 'black' ? '⚫ Black' : '⚪ White'}` });
-  broadcast({ type: 'chainJoin', name: user.name, team });
-  push();
-}
-
-function startChainLobby(waited = 0) {
-  round = { mode: 'chain', stage: 'lobby', waited, sec: CHAIN_LOBBY_SEC, word: { w: 'Thế chữ', m: '', r: '', pos: '' }, chain: [], used: new Set(), log: [],
-    winners: [], realWinners: 0, answered: new Set(), feed: [], lastHint: 0 };
-  setPhase('question', CHAIN_LOBBY_SEC);
-  push();
-  sim?.onChain?.(round, chainHelpers());
-}
+const chainPlayer = (user) => {
+  const P = game.chain.players;
+  return P.get(user.uid) || P.set(user.uid, { uid: user.uid, name: user.name, avatar: user.avatar || '', attempts: 0, valid: 0, wins: 0, ...(user.bot && { bot: true }) }).get(user.uid);
+};
 
 function startChainMatch() {
-  const D = chainDict(), C = game.chain;
+  const D = chainDict();
   game.qNo++;
   questionsTotal++;
-  for (const m of C.members.values()) m.cur = { attempts: 0, valid: 0, adopted: 0 };
   const fresh = D.starts.filter((w) => !D.recent.includes(w));
   const pool = fresh.length ? fresh : D.starts;
   const start = pool[Math.floor(Math.random() * pool.length)];
   D.recent.push(start);
   if (D.recent.length > 20) D.recent.shift();
-  round = { mode: 'chain', stage: 'turn', sec: CHAIN_SEC, cur: start, turn: game.qNo % 2 === 1 ? 'black' : 'white', used: new Set([start]), log: [],
-    chain: [{ w: start, team: null, by: null }], word: { w: start, m: '', r: '', pos: '' }, winners: [], realWinners: 0, answered: new Set(), feed: [], lastHint: 0 };
-  setPhase('question', CHAIN_SEC);
+  round = { mode: 'chain', stage: 'turn', sec: CHAIN_SEC, grace: CHAIN_GRACE, late: CHAIN_LATE, cur: start, holder: null, used: new Set([start]), log: [],
+    chain: [{ w: start, by: null }], word: { w: start, m: '', r: '', pos: '' }, winners: [], realWinners: 0, answered: new Set(), feed: [], lastHint: 0 };
+  chainClock();
   push();
   sim?.onChain?.(round, chainHelpers());
+  botsChain(round);
 }
 
 function chainHelpers() {
-  return { members: (team) => chainMembers(team).map((m) => ({ uid: m.uid, name: m.name, avatar: m.avatar })), isMember: (uid) => game.chain.members.has(uid), neighbors: chainDict().neighbors };
+  const D = chainDict();
+  // cho bot / khán giả ảo: láng giềng của từ, kiểm từ, từ thông dụng (từ 4 chữ của bộ từ mốc) để bot không gõ từ hiếm
+  return { neighbors: D.neighbors, isWord: (w) => D.set.has(w), common: D.common };
 }
 
-// lượt hiện tại hết giờ (hoặc người dẫn bấm "Công bố") → đội đang đến lượt thua phiên
+// hết giờ (hoặc người dẫn bấm "Công bố"): không ai thế được nữa → người đang giữ từ thắng ván, +CHAIN_WIN điểm (chỉ người thắng có điểm)
 function endChainMatch() {
-  const C = game.chain, loser = round.turn, winner = otherTeam(loser), len = round.chain.length;
-  C.wins[winner]++;
-  const row = (m) => ({ name: m.name, avatar: m.avatar, attempts: m.cur.attempts, valid: m.cur.valid, adopted: m.cur.adopted });
-  const best = (list) => [...list].filter((m) => m.adopted > 0).sort((a, b) => b.adopted - a.adopted || b.valid / b.attempts - a.valid / a.attempts)[0] || null;
-  const teamStat = (t) => { const rows = chainMembers(t).map(row).filter((r) => r.attempts > 0 || r.adopted > 0).sort((a, b) => b.adopted - a.adopted || b.valid - a.valid);
-    return { n: chainMembers(t).length, rows: rows.slice(0, 6), mvp: best(rows)?.name || null }; };
-  const all = chainMembers().map((m) => ({ ...row(m), team: m.team }));
-  const mvp = best(all);
-  const isNew = len > (chainRec.len || 0);
+  const C = game.chain, W = round.holder, len = round.chain.length;
+  if (W) {
+    chainPlayer(W).wins++;
+    const gp = gamePlayer(W), dp = W.bot ? { score: 0, correct: 0 } : dayPlayer(W);
+    gp.score += CHAIN_WIN; gp.correct++;
+    dp.score += CHAIN_WIN; dp.correct++;
+    if (!W.bot) correctTotal++;
+  }
+  const isNew = len > (chainRec.len || 0) && round.chain.some((c) => c.by && !c.bot); // chuỗi toàn bot không lập kỷ lục
   if (isNew) {
-    chainRec = { len, words: round.chain.map((c) => c.w), at: new Date().toISOString().slice(0, 10), winner, mvp: mvp?.name || null };
+    chainRec = { len, words: round.chain.map((c) => c.w), at: new Date().toISOString().slice(0, 10), winner: W?.name || null };
     fs.writeFile(CHAIN_REC_FILE, JSON.stringify(chainRec), () => {});
   }
-  const stats = { winner, loser, len, isNew, record: chainRec.len, black: teamStat('black'), white: teamStat('white'), mvp: mvp ? { name: mvp.name, avatar: mvp.avatar, team: mvp.team, adopted: mvp.adopted } : null };
-  C.matches.push({ len, winner, mvp: stats.mvp?.name || null });
+  C.matches.push({ len, winner: W?.name || null });
   round.stage = 'over';
-  round.stats = stats;
-  console.log(`🔗 Phiên ${game.qNo}: ${winner} thắng, chuỗi ${len} từ${isNew ? ' (KỶ LỤC MỚI)' : ''}: ${round.chain.map((c) => c.w).join(' → ')}`);
+  round.stats = { winner: W ? { name: W.name, avatar: W.avatar } : null, pts: CHAIN_WIN, len, isNew, record: chainRec.len || 0 };
+  console.log(`🔗 Ván ${game.qNo}: ${W ? W.name + ' thắng' : 'không ai thế được từ đầu'}, chuỗi ${len} từ${isNew ? ' (KỶ LỤC MỚI)' : ''}: ${round.chain.map((c) => c.w).join(' → ')}`);
   prev = { w: round.chain[0].w, m: `chuỗi ${len} từ`, n: 0 };
+  saveScores();
   setPhase('reveal', SEGMENTS.chain.reveal);
   push();
 }
 
 function advanceChain() {
-  if (round.stage === 'lobby') {
-    if (teamsReady()) return startChainMatch();
-    if (round.waited + CHAIN_LOBBY_SEC >= CHAIN_LOBBY_MAX) {
-      console.log('🔗 Thế chữ: chưa đủ người mỗi đội sau ' + CHAIN_LOBBY_MAX + 's → kết thúc lượt, sang khung khác');
-      return endGame();
-    }
-    return startChainLobby(round.waited + CHAIN_LOBBY_SEC);
-  }
   return endChainMatch();
 }
 
 function chainSummary() {
   const C = game.chain;
-  const top = chainMembers().sort((a, b) => b.tot.adopted - a.tot.adopted || b.tot.valid / (b.tot.attempts || 1) - a.tot.valid / (a.tot.attempts || 1))[0];
-  return { wins: C.wins, matches: C.matches, players: C.members.size, record: chainRec, longest: Math.max(0, ...C.matches.map((m) => m.len)),
-    mvp: top && top.tot.adopted > 0 ? { name: top.name, avatar: top.avatar, team: top.team, adopted: top.tot.adopted } : null };
+  return { matches: C.matches, players: [...C.players.values()].filter((m) => !m.bot).length, record: chainRec, longest: Math.max(0, ...C.matches.map((m) => m.len)) };
 }
 
-// Mọi bình luận trong khung Thế chữ đi qua đây (không dùng đường chấm điểm chung). Người xem gõ từ khi đúng đội đang đến lượt thì mới tính lần thử.
+// Mọi bình luận trong khung Thế chữ đi qua đây (không dùng đường chấm điểm chung). Bình luận là chữ cái liền, dài đúng bằng từ hiện tại thì tính là một lần thử.
 function onChainChat(user, msg, item) {
-  const C = game.chain, R = round;
-  if (JOIN_RE.test(msg)) return chainJoin(user);
-  const m = C?.members.get(user.uid);
+  const R = round;
   const w = msg.trim().toLowerCase().replace(/[.!?]+$/, '');
-  if (m && R?.mode === 'chain' && R.stage === 'turn' && phase === 'question' && m.team === R.turn && /^[a-z]{2,15}$/.test(w)) {
-    m.cur.attempts++;
-    m.tot.attempts++;
-    const cur = R.cur;
-    let why = null;
-    if (w.length !== cur.length) why = `phải đủ ${cur.length} chữ cái`;
-    else {
-      let diff = 0;
-      for (let i = 0; i < w.length; i++) if (w[i] !== cur[i]) diff++;
-      if (diff !== 1) why = diff === 0 ? 'giống từ hiện tại' : 'chỉ được đổi 1 chữ cái';
-    }
+  if (R?.mode === 'chain' && R.stage === 'turn' && phase === 'question' && /^[a-z]+$/.test(w) && w.length === R.cur.length) {
+    const m = chainPlayer(user), cur = R.cur;
+    m.attempts++;
+    let why = null, diff = 0;
+    for (let i = 0; i < w.length; i++) if (w[i] !== cur[i]) diff++;
+    if (diff !== 1) why = diff === 0 ? 'giống từ hiện tại' : 'chỉ được đổi 1 chữ cái';
+    if (!why && R.holder?.uid === user.uid) why = 'bạn đang giữ từ, chờ người khác thế';
     if (!why && R.used.has(w)) why = 'từ đã dùng';
     if (!why && !dict.isWord(w)) why = 'không có trong từ điển';
     R.log.push({ name: user.name, w, ok: !why, why });
     if (R.log.length > 4) R.log.shift();
     logFeed({ ...item, text: why ? `${w} ✗ ${why}` : `${w} ✓` });
+    // ô "Câu trả lời" trên màn live: đúng thì ✓ kèm từ, sai thì ✗
+    R.feed.push(why ? { ...item, choice: w } : { ...item, ok: true, words: w, pts: 0 });
+    if (R.feed.length > 40) R.feed.splice(0, R.feed.length - 40);
     if (why) return push();
-    m.cur.valid++; m.tot.valid++; m.cur.adopted++; m.tot.adopted++;
+    m.valid++;
     R.used.add(w);
-    R.chain.push({ w, team: m.team, by: m.name });
+    R.chain.push({ w, by: user.name, ...(user.bot && { bot: true }) });
     R.cur = w;
     R.word.w = w;
-    R.turn = otherTeam(m.team);
-    setPhase('question', CHAIN_SEC);
+    R.holder = { uid: user.uid, name: user.name, avatar: user.avatar || '', ...(user.bot && { bot: true }) };
+    chainClock();
     push();
-    return sim?.onChain?.(R, chainHelpers());
+    sim?.onChain?.(R, chainHelpers());
+    return botsChain(R);
   }
   logFeed(item);
   if (!user.bot) ai.hear(user, msg);
@@ -597,6 +578,13 @@ let sessionStart = Date.now();
 let viewers = 0;
 const controlFeed = []; // mọi bình luận/quà cho màn điều khiển
 const tiktok = { mode: SIM ? 'sim' : TIKTOK_USER ? 'tiktok' : 'none', user: TIKTOK_USER, connected: false, roomId: null, error: null };
+// Thống kê (stats.js): ghi bình luận / quà / like / follow / share / người vào kèm game, pha, số người xem lúc đó → trang /stats.
+// Không ghi khi chạy sau cổng thử 25 game (gateway.js) hoặc có --no-stats (script xuất ảnh): toàn khán giả ảo, file phình nhanh.
+const stats = require('./stats').create({
+  sim: SIM, tag: TAG, program: PROGRAM, off: !!process.env.GATEWAY_TOKEN || !!arg('no-stats', false),
+  ctx: () => ({ s: game && phase !== 'break' ? game.seg : null, p: outro ? 'outro' : phase, g: game?.no || 0, q: game?.qNo || 0, v: viewers, c: SIM || tiktok.connected ? 1 : 0 }),
+  room: () => tiktok.roomId,
+});
 
 // Chạy thử (--sim) ghi file riêng để điểm ảo không lẫn vào bảng điểm live thật.
 const SCORE_FILE = path.join(__dirname, 'data', `scores-${SIM ? 'sim-' : ''}${TAG ? TAG + '-' : ''}${new Date().toISOString().slice(0, 10)}.json`);
@@ -770,7 +758,7 @@ function publicState() {
     phase,
     paused: !!pausedAt,
     startedAt: timer.startedAt,
-    endsAt: timer.endsAt,
+    endsAt: timer.endsAt == null ? null : timer.endsAt - (phase === 'question' && round?.late ? round.late * 1000 : 0), // Thế chữ: giấu 3 giây chờ bình luận tới muộn
     pausedAt,
     now: Date.now(),
     game: gameInfo(),
@@ -779,7 +767,7 @@ function publicState() {
     seg: segPub(curSeg()),
     next: segPub(segFor()),
     program: CFG.style === 'program' ? PROGRAM.map((k) => ({ id: k, icon: SEGMENTS[k].icon, name: SEGMENTS[k].name })) : null,
-    players: phase === 'break' ? scores.size : (game?.chain ? game.chain.members.size : game?.players.size) || 0,
+    players: phase === 'break' ? scores.size : (game?.chain ? [...game.chain.players.values()].filter((m) => !m.bot).length : game?.players.size) || 0,
     viewers,
     live: tiktok.mode === 'sim' ? 'sim' : tiktok.connected ? 'live' : 'off',
   };
@@ -861,15 +849,15 @@ function publicState() {
       return s;
     }
     if (round.mode === 'chain') {
-      const C = game.chain, T = (t) => { const ms = chainMembers(t); return { n: ms.length, names: ms.slice(0, 14).map((m) => m.name) }; };
-      s.q = { mode: 'chain', stage: round.stage, match: round.stage === 'lobby' ? game.qNo + 1 : game.qNo, matches: game.total, cur: round.cur || null, turn: round.turn || null,
-        min: CHAIN_MIN_TEAM, waited: round.waited || 0, chain: round.chain.slice(-16).map(({ w, team }) => ({ w, team })), chainLen: round.chain.length, log: round.log,
-        teams: { black: T('black'), white: T('white') }, wins: C.wins, record: { len: chainRec.len || 0, at: chainRec.at || null, mvp: chainRec.mvp || null },
-        stats: round.stage === 'over' ? round.stats : null, turnKey: `${game.qNo}.${round.stage}.${round.chain.length}` };
-      s.winners = 0;
+      s.q = { mode: 'chain', stage: round.stage, match: game.qNo, matches: game.total, cur: round.cur || null, sec: round.sec, pts: CHAIN_WIN,
+        holder: round.holder ? { name: round.holder.name, avatar: round.holder.avatar } : null,
+        chain: round.chain.slice(-16).map(({ w, by }) => ({ w, by })), chainLen: round.chain.length, log: round.log,
+        record: { len: chainRec.len || 0, at: chainRec.at || null }, stats: round.stage === 'over' ? round.stats : null,
+        turnKey: `${game.qNo}.${round.stage}.${round.chain.length}` };
+      s.winners = game.chain.matches.filter((m) => m.winner).length; // số ván đã có người thắng
       s.prev = prev;
-      s.board = [];
-      s.feed = [];
+      s.board = gameBoard(); // điểm = số ván thắng × CHAIN_WIN
+      s.feed = round.feed.slice(-12);
       return s;
     }
     if (round.mode === 'hunt') {
@@ -925,7 +913,7 @@ function controlState() {
     phase: outro ? 'outro' : phase,
     paused: !!pausedAt,
     startedAt: timer.startedAt,
-    endsAt: timer.endsAt,
+    endsAt: timer.endsAt == null ? null : timer.endsAt - (phase === 'question' && round?.late ? round.late * 1000 : 0), // Thế chữ: giấu 3 giây chờ bình luận tới muộn
     pausedAt,
     now: Date.now(),
     game: gameInfo(),
@@ -935,7 +923,7 @@ function controlState() {
           mode: round.mode, options: round.options, answerIdx: round.answerIdx, votes: round.votes, listen: round.listen, answered: round.answered.size, called: round.called,
           wq: round.wq, demo: round.demo, ...(round.fill && { fillS: round.fill.s }), ...(round.err && { errS: round.err.s }), ...(round.dict && { dictS: round.dict.q.s }), ...(round.read && { readQ: round.read.q.q }),
           ...(round.mode === 'cross' && { cross: { stage: round.stage, idx: round.idx, solved: game.cross.solved, n: game.cross.p.rows.length, key: game.cross.p.key, open: crossBigOpen() } }),
-          ...(round.mode === 'chain' && { chain: { stage: round.stage, cur: round.cur, turn: round.turn, len: round.chain.length, black: chainMembers('black').length, white: chainMembers('white').length } }) }
+          ...(round.mode === 'chain' && { chain: { stage: round.stage, cur: round.cur, len: round.chain.length, holder: round.holder?.name || null, players: game.chain.players.size } }) }
       : null,
     lesson: phase === 'teach' && game?.lesson ? (({ words, i }) => ({ i, n: words.length, w: words[i].w, m: words[i].m, title: words[i].lesson }))(game.lesson) : null,
     cfg: CFG,
@@ -970,6 +958,7 @@ function setPhase(p, sec) {
   pausedAt = null;
   const t = Date.now();
   timer = { startedAt: t, endsAt: sec == null ? null : t + sec * 1000 };
+  stats.rec('phase');
 }
 
 // hold = đứng ở màn chờ tới khi người dẫn bấm Bắt đầu (lúc mới bật server và sau "Chơi lại từ đầu")
@@ -994,6 +983,7 @@ function startGame() {
   podium = null;
   prev = null;
   console.log(`▶ Lượt ${gameNo}: ${game.total} câu · ${SEGMENTS[seg]?.sec || CFG.roundSec}s/câu · mức ${CFG.level} · ${SEGMENTS[seg]?.icon || ''} ${SEGMENTS[seg]?.name || seg}`);
+  stats.rec('game', { s: seg, n: game.total });
   if (seg === 'class') {
     game.style = 'class';
     if (!SIM && CFG.bots > 0) {
@@ -1003,8 +993,8 @@ function startGame() {
     return startTeach();
   }
   if (seg === 'chain') {
-    game.chain = { members: new Map(), wins: { black: 0, white: 0 }, matches: [] };
-    return startChainLobby();
+    game.chain = { players: new Map(), matches: [] };
+    return startChainMatch();
   }
   if (seg === 'crossword') return startCross();
   startQuestion();
@@ -1084,10 +1074,7 @@ function startWordQuestion() {
   setPhase('question', CFG.roundSec);
   push();
   sim?.onQuestion(round);
-  if (!SIM) {
-    const realActive = [...realSeen.values()].filter((n) => questionsTotal - n <= 3).length;
-    bots.onQuestion(round, { active: CFG.bots > 0 ? Math.max(Math.min(MIN_BOTS, CFG.bots), CFG.bots - realActive) : 0, bank: () => BANK });
-  }
+  botsAsk(round);
 }
 
 // Khung Start or End: một cụm chữ, 45 giây, người xem gõ 5 từ trong một bình luận (kiểm tra ở onChat)
@@ -1102,6 +1089,7 @@ function startEndQuestion() {
   setPhase('question', sec);
   push();
   sim?.onQuestion(round);
+  botsAsk(round);
 }
 
 // Khung Săn từ: một ma trận, 120 giây. round.hunt.map = mọi từ hợp lệ của bảng → vị trí; found = từ đã có người tìm (để tô màu trên ma trận)
@@ -1116,6 +1104,7 @@ function startHuntQuestion() {
   setPhase('question', sec);
   push();
   sim?.onQuestion(round);
+  botsAsk(round);
 }
 
 // Khung Điền từ: round.mode vẫn là 'mcq' (chấm điểm, mô phỏng, bot dùng lại phần trắc nghiệm); round.word.w KHÔNG phải đáp án để trạng thái gửi đi không lộ
@@ -1129,10 +1118,7 @@ function startFillQuestion() {
   setPhase('question', sec);
   push();
   sim?.onQuestion(round);
-  if (!SIM) {
-    const realActive = [...realSeen.values()].filter((n) => questionsTotal - n <= 3).length;
-    bots.onQuestion(round, { active: CFG.bots > 0 ? Math.max(Math.min(MIN_BOTS, CFG.bots), CFG.bots - realActive) : 0, bank: () => BANK });
-  }
+  botsAsk(round);
 }
 
 // Khung Đọc nhanh: bài làm sẵn trong data/doc-nhanh-700.json ({kind, title, p, q, o, a, key, why, wrong, tip}).
@@ -1157,10 +1143,7 @@ function startReadQuestion() {
   setPhase('question', S.sec);
   push();
   sim?.onQuestion(round);
-  if (!SIM) {
-    const realActive = [...realSeen.values()].filter((n) => questionsTotal - n <= 3).length;
-    bots.onQuestion(round, { active: CFG.bots > 0 ? Math.max(Math.min(MIN_BOTS, CFG.bots), CFG.bots - realActive) : 0, bank: () => BANK });
-  }
+  botsAsk(round);
 }
 
 // Khung Nghe – chép
@@ -1174,6 +1157,7 @@ function startDictQuestion() {
   setPhase('question', sec);
   push();
   sim?.onQuestion(round);
+  botsAsk(round);
 }
 
 // Khung Săn lỗi: một câu có đúng 1 từ sai
@@ -1185,6 +1169,7 @@ function startErrQuestion() {
   setPhase('question', sec);
   push();
   sim?.onQuestion(round);
+  botsAsk(round);
 }
 
 // Khung Nghe – nghĩa: listen=true giấu từ đến lúc công bố; chữ cái hiện dần theo lmSlots()
@@ -1197,10 +1182,7 @@ function startListenMeanQuestion() {
   setPhase('question', sec);
   push();
   sim?.onQuestion(round);
-  if (!SIM) {
-    const realActive = [...realSeen.values()].filter((n) => questionsTotal - n <= 3).length;
-    bots.onQuestion(round, { active: CFG.bots > 0 ? Math.max(Math.min(MIN_BOTS, CFG.bots), CFG.bots - realActive) : 0, bank: () => BANK });
-  }
+  botsAsk(round);
 }
 
 function startQuestion(replace = false) {
@@ -1255,12 +1237,7 @@ function startQuestion(replace = false) {
   setPhase('question', sec);
   push();
   sim?.onQuestion(round);
-  if (!SIM) {
-    // Càng nhiều người thật bình luận trong 3 câu gần nhất thì càng ít bot (giữ tối thiểu MIN_BOTS nếu đang bật)
-    const realActive = [...realSeen.values()].filter((q) => questionsTotal - q <= 3).length;
-    const active = CFG.bots > 0 ? Math.max(Math.min(MIN_BOTS, CFG.bots), CFG.bots - realActive) : 0;
-    bots.onQuestion(round, { active, bank: () => BANK });
-  }
+  botsAsk(round);
 }
 
 function reveal() {
@@ -1282,7 +1259,8 @@ function endGame() {
     top,
     fastest: fastest ? { name: fastest.name, avatar: fastest.avatar, first: fastest.first } : null,
     gifters: [...game.gifters.values()].sort((a, b) => b.diamonds - a.diamonds).slice(0, 8),
-    stats: { questions: game.qNo, players: game.players.size, correct: game.correct },
+    // lượt đúng tính cả bot: người xem vừa thấy các lượt đúng đó trên màn, ghi 0 thì vô lý (bot vẫn không lên bục)
+    stats: { questions: game.qNo, players: game.chain ? [...game.chain.players.values()].filter((m) => !m.bot).length : game.players.size, correct: [...game.players.values()].reduce((a, p) => a + (p.correct || 0), 0) },
     last: prev,
     seg: segPub(game.seg),
   };
@@ -1299,6 +1277,7 @@ function endGame() {
   saveScores();
   round = null;
   console.log(`🏆 Hết lượt ${game.no}: ${top.map((p) => `${p.name} ${p.score}`).join(' · ') || 'không ai ghi điểm'}`);
+  stats.rec('gameEnd', { s: game.seg, qs: game.qNo });
   setPhase('podium', CFG.podiumSec);
   push();
 }
@@ -1321,7 +1300,7 @@ function advance() {
   if (phase === 'reveal') {
     if (game.seg === 'crossword') return crossAfterReveal();
     if (game.qNo >= game.total) return endGame();
-    if (game.seg === 'chain') return teamsReady() ? startChainMatch() : startChainLobby();
+    if (game.seg === 'chain') return startChainMatch();
     if (game.style === 'class') return game.quiz?.length ? startQuestion() : startTeach();
     return startQuestion();
   }
@@ -1363,7 +1342,9 @@ function logFeed(item) {
 
 const realSeen = new Map(); // uid người thật -> số thứ tự câu gần nhất họ bình luận (để bớt bot)
 function onChat(user, text) {
-  if (!text || outro) return;
+  if (!text) return;
+  stats.user('chat', user);
+  if (outro) return;
   if (!user.bot) realSeen.set(user.uid, questionsTotal);
   seat(user);
   const msg = String(text).slice(0, game?.seg === 'dictate' ? 160 : 80); // câu Nghe – chép dài tới 95 ký tự
@@ -1545,6 +1526,7 @@ const GIFT_BOOST = 3; // số câu được nhân đôi điểm sau khi tặng q
 
 function onGift(user, giftName, diamonds, count) {
   const total = diamonds * count;
+  stats.user('gift', user, { d: total, n: count });
   // Trần 50 điểm: quà to không được át người trả lời giỏi (mất vui → người xem bỏ đi).
   const bonus = Math.min(50, 5 + total);
   dayPlayer(user).score += bonus;
@@ -1572,6 +1554,7 @@ function onGift(user, giftName, diamonds, count) {
 }
 
 function onJoin(user) {
+  stats.user('join', user);
   if (seat(user)) push();
   broadcast({ type: 'join', name: user.name });
 }
@@ -1647,6 +1630,7 @@ function command(m) {
     if (phase === 'question') reveal();
     saveScores();
     outro = { next: String(m.next ?? process.env.NEXT_LIVE ?? '').slice(0, 60) };
+    stats.rec('phase');
   } else if (c === 'restart') {
     // Chơi lại từ đầu: bỏ lượt dở, đếm lại từ Lượt 1, về màn chờ. Từ đã hỏi vẫn giữ (không lặp câu).
     // clearDay: xoá luôn bảng vàng hôm nay (điểm, số 🏆, quà, x2).
@@ -1714,6 +1698,10 @@ const server = http.createServer((req, res) => {
       res.end('ok');
     });
     return;
+  }
+  if (url.pathname === '/stats' || url.pathname === '/stats.csv') {
+    if (!allowed(req, url.searchParams.get('key'))) return res.writeHead(403).end('forbidden');
+    return stats.handle(req, res, url, Object.fromEntries(Object.entries(SEGMENTS).map(([id, s]) => [id, `${s.icon} ${s.name}`])));
   }
   if (url.pathname === '/api/tts') return tts.handle(req, res, url);
   if (url.pathname === '/api/say') return enAudio.handle(req, res, url);
@@ -1787,6 +1775,10 @@ async function connectTikTok(uniqueId) {
     fetchRoomInfoOnConnect: false,
   });
   liveConn = conn;
+  // Tắt fetchRoomInfoOnConnect thì connect() KHÔNG kiểm tra kênh còn phát: kênh từng live sẽ "nối" vào phòng cũ đã tắt,
+  // màn điều khiển báo đã nối mà không có bình luận nào. Hỏi trạng thái trước (đọc trang TikTok, không tốn lượt Euler).
+  // Không hỏi được thì cứ nối như cũ (còn chốt "im lặng 90s" bên dưới).
+  if ((await conn.fetchIsLive().catch(() => null)) === false) throw new Error('offline: kênh chưa lên sóng');
   conn.on(WebcastEvent.CHAT, (d) => (alive(), onChat(fromTikTok(d.user), d.content ?? d.comment)));
   conn.on(WebcastEvent.GIFT, (d) => {
     alive();
@@ -1797,15 +1789,21 @@ async function connectTikTok(uniqueId) {
   });
   conn.on(WebcastEvent.MEMBER, (d) => (alive(), onJoin(fromTikTok(d.user))));
   conn.on(WebcastEvent.ROOM_USER, (d) => (alive(), (viewers = Number(d.total ?? d.viewerCount) || viewers)));
+  // like / follow / share: game không dùng, chỉ ghi thống kê (phòng đông TikTok có thể không gửi đủ like)
+  conn.on(WebcastEvent.LIKE, (d) => (alive(), stats.user('like', fromTikTok(d.user), { n: Number(d.likeCount) || 1 })));
+  conn.on(WebcastEvent.FOLLOW, (d) => (alive(), stats.user('follow', fromTikTok(d.user))));
+  conn.on(WebcastEvent.SHARE, (d) => (alive(), stats.user('share', fromTikTok(d.user))));
   conn.on(ControlEvent.DISCONNECTED, () => {
     if (conn !== liveConn) return; // kết nối cũ đã bị thay
     console.warn('Mất kết nối TikTok, đang nối lại…');
     Object.assign(tiktok, { connected: false, error: 'mất kết nối, đang nối lại' });
+    stats.rec('live', { on: 0 });
     push();
     scheduleConnect(3);
   });
   const state = await conn.connect();
   Object.assign(tiktok, { connected: true, roomId: state.roomId, error: null, since: Date.now() });
+  stats.rec('live', { on: 1, r: String(state.roomId) });
   alive();
   push();
   console.log(`Đã nối live @${uniqueId}, roomId ${state.roomId}`);
@@ -1823,6 +1821,7 @@ function tryConnect(force = false) {
       old?.disconnect();
     } catch {}
     Object.assign(tiktok, { connected: false, roomId: null });
+    stats.rec('live', { on: 0 });
   }
   clearTimeout(retryTimer);
   tiktok.connecting = true;
@@ -1865,7 +1864,7 @@ const ai = require('./ai').create({
     else if (phase === 'question' && round.mode === 'cross')
       summary = `đang chơi Giải ô chữ: ${round.stage === 'key' ? 'vòng từ khoá hàng dọc (gõ CHỮ HOA)' : `hàng ${round.idx + 1}, người xem gõ từ tiếng Anh theo nghĩa tiếng Việt`}, đã giải ${game.cross.solved}/${game.cross.p.rows.length} hàng (không được nói đáp án)`;
     else if (phase === 'question' && round.mode === 'chain')
-      summary = `đang chơi Thế chữ (${round.stage === 'lobby' ? 'sảnh chờ: người xem gõ join để vào đội Black hoặc White, mỗi đội cần ít nhất 2 người' : `hai đội Black và White luân phiên đổi 1 chữ cái của từ hiện tại, chuỗi đang có ${round.chain.length} từ`})`;
+      summary = `đang chơi Thế chữ (mọi người cùng chơi: đổi 1 chữ cái của từ hiện tại để ra từ mới và thành người giữ từ, hết 12 giây không ai thế được thì người giữ từ thắng ván +10 điểm; chuỗi đang có ${round.chain.length} từ${round.holder ? `, người giữ từ: ${round.holder.name}` : ''})`;
     else if (phase === 'question' && round.mode === 'hunt')
       summary = `đang đố câu ${game.qNo}/${game.total} khung Săn từ: ma trận chữ cái 10x10 có ${round.hunt.hidden.length} từ giấu theo mọi hướng, ai tìm đủ ${HUNT_NEED} từ trước thắng (không được nói từ nào nằm trong ma trận)`;
     else if (phase === 'question' && round.mode === 'startend')
@@ -1895,11 +1894,25 @@ const ai = require('./ai').create({
   log: (m) => console.log(m),
 });
 
+// Người chơi ảo (bots.js), chỉ chạy ở live thật (--sim đã có khán giả ảo riêng). Số bot mỗi câu: CFG.bots khi chưa có ai,
+// mỗi người thật bình luận trong 3 câu gần nhất thì bớt 1 bot, giữ tối thiểu MIN_BOTS khi đang bật. CFG.bots = 0 là tắt hẳn.
 const MIN_BOTS = 2;
-const bots = require('./bots').create({ onChat: (u, t) => onChat(u, t) });
+const bots = require('./bots').create({ onChat: (u, t) => onChat(u, t), isLive: (r) => round === r && phase === 'question' && !pausedAt });
+function botCtx() {
+  const real = [...realSeen.values()].filter((n) => questionsTotal - n <= 3).length;
+  return { active: CFG.bots > 0 ? Math.max(Math.min(MIN_BOTS, CFG.bots), CFG.bots - real) : 0, real, bank: () => BANK };
+}
+function botsAsk(r) { if (!SIM) bots.onQuestion(r, botCtx()); }
+function botsCross(r) { if (!SIM) bots.onCross(r, game.cross, botCtx()); }
+function botsChain(r) { if (!SIM) bots.onChain(r, chainHelpers(), botCtx()); }
 
 let sim = null;
-if (SIM) sim = require('./sim').start({ onChat, onGift, onJoin, bank: () => BANK });
+if (SIM) {
+  sim = require('./sim').start({ onChat, onGift, onJoin, bank: () => BANK });
+  // số người xem giả (lên xuống trong khoảng 30–150) để màn điều khiển và trang thống kê có số mà xem
+  viewers = 60;
+  setInterval(() => (viewers = Math.max(30, Math.min(150, viewers + Math.round((Math.random() - 0.45) * 12)))), 5000).unref();
+}
 
 server.listen(PORT, () => {
   console.log(`Màn live:       http://localhost:${PORT}/`);

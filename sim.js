@@ -31,17 +31,14 @@ exports.start = ({ onChat, onGift, onJoin, bank }) => {
       timers.splice(0).forEach(clearTimeout);
     },
     // Thế chữ: sảnh chờ thì khán giả ảo lần lượt gõ join; tới lượt đội nào thì vài người của đội đó gõ từ (đa số hợp lệ, thỉnh thoảng sai hoặc không ai kịp)
+    // Thế chữ (không đội): vài người thử thế từ, không ai tự thế từ mình đang giữ; chuỗi càng dài càng dễ "bí" → người giữ từ thắng ván
     onChain(round, h) {
       timers.splice(0).forEach(clearTimeout);
-      if (round.stage === 'lobby') {
-        crowd.filter((u) => !h.isMember(u.uid)).slice(0, 12).forEach((u, i) => later(0.4 + i * 0.5 + Math.random(), () => onChat(u, Math.random() < 0.5 ? 'join' : 'tham gia')));
-        return;
-      }
-      if (round.stage !== 'turn' || Math.random() < 0.07) return;
+      if (round.stage !== 'turn' || Math.random() < 0.1 + 0.04 * round.chain.length) return;
       const cand = h.neighbors(round.cur).filter((w) => !round.used.has(w));
-      const team = h.members(round.turn).sort(() => Math.random() - 0.5).slice(0, 1 + Math.floor(Math.random() * 3));
       if (!cand.length) return;
-      for (const p of team) later(rand(1, 6.5), () => onChat(p, Math.random() < 0.12 ? pick(['xxxx', 'hello', 'word']) : pick(cand)));
+      const who = crowd.filter((u) => u.uid !== round.holder?.uid).sort(() => Math.random() - 0.5).slice(0, 1 + Math.floor(Math.random() * 3));
+      for (const p of who) later((round.grace || 0) + rand(1, round.sec - 1), () => onChat(p, Math.random() < 0.15 ? pick(['xxxx', 'haha', 'word']) : pick(cand)));
     },
     // Giải ô chữ: người giỏi gõ đúng hàng (chữ thường) sớm; thỉnh thoảng có người gõ sai. Khi đã mở từ khoá, vài người đoán CHỮ HOA (đa số sai trước khi có người đúng)
     onCross(round, C) {

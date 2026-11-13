@@ -14,10 +14,21 @@ Live là phát công khai, nên mọi chữ trên màn và lời đọc theo lu�
 
 - Câu hỏi lấy từ **kho từ vựng** của Migii. Ngân hàng câu đề thi Part 1–7 đang vướng bản quyền
   (`../migii_toeic_docs/05-yeu-cau-thay-doi/yc-004`): chỉ dùng khi YC-004 đã giao bộ câu mới và pháp chế đồng ý.
-- Câu miễn trừ ETS (`#ets` trong `public/index.html`) hiện ở mọi màn, kể cả màn mới thêm.
+- Câu miễn trừ ETS (`#ets` trong `public/index.html`) **ẩn trên mọi màn** theo yêu cầu người dùng 12/11/2026
+  (`display: none` trong `public/theme-light.css`). Đừng tự thêm lại, kể cả khi bản Figma mới không có: người dùng đã quyết,
+  dù `thuong-hieu.md` ghi câu này bắt buộc trên tài liệu quảng bá có chữ TOEIC.
 - Nói về điểm thì dùng "ước tính"; phần miễn phí là Part 1, 2, 5. Luật cho MC AI nằm trong prompt ở `ai.js`.
-- Người chơi ảo mặc định tắt (`--bots 0`): bot không gắn nhãn, kênh của thương hiệu giáo dục bị lộ thì mất uy tín.
-  Chỉ bật khi người phụ trách kênh quyết.
+- Người chơi ảo (bot, `bots.js`) **mặc định bật 6** từ 12/11/2026: người dùng chốt cần bot để mọi khung chạy được lúc mới mở live.
+  Bot không gắn nhãn trên màn live (lộ ra thì ảnh hưởng uy tín, đã nói với người dùng), nên giữ các chặn: không lên vinh danh /
+  bảng vàng, không được khen "nhanh nhất", không chiếm hạng của người thật, không làm MVP / kỷ lục Thế chữ. Tắt: `--bots 0`.
+  Thêm khung mới thì thêm cách chơi cho bot trong `bots.js` và gọi `botsAsk`/`botsCross`/`botsChain` ở `server.js`.
+
+## Thống kê
+
+- `stats.js` ghi sự kiện ra `data/stats/*.jsonl` (ngoài git, mã người xem đã băm) và dựng trang `/stats`.
+  Thêm khung mới không phải sửa gì: sự kiện ghi theo id khung. Thêm nguồn tương tác mới thì gọi `stats.user(<loại>, user, …)` ở `server.js`.
+- Không ghi bot (`bot:`) và bình luận thử từ màn điều khiển (`test:`). Bot phải luôn có `bot: true` để không lọt vào số liệu.
+- Đổi cách tính thì kiểm bằng dữ liệu dựng tay qua `analyze()` (xem `module.exports`) trước khi xem trang.
 
 ## Kho từ
 

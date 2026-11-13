@@ -31,8 +31,9 @@ html[data-theme="light"] #outro {
 html[data-theme="light"] .site { box-shadow: none; background: #fff; }
 html[data-theme="light"] .site .dl { display: none; }
 html[data-theme="light"] .site .nm span { color: #506762; font-weight: 700; }
-/* ETS: xuống đáy vùng nhìn thấy (y 1536–1600), 2 dòng, đủ chữ (bản cũ 17px cắt bằng dấu …) */
-html[data-theme="light"] #ets { top: 1536px; left: 56px; right: 56px; text-align: left; font-size: 26px; line-height: 32px; font-weight: 500;
+/* ETS: 12/11/2026 người dùng bảo bỏ dòng này trên MỌI màn (màn chơi, màn chờ, vinh danh, cảm ơn).
+   Muốn hiện lại: bỏ "display: none" (màn chơi: y 1536–1600, 2 dòng; màn .scr/outro: top 232, 1 dòng, cỡ 19px). */
+html[data-theme="light"] #ets { display: none; top: 1536px; left: 56px; right: 56px; text-align: left; font-size: 26px; line-height: 32px; font-weight: 500;
   color: #506762; white-space: normal; overflow: visible; text-overflow: clip; }
 
 /* ---------- Thẻ câu hỏi (surface) ---------- */
@@ -120,7 +121,6 @@ html[data-theme="light"] #rank .ri .md { color: #506762; } html[data-theme="ligh
 html[data-theme="light"] .tag { background: #d3eee8; color: #1c7a6c; }
 html[data-theme="light"] #breakScr h1, html[data-theme="light"] #podiumScr h1, html[data-theme="light"] #outro h1 { text-shadow: none; color: #10201e; }
 html[data-theme="light"] #breakScr h1 span, html[data-theme="light"] #outro h1 span { color: #1c7a6c; }
-html[data-theme="light"] #podiumScr h1 span { color: #a85600; }
 html[data-theme="light"] #breakScr .kindtag { color: #1c7a6c; }
 html[data-theme="light"] .count { background: conic-gradient(#48bcaa var(--p, 100%), #e4edea 0); }
 html[data-theme="light"] .count::before { background: #edf3f1; }
@@ -134,11 +134,8 @@ html[data-theme="light"] .lineup span.now { background: #48bcaa; color: #06201c;
 html[data-theme="light"] .appcard { box-shadow: none; }
 html[data-theme="light"] .appcard > img.ic { box-shadow: none; }
 html[data-theme="light"] .appcard .t1, html[data-theme="light"] .appcard .qr { color: #506762; }
-html[data-theme="light"] .podium .av { border: 0; background-color: #d3eee8; color: #10201e; }
-html[data-theme="light"] .podium .p1 .av { border: 8px solid #48bcaa; box-shadow: none; }
 html[data-theme="light"] .pd .bx { color: #032220; }
 html[data-theme="light"] .pd.p1 .bx { background: #2fa18f; } html[data-theme="light"] .pd.p2 .bx { background: #62c6b3; } html[data-theme="light"] .pd.p3 .bx { background: #93d6c7; }
-html[data-theme="light"] .award b { color: #1c7a6c; }
 html[data-theme="light"] .gift-list span { background: #d3eee8; color: #1c7a6c; }
 html[data-theme="light"] .stats b { color: #1c7a6c; }
 html[data-theme="light"] #outro .next b, html[data-theme="light"] #outro .cta b { color: #1c7a6c; }
@@ -162,9 +159,6 @@ html[data-theme="light"] #segchip { background: #e4edea; color: #3b524e; }
 html[data-theme="light"] .pausechip { background: #a85600; color: #fff; }
 
 /* ---------- Bổ sung sau lần kiểm tra đầu ---------- */
-/* Màn chờ / vinh danh / cảm ơn dài hơn y 1600: ETS về lại ngay dưới thanh thương hiệu, 1 dòng (như bản cũ) */
-html[data-theme="light"] #stage:has(.scr.on) #ets,
-html[data-theme="light"] #stage:has(#outro.on) #ets { top: 232px; font-size: 19px; line-height: 24px; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 /* Lớp học: bàn học thấp lại để nằm trên dòng ETS; ghế trống bớt nâu.
    11/11/2026: lớp đủ 24 bạn (4 hàng) ở màn kiểm tra từng đè ETS 57px → bóng thoại Ninja, bàn, khoảng cách hàng gọn lại */
 html[data-theme="light"] .wrap.room #teacher { margin-top: 18px; }
@@ -214,12 +208,14 @@ html[data-theme="light"] .timer.half .bar i { background: #e5484d; }
 html[data-theme="light"] .timer.final .bar { animation: barPulse .5s ease-in-out infinite alternate; }
 @keyframes barPulse { to { box-shadow: 0 0 0 6px rgba(229, 72, 77, .25); } }
 html[data-theme="light"] .timer.half .secs { color: #d33a49; }
-/* 3 giây cuối: số giây thành huy hiệu đồng hồ có lửa, rung theo nhịp */
-html[data-theme="light"] .secs.fire { position: relative; width: 116px; height: 84px; margin: -14px 0; border-radius: 26px; display: grid; place-items: center;
-  background: linear-gradient(180deg, #ff9a3d, #e5484d); color: #fff; font-size: 50px; text-align: center; animation: secShake .5s ease-in-out infinite; }
-html[data-theme="light"] .secs.fire::before { content: '🔥'; position: absolute; top: -44px; left: 50%; transform: translateX(-50%); font-size: 46px; animation: flame .35s ease-in-out infinite alternate; }
+/* 3 giây cuối: ngọn lửa làm nền sau số giây (12/11/2026 người dùng bỏ hộp đỏ), cả cụm rung theo nhịp, lửa phập phồng */
+html[data-theme="light"] .secs.fire { position: relative; z-index: 0; width: 116px; height: 84px; margin: -14px 0; display: grid; place-items: center;
+  color: #fff; font-size: 58px; font-weight: 900; text-align: center; -webkit-text-stroke: 6px #b4232f; paint-order: stroke fill;
+  animation: secShake .5s ease-in-out infinite; }
+html[data-theme="light"] .secs.fire::before { content: '🔥'; position: absolute; z-index: -1; left: 50%; top: 50%; font-size: 124px; line-height: 1; -webkit-text-stroke: 0;
+  transform: translate(-50%, -60%); transform-origin: 50% 85%; animation: flame .35s ease-in-out infinite alternate; }
 @keyframes secShake { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-6deg) scale(1.06); } 75% { transform: rotate(6deg) scale(1.06); } }
-@keyframes flame { from { transform: translateX(-50%) scale(1, .9); } to { transform: translateX(-50%) scale(1.12, 1.15); } }
+@keyframes flame { from { transform: translate(-50%, -60%) scale(1, .92); } to { transform: translate(-50%, -60%) scale(1.08, 1.12); } }
 /* số đếm lớn giữa màn mỗi giây (3, 2, 1): hiện rồi mờ nhanh để không che chữ lâu */
 #hurry { position: absolute; left: 0; right: 0; top: 470px; z-index: 7; display: grid; place-items: center; pointer-events: none; }
 #hurry .hn { display: flex; align-items: center; gap: 10px; font-size: 190px; font-weight: 900; line-height: 1; color: #e5484d;
@@ -266,18 +262,21 @@ html[data-theme="light"] #hits .hit { max-width: 900px; }
 
 /* Avenir Next có sẵn trên macOS (máy chạy live), gọi bằng local(), không nhúng file font vào web.
    Máy không có (Windows…) thì về Be Vietnam Pro. Gom độ đậm theo Figma: ≤500 → Medium, 600–700 → Demi Bold, ≥800 → Bold (chữ Figma ghi Bold thì đặt 800) */
-@font-face { font-family: 'Migii UI'; font-weight: 100 549; src: local('AvenirNext-Medium'), local('Avenir Next Medium'); }
-@font-face { font-family: 'Migii UI'; font-weight: 550 749; src: local('AvenirNext-DemiBold'), local('Avenir Next Demi Bold'); }
-@font-face { font-family: 'Migii UI'; font-weight: 750 1000; src: local('AvenirNext-Bold'), local('Avenir Next Bold'); }
+@font-face { font-family: 'Avenir Next'; font-weight: 100 549; src: local('AvenirNext-Medium'), local('Avenir Next Medium'); }
+@font-face { font-family: 'Avenir Next'; font-weight: 550 749; src: local('AvenirNext-DemiBold'), local('Avenir Next Demi Bold'); }
+@font-face { font-family: 'Avenir Next'; font-weight: 750 1000; src: local('AvenirNext-Bold'), local('Avenir Next Bold'); }
 html[data-theme="light"] body, html[data-theme="light"] .ko, html[data-theme="light"] .serif,
 html[data-theme="light"] #breakScr h1, html[data-theme="light"] #podiumScr h1, html[data-theme="light"] #outro h1,
 html[data-theme="light"] #lessonbox .mean, html[data-theme="light"] .tile, html[data-theme="light"] .tile .no, html[data-theme="light"] .tile .hk {
-  font-family: 'Migii UI', 'Be Vietnam Pro', system-ui, sans-serif; }
+  font-family: 'Avenir Next', 'Be Vietnam Pro', system-ui, sans-serif; }
 
-/* nền: trắng, phủ teal 16% ở trên nhạt dần xuống đáy */
+/* nền: trắng, phủ teal 16% ở trên nhạt dần xuống đáy (Figma). Khi đếm ngược (câu hỏi, màn chuẩn bị) index.html heatFx()
+   đổi --bg-a/--bg-b dần: xanh → vàng (giữa giờ) → đỏ (hết giờ), theo yêu cầu người dùng 12/11/2026. */
 html[data-theme="light"] #stage, html[data-theme="light"] #stage[data-seg], html[data-theme="light"] #stage .scr,
 html[data-theme="light"] #stage[data-seg] .scr, html[data-theme="light"] #outro {
-  background: linear-gradient(180deg, rgba(72, 188, 170, .16) 20.5%, rgba(72, 188, 170, 0) 104.2%), #fff; }
+  background: linear-gradient(180deg, var(--bg-a, rgba(72, 188, 170, .16)) 20.5%, var(--bg-b, rgba(72, 188, 170, 0)) 104.2%), #fff; }
+/* chữ đề bài (đen) đỏ dần theo cùng nhịp. Chữ teal (dòng "nghĩa là gì?", tên game) không đổi dần: teal → đỏ đi qua màu xám đục */
+html[data-theme="light"] #stage #q, html[data-theme="light"] #stage #q .rqq { color: var(--ink, #10201e); }
 
 /* thanh tên app + chip LIVE */
 html[data-theme="light"] .site { padding: 0 12px; gap: 16px; }
@@ -350,3 +349,203 @@ html[data-theme="light"] .wrap.readq .panel { height: 350px; }
 html[data-theme="light"] .wrap.readq #board .row:nth-child(n+5), html[data-theme="light"] .wrap.readq #feed .it:nth-child(n+6) { display: none; }
 /* dòng chờ "Chưa có ai — trả lời đi nào!" (có style màu riêng) không tô như hạng 1 */
 html[data-theme="light"] #board .row[style] { font-size: 28px; font-weight: 500; }
+
+/* ===== Màn chuẩn bị vào chơi theo Figma "Migii-Toeic" node 46:12 (12/11/2026) =====
+   Tên game · Ninja + vòng đếm ngược · Bảng vàng · luật chơi (biểu tượng nét) · thẻ tải app. Bỏ nhãn lượt, nhãn Giờ học/giải trí,
+   dãy game, huy hiệu App Store/Google Play như Figma. Khác Figma: khoảng cách giữa các khối 24px (Figma 72–98px) để thẻ tải app
+   kết thúc trên y 1600 (Figma để tới y 1807, bị khung bình luận TikTok che); câu miễn trừ ETS ẩn (người dùng bỏ 12/11/2026);
+   mọi chữ Avenir Next (Figma lẫn Be Vietnam Pro ở vài số). */
+html[data-theme="light"] #breakScr { padding: 270px 64px 0; }
+html[data-theme="light"] #breakScr .tag, html[data-theme="light"] #breakScr .kindtag, html[data-theme="light"] #breakScr .lineup,
+html[data-theme="light"] #breakScr h1 .ic { display: none; }
+html[data-theme="light"] #breakScr h1 { margin: 0; font-size: 84px; line-height: 88.2px; font-weight: 800; color: #1c7a6c; }
+html[data-theme="light"] #breakScr h1 span { color: #1c7a6c; }
+html[data-theme="light"] #breakScr h1, html[data-theme="light"] #breakScr h1 span, html[data-theme="light"] #breakScr .count b { transition: color .6s; }
+html[data-theme="light"] .bhero { margin-top: 16px; width: 100%; display: flex; align-items: center; justify-content: center; gap: 236px; }
+html[data-theme="light"] #breakScr .hero { width: 258px; height: 283px; margin: 0; object-fit: contain; }
+html[data-theme="light"] .bcd { width: 260px; display: flex; flex-direction: column; align-items: center; gap: 12px; } /* rộng cố định: chữ dài lúc 5 giây cuối không đẩy Ninja */
+html[data-theme="light"] #breakScr .count { margin: 0; width: 260px; height: 260px; background: conic-gradient(#bde1da 0%, #48bcaa var(--p, 100%), #e4edea 0); }
+html[data-theme="light"] #breakScr .count::before { inset: 18px; background: #edf3f1; }
+html[data-theme="light"] #breakScr .count b { font-size: 100px; font-weight: 800; color: #1c7a6c; }
+html[data-theme="light"] #breakScr .count.wait b { font-size: 36px; color: #506762; }
+html[data-theme="light"] #breakScr .count-sub { margin: 0; font-size: 34px; font-weight: 600; color: #3b524e; white-space: nowrap; }
+/* bảng vàng: thẻ trắng bóng nhẹ, tiêu đề giữa gạch dưới; hạng 1 đỏ, 2 vàng, 3 xanh dương */
+html[data-theme="light"] #breakScr .gold { margin-top: 24px; background: #fff; border: 0; border-radius: 30px; padding: 20px 30px; box-shadow: 2px 2px 10px rgba(28, 101, 122, .2); }
+html[data-theme="light"] #breakScr .gold h3 { margin: 0 0 6px; padding-bottom: 12px; border-bottom: 1px solid #1c7a6c; font-size: 36px; font-weight: 800; color: #1c7a6c; text-align: center; }
+html[data-theme="light"] #bBoard .row { height: 58px; gap: 12px; font-size: 31px; font-weight: 600; color: #506762; }
+html[data-theme="light"] #bBoard .row .rk, html[data-theme="light"] #bBoard .row .pt { width: auto; color: inherit; font-weight: inherit; }
+html[data-theme="light"] #bBoard .row .rk { width: 48px; }
+html[data-theme="light"] #bBoard .row:nth-child(1) { font-size: 36px; font-weight: 800; color: #ff0004; }
+html[data-theme="light"] #bBoard .row:nth-child(2) { font-size: 32px; font-weight: 800; color: #ddc700; }
+html[data-theme="light"] #bBoard .row:nth-child(3) { font-size: 31px; font-weight: 600; color: #0062ff; }
+html[data-theme="light"] #bBoard .wins { margin-left: 10px; font-size: 26px; font-weight: 800; color: #a85600; }
+/* luật chơi: chữ 24px, chỗ nhấn chỉ đổi màu teal; emoji đầu dòng thành biểu tượng nét (index.html ruleRow) */
+html[data-theme="light"] #breakScr .rules { margin-top: 24px; background: #fff; border: 0; border-radius: 30px; padding: 22px 34px; box-shadow: 2px 2px 10px rgba(28, 122, 108, .2); }
+html[data-theme="light"] #breakScr .rules div { display: flex; align-items: center; gap: 12px; font-size: 24px; line-height: 49.6px; font-weight: 500; color: #10201e; }
+html[data-theme="light"] #breakScr .rules b { color: #1c7a6c; font-weight: 500; }
+html[data-theme="light"] #breakScr .rules .ri { flex: none; width: 40px; height: 40px; display: grid; place-items: center; font-style: normal; font-size: 26px; line-height: 1; }
+html[data-theme="light"] #breakScr .rules .ri[class*="ri-"] { background: #1c7a6c; -webkit-mask: var(--ic) center / 30px 30px no-repeat; mask: var(--ic) center / 30px 30px no-repeat; }
+html[data-theme="light"] .ri-clock { --ic: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round'><circle cx='12' cy='12' r='9'/><path d='M12 7v5l3 2'/></svg>"); }
+html[data-theme="light"] .ri-check { --ic: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4 12.5l5 5L20 6.5'/></svg>"); }
+html[data-theme="light"] .ri-chat { --ic: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linejoin='round'><path d='M4 5h16v11H10l-4.5 3.5V16H4z'/><path d='M8 9.5h.01M12 9.5h.01M16 9.5h.01' stroke-width='2.4' stroke-linecap='round'/></svg>"); }
+html[data-theme="light"] .ri-bolt { --ic: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linejoin='round'><path d='M13.5 2.5L5 13.5h6.5L10.5 21.5 19 10.5h-6.5z'/></svg>"); }
+html[data-theme="light"] .ri-cup { --ic: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linejoin='round' stroke-linecap='round'><path d='M7.5 3.5h9v5a4.5 4.5 0 0 1-9 0z'/><path d='M7.5 5.5H4.5v1.5a3 3 0 0 0 3 3M16.5 5.5h3v1.5a3 3 0 0 1-3 3M12 13v4M8.5 20.5h7M9.5 20.5l.5-3.5h4l.5 3.5'/></svg>"); }
+/* thẻ tải app (Figma node 46:119, 12/11/2026), dùng chung màn chuẩn bị + màn vinh danh: nền trắng, không bóng, không huy hiệu cửa hàng;
+   dòng trên Medium 30 xám; "Migii TOEIC:" Demi 40, phần đuôi Medium 32 */
+html[data-theme="light"] .scr .appcard { background: #fff; border-radius: 32px; padding: 22px 26px; gap: 26px; box-shadow: none; }
+html[data-theme="light"] #breakScr .appcard { margin-top: 24px; }
+html[data-theme="light"] .scr .appcard .badges { display: none; }
+html[data-theme="light"] .scr .appcard .t1 { font-size: 30px; font-weight: 500; color: #506762; }
+html[data-theme="light"] .scr .appcard .t2 { font-size: 32px; line-height: 44px; font-weight: 500; color: #10201e; }
+html[data-theme="light"] .scr .appcard .t2 b, html[data-theme="light"] .scr .appcard .t2 em { font-size: 40px; font-weight: 600; font-style: normal; }
+html[data-theme="light"] .scr .appcard .t2 b { color: #1c7a6c; }
+
+/* ----- Đếm ngược trước khi vào game: nền vàng đỏ DẦN theo thời gian còn lại (heatFx trong index.html, cùng cách màn câu hỏi).
+   5 giây cuối (lớp .urgent): tên game, vòng, số đếm chuyển đỏ; viền đỏ nhấp nháy, vòng toả sáng, số nảy mỗi giây, chữ giục ----- */
+html[data-theme="light"] #breakScr.urgent::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  box-shadow: inset 0 0 0 14px rgba(229, 72, 77, .5), inset 0 0 160px rgba(229, 72, 77, .3); animation: edge .5s ease-in-out infinite alternate; }
+html[data-theme="light"] #breakScr.urgent h1, html[data-theme="light"] #breakScr.urgent h1 span { color: #d33a49; }
+html[data-theme="light"] #breakScr.urgent .count { background: conic-gradient(#ff9a3d 0%, #e5484d var(--p, 100%), #fbe3e6 0); animation: cdGlow 1s ease-out infinite; }
+html[data-theme="light"] #breakScr.urgent .count::before { background: #fff4f2; }
+html[data-theme="light"] #breakScr.urgent .count b { color: #d33a49; }
+html[data-theme="light"] #breakScr .count b.tick { animation: cdTick .8s cubic-bezier(.2, 1.4, .4, 1); }
+html[data-theme="light"] #breakScr.urgent .count-sub { color: #d33a49; font-weight: 800; }
+@keyframes cdTick { 0% { transform: scale(1.45); } 100% { transform: scale(1); } }
+@keyframes cdGlow { 0% { box-shadow: 0 0 0 0 rgba(229, 72, 77, .45); } 100% { box-shadow: 0 0 0 28px rgba(229, 72, 77, 0); } }
+
+/* Ninja lướt qua khi đổi màn (index.html: dashFx). Nền GIF gần trắng (không trong suốt) → multiply để tan vào nền sáng;
+   lớp trắng ĐẶC phía sau che lúc hai màn thay nhau (trắng mờ thì lộ khung vuông của GIF). */
+#dash { position: absolute; inset: 0; z-index: 9; display: none; place-items: center; pointer-events: none; background: #fff; }
+#dash.on { display: grid; animation: dashVeil 1.9s linear both; }
+#dash img { width: 860px; height: auto; margin-top: -160px; filter: brightness(1.03); } /* brightness: ô caro mờ của nền GIF (#fbfbfb / #fdfdfd) thành trắng hẳn */
+@keyframes dashVeil { 0% { opacity: 0; } 8%, 84% { opacity: 1; } 100% { opacity: 0; } }
+
+/* Màn mới hiện ra: các khối bay từ ngoài vào ghép lại (lớp .fly do dashFx gắn ~3,4 giây). --fx/--fy hướng bay, --fd thứ tự.
+   Bắt đầu ở 1,45 giây = lúc lớp trắng của Ninja bắt đầu tan. Hết animation thì khối về trạng thái thường (fill backwards). */
+@keyframes flyIn { from { opacity: 0; transform: translate(var(--fx, 0), var(--fy, 0)) scale(.82) rotate(var(--fr, 0deg)); } 70% { opacity: 1; } to { opacity: 1; transform: none; } }
+/* luôn tắt hiệu ứng hiện màn cũ (tin): nếu chỉ tắt lúc có .fly thì khi gỡ .fly màn chờ / vinh danh chạy lại tin, mờ đi một nhịp */
+#stage .scr.on { animation: none; }
+#stage.fly :is(.wrap .pill, .wrap #q, .wrap .sub, .wrap .timer, .wrap .opt, .wrap .howto, .wrap .panel, .wrap .footer, .wrap .prev, #huntbox, #crossbox, .wrap .slots, .wrap .tiles,
+  #teamBox, #rank, #room, #teacher, .scr.on > *, .bhero > *, #outro.on > *) {
+  animation: flyIn .8s cubic-bezier(.16, 1, .3, 1) calc(1.45s + var(--fd, 0) * 70ms) backwards; }
+#stage.fly .bhero { animation: none; }
+/* từ trên xuống */
+#stage.fly :is(.wrap .prev, .wrap .pill, .wrap #q, .scr.on > .tag, .scr.on > h1, #outro.on > h1) { --fy: -520px; }
+#stage.fly :is(.wrap #q, .scr.on > h1) { --fd: 1; }
+/* từ trái */
+#stage.fly :is(.wrap .sub, .wrap .opt:nth-child(odd), .wrap .panel:first-child, .bhero > .hero, .scr.on > .gold, .scr.on > .awards, #outro.on > :nth-child(even)) { --fx: -1100px; --fr: -6deg; }
+/* từ phải */
+#stage.fly :is(.wrap .timer, .wrap .opt:nth-child(even), .wrap .panel:last-child, .bhero > .bcd, .scr.on > .rules, .scr.on > .teamwin, #outro.on > :nth-child(odd):not(h1)) { --fx: 1100px; --fr: 6deg; }
+/* từ dưới lên */
+#stage.fly :is(.wrap .howto, .wrap .footer, #huntbox, #crossbox, .wrap .slots, .wrap .tiles, #teamBox, #rank, #room, #teacher, .scr.on > .podium, .scr.on > .appcard, .scr.on > .soon, .scr.on > .lineup) { --fy: 900px; }
+/* thứ tự ghép: trên trước, dưới sau */
+#stage.fly :is(.wrap .sub, .wrap .timer, .bhero > *) { --fd: 2; }
+#stage.fly :is(.wrap .opt:nth-child(-n+2), #huntbox, #crossbox, .wrap .slots, .wrap .tiles, .scr.on > .podium, .scr.on > .gold) { --fd: 3; }
+#stage.fly :is(.wrap .opt:nth-child(n+3), .scr.on > .rules, .scr.on > .awards, .scr.on > .teamwin) { --fd: 4; }
+#stage.fly :is(.wrap .howto, .scr.on > .appcard) { --fd: 5; }
+#stage.fly :is(.wrap .panel, #teamBox, #rank, #room, .scr.on > .soon) { --fd: 6; }
+#stage.fly .wrap .footer { --fd: 7; }
+
+/* ---------- Màn vinh danh: ba thẻ bài ánh kim ----------
+   Người dùng chốt 13/11/2026 trên canvas Claude Design (bản vẽ gốc: design/src/vinh_danh_the_bai.js, bản 2). DOM do renderPodium() dựng.
+   Tiền tố "html #stage #podiumScr" để thắng các luật cũ của .scr / h1 / hiệu ứng bay vào chung. Độ đậm: bản vẽ ghi 700 → ở đây 800 (xem @font-face Avenir Next).
+   Nội dung nằm trong y 262–1590: chữ "Vinh danh" tự canh giữa khoảng trống còn lại phía trên ba thẻ (margin auto). */
+html #stage #podiumScr { --t0: 0ms; padding-bottom: 330px; }
+html #stage #podiumScr > .tag { display: none; }
+/* chữ kim loại: lớp .g tô vàng, lớp .in đổ bóng trong (multiply trong nhóm filter), lớp .sh là vệt sáng lướt qua */
+html #stage #podiumScr .ptitle { position: relative; flex: none; margin: auto 0; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 112px;
+  font-weight: 900; line-height: 1.15; text-shadow: none; filter: drop-shadow(0 3px 0 #c08a00) drop-shadow(0 10px 12px rgba(122, 78, 0, .22)); }
+html #stage #podiumScr .ptitle span { display: block; padding: 0 16px; color: transparent; -webkit-background-clip: text; background-clip: text; }
+html #stage #podiumScr .ptitle .g { background-image: linear-gradient(180deg, #fffdf0 0%, #fff0a0 24%, #ffd23a 46%, #eaa800 52%, #ffdc55 60%, #fff6c4 80%, #ffc61a 100%); -webkit-text-stroke: 2px #d39a10; }
+html #stage #podiumScr .ptitle .in, html #stage #podiumScr .ptitle .sh { position: absolute; inset: 0; }
+html #stage #podiumScr .ptitle .in { background-color: #d2a84a; text-shadow: 0 6px 4px #fff; mix-blend-mode: multiply; }
+html #stage #podiumScr .ptitle .sh { background: linear-gradient(105deg, transparent 44%, rgba(255, 255, 255, .95) 50%, transparent 56%) 100% 0 / 300% 100% no-repeat; -webkit-background-clip: text; background-clip: text; }
+
+/* ba thẻ: bản vẽ rộng 968 (lề 56), .scr lề 64 → nới mỗi bên 8px */
+html #stage #podiumScr .pfan { position: relative; flex: none; width: 968px; height: 640px; margin: 12px -8px 0; perspective: 1400px; }
+html #stage #podiumScr .pcard { position: absolute; overflow: hidden; display: flex; }
+html #stage #podiumScr .pcard.c2, html #stage #podiumScr .pcard.c3 { top: 112px; width: 352px; height: 484px; border-radius: 28px; padding: 6px; box-shadow: 0 20px 44px rgba(16, 32, 30, .2); }
+html #stage #podiumScr .pcard.c2 { left: -36px; transform: rotate(-4deg); background: linear-gradient(135deg, #f1f5f4, #a9b8b5 38%, #f7faf9 55%, #8a9c98); --a: #7f908c; --s: #5c6c68; --tint: #eef3f2; --ring: #dbe4e2; --line: rgba(169, 184, 181, .5); }
+html #stage #podiumScr .pcard.c3 { right: -36px; transform: rotate(4deg); background: linear-gradient(135deg, #f6cfae, #c8814a 38%, #fbe0c8 55%, #a8622c); --a: #93592a; --s: #7a4621; --tint: #fbe9da; --ring: #f3d2b8; --line: rgba(200, 129, 74, .5); }
+html #stage #podiumScr .pcard.c1 { top: 0; left: 50%; margin-left: -224px; width: 448px; height: 624px; z-index: 3; border-radius: 32px; padding: 8px; box-shadow: 0 26px 64px rgba(16, 32, 30, .28);
+  background: linear-gradient(135deg, #ffe58a, #f5b400 38%, #fff1b8 55%, #d99a00); --a: #b98200; --s: #93592a; --tint: #fff6d6; --ring: #ffe591; --line: rgba(232, 189, 74, .5); }
+html #stage #podiumScr .pcard .shine { position: absolute; top: -30%; left: -60%; width: 60%; height: 160%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .55), transparent); transform: rotate(18deg); }
+html #stage #podiumScr .pcard .in { position: relative; z-index: 1; width: 100%; height: 100%; border-radius: 22px; background: linear-gradient(180deg, #fff 60%, var(--tint)); display: flex; flex-direction: column; align-items: center; padding: 20px 14px 14px; }
+html #stage #podiumScr .pcard.c1 .in { border-radius: 24px; padding: 26px 22px 20px; }
+html #stage #podiumScr .pcard .hd { width: 100%; display: flex; align-items: center; justify-content: flex-start; padding: 0 4px; }
+html #stage #podiumScr .pcard.c3 .hd { justify-content: flex-end; } html #stage #podiumScr .pcard.c1 .hd { justify-content: space-between; }
+html #stage #podiumScr .pcard .no { width: 58px; height: 58px; flex: none; border-radius: 50%; color: #fff; font-size: 34px; font-weight: 800; line-height: 1; display: grid; place-items: center; }
+html #stage #podiumScr .pcard.c2 .no { background: linear-gradient(135deg, #f1f5f4 9%, #a9b8b5 58%, #f7faf9 81%, #8a9c98 100%); text-shadow: 2px 2px 2px #506762; }
+html #stage #podiumScr .pcard.c3 .no { background: linear-gradient(135deg, #f6cfae 2%, #c8814a 33%, #fbe0c8 66%, #a8622c 100%); text-shadow: 2px 2px 2px rgba(147, 89, 42, .5); }
+html #stage #podiumScr .pcard.c1 .no { width: 76px; height: 76px; font-size: 44px; background: linear-gradient(135deg, #ffe58a 11%, #f5b400 36%, #fff1b8 66%, #d99a00 100%); text-shadow: 2px 2px 2px rgba(185, 130, 0, .5); }
+html #stage #podiumScr .pcard .lab { font-size: 28px; font-weight: 500; letter-spacing: .14em; color: var(--a); }
+html #stage #podiumScr .pcard .av { margin-top: 34px; width: 132px; height: 132px; flex: none; border-radius: 50%; border: 3px solid var(--ring); background-color: color-mix(in srgb, var(--ring) 20%, transparent);
+  background-size: cover; background-position: center; color: var(--a); display: grid; place-items: center; font-size: 55px; font-weight: 800; line-height: 1; }
+html #stage #podiumScr .pcard.c1 .av { margin-top: 52px; width: 190px; height: 190px; border-width: 4px; font-size: 80px; }
+html #stage #podiumScr .pcard .nmw { width: 80%; display: flex; justify-content: center; border-bottom: 3px solid var(--line); }
+html #stage #podiumScr .pcard.c1 .nmw { width: 90%; border-bottom-width: 4px; }
+html #stage #podiumScr .pcard .nm { margin: 16px 0 12px; max-width: 100%; font-size: 36px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--a); }
+html #stage #podiumScr .pcard.c1 .nm { margin: 22px 0 18px; font-size: 56px; }
+/* tên dài (TikTok hay có): thu chữ một nấc trước khi phải cắt bằng dấu ba chấm */
+html #stage #podiumScr .pcard .nm.long { font-size: 29px; margin: 20px 0 16px; } html #stage #podiumScr .pcard.c1 .nm.long { font-size: 44px; margin: 28px 0 24px; }
+html #stage #podiumScr .pcard .st { margin-top: auto; width: 86%; display: flex; gap: 10px; }
+html #stage #podiumScr .pcard.c1 .st { width: 100%; gap: 14px; }
+html #stage #podiumScr .pcard .st > div { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; padding: 4px 0 6px; }
+html #stage #podiumScr .pcard .st b { font-size: 40px; font-weight: 600; line-height: 1.05; font-variant-numeric: tabular-nums; }
+html #stage #podiumScr .pcard .st span { font-size: 20px; letter-spacing: .1em; }
+html #stage #podiumScr .pcard.c1 .st b { font-size: 50px; } html #stage #podiumScr .pcard.c1 .st span { font-size: 24px; }
+html #stage #podiumScr .pcard .st .a { color: var(--s); } html #stage #podiumScr .pcard .st .a span { font-weight: 500; }
+html #stage #podiumScr .pcard .st .b { color: #1c7a6c; } html #stage #podiumScr .pcard .st .b span { font-weight: 800; }
+/* vòng tia vàng nổ sau thẻ quán quân lúc thẻ lật ra (chỉ là hiệu ứng, hết thì biến mất) */
+html #stage #podiumScr .pburst { position: absolute; left: 50%; top: 312px; width: 1500px; height: 1500px; margin: -750px 0 0 -750px; border-radius: 50%; opacity: 0; pointer-events: none;
+  background: repeating-conic-gradient(from 0deg, rgba(245, 180, 0, .42) 0 6deg, transparent 6deg 15deg); -webkit-mask: radial-gradient(circle, #000 20%, transparent 62%); mask: radial-gradient(circle, #000 20%, transparent 62%); }
+/* lượt chưa ai ghi điểm */
+html #stage #podiumScr .pfan.empty { height: 400px; display: grid; place-items: center; }
+html #stage #podiumScr .pwait { width: 800px; background: #fff; border-radius: 32px; padding: 48px 36px; font-size: 46px; font-weight: 800; line-height: 1.2; color: #10201e; }
+html #stage #podiumScr .pwait span { display: block; margin-top: 14px; font-size: 32px; font-weight: 500; color: #506762; }
+
+/* hai ô thông tin + dòng phụ */
+html #stage #podiumScr .awards { margin-top: 20px; gap: 14px; }
+html #stage #podiumScr .ptiles { display: flex; gap: 18px; width: 100%; text-align: left; color: #10201e; }
+html #stage #podiumScr .ptile { flex: 1; min-width: 0; background: #fff; border-radius: 32px; padding: 22px 24px; display: flex; gap: 18px; align-items: center; }
+html #stage #podiumScr .ptile .ic { width: 68px; height: 68px; flex: none; border-radius: 50%; background: #e4f4f1; display: grid; place-items: center; }
+html #stage #podiumScr .ptile .tx { min-width: 0; }
+html #stage #podiumScr .ptile .pl, html #stage #podiumScr .ptile .ps { font-size: 24px; font-weight: 500; color: #506762; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+html #stage #podiumScr .ptile .pv { font-size: 34px; font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+html #stage #podiumScr .pline { width: 100%; background: #fff; border-radius: 24px; padding: 14px 24px; display: flex; gap: 14px; align-items: center; font-size: 28px; font-weight: 500; text-align: left; color: #10201e; white-space: nowrap; }
+html #stage #podiumScr .pline svg { flex: none; }
+html #stage #podiumScr .pline .names { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; } html #stage #podiumScr .pline b { font-weight: 800; color: #1c7a6c; }
+html #stage #podiumScr .appcard { margin-top: 24px; }
+html #stage #podiumScr .soon { margin-top: 24px; font-size: 34px; font-weight: 600; }
+html #stage #podiumScr.dense .soon, html #stage #podiumScr.team .soon { display: none; }
+html #stage #podiumScr.dense .ptitle { font-size: 92px; }
+html #stage #podiumScr.team .ptiles { display: none; } html #stage #podiumScr.team .awards { margin-top: 0; } html #stage #podiumScr .teamwin { margin-top: 20px; }
+
+/* Hiệu ứng xuất hiện (theo yêu cầu 13/11/2026). --t0 = 1,45 giây khi Ninja đang lướt qua (renderPodium đặt), 0 khi mở thẳng vào màn này.
+   Trình tự: chữ "Vinh danh" dập xuống → thẻ hạng 3 xoè ra phải → thẻ hạng 2 xoè ra trái → thẻ quán quân lật lên kèm vòng tia + pháo giấy
+   → các ô thông tin trồi lên. Sau đó thẻ quán quân nhấp nhô nhẹ, vệt sáng lướt qua viền thẻ và chữ theo chu kỳ. Điểm chạy từ 0 lên bằng JS (countUp). */
+@keyframes ptIn { 0% { opacity: 0; transform: scale(1.8); } 55% { opacity: 1; transform: scale(.93); } 78% { transform: scale(1.04); } }
+@keyframes ptShine { 0% { background-position: 100% 0; } 22%, 100% { background-position: -10% 0; } }
+@keyframes pcL { 0% { opacity: 0; transform: translate(300px, 130px) rotate(8deg) scale(.5); } 65% { opacity: 1; transform: translate(-16px, -6px) rotate(-7deg) scale(1.04); } }
+@keyframes pcR { 0% { opacity: 0; transform: translate(-300px, 130px) rotate(-8deg) scale(.5); } 65% { opacity: 1; transform: translate(16px, -6px) rotate(7deg) scale(1.04); } }
+@keyframes pc1 { 0% { opacity: 0; transform: translateY(240px) rotateY(100deg) scale(.6); } 55% { opacity: 1; transform: translateY(-22px) rotateY(-8deg) scale(1.07); } 78% { transform: translateY(6px) rotateY(0deg) scale(.985); } 100% { transform: none; } }
+@keyframes pcFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes pcShine { 0% { left: -60%; } 24% { left: 150%; } 24.1%, 100% { left: -60%; } }
+@keyframes pBurst { 0% { opacity: 0; transform: scale(.45) rotate(0deg); } 20% { opacity: 1; } 100% { opacity: 0; transform: scale(1.25) rotate(28deg); } }
+@keyframes pUp { from { opacity: 0; transform: translateY(70px) scale(.96); } }
+html #stage #podiumScr.scr.on > * { animation: pUp .6s cubic-bezier(.16, 1, .3, 1) calc(var(--t0) + 2000ms) backwards; }
+html #stage #podiumScr.scr.on > .pfan, html #stage #podiumScr.scr.on > .awards { animation: none; }
+html #stage #podiumScr.scr.on > .ptitle { animation: ptIn .7s ease-out calc(var(--t0) + 100ms) backwards; }
+html #stage #podiumScr.scr.on .ptitle .sh { animation: ptShine 4.6s ease-in-out calc(var(--t0) + 900ms) infinite backwards; }
+html #stage #podiumScr.scr.on .pcard.c3 { animation: pcR .75s cubic-bezier(.2, .8, .3, 1) calc(var(--t0) + 550ms) backwards; }
+html #stage #podiumScr.scr.on .pcard.c2 { animation: pcL .75s cubic-bezier(.2, .8, .3, 1) calc(var(--t0) + 850ms) backwards; }
+html #stage #podiumScr.scr.on .pcard.c1 { animation: pc1 .9s cubic-bezier(.2, .8, .3, 1) calc(var(--t0) + 1250ms) backwards, pcFloat 3.6s ease-in-out calc(var(--t0) + 2400ms) infinite; }
+html #stage #podiumScr.scr.on .pcard.c3 .shine { animation: pcShine 6s ease-in-out calc(var(--t0) + 1300ms) infinite; }
+html #stage #podiumScr.scr.on .pcard.c2 .shine { animation: pcShine 6s ease-in-out calc(var(--t0) + 1600ms) infinite; }
+html #stage #podiumScr.scr.on .pcard.c1 .shine { animation: pcShine 4.6s ease-in-out calc(var(--t0) + 2100ms) infinite; }
+html #stage #podiumScr.scr.on .pburst { animation: pBurst 1.5s ease-out calc(var(--t0) + 1500ms) both; }
+html #stage #podiumScr.scr.on .pfan.empty > .pwait { animation: pUp .6s cubic-bezier(.16, 1, .3, 1) calc(var(--t0) + 600ms) backwards; }
+html #stage #podiumScr.scr.on > .awards > * { animation: pUp .6s cubic-bezier(.16, 1, .3, 1) calc(var(--t0) + 1900ms + var(--i, 0) * 120ms) backwards; }
+html #stage #podiumScr.scr.on > .teamwin { animation-delay: calc(var(--t0) + 1900ms); }
+html #stage #podiumScr.scr.on > .appcard { animation-delay: calc(var(--t0) + 2200ms); }
+html #stage #podiumScr.scr.on > .soon { animation-delay: calc(var(--t0) + 2400ms); }

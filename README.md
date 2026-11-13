@@ -47,7 +47,7 @@ nghe, Săn từ, Giải ô chữ, Săn lỗi và Giờ học; **chưa bỏ**, v�
 | 🔤 Word | 4 kiểu đề xen kẽ: cho từ chọn nghĩa, cho nghĩa chọn từ, tìm từ đồng nghĩa, tìm từ trái nghĩa. **10 giây** mỗi câu | `A`–`D` |
 | 🎯 Start or End | Tìm 5 từ tiếng Anh bắt đầu hoặc kết thúc bằng chữ cho trước (`ca____`, `____tion`), 45 giây, 5 câu mỗi lượt | 5 từ cách nhau bằng dấu cách hoặc dấu phẩy |
 | 🔎 Săn từ | Ma trận chữ 10×10, tìm từ nối liền theo 8 hướng (cả ngược); ai tìm đủ 5 từ trước ăn điểm; 120 giây, 3 bảng mỗi lượt | các từ tìm được |
-| 🔗 Thế chữ | Hai đội Black và White luân phiên đổi đúng 1 chữ cái để ra từ mới, 8 giây mỗi lượt, hết giờ là thua; không có điểm | `join` để vào đội, rồi gõ từ |
+| 🔗 Thế chữ | Mọi người chơi chung (không chia đội): đổi đúng 1 chữ cái để ra từ mới, ai nhanh tay thì giữ từ và hiện hình dưới từ; người khác thế được thì đổi người giữ. Hết 12 giây không ai thế được thì người giữ từ thắng ván, chỉ người thắng +10 | gõ từ mới |
 | ✏️ Điền từ | Câu thiếu 1 từ, chọn A–D; sau đó có lời giải bằng chữ và giọng nói, kèm phương án sai được chọn nhiều nhất (số phiếu thật) và lý do hay nhầm. 20 giây, giải thích 18 giây, 5 câu mỗi lượt | `A`–`D` |
 | 🎧 Nghe – nghĩa | Phát audio một lần, ô chữ theo số chữ cái, cứ 2 giây hiện thêm một loại chữ cái, 3 giây cuối hiện hết; chọn nghĩa tiếng Việt, đáp án nhiễu cùng chủ đề. 12 giây, 8 câu mỗi lượt | `A`–`D` |
 | 🔍 Săn lỗi | Câu có đúng 1 từ sai (chính tả hoặc ngữ pháp). 30 giây, 5 câu mỗi lượt, công bố 15 giây | `từ sai - từ đúng` |
@@ -84,7 +84,7 @@ từ ô Câu trả lời kèm pháo hoa nhỏ, người nhanh nhất thêm mưa 
 - **Start or End** kiểm từ bằng từ điển Hunspell en_US (`dict.js`, gói `nspell` + `dictionary-en`): nhận mọi dạng chia từ, từ chối tên
   riêng/địa danh viết thường; vài tên Hunspell vẫn nhận (`john`, `china`…) nằm trong danh sách chặn ở `dict.js`. Cụm chữ chọn trong `startend.js`
   (`node startend.js` liệt kê và thử). Nhịp riêng: 45 giây, 5 câu mỗi lượt, công bố 8 giây (khai báo trong `SEGMENTS`).
-- **Thế chữ**: phiên = một chuỗi; ra từ 4 chữ, hai đội luân phiên (Black đi trước ở phiên lẻ). Gõ `join` hoặc `tham gia` để vào đội ít người hơn (bằng nhau thì Black). **Mỗi đội cần ít nhất 2 người** mới bắt đầu phiên, chờ tối đa 90 giây rồi sang khung khác. Mỗi lượt 8 giây (`SEGMENTS.chain.sec`); từ hợp lệ = đổi đúng 1 chữ cái, có trong từ điển (toàn từ điển, từ nhạy cảm bị chặn), chưa dùng trong phiên. Không có điểm: chỉ có đội thắng, **kỷ lục chuỗi lưu ở `data/the-chu-record.json`** (có tên người xem nên nằm ngoài git), tỉ lệ hợp lệ của từng người và MVP (người có nhiều từ được dùng nhất). Mỗi lượt khung có 3 phiên, hết phiên có 10 giây xem thống kê.
+- **Thế chữ** (luật 13/11/2026): ván = một chuỗi, ra từ 4 chữ, không chia đội, không cần `join`. Từ hợp lệ = đổi đúng 1 chữ cái, có trong từ điển (`dict.js`), chưa dùng trong ván; người đang giữ từ không được tự thế. Mỗi lượt: đồng hồ đứng 4 giây (`CHAIN_GRACE`) → đếm 12 giây (`SEGMENTS.chain.sec`) → về 0 thì ngầm chờ thêm 3 giây (`CHAIN_LATE`, bù độ trễ TikTok) rồi mới chốt người thắng (+10, `CHAIN_WIN`). Kỷ lục chuỗi lưu `data/the-chu-record.json`. Bot có chơi nhưng nhường dần khi có người thật.
 - **Điền từ**: câu trong `data/dien-tu-500.json` (`--fill-file` để đổi). Câu do AI viết mới rồi được hai lượt kiểm chứng độc lập (không dùng ngân hàng Part 5 của `migii_toeic_svc` vì chưa có xác nhận bản quyền, xem YC-004). Mỗi câu có `why` (vì sao đúng), `wrong` (lý do từng phương án sai) và `tip`. Công bố: ô lời giải thay bảng điểm, đọc thành tiếng phần `why` và lý do của phương án sai được chọn nhiều nhất.
 - **Đọc nhanh**: bài trong `data/doc-nhanh-700.json` (kênh 650–800) và `data/doc-nhanh-800.json` (kênh 800+), chọn bằng `--read-file`.
   Mỗi file 100 bài AI viết (email, thông báo, quảng cáo, ghi nhớ, tin nhắn, lịch trình; 28–48 từ), mỗi bài dùng một từ vựng của mốc.
@@ -139,7 +139,32 @@ Giống bản gốc, chỉ đổi cổng và tên profile OBS (`MigiiToeicLive`)
 3. Bấm **Go LIVE**, rồi bấm **▶ Bắt đầu** trên màn điều khiển.
 4. Kết thúc: bấm đúp **`■ Tắt game live.command`** (= `./go_live.sh stop`), rồi **End LIVE** trong LIVE Studio.
 
+- **Chọn kênh** (game của mức điểm nào): ghi `KENH=` trong `.env` hoặc thêm tên kênh sau lệnh, vd `./go_live.sh studio 450-650`.
+  Tên kênh: `duoi450` (mặc định) · `450-650` · `650-800` · `tren800`, giống các lệnh `npm run demo:<kênh>`.
+- **Server tự bật lại** nếu chết giữa live: khoảng 3 giây, lượt mới tự chạy, màn live tự nối lại, bảng vàng không mất. Log ở `data/server.log`.
+- **Độ nét**: LIVE Studio chụp cửa sổ theo điểm ảnh thật. Trên màn 1080p thường cửa sổ game chỉ khoảng 575×1023 nên hình lên sóng bị mờ.
+  Cài OBS (miễn phí) để `go_live.sh` tự bật camera ảo 1080×1920 rồi chọn nguồn Camera "OBS Virtual Camera" trong LIVE Studio,
+  hoặc kéo cửa sổ game sang màn Retina của MacBook.
+
 Có stream key (LIVE Producer): điền `TIKTOK_RTMP_URL`, `TIKTOK_STREAM_KEY`, chạy `./go_live.sh` để OBS phát thẳng.
+
+## Thống kê tương tác
+
+Server ghi lại mọi bình luận, quà, like, follow, share và lượt vào phòng của người xem thật vào `data/stats/<ngày>.jsonl`.
+Mỗi sự kiện kèm game đang chơi, câu, pha và số người xem lúc đó. Không ghi bot, tên hay nội dung bình luận; mã TikTok được băm.
+Chỉ tính lúc đã nối TikTok. Chạy thử `--sim` ghi file riêng (`sim-…`) và có số người xem giả.
+Server sau cổng chạy thử 25 game (`npm run demo:all`) và script xuất ảnh không ghi.
+
+Xem báo cáo: nút **📊 Thống kê** trên màn điều khiển, hoặc `http://localhost:8788/stats` (máy khác cần `?key=CONTROL_KEY`).
+Chọn khoảng ngày, kênh, live thật hay chạy thử. Trang gồm:
+
+- **Theo game**: phút phát, người xem trung bình, người xem tăng/giảm trong lượt, người chơi mỗi lượt, tỉ lệ tham gia, bình luận / like /
+  người vào mỗi phút, kim cương, follow, share, **chơi đến cuối** (người chơi nửa đầu còn chơi nửa sau) và **sang game sau**
+  (người chơi lượt này còn chơi lượt kế).
+- **Theo khung giờ** (giờ Việt Nam) và **game × khung giờ** (bình luận/phút, người xem, like/phút).
+- **Các phiên live** và **từng lượt game**. Mỗi bảng tải được CSV để mở bằng Excel.
+
+Báo cáo chạy thẳng trên file `jsonl` mỗi lần mở trang, mặc định 7 ngày gần nhất.
 
 ## Khác với bản Jaemy
 
@@ -151,9 +176,9 @@ Có stream key (LIVE Producer): điền `TIKTOK_RTMP_URL`, `TIKTOK_STREAM_KEY`, 
 | Ghép chữ | Âm tiết Hangul, nhận romaja | Chữ cái tiếng Anh (chữ thường), nhận gõ cả từ |
 | Gõ chữ | Bỏ khỏi chương trình (chữ Hàn khó gõ) | Có khung ✍️ Nghe & gõ chính tả |
 | Thương hiệu | Cáo Jaemy, nền navy | Ninja Migii, **giao diện sáng** theo design system Migii (`public/theme-light.css`) cho cả màn live, màn điều khiển và trang danh sách chạy thử; không còn bản tối, font tiêu đề Migii Serif (OFL) |
-| Câu miễn trừ ETS | — | Luôn hiện dưới thanh tên app (bắt buộc theo `thuong-hieu.md`) |
+| Câu miễn trừ ETS | — | Ẩn trên mọi màn từ 12/11/2026 theo yêu cầu người dùng (`#ets` trong `theme-light.css`); hiện lại bằng cách bỏ `display: none` |
 | MC AI | Cáo Jaemy | Ninja Migii, thêm luật thương hiệu (không hứa "dự đoán chính xác điểm"…) |
-| Người chơi ảo | 6 bot/câu, không gắn nhãn | **Tắt** (`--bots 0`), xem CAN-CUNG-CAP.md |
+| Người chơi ảo | 6 bot/câu, không gắn nhãn, chỉ khung trắc nghiệm | 6 bot (tự giảm khi đông người thật, tối thiểu 2), chơi được **mọi khung**: vào đội Thế chữ cho đủ người, giải hàng ô chữ, Săn từ, Start or End… Tắt: `--bots 0` |
 | Tắt server | `pkill` mọi `node server.js` trên máy | Chỉ tắt server của repo này (theo `data/server.pid`) |
 | Mac ngủ giữa live | Không chặn | `caffeinate` giữ máy và màn hình thức khi server còn chạy |
 | Đường dẫn ngoài repo | `../../claude-api`, `../../jaemy-feature-guide`… | Bỏ hết, chỉ đọc từ `.env` |
@@ -178,7 +203,8 @@ Có stream key (LIVE Producer): điền `TIKTOK_RTMP_URL`, `TIKTOK_STREAM_KEY`, 
 | `build_qr.js` | tạo mã QR tải app từ `APP_LINK` |
 | `ai.js` | MC AI "Ninja Migii" trả lời bình luận (gateway nội bộ; không có token thì tự tắt) |
 | `tts.js` | giọng đọc tiếng Việt VieNeu chạy local (không có thì dùng giọng trình duyệt) |
-| `bots.js`, `sim.js` | người chơi ảo (mặc định tắt) và khán giả ảo cho `--sim` |
+| `bots.js`, `sim.js` | người chơi ảo cho live thật (mặc định 6) và khán giả ảo cho `--sim` |
+| `stats.js` | ghi sự kiện tương tác (`data/stats/`) và trang thống kê `/stats` |
 | `go_live.sh`, `obs/setup_obs.js` | bật/tắt live, cấu hình OBS |
 
 ## Kéo bản sửa lỗi từ repo Jaemy

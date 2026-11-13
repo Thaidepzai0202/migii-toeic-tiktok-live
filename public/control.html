@@ -28,6 +28,7 @@
   .chip.bad { background: rgba(197,48,48,.11); color: var(--red); }
   .chip.warn { background: rgba(138,97,0,.13); color: var(--yellow-t); }
   .chip.click { cursor: pointer; text-decoration: underline dotted; }
+  a.chip.stats { color: var(--green-t); text-decoration: none; }
   main { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 16px; padding: 16px; max-width: 1280px; margin: 0 auto; }
   /* Màn hẹp / điện thoại: nút điều khiển lên đầu, xem trước xuống dưới và nhỏ lại */
   @media (max-width: 860px) { main { grid-template-columns: 1fr; padding: 10px; } .preview { max-width: 260px; margin: 0 auto; } }
@@ -124,6 +125,7 @@
   <span class="chip" id="cViewers">👀 0</span>
   <span class="chip" id="cPlayers">👥 0</span>
   <span class="chip" id="cSession">⏱ 0'</span>
+  <a class="chip stats" id="cStats" href="stats" target="_blank" title="Game nào giữ người xem, nhiều tương tác; theo khung giờ">📊 Thống kê</a>
 </header>
 <div id="denied">⛔ Màn điều khiển chỉ mở được trên máy chạy server, hoặc thêm <code>?key=…</code> (CONTROL_KEY trong .env).</div>
 <main id="app">
@@ -232,6 +234,7 @@
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 const key = new URLSearchParams(location.search).get('key') || '';
+if (key) $('cStats').href = `stats?key=${encodeURIComponent(key)}`;
 const PHASE = { teach: 'Cô đang giảng', break: 'Nghỉ giữa lượt', question: 'Đang hỏi', reveal: 'Đáp án', podium: 'Vinh danh', outro: 'Cảm ơn cuối phiên' };
 const LEVEL = { easy: 'dễ', mid: 'vừa', hard: 'khó', all: 'tất cả' };
 let S = null, skew = 0, ws = null, cfgDirty = false, gotControl = false;
@@ -285,7 +288,7 @@ function render() {
     $('ans').innerHTML = A.mode === 'dictate' ? 'Nghe – chép' : A.mode === 'errhunt' ? `${esc(A.m.replace(' → ', ' - '))}` : A.mode === 'cross' ? esc(A.cross.stage === 'key' ? A.cross.key.toUpperCase() : A.m) : `${esc(A.w)}${A.r ? `<small>/${esc(A.r)}/</small>` : ''}`;
     $('meta').textContent = A.mode === 'dictate' ? `🎙️ Nghe – chép · ${A.winners} người đã gõ đúng cả câu · cứ 2 giây hiện thêm 1 chữ cái` : A.mode === 'errhunt' ? `🔍 Săn lỗi · ${A.winners} người đã gõ đúng cặp từ sai - từ đúng`
       : A.mode === 'cross' ? `🔠 Giải ô chữ · đã giải ${A.cross.solved}/${A.cross.n} hàng · ${A.cross.open ? '🔓 đã mở từ khoá (CHỮ HOA)' : '🔒 chưa mở từ khoá'} · từ khoá: ${A.cross.key.toUpperCase()} · ${A.winners} người đúng`
-      : s.answer.mode === 'chain' ? `🔗 Thế chữ · ${{ lobby: 'sảnh chờ', turn: 'đang đấu', over: 'hết phiên' }[s.answer.chain.stage] || ''} · chuỗi ${s.answer.chain.len} từ · lượt: ${s.answer.chain.turn || '—'} · ⚫ ${s.answer.chain.black} người, ⚪ ${s.answer.chain.white} người`
+      : s.answer.mode === 'chain' ? `🔗 Thế chữ · ${{ turn: 'đang chơi', over: 'hết ván' }[s.answer.chain.stage] || ''} · chuỗi ${s.answer.chain.len} từ · người giữ từ: ${s.answer.chain.holder || 'chưa có'} · ${s.answer.chain.players} người đã gõ từ`
       : s.answer.mode === 'hunt' ? `🔎 Săn từ · ${s.answer.winners} người đã tìm đủ 5 từ · đáp án mẫu: ${s.answer.demo}`
       : s.answer.mode === 'startend' ? `🎯 Start or End · ${s.answer.winners} người đã gõ đủ 5 từ đúng · đáp án mẫu: ${s.answer.demo}`
       : `${s.answer.course || ''} · ${s.answer.winners} người đúng · gợi ý mức ${s.answer.hint}/2`;

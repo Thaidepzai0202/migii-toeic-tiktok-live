@@ -17,3 +17,6 @@ design/out/
 
 # Kỷ lục chuỗi Thế chữ (có tên người xem)
 data/the-chu-record.json
+
+# Thống kê live (stats.js): có mã người xem đã băm, muối băm riêng của máy
+data/stats/

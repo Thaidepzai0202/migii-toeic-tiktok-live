@@ -11,7 +11,7 @@
 //   node gateway.js --port 8789 --base-port 18800 --key abcd1234
 //
 // Máy khác trong mạng mở được bằng địa chỉ LAN (in ra khi chạy). Link điều khiển kèm khoá chỉ hiện trên trang danh sách khi mở từ
-// chính máy này; ai có khoá thì điều khiển được (đổi khung, gõ bình luận thử). Dừng: Ctrl+C hoặc kill tiến trình này (các game con tắt theo).
+// chính máy này (kể cả bằng địa chỉ LAN của máy); ai có khoá thì điều khiển được (đổi khung, gõ bình luận thử). Dừng: Ctrl+C hoặc kill tiến trình này (các game con tắt theo).
 const http = require('http');
 const net = require('net');
 const fs = require('fs');
@@ -106,8 +106,14 @@ function route(rawUrl) {
   const g = m && (BY_ID[m[1]] || BY_ID[OLD[m[1]]]);
   return g ? { g, rest: m[2], search: url.search, pathname: url.pathname } : null;
 }
-const fwdHeaders = (req) => ({ ...req.headers, host: `127.0.0.1`, 'x-gw-token': TOKEN, 'x-gw-client': req.socket.remoteAddress });
-const isLocal = (req) => ['127.0.0.1', '::1', '::ffff:127.0.0.1'].includes(req.socket.remoteAddress);
+// "Máy này" gồm cả khi mở bằng địa chỉ LAN của chính máy (http://192.168.x.x:8789/): trước đây bị coi là máy khác nên mất nút Điều khiển
+const selfAddr = (a) => {
+  const ip = String(a || '').replace(/^::ffff:/, '');
+  if (ip === '127.0.0.1' || ip === '::1') return true;
+  return Object.values(os.networkInterfaces()).some((l) => (l || []).some((x) => x.address === ip));
+};
+const isLocal = (req) => selfAddr(req.socket.remoteAddress);
+const fwdHeaders = (req) => ({ ...req.headers, host: `127.0.0.1`, 'x-gw-token': TOKEN, 'x-gw-client': isLocal(req) ? '127.0.0.1' : req.socket.remoteAddress });
 
 const esc = (x) => String(x).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 function menu(req, res) {
