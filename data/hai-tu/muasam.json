@@ -1,0 +1,31 @@
+{
+  "id": "muasam",
+  "name": "Mua sắm",
+  "items": [
+    {"id": "shopping-cart", "w": "shopping cart", "vi": "xe đẩy hàng", "ok": ["cart", "trolley", "shopping trolley", "shopping carts"], "p": "an empty metal supermarket shopping cart, side view"},
+    {"id": "shopping-bag", "w": "shopping bag", "vi": "túi mua sắm", "ok": ["shopping bags", "carrier bag"], "p": "a glossy red shopping bag with rope handles"},
+    {"id": "basket", "w": "basket", "vi": "giỏ mua hàng", "ok": ["shopping basket", "baskets"], "p": "a red plastic supermarket basket with two handles"},
+    {"id": "cash-register", "w": "cash register", "vi": "máy tính tiền", "ok": ["till", "register", "cash registers"], "p": "a shop cash register with an open money drawer"},
+    {"id": "receipt", "w": "receipt", "vi": "hoá đơn", "ok": ["receipts", "sales receipt"], "p": "a long white paper shop receipt with printed lines"},
+    {"id": "price-tag", "w": "price tag", "vi": "thẻ giá", "ok": ["tag", "price tags", "price label"], "p": "a paper price tag with numbers hanging on a string"},
+    {"id": "coin", "w": "coin", "vi": "đồng xu", "ok": ["coins"], "p": "a small stack of plain shiny silver coins with a simple star pattern, no faces or writing"},
+    {"id": "cash", "w": "cash", "vi": "tiền mặt", "ok": ["money", "banknote", "banknotes", "bills", "notes"], "p": "a neat stack of generic green paper banknotes with plain patterns, no portraits, no numbers, no text"},
+    {"id": "credit-card", "w": "credit card", "vi": "thẻ tín dụng", "ok": ["credit cards", "bank card", "debit card"], "p": "a blue plastic credit card with a gold chip"},
+    {"id": "barcode", "w": "barcode", "vi": "mã vạch", "ok": ["bar code", "barcodes"], "p": "black and white barcode stripes on a product label"},
+    {"id": "gift-card", "w": "gift card", "vi": "thẻ quà tặng", "ok": ["gift cards", "gift voucher"], "p": "a plastic gift card printed with a red ribbon"},
+    {"id": "coupon", "w": "coupon", "vi": "phiếu giảm giá", "ok": ["coupons", "voucher", "discount coupon"], "p": "a blank paper discount coupon with a dotted cut-out border and small scissors, no text"},
+    {"id": "fitting-room", "w": "fitting room", "vi": "phòng thử đồ", "ok": ["fitting rooms", "changing room", "dressing room"], "p": "a small clothing store booth with a half-open curtain"},
+    {"id": "atm", "w": "atm", "vi": "máy rút tiền", "ok": ["cash machine", "atm machine", "cashpoint"], "p": "a bank cash machine in a wall with screen and keypad"},
+    {"id": "piggy-bank", "w": "piggy bank", "vi": "heo đất", "ok": ["piggy banks", "money box"], "p": "a pink ceramic pig-shaped coin bank with a coin slot"},
+    {"id": "paper-bag", "w": "paper bag", "vi": "túi giấy", "ok": ["paper bags"], "p": "a plain brown paper bag standing upright, empty"},
+    {"id": "plastic-bag", "w": "plastic bag", "vi": "túi ni lông", "ok": ["plastic bags", "nylon bag"], "p": "a thin white plastic carrier bag with handles"},
+    {"id": "package", "w": "package", "vi": "gói hàng", "ok": ["packages", "parcel", "parcels", "box"], "p": "a brown cardboard delivery box sealed with tape"},
+    {"id": "card-reader", "w": "card reader", "vi": "máy quẹt thẻ", "ok": ["card machine", "card terminal", "payment terminal", "pos machine"], "p": "a handheld card payment terminal with a card inserted"},
+    {"id": "stall", "w": "stall", "vi": "sạp hàng", "ok": ["stalls", "market stall", "stand"], "p": "a street market stall with a striped awning and goods"},
+    {"id": "checkout", "w": "checkout", "vi": "quầy thu ngân", "ok": ["checkouts", "checkout counter", "cash desk", "counter"], "p": "a supermarket checkout counter with a conveyor belt"},
+    {"id": "customer", "w": "customer", "vi": "khách hàng", "ok": ["customers", "shopper", "shoppers"], "p": "a smiling woman carrying several shopping bags"},
+    {"id": "groceries", "w": "groceries", "vi": "đồ tạp hoá", "ok": ["grocery", "grocery bag"], "p": "a paper bag full of bread, milk and vegetables"},
+    {"id": "escalator", "w": "escalator", "vi": "thang cuốn", "ok": ["escalators", "moving stairs"], "p": "a shopping mall escalator going up, side view"},
+    {"id": "mannequin", "w": "mannequin", "vi": "ma-nơ-canh", "ok": ["mannequins", "manikin", "dummy"], "p": "a white store mannequin wearing a red dress"}
+  ]
+}

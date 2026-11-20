@@ -19,7 +19,7 @@ Mục nào điền vào `.env` thì đã có sẵn dòng trong `.env.example`.
 | # | Cần gì | Không có thì sao | Điền ở đâu |
 |---|---|---|---|
 | 7 | **Token gateway AI** cho MC "Ninja Migii" trả lời bình luận | AI tự tắt | `CLAUDE_API_TOKEN`, `AI_GATEWAY_URL` |
-| 8 | **Giọng đọc VieNeu** (môi trường Python đã cài `vieneu`) | Dùng giọng tiếng Việt của trình duyệt, kém tự nhiên hơn | `VIENEU_PY` |
+| 8 | ~~Giọng đọc VieNeu~~ **Đã cài 16/11/2026 trên máy này**: `uv venv --python 3.12 ~/.venvs/vieneu` rồi `uv pip install vieneu` (bản 3.8.4, chạy CPU). Đang dùng giọng Ngọc Linh, chờ người dùng nghe và chốt giọng. Máy live khác thì cài lại như vậy | Dùng giọng tiếng Việt của trình duyệt, kém tự nhiên hơn | `VIENEU_PY`, đổi giọng: `VIENEU_VOICE` |
 | 9 | **Khoá Euler Stream** (dịch vụ ký request cho thư viện đọc chat) | Gói miễn phí bị giới hạn số lần nối/giờ; server tự lùi 2 phút khi bị chặn | `EULER_API_KEY` |
 | 10 | **Chạy `npm run build:audio` một lần trên máy live** để tạo sẵn phát âm ~1.400 từ | Phát âm được lấy lúc chơi; mất mạng thì chuyển sang giọng tiếng Anh của trình duyệt | — |
 | 11 | **Lịch live** để hiện trên màn cảm ơn cuối buổi | Màn cảm ơn ghi "Hẹn gặp lại ở phiên sau" | `NEXT_LIVE` |
@@ -31,6 +31,10 @@ Mục nào điền vào `.env` thì đã có sẵn dòng trong `.env.example`.
 - **App Store ID `1615348376`**: lấy từ code iOS (`HomeVC.swift`), chưa kiểm tra trên store. Chỉ ảnh hưởng nếu dùng làm link QR.
 - **Font SVN-Avo** (font chữ chính của app): bản quyền dùng trên web/quảng bá chưa xác nhận, nên màn live đang dùng
   Be Vietnam Pro. Tiêu đề dùng Migii Serif (giấy phép SIL OFL, kèm file `public/fonts/OFL-MigiiSerif.txt`).
+- **Quà đổi quyền trong Thế chữ** (thêm 19/11/2026 theo yêu cầu người dùng: 1 hoa ×2 điểm, 3 hoa đổi 2 chữ, 10 hoa ra từ mới và giữ từ;
+  dải ưu đãi hiện ngay trên màn chơi). Chưa đối chiếu với quy định của TikTok: một nguồn bên thứ ba dẫn lại mục
+  *Inauthentic Gift Requests* (trong app: Live Center → Rules and Guidance) nói không chạy game tính điểm dựa trên quà. Cần đọc mục đó
+  trong app trước khi lên live; nếu vướng thì tắt bằng cách cho `CHAIN_GIFT` giá trị rất lớn và bỏ dải `.cgift`.
 - **Lời mời trên màn hình**: hiện chỉ ghi "Ôn lại từ vừa chơi trong app". Nếu muốn ghi "1.677 từ vựng", "miễn phí Part 1, 2, 5"
   hay mã ưu đãi riêng cho người xem live thì cần marketing chốt câu chữ (theo `thuong-hieu.md`: phải nói rõ phần nào miễn phí,
   không hứa "dự đoán chính xác điểm").

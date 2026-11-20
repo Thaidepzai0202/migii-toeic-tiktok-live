@@ -189,6 +189,232 @@
   .slots.many .slot { width: 120px; height: 140px; font-size: 84px; }
   .slots.xmany { gap: 12px; } .slots.xmany .slot { width: 84px; height: 112px; font-size: 66px; border-radius: 20px; }
   @keyframes pop { 0% { transform: scale(.6) } 70% { transform: scale(1.12) } 100% { transform: scale(1) } }
+  /* Đoán emoji (17/11/2026): emoji lớn thay chữ câu hỏi; ô chữ chia theo từng từ, cụm từ xuống hàng theo từ chứ không cắt giữa từ.
+     Số đếm lớn 3-2-1 nằm đúng chỗ emoji nên bỏ ở khung này (vẫn còn lửa ở đồng hồ và viền đỏ). */
+  #stage .q.emo { font-size: 180px; line-height: 1.2; letter-spacing: 14px; padding-left: 14px; text-shadow: none; white-space: nowrap; }
+  #stage .slots.emo { column-gap: 36px; row-gap: 14px; }
+  #stage .slots.emo .wd { display: flex; flex-wrap: nowrap; gap: 20px; }
+  #stage .slots.emo.many .wd { gap: 14px; }
+  #stage .slots.emo.xmany .wd { gap: 8px; }
+  #stage[data-seg="emoji"] #hurry { display: none; }
+  /* Chia động từ (17/11/2026): bảng V1–V2–V3 ba hàng đặt trong #q. Hàng đố viền teal, ô khuyết rộng hơn hai ô kia (cột --c0/1/2 đặt lúc vẽ)
+     và chứa ô chữ cái mở dần; hai hàng ví dụ nền xám nhạt. Bảng nằm đúng chỗ số đếm 3-2-1 nên bỏ số đếm ở khung này. */
+  #stage .q.irrt { width: 888px; max-width: 888px; font-size: 48px; line-height: 1; letter-spacing: 0; text-shadow: none; }
+  #stage .irt .ih, #stage .irt .ir { display: grid; grid-template-columns: var(--c0, 1fr) var(--c1, 1fr) var(--c2, 1fr); gap: 12px; }
+  #stage .irt .ih { font-size: 30px; font-weight: 800; color: #1c7a6c; margin-bottom: 10px; }
+  #stage .irt .ih i { font-style: normal; font-weight: 500; font-size: 24px; color: #506762; margin-left: 8px; }
+  #stage .irt .ir { margin-top: 10px; }
+  #stage .irt .ic { height: 96px; border-radius: 22px; display: flex; align-items: center; justify-content: center; gap: 4px; min-width: 0;
+    background: #e4edea; color: #3b524e; font-weight: 600; white-space: nowrap; }
+  #stage .irt .ic.lg { font-size: 37px; }
+  #stage .irt .qq .ic { background: #fff; color: #10201e; font-weight: 800; box-shadow: inset 0 0 0 3px #48bcaa; }
+  #stage .irt .qq .ic.gap { background: #d3eee8; box-shadow: inset 0 0 0 3px #1c7a6c; }
+  #stage .irt .lt { width: var(--lw, 46px); height: calc(var(--lw, 46px) * 1.3); border-radius: 10px; background: #fff; color: #1c7a6c;
+    display: grid; place-items: center; font-size: calc(var(--lw, 46px) * .82); font-weight: 800; }
+  #stage .irt .lt.on { animation: pop .35s ease-out; }
+  #stage .irt.rev .qq .ic.gap { background: #1c7a6c; color: #fff; box-shadow: none; animation: pop .4s ease-out; }
+  #stage .wrap.irrf .slots { display: none; }
+  #stage[data-seg="irrfill"] #hurry { display: none; }
+  /* Tìm bất quy tắc: đề một dòng cao cố định (công bố đổi thành bộ ba V1 – V2 – V3 của từ bất quy tắc, cỡ chữ --fs theo độ dài);
+     công bố thì mỗi đáp án thêm dòng dạng quá khứ để so sánh: từ có quy tắc tô đuôi "ed", từ bất quy tắc in đậm. */
+  #stage .q.irrq { height: 120px; display: flex; align-items: center; justify-content: center; white-space: nowrap; font-size: var(--fs, 56px); letter-spacing: 0; }
+  #stage .q.irrq b { color: #1c7a6c; font-weight: 800; margin: 0 .25em; }
+  #stage .opts.irr .opt .t { display: flex; flex-direction: column; -webkit-line-clamp: unset; overflow: visible; }
+  #stage .opts.irr .opt .fm { font-size: 28px; line-height: 36px; font-weight: 500; color: #506762; white-space: nowrap; }
+  #stage .opts.irr .opt .fm u { text-decoration: none; color: #d33a49; font-weight: 700; }
+  #stage .opts.irr .opt.right .fm { color: #10201e; font-weight: 800; }
+  #stage .opts.irr .opt .fm.sm { font-size: 24px; }
+  #stage .opts.irr .opt .pct { position: absolute; right: 22px; top: 16px; } /* % lên góc trên để dòng dạng quá khứ dài (understood · understood) đủ chỗ */
+  #stage .opts.irr.rev .opt:not(.right) { opacity: .85; }
+
+  /* Bricky (19/11/2026): tất cả nằm trong #q. Trên cùng là bảng ô 2 cột (.bkb, mỗi từ một khối .bw: hàng "gạch" + dòng chú thích nghĩa · tên người mở),
+     dưới bảng là khay chữ cái cho sẵn (.bkl), cuối là dải "Từ thêm" (.bkx) một hàng. Người dùng sửa 19/11: chữ cho sẵn KHÔNG đóng khung từng chữ
+     (dễ tưởng là một từ trên bảng), nằm dưới bảng, gom trong một khung nhạt và không nổi hơn gạch của bảng.
+     Ô: trống xám nhạt · gợi ý (chữ đầu) viền teal · đã mở nền teal · công bố mà chưa ai tìm ra viền cam. Số đếm 3-2-1 nằm đè lên bảng nên bỏ. */
+  #stage .q.brk { width: 888px; max-width: 888px; font-size: 40px; line-height: 1; letter-spacing: 0; text-shadow: none; }
+  #stage .brk .bkb { display: flex; flex-wrap: wrap; justify-content: center; column-gap: 40px; row-gap: 10px; }
+  #stage .brk .bw { width: 400px; text-align: left; }
+  #stage .brk .bts { display: flex; gap: 8px; }
+  #stage .brk .bts i { width: 72px; height: 72px; border-radius: 16px; display: grid; place-items: center; font-style: normal; font-size: 46px; font-weight: 800;
+    text-transform: uppercase; background: #e4edea; color: #10201e; box-shadow: inset 0 0 0 3px #cfdcd8; }
+  #stage .brk .bw.hint .bts i:first-child { background: #fff; color: #1c7a6c; box-shadow: inset 0 0 0 3px #48bcaa; }
+  #stage .brk .bw.open .bts i { background: #48bcaa; color: #fff; box-shadow: inset 0 -7px 0 #2f9c8b; padding-bottom: 5px; }
+  #stage .brk .bw.miss .bts i { background: #fff; color: #c2562a; box-shadow: inset 0 0 0 3px #e8743b; }
+  #stage .brk .bw.pop .bts i { animation: pop .35s ease-out both; animation-delay: calc(var(--i) * 70ms); }
+  #stage .brk .bc { margin-top: 3px; height: 30px; font-size: 24px; line-height: 30px; font-weight: 500; color: #7a8d89; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #stage .brk .bc b { color: #10201e; font-weight: 700; }
+  #stage .brk .bw.open .bc { color: #1c7a6c; }
+  #stage .brk .bw.miss .bc { color: #c2562a; }
+  #stage .brk .bkl { margin: 18px auto 0; width: max-content; max-width: 100%; height: 88px; padding: 0 40px; border-radius: 28px; display: flex; align-items: center; gap: 34px;
+    background: #f3f7f6; box-shadow: inset 0 0 0 3px #cfdcd8; }
+  #stage .brk .bkl b { font-size: 58px; font-weight: 700; text-transform: uppercase; color: #3b524e; }
+  #stage .brk .bkl.in b { animation: bkin .4s ease-out both; animation-delay: calc(var(--i) * 70ms + var(--base, 0ms)); }
+  @keyframes bkin { 0% { opacity: 0; transform: translateY(14px); } 100% { opacity: 1; transform: none; } }
+  #stage .brk .bkx { margin-top: 14px; height: 46px; overflow: hidden; display: flex; flex-wrap: nowrap; justify-content: center; align-items: center; gap: 10px; white-space: nowrap; }
+  #stage .brk .bkx small { font-size: 26px; line-height: 46px; font-weight: 700; color: #1c7a6c; }
+  #stage .brk .bkx small.r { color: #c2562a; margin-left: 12px; }
+  #stage .brk .bkx em { font-style: normal; font-size: 26px; line-height: 46px; font-weight: 500; color: #7a8d89; }
+  #stage .brk .bkx span { flex: none; height: 46px; padding: 0 16px; border-radius: 23px; display: inline-flex; align-items: center; font-size: 28px; font-weight: 700; background: #d3eee8; color: #10201e; }
+  #stage .brk .bkx span.new { animation: pop .35s ease-out; }
+  #stage .brk .bkx span.r { background: #fff; color: #c2562a; box-shadow: inset 0 0 0 2px #f0b79b; font-weight: 600; }
+  /* bộ 6 chữ cái (bảng cuối): ô 60px để từ 6 chữ vẫn vừa khối 400px, bảng 8 từ = 4 hàng */
+  #stage .brk.six .bts i { width: 60px; height: 60px; border-radius: 14px; font-size: 38px; }
+  #stage .brk.six .bkl { gap: 28px; }
+  /* Bảng cuối: giao diện "về đích" dùng chung với ván tăng tốc Thế chữ (nền, thẻ .bb, thanh giờ, bảng điểm đổi theo #stage.fire ở theme-light.css).
+     Ở đây chỉ tô lại phần riêng của Bricky: ô gạch, chú thích, khay chữ, dải "Từ thêm", dòng tiến độ. */
+  html[data-theme="light"] #stage.fire .q.brk { text-shadow: none; }
+  html[data-theme="light"] #stage.fire .brk .bts i { background: rgba(255, 255, 255, .1); color: #fff; box-shadow: inset 0 0 0 3px rgba(255, 170, 90, .6); }
+  html[data-theme="light"] #stage.fire .brk .bw.hint .bts i:first-child { background: rgba(255, 224, 122, .18); color: #ffe07a; box-shadow: inset 0 0 0 3px #ffe07a; }
+  html[data-theme="light"] #stage.fire .brk .bw.open .bts i { background: linear-gradient(180deg, #ffd34d 0%, #ff8a1f 46%, #e2260c 100%); color: #fff;
+    text-shadow: 0 3px 0 rgba(122, 13, 5, .55); box-shadow: inset 0 -6px 0 rgba(122, 13, 5, .55), 0 0 18px rgba(255, 130, 30, .7); }
+  html[data-theme="light"] #stage.fire .brk .bw.miss .bts i { background: #fff3e0; color: #c21807; box-shadow: inset 0 0 0 3px #ff8a1f; }
+  html[data-theme="light"] #stage.fire .brk .bc, html[data-theme="light"] #stage.fire .brk .bw.miss .bc { color: #ffd9b0; }
+  html[data-theme="light"] #stage.fire .brk .bc b { color: #fff; }
+  html[data-theme="light"] #stage.fire .brk .bw.open .bc { color: #ffe07a; }
+  html[data-theme="light"] #stage.fire .brk .bkl { background: rgba(0, 0, 0, .32); box-shadow: inset 0 0 0 3px rgba(255, 150, 40, .7); }
+  html[data-theme="light"] #stage.fire .brk .bkl b { color: #ffe9c2; }
+  html[data-theme="light"] #stage.fire .brk .bkx small { color: #ffe07a; }
+  html[data-theme="light"] #stage.fire .brk .bkx small.r, html[data-theme="light"] #stage.fire .brk .bkx em { color: #ffd9b0; }
+  html[data-theme="light"] #stage.fire .brk .bkx span { background: #fff3e0; color: #5a0705; box-shadow: inset 0 0 0 2px #ff8a1f; }
+  html[data-theme="light"] #stage.fire .brk .bkx span.r { background: transparent; color: #ffd9b0; box-shadow: inset 0 0 0 2px #ffb38a; }
+  html[data-theme="light"] #stage.fire .wrap.brk .sub { color: #ffe07a; }
+  html[data-theme="light"] #stage.fire .wrap.brk .sub b { color: #fff; }
+  #stage .wrap.brk .slots { display: none; }
+  #stage[data-seg="bricky"] #hurry { display: none; }
+  /* Hái từ (19/11/2026, lúc đầu tên Fruity): lưới 4×4 ô ảnh nằm trong #q, mỗi bảng một chủ đề. Mỗi ô (.ft): chữ ô A–P (.fk), ảnh thật của quả, tên tiếng Việt (.fv), dòng phụ (.fe).
+     Quả có người hái: ảnh rơi khỏi ô (.fall), chỗ ảnh hiện tên tiếng Anh (.fw), dòng phụ hiện tên người hái. Còn nửa giờ: dòng phụ hiện chữ cái đầu.
+     Công bố: quả chưa ai hái giữ ảnh, dòng phụ hiện tên tiếng Anh màu cam. Hai ô Bảng điểm / Câu trả lời thấp lại (3 và 4 hàng) nhường chỗ cho lưới.
+     Người dùng 19/11: ảnh phải là ảnh thật dễ nhận, không dùng emoji; dưới ô không ghi "x chữ cái". */
+  #stage .q.frt { width: 888px; max-width: 888px; font-size: 26px; line-height: 1; letter-spacing: 0; text-shadow: none; }
+  #stage .frt .fg { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+  #stage .frt .ft { position: relative; height: 188px; box-sizing: border-box; padding: 8px 6px 4px; border-radius: 22px; background: #fff; box-shadow: 2px 2px 10px rgba(72, 188, 170, .2);
+    display: flex; flex-direction: column; align-items: center; overflow: hidden; }
+  #stage .frt .fk { position: absolute; left: 8px; top: 8px; z-index: 2; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: #1c7a6c; color: #fff; font-size: 24px; font-weight: 800; }
+  #stage .frt .ft img { width: 100%; height: 112px; object-fit: contain; }
+  #stage .frt .fw { position: absolute; left: 4px; right: 4px; top: 8px; height: 112px; display: none; align-items: center; justify-content: center; text-align: center; font-size: 32px; line-height: 34px; font-weight: 800; color: #1c7a6c; }
+  #stage .frt .fv { margin-top: 4px; height: 30px; font-size: 26px; line-height: 30px; font-weight: 700; color: #10201e; white-space: nowrap; }
+  #stage .frt .fe { height: 26px; max-width: 100%; font-size: 22px; line-height: 26px; font-weight: 600; color: #7a8d89; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #stage .frt .ft.hint .fe { color: #1c7a6c; font-weight: 800; letter-spacing: 2px; }
+  #stage .frt .ft.pk { background: #d3eee8; box-shadow: none; }
+  #stage .frt .ft.pk .fk { background: #9fd3c9; }
+  /* Ô đã hái (người dùng 20/11): chữ A–P đổi thành avatar người hái + tên nhỏ bên cạnh, ở góc trên trái; dòng dưới tên tiếng Việt không lặp tên nữa. */
+  #stage .frt .ft .fby { position: absolute; left: 6px; top: 6px; right: 6px; z-index: 2; display: flex; align-items: center; gap: 6px; min-width: 0; }
+  #stage .frt .ft .fby .av { flex: none; width: 36px; height: 36px; border-radius: 50%; background: #1c7a6c center/cover no-repeat; color: #fff;
+    display: grid; place-items: center; font-size: 18px; font-weight: 800; box-shadow: 0 0 0 2px #fff; }
+  #stage .frt .ft .fby span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 19px; font-weight: 700; color: #1c7a6c; }
+  #stage .frt .ft.pk .fby { animation: pop .35s ease-out .5s both; }
+  html[data-theme="light"] #stage.fire .frt .ft .fby .av { background-color: #e2260c; }
+  html[data-theme="light"] #stage.fire .frt .ft .fby span { color: #a8120a; }
+  /* Ô đã hái (người dùng 20/11): KHÔNG giấu ảnh nữa, chỉ phủ một lớp màu lên ảnh; tên tiếng Anh, tên tiếng Việt, avatar + tên người hái nằm trên lớp đó (chữ trắng). */
+  #stage .q.frt .ft::before { content: ''; position: absolute; inset: 0; z-index: 1; background: rgba(16, 92, 80, .66); opacity: 0; pointer-events: none; transition: opacity .4s; }
+  #stage .q.frt .ft.pk::before { opacity: 1; }
+  #stage .q.frt .ft.pk img { opacity: 1; }
+  #stage .q.frt .ft.pk.fall img { animation: none; }
+  #stage .q.frt .ft .fw { z-index: 2; }
+  #stage .q.frt .ft .fv, #stage .q.frt .ft .fe { position: relative; z-index: 2; }
+  #stage .q.frt .ft .fby { z-index: 3; }
+  #stage .q.frt .ft.pk .fw { top: 44px; height: 80px; line-height: 30px; color: #fff; text-shadow: 0 2px 6px rgba(0, 0, 0, .35); }
+  #stage .q.frt .ft.pk .fv, #stage .q.frt .ft.pk .fe, #stage .q.frt .ft.pk .fby span { color: #fff; }
+  #stage .q.frt .ft.pk.fall .fw { animation: pop .35s ease-out .1s both; }
+  html[data-theme="light"] #stage.fire .frt .ft::before { background: rgba(150, 16, 8, .64); }
+  html[data-theme="light"] #stage.fire .frt .ft.pk .fw, html[data-theme="light"] #stage.fire .frt .ft.pk .fv, html[data-theme="light"] #stage.fire .frt .ft.pk .fe,
+  html[data-theme="light"] #stage.fire .frt .ft.pk .fby span { color: #fff; }
+  #stage .frt .ft.pk img { opacity: 0; }
+  #stage .frt .ft.pk .fw { display: flex; }
+  #stage .frt .ft.pk .fe { color: #1c7a6c; }
+  #stage .frt .ft.pk.fall img { animation: frFall .7s cubic-bezier(.5, 0, .9, .5) both; }
+  #stage .frt .ft.pk.fall .fw { animation: pop .35s ease-out .45s both; }
+  @keyframes frFall { 0% { opacity: 1; transform: none; } 20% { transform: translateY(-10px) rotate(-8deg); } 100% { opacity: 0; transform: translateY(190px) rotate(40deg); } }
+  #stage .frt .ft.ms .fe { color: #c2562a; font-weight: 800; font-size: 24px; }
+  /* Bản thử 20/11 (người dùng: "cho thử ảnh làm background của widget"): ảnh phủ kín ô, chữ ô ở góc, tên tiếng Việt trên dải trắng mờ ở đáy.
+     Ảnh vẫn là thẻ <img> (đặt tuyệt đối, cover) để hiệu ứng quả rơi giữ nguyên. Xem lại kiểu cũ: thêm ?o=anh vào đường dẫn màn live. */
+  #stage .frt.bg .ft { padding: 0; justify-content: flex-end; }
+  #stage .frt.bg .ft img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  #stage .frt.bg .ft .fv, #stage .frt.bg .ft .fe { position: relative; z-index: 1; width: 100%; box-sizing: border-box; margin: 0; padding: 0 6px; background: rgba(255, 255, 255, .9); }
+  #stage .frt.bg .ft .fv { height: 36px; padding-top: 5px; line-height: 30px; }
+  #stage .frt.bg .ft .fe { height: 28px; padding-bottom: 2px; }
+  #stage .frt.bg .ft .fe:empty { height: 8px; }
+  #stage .frt.bg .ft.pk .fv, #stage .frt.bg .ft.pk .fe { background: transparent; }
+  html[data-theme="light"] #stage.fire .frt.bg .ft.pk .fv, html[data-theme="light"] #stage.fire .frt.bg .ft.pk .fe { background: transparent; }
+  /* Công bố Hái từ (người dùng 20/11/2026): ẩn hết lưới, dòng chữ, đồng hồ và hai bảng dưới; các từ chưa ai hái hiện thành flash card lớn
+     lần lượt chạy từ phải vào giữa màn, dừng cho Ninja đọc, rồi trôi sang trái (.ftk = sân khấu thẻ, .fcard = một thẻ). */
+  #stage .frt .ftk { display: none; position: relative; height: 1040px; overflow: hidden; }
+  #stage .frt.rev .fg { display: none; }
+  #stage .frt.rev .ftk { display: block; }
+  #stage .frt .ftk h3 { margin: 0; position: absolute; left: 0; right: 0; top: 0; text-align: center; font-size: 40px; font-weight: 800; color: #1c7a6c; }
+  #stage .frt .ftk h3 small { display: block; margin-top: 6px; font-size: 30px; font-weight: 600; color: #506762; }
+  #stage .frt .fcard { position: absolute; top: 150px; left: 0; width: 600px; height: 820px; box-sizing: border-box; padding: 36px 36px 30px; border-radius: 48px;
+    background: #fff; box-shadow: 4px 8px 30px rgba(28, 122, 108, .28); display: flex; flex-direction: column; align-items: center; transform: translateX(2000px); }
+  #stage .frt .fcard img { width: 528px; height: 528px; border-radius: 32px; object-fit: cover; }
+  #stage .frt .fcard b { margin-top: 28px; max-width: 100%; font-size: 84px; line-height: 1.05; font-weight: 800; color: #1c7a6c; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #stage .frt .fcard span { margin-top: 12px; max-width: 100%; font-size: 50px; font-weight: 600; color: #3b524e; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #stage .frt .fcard i { position: absolute; right: 30px; top: 26px; font-style: normal; font-size: 26px; font-weight: 700; color: #7a8d89; }
+  #stage .frt .ftk .all { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; font-size: 56px; font-weight: 800; color: #1c7a6c; }
+  #stage .wrap.frev .sub, #stage .wrap.frev .timer, #stage .wrap.frev .howto, #stage .wrap.frev .panels { display: none; }
+  html[data-theme="light"] #stage.fire .frt .ftk h3 { color: #ffe07a; }
+  html[data-theme="light"] #stage.fire .frt .ftk h3 small { color: #ffe1c4; }
+  html[data-theme="light"] #stage.fire .frt .fcard { box-shadow: 0 0 0 6px #ff9d3c, 0 0 50px rgba(255, 120, 30, .7); }
+  html[data-theme="light"] #stage.fire .frt .fcard b { color: #a8120a; }
+  html[data-theme="light"] #stage.fire .frt .ftk .all { color: #ffe07a !important; }
+  #stage .wrap.frt .slots { display: none; }
+  #stage .wrap.frt .sub { max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 34px; } /* chủ đề dài + người dẫn: luôn một dòng để không đẩy hai bảng dưới quá y 1600 */
+  #stage .wrap.frt .panel { height: 272px; }
+  #stage .wrap.frt #board .row:nth-child(n+4), #stage .wrap.frt #feed .it:nth-child(n+5) { display: none; }
+  #stage[data-seg="haitu"] #hurry { display: none; }
+  /* Hái từ ở chặng Về đích (#stage.fire, bảng cuối): luật chung của giao diện lửa cho chữ đề bài màu trắng + bóng đỏ cam, bóng đó lan vào chữ trong
+     các ô trắng của lưới làm nhoè (người dùng 20/11 phàn nàn). Trong lưới: bỏ bóng, chữ đậm như thường; ô giữ nền trắng, thêm viền cam. */
+  html[data-theme="light"] #stage.fire .q.frt, html[data-theme="light"] #stage.fire .q.frt * { text-shadow: none !important; }
+  html[data-theme="light"] #stage.fire .q.frt { color: #10201e !important; }
+  html[data-theme="light"] #stage.fire .frt .ft { box-shadow: 0 0 0 3px #ff9d3c, 0 0 18px rgba(255, 120, 30, .55); }
+  html[data-theme="light"] #stage.fire .frt .fk { background: #e2260c; }
+  html[data-theme="light"] #stage.fire .frt .ft.pk { background: #ffe9c2; box-shadow: 0 0 0 3px #ffd34d; }
+  html[data-theme="light"] #stage.fire .frt .ft.pk .fk { background: #f0a060; }
+  html[data-theme="light"] #stage.fire .frt .ft.pk .fw, html[data-theme="light"] #stage.fire .frt .ft.pk .fe { color: #a8120a; }
+  html[data-theme="light"] #stage.fire .frt .ft.hint .fe { color: #c2562a; }
+
+  /* Thêm bớt 1 chữ (19/11/2026): trong #q là nhãn lệnh (THÊM xanh lá / BỚT đỏ cam) + hàng ô chữ của chữ viết sai (chữ thường, cỡ ô --tw theo độ dài).
+     Gợi ý: THÊM = ô "+" nhấp nháy ở chỗ thiếu · BỚT = khoanh cam cặp 2 chữ có chữ thừa. Công bố: THÊM thì ô chữ mới nảy vào (xanh),
+     BỚT thì ô chữ thừa đỏ rơi xuống và hàng khép lại. Về đích (3 câu cuối) dùng #stage.fire như bảng cuối Bricky. Số đếm 3-2-1 đè lên hàng chữ nên bỏ. */
+  #stage .q.one { width: 888px; max-width: 888px; font-size: 40px; line-height: 1; letter-spacing: 0; text-shadow: none; }
+  #stage .one .olk { display: inline-flex; align-items: center; gap: 12px; height: 70px; padding: 0 34px; border-radius: 35px; font-size: 40px; font-weight: 900; color: #fff; letter-spacing: 1px; }
+  #stage .one .olk i { font-style: normal; font-size: 48px; line-height: 1; }
+  #stage .one .olk.add { background: #1f9d63; box-shadow: 0 7px 0 #116b40; }
+  #stage .one .olk.cut { background: #e0553a; box-shadow: 0 7px 0 #a3321f; }
+  #stage .one .olt { margin: 30px 0 16px; height: calc(var(--tw) * 1.25 + 8px); display: flex; justify-content: center; align-items: center; gap: 10px; }
+  #stage .one .olt b { flex: none; position: relative; width: var(--tw); height: calc(var(--tw) * 1.25); border-radius: 18px; display: grid; place-items: center; padding-bottom: 6px;
+    font-size: calc(var(--tw) * .74); font-weight: 800; background: #fff; color: #10201e; box-shadow: inset 0 0 0 3px #cfdcd8, 0 7px 0 #cfdcd8; }
+  #stage .one .olt.in b { animation: bkin .4s ease-out both; animation-delay: calc(var(--i) * 60ms + var(--base, 0ms)); }
+  #stage .one .olt .gap { flex: none; width: calc(var(--tw) * .55); height: calc(var(--tw) * 1.25); border-radius: 14px; display: grid; place-items: center; font-style: normal;
+    font-size: calc(var(--tw) * .6); font-weight: 900; color: #1f9d63; box-shadow: inset 0 0 0 4px #1f9d63; background: #e6f6ee; animation: olGap 1s ease-in-out infinite alternate; }
+  @keyframes olGap { from { transform: scale(.9); opacity: .7; } to { transform: scale(1.06); opacity: 1; } }
+  #stage .one .olt b.pr { background: #fff3e0; box-shadow: inset 0 0 0 4px #e0553a, 0 7px 0 #f0b79b; animation: olWig .5s ease-in-out infinite alternate; }
+  @keyframes olWig { from { transform: rotate(-4deg); } to { transform: rotate(4deg); } }
+  #stage .one .olt.rev b { background: #d3eee8; box-shadow: inset 0 0 0 3px #48bcaa, 0 7px 0 #9fd8cd; }
+  #stage .one .olt.rev b.new { background: #1f9d63; color: #fff; box-shadow: 0 7px 0 #116b40; animation: olNew .6s cubic-bezier(.2, 1.6, .4, 1) .15s both; }
+  @keyframes olNew { 0% { transform: translateY(-120px) scale(.4); opacity: 0; } 100% { transform: none; opacity: 1; } }
+  #stage .one .olt.rev b.out { background: #e0553a; color: #fff; box-shadow: 0 7px 0 #a3321f; animation: olOut 1.1s ease-in .3s both; }
+  @keyframes olOut { 0%, 30% { transform: none; opacity: 1; width: var(--tw); margin: 0; } 100% { transform: translateY(160px) rotate(28deg); opacity: 0; width: 0; margin: 0 -5px; } }
+  #stage .wrap.one .sub { font-size: 40px; }
+  #stage .wrap.one .sub .ko { font-weight: 800; }
+  #stage .wrap.one .sub .vs { color: #7a8d89; font-weight: 500; }
+  #stage .wrap.one .sub.vs2 { font-size: 34px; line-height: 1.3; max-width: 888px; text-align: center; } /* công bố cặp từ dễ nhầm: "desert = sa mạc · dessert = món tráng miệng" */
+  #stage .wrap.one .howto b.ans { color: var(--green); }
+  html[data-theme="light"] #stage.fire .wrap.one .howto b.ans { color: #ffe07a; }
+  #stage .wrap.one .slots { display: none; }
+  #stage[data-seg="oneletter"] #hurry { display: none; }
+  /* về đích: ô chữ lửa như ô của Thế chữ, nhãn lệnh viền vàng */
+  html[data-theme="light"] #stage.fire .one .olt b { background: linear-gradient(180deg, #ffd34d 0%, #ff8a1f 46%, #e2260c 100%); color: #fff; text-shadow: 0 4px 0 rgba(122, 13, 5, .55);
+    box-shadow: 0 7px 0 #7a0d05, 0 0 30px rgba(255, 130, 30, .8); }
+  html[data-theme="light"] #stage.fire .one .olt b.pr { background: #fff3e0; color: #c21807; text-shadow: none; box-shadow: inset 0 0 0 4px #ffe07a, 0 0 30px rgba(255, 224, 122, .9); }
+  html[data-theme="light"] #stage.fire .one .olt .gap { background: rgba(255, 255, 255, .12); color: #ffe07a; box-shadow: inset 0 0 0 4px #ffe07a; }
+  html[data-theme="light"] #stage.fire .one .olt.rev b { background: #fff3e0; color: #5a0705; text-shadow: none; box-shadow: 0 7px 0 #7a0d05; }
+  html[data-theme="light"] #stage.fire .one .olt.rev b.new { background: linear-gradient(180deg, #fffbe6 0%, #ffd34d 100%); color: #7a0d05; text-shadow: none; box-shadow: 0 7px 0 #7a0d05, 0 0 34px rgba(255, 224, 122, .95); }
+  html[data-theme="light"] #stage.fire .one .olt.rev b.out { background: #2a0503; color: #ffb38a; box-shadow: inset 0 0 0 4px #ff5a1f; }
+  html[data-theme="light"] #stage.fire .one .olk { box-shadow: 0 7px 0 #5a0705, 0 0 0 4px #ffe07a; }
+  html[data-theme="light"] #stage.fire .one .olk.add { background: linear-gradient(180deg, #ffe07a 0%, #ff9a2a 100%); color: #3a0705; } /* THÊM: bỏ xanh lá trên nền lửa */
+  html[data-theme="light"] #stage.fire .wrap.one .sub { color: #ffe07a; }
+  html[data-theme="light"] #stage.fire .wrap.one .sub b, html[data-theme="light"] #stage.fire .wrap.one .sub .ko { color: #fff; }
+  html[data-theme="light"] #stage.fire .wrap.one .sub .vs { color: #ffd9b0; }
 
   /* Trắc nghiệm 4 đáp án */
   .q.kw { font-size: 132px; letter-spacing: 2px; }
@@ -366,6 +592,12 @@
   .holder b { font-weight: 900; color: #1c7a6c; max-width: 480px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .holder.new { animation: holderPop .6s cubic-bezier(.2,1.5,.4,1) both; }
   .holder.none { box-shadow: none; background: transparent; padding: 10px 20px; color: #1c7a6c; }
+  .holder.none b { max-width: none; overflow: visible; white-space: normal; }
+  .holder.none > span { text-align: center; }
+  /* "2 chữ cái" ở ván tăng tốc: thẻ vàng viền lửa, to hơn chữ quanh nó và nhấp nháy */
+  .two { display: inline-block; font-style: normal; font-weight: 900; font-size: 1.22em; line-height: 1.15; padding: 0 .4em; margin: 0 .12em; border-radius: .35em; white-space: nowrap;
+    background: linear-gradient(180deg, #fffbe6, #ffd34d); color: #7a0d05; box-shadow: 0 0 0 4px #ff5a1f, 0 0 28px rgba(255, 210, 80, .95); animation: twoPulse .65s ease-in-out infinite alternate; }
+  @keyframes twoPulse { from { transform: scale(1) rotate(-2deg); } to { transform: scale(1.13) rotate(2deg); box-shadow: 0 0 0 4px #ffe07a, 0 0 46px rgba(255, 230, 120, 1); } }
   .holder.win { box-shadow: 0 6px 0 rgba(16,32,30,.10), 0 0 0 6px #ffb347; font-size: 44px; }
   .holder.win .av { width: 110px; height: 110px; font-size: 54px; }
   @keyframes holderPop { 0% { transform: translateY(40px) scale(.6); opacity: 0; } 60% { transform: scale(1.12); opacity: 1; } 100% { transform: none; } }
@@ -382,6 +614,18 @@
   @keyframes oldOut { 0% { opacity: .55; transform: none; } 100% { opacity: 0; transform: translateY(90px) scale(.5) rotate(14deg); } }
   @keyframes tileRing { 0% { opacity: .95; transform: scale(.88); } 100% { opacity: 0; transform: scale(1.22); } }
   .cchip.new { animation: chipPop .5s cubic-bezier(.2,1.5,.4,1) both; }
+  /* bản 19/11: ô chữ khoá, từ 5 chữ (ván tăng tốc), từ do hệ thống / quà đưa vào, dải ưu đãi quà, nhãn ×2 của người giữ từ */
+  .cl.lock { background: #10201e; color: #fff; }
+  .cl .lk { position: absolute; top: -18px; right: -14px; width: 60px; height: 60px; border-radius: 50%; background: #ffb347; display: grid; place-items: center; font-size: 32px; line-height: 1; box-shadow: 0 4px 0 rgba(16,32,30,.18); }
+  .q.cw.w5 { gap: 12px; }
+  .q.cw.w5 .cl { width: 150px; height: 176px; font-size: 112px; border-radius: 28px; }
+  .cchip.sys { border-style: dashed; }
+  .holder .hx2 { flex: none; margin-left: 4px; padding: 2px 14px; border-radius: 999px; background: #d33a49; color: #fff; font-size: 30px; font-weight: 900; font-style: normal; }
+  .cgift { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px 12px; justify-content: center; font-size: 26px; font-weight: 700; color: #3b524e; }
+  .cgift span { padding: 4px 16px; border-radius: 999px; background: #fff; box-shadow: 0 0 0 2px #f3c4cb; white-space: nowrap; }
+  .cgift b { color: #d33a49; }
+  .toast.perk { background: #fff; color: #10201e; box-shadow: 0 0 0 4px #f3c4cb; font-size: 28px; font-weight: 700; padding: 10px 26px; }
+  .toast.perk b { color: #d33a49; }
   @keyframes chipPop { from { transform: scale(.3) translateY(14px); opacity: 0; } to { transform: none; opacity: 1; } }
   /* Điền từ: câu hỏi dài, khi công bố lời giải thay chỗ bảng điểm */
   .q.fillq { font-size: 46px; font-weight: 800; line-height: 1.28; text-shadow: none; max-width: 940px; }
@@ -567,6 +811,7 @@
 <link rel="stylesheet" href="theme-light.css">
 </head>
 <body>
+<div id="stageBg"></div>
 <div id="stage">
   <div class="site">
     <img class="ic" src="img/appicon.png" alt="">
@@ -591,6 +836,8 @@
   <div id="hits"></div>
   <div id="hurry"></div>
   <div id="dash"><img alt=""></div>
+  <div id="embers"></div>
+  <div id="boost"><div class="bn"></div><div class="bt">TĂNG TỐC</div><div class="bs">Ván cuối · từ <b>5 chữ</b> · đổi <b>1 hoặc 2 chữ</b></div></div>
   <div id="moment"></div>
   <div id="aibox"><img src="img/ninja.png" alt=""><div class="tx"><div class="q"></div><div class="a"></div></div></div>
   <div class="pausechip" id="pausechip">⏸ Tạm dừng một chút</div>
@@ -626,6 +873,8 @@
     </div>
     <div class="soon" id="pSoon"></div>
   </div>
+  <!-- Word = đua phi cơ: bầu trời làm nền cả màn, mỗi người một phi cơ (raceUpdate) -->
+  <div id="sky"><div class="skc c1"></div><div class="skc c2"></div><div class="skl"></div><div class="skfin"><span>🏁 ĐÍCH</span></div><div class="sktitle" id="skTitle"></div><div id="planes"></div><div class="skmore" id="skMore"></div><div class="skwin" id="skWin"></div></div>
   <div class="wrap">
     <div class="bb">
     <div class="prev" id="prev">Gõ đáp án vào bình luận để ghi điểm!</div>
@@ -666,6 +915,7 @@
 <div id="tapsound"><span>🔊 Chạm để bật tiếng</span></div>
 <div id="conn"></div>
 
+<script src="kich-ban.js"></script>
 <script>
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
@@ -673,11 +923,19 @@ const qs = new URLSearchParams(location.search);
 // ?mute=1: bản xem trước nhúng trong màn điều khiển — không phát tiếng, không đọc
 let muted = qs.has('mute'); // server chạy thử --mute cũng ép im lặng (không lọt tiếng vào phiên live thật)
 
-// co khung 1080×1920 vừa cửa sổ
+// co khung 1080×1920 vừa cửa sổ.
+// Màn bè ngang (iPad dọc ~3:4, live bằng điện thoại/iPad phát màn hình): chế độ "lấp đầy" — phóng to tới khi khung cao 1680
+// (cắt tối đa 60px trên, phần còn lại ở đáy: hai dải này chỉ là chỗ chừa cho thanh tên kênh / khung bình luận TikTok),
+// hai bên vẽ tiếp nền (#stageBg) nên không còn viền. Màn 9:16 (LIVE Studio 1080×1920) và điện thoại giữ nguyên.
+// Ép bật/tắt: ?fill=1 / ?fill=0.
 function fit() {
   const w = document.documentElement.clientWidth, h = document.documentElement.clientHeight;
-  const s = Math.min(w / 1080, h / 1920);
-  $('stage').style.transform = `translate(${(w - 1080 * s) / 2}px, ${(h - 1920 * s) / 2}px) scale(${s})`;
+  const fill = qs.get('fill') === '1' || (qs.get('fill') !== '0' && w / h >= 0.62);
+  document.documentElement.classList.toggle('fill', fill);
+  const s = Math.min(w / 1080, h / (fill ? 1680 : 1920)), vis = h / s;
+  const ty = fill && vis < 1920 ? -Math.min((1920 - vis) / 2, 60) * s : (h - 1920 * s) / 2;
+  $('stage').style.transform = `translate(${(w - 1080 * s) / 2}px, ${ty}px) scale(${s})`;
+  if (fill) { const bg = $('stageBg').style; bg.top = `${ty}px`; bg.height = `${1920 * s}px`; }
 }
 addEventListener('resize', fit); fit();
 
@@ -694,7 +952,36 @@ function beep(freq, dur = .12, vol = .15, type = 'sine') {
   g.gain.exponentialRampToValueAtTime(.001, actx.currentTime + dur);
   o.connect(g).connect(actx.destination); o.start(); o.stop(actx.currentTime + dur);
 }
-function unlockAudio() { if (muted) return; if (!actx) actx = new (window.AudioContext || window.webkitAudioContext)(); actx.resume(); startMusic(); }
+function unlockAudio() { if (muted) return; if (!actx) { actx = new (window.AudioContext || window.webkitAudioContext)(); if (sinkId) actx.setSinkId?.(sinkId).catch(() => {}); } actx.resume(); startMusic(); }
+
+// ?loa=BlackHole 2ch: phát MỌI tiếng của trang ra thiết bị có tên chứa chữ đó (loa ảo), không ra loa máy.
+// Live nhiều kênh trên một máy (16/11/2026): mỗi kênh một loa ảo, LIVE Studio của kênh tắt "Primary speaker" và lấy tiếng
+// từ loa ảo đó như micro → tiếng các game không lẫn nhau. Tên thiết bị chỉ đọc được khi có quyền micro: cửa sổ game mở với
+// --use-fake-ui-for-media-stream --use-fake-device-for-media-stream nên tự được quyền, không đụng micro thật.
+// Không chuyển được: giọng đọc của trình duyệt (speechSynthesis, chỉ dùng khi VieNeu hỏng) → vẫn ra loa máy, không lên sóng.
+// Tên cửa sổ có tên kênh (theo bộ game, giống KENH trong stats.js): chạy nhiều kênh một máy thì LIVE Studio chọn đúng cửa sổ để quay
+const kenhTen = (p) => { const has = (id) => p.some((x) => x.id === id);
+  const k = has('scramble') || has('chain') ? 'Dưới 450' : has('fillin') || has('errhunt') ? '450–650' : has('dictate') ? '650–800' : has('speedread') ? '800+' : '';
+  return k ? `${k} · ` : ''; };
+const sinkWant = (qs.get('loa') || '').trim().toLowerCase();
+let sinkId = '';
+const setSink = (el) => { if (sinkId && el?.setSinkId) el.setSinkId(sinkId).catch(() => {}); return el; };
+async function findSink() {
+  if (!sinkWant || !navigator.mediaDevices?.enumerateDevices) return;
+  const outs = async () => (await navigator.mediaDevices.enumerateDevices()).filter((d) => d.kind === 'audiooutput');
+  let list = await outs();
+  if (!list.some((d) => d.label)) {
+    try { (await navigator.mediaDevices.getUserMedia({ audio: true })).getTracks().forEach((t) => t.stop()); } catch {}
+    list = await outs();
+  }
+  const d = list.find((x) => x.label.toLowerCase().includes(sinkWant));
+  if (!d) { console.warn('Không thấy loa', sinkWant, list.map((x) => x.label)); return setTimeout(findSink, 5000); }
+  sinkId = d.deviceId;
+  console.log('Phát tiếng ra', d.label);
+  if (actx?.setSinkId) actx.setSinkId(sinkId).catch(() => {});
+  if (vEl) setSink(vEl);
+}
+findSink();
 
 // ---- nhạc nền tự sinh (giống video-live): lo-fi nhẹ Am–F–C–G, 92 BPM — không dùng file nên không dính bản quyền ----
 // Muốn bài riêng: đặt public/music.mp3 (tự lặp). Tự hạ nhỏ (ducking) khi đang đọc / phát âm đáp án.
@@ -787,7 +1074,7 @@ function renderOutro(s) {
   if (!o.classList.contains('on')) {
     o.classList.add('on');
     confetti(90);
-    speak(`Cảm ơn mọi người đã chơi cùng ${SAY_APP} hôm nay. Hẹn gặp lại các bạn ở phiên sau nhé!`);
+    speak(kb('ket_thuc'));
   }
   // bục: hạng 2 · hạng 1 · hạng 3
   const order = [[1, 'p2', '🥈'], [0, 'p1', '🥇'], [2, 'p3', '🥉']];
@@ -810,21 +1097,27 @@ const avatar = (p) => p.avatar ? `<div class="av" style="background-image:url('$
 const isClass = (s) => (s.seg ? s.seg.id === 'class' : s.cfg.style === 'class');
 const SEG_RULES = {
   quiz: null, class: null,
-  scramble: [`🧩 Các <b>chữ cái bị xáo trộn</b>, mỗi thẻ có <b>một số</b>`, `💬 Gõ <b>thứ tự số</b> đúng, vd <b>31254</b> · hoặc gõ luôn <b>từ tiếng Anh</b>`, `☝️ Chỉ tính <b>lần gõ đầu</b> · nhanh nhất <b>+10</b>`],
+  scramble: [`🧩 Các <b>chữ cái bị xáo trộn</b>, ghép lại thành từ`, `💬 Gõ <b>từ tiếng Anh</b> vào bình luận · nhanh nhất <b>+10</b>`, `🔁 Gõ sai thì <b>gõ lại</b> được`],
   reverse: [`🔁 Hiện <b>nghĩa tiếng Việt</b>, chọn đúng <b>từ tiếng Anh</b>`, `💬 Gõ số <b>1, 2, 3 hoặc 4</b> · nhanh nhất <b>+10</b>`, `☝️ Mỗi người chỉ tính <b>lần chọn đầu tiên</b>`],
   listen: [`🎧 Ninja <b>đọc từ tiếng Anh</b>, không hiện chữ — nghe thật kỹ`, `💬 Gõ số <b>1–4</b> chọn nghĩa đúng · nhanh nhất <b>+10</b>`, `🔁 Mỗi câu Ninja đọc <b>2 lần</b>`],
   team: [`🥊 Gõ <b>tên đội</b> vào bình luận để vào đội`, `💬 Trả lời đúng (số <b>1–4</b>) = <b>kéo điểm cho đội</b>`, `🎁 Tặng quà: đội được <b>+10 đến +100</b> điểm`, `🏆 Đội thắng: <b>cả đội +10</b> bảng vàng`],
   type: [`🎧 Nghe Ninja đọc + nhìn <b>nghĩa tiếng Việt</b>`, `✍️ Gõ <b>từ tiếng Anh</b> vào bình luận · nhanh nhất <b>+10</b>`, `🔤 Gợi ý mở dần <b>c _ _ _ _ _ t</b> · phải đúng chính tả`],
   // chữ theo Figma node 46:12 (12/11/2026)
-  word: [`✅ Chọn <b>đáp án đúng</b>`, `💬 Gõ <b>A, B, C</b> hoặc <b>D</b>`, `⚡ Đúng nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
+  word: [`🛩️ Mỗi người một <b>phi cơ</b> · gõ <b>A, B, C</b> hoặc <b>D</b>, đúng thì <b>tăng tốc</b>`, `⚡ Đúng nhanh nhất <b>+10 km/h</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`, `💥 Sai hoặc bỏ câu: <b>hỏng động cơ</b> · câu cuối <b>về đích</b>`],
   hunt: [`🔎 Ma trận <b>10×10</b>: tìm từ theo <b>mọi hướng</b>, cả ngược`, `💬 Gõ từ vào bình luận · ai tìm đủ <b>5 từ</b> trước ăn điểm`, `⚡ Về đích nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
   speedread: [`📰 Hiện <b>một văn bản ngắn</b> (email, thông báo, quảng cáo…) kèm <b>1 câu hỏi</b>`, `🔎 Tìm chi tiết trong bài rồi gõ <b>A, B, C</b> hoặc <b>D</b>`, `⚡ Nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
   dictate: [`🎧 Nghe <b>một câu tiếng Anh</b>, phát lặp lại, cách nhau 5 giây`, `💬 Gõ lại <b>cả câu</b> vào bình luận, cứ <b>2 giây</b> hiện thêm 1 chữ cái`, `⚡ Nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
   errhunt: [`🔍 Câu có <b>đúng 1 từ sai</b> (chính tả hoặc ngữ pháp)`, `💬 Gõ <b>từ sai - từ đúng</b>, vd <b>goning - going</b>`, `⚡ Nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
   crossword: [`🔠 Mỗi hàng là <b>một từ tiếng Anh</b> theo nghĩa tiếng Việt, cột cam ghép thành <b>từ khoá</b>`, `💬 Gõ <b>chữ thường</b> giải hàng (<b>+10, +5, +3, +1</b>) · <b>CHỮ HOA</b> đoán từ khoá (<b>+50</b>)`, `🔓 Giải hơn <b>một nửa</b> số hàng mới được đoán từ khoá`],
   fillin: [`✏️ Hiện <b>câu thiếu 1 từ</b>, chọn từ điền vào chỗ trống`, `💬 Gõ <b>A, B, C hoặc D</b> · nhanh nhất <b>+10</b>, rồi <b>+5</b>, <b>+3</b>, còn lại <b>+1</b>`, `🧠 Sau mỗi câu có <b>lời giải</b> và các lỗi hay nhầm`],
-  listenmean: [`🎧 Nghe audio <b>một lần</b> · chữ cái hiện dần mỗi <b>2 giây</b>`, `💬 Gõ <b>A, B, C hoặc D</b> chọn nghĩa đúng`, `⚡ Nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
-  chain: [`🔗 Mọi người cùng chơi: đổi <b>1 chữ cái</b> để ra từ mới`, `⚡ Ai nhanh tay thế được từ thì <b>giữ từ</b> · người khác thế được thì đổi người giữ`, `🏆 Hết <b>12 giây</b> không ai thế được: người giữ từ thắng ván <b>+10</b>`],
+  listenmean: [`🎧 Nghe audio <b>một lần</b> · chữ cái hiện sẵn <b>một nửa</b>, mỗi giây thêm 1`, `💬 Gõ <b>A, B, C hoặc D</b> chọn nghĩa đúng`, `⚡ Nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
+  chain: [`🔗 Đổi <b>1 chữ cái</b> để ra từ mới và <b>giữ từ</b> · chữ có <b>🔒</b> thì giữ nguyên`, `🏆 Hết <b>12 giây</b> không ai thế được, hoặc chuỗi đủ <b>40 từ</b>: người giữ từ thắng <b>+10</b>`, `🔥 Ván cuối <b>tăng tốc</b>: từ <b>5 chữ</b>, được đổi <b>2 chữ</b>`],
+  emoji: [`🤔 Nhìn <b>emoji</b>, đoán <b>từ tiếng Anh</b>`, `💬 Gõ từ vào bình luận · sai thì <b>gõ lại</b> được · chữ gợi ý <b>mở dần</b>`, `⚡ Nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
+  irrfill: [`📝 Bảng động từ bất quy tắc <b>V1 – V2 – V3</b> khuyết <b>1 ô</b>`, `💬 Gõ <b>từ còn thiếu</b> vào bình luận · sai thì <b>gõ lại</b> được · chữ gợi ý <b>mở dần</b>`, `⚡ Nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
+  haitu: [`🍎 Mỗi bảng <b>một chủ đề</b>: lưới <b>16 ảnh</b> kèm tên tiếng Việt`, `💬 Gõ <b>tên tiếng Anh</b> để hái · ai gõ đúng trước thì từ rụng, <b>+2</b>`, `🏆 Hết bảng ai <b>hái nhiều nhất</b> được <b>+5</b>`],
+  bricky: [`🧱 Cho <b>4–5 chữ cái</b>: ghép thành <b>từ tiếng Anh</b> từ 3 chữ trở lên`, `💬 Gõ từ vào bình luận · mỗi từ đúng <b>+1</b>, kể cả từ <b>ngoài bảng</b>`, `🏆 Người đầu tiên <b>điền đủ bảng</b> được <b>+10</b>`, `🔥 Bảng cuối: <b>6 chữ cái</b>, nhiều từ hơn, mọi điểm <b>×2</b>`],
+  oneletter: [`✂️ Chữ trên màn <b>viết sai</b>: <b>THÊM</b> hoặc <b>BỚT</b> đúng <b>1 chữ cái</b> để thành từ có nghĩa`, `💬 Gõ <b>cả từ</b> vào bình luận · sai thì <b>gõ lại</b> được`, `⚡ Nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`, `🔥 <b>Về đích</b> 3 câu cuối: từ <b>rất dễ nhầm</b>, điểm <b>×2</b>`],
+  irrfind: [`👀 Trong <b>4 động từ</b>, tìm từ <b>bất quy tắc</b>`, `💬 Gõ <b>A, B, C</b> hoặc <b>D</b> · chỉ tính <b>lần chọn đầu</b>`, `⚡ Nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
   startend: [`🎯 Tìm <b>5 từ</b> bắt đầu / kết thúc bằng chữ cho trước`, `💬 Gõ cả 5 từ trong <b>một</b> bình luận, cách nhau bằng <b>dấu cách</b> hoặc <b>dấu phẩy</b>`, `⚡ Đúng nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
 };
 // Dòng luật trên màn chuẩn bị: emoji đầu dòng đổi thành biểu tượng nét (theme-light.css vẽ bằng mask SVG, theo Figma node 46:12);
@@ -847,6 +1140,7 @@ function renderBreak(s) {
     // dòng đầu (số câu · giây mỗi câu) và dòng cuối (Top 3) theo Figma node 46:12: "10 câu · 10s/câu", "Top 3 người điểm cao nhất…"
     const don = nx.id === 'hunt' ? 'bảng' : 'câu';
     $('bRules').innerHTML = [nx.id === 'chain' ? `🔗 <b>${nx.total} ván</b> · mỗi lượt <b>${nx.sec} giây</b>` : nx.id === 'crossword' ? `🔠 <b>1 ô chữ</b> · mỗi hàng <b>${nx.sec} giây</b>` : nx.id === 'speedread' ? `📰 <b>${nx.total}</b> bài - ${nx.sec}s/bài` : `⏱ <b>${nx.total || s.cfg.questions}</b> ${don} - ${nx.sec || s.cfg.roundSec}s/${don}`, ...SEG_RULES[nx.id],
+      ...(nx.fin ? [`🔥 <b>Về đích</b>: ${nx.id === 'crossword' ? 'hàng cuối / vòng từ khoá' : `${nx.fin.unit.toLowerCase()} cuối`}, điểm <b>×${nx.fin.mult}</b>`] : []),
       ...(nx.id === 'team' ? [] : [`🏆 <b>Top 3</b> người điểm cao nhất sẽ được vinh danh`])]
       .map(ruleRow).join('');
   } else if (cls) {
@@ -920,7 +1214,7 @@ function renderPodium(s, entering) {
     const card = (i) => { const x = p.top[i]; return !x ? '' : `<div class="pcard c${i + 1}"><i class="shine"></i><div class="in">` +
       `<div class="hd"><span class="no">${i + 1}</span>${i ? '' : '<span class="lab">QUÁN QUÂN</span>'}</div>${avatar(x)}` +
       `<div class="nmw"><div class="nm${[...x.name].length > 10 ? ' long' : ''}">${esc(x.name)}</div></div>` +
-      `<div class="st"><div class="a"><b data-n="${x.score}">${x.score}</b><span>ĐIỂM</span></div><div class="b"><b>${x.correct}</b><span>${unit}</span></div></div></div></div>`; };
+      `<div class="st"><div class="a"><b data-n="${x.score}">${x.score}</b><span>${p.seg?.id === 'word' ? 'KM/H' : 'ĐIỂM'}</span></div><div class="b"><b>${x.correct}</b><span>${unit}</span></div></div></div></div>`; };
     const fan = $('pPodium');
     fan.classList.toggle('empty', !p.top.length);
     fan.innerHTML = p.top.length ? `<i class="pburst"></i>${card(1)}${card(2)}${card(0)}`
@@ -977,6 +1271,12 @@ function render() {
   if (pendingReload && (!s || ['idle', 'break', 'podium'].includes(s.phase))) return location.reload();
   if (!s || s.phase === 'idle') return;
   dashFx(['break', 'podium', 'outro'].includes(s.phase) ? s.phase : 'play');
+  // ván tăng tốc / bảng cuối / chặng về đích: giao diện lửa CHỈ trong lúc hỏi và công bố. Đặt trước các nhánh return của màn chờ / vinh danh / cảm ơn
+  // để những màn đó luôn về nền thường (19/11/2026 người dùng: vinh danh sau về đích phải nền thường, không nền đỏ).
+  $('stage').classList.toggle('fire', (((s.q?.mode === 'chain' || s.q?.mode === 'bricky') && !!s.q.final) || (s.q?.mode === 'oneletter' && !!s.q.red)) && ['question', 'reveal'].includes(s.phase));
+  if (s.race?.final && ['question', 'reveal'].includes(s.phase)) $('stage').classList.add('fire'); // Word: câu cuối = chặng về đích, cùng giao diện lửa
+  if (s.fin && ['question', 'reveal'].includes(s.phase)) $('stage').classList.add('fire'); // chặng về đích dùng chung (server.js markFinish): câu / bảng cuối của lượt
+  raceUpdate(s);
   if (s.phase === 'outro') { $('breakScr').classList.remove('on'); $('podiumScr').classList.remove('on'); return renderOutro(s); }
   $('outro').classList.remove('on');
   const key = (s.game ? s.game.no + '.' + s.game.qNo : '') + s.phase + (s.q?.turnKey || ''); // Thế chữ: mỗi lượt đổi từ là một "câu" mới
@@ -1006,6 +1306,11 @@ function render() {
   document.querySelector('.wrap').classList.toggle('fill', fillish);
   document.querySelector('.wrap').classList.toggle('cross', s.q?.mode === 'cross');
   document.querySelector('.wrap').classList.toggle('readq', s.q?.wq?.t === 'read');
+  document.querySelector('.wrap').classList.toggle('irrf', s.q?.mode === 'irrfill');
+  document.querySelector('.wrap').classList.toggle('brk', s.q?.mode === 'bricky');
+  document.querySelector('.wrap').classList.toggle('frt', s.q?.mode === 'haitu');
+  document.querySelector('.wrap').classList.toggle('frev', s.q?.mode === 'haitu' && s.phase === 'reveal');
+  document.querySelector('.wrap').classList.toggle('one', s.q?.mode === 'oneletter');
   if (s.teams) renderTeams(s);
   document.querySelector('.wrap').classList.toggle('teach', s.phase === 'teach');
   if (room) renderRoom(s);
@@ -1013,7 +1318,9 @@ function render() {
   if (changed) {
     if (s.phase === 'question') {
       beep(660, .12); setTimeout(() => beep(990, .18), 120); seenFeed = 0;
-      const ln = room ? LINES.classQuestion(s) : LINES.question(s);
+      const ln0 = room ? LINES.classQuestion(s) : LINES.question(s);
+      // về đích dùng chung: trễ 1,6 giây cho khớp màn chuyển, đọc câu mở chặng rồi mới đọc câu hỏi như thường
+      const ln = s.fin?.first ? [1600, kb('ve_dich', { x: s.fin.unit === 'Từ khoá' ? 'vòng từ khoá' : `${s.fin.unit.toLowerCase()} cuối` }), 300, ...ln0] : ln0;
       if (ln.length) say(ln, { interrupt: true });
     }
     if (s.phase === 'reveal') {
@@ -1025,7 +1332,17 @@ function render() {
   $('prev').innerHTML = s.prev
     ? `Câu trước: <b class="ko">${esc(s.prev.w)}</b> = ${esc(s.prev.m)} · ${s.prev.n} người đúng`
     : 'Gõ đáp án vào bình luận để ghi điểm!';
-  $('pill').textContent = room ? `✏️ Kiểm tra · Câu ${s.game.qNo}/${s.game.total}` : s.program && s.seg ? `${s.seg.icon} ${s.seg.name} · ${{ hunt: 'Bảng', chain: 'Ván' }[s.seg.id] || 'Câu'} ${s.q?.mode === 'chain' ? s.q.match : s.game.qNo}/${s.game.total}` : `Lượt ${s.game.no} · Câu ${s.game.qNo}/${s.game.total}`;
+  $('pill').textContent = room ? `✏️ Kiểm tra · Câu ${s.game.qNo}/${s.game.total}` : s.q?.mode === 'chain' && s.q.final ? `🔥 TĂNG TỐC · Ván ${s.q.match}/${s.game.total}` : s.q?.mode === 'bricky' && s.q.final ? `🔥 BẢNG CUỐI · điểm ×${s.q.mult}` : s.q?.mode === 'oneletter' && s.q.red ? `🔥 VỀ ĐÍCH · Câu ${s.q.redNo}/${s.q.redN} · điểm ×${s.q.mult}` : s.program && s.seg ? `${s.seg.icon} ${s.seg.name} · ${{ hunt: 'Bảng', chain: 'Ván', bricky: 'Bảng', haitu: 'Bảng' }[s.seg.id] || 'Câu'} ${s.q?.mode === 'chain' ? s.q.match : s.game.qNo}/${s.game.total}` : `Lượt ${s.game.no} · Câu ${s.game.qNo}/${s.game.total}`;
+  if (s.race?.final) $('pill').textContent = `🔥 VỀ ĐÍCH · Câu ${s.game.qNo}/${s.game.total}`;
+  if (s.fin) {
+    const fu = s.fin.unit === 'Từ khoá' ? 'Vòng từ khoá' : `${s.fin.unit} cuối`;
+    $('pill').textContent = `🔥 VỀ ĐÍCH · ${fu} · điểm ×${s.fin.mult}`;
+    // màn chuyển lửa + Ninja đỏ: một lần mỗi lượt, chỉ khi server còn đang đứng đồng hồ (tải lại trang giữa câu thì không chạy lại)
+    if (s.fin.first && s.phase === 'question' && boostFx.k !== `fin${s.game.no}` && Date.now() < (s.startedAt || 0)) {
+      boostFx.k = `fin${s.game.no}`;
+      boostFx(null, { title: 'VỀ ĐÍCH', sub: `<b>${fu}</b> · mọi điểm <em class="two">×${s.fin.mult}</em>` });
+    }
+  }
   const mcq = s.q.mode === 'mcq' || s.q.mode === 'startend' || s.q.mode === 'chain' || s.q.mode === 'errhunt' || s.q.mode === 'dictate'; // Start or End, Thế chữ dùng chung bố cục khung trắc nghiệm (ô dưới thay 4 đáp án)
   document.querySelector('.wrap').classList.toggle('mcq', mcq);
   if (s.q.mode === 'startend') { renderStartEnd(s); return renderSide(s); }
@@ -1036,6 +1353,11 @@ function render() {
   if (s.q.mode === 'chain') return renderChain(s);
   if (mcq) { renderMcq(s); renderFillx(s); return renderSide(s); }
   if (s.q.mode === 'scramble') return renderScramble(s);
+  if (s.q.mode === 'emoji') return renderEmoji(s);
+  if (s.q.mode === 'irrfill') return renderIrrFill(s);
+  if (s.q.mode === 'bricky') return renderBricky(s);
+  if (s.q.mode === 'haitu') return renderHaiTu(s);
+  if (s.q.mode === 'oneletter') return renderOneLetter(s);
   const q = s.q.m;
   $('q').textContent = q.charAt(0).toUpperCase() + q.slice(1);
   $('q').className = 'q' + (q.length > 18 ? ' xlong' : q.length > 11 ? ' long' : '');
@@ -1052,6 +1374,195 @@ function render() {
   renderSide(s);
 }
 
+// ---- Đoán emoji ----
+// s.q.slots = mảng từ, mỗi từ là mảng ô {ch, kind}. Cỡ ô theo tổng số chữ cái: từ đơn tới 12 chữ và cụm từ đều vừa bề ngang thẻ (888px).
+const EMO_T = { ghep: 'Từ ghép', mota: 'Đoán từ', cum: 'Cụm từ' };
+function renderEmoji(s) {
+  const rev = s.phase === 'reveal', q = s.q, nw = q.slots.length;
+  $('q').textContent = q.e;
+  $('q').className = 'q emo';
+  $('sub').innerHTML = rev ? `Nghĩa: <b>${esc(q.m)}</b>` : `${EMO_T[q.t] || 'Đoán từ'} · ${nw > 1 ? `${nw} từ, ` : ''}${q.n} chữ cái`;
+  const sl = $('slots');
+  sl.className = 'slots emo' + (rev ? ' reveal' : '') + (q.n + nw - 1 > 7 ? ' xmany' : q.n + nw - 1 > 5 ? ' many' : '');
+  const html = q.slots.map((w) => `<div class="wd">${w.map((x) => `<div class="slot ${x.kind} ko">${esc(x.ch)}</div>`).join('')}</div>`).join('');
+  if (sl.innerHTML !== html) sl.innerHTML = html;
+  $('howto').innerHTML = rev ? `Đáp án: <b style="color:var(--green)">${esc(q.w)}</b> · ${s.winners} người đoán đúng` :
+    `Gõ <b>từ tiếng Anh</b> vào bình luận · sai thì gõ lại`;
+  renderSide(s);
+}
+
+// ---- Chia động từ (game Động từ bất quy tắc, mode "Chia từ") ----
+// s.q.rows = 3 hàng [V1, V2, V3]; hàng s.q.at là hàng đố, ô s.q.col của hàng đó là null (đáp án không gửi lúc hỏi) và vẽ bằng s.q.slots.
+// Cột có ô khuyết rộng hơn (1.45fr) để đáp án 10 chữ cái vẫn đủ chỗ cho ô chữ.
+const IRR_HEAD = [['V1', 'nguyên mẫu'], ['V2', 'quá khứ'], ['V3', 'phân từ II']];
+function renderIrrFill(s) {
+  const rev = s.phase === 'reveal', q = s.q, n = q.slots.length;
+  const lw = Math.min(54, Math.floor((338 - 4 * (n - 1)) / n));
+  const cell = (x) => `<span class="ic ko${x.length > 8 ? ' lg' : ''}">${esc(x)}</span>`;
+  const gap = rev ? `<span class="ic gap ko${q.w.length > 8 ? ' lg' : ''}">${esc(q.w)}</span>`
+    : `<span class="ic gap ko" style="--lw:${lw}px">${q.slots.map((x) => `<b class="lt${x.ch ? ' on' : ''}">${esc(x.ch)}</b>`).join('')}</span>`;
+  const html = `<div class="irt${rev ? ' rev' : ''}" style="${[0, 1, 2].map((c) => `--c${c}:${c === q.col ? 1.45 : 1}fr`).join(';')}">` +
+    `<div class="ih">${IRR_HEAD.map(([a, b]) => `<span>${a}<i>${b}</i></span>`).join('')}</div>` +
+    q.rows.map((r, i) => `<div class="ir ${i === q.at ? 'qq' : 'ex'}">${r.map((x) => (x == null ? gap : cell(x))).join('')}</div>`).join('') + '</div>';
+  const el = $('q');
+  el.className = 'q irrt';
+  if (el.innerHTML !== html) el.innerHTML = html;
+  $('sub').innerHTML = `Nghĩa: <b>${esc(q.m)}</b>`;
+  $('slots').innerHTML = '';
+  $('howto').innerHTML = rev ? `Đáp án: <b style="color:var(--green)">${esc(q.w)}</b> · ${s.winners} người chia đúng` :
+    `Gõ <b>từ còn thiếu</b> (${n} chữ cái) vào bình luận · sai thì gõ lại`;
+  renderSide(s);
+}
+
+// ---- Hái từ ----
+// s.q.tiles = 16 ô { k (chữ ô), img, vi, n (số chữ cái) }; đã có người hái thêm { w, by }; tới mức gợi ý thêm { h (chữ đầu) }; công bố thêm { w }.
+// Lưới dựng một lần cho mỗi bảng, sau đó chỉ đổi ô nào đổi trạng thái để hiệu ứng quả rơi không bị cắt ngang.
+// Flash card lúc công bố: dựng một lần mỗi bảng. Thẻ i chạy từ phải vào giữa (18% thời gian của thẻ), đứng giữa màn (64%), trôi sang trái (18%);
+// thẻ sau bắt đầu vào khi thẻ trước bắt đầu ra. Thời gian chia đều cho vừa hết lượt công bố (server cho dài theo số thẻ). Thẻ tới giữa thì Ninja đọc từ.
+// Cỡ chữ trên flash card theo độ dài, để chữ dài (hand sanitizer, trung tâm mua sắm) vẫn nằm gọn trong 528px: ước bề rộng một ký tự ≈ k × cỡ chữ.
+const fcFont = (text, max, k) => Math.max(36, Math.min(max, Math.floor(528 / (Math.max(1, [...String(text)].length) * k))));
+function haituTicker(s, box, key) {
+  if (!box || box.dataset.k === key) return;
+  box.dataset.k = key;
+  (haituTicker.timers || []).forEach(clearTimeout);
+  haituTicker.timers = [];
+  const left = s.q.tiles.filter((t) => !t.by), q = s.q;
+  const head = q.bonus ? `<small>🏆 ${esc(q.bonus.name)} hái nhiều nhất: ${q.bonus.n} từ +${q.bonus.pts}</small>` : '';
+  if (!left.length) { box.innerHTML = `<div class="all">🎉 Cả bảng đã được hái hết!${head ? `<br>${head}` : ''}</div>`; return; }
+  box.innerHTML = `<h3>📚 Học ${left.length} từ mới · ${esc(q.topic)}${head}</h3>` +
+    left.map((t, i) => `<div class="fcard"><i>${i + 1}/${left.length}</i><img src="${esc(t.img)}" alt=""><b class="ko" style="font-size:${fcFont(t.w, 84, 0.6)}px">${esc(t.w)}</b><span style="font-size:${fcFont(t.vi, 50, 0.56)}px">${esc(t.vi)}</span></div>`).join('');
+  requestAnimationFrame(() => {
+    const W = box.clientWidth, cards = [...box.querySelectorAll('.fcard')], cw = cards[0].offsetWidth, mid = (W - cw) / 2;
+    const now = Date.now() + clockSkew, t0 = s.startedAt || now, lead = 900, n = cards.length;
+    const avail = Math.max(3000, (s.endsAt || t0 + 8000) - t0 - lead - 600);
+    const per = Math.min(2600, avail / (0.82 * (n - 1) + 1)), step = per * 0.82, off = W + 80;
+    cards.forEach((c, i) => {
+      const start = t0 + lead + i * step - now; // âm = thẻ đã chạy được một đoạn (mở trang giữa lúc công bố)
+      c.animate([{ transform: `translateX(${off}px)` }, { transform: `translateX(${mid}px)`, offset: 0.18 }, { transform: `translateX(${mid}px)`, offset: 0.82 },
+        { transform: `translateX(${-cw - 80}px)` }], { duration: per, delay: start, easing: 'ease-in-out', fill: 'both' });
+      const sayAt = start + per * 0.2;
+      if (sayAt > 0) haituTicker.timers.push(setTimeout(() => say([{ audio: `api/say?w=${encodeURIComponent(left[i].w)}` }]), sayAt));
+    });
+  });
+}
+const FR_BG = !/[?&]o=anh\b/.test(location.search); // ảnh làm nền ô (bản thử 20/11); ?o=anh = kiểu cũ (ảnh nằm trong ô)
+function renderHaiTu(s) {
+  const rev = s.phase === 'reveal', q = s.q, el = $('q');
+  const key = `${s.game.no}.${s.game.qNo}.${q.tiles.map((t) => t.img).join('|')}`;
+  const fresh = el.dataset.fr !== key || !el.querySelector('.fg');
+  if (fresh) {
+    el.dataset.fr = key;
+    el.innerHTML = `<div class="fg">${q.tiles.map((t) => `<div class="ft"><b class="fk">${esc(t.k)}</b><img src="${esc(t.img)}" alt=""><div class="fw ko"></div><div class="fv"${[...t.vi].length > 15 ? ' style="font-size:20px"' : [...t.vi].length > 13 ? ' style="font-size:22px"' : ''}>${esc(t.vi)}</div><div class="fe"></div></div>`).join('')}</div><div class="ftk"></div>`;
+  }
+  el.className = 'q frt' + (FR_BG ? ' bg' : '') + (rev ? ' rev' : '');
+  if (rev) haituTicker(s, el.querySelector('.ftk'), key);
+  [...el.querySelectorAll('.ft')].forEach((ft, i) => {
+    const t = q.tiles[i], sig = t.by ? `p|${t.by}` : t.w ? 'm' : t.h ? `h${t.h}` : '-', was = ft.dataset.sig || '';
+    if (was === sig) return;
+    ft.dataset.sig = sig;
+    ft.className = 'ft' + (t.by ? ' pk' + (!fresh ? ' fall' : '') : t.w ? ' ms' : t.h ? ' hint' : '');
+    const fw = ft.querySelector('.fw');
+    ft.querySelector('.fby')?.remove();
+    ft.querySelector('.fk').style.display = t.by ? 'none' : '';
+    if (t.by) ft.insertAdjacentHTML('afterbegin', `<div class="fby">${avatar({ name: t.by, avatar: t.av })}<span>${esc(t.by)}</span></div>`);
+    fw.textContent = t.by ? t.w : '';
+    fw.style.fontSize = t.by && t.w.length > 9 ? '26px' : '';
+    ft.querySelector('.fe').textContent = t.by ? '' : t.w ? t.w : t.h ? `${t.h}${' _'.repeat(Math.max(0, t.n - 1))}` : '';
+  });
+  $('sub').innerHTML = rev
+    ? (q.bonus ? `🏆 <b>${esc(q.bonus.name)}</b> hái nhiều nhất: ${q.bonus.n} từ <b>+${q.bonus.pts}</b>` : 'Chưa ai hái được từ nào')
+    : `<b>${esc(q.topic)}</b> · còn <b>${q.left}</b> từ${q.top ? ` · <b>${esc(q.top.name)}</b> dẫn: ${q.top.n}` : ''}`;
+  $('slots').innerHTML = '';
+  $('howto').innerHTML = rev ? `${esc(q.topic)} · hái được <b>${q.tiles.length - q.left}</b>/${q.tiles.length} từ` :
+    `Gõ <b>tên tiếng Anh</b> của hình · mỗi từ <b>+${q.pts}</b> · hái nhiều nhất <b>+${q.win}</b>`;
+  renderSide(s);
+}
+
+// ---- Bricky ----
+// s.q.tiles = bộ chữ cái đã xáo (vẽ trong khay dưới bảng, không đóng khung từng chữ) · s.q.board = các từ trên bảng: chưa mở { n, h? (chữ đầu khi tới mức gợi ý) }, đã mở hoặc công bố { n, w, m, by? }
+// s.q.extra = từ ngoài bảng đã có người tìm (10 từ gần nhất, `more` = số từ cũ hơn) · công bố thêm s.q.rest = vài từ chưa ai tìm.
+// Khung dựng một lần cho mỗi bảng; sau đó chỉ vẽ lại khối từ nào đổi trạng thái để hiệu ứng nổi ô không bị cắt ngang.
+function renderBricky(s) {
+  const rev = s.phase === 'reveal', q = s.q, el = $('q');
+  const key = `${s.game.no}.${s.game.qNo}.${q.tiles.join('')}`;
+  const fresh = el.dataset.bk !== key || !el.querySelector('.bkb');
+  if (fresh) {
+    const base = $('stage').classList.contains('fly') ? 2300 : 0; // đang đổi màn thì chờ bảng vào chỗ rồi gạch mới rơi
+    el.dataset.bk = key;
+    el.innerHTML = `<div class="bkb">${q.board.map(() => '<div class="bw"></div>').join('')}</div>` +
+      `<div class="bkl in" style="--base:${base}ms">${q.tiles.map((c, i) => `<b class="ko" style="--i:${i}">${esc(c)}</b>`).join('')}</div><div class="bkx"></div>`;
+    renderBricky.seen = new Set(q.extra.map((e) => e.w));
+  }
+  el.className = 'q brk' + (q.tiles.length > 5 ? ' six' : '');
+  // bảng cuối vừa mở: màn chuyển lửa + Ninja đỏ, một lần mỗi bảng, chỉ khi server còn đang đứng đồng hồ (tải lại trang giữa bảng thì không chạy lại)
+  if (q.final && !rev && boostFx.k !== 'bk' + key && Date.now() < (s.startedAt || 0)) {
+    boostFx.k = 'bk' + key;
+    boostFx(q, { title: 'BẢNG CUỐI', size: 156, sub: `<b>${q.tiles.length} chữ cái</b> · <b>${q.board.length} từ</b> · điểm <em class="two">×${q.mult}</em>` });
+  }
+  [...el.querySelectorAll('.bw')].forEach((bw, i) => {
+    const x = q.board[i], open = !!x.w, sig = open ? `${x.w}|${x.by || ''}` : `_${x.n}|${x.h || ''}`, was = bw.dataset.sig || '';
+    if (was === sig) return;
+    bw.dataset.sig = sig;
+    const letters = open ? [...x.w] : Array.from({ length: x.n }, (_, k) => (k === 0 && x.h) || '');
+    bw.className = 'bw' + (open ? (x.by ? ' open' : ' miss') : x.h ? ' hint' : '') + (open && !fresh && !was.startsWith(x.w + '|') ? ' pop' : '');
+    bw.innerHTML = `<div class="bts">${letters.map((c, k) => `<i class="ko" style="--i:${k}">${esc(c)}</i>`).join('')}</div>` +
+      `<div class="bc">${open ? `<b>${esc(x.m)}</b>${x.by ? ` · ${esc(x.by)}` : ''}` : ''}</div>`; // 19/11 người dùng: dưới ô chỉ hiện nghĩa và tên người mở
+  });
+  // Dải "Từ thêm" chỉ một hàng: lấy các từ mới nhất vừa bề ngang (ước lượng theo số chữ cái), phần còn lại gộp thành "+N".
+  // Công bố: nhường nửa hàng cho vài từ chưa ai tìm ("Còn nữa").
+  const seen = renderBricky.seen, rest = rev ? (q.rest || []).slice(0, 3) : [];
+  const chipW = (w) => w.length * 18 + 42, fit = (list, room) => { const out = []; for (const e of [...list].reverse()) { room -= chipW(e.w); if (room < 0) break; out.unshift(e); } return out; };
+  const shown = fit(q.extra, rest.length ? 330 : 640), hid = q.more + q.extra.length - shown.length;
+  const xh = `<small>Từ thêm</small>` + (shown.length ? shown.map((e) => `<span class="ko${seen.has(e.w) ? '' : ' new'}">${esc(e.w)}</span>`).join('') + (hid > 0 ? `<em>+${hid}</em>` : '')
+      : rev ? '<em>chưa ai tìm thêm</em>' : '<em>từ đúng ngoài bảng cũng +1</em>') +
+    (rest.length ? `<small class="r">Còn nữa</small>${rest.map((w) => `<span class="ko r">${esc(w)}</span>`).join('')}` : '');
+  const bx = el.querySelector('.bkx');
+  if (bx.dataset.h !== xh) { bx.dataset.h = xh; bx.innerHTML = xh; }
+  q.extra.forEach((e) => seen.add(e.w));
+  const m1 = q.mult || 1, win = q.win || 10;
+  $('sub').innerHTML = q.done ? `🏆 <b>${esc(q.done)}</b> điền đủ bảng đầu tiên <b>+${win}</b>` : `Đã tìm <b>${q.found}</b>/${q.all} từ ghép được`;
+  $('slots').innerHTML = '';
+  $('howto').innerHTML = rev ? `Hết giờ · tìm được <b>${q.found}</b>/${q.all} từ · ${s.winners} người điền đủ bảng` :
+    `${q.final ? '🔥 Bảng cuối · ' : 'Gõ <b>từ ghép được</b> vào bình luận · '}mỗi từ <b>+${m1}</b> · đủ bảng đầu tiên <b>+${win}</b>`;
+  renderSide(s);
+}
+
+// ---- Thêm bớt 1 chữ ----
+// s.q: k = 'add' (THÊM) | 'cut' (BỚT) · s = chữ viết sai · m = nghĩa của đáp án · n = số chữ cái của đáp án · hint = { gap: chỗ thiếu } | { pair: [a, b] } (từ 35% thời gian)
+// · red / redFirst / redNo / redN / mult = về đích · công bố thêm w (đáp án), i (add: chỗ chèn trong s · cut: chữ thừa trong s), sm = nghĩa của chữ hiện ra (cặp từ dễ nhầm).
+// Hàng ô chữ chỉ dựng lại khi đổi câu / mở gợi ý / công bố để hiệu ứng không chạy lại mỗi lần có bình luận.
+function renderOneLetter(s) {
+  const rev = s.phase === 'reveal', q = s.q, el = $('q'), h = q.hint || {};
+  const len = rev && q.k === 'add' ? q.w.length : q.s.length, slots = len + (h.gap != null ? 0.6 : 0);
+  const tw = Math.min(116, Math.floor((870 - 10 * (slots - 1)) / slots));
+  const key = `${s.game.no}.${s.game.qNo}.${q.s}.${rev ? 'r' : h.gap != null || h.pair ? 'h' : 'q'}`;
+  if (el.dataset.one !== key) {
+    const fresh = !(el.dataset.one || '').startsWith(`${s.game.no}.${s.game.qNo}.${q.s}.`); // câu mới: ô chữ lần lượt rơi vào
+    const base = $('stage').classList.contains('fly') ? 2300 : q.redFirst && !rev && Date.now() < (s.startedAt || 0) ? 2600 : 0; // đang đổi màn / màn chuyển Ninja đỏ: chờ xong rồi ô mới rơi
+    el.dataset.one = key;
+    const tile = (c, j, cls = '') => `<b class="ko${cls}" style="--i:${j}">${esc(c)}</b>`;
+    let row;
+    if (rev && q.k === 'add') row = [...q.w].map((c, j) => tile(c, j, j === q.i ? ' new' : '')).join('');
+    else if (rev) row = [...q.s].map((c, j) => tile(c, j, j === q.i ? ' out' : '')).join('');
+    else row = [...q.s].map((c, j) => (h.gap === j ? '<i class="gap">+</i>' : '') + tile(c, j, h.pair?.includes(j) ? ' pr' : '')).join('') + (h.gap === q.s.length ? '<i class="gap">+</i>' : '');
+    el.innerHTML = `<div class="olk ${q.k}"><i>${q.k === 'add' ? '＋' : '－'}</i>${q.k === 'add' ? 'THÊM' : 'BỚT'} 1 chữ</div>` +
+      `<div class="olt${rev ? ' rev' : ''}${fresh ? ' in' : ''}" style="--tw:${tw}px;--base:${base}ms">${row}</div>`;
+  }
+  el.className = 'q one';
+  // về đích vừa mở: màn chuyển lửa + Ninja đỏ, một lần mỗi lượt, chỉ khi server còn đang đứng đồng hồ (tải lại trang giữa câu thì không chạy lại)
+  if (q.redFirst && !rev && boostFx.k !== `one${s.game.no}` && Date.now() < (s.startedAt || 0)) {
+    boostFx.k = `one${s.game.no}`;
+    boostFx(q, { title: 'VỀ ĐÍCH', sub: `<b>${q.redN} câu cuối</b> · từ <b>rất dễ nhầm</b> · điểm <em class="two">×${q.mult}</em>` });
+  }
+  $('sub').classList.toggle('vs2', !!(rev && q.sm));
+  $('sub').innerHTML = rev && q.sm ? `<span class="ko">${esc(q.s)}</span> <span class="vs">= ${esc(q.sm)}</span> · <span class="ko">${esc(q.w)}</span> = <b>${esc(q.m)}</b>`
+    : `Nghĩa: <b>${esc(q.m)}</b>`;
+  $('slots').innerHTML = '';
+  $('howto').innerHTML = rev ? `Đáp án: <b class="ans">${esc(q.w)}</b> · ${s.winners} người đúng` : q.red ? `🔥 Từ <b>rất dễ nhầm</b> · điểm <b>×${q.mult}</b> · gõ <b>cả từ</b> (${q.n} chữ cái)` :
+    `${q.k === 'add' ? 'Thêm' : 'Bớt'} <b>1 chữ cái</b> rồi gõ <b>cả từ</b> (${q.n} chữ cái) · sai thì gõ lại`;
+  renderSide(s);
+}
+
 // ---- Ghép chữ ----
 function renderScramble(s) {
   const rev = s.phase === 'reveal', q = s.q;
@@ -1061,16 +1572,15 @@ function renderScramble(s) {
   const t = $('tiles');
   t.className = 'tiles' + (rev ? ' rev' : '') + (q.tiles.length > 5 ? ' many' : '');
   const hint = q.hint || [];
-  // công bố: xếp thẻ theo đúng thứ tự, vẫn giữ số gốc trên thẻ
-  const order = rev && q.answer ? [...q.answer].map((d) => +d - 1) : q.tiles.map((_, i) => i);
+  // công bố: xếp thẻ theo đúng thứ tự. 16/11: thẻ không đánh số nữa, người xem gõ cả từ
+  const order = rev && q.order ? q.order : q.tiles.map((_, i) => i);
   const html = order.map((i) => {
     const h = hint.indexOf(i);
-    return `<div class="tile ko${h >= 0 ? ' first' : ''}"><i class="no">${i + 1}</i>${esc(q.tiles[i])}${h >= 0 ? `<i class="hk">${h === 0 ? 'đầu' : 'thứ ' + (h + 1)}</i>` : ''}</div>`;
+    return `<div class="tile ko${h >= 0 ? ' first' : ''}">${esc(q.tiles[i])}${h >= 0 ? `<i class="hk">${h === 0 ? 'đầu' : 'thứ ' + (h + 1)}</i>` : ''}</div>`;
   }).join('');
   if (t.innerHTML !== html) t.innerHTML = html;
-  const ex = q.tiles.map((_, i) => i + 1).reverse().join('');
-  $('howto').innerHTML = rev ? `Đáp án: <b style="color:var(--green)">${esc(q.answer)}</b> · ${s.winners} người ghép đúng` :
-    `Gõ <b>thứ tự số</b> các thẻ, vd <b>${ex}</b> · hoặc gõ luôn từ`;
+  $('howto').innerHTML = rev ? `Đáp án: <b style="color:var(--green)">${esc(q.w)}</b> · ${s.winners} người ghép đúng` :
+    `Gõ <b>từ tiếng Anh</b> vào bình luận · sai thì gõ lại`;
   renderSide(s);
 }
 
@@ -1235,6 +1745,13 @@ function renderMcq(s) {
     const html = `<div class="rdoc"><div class="rdh">${READ_KIND[R.kind] || '📄'} ${esc(R.title)}</div><div class="rdp ko">${body}</div></div><div class="rqq ko">${esc(R.q || '')}</div>`;
     if (q.innerHTML !== html) q.innerHTML = html;
     q.className = 'q rq';
+  } else if (wq?.t === 'irr') {
+    // Tìm bất quy tắc (game Động từ bất quy tắc, mode "Tìm từ"): đề cố định; công bố đổi thành bộ ba V1 – V2 – V3 của từ bất quy tắc
+    const sh = rev && s.q.irr?.show, txt = sh ? sh.join(' – ') : '';
+    const html = sh ? esc(txt) : 'Từ nào là động từ<b>bất quy tắc</b>?';
+    q.style.setProperty('--fs', (sh ? (txt.length > 30 ? 44 : txt.length > 22 ? 54 : 68) : 52) + 'px');
+    if (q.innerHTML !== html) q.innerHTML = html;
+    q.className = 'q irrq' + (sh ? ' ko' : '');
   } else if (s.q.rev) {
     // Chọn từ tiếng Anh: câu hỏi là NGHĨA tiếng Việt, 4 lựa chọn là từ tiếng Anh
     const m = s.q.mean || s.q.m || '';
@@ -1245,18 +1762,23 @@ function renderMcq(s) {
   // Khung Word (wq): đáp án gắn chữ A–D; w2m = từ → nghĩa tiếng Việt, m2w = nghĩa → từ, syn/ant = tìm từ đồng/trái nghĩa (đáp án là từ tiếng Anh)
   const rom = s.q.r ? ` <span style="color:var(--green)">/${esc(s.q.r)}/</span>` : '';
   const enOpts = s.q.rev || (wq && !['w2m', 'lm'].includes(wq.t));
-  $('sub').innerHTML = wq?.t === 'read' ? (rev ? '📍 Đáp án nằm ở đoạn tô vàng' : '🔎 Tìm chi tiết trong bài · chọn <b>A–D</b> 👇') : wq?.t === 'fill' ? 'Chọn từ điền vào chỗ trống 👇' : wq?.t === 'lm' ? (rev ? `Nghĩa: <b>${esc(s.q.m || '')}</b>` : 'Nghe và chọn nghĩa đúng 👇') : wq && (wq.t === 'syn' || wq.t === 'ant') ? `Tìm từ <b>${wq.t === 'syn' ? 'ĐỒNG NGHĨA' : 'TRÁI NGHĨA'}</b> 👇`
+  $('sub').innerHTML = wq?.t === 'irr' ? (rev ? `Nghĩa: <b>${esc(s.q.irr?.m || '')}</b>` : 'Quá khứ <b>không</b> thêm <b>-ed</b> 👇') : wq?.t === 'read' ? (rev ? '📍 Đáp án nằm ở đoạn tô vàng' : '🔎 Tìm chi tiết trong bài · chọn <b>A–D</b> 👇') : wq?.t === 'fill' ? 'Chọn từ điền vào chỗ trống 👇' : wq?.t === 'lm' ? (rev ? `Nghĩa: <b>${esc(s.q.m || '')}</b>` : 'Nghe và chọn nghĩa đúng 👇') : wq && (wq.t === 'syn' || wq.t === 'ant') ? `Tìm từ <b>${wq.t === 'syn' ? 'ĐỒNG NGHĨA' : 'TRÁI NGHĨA'}</b> 👇`
     : s.q.rev ? (rev ? `<span class="ko">${esc(s.q.w)}</span>${rom}` : 'tiếng Anh là từ nào?')
     : s.q.listen && !rev ? 'Nghe và chọn nghĩa đúng' :
     `${s.q.r ? `<span style="color:var(--green)">/${esc(s.q.r)}/</span> · ` : ''}${s.q.pos ? `(${esc(s.q.pos)}) · ` : ''}nghĩa là gì?`;
   const total = rev ? s.q.votes.reduce((a, b) => a + b, 0) || 1 : 0;
+  // Tìm bất quy tắc, lúc công bố: dòng dạng quá khứ dưới mỗi đáp án để so sánh (từ có quy tắc tô đuôi "ed")
+  const irrFm = (i) => {
+    const f = rev && s.q.irr?.forms?.[i];
+    return !f ? '' : f.irr ? `<span class="fm${f.v2.length + f.v3.length > 15 ? ' sm' : ''}">${esc(f.v2)} · ${esc(f.v3)}</span>` : `<span class="fm">${esc(f.v2.slice(0, -2))}<u>ed</u></span>`;
+  };
   const html = s.q.options.map((o, i) => {
     const pct = rev ? Math.round((s.q.votes[i] / total) * 100) : 0;
     return `<div class="opt ${rev && i === s.q.answer ? 'right' : ''}" style="--w:${pct}%"><i class="bar2"></i>` +
-      `<span class="n">${wq ? 'ABCD'[i] : i + 1}</span><span class="t ${o.length > 22 ? 'sm' : ''} ${enOpts ? 'ko' : ''}">${esc(o)}</span>${rev ? `<span class="pct">${pct}%</span>` : ''}</div>`;
+      `<span class="n">${wq ? 'ABCD'[i] : i + 1}</span><span class="t ${o.length > 22 ? 'sm' : ''} ${enOpts ? 'ko' : ''}">${esc(o)}${irrFm(i)}</span>${rev ? `<span class="pct">${pct}%</span>` : ''}</div>`;
   }).join('');
   const op = $('opts');
-  op.className = 'opts' + (rev ? ' rev' : '');
+  op.className = 'opts' + (rev ? ' rev' : '') + (wq?.t === 'irr' ? ' irr' : '');
   if (op.innerHTML !== html) op.innerHTML = html;
   $('howto').innerHTML = rev ? `${s.winners} người chọn đúng` : wq ?
     `Gõ <b>A</b>, <b>B</b>, <b>C</b> hoặc <b>D</b> vào bình luận${s.answered ? ` · ${s.answered} người đã chọn` : ''}` :
@@ -1429,6 +1951,44 @@ function renderHunt(s) {
   $('howto').innerHTML = rev ? `${q.finished} người tìm đủ ${q.need} từ` : `Tìm <b>${q.total} từ</b> giấu (cả ngược) · đủ <b>${q.need} từ</b> trước ăn điểm`;
 }
 
+// Ván cuối Thế chữ "tăng tốc": lớp lửa phủ màn ~3,4 giây, Ninja đỏ lướt qua (img/ninja-dash-red.png = 12 khung của ninja-dash.gif tô đỏ).
+// Server cho đồng hồ đứng thêm (CHAIN_FINAL_GRACE) nên lớp này không ăn vào giờ chơi. Sau đó màn chơi mang lớp .fire (theme-light.css).
+// Bricky dùng lại cho bảng cuối: truyền o = { title, sub } để đổi chữ lớn và dòng phụ; Thế chữ gọi boostFx(q) như cũ.
+function boostFx(q, o) {
+  const el = $('boost');
+  const bt = el.querySelector('.bt');
+  bt.textContent = o?.title || 'TĂNG TỐC';
+  bt.style.cssText = o?.size ? `font-size:${o.size}px;white-space:nowrap` : ''; // chữ dài hơn "TĂNG TỐC" thì thu cỡ cho vừa một dòng
+  el.querySelector('.bs').innerHTML = o?.sub || `Ván cuối · từ <b>${q.cur.length} chữ</b> · đổi ${q.max > 1 ? '1 hoặc <em class="two">2 chữ</em>' : '<b>1 chữ</b>'}`;
+  clearTimeout(boostFx.t);
+  el.classList.remove('on');
+  void el.offsetWidth;
+  el.classList.add('on');
+  boostFx.t = setTimeout(() => el.classList.remove('on'), 3400);
+  beep(220, .5, .16); setTimeout(() => beep(330, .4, .16), 180); setTimeout(() => beep(660, .6, .18), 900);
+}
+// tàn lửa bay lên trong ván tăng tốc: dựng một lần, CSS lo chuyển động
+(() => {
+  const e = $('embers');
+  for (let i = 0; i < 22; i++) {
+    const x = document.createElement('i');
+    x.style.cssText = `left:${(i * 47 + 13) % 100}%;--d:${(i * 0.37) % 5}s;--t:${4 + (i % 5) * 0.8}s;--s:${8 + (i % 4) * 5}px;--x:${((i % 7) - 3) * 30}px`;
+    e.appendChild(x);
+  }
+})();
+// Thế chữ: quà đổi quyền (perk), dùng quyền đổi 2 chữ (used), quà đổi từ (swap), hệ thống tự ra từ mới sau q.swapAt từ (auto)
+function chainFx(m) {
+  const n = `<b>${esc(m.name || '')}</b>`;
+  if (m.kind === 'perk') {
+    const parts = [];
+    if (m.got.includes('x2')) parts.push('thắng ván được <b>×2</b> điểm');
+    if (m.got.includes('extra')) parts.push(`có <b>${m.extra}</b> lần đổi <b>2 chữ</b>`);
+    if (parts.length) toast(`🌹 ${n} ${parts.join(' · ')}`, 'perk');
+  } else if (m.kind === 'used') toast(`🌹 ${n} vừa đổi <b>2 chữ</b>${m.extra ? ` · còn ${m.extra} lần` : ''}`, 'perk');
+  else if (m.kind === 'swap') { toast(`🌹 ${n} đổi sang <b>từ mới</b> và đang giữ từ`, 'perk'); say([kb('chain_qua_doi_tu', { ten: spokenName(m.name) })]); }
+  else if (m.kind === 'auto') { toast(`🔄 Chuỗi đủ <b>${m.len - 1}</b> từ · hệ thống ra <b>từ mới</b>`, 'perk'); say([kb('chain_tu_moi')]); }
+}
+
 // ---- Thế chữ (luật 13/11): mọi người chơi chung, ai thế được từ thì giữ từ (hiện hình dưới từ), hết giờ không ai thế thì người giữ thắng ván ----
 let chainPrev = { word: '', match: 0 }, chainAnim = null, chainHolder = '';
 // Từ hiện tại thành các ô chữ. Từ mới xuất hiện: nếu khác từ trước đúng 1 chữ cái thì ô đó bay vào (chữ cũ rơi ra),
@@ -1436,42 +1996,49 @@ let chainPrev = { word: '', match: 0 }, chainAnim = null, chainHolder = '';
 function chainTiles(q) {
   const word = q.cur, last = q.chain[q.chain.length - 1];
   if (word !== chainPrev.word || q.match !== chainPrev.match) {
-    let idx = -1, old = '';
-    if (chainPrev.word.length === word.length && q.match === chainPrev.match && last?.by)
-      for (let i = 0; i < word.length; i++) if (word[i] !== chainPrev.word[i]) { idx = i; old = chainPrev.word[i]; }
-    chainAnim = { idx, old, start: idx < 0, chipNew: idx >= 0 };
+    // người chơi thế từ: đổi 1–2 chữ → các ô đó lật; từ do hệ thống hoặc quà đưa vào (sys) thì cả hàng hiện lại như đầu ván
+    const old = {};
+    if (chainPrev.word.length === word.length && q.match === chainPrev.match && last?.by && !last.sys)
+      for (let i = 0; i < word.length; i++) if (word[i] !== chainPrev.word[i]) old[i] = chainPrev.word[i];
+    const n = Object.keys(old).length, swap = n >= 1 && n <= 2;
+    chainAnim = { old: swap ? old : {}, start: !swap, chipNew: swap };
     chainPrev = { word, match: q.match };
   }
   const a = chainAnim;
-  return [...word].map((ch, i) => `<span class="cl ${a.start ? 'in' : a.idx === i ? 'swap' : ''}" style="--i:${i}"${a.idx === i ? ` data-old="${esc(a.old)}"` : ''}>${esc(ch)}</span>`).join('');
+  return [...word].map((ch, i) => `<span class="cl ${i === q.lock ? 'lock ' : ''}${a.start ? 'in' : i in a.old ? 'swap' : ''}" style="--i:${i}"${i in a.old ? ` data-old="${esc(a.old[i])}"` : ''}>${esc(ch)}${i === q.lock ? '<i class="lk">🔒</i>' : ''}</span>`).join('');
 }
 function renderChain(s) {
   const q = s.q, rev = s.phase === 'reveal', st = q.stats;
   let big, sub, body, how, tiles = null;
   const chips = (list) => {
     const newChip = !rev && chainAnim?.chipNew; chainAnim && (chainAnim.chipNew = false); // chip mới chỉ "nảy" ở lần vẽ đầu tiên của từ đó
-    return list.map((c, i) => `<span class="cchip ${c.by ? '' : 'start'}${i === list.length - 1 && !rev ? ' cur' : ''}${i === list.length - 1 && newChip ? ' new' : ''} ko">${esc(c.w)}</span>`).join('');
+    return list.map((c, i) => `<span class="cchip ${c.by ? '' : 'start'}${c.sys ? ' sys' : ''}${i === list.length - 1 && !rev ? ' cur' : ''}${i === list.length - 1 && newChip ? ' new' : ''} ko">${esc(c.w)}</span>`).join('');
   };
+  const nCh = q.max > 1 ? '1 hoặc <em class="two">2 chữ cái</em>' : '1 chữ cái'; // ván tăng tốc: "2 chữ cái" là điểm mới → thẻ vàng nhấp nháy
+  // dải ưu đãi quà (số xu = số hoa hồng). Quyền đổi 2 chữ chỉ có ở ván 4 chữ; ván 5 chữ ai cũng đổi 2 chữ được.
+  const gifts = q.gift ? `<div class="cgift"><span>🌹 <b>${q.gift.x2}</b> thắng <b>×2</b> điểm</span>${q.max > 1 ? '' : `<span>🌹 <b>${q.gift.extra}</b> đổi <b>2 chữ</b></span>`}<span>🌹 <b>${q.gift.swap}</b> ra <b>từ mới</b> và giữ từ</span></div>` : '';
+  // ván tăng tốc vừa mở: màn chuyển lửa + Ninja đỏ (một lần mỗi ván; tải lại trang giữa ván thì không chạy lại)
+  if (q.final && !rev && q.chainLen <= 1 && boostFx.k !== `${s.game?.no}.${q.match}` && Date.now() < (s.startedAt || 0)) { boostFx.k = `${s.game?.no}.${q.match}`; boostFx(q); }
   if (!rev) {
     tiles = chainTiles(q);
     // thẻ người giữ từ: nảy lên khi đổi người (so khoá ván + số từ để cùng một người giữ lại lần nữa vẫn nảy)
     const hk = q.holder ? `${q.match}.${q.chainLen}` : '';
     const isNew = hk && hk !== chainHolder;
     chainHolder = hk;
-    sub = q.holder ? `<span class="holder${isNew ? ' new' : ''}">${avatar(q.holder)}<span><b>${esc(q.holder.name)}</b> đang giữ từ</span></span>`
-      : `<span class="holder none">Đổi <b>1 chữ cái</b> để giành từ này</span>`;
+    sub = q.holder ? `<span class="holder${isNew ? ' new' : ''}">${avatar(q.holder)}<span><b>${esc(q.holder.name)}</b> đang giữ từ</span>${q.holder.x2 ? '<i class="hx2">×2</i>' : ''}</span>`
+      : `<span class="holder none"><span>Đổi <b>${nCh}</b>${q.lock >= 0 ? ' · chữ 🔒 giữ nguyên' : ' để giành từ này'}</span></span>`;
     body = `<div class="cchips">${chips(q.chain)}</div><div class="clog">${q.log.map((l) => `<span class="${l.ok ? 'ok' : 'bad'}">${esc(l.name)}: ${esc(l.w)} ${l.ok ? '✓' : '✗ ' + esc(l.why)}</span>`).join('')}</div>`;
-    how = q.holder ? `Thế được từ trong <b>${q.sec} giây</b> để giành · không ai thế được thì <b>${esc(q.holder.name)}</b> thắng <b>+${q.pts}</b>`
-      : `Chuỗi <b>${q.chainLen}</b> từ · kỷ lục <b>${q.record.len}</b> · gõ từ mới trong <b>${q.sec} giây</b>`;
+    how = (q.holder ? `Đổi <b>${nCh}</b> trong <b>${q.sec} giây</b> để giành · không ai thế được thì <b>${esc(q.holder.name)}</b> thắng <b>+${q.pts}</b>`
+      : `Chuỗi <b>${q.chainLen}</b> từ · kỷ lục <b>${q.record.len}</b> · gõ từ mới trong <b>${q.sec} giây</b>`) + gifts;
   } else {
     chainHolder = '';
     big = st.winner ? '🏆 Thắng ván!' : 'Chưa ai thế được từ';
-    sub = st.winner ? `<span class="holder win new">${avatar(st.winner)}<span><b>${esc(st.winner.name)}</b> +${st.pts} điểm</span></span>` : `<span class="holder none">Ván này không có người thắng</span>`;
+    sub = st.winner ? `<span class="holder win new">${avatar(st.winner)}<span><b>${esc(st.winner.name)}</b> +${st.pts} điểm</span>${st.x2 ? '<i class="hx2">×2</i>' : ''}</span>` : `<span class="holder none">Ván này không có người thắng</span>`;
     body = `<div class="cchips">${chips(q.chain)}</div>`;
-    how = `Ván ${q.match}/${q.matches} · chuỗi <b>${st.len}</b> từ${st.isNew ? ' · 🎉 <b>KỶ LỤC MỚI</b>' : ` · kỷ lục ${st.record}`}${q.match < q.matches ? ' · ván mới sau ít giây' : ''}`;
+    how = `Ván ${q.match}/${q.matches} · chuỗi <b>${st.len}</b> từ${st.isNew ? ' · 🎉 <b>KỶ LỤC MỚI</b>' : ` · kỷ lục ${st.record}`}${q.match === q.matches - 1 ? ' · ván cuối <b>🔥 tăng tốc</b> sau ít giây' : q.match < q.matches ? ' · ván mới sau ít giây' : ''}`;
   }
   const qe = $('q');
-  if (tiles != null) { qe.className = 'q cw'; if (qe.innerHTML !== tiles) qe.innerHTML = tiles; }
+  if (tiles != null) { qe.className = 'q cw' + (q.cur.length > 4 ? ' w5' : ''); if (qe.innerHTML !== tiles) qe.innerHTML = tiles; }
   else { qe.className = 'q ko kw' + kwSize(big.replace(/<[^>]*>/g, '')); if (qe.innerHTML !== big) qe.innerHTML = big; }
   // thẻ người giữ từ: chỉ thay DOM khi nội dung đổi (bỏ lớp "new" khi so) để hiệu ứng nảy không chạy lại mỗi lần server gửi trạng thái
   const se = $('sub'), subKey = sub.replace(' new">', '">');
@@ -1499,9 +2066,142 @@ function renderStartEnd(s) {
   $('howto').innerHTML = rev ? `${s.winners} người trả lời đúng` : `Gõ <b>${q.n} từ</b> cách nhau bằng <b>dấu cách</b> hoặc <b>dấu phẩy</b>`;
 }
 
+// ---- Word = đua phi cơ (người dùng chốt 20/11/2026) ----
+// Server gửi s.race = { no, total, final, more, planes: [{ name, avatar, score, x2?, bot?, ok?, fast? }] } (đã xếp theo điểm, tối đa 20 chiếc).
+// Điểm giữ nguyên cách tính, màn chỉ ghi kèm "km/h". Vị trí phi cơ = điểm so với chiếc dẫn đầu × tiến độ lượt, nên chiếc dẫn đầu chạm vạch
+// đích đúng ở câu cuối. Lúc đang hỏi: phi cơ vẫn bay ở đúng vị trí, nằm sau thẻ câu hỏi (người dùng 20/11: không thu gọn đội hình). Lúc công bố: sau ~2 giây thẻ câu hỏi lùi đi, bầu trời chiếm
+// cả màn, các phi cơ đổi chỗ theo điểm mới (sai / bỏ câu = bốc khói, tụt nhẹ tượng trưng), rồi thẻ câu hỏi quay lại. Câu cuối: về đích + về đích.
+const RACE = { game: 0, key: '', timers: [], lanes: new Map(), els: new Map(), boost: '', raf: 0 };
+const RACE_LANES = [10, 4, 15, 7, 12, 1, 18, 9, 5, 14, 2, 17, 11, 6, 13, 0, 19, 8, 3, 16]; // người vào trước được làn xa nhau
+const RACE_COLORS = ['#1c7a6c', '#f08c2e', '#3b82c4', '#d9487a', '#7a5ad0', '#2fa36b', '#d9a400', '#c2562a', '#0e9aa7', '#8a6d3b'];
+const RACE_Y = [1530, 420]; // [đáy, đỉnh = vạch đích] của đường bay theo toạ độ màn 1080×1920
+// Phi cơ nhìn từ trên xuống, mũi hướng lên: thân trắng (--plb), cánh + sọc lưng theo màu người chơi (currentColor), buồng lái kính, 2 động cơ.
+const PLANE_SVG = '<svg viewBox="0 0 120 120" aria-hidden="true"><g stroke="var(--pls, #10201e)" stroke-width="3" stroke-linejoin="round">' +
+  '<path d="M60 40 114 72Q117 74 116 78L114 84 68 74 52 74 6 84 4 78Q3 74 6 72Z" fill="currentColor"/><path d="M60 90 86 104 86 111 65 107 55 107 34 111 34 104Z" fill="currentColor"/>' +
+  '<rect x="24" y="60" width="11" height="22" rx="5" fill="#33474a"/><rect x="85" y="60" width="11" height="22" rx="5" fill="#33474a"/>' +
+  '<path d="M60 5C69 5 72 22 72 40L72 90C72 103 67 113 60 116 53 113 48 103 48 90L48 40C48 22 51 5 60 5Z" fill="var(--plb, #f4faf8)"/></g>' +
+  '<path d="M60 32 60 100" stroke="currentColor" stroke-width="9" stroke-linecap="round"/><path d="M52 14C54 9 66 9 68 14L69 26 51 26Z" fill="#8fd6ee" stroke="var(--pls, #10201e)" stroke-width="2.5" stroke-linejoin="round"/>' +
+  '<path d="M6 72 60 40 114 72 112 76 60 48 8 76Z" fill="#fff" opacity=".38"/><path d="M52 74 6 84 5 80 52 70ZM68 74 114 84 115 80 68 70Z" opacity=".16"/>' +
+  '<path d="M60 97 60 114" stroke="var(--pls, #10201e)" stroke-width="5" stroke-linecap="round"/></svg>';
+const kmh = (t, on) => (on ? t.replace(/(\d+) điểm/g, '$1 cây số giờ') : t); // lời Ninja ở Word: "42 điểm" → "42 cây số giờ"
+// Đặt đích bay cho từng chiếc theo el.dataset.pos; phi cơ luôn ở đúng vị trí trên đường bay, kể cả lúc đang hỏi (nằm sau thẻ câu hỏi).
+// Chuyển động do raceTick() vẽ từng khung hình, không dùng transition của CSS.
+function raceLayout() {
+  const [y0, y1] = RACE_Y, now = performance.now();
+  for (const el of RACE.els.values()) {
+    const P = el._p, tx = 78 + +el.dataset.lane * 48.6;
+    const ty = y0 - +el.dataset.pos * (y0 - y1) + (el.classList.contains('broke') ? 44 : 0) - (el.classList.contains('fin') ? 150 : 0);
+    if (P.tx === tx && P.ty === ty) continue;
+    const dy = Math.abs(ty - P.by);
+    Object.assign(P, { fx: P.bx, fy: P.by, tx, ty, t0: now, dur: el.classList.contains('fin') ? 1200 : 1700,
+      amp: dy > 30 ? Math.min(72, 22 + dy * 0.16) : 0, dir: (P.dir = -(P.dir || (el.dataset.lane % 2 ? 1 : -1))) }); // lượn chữ S khi đổi độ cao, mỗi lần một bên
+  }
+  // tên đè lên nhau thì chỉ giữ tên của chiếc hạng cao hơn (thứ tự trong RACE.els = thứ hạng lúc vẽ)
+  const kept = [];
+  for (const el of RACE.els.values()) {
+    const hit = kept.some((k) => Math.abs(k._p.tx - el._p.tx) < 170 && Math.abs(k._p.ty - el._p.ty) < 50);
+    el.classList.toggle('nolb', hit);
+    if (!hit && !el.classList.contains('rc')) kept.push(el);
+  }
+  if (!RACE.raf) RACE.raf = requestAnimationFrame(raceTick);
+}
+// Bay như máy bay thật: mỗi chiếc lượn nhẹ sang trái / phải theo đường cong riêng; độ nghiêng cánh (roll, vẽ bằng rotateY nên cánh bên trong
+// ngắn lại) và độ lệch mũi (yaw) tính từ VẬN TỐC NGANG, nên cứ đổi hướng là nghiêng cánh vào vòng lượn rồi tự cân bằng lại.
+// Đổi độ cao thì lượn một vòng cung; đúng nhanh nhất hoặc về đích thì lộn một vòng quanh trục thân; hỏng động cơ thì chòng chành.
+function raceTick(now) {
+  RACE.raf = 0;
+  if (!$('stage').classList.contains('race')) return;
+  const t = now / 1000;
+  for (const el of RACE.els.values()) {
+    const P = el._p, p = Math.min(1, (now - P.t0) / P.dur), e = p < .5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
+    P.bx = P.fx + (P.tx - P.fx) * e; P.by = P.fy + (P.ty - P.fy) * e;
+    const x = P.bx + P.dir * P.amp * Math.sin(Math.PI * p) + P.A * Math.sin(P.w1 * t + P.ph) + P.A * 0.45 * Math.sin(P.w2 * t + P.ph * 2.3);
+    const y = P.by + 5 * Math.sin(P.w2 * t + P.ph);
+    const dt = Math.max(0.001, (now - (P.lt || now - 16)) / 1000), vx = P.lx == null ? 0 : (x - P.lx) / dt;
+    P.lx = x; P.lt = now; P.vx += (Math.max(-160, Math.min(160, vx)) - P.vx) * Math.min(1, dt * 6); // làm mượt để cánh không giật
+    let roll = Math.max(-46, Math.min(46, P.vx * 0.6)), yaw = Math.max(-9, Math.min(9, P.vx * 0.11));
+    if (P.spin) { const q = (now - P.spin) / 1100; if (q >= 1) P.spin = 0; else roll += 360 * (q < .5 ? 2 * q * q : 1 - Math.pow(-2 * q + 2, 2) / 2); }
+    if (P.broke) { const q = (now - P.broke) / 2600; if (q >= 1) P.broke = 0; else { roll += 26 * Math.sin(t * 13) * (1 - q); yaw += 12 * Math.sin(t * 8) * (1 - q); } }
+    el.style.transform = `translate(${x.toFixed(1)}px,${y.toFixed(1)}px)`;
+    el._bd.style.transform = `perspective(520px) rotate(${yaw.toFixed(1)}deg) rotateY(${roll.toFixed(1)}deg)`;
+    el._sh.style.transform = `translate(${(16 + roll * 0.25).toFixed(1)}px,24px) rotate(${yaw.toFixed(1)}deg) scaleX(${Math.cos(roll * Math.PI / 180).toFixed(2)})`;
+  }
+  if (RACE.els.size) RACE.raf = requestAnimationFrame(raceTick);
+}
+// prog = phần lượt đã xong (0–1) · fx: vừa công bố → chạy hiệu ứng hỏng động cơ / nhanh nhất
+function raceDraw(R, prog, fx) {
+  if (!R) return;
+  const box = $('planes'), real = R.planes.filter((p) => !p.bot), now = performance.now();
+  const lead = (real[0] || R.planes[0])?.score || 1, scale = Math.max(prog, 0.3), seen = new Set();
+  R.planes.forEach((p, i) => {
+    seen.add(p.name);
+    if (!RACE.lanes.has(p.name)) { const used = new Set(RACE.lanes.values()); RACE.lanes.set(p.name, RACE_LANES.find((l) => !used.has(l)) ?? i % 20); }
+    let el = RACE.els.get(p.name);
+    if (!el) {
+      el = document.createElement('div');
+      el.innerHTML = `<span class="psh">${PLANE_SVG}</span><span class="pbd"><i class="ptr l"></i><i class="ptr r"></i><i class="pfx"></i><i class="psm"></i>${PLANE_SVG}<span class="pav"></span></span><span class="plb"><b></b><em></em></span>`;
+      let h = 0; for (const ch of p.name) h = (h * 31 + ch.codePointAt(0)) >>> 0;
+      el.style.setProperty('--c', RACE_COLORS[h % RACE_COLORS.length]);
+      el.dataset.lane = RACE.lanes.get(p.name);
+      el._bd = el.querySelector('.pbd'); el._sh = el.querySelector('.psh');
+      const x0 = 78 + el.dataset.lane * 48.6, y0 = RACE_Y[0] + 300; // phi cơ mới: từ dưới mép màn bay lên
+      el._p = { bx: x0, by: y0, fx: x0, fy: y0, tx: x0, ty: y0, t0: now, dur: 1, amp: 0, dir: 0, vx: 0, spin: 0, broke: 0,
+        A: 9 + (h % 12), w1: 0.7 + (h % 7) / 10, w2: 0.37 + (h % 5) / 12, ph: (h % 628) / 100 }; // nhịp lượn riêng của từng chiếc
+      box.appendChild(el); RACE.els.set(p.name, el);
+    }
+    let pos = Math.min(1, p.score / lead) * scale;
+    if (p.bot && real.length) pos = Math.min(pos, scale - 0.05); // bot không bao giờ ngang hay vượt chiếc dẫn đầu của người thật
+    const isLead = !p.bot && p.name === real[0]?.name, bad = fx && p.ok === false;
+    el.className = 'pl ' + (i < 5 ? 'ra' : i < 12 ? 'rb' : 'rc') + (isLead ? ' lead' : '') + (p.x2 ? ' turbo' : '') + (bad || el.classList.contains('broke') ? ' broke' : '');
+    el.style.zIndex = 60 - i;
+    const av = el.querySelector('.pav');
+    av.style.backgroundImage = p.avatar ? `url("${String(p.avatar).replace(/["\\]/g, '')}")` : ''; av.textContent = p.avatar ? '' : [...p.name][0] || '';
+    el.querySelector('b').textContent = p.name; el.querySelector('em').textContent = `${p.score} km/h`;
+    el.dataset.pos = pos;
+    if (bad) { el._p.broke = now; setTimeout(() => { el.classList.remove('broke'); raceLayout(); }, 2600); }
+    if (fx && p.fast) { el._p.spin = now + 500; el.classList.add('fast'); setTimeout(() => el.classList.remove('fast'), 3200); }
+  });
+  for (const [name, el] of RACE.els) if (!seen.has(name)) { el.remove(); RACE.els.delete(name); RACE.lanes.delete(name); }
+  RACE.els = new Map(R.planes.map((p) => [p.name, RACE.els.get(p.name)])); // giữ thứ tự theo hạng (raceLayout dựa vào đó để bỏ tên bị đè)
+  $('skMore').textContent = R.more > 0 ? `+${R.more} phi cơ phía sau` : '';
+  $('skTitle').textContent = `🛩️ Đua phi cơ · sau câu ${Math.round(prog * R.total)}/${R.total}`;
+  raceLayout();
+  if (fx && R.planes.some((p) => p.ok === false)) beep(150, .25, .05, 'sawtooth');
+}
+// câu cuối: chiếc dẫn đầu (người thật) băng qua vạch đích và lộn một vòng mừng, hiện băng chữ; chỉ có bot thì không ai về đích
+function raceFinish(R) {
+  const top = R?.planes.find((p) => !p.bot), el = top && RACE.els.get(top.name), w = $('skWin');
+  if (el) { el.classList.add('fin'); el._p.spin = performance.now() + 700; raceLayout(); }
+  $('skTitle').textContent = '';
+  w.innerHTML = top ? `🏁 <b>${esc(top.name)}</b> về đích đầu tiên<small>${top.score} km/h</small>` : '🏁 Chưa có phi cơ nào về đích';
+  w.classList.add('on');
+  beep(523, .18, .14); setTimeout(() => beep(659, .18, .14), 160); setTimeout(() => beep(784, .5, .16), 320);
+}
+function raceUpdate(s) {
+  const R = s.race, on = !!R && (s.phase === 'question' || s.phase === 'reveal'), st = $('stage');
+  st.classList.toggle('race', on);
+  if (!on) { if (RACE.key) { RACE.key = ''; RACE.timers.splice(0).forEach(clearTimeout); st.classList.remove('racefull'); $('skWin').classList.remove('on'); } return; }
+  if (RACE.game !== s.game.no) { RACE.game = s.game.no; RACE.lanes.clear(); RACE.els.clear(); $('planes').innerHTML = ''; $('skWin').classList.remove('on'); }
+  const key = `${s.game.no}.${R.no}.${s.phase}`;
+  if (key === RACE.key) return; // trong một pha phi cơ giữ nguyên thứ hạng: điểm mới chỉ được vẽ ở cảnh đổi chỗ lúc công bố
+  RACE.key = key;
+  RACE.timers.splice(0).forEach(clearTimeout);
+  const t = Date.now() + clockSkew;
+  if (s.phase === 'question') {
+    st.classList.remove('racefull'); // thẻ câu hỏi hiện lại, phi cơ vẫn bay ở chỗ cũ phía sau
+    raceDraw(R, (R.no - 1) / R.total, false);
+    if (R.final && t < s.startedAt && RACE.boost !== key) { RACE.boost = key; boostFx(null, { title: 'VỀ ĐÍCH', sub: 'Câu cuối · phi cơ dẫn đầu sẽ <em class="two">về đích</em>' }); }
+  } else {
+    const gone = Math.max(0, t - s.startedAt), at = (ms, f) => RACE.timers.push(setTimeout(f, Math.max(0, ms - gone))); // tải lại trang giữa lúc công bố vẫn đúng nhịp
+    at(1900, () => st.classList.add('racefull')); // thẻ câu hỏi lùi đi, lộ cả đường bay
+    at(2500, () => raceDraw(state?.race, R.no / R.total, true));
+    if (R.final) at(4400, () => raceFinish(state?.race)); else at(6300, () => st.classList.remove('racefull'));
+  }
+}
+
 function renderSide(s) {
   $('board').innerHTML = s.board.length
-    ? s.board.map((p, i) => `<div class="row"><span class="rk">${i + 1}</span><span class="nm">${esc(p.name)}${p.x2 ? '<span class="x2">x2</span>' : ''}</span><span class="pt">${p.score}</span></div>`).join('')
+    ? s.board.map((p, i) => `<div class="row"><span class="rk">${i + 1}</span><span class="nm">${esc(p.name)}${p.x2 ? '<span class="x2">x2</span>' : ''}</span><span class="pt">${p.score}${s.race ? '<small> km/h</small>' : ''}</span></div>`).join('')
     : '<div class="row" style="color:var(--muted)">Chưa có ai — trả lời đi nào!</div>';
   // số người chơi / số người đúng; biểu tượng 👤 / ✓ phía sau do theme-light.css vẽ (theo Figma 11/11/2026)
   $('players').textContent = s.players ? `${s.players}` : '';
@@ -1595,7 +2295,7 @@ function heatFx(target) {
   frame.heat = v;
   if (frame.heatSet != null && Math.abs(v - frame.heatSet) < .004 && (v !== target || v === frame.heatSet)) return;
   frame.heatSet = v;
-  const st = $('stage').style;
+  const st = document.documentElement.style; // đặt ở gốc để cả #stage lẫn nền lấp hai bên (#stageBg) cùng đổi màu
   for (const k in HEAT) st.setProperty(k, heatColor(HEAT[k], v));
 }
 
@@ -1669,6 +2369,33 @@ function browserUtt(text) {
   if (v) u.voice = v;
   return u;
 }
+// iPad/iPhone: Safari đòi một cú chạm cho TỪNG phần tử <audio> mới, nên lời đọc (mỗi câu một phần tử) bị chặn dù nhạc nền vẫn kêu.
+// Bị chặn (NotAllowedError) thì từ đó phát file tiếng qua AudioContext, thứ đã được mở khoá bằng cú chạm "bật tiếng" đầu tiên.
+// BufAudio chỉ có những thứ hàng đợi giọng dùng tới: src, duration, currentTime, ended, error, play(), pause(), onended/onerror/onplaying.
+let bufMode = false;
+class BufAudio {
+  constructor(src) {
+    this.src = src; this.duration = NaN; this.ended = false; this.error = null;
+    this._buf = fetch(src).then((r) => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.arrayBuffer(); })
+      .then((a) => new Promise((ok, no) => actx.decodeAudioData(a, ok, no)))
+      .then((b) => { this.duration = b.duration; return b; });
+    this._buf.catch(() => {});
+  }
+  get currentTime() { return this._t0 == null ? 0 : Math.min(this.duration || 0, actx.currentTime - this._t0); }
+  async play() {
+    if (actx?.state !== 'running') throw new DOMException('chưa bật tiếng', 'NotAllowedError');
+    let b;
+    try { b = await this._buf; } catch (e) { this.error = e; throw e; }
+    if (this._stopped) return;
+    const n = this._node = actx.createBufferSource();
+    n.buffer = b; n.connect(actx.destination);
+    n.onended = () => { if (this._stopped) return; this.ended = true; this.onended?.(); };
+    this._t0 = actx.currentTime; n.start(); this.onplaying?.();
+  }
+  pause() { this._stopped = true; try { this._node?.stop(); } catch {} }
+}
+const mkAudio = (src) => { if (bufMode && actx) return new BufAudio(src); const el = new Audio(src); el.preload = 'auto'; return setSink(el); };
+const elBlocked = (e, el) => e?.name === 'NotAllowedError' && actx?.state === 'running' && !(el instanceof BufAudio);
 function prepare(parts, keep) {
   // gộp các câu liền nhau thành 1 lần gọi VieNeu (đọc liền mạch); bắt đầu sinh/tải ngay.
   // {audio: url} = phát file (phát âm từ tiếng Anh, /api/say) — đi chung hàng đợi nên không bao giờ đè giọng dẫn.
@@ -1679,11 +2406,21 @@ function prepare(parts, keep) {
     else if (typeof p === 'number' && last?.text != null && p < 600) { /* nghỉ ngắn: để VieNeu tự ngắt theo dấu câu */ }
     else out.push(p);
   }
+  // VieNeu sinh một đoạn gộp dài mất 2–3 giây mới có tiếng → tách theo câu: câu đầu phát ngay, các câu sau sinh xong trong lúc
+  // câu trước đang đọc; câu cố định (không có tên người) còn lấy lại được từ cache. Câu quá ngắn thì dính vào câu trước (câu mở đầu: dính câu sau).
+  if (neuOK && state?.cfg?.neu) {
+    for (let i = out.length - 1; i >= 0; i--) {
+      if (out[i]?.text == null) continue;
+      const ss = [];
+      for (const s of out[i].text.split(/(?<=[.!?…])\s+/)) { if (ss.length && (s.length < 14 || (ss.length === 1 && ss[0].length < 14))) ss[ss.length - 1] += ' ' + s; else ss.push(s); }
+      if (ss.length > 1) out.splice(i, 1, ...ss.map((text) => ({ text })));
+    }
+  }
   for (const it of out) {
-    if (it?.audio) { it.el = new Audio(it.audio); it.el.preload = 'auto'; }
+    if (it?.audio) it.el = mkAudio(it.audio);
     else if (it?.text != null && neuOK && state?.cfg?.neu) {
-      it.el = new Audio('api/tts?text=' + encodeURIComponent(it.text));
-      it.el.preload = 'auto';
+      // v = tên giọng: trình duyệt giữ file tiếng 1 ngày theo địa chỉ, thiếu v thì đổi giọng xong câu cũ vẫn phát giọng cũ (lẫn nhiều giọng)
+      it.el = mkAudio('api/tts?v=' + encodeURIComponent(state.cfg.neuVoice || '') + '&text=' + encodeURIComponent(it.text));
     }
   }
   for (const it of out) if (typeof it === 'object') { it.t = Date.now(); if (keep) it.keep = true; }
@@ -1699,9 +2436,17 @@ function playNext(g) {
   vCur = seg;
   let done = false, watchdog;
   const next = () => { if (done) return; done = true; clearTimeout(watchdog); setTimeout(() => playNext(g), 120); };
+  // phần tử <audio> bị Safari chặn → phát lại chính câu này qua AudioContext (xem BufAudio)
+  const viaBuf = (el) => {
+    if (done) return;
+    done = true; clearTimeout(watchdog);
+    el.onended = el.onerror = el.onplaying = el.oncanplay = null;
+    bufMode = true; seg.el = new BufAudio(el.src); voiceQ.unshift(seg); playNext(g);
+  };
   const viaBrowser = () => {
     clearTimeout(watchdog);
     try {
+      seg.t0 = Date.now();
       const u = vUtt = browserUtt(seg.text); // giữ tham chiếu: Chrome có thể dọn mất utterance → không báo onend
       watchdog = setTimeout(next, 2500 + seg.text.length * 110);
       u.onend = u.onerror = next;
@@ -1709,7 +2454,7 @@ function playNext(g) {
     } catch { next(); }
   };
   if (seg.audio) {
-    const el = vEl = seg.el;
+    const el = vEl = setSink(seg.el);
     // Phát âm tiếng Anh lỗi (mất mạng, dịch vụ đọc lỗi) → đọc bằng giọng tiếng Anh của trình duyệt
     const en = (() => { try { return new URL(seg.audio, location.href).searchParams.get('w'); } catch { return null; } })();
     const fail = () => {
@@ -1728,17 +2473,20 @@ function playNext(g) {
     watchdog = setTimeout(next, seg.long ? 25000 : 6000); // câu dài (Nghe – chép) đọc 5–8 giây
     el.onended = next;
     el.onerror = fail;
-    el.play().catch(fail);
+    el.play().catch((e) => (elBlocked(e, el) ? viaBuf(el) : fail()));
     return;
   }
   if (seg.el) {
-    const el = vEl = seg.el;
+    const el = vEl = setSink(seg.el);
     const fallback = () => { if (done) return; console.warn('VieNeu chậm/lỗi → bỏ câu:', seg.text); next(); }; // KHÔNG đổi sang giọng Chrome
     watchdog = setTimeout(fallback, 12000 + seg.text.length * 50); // sinh quá lâu
     el.onended = next;
     el.onerror = fallback;
     el.onplaying = () => { clearTimeout(watchdog); watchdog = setTimeout(next, (Number.isFinite(el.duration) && el.duration > 0 ? el.duration : 20) * 1000 + 3000); };
-    el.play().catch(() => { if (el.error) fallback(); else el.oncanplay = () => el.play().catch(fallback); });
+    el.play().catch((e) => {
+      if (elBlocked(e, el)) return viaBuf(el);
+      if (el.error || el instanceof BufAudio) fallback(); else el.oncanplay = () => el.play().catch(fallback);
+    });
     return;
   }
   viaBrowser();
@@ -1750,8 +2498,11 @@ function say(parts, { interrupt = false, keep = false } = {}) {
   const items = prepare(voiceOn() ? parts : parts.filter((p) => p?.audio), keep);
   if (interrupt) {
     const kept = voiceQ.filter((x) => x?.keep);
-    // lời quan trọng bị cắt GIỮA CHỪNG → đọc lại sau (phần tử Audio mới; cái cũ bỏ hẳn)
-    if (vCur?.keep && !(vCur.el && vCur.el.ended)) kept.unshift({ ...vCur, el: vCur.el ? new Audio(vCur.el.src) : undefined });
+    // lời quan trọng bị cắt GIỮA CHỪNG → đọc lại sau (phần tử Audio mới; cái cũ bỏ hẳn).
+    // Chỉ đọc lại khi người xem mới nghe chưa tới nửa câu: nghe quá nửa rồi mà đọc lại từ đầu thì thành nói lặp.
+    const heard = !vCur ? 1 : vCur.el ? (vCur.el.ended ? 1 : vCur.el.duration > 0 ? vCur.el.currentTime / vCur.el.duration : 0)
+      : vCur.t0 ? (Date.now() - vCur.t0) / (400 + String(vCur.text || '').length * 75) : 0;
+    if (vCur?.keep && heard < 0.5) kept.unshift({ ...vCur, el: vCur.el ? mkAudio(vCur.el.src) : undefined });
     vGen++; voiceQ.length = 0;
     try { speechSynthesis.cancel(); } catch {}
     if (vEl) { vEl.onended = vEl.onerror = vEl.onplaying = vEl.oncanplay = null; vEl.pause(); } // gỡ handler: không tự phát lại
@@ -1766,28 +2517,51 @@ function say(parts, { interrupt = false, keep = false } = {}) {
 }
 const speak = (text, opt) => say([text], opt);
 
-// ---- Lời dẫn (mỗi loại nhiều câu, không lặp câu vừa nói) ----
+// ---- Lời dẫn: lời nằm ở kich-ban.js (window.KB). Mỗi mục đọc hết một vòng theo thứ tự xáo rồi mới lặp lại ----
 const pickOne = (() => {
-  const last = {};
+  const bags = {};
   return (key, list) => {
-    const opts = list.length > 1 ? list.filter((_, i) => i !== last[key]) : list;
-    const it = opts[Math.floor(Math.random() * opts.length)];
-    last[key] = list.indexOf(it);
-    return it;
+    if (list.length < 2) return list[0];
+    let b = bags[key];
+    if (!b || b.n !== list.length) b = bags[key] = { n: list.length, left: [], last: -1 };
+    if (!b.left.length) {
+      b.left = list.map((_, i) => i);
+      for (let i = b.left.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b.left[i], b.left[j]] = [b.left[j], b.left[i]]; }
+      if (b.left[b.left.length - 1] === b.last) b.left.unshift(b.left.pop()); // vòng mới không mở đầu bằng câu vừa nói
+    }
+    b.last = b.left.pop();
+    return list[b.last];
   };
 })();
 // Giọng đọc tiếng Việt đọc "Migii TOEIC" theo chữ cái → viết theo cách đọc (chỉ dùng trong lời nói, không hiện lên màn)
 const SAY_APP = 'Mi gi Tô ích', SAY_TOEIC = 'Tô ích';
-const PROMO = [400, 'Muốn ôn lại các từ vừa chơi?', 250, `Tải app ${SAY_APP}, luyện thi ${SAY_TOEIC} trên điện thoại, có trên App Store và Google Play nhé!`];
+const KB = window.KB || {};
+// kb('mục', {ten, n…}): lấy một câu trong kịch bản, điền chỗ trống, viết hoa chữ đầu. Thiếu mục → chuỗi rỗng (say() tự bỏ qua).
+const kb = (key, v = {}, list = KB[key]) => {
+  if (!list?.length) return '';
+  const t = pickOne('kb:' + key, list).replace(/\{(\w+)\}/g, (_, k) => v[k] ?? ({ app: SAY_APP, toeic: SAY_TOEIC })[k] ?? '');
+  return t.charAt(0).toUpperCase() + t.slice(1);
+};
+const kbSeg = (id, part) => KB.khung?.[id]?.[part];
+// Câu nhắc cách gõ: chỉ ở câu 1, câu 2 và mỗi ba câu một lần (màn hình luôn có hướng dẫn)
+const nhac = (g, key) => (g.qNo <= 2 || g.qNo % 3 === 0 ? [250, kb(key)] : []);
+const promo = () => [400, kb('quang_cao')];
+// Lời vào khung: đọc đủ luật (SEG_INTRO) ở lần đầu và cứ 5 lần một lần; còn lại một câu chuyển + một câu luật gọn
+const segSeen = {};
+function segIntro(id) {
+  const n = (segSeen[id] = (segSeen[id] || 0) + 1), g = KB.khung?.[id];
+  if (!g?.gon?.length || n % 5 === 1) return SEG_INTRO[id];
+  return [kb('sang_khung', { khung: g.ten }), 300, kb('khung:' + id, {}, g.gon)];
+}
 const SEG_INTRO = {
   class: ['Đến giờ học rồi cả lớp ơi!', 300, `Ninja dạy từ vựng ${SAY_TOEIC} mới, lát kiểm tra và gọi tên từng bạn nhé!`],
   quiz: ['Giờ giải trí! Đố nhanh nào!', 300, 'Gõ số một đến bốn, ai nhanh nhất được nhiều điểm nhất!'],
-  scramble: ['Tiếp theo là trò ghép chữ!', 300, 'Các chữ cái bị xáo trộn, mọi người gõ thứ tự số đúng, hoặc gõ luôn từ tiếng Anh nhé!'],
+  scramble: ['Tiếp theo là trò ghép chữ!', 300, 'Các chữ cái bị xáo trộn, mọi người ghép lại rồi gõ từ tiếng Anh vào bình luận nhé!'],
   reverse: ['Giờ học: chọn từ tiếng Anh!', 300, 'Ninja đọc nghĩa tiếng Việt, mọi người gõ số một đến bốn chọn đúng từ tiếng Anh nha!'],
   listen: ['Giờ luyện tai nè!', 300, 'Ninja chỉ đọc, không hiện chữ. Nghe thật kỹ rồi chọn nghĩa đúng nha!'],
   team: ['So găng hai đội bắt đầu!', 300, 'Gõ tên đội vào bình luận để chọn phe. Trả lời đúng và tặng quà để kéo điểm cho đội mình!'],
   type: ['Thử thách nghe và gõ chính tả!', 300, 'Nghe Ninja đọc, nhìn nghĩa rồi gõ từ tiếng Anh vào bình luận, có gợi ý chữ cái mở dần nhé!'],
-  word: ['Đến giờ chơi Word!', 300, 'Chọn nghĩa, chọn từ, tìm từ đồng nghĩa hoặc trái nghĩa. Gõ A, B, C hoặc D, ai nhanh nhất được nhiều điểm nhất!'],
+  word: ['Đến giờ chơi Word, đua phi cơ nào!', 300, 'Mỗi bạn một phi cơ. Gõ A, B, C hoặc D, trả lời đúng thì phi cơ tăng tốc, ai nhanh nhất tăng nhiều nhất.', 250, 'Trả lời sai là hỏng động cơ đó nha. Câu cuối là chặng về đích!'],
   hunt: ['Đến giờ săn từ!', 300, 'Trong ma trận có mười từ giấu, đọc xuôi hay đọc ngược đều được. Ai tìm đủ năm từ trước thì ăn điểm cao nhất!'],
   speedread: ['Đến giờ đọc nhanh!', 300, 'Mỗi bài có một văn bản ngắn và một câu hỏi. Tìm chi tiết trong bài rồi gõ A, B, C hoặc D. Ai đúng nhanh nhất được mười điểm!'],
   dictate: ['Đến giờ nghe chép!', 300, 'Nghe câu tiếng Anh rồi gõ lại cả câu vào bình luận. Cứ hai giây màn hình hiện thêm một chữ cái. Ai đúng nhanh nhất được nhiều điểm nhất!'],
@@ -1795,36 +2569,43 @@ const SEG_INTRO = {
   crossword: ['Đến giờ giải ô chữ!', 300, 'Gõ chữ thường để giải từng hàng. Giải được hơn nửa số hàng thì gõ chữ hoa để đoán từ khoá hàng dọc, được thưởng năm mươi điểm!'],
   fillin: ['Đến giờ điền từ!', 300, 'Mỗi câu thiếu một từ, gõ A, B, C hoặc D để chọn. Sau mỗi câu Ninja sẽ giải thích vì sao đúng và vì sao mọi người hay nhầm!'],
   listenmean: ['Đến giờ nghe và chọn nghĩa!', 300, 'Ninja chỉ đọc một lần, chữ cái sẽ hiện dần. Nghe thật kỹ rồi chọn nghĩa đúng nha!'],
-  chain: ['Đến giờ Thế chữ!', 300, 'Mọi người cùng chơi nhé. Đổi một chữ cái để ra từ mới, ai nhanh tay thì giữ từ.', 250, 'Hết mười hai giây không ai thế được thì người giữ từ thắng, cộng mười điểm!'],
+  chain: ['Đến giờ Thế chữ!', 300, 'Mọi người cùng chơi nhé. Đổi một chữ cái để ra từ mới, ai nhanh tay thì giữ từ.', 250, 'Chữ nào có ổ khoá thì phải giữ nguyên.', 250, 'Hết mười hai giây không ai thế được thì người giữ từ thắng, cộng mười điểm!', 250, 'Ván cuối là ván tăng tốc: từ năm chữ cái, được đổi tới hai chữ.'],
+  emoji: ['Đến giờ đoán emoji!', 300, 'Mỗi câu có vài emoji, mọi người đoán xem đó là từ tiếng Anh nào rồi gõ vào bình luận. Chữ cái gợi ý sẽ mở dần, ai đúng nhanh nhất được nhiều điểm nhất!'],
   startend: ['Thử thách Start or End!', 300, 'Gõ năm từ tiếng Anh bắt đầu hoặc kết thúc bằng chữ cho trước, cách nhau bằng dấu cách. Ai nhanh nhất được nhiều điểm nhất!'],
+  irrfill: ['Đến giờ chia động từ bất quy tắc!', 300, 'Màn hình có bảng ba cột: nguyên mẫu, quá khứ và phân từ hai. Một ô đang bị khuyết, mọi người gõ từ còn thiếu vào bình luận nhé. Chữ cái gợi ý sẽ mở dần, ai đúng nhanh nhất được nhiều điểm nhất!'],
+  haitu: ['Đến giờ Hái từ!', 300, 'Mỗi bảng là một chủ đề, có mười sáu ảnh kèm tên tiếng Việt. Biết hình nào thì gõ tên tiếng Anh của hình đó vào bình luận. Ai gõ đúng trước thì từ rụng và được hai điểm. Hết bảng, ai hái nhiều nhất được thưởng năm điểm!'],
+  bricky: ['Đến giờ Bricky!', 300, 'Màn hình cho bốn hoặc năm chữ cái. Mọi người ghép thành các từ tiếng Anh, từ ba chữ cái trở lên, rồi gõ vào bình luận. Mỗi từ đúng được một điểm, từ ngoài bảng vẫn tính. Ai điền đủ bảng đầu tiên được thưởng mười điểm!', 250, 'Bảng cuối khó hơn: sáu chữ cái, nhiều từ hơn, và mọi điểm nhân đôi!'],
+  oneletter: ['Đến giờ thêm bớt một chữ!', 300, 'Màn hình hiện một chữ viết sai kèm nghĩa tiếng Việt. Gặp lệnh thêm thì thêm một chữ cái, gặp lệnh bớt thì bớt một chữ cái, để thành từ có nghĩa, rồi gõ cả từ vào bình luận nhé. Ai đúng nhanh nhất được nhiều điểm nhất!', 250, 'Ba câu cuối là chặng về đích: toàn từ rất dễ nhầm, điểm nhân đôi!'],
+  irrfind: ['Đến giờ tìm động từ bất quy tắc!', 300, 'Mỗi câu có bốn động từ, chỉ một từ là bất quy tắc, tức là quá khứ không thêm đuôi e đê. Gõ A, B, C hoặc D để chọn, ai nhanh nhất được nhiều điểm nhất!'],
 };
 const LINES = {
-  intro: (s) => s.program && s.next && SEG_INTRO[s.next.id] ? SEG_INTRO[s.next.id] : pickOne('intro', [
+  intro: (s) => s.program && s.next && SEG_INTRO[s.next.id] ? segIntro(s.next.id) : pickOne('intro', [
     ['Xin chào cả nhà!', 300, `Chào mừng mọi người đến với game đố từ vựng ${SAY_TOEIC} của ${SAY_APP}!`, 300, 'Gõ số đáp án vào bình luận để ghi điểm nha!'],
     ['Hello mọi người ơi!', 300, `Lượt ${s.nextGame} sắp bắt đầu rồi.`, 300, 'Ai trả lời đúng nhanh nhất được nhiều điểm nhất đó!'],
     ['Mọi người chuẩn bị nha!', 300, `Lượt này có ${s.cfg.questions} câu, mỗi câu ${s.cfg.roundSec} giây.`, 300, 'Hết lượt sẽ vinh danh ba bạn cao điểm nhất!'],
   ]),
   question: (s) => {
     const m = s.q.m, g = s.game;
-    const lead = g.qNo === 1 ? [`Lượt ${g.no} bắt đầu!`, 300] : g.qNo === g.total ? ['Câu cuối cùng rồi!', 300] : [];
+    const lead = g.qNo === 1 ? [kb('cau_dau', { n: g.no }), 300] : g.qNo === g.total ? [kb('cau_cuoi'), 300] : [];
     if (s.q.mode === 'dictate') { // phát câu, nghỉ 5 giây, phát tiếp... (4 lần trong 40 giây); lời dẫn chỉ ở câu đầu để không mất giờ
       const a = () => ({ audio: s.q.audio, long: true });
       return [...(g.qNo === 1 ? ['Nghe kỹ và gõ lại cả câu nhé!', 200] : []), a(), 5000, a(), 5000, a(), 5000, a()];
     }
-    if (s.q.mode === 'errhunt') return [...lead, pickOne('qe', ['Tìm từ sai trong câu nhé!', 'Câu này sai ở đâu nhỉ?']), 250, 'Gõ từ sai, dấu gạch, rồi từ đúng!'];
+    if (s.q.mode === 'errhunt') return [...lead, kb('hoi_errhunt'), ...nhac(g, 'nhac_errhunt')];
     if (s.q.mode === 'cross') return s.q.stage === 'key' ? ['Vòng từ khoá! Gõ chữ hoa để đoán từ khoá hàng dọc nhé!'] : [`Hàng số ${s.q.clue.no}.`, 200, s.q.clue.vi, 250, `${s.q.clue.len} chữ cái.`];
-    if (s.q.mode === 'hunt') return [...lead, pickOne('qh', ['Săn từ nào! Ma trận có mười từ giấu, tìm đủ năm từ trước để ăn điểm!', 'Ai tìm được từ nào? Đọc xuôi hay ngược đều được!']), 300, 'Gõ từ bạn thấy vào bình luận nhé!'];
-    if (s.q.mode === 'chain') return s.q.chainLen <= 1 ? [`Ván ${s.q.match}!`, 200, 'Đổi một chữ cái để giành từ nhé!'] : [];
-    if (s.q.mode === 'startend') return [...lead, pickOne('qse', ['Tìm năm từ tiếng Anh, bắt đầu hoặc kết thúc bằng chữ trên màn hình!', 'Ai tìm được năm từ nào?']), 300, 'Gõ cả năm từ trong một bình luận nhé!'];
+    if (s.q.mode === 'hunt') return [...lead, kb('hoi_hunt'), ...nhac(g, 'nhac_hunt')];
+    if (s.q.mode === 'chain') return s.q.chainLen > 1 ? [] : s.q.final ? [1600, kb('tang_toc')] : [`Ván ${s.q.match}!`, 200, kb('hoi_chain')];
+    if (s.q.mode === 'startend') return [...lead, kb('hoi_startend'), ...nhac(g, 'nhac_startend')];
     if (s.q.mode === 'mcq') {
       if (s.q.wq) {
         const t = s.q.wq.t;
-        if (t === 'read') return [...lead, pickOne('qrd', ['Đọc nhanh nào! Tìm chi tiết trong bài nhé!', 'Đọc lướt, tìm đúng chỗ rồi chọn nha!', 'Ai tìm ra trước nào?'])];
+        if (t === 'read') return [...lead, kb('hoi_read')];
         if (t === 'lm') return [{ audio: s.q.audio }]; // phát đúng 1 lần, không lời dẫn để người xem không bị chậm
-        if (t === 'fill') return [...lead, pickOne('qf', ['Điền từ còn thiếu nào!', 'Từ nào điền vào chỗ trống đây?']), 250, 'Gõ A, B, C hoặc D!'];
-        if (t === 'm2w') return [...lead, `${s.q.mean}.`, 300, pickOne('qw1', ['Tiếng Anh là từ nào? Gõ A, B, C hoặc D!', 'Chọn A, B, C hay D nhé!'])];
-        if (t === 'w2m') return [...lead, pickOne('qw2', ['Câu tiếp theo nè!', 'Từ này nghĩa là gì?']), 200, { audio: s.q.audio }, 300, 'Gõ A, B, C hoặc D!'];
-        return [...lead, 'Từ', 150, { audio: s.q.audio }, 250, t === 'syn' ? 'đồng nghĩa với từ nào?' : 'trái nghĩa với từ nào?', 250, 'Gõ A, B, C hoặc D!'];
+        if (t === 'irr') return [...lead, kb('hoi_irrfind'), ...nhac(g, 'nhac_abcd')];
+        if (t === 'fill') return [...lead, kb('hoi_fill'), ...nhac(g, 'nhac_abcd')];
+        if (t === 'm2w') return [...lead, `${s.q.mean}.`, 300, kb('hoi_m2w'), ...nhac(g, 'nhac_abcd')];
+        if (t === 'w2m') return [...lead, kb('hoi_w2m'), 200, { audio: s.q.audio }, ...nhac(g, 'nhac_abcd')];
+        return [...lead, 'Từ', 150, { audio: s.q.audio }, 250, t === 'syn' ? 'đồng nghĩa với từ nào?' : 'trái nghĩa với từ nào?', ...nhac(g, 'nhac_abcd')];
       }
       if (s.q.rev) return [...lead, `${s.q.mean}.`, 300, pickOne('qrv', ['Tiếng Anh là từ nào?', 'Từ nào đúng nhỉ? Chọn số một đến bốn!', 'Gõ số từ đúng vào bình luận nha!'])];
       if (s.q.listen) return [...lead, pickOne('ql', ['Câu nghe nè, nghe kỹ nhé!', 'Lắng nghe nào!']), 200, { audio: s.q.audio }, 500, { audio: s.q.audio }, 300, 'Từ này nghĩa là gì?'];
@@ -1835,7 +2616,13 @@ const LINES = {
         ['Ai biết không?', 200, { audio: s.q.audio }, 300, 'Gõ số vào bình luận nha!'],
       ])];
     }
-    if (s.q.mode === 'scramble') return [...lead, pickOne('qs', [`${m}.`, `Từ có nghĩa là ${m}.`]), 250, pickOne('qs2', ['Gõ thứ tự số các thẻ nào!', 'Ai ghép được không? Gõ số nhé!', 'Xếp thẻ cho đúng nha!'])];
+    if (s.q.mode === 'emoji') return [...lead, kb('hoi_emoji'), ...nhac(g, 'nhac_emoji')];
+    if (s.q.mode === 'irrfill') return [...lead, kb('hoi_irrfill'), ...nhac(g, 'nhac_irrfill')];
+    // Thêm bớt 1 chữ: đọc lệnh + nghĩa (người chỉ nghe vẫn biết đang đố gì); câu đỏ đầu tiên trễ 1,6 giây cho khớp màn chuyển
+    if (s.q.mode === 'oneletter') return [...(s.q.redFirst ? [1600, kb('mot_chu_do'), 250] : s.q.red ? [] : lead), kb(s.q.k === 'add' ? 'hoi_mot_chu_them' : 'hoi_mot_chu_bot'), 200, `Nghĩa là ${m}.`, ...(s.q.red ? [] : nhac(g, 'nhac_mot_chu'))];
+    if (s.q.mode === 'haitu') return [...lead, kb('hoi_haitu', { chu_de: s.q.topic }), ...nhac(g, 'nhac_haitu')];
+    if (s.q.mode === 'bricky') return s.q.final ? [1600, kb('bricky_cuoi')] : [...lead, kb('hoi_bricky'), ...nhac(g, 'nhac_bricky')]; // bảng cuối: trễ 1,6 giây cho khớp màn chuyển
+    if (s.q.mode === 'scramble') return [...lead, kb('hoi_scramble_nghia', { m }), 250, kb('hoi_scramble')];
     // Nghe & gõ chính tả: đọc nghĩa rồi phát âm từ tiếng Anh 2 lần
     return [...lead, ...pickOne('q', [
       ['Câu tiếp theo nè!', 300, `${m}.`, 250, { audio: s.q.audio }, 500, { audio: s.q.audio }, 300, 'Gõ từ này vào bình luận nha!'],
@@ -1860,38 +2647,42 @@ const LINES = {
       : c.result === 'wrong' ? [`Chưa đúng rồi ${n}, nhớ kỹ từ này nhé!`] : [`${n} chưa kịp trả lời rồi.`];
     return [`Đáp án là số ${s.q.answer + 1}, ${s.q.m}!`, ...line, ...fx.callout(s, c?.name).slice(0, 1)];
   },
-  firstCorrect: (name) => pickOne('fc', [
-    ['Chính xác!', 200, `${name} trả lời đúng đầu tiên!`],
-    [`Wow, ${name} nhanh quá!`],
-    [`${name} đã có đáp án đúng!`, 200, 'Còn ai nữa không nào?'],
-  ]),
+  firstCorrect: (name) => [kb('dung_dau', { ten: name })],
   reveal: (s) => s.q.mode === 'dictate' ? [{ audio: s.q.audio, long: true }, 350, s.q.vi]
     : s.q.mode === 'errhunt' ? ['Từ đúng là', 150, { audio: `api/say?w=${encodeURIComponent(s.q.right)}` }, 250, s.q.why]
     : s.q.mode === 'cross' ? (s.q.done ? ['Từ khoá là', 150, { audio: `api/say?w=${encodeURIComponent(s.q.key.word)}` }, 250, `${s.q.keyBy} giải được từ khoá, cộng năm mươi điểm!`]
       : s.q.result ? [s.q.result.by ? 'Đáp án là' : 'Hết giờ! Đáp án là', 150, { audio: `api/say?w=${encodeURIComponent(s.q.result.answer)}` }, ...(s.q.result.by ? [200, `${s.q.result.by} giải đúng đầu tiên!`] : [])]
       : s.q.key.word ? ['Từ khoá là', 150, { audio: `api/say?w=${encodeURIComponent(s.q.key.word)}` }] : [])
-    : s.q.mode === 'chain' ? [s.q.stats.winner ? `${spokenName(s.q.stats.winner.name)} thắng ván! Cộng mười điểm!` : 'Ván này chưa ai thế được từ!', ...(s.q.stats.len > 2 ? [200, `Chuỗi ${s.q.stats.len} từ!`] : []), ...(s.q.stats.isNew ? [200, 'Kỷ lục mới luôn!'] : [])]
-    : s.q.mode === 'hunt' ? ['Hết giờ! Đây là các từ giấu trong ma trận.']
-    : s.q.mode === 'startend' ? ['Hết giờ! Ví dụ đáp án nè.', 200, ...(s.q.examples || []).slice(0, 3).flatMap((w) => [250, { audio: `api/say?w=${encodeURIComponent(w)}` }])]
+    : s.q.mode === 'chain' ? [s.q.stats.winner ? kb(s.q.stats.x2 ? 'chain_thang_x2' : 'chain_thang', { ten: spokenName(s.q.stats.winner.name) }) : kb('chain_hoa'), ...(s.q.stats.len > 2 ? [200, `Chuỗi ${s.q.stats.len} từ!`] : []), ...(s.q.stats.isNew ? [200, 'Kỷ lục mới luôn!'] : [])]
+    : s.q.mode === 'hunt' ? [kb('het_gio_hunt')]
+    : s.q.mode === 'haitu' ? [...(s.q.bonus ? [kb('haitu_top', { ten: spokenName(s.q.bonus.name), n: s.q.bonus.n }), 250] : []), ...(s.q.tiles.some((t) => !t.by) ? [kb('het_gio_haitu')] : [])] // từng từ: haituTicker đọc khi thẻ tới giữa màn
+    : s.q.mode === 'bricky' ? [kb('het_gio_bricky'), 150, { audio: s.q.say }, ...(s.q.top?.m ? [200, `nghĩa là ${s.q.top.m}.`] : [])]
+    : s.q.mode === 'startend' ? [kb('het_gio_startend'), 200, ...(s.q.examples || []).slice(0, 3).flatMap((w) => [250, { audio: `api/say?w=${encodeURIComponent(w)}` }])]
     : s.q.wq?.t === 'fill' ? (() => {
       const f = s.q.fill, top = f.top != null ? f.wrong.find((w) => w.i === f.top) : null;
-      return [`Đáp án là ${'ABCD'[s.q.answer]}.`, 150, { audio: s.q.ansAudio }, 250, f.why, ...(top ? [250, `Nhiều bạn chọn ${'ABCD'[top.i]}. ${top.reason}`] : [])];
+      return [kb('dap_an', { x: 'ABCD'[s.q.answer] }) + '.', 150, { audio: s.q.ansAudio }, 250, f.why, ...(top ? [250, `Nhiều bạn chọn ${'ABCD'[top.i]}. ${top.reason}`] : [])];
     })()
     : s.q.wq?.t === 'read' ? (() => {
       const f = s.q.fill, top = f?.top != null ? f.wrong.find((w) => w.i === f.top) : null;
-      return [`Đáp án là ${'ABCD'[s.q.answer]}.`, 250, ...(f?.why ? [f.why] : []), ...(top ? [250, `Nhiều bạn chọn ${'ABCD'[top.i]}. ${top.reason}`] : [])];
+      return [kb('dap_an', { x: 'ABCD'[s.q.answer] }) + '.', 250, ...(f?.why ? [f.why] : []), ...(top ? [250, `Nhiều bạn chọn ${'ABCD'[top.i]}. ${top.reason}`] : [])];
     })()
-    : s.q.wq?.t === 'lm' ? [`Đáp án là ${'ABCD'[s.q.answer]}.`, 150, { audio: s.q.audio }, 200, `nghĩa là ${s.q.m}.`]
-    : s.q.wq ? [`Đáp án là ${'ABCD'[s.q.answer]}${s.q.wq.t === 'w2m' ? `, ${s.q.m}` : ''}!`, ...(s.q.wq.t === 'w2m' ? [] : [150, { audio: s.q.ansAudio }]), ...fx.callout(s)]
-    : s.q.mode === 'scramble' ? [`Thứ tự đúng là ${[...(s.q.answer || '')].join(' ')}.`, 200, { audio: s.q.audio }]
+    : s.q.wq?.t === 'lm' ? [kb('dap_an', { x: 'ABCD'[s.q.answer] }) + '.', 150, { audio: s.q.audio }, 200, `nghĩa là ${s.q.m}.`]
+    // Động từ bất quy tắc: đọc đáp án rồi đọc cả bộ V1, V2, V3 (từ ba dạng giống nhau server chỉ gửi 1 audio)
+    : s.q.wq?.t === 'irr' ? [kb('dap_an', { x: 'ABCD'[s.q.answer] }) + '.', ...(s.q.irr?.say || []).flatMap((a) => [200, { audio: a }])]
+    : s.q.mode === 'irrfill' ? [kb('dap_an_emoji'), 150, { audio: s.q.audio }, 250, ...(s.q.say || []).flatMap((a) => [200, { audio: a }])]
+    : s.q.wq ? [kb('dap_an', { x: 'ABCD'[s.q.answer] }) + (s.q.wq.t === 'w2m' ? `, ${s.q.m}` : '') + '!', ...(s.q.wq.t === 'w2m' ? [] : [150, { audio: s.q.ansAudio }]), ...fx.callout(s)]
+    : s.q.mode === 'emoji' ? [kb('dap_an_emoji'), 150, { audio: s.q.audio }, 200, `nghĩa là ${s.q.m}.`]
+    // Thêm bớt 1 chữ: cặp từ dễ nhầm thì đọc cả từ trên màn để so sánh
+    : s.q.mode === 'oneletter' ? [kb('dap_an_emoji'), 150, { audio: s.q.audio }, ...(s.q.sm ? [250, kb('mot_chu_nham'), 150, { audio: s.q.say }, 150, `là ${s.q.sm}.`] : [])]
+    : s.q.mode === 'scramble' ? ['Đáp án là', 150, { audio: s.q.audio }]
     : s.q.rev ? [`Đáp án là số ${s.q.answer + 1}!`, 150, { audio: s.q.audio }, ...fx.callout(s)]
     : s.q.mode === 'mcq'
     ? [`${pickOne('rvm', ['Đáp án là', 'Đáp án đúng là', 'Chính là'])} số ${s.q.answer + 1}, ${s.q.m}!`, ...fx.callout(s)]
     : [pickOne('rv', ['Đáp án là...', 'Đáp án đúng là...', 'Đáp án nè!']), 150, { audio: s.q.audio }],
   podium: (p) => [
     ...(p.teams ? [p.teamWin != null ? `Đội ${p.teams[p.teamWin].name} chiến thắng! Cả đội được cộng mười điểm!` : 'Hai đội hoà nhau!', 300] : []),
-    ...(p.top[0] ? ['Xin chúc mừng!', 300, `${spokenName(p.top[0].name)} vô địch lượt ${p.no} với ${p.top[0].score} điểm!`] : ['Bục vinh danh đang chờ bạn đấy!']),
-    300, 'Lượt mới sắp bắt đầu rồi, chuẩn bị tinh thần nào!', ...PROMO,
+    ...(p.top[0] ? [kmh(kb('vo_dich', { ten: spokenName(p.top[0].name), n: p.no, d: p.top[0].score }), p.seg?.id === 'word')] : [kb('buc_trong')]),
+    300, kb('luot_sau'), ...promo(),
   ],
 };
 // Biểu tượng theo tên quà (tên tiếng Việt lẫn tiếng Anh vì TikTok trả theo ngôn ngữ tài khoản)
@@ -1942,7 +2733,7 @@ function nextThanks() {
     mg.classList.add('on');
     confetti();
     [523, 659, 784, 1046].forEach((f, i) => setTimeout(() => beep(f, .25, .18, 'triangle'), i * 140));
-    say([`Ôi! Cảm ơn ${spokenName(m.name)} đã tặng ${m.gift}! Cảm ơn bạn rất nhiều!`], { keep: true });
+    say([kb('qua_to', { ten: spokenName(m.name), qua: m.gift })], { keep: true });
     setTimeout(() => { mg.classList.remove('on'); setTimeout(nextThanks, 400); }, busy ? 4500 : 7000);
     return;
   }
@@ -1958,7 +2749,7 @@ function nextThanks() {
   void box.offsetWidth; box.classList.add('on');
   if (big) { confetti(30); [659, 880, 1175].forEach((f, i) => setTimeout(() => beep(f, .18, .15), i * 120)); }
   else { beep(784, .1); setTimeout(() => beep(1046, .2), 110); }
-  say([`Cảm ơn ${spokenName(m.name)} đã tặng ${m.gift}`], { keep: true });
+  say([kb('qua_nho', { ten: spokenName(m.name), qua: m.gift })], { keep: true });
   setTimeout(() => { box.classList.remove('on'); setTimeout(nextThanks, 400); }, busy ? 2500 : big ? 5500 : 4000);
 }
 
@@ -2012,14 +2803,16 @@ const fx = (() => {
   const short = spokenName;
   const names = (arr) => arr.length <= 1 ? arr.join('') : arr.slice(0, -1).join(', ') + ' và ' + arr[arr.length - 1];
   // chào người mới vào: gom 6s rồi đọc 1 câu, tối đa 1 lần / 20s
-  let joinBuf = [], joinT = null, lastGreet = 0, lastRealAt = Date.now(), lastNudge = 0;
+  let joinBuf = [], joinT = null, lastGreet = 0, lastHint = 0, lastRealAt = Date.now(), lastNudge = 0;
   function flushJoin() {
     joinT = null;
     const list = [...new Set(joinBuf)].slice(0, 3); joinBuf = [];
     if (!list.length || Date.now() - lastGreet < 20000) return;
     lastGreet = Date.now();
     const sid = state?.seg?.id; // khung Word / Start or End không gõ số 1–4
-    say([`Chào ${names(list.map(short))}!`, 200, sid === 'speedread' ? 'Đọc nhanh văn bản rồi gõ A, B, C hoặc D để ghi điểm nha!' : sid === 'dictate' ? 'Nghe câu tiếng Anh rồi gõ lại cả câu để ghi điểm nha!' : sid === 'errhunt' ? 'Gõ từ sai và từ đúng để chơi cùng nha!' : sid === 'crossword' ? 'Gõ từ tiếng Anh theo gợi ý để giải ô chữ cùng nha!' : ['word', 'fillin', 'listenmean'].includes(sid) ? 'Gõ A, B, C hoặc D vào bình luận để chơi cùng nha!' : sid === 'hunt' ? 'Gõ các từ bạn tìm được trong ma trận để chơi cùng nha!' : sid === 'chain' ? 'Gõ join để vào đội chơi cùng nha!' : sid === 'startend' ? 'Gõ năm từ tiếng Anh vào bình luận để chơi cùng nha!' : pickOne('jg', ['Gõ số từ 1 đến 4 vào bình luận để chơi cùng nha!', 'Vào chơi luôn nè, gõ số 1, 2, 3 hoặc 4 nhé!', 'Trả lời đúng nhanh nhất được 10 điểm đó!'])]);
+    const hint = Date.now() - lastHint > 45000; // câu chỉ cách chơi: thưa hơn lời chào để không nhắc đi nhắc lại
+    if (hint) lastHint = Date.now();
+    say([kb('chao', { ds: names([...new Set(list.map(short))]) }), ...(hint ? [200, kb('chao:' + sid, {}, kbSeg(sid, 'chao') || KB.chao_cach_choi)] : [])]);
   }
   return {
     get fastest() { return fastest; },
@@ -2034,15 +2827,14 @@ const fx = (() => {
       const wrong = (s.feed || []).filter((f) => f.choice && !f.ok && !f.bot && f.name !== skip).map((f) => f.name).filter((n) => !right.includes(n));
       if (right.length || wrong.length) lastRealAt = Date.now();
       const out = [];
-      if (right.length) out.push(`${right.length > 3 ? `${right.length} bạn đã đúng, chúc mừng ` : 'Chúc mừng '}${names([...new Set(right)].slice(0, 3).map(short))}!`);
-      else if (fastest) out.push(`${short(fastest)} nhanh nhất!`);
-      if (wrong.length && out.length < 2) out.push(`Tiếc quá ${names([...new Set(wrong)].slice(0, 2).map(short))}, câu sau cố lên nhé!`);
+      if (right.length) out.push(kb(right.length > 3 ? 'khen_dong' : 'khen', { n: right.length, ds: names([...new Set(right)].slice(0, 3).map(short)) }));
+      else if (fastest) out.push(kb('nhanh_nhat', { ten: short(fastest) }));
+      if (wrong.length && out.length < 2) out.push(kb('tiec', { ds: names([...new Set(wrong)].slice(0, 2).map(short)) }));
       // lâu không có người thật trả lời → mời gọi (tối đa 1 lần / 2 phút)
       if (!out.length && Date.now() - lastRealAt > 60000 && Date.now() - lastNudge > 120000) {
         lastNudge = Date.now();
         const sid = state?.seg?.id;
-        out.push(sid === 'speedread' ? 'Mọi người đang xem ơi, đọc văn bản trên màn hình rồi gõ A, B, C hoặc D nhé!' : sid === 'dictate' ? 'Mọi người đang xem ơi, nghe câu tiếng Anh rồi gõ lại cả câu vào bình luận nhé!' : sid === 'errhunt' ? 'Mọi người đang xem ơi, tìm từ sai trong câu rồi gõ từ sai gạch từ đúng nhé!' : sid === 'crossword' ? 'Mọi người đang xem ơi, gõ từ tiếng Anh theo nghĩa để điền ô chữ nhé!' : ['word', 'fillin', 'listenmean'].includes(sid) ? 'Mọi người đang xem ơi, gõ A, B, C hoặc D vào bình luận để chơi cùng nha!' : sid === 'hunt' ? 'Mọi người đang xem ơi, tìm từ trong ma trận rồi gõ vào bình luận nhé!' : sid === 'chain' ? 'Mọi người đang xem ơi, gõ join để vào đội Black hoặc White nhé!' : sid === 'startend' ? 'Ai đang xem thì thử sức đi nào, gõ năm từ tiếng Anh vào bình luận nhé!'
-          : pickOne('nudge', ['Mọi người đang xem ơi, gõ số 1 đến 4 vào bình luận để chơi cùng nha!', 'Ai đang xem thì thử sức đi nào, chỉ cần gõ một con số thôi!']));
+        out.push(kb('moi:' + sid, {}, kbSeg(sid, 'moi') || KB.moi_choi));
       }
       return out;
     },
@@ -2059,13 +2851,18 @@ const fx = (() => {
         // sang câu mới: chốt chuỗi đúng của câu trước
         if (key) {
           for (const n of [...streak.keys()]) if (!inRound.has(n)) streak.delete(n);
+          const hot = [];
           for (const [n, bot] of inRound) {
             const c = (streak.get(n) || 0) + 1;
             streak.set(n, c);
             if (!bot && [3, 5, 10, 15, 20].includes(c)) {
               moment(`🔥 ${n} đúng ${c} câu liên tiếp!`);
-              say([`Quá đỉnh! ${n} đã đúng ${c} câu liên tiếp!`], { keep: true });
+              hot.push({ n, c });
             }
+          }
+          if (hot.length) {
+            const c = Math.max(...hot.map((x) => x.c)), who = [...new Set(hot.filter((x) => x.c === c).map((x) => spokenName(x.n)))];
+            say([who.length > 1 ? kb('chuoi_nhieu', { ds: names(who.slice(0, 3)), n: c, k: who.length }) : kb('chuoi', { ten: who[0], n: c })], { keep: true });
           }
         }
         if (s.game.qNo === 1) { streak.clear(); lastLeader = null; }
@@ -2079,7 +2876,7 @@ const fx = (() => {
         if (prevLeader && !top.bot && s.game.qNo - lastLeadQ >= 2) {
           lastLeadQ = s.game.qNo;
           moment(`👑 ${top.name} vươn lên dẫn đầu!`, 'lead');
-          say([`${spokenName(top.name)} đã vươn lên dẫn đầu với ${top.score} điểm!`], { keep: true });
+          say([kmh(kb('dan_dau', { ten: spokenName(top.name), d: top.score }), !!state?.race)], { keep: true });
         }
       }
     },
@@ -2097,17 +2894,20 @@ function connect() {
       if (m.cfg?.mute && !muted) { muted = true; try { actx?.suspend(); speechSynthesis.cancel(); document.querySelectorAll('audio').forEach((a) => a.pause()); } catch {} }
       if (m.ui) { if (!uiVer) uiVer = m.ui; else if (m.ui !== uiVer) pendingReload = true; }
       state = m; clockSkew = m.now - Date.now(); render(); applyMusic(); fx.onState(m);
+      if (m.program) document.title = `${kenhTen(m.program)}Đố từ vựng TOEIC · Migii`;
     } else if (m.type === 'feed' && state) {
       state.feed = m.feed; renderFeed(m.feed);
     } else if (m.type === 'correct') {
       beep(m.rank === 1 ? 1180 : 880, .1, .12);
-      if (m.rank === 1 && !m.bot && !m.called) say(LINES.firstCorrect(spokenName(m.name)));
+      if (m.rank === 1 && !m.bot && !m.called) say(m.bricky ? [kb(m.final ? 'bricky_du_cuoi' : 'bricky_du', { ten: spokenName(m.name) })] : LINES.firstCorrect(spokenName(m.name)));
       fx.onCorrect(m);
       celebrate(m);
     } else if (m.type === 'teamJoin') {
       toast(`${m.icon} ${esc(m.name)} vào đội ${esc(m.tname)}`, 'join');
     } else if (m.type === 'gift') {
       thankQueue.push(m); if (!thanking) nextThanks();
+    } else if (m.type === 'chainFx') {
+      chainFx(m);
     } else if (m.type === 'reload') {
       location.reload();
     } else if (m.type === 'ai') {

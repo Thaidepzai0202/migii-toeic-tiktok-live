@@ -17,7 +17,16 @@ Live là phát công khai, nên mọi chữ trên màn và lời đọc theo lu�
 - Câu miễn trừ ETS (`#ets` trong `public/index.html`) **ẩn trên mọi màn** theo yêu cầu người dùng 12/11/2026
   (`display: none` trong `public/theme-light.css`). Đừng tự thêm lại, kể cả khi bản Figma mới không có: người dùng đã quyết,
   dù `thuong-hieu.md` ghi câu này bắt buộc trên tài liệu quảng bá có chữ TOEIC.
+- Khung Bricky (`bricky`) tính điểm cho **mọi từ có trong từ điển** (`dict.js`), không riêng kho Migii: người dùng chốt 19/11/2026
+  ("chỉ cần là từ tiếng Anh có nghĩa, có trong từ điển"). Từ lên bảng ô (5–7 từ mỗi bảng; bảng cuối "Về đích" 6 chữ cái, 8 từ, thời gian ×1,5, điểm ×2) vẫn là từ Migii có nghĩa (`bank.json`, thiếu thì `word-300/400.json`); từ thêm hiện trên màn không kèm nghĩa.
+  Gặp từ thô hoặc chữ viết tắt lọt lên màn thì thêm vào `THO` / `BO` trong `build_bricky.js` rồi `npm run build:bricky`.
+- Khung Hái từ (`haitu`, lúc đầu tên Fruity): hình phải là **ảnh thật hoặc ảnh vẽ dễ nhận, không dùng emoji** (người dùng chốt 19/11/2026).
+  Ảnh sinh bằng AI qua cổng llm.eup.ai (`build_hai_tu_anh.js`, 9 vật/lần gọi): báo người dùng số lần gọi × giá và chờ đồng ý trước khi chạy
+  kèm `--dong-y` (luật chi phí của PM). Nếu dùng ảnh chụp thì chỉ phạm vi công cộng / CC0; nguồn từng ảnh ghi vào `data/hai-tu-anh.json`. Bộ từ soạn tay theo
+  30 chủ đề (`data/hai-tu/`), không từ kho Migii, cần Migii duyệt; `vi` trên ô không được chứa sẵn đáp án tiếng Anh.
 - Nói về điểm thì dùng "ước tính"; phần miễn phí là Part 1, 2, 5. Luật cho MC AI nằm trong prompt ở `ai.js`.
+- Lời dẫn Ninja đọc nằm ở `public/kich-ban.js` (lấy bằng `kb('mục', {…})` trong `public/index.html`); lời đọc đủ luật từng khung ở
+  `SEG_INTRO`. Thêm khung mới thì thêm mục `khung.<id>` (tên, luật gọn, câu chào, câu mời). Sửa xong nghe lại bằng `npm run demo`.
 - Người chơi ảo (bot, `bots.js`) **mặc định bật 6** từ 12/11/2026: người dùng chốt cần bot để mọi khung chạy được lúc mới mở live.
   Bot không gắn nhãn trên màn live (lộ ra thì ảnh hưởng uy tín, đã nói với người dùng), nên giữ các chặn: không lên vinh danh /
   bảng vàng, không được khen "nhanh nhất", không chiếm hạng của người thật, không làm MVP / kỷ lục Thế chữ. Tắt: `--bots 0`.

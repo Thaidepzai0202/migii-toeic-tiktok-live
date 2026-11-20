@@ -1,0 +1,33 @@
+{
+  "id": "douong",
+  "name": "Đồ uống",
+  "items": [
+    {"id": "water", "w": "water", "vi": "nước lọc", "ok": ["drinking water"], "p": "a clear glass of drinking water"},
+    {"id": "mineral-water", "w": "mineral water", "vi": "nước khoáng", "ok": [], "p": "a plastic bottle of mineral water"},
+    {"id": "milk", "w": "milk", "vi": "sữa", "ok": ["fresh milk"], "p": "a glass of white milk and a milk carton"},
+    {"id": "coffee", "w": "coffee", "vi": "cà phê", "ok": ["coffees"], "p": "a steaming cup of coffee on a saucer"},
+    {"id": "iced-coffee", "w": "iced coffee", "vi": "cà phê đá", "ok": ["ice coffee", "iced coffees"], "p": "a tall glass of iced coffee with ice cubes"},
+    {"id": "tea", "w": "tea", "vi": "trà", "ok": ["teas"], "p": "a cup of hot tea on a saucer"},
+    {"id": "green-tea", "w": "green tea", "vi": "trà xanh", "ok": [], "p": "a cup of light green tea with tea leaves"},
+    {"id": "iced-tea", "w": "iced tea", "vi": "trà đá", "ok": ["ice tea", "iced teas"], "p": "a plain glass of iced tea with ice cubes"},
+    {"id": "milk-tea", "w": "milk tea", "vi": "trà sữa", "ok": ["milk teas", "bubble tea", "boba tea", "boba"], "p": "a plastic cup of milk tea with tapioca pearls and straw"},
+    {"id": "lemon-tea", "w": "lemon tea", "vi": "trà chanh", "ok": ["lemon iced tea"], "p": "a glass of iced tea with lemon slices"},
+    {"id": "peach-tea", "w": "peach tea", "vi": "trà đào", "ok": [], "p": "a glass of iced tea with peach slices"},
+    {"id": "orange-juice", "w": "orange juice", "vi": "nước cam", "ok": ["oj"], "p": "a glass of orange juice with an orange slice"},
+    {"id": "apple-juice", "w": "apple juice", "vi": "nước táo", "ok": [], "p": "a glass of apple juice beside a red apple"},
+    {"id": "grape-juice", "w": "grape juice", "vi": "nước nho", "ok": [], "p": "a glass of purple grape juice with grapes"},
+    {"id": "lemonade", "w": "lemonade", "vi": "nước chanh", "ok": ["lemon juice", "limeade"], "p": "a glass of lemonade with lemon slices and ice"},
+    {"id": "coconut-water", "w": "coconut water", "vi": "nước dừa", "ok": ["coconut juice"], "p": "a green coconut with a drinking straw in it"},
+    {"id": "smoothie", "w": "smoothie", "vi": "sinh tố", "ok": ["smoothies"], "p": "a thick pink fruit smoothie with a straw"},
+    {"id": "milkshake", "w": "milkshake", "vi": "sữa lắc", "ok": ["milk shake", "milkshakes", "shake"], "p": "a milkshake with whipped cream and a cherry"},
+    {"id": "soda", "w": "soda", "vi": "nước ngọt", "ok": ["sodas", "soft drink", "soft drinks", "pop"], "p": "a glass of fizzy soda with bubbles and ice"},
+    {"id": "hot-chocolate", "w": "hot chocolate", "vi": "ca cao nóng", "ok": ["cocoa", "hot cocoa"], "p": "a mug of hot chocolate with marshmallows"},
+    {"id": "chocolate-milk", "w": "chocolate milk", "vi": "sữa sô cô la", "ok": [], "p": "a glass of brown chocolate milk with a straw"},
+    {"id": "soy-milk", "w": "soy milk", "vi": "sữa đậu nành", "ok": ["soya milk", "soymilk"], "p": "a glass of soy milk beside soybeans"},
+    {"id": "energy-drink", "w": "energy drink", "vi": "nước tăng lực", "ok": ["energy drinks"], "p": "a tall can of energy drink with a lightning bolt"},
+    {"id": "ice-cube", "w": "ice cube", "vi": "đá viên", "ok": ["ice cubes", "ice"], "p": "a few clear ice cubes"},
+    {"id": "tea-bag", "w": "tea bag", "vi": "túi trà", "ok": ["teabag", "tea bags", "teabags"], "p": "a tea bag with a string and tag"},
+    {"id": "straw", "w": "straw", "vi": "ống hút", "ok": ["straws", "drinking straw"], "p": "a red and white striped drinking straw"},
+    {"id": "coffee-bean", "w": "coffee bean", "vi": "hạt cà phê", "ok": ["coffee beans"], "p": "a pile of roasted brown coffee beans"}
+  ]
+}

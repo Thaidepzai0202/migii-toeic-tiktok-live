@@ -57,6 +57,8 @@ const CFG = {
   revealSec: clamp(arg('reveal', 3), 2, 20, 3), // giây dừng giữa 2 câu: hiện đáp án + đọc, rồi chuyển câu
   podiumSec: clamp(arg('podium', 15), 5, 60, 15), // giây màn vinh danh
   breakSec: clamp(arg('break', 20), 5, 180, 20), // giây nghỉ trước lượt mới
+  // Giây NGẦM nhận thêm bình luận sau khi đồng hồ trên màn về 0 (xem setPhase). 20/11/2026: người dùng đo màn live TikTok trễ ~4 giây so với server.
+  lateSec: clamp(arg('late', 4), 0, 8, 4),
   level: ['easy', 'mid', 'hard', 'all'].includes(arg('level')) ? arg('level') : 'easy',
   autoNext: true, // tắt = hết vinh danh thì chờ người dẫn bấm "Bắt đầu lượt"
   music: 0.25, // âm lượng nhạc nền 0..1 (0 = tắt)
@@ -80,26 +82,29 @@ const SEGMENTS = {
   // người dùng không đổi giờ các khung này.
   class: { icon: '📖', name: 'Giờ học', kind: 'học', rule: 'Ninja Migii dạy 3 từ mới rồi kiểm tra, gọi tên từng bạn', sec: 15 },
   quiz: { icon: '⚡', name: 'Đố nhanh', kind: 'giải trí', rule: 'Gõ số 1–4 chọn nghĩa đúng, nhanh nhất +10' },
-  scramble: { icon: '🧩', name: 'Ghép chữ', kind: 'giải trí', rule: 'Các chữ cái bị xáo trộn — gõ THỨ TỰ SỐ đúng (vd 31254) hoặc gõ luôn từ' },
+  scramble: { icon: '🧩', name: 'Ghép chữ', kind: 'giải trí', rule: 'Các chữ cái bị xáo trộn — ghép lại, gõ từ tiếng Anh vào bình luận (sai được gõ lại)' },
   reverse: { icon: '🔁', name: 'Chọn từ tiếng Anh', kind: 'học', rule: 'Nhìn nghĩa tiếng Việt, gõ số 1–4 chọn đúng từ tiếng Anh' },
   listen: { icon: '🎧', name: 'Luyện tai', kind: 'học', rule: 'Nghe Ninja đọc (không hiện chữ), gõ số 1–4 chọn nghĩa', sec: 15 },
   team: { icon: '🥊', name: 'So găng 2 đội', kind: 'giải trí', rule: 'Gõ tên đội để vào đội · trả lời đúng & tặng quà kéo điểm cho đội' },
   type: { icon: '✍️', name: 'Nghe & gõ chính tả', kind: 'học', rule: 'Nghe đọc + nhìn nghĩa, gõ từ tiếng Anh — gợi ý chữ cái mở dần', sec: 15 },
   // 4 kênh theo mốc TOEIC (11/11/2026): dưới 450 · 450–650 · 650–800 · 800+. Lệnh chạy từng kênh: npm run demo:duoi450 … (package.json).
-  //   dưới 450: word (từ 300+400), startend, hunt, chain · 450–650: word (500+600), fillin, listenmean, errhunt, crossword
+  //   dưới 450: word (từ 300+400), emoji (17/11), irrfill + irrfind (17/11, động từ bất quy tắc), bricky (19/11), oneletter (19/11, Thêm bớt 1 chữ), scramble, startend, listenmean, hunt, chain (16/11 thêm Ghép chữ + Nghe – nghĩa cho nhiều game) · 450–650: word (500+600), scramble (17/11, --level mid), fillin, listenmean, errhunt, crossword
   //   650–800: word (700), speedread, dictate · 800+: word (800+900), speedread (bài 800)
   // Các khung mới (word trở xuống) tính điểm riêng: nhanh nhất +10, hạng 2 +5, hạng 3 +3, người đúng sau đó +1.
   // Người chơi thử 11/11 đề nghị bỏ khung nghe, Săn từ, Giải ô chữ, Săn lỗi, Giờ học; người dùng chưa muốn bỏ nên vẫn giữ trong kênh.
-  word: { icon: '🔤', name: 'Word', kind: 'học', rule: 'Gõ A, B, C hoặc D: chọn nghĩa, chọn từ, tìm từ đồng nghĩa hoặc trái nghĩa' },
-  // sec/total/reveal: khung này có nhịp riêng (45 giây mỗi câu, 5 câu mỗi lượt, công bố 8 giây để đọc ví dụ)
-  startend: { icon: '🎯', name: 'Start or End', kind: 'giải trí', rule: 'Gõ 5 từ tiếng Anh bắt đầu hoặc kết thúc bằng chữ cho trước', sec: 45, total: 5, reveal: 8 },
-  // Săn từ: 120 giây mỗi bảng, 3 bảng mỗi lượt. Điểm 10/5/3/1.
-  hunt: { icon: '🔎', name: 'Săn từ', kind: 'giải trí', rule: 'Ma trận 10×10: tìm từ nối liền theo mọi hướng, ai tìm đủ 5 từ trước ăn điểm', sec: 120, total: 3, reveal: 10 },
+  word: { icon: '🔤', name: 'Word', kind: 'học', rule: 'Đua phi cơ: gõ A, B, C hoặc D, trả lời đúng thì phi cơ tăng tốc, nhanh nhất +10 km/h; câu cuối về đích', reveal: 7 },
+  // sec/total/reveal: khung này có nhịp riêng (45 giây mỗi câu, 3 câu mỗi lượt, công bố 8 giây để đọc ví dụ).
+  // 20/11/2026: 5 → 3 câu (người dùng duyệt): số liệu 16–20/11 tương tác thấp thứ hai (0,91 bình luận / người / phút, Word 2,61).
+  startend: { icon: '🎯', name: 'Start or End', kind: 'giải trí', rule: 'Gõ 5 từ tiếng Anh bắt đầu hoặc kết thúc bằng chữ cho trước', sec: 45, total: 3, reveal: 8 },
+  // Săn từ: 90 giây mỗi bảng, 2 bảng mỗi lượt (bảng 2 là về đích). Điểm 10/5/3/1.
+  // 20/11/2026 (người dùng duyệt): trước 120 giây × 3 bảng; tương tác thấp nhất (0,59 bình luận / người / phút) mà chiếm nhiều giờ phát.
+  // Giữ 2 bảng chứ không 1 để còn chặng về đích (mọi khung đều có, chốt 20/11).
+  hunt: { icon: '🔎', name: 'Săn từ', kind: 'giải trí', rule: 'Ma trận 10×10: tìm từ nối liền theo mọi hướng, ai tìm đủ 5 từ trước ăn điểm', sec: 90, total: 2, reveal: 10 },
   // Thế chữ: Black vs White, mỗi lượt 12 giây đổi đúng 1 chữ cái (13/11: người dùng tăng từ 8 lên 12 và thêm 4 giây nghỉ trước khi đếm, CHAIN_GRACE). Luật 13/11: không chia đội, người giữ từ cuối cùng thắng ván +10 (xem khối Thế chữ bên dưới). total = số ván mỗi lượt.
-  chain: { icon: '🔗', name: 'Thế chữ', kind: 'giải trí', rule: 'Mọi người cùng chơi: đổi 1 chữ cái để ra từ mới và giữ từ; hết 12 giây không ai thế được thì người giữ từ thắng +10', sec: 12, total: 3, reveal: 10 },
+  chain: { icon: '🔗', name: 'Thế chữ', kind: 'giải trí', rule: 'Mọi người cùng chơi: đổi 1 chữ cái để ra từ mới và giữ từ; hết 12 giây không ai thế được, hoặc chuỗi đủ 40 từ, thì người giữ từ thắng +10. Ván cuối tăng tốc: từ 5 chữ, được đổi 2 chữ', sec: 12, total: 3, reveal: 10 },
   // Điền từ (kênh 450–650, câu dùng từ mốc 500). Điểm 10/5/3/1 (như Word).
   fillin: { icon: '✏️', name: 'Điền từ', kind: 'học', rule: 'Câu thiếu 1 từ: chọn A, B, C hoặc D; có lời giải và các lỗi hay nhầm', sec: 20, total: 5, reveal: 18 },
-  listenmean: { icon: '🎧', name: 'Nghe – nghĩa', kind: 'học', rule: 'Nghe audio một lần, chữ cái hiện dần mỗi 2 giây, chọn nghĩa đúng', sec: 12, total: 8, reveal: 4 },
+  listenmean: { icon: '🎧', name: 'Nghe – nghĩa', kind: 'học', rule: 'Nghe audio một lần, chữ cái hiện sẵn một nửa rồi mỗi giây thêm 1, chọn nghĩa đúng', sec: 12, total: 8, reveal: 4 },
   // Săn lỗi: --err-file data/san-loi-600.json
   errhunt: { icon: '🔍', name: 'Săn lỗi', kind: 'học', rule: 'Câu có 1 từ sai: gõ "từ sai - từ đúng", ví dụ goning - going', sec: 30, total: 5, reveal: 15 },
   // Nghe – chép: --dict-file data/nghe-chep-700.json. Nghe câu tiếng Anh (phát lặp lại, cách 5 giây), gõ lại nguyên câu trong 40 giây; cứ 2 giây hiện thêm 1 loại chữ cái. Điểm 10/5/3/1.
@@ -108,13 +113,37 @@ const SEGMENTS = {
   speedread: { icon: '📰', name: 'Đọc nhanh', kind: 'học', rule: 'Đọc văn bản ngắn, tìm chi tiết được hỏi: gõ A, B, C hoặc D', sec: 20, total: 5, reveal: 12 },
   // Giải ô chữ: sec = thời gian mỗi hàng (câu nhỏ); total chỉ là chỗ giữ, số "câu" mỗi lượt = số hàng của ô chữ
   crossword: { icon: '🔠', name: 'Giải ô chữ', kind: 'giải trí', rule: 'Gõ chữ thường giải từng hàng, gõ CHỮ HOA để giải từ khoá hàng dọc (+50)', sec: 30, total: 1, reveal: 4 },
+  // Đoán emoji (17/11/2026, kênh dưới 450): --emoji-file data/emoji-400.json. 20 giây mỗi câu (đáp án từ 12 chữ cái: 30 giây). Điểm 10/5/3/1.
+  emoji: { icon: '🤔', name: 'Đoán emoji', kind: 'giải trí', rule: 'Nhìn emoji đoán từ tiếng Anh, gõ vào bình luận (sai được gõ lại); chữ cái gợi ý mở dần', sec: 20, total: 10, reveal: 5 },
+  // Động từ bất quy tắc (17/11/2026, kênh dưới 450): một game, hai mode chơi chạy thành hai khung, dùng chung --irr-file data/dong-tu-bqt.json. Điểm 10/5/3/1.
+  //   irrfill = mode "Chia từ": bảng 3 hàng V1–V2–V3, một hàng khuyết 1 ô, gõ từ còn thiếu · irrfind = mode "Tìm từ": chọn động từ bất quy tắc trong 4 từ.
+  irrfill: { icon: '📝', name: 'Chia động từ', kind: 'học', rule: 'Bảng động từ bất quy tắc V1 – V2 – V3 khuyết 1 ô: gõ từ còn thiếu vào bình luận (sai được gõ lại); chữ cái gợi ý mở dần', sec: 15, total: 8, reveal: 7 },
+  // Bricky (19/11/2026, kênh dưới 450): --bricky-file data/bricky.json (build_bricky.js). Mỗi bảng 40 giây, 4 bảng mỗi lượt. Điểm RIÊNG của khung:
+  //   mỗi từ hợp lệ +1 (mỗi người một lần cho mỗi từ, không giới hạn số từ), người thật đầu tiên tự gõ đủ mọi từ trên bảng +10. Xem khối Bricky bên dưới.
+  bricky: { icon: '🧱', name: 'Bricky', kind: 'giải trí', rule: 'Cho 4–5 chữ cái: ghép thành các từ tiếng Anh (3 chữ trở lên) rồi gõ vào bình luận; mỗi từ đúng +1, người đầu tiên điền đủ bảng +10. Bảng cuối: 6 chữ cái, 8 từ, thời gian ×1,5, điểm ×2', sec: 40, total: 4, reveal: 8 },
+  // Hái từ (19/11/2026, kênh dưới 450; lúc đầu tên Fruity, chỉ có trái cây; 20/11 người dùng mở thành 30 chủ đề): --haitu-dir data/hai-tu.
+  //   Mỗi bảng một chủ đề, lưới 4×4 ảnh, mỗi ô có chữ A–P, ảnh và tên tiếng Việt; gõ tên tiếng Anh: người gõ đúng ĐẦU TIÊN làm "quả" rụng và +2,
+  //   mỗi ô chỉ một người hái; hết bảng ai hái nhiều nhất +5. Xem khối Hái từ bên dưới.
+  haitu: { icon: '🍎', name: 'Hái từ', kind: 'giải trí', rule: 'Lưới 16 ảnh cùng một chủ đề kèm tên tiếng Việt: gõ tên tiếng Anh để hái; mỗi ô ai gõ đúng trước được +2, hết bảng ai hái nhiều nhất +5', sec: 60, total: 3, reveal: 8 },
+  // 20/11/2026: người dùng tăng 10 → 14 giây mỗi câu (Tìm bất quy tắc).
+  irrfind: { icon: '👀', name: 'Tìm bất quy tắc', kind: 'học', rule: 'Trong 4 động từ, chọn A, B, C hoặc D: từ nào là động từ bất quy tắc; công bố kèm dạng quá khứ của cả 4 từ', sec: 14, total: 8, reveal: 7 },
+  // Thêm bớt 1 chữ (19/11/2026, kênh dưới 450): --mot-chu-file data/mot-chu.json (build_mot_chu.js). Điểm 10/5/3/1; VỀ ĐÍCH = ONE_RED câu cuối lượt
+  // (từ rất dễ nhầm), điểm ×ONE_RED_MULT, giao diện lửa dùng chung với Bricky / Thế chữ. Xem khối Thêm bớt 1 chữ bên dưới.
+  oneletter: { icon: '✂️', name: 'Thêm bớt 1 chữ', kind: 'học', rule: 'Thêm hoặc bớt đúng 1 chữ cái (theo lệnh trên màn) để thành từ có nghĩa, gõ cả từ vào bình luận (sai được gõ lại). Câu cuối là VỀ ĐÍCH: từ rất dễ nhầm, điểm ×2', sec: 15, total: 10, reveal: 6 },
 };
 // Mặc định = kênh dưới 450 (11/11/2026). Chương trình cũ của bản Jaemy: --program-order class,quiz,scramble,listen,reverse,type
-const PROGRAM = String(arg('program-order', 'word,startend,hunt,chain')).split(',').filter((k) => SEGMENTS[k]);
+const PROGRAM = String(arg('program-order', 'word,emoji,irrfill,scramble,startend,irrfind,bricky,haitu,listenmean,oneletter,hunt,chain')).split(',').filter((k) => SEGMENTS[k]);
+// Số câu mỗi lượt riêng từng khung, vd --seg-total word=20,fillin=10 (17/11/2026: kênh 450–650 gấp đôi Word, Điền từ).
+// Khung không đặt thì giữ `total` ở SEGMENTS, không có thì theo --questions. Đổi lúc đang chạy: /cmd {"cmd":"config","cfg":{"segTotal":{…}}}.
+function setSegTotals(m) {
+  for (const [k, n] of Object.entries(m || {})) if (SEGMENTS[k] && k !== 'crossword') SEGMENTS[k].total = clamp(n, 1, 50, SEGMENTS[k].total);
+}
+setSegTotals(Object.fromEntries(String(arg('seg-total', '')).split(',').map((x) => x.split('=')).filter(([k, n]) => k && n)));
 let progIdx = 0;
 const segFor = () => (CFG.style === 'program' ? PROGRAM[progIdx % PROGRAM.length] : CFG.style); // khung của lượt KẾ TIẾP
 const curSeg = () => (game && phase !== 'break' ? game.seg : segFor());
-const segPub = (id) => ({ id, ...SEGMENTS[id] });
+// fin: chỉ khi lượt có từ 2 câu / bảng (markFinish cũng vậy), để màn giới thiệu không hứa "về đích" ở lượt 1 câu
+const segPub = (id) => ({ id, ...SEGMENTS[id], ...(FINISH_SEGS.has(id) && (id === 'crossword' || (SEGMENTS[id].total || CFG.questions) > 1) && { fin: { mult: FINISH_MULT, unit: finUnit(id) } }) });
 // So găng: mỗi lượt một cặp đội; gõ tên đội để chọn (không gõ thì tự xếp vào đội ít người hơn khi trả lời đúng/tặng quà)
 const TEAM_PAIRS = [
   [['🎧', 'Listening', 'listening|listen|nghe'], ['📖', 'Reading', 'reading|read|đọc|doc']],
@@ -192,7 +221,7 @@ function startEnd() {
 }
 // Khung Word / Start or End: nhanh nhất +10, hạng 2 +5, hạng 3 +3, những người đúng sau đó +1. Khung khác: 10, 8, 6, 4… tối thiểu 3.
 const RANK_PTS = [10, 5, 3];
-const ptsFor = (seg, rank) => (['word', 'startend', 'hunt', 'fillin', 'listenmean', 'errhunt', 'crossword', 'dictate', 'speedread'].includes(seg) ? RANK_PTS[rank] ?? 1 : Math.max(3, 10 - 2 * rank));
+const ptsFor = (seg, rank) => (['word', 'startend', 'hunt', 'fillin', 'listenmean', 'errhunt', 'crossword', 'dictate', 'speedread', 'emoji', 'irrfill', 'irrfind', 'oneletter'].includes(seg) ? RANK_PTS[rank] ?? 1 : Math.max(3, 10 - 2 * rank));
 
 // Săn từ: ma trận dựng sẵn trong data/san-tu-400.json (build_san_tu.js), mỗi bảng kèm danh sách MỌI từ hợp lệ có trong bảng
 // (từ giấu + từ thật vô tình mọc ra). Người xem gõ từ nào thì tra danh sách của bảng đó; tìm đủ HUNT_NEED từ khác nhau trước thì ăn điểm.
@@ -206,6 +235,76 @@ function pickBoard() {
   }
   if (!HUNT.bag.length) HUNT.bag = shuffle(HUNT.boards);
   return HUNT.bag.pop();
+}
+
+// ---------- khung 🍎 Hái từ ----------
+// Bộ từ soạn tay, mỗi chủ đề một file data/hai-tu/<chủ đề>.json { id, name, items: [{ id, w, vi, ok, p }] } (không lấy từ kho Migii: kho thiếu
+// từ cụ thể theo chủ đề; cần Migii duyệt). Ảnh (người dùng chốt: ảnh thật hoặc ảnh vẽ, KHÔNG emoji) ở public/img/hai-tu/<chủ đề>/<id>.jpg, nguồn
+// từng ảnh ghi ở data/hai-tu-anh.json; mục chưa có ảnh thì bỏ qua, chủ đề chưa đủ HAITU_N mục có ảnh thì chưa lên bảng.
+// Mỗi bảng bốc một chủ đề (xoay vòng hết các chủ đề mới lặp), trong chủ đề bốc HAITU_N mục (xoay vòng hết mục mới lặp).
+// Luật (người dùng chốt 19/11/2026): ô hiện chữ A–P, ảnh, tên tiếng Việt; gõ tên tiếng Anh (gõ kèm chữ ô như "A apple" cũng được). Mỗi bình luận
+// hợp lệ làm rụng ĐÚNG 1 ô: người gõ đúng đầu tiên +HAITU_PTS, ô đó hết với người khác. Hết bảng (hết giờ hoặc hết ô) người THẬT hái nhiều
+// nhất +HAITU_TOP (hoà thì người đạt số đó trước). Còn nửa thời gian thì ô chưa ai hái hiện chữ cái đầu.
+const HAITU_DIR = path.resolve(__dirname, String(arg('haitu-dir', 'data/hai-tu')));
+const HAITU_N = 16, HAITU_PTS = 2, HAITU_TOP = 5;
+let HAITUQ = null;
+function haituBank() {
+  if (!HAITUQ) {
+    const topics = [], thin = [];
+    let files = [];
+    try { files = fs.readdirSync(HAITU_DIR).filter((f) => f.endsWith('.json')).sort(); } catch {}
+    for (const f of files) {
+      const t = JSON.parse(fs.readFileSync(path.join(HAITU_DIR, f), 'utf8'));
+      const items = (t.items || []).filter((x) => fs.existsSync(path.join(__dirname, 'public', 'img', 'hai-tu', t.id, `${x.id}.jpg`)));
+      if (items.length >= HAITU_N) topics.push({ id: t.id, name: t.name, items, bag: [] });
+      else thin.push(`${t.name} ${items.length}/${(t.items || []).length}`);
+    }
+    HAITUQ = { topics, bag: [] };
+    console.log(`🍎 Hái từ: ${topics.length} chủ đề đủ ảnh (${topics.map((t) => `${t.name} ${t.items.length}`).join(', ') || 'chưa có'})${thin.length ? ` · chưa đủ ${HAITU_N} ảnh: ${thin.join(', ')}` : ''}`);
+  }
+  return HAITUQ;
+}
+function pickHaiTu() {
+  const Q = haituBank();
+  if (!Q.topics.length) throw new Error(`Hái từ: chưa có chủ đề nào đủ ${HAITU_N} ảnh trong public/img/hai-tu/`);
+  if (!Q.bag.length) Q.bag = shuffle(Q.topics);
+  const T = Q.bag.pop(), out = [];
+  while (out.length < HAITU_N) {
+    if (!T.bag.length) T.bag = shuffle(T.items.filter((x) => !out.includes(x)));
+    out.push(T.bag.pop());
+  }
+  return { topic: T, items: shuffle(out) };
+}
+
+// ---------- khung 🧱 Bricky ----------
+// Bộ đề dựng sẵn trong data/bricky.json (build_bricky.js): mỗi đề một bộ 4–5 chữ cái, `board` = 5–7 từ định sẵn lên bảng (từ Migii có nghĩa: bank.json + word-300/400),
+// `extra` = mọi từ tiếng Anh hợp lệ khác ghép được từ bộ chữ. Người xem gõ từ nào thì chỉ tra hai danh sách đó.
+// Luật (người dùng chốt 19/11/2026): mỗi người có tiến độ riêng; từ trên bảng mở ô khi có người gõ đúng đầu tiên (kèm tên), người khác gõ lại vẫn +1;
+// từ hợp lệ ngoài bảng cũng +1 và hiện ở dải "Từ thêm"; mỗi người chỉ được +1 một lần cho mỗi từ; người THẬT đầu tiên tự gõ đủ mọi từ trên bảng
+// +BRICKY_WIN. Bảng chỉ kết thúc khi hết giờ. Còn nửa thời gian thì mở chữ cái đầu của các từ chưa ai tìm ra.
+const BRICKY_FILE = path.resolve(__dirname, String(arg('bricky-file', 'data/bricky.json')));
+const BRICKY_WIN = 10;
+// Bảng CUỐI mỗi lượt (người dùng 19/11/2026): khó hơn và nhiều từ hơn (đề `finals`: bộ 6 chữ cái, 8 từ trên bảng), thời gian ×1,5, mọi điểm ×2,
+// giao diện "về đích" dùng chung với ván tăng tốc của Thế chữ (#stage.fire + màn chuyển Ninja đỏ). Đồng hồ đứng BRICKY_FINAL_GRACE giây đầu bảng
+// để màn chuyển (~3,4 giây) không ăn vào giờ chơi. File đề không có `finals` (hoặc lượt chỉ 1 bảng) thì không có bảng cuối.
+const BRICKY_FINAL_TIME = 1.5, BRICKY_FINAL_MULT = 2, BRICKY_FINAL_GRACE = 4;
+let BRICKYQ = null;
+function brickyBank() {
+  if (!BRICKYQ) {
+    const d = JSON.parse(fs.readFileSync(BRICKY_FILE, 'utf8'));
+    BRICKYQ = { sets: d.sets, finals: d.finals || [], bag: [], fbag: [] };
+    console.log(`🧱 Bricky: ${BRICKYQ.sets.length} đề + ${BRICKYQ.finals.length} đề bảng cuối từ ${path.relative(__dirname, BRICKY_FILE)}`);
+  }
+  return BRICKYQ;
+}
+function pickBricky(final) {
+  const Q = brickyBank();
+  if (final) {
+    if (!Q.fbag.length) Q.fbag = shuffle(Q.finals);
+    return Q.fbag.pop();
+  }
+  if (!Q.bag.length) Q.bag = shuffle(Q.sets);
+  return Q.bag.pop();
 }
 
 // ---------- khung 🔍 Săn lỗi và 🔠 Giải ô chữ (mốc 600) ----------
@@ -233,6 +332,69 @@ function pickDict() {
   }
   if (!DICTQ.bag.length) DICTQ.bag = shuffle(DICTQ.qs);
   return DICTQ.bag.pop();
+}
+// Khung Đoán emoji: câu làm sẵn trong data/emoji-400.json ({t, e, a, alt, m}; kiểm kho bằng node check_emoji.js).
+// t: ghep = từ ghép, mỗi emoji một nửa từ · mota = emoji tả nghĩa · cum = cụm từ. Gõ đúng a hoặc một alt (bỏ dấu cách, hoa thường) là đúng.
+const EMOJI_FILE = path.resolve(__dirname, String(arg('emoji-file', 'data/emoji-400.json')));
+let EMOJIQ = null;
+function pickEmoji() {
+  if (!EMOJIQ) {
+    EMOJIQ = { qs: JSON.parse(fs.readFileSync(EMOJI_FILE, 'utf8')).questions, bag: [] };
+    console.log(`🤔 Đoán emoji: ${EMOJIQ.qs.length} câu từ ${path.relative(__dirname, EMOJI_FILE)}`);
+  }
+  if (!EMOJIQ.bag.length) EMOJIQ.bag = shuffle(EMOJIQ.qs);
+  return EMOJIQ.bag.pop();
+}
+// Ô chữ theo từng từ của đáp án. Gợi ý theo hintLevel(): 1 = chữ cái đầu mỗi từ, 2 = mở thêm các chữ ở round.emoji.open; công bố thì hiện hết.
+function emojiSlots(rev) {
+  const E = round.emoji, lv = rev ? 0 : hintLevel();
+  return E.words.map((w, k) => [...w].map((ch, i) => (rev ? { ch, kind: 'full' } : (lv >= 1 && i === 0) || (lv >= 2 && E.open[k].includes(i)) ? { ch, kind: 'cho' } : { ch: '', kind: 'empty' })));
+}
+// Hai khung Động từ bất quy tắc: kho soạn tay trong data/dong-tu-bqt.json (kiểm bằng node check_bqt.js), câu hỏi dựng ở irregular.js.
+const IRR_FILE = path.resolve(__dirname, String(arg('irr-file', 'data/dong-tu-bqt.json')));
+let IRR = null;
+function irrBank() {
+  if (!IRR) {
+    IRR = require('./irregular').create(JSON.parse(fs.readFileSync(IRR_FILE, 'utf8')));
+    console.log(`📝 Động từ bất quy tắc: ${IRR.verbs.length} từ (Chia động từ dùng ${IRR.fillable.length}) + ${IRR.regular.length} động từ có quy tắc từ ${path.relative(__dirname, IRR_FILE)}`);
+  }
+  return IRR;
+}
+// ---------- khung ✂️ Thêm bớt 1 chữ ----------
+// Đề dựng sẵn trong data/mot-chu.json (build_mot_chu.js): { k: 'add'|'cut', s: chữ hiện ra, w: đáp án, m: nghĩa của đáp án, pos?, i, ch, sm? }.
+// add = THÊM 1 chữ (s thiếu chữ ch, chèn vào trước s[i]) · cut = BỚT 1 chữ (s[i] = ch là chữ thừa). Người xem gõ cả từ đáp án, sai được gõ lại.
+// Câu thường mỗi câu chỉ có MỘT từ trong từ điển thêm/bớt 1 chữ mà ra (build đã kiểm), nên chỉ chấm đúng từ w.
+// VỀ ĐÍCH (người dùng chốt 19/11/2026 "về đích sẽ là từ rất dễ nhầm"): ONE_RED câu cuối lượt lấy từ `red` (cặp từ thật dễ nhầm như desert → dessert,
+// hoặc lỗi chính tả hay gặp như adress), điểm ×ONE_RED_MULT, giao diện lửa (#stage.fire). Câu đỏ đầu tiên đứng đồng hồ ONE_RED_GRACE giây cho màn chuyển Ninja đỏ.
+const MOTCHU_FILE = path.resolve(__dirname, String(arg('mot-chu-file', 'data/mot-chu.json')));
+const ONE_RED = 3, ONE_RED_MULT = 2, ONE_RED_GRACE = 4;
+let MOTCHU = null;
+function pickOneLetter(red) {
+  if (!MOTCHU) {
+    const d = JSON.parse(fs.readFileSync(MOTCHU_FILE, 'utf8'));
+    MOTCHU = { qs: d.questions, red: d.red || [], bag: [], rbag: [] };
+    console.log(`✂️ Thêm bớt 1 chữ: ${MOTCHU.qs.length} câu + ${MOTCHU.red.length} câu về đích từ ${path.relative(__dirname, MOTCHU_FILE)}`);
+  }
+  if (red && MOTCHU.red.length) {
+    if (!MOTCHU.rbag.length) MOTCHU.rbag = shuffle(MOTCHU.red);
+    return MOTCHU.rbag.pop();
+  }
+  if (!MOTCHU.bag.length) MOTCHU.bag = shuffle(MOTCHU.qs);
+  return MOTCHU.bag.pop();
+}
+// Số câu về đích của lượt: 3 câu cuối khi lượt đủ 9 câu, lượt ngắn thì ít hơn (lượt dưới 4 câu không có về đích)
+const oneRedN = () => (game.total >= 4 ? Math.min(ONE_RED, Math.floor(game.total / 3)) : 0);
+// Gợi ý (từ mức hintLevel() 1): THÊM = đánh dấu chỗ thiếu chữ · BỚT = khoanh cặp 2 chữ có chữ thừa. Không bao giờ hiện chính chữ cái thêm/bớt.
+function oneHint(rev) {
+  const O = round.one;
+  if (rev || hintLevel() < 1) return null;
+  return O.q.k === 'add' ? { gap: O.q.i } : { pair: O.pair };
+}
+
+// Ô chữ của ô khuyết (khung Chia động từ). Gợi ý theo hintLevel(): 1 = chữ cái đầu, 2 = mở thêm chữ ở round.irr.open; công bố thì hiện hết.
+function irrSlots(rev) {
+  const I = round.irr, lv = rev ? 0 : hintLevel();
+  return [...I.ans].map((ch, i) => (rev ? { ch, kind: 'full' } : (lv >= 1 && i === 0) || (lv >= 2 && I.open.includes(i)) ? { ch, kind: 'cho' } : { ch: '', kind: 'empty' }));
 }
 // Chữ cái hiện dần: 0,1,2… = số loại chữ đã hiện (mỗi 2 giây thêm 1, không tự hiện hết); hiện hết khi công bố
 function dictLevel() { return Math.floor((now() - timer.startedAt) / 2000); }
@@ -312,7 +474,7 @@ function crossAfterReveal() {
 }
 function crossScore(user, item, base, rank, big) {
   const gp = gamePlayer(user), dp = user.bot ? { score: 0, correct: 0 } : dayPlayer(user);
-  let pts = base;
+  let pts = base * (round.mult || 1); // về đích (hàng cuối / vòng từ khoá cuối): ×2
   if (!big) {
     const b = boosts.get(user.uid) || 0;
     if (b > 0) { pts *= 2; boosts.set(user.uid, b - 1); }
@@ -410,9 +572,13 @@ function makeLmOptions(x) {
   const options = shuffle([viDisp(x), ...out]).map(cap);
   return { options, answerIdx: options.indexOf(cap(viDisp(x))) };
 }
-function lmLevel() { // 0,1,2… = số loại chữ cái đã hiện (mỗi 2 giây thêm 1); 99 = hiện hết (3 giây cuối)
+// Số loại chữ cái đã hiện; 99 = hiện hết (3 giây cuối). 20/11/2026 (người dùng duyệt): người xem lướt TikTok hay tắt tiếng và khung này
+// mất người xem nhanh nhất (−5,5%/phút) → hiện sẵn MỘT NỬA số loại chữ ngay từ đầu, mỗi GIÂY thêm 1 (trước: bắt đầu trống, 2 giây thêm 1),
+// nên vài giây là đọc được cả từ; người nghe được vẫn đoán sớm hơn nên vẫn có lợi.
+function lmLevel() {
   const t = (now() - timer.startedAt) / 1000;
-  return t >= SEGMENTS.listenmean.sec - 3 ? 99 : Math.floor(t / 2);
+  if (t >= SEGMENTS.listenmean.sec - 3) return 99;
+  return Math.floor((round?.lm?.order.length || 0) / 2) + Math.max(0, Math.floor(t));
 }
 function lmSlots(rev) { // chỉ gửi những chữ ĐÃ hiện, chữ chưa hiện là '' (không để lộ đáp án trong trạng thái gửi đi)
   const lv = rev ? 99 : lmLevel(), shown = new Set(lv >= 99 ? round.lm.order : round.lm.order.slice(0, lv));
@@ -431,68 +597,171 @@ const CHAIN_SEC = SEGMENTS.chain.sec;
 const CHAIN_GRACE = 4;
 const CHAIN_LATE = 3;
 const CHAIN_WIN = 10;
-function chainClock() {
+// 17/11/2026 (người dùng đồng ý): ván quá dài làm người xem bỏ đi (ván 135 từ ≈ 11 phút, người vào mới giảm một nửa) →
+// chuỗi đủ CHAIN_MAX từ hoặc ván đã chạy CHAIN_MAX_SEC giây thì người vừa thế được từ thắng luôn. Kỷ lục cũ (243 từ) vì thế không phá được nữa.
+const CHAIN_MAX = 40;
+const CHAIN_MAX_SEC = 180;
+// 19/11/2026 (người dùng chốt bản nâng cấp):
+// · Chữ khoá: mỗi ván có 1 vị trí bị khoá (round.lock), chữ ở đó không được đổi.
+// · Ván CUỐI của lượt là "tăng tốc": từ CHAIN_FINAL_LEN chữ, ai cũng được đổi 1 hoặc 2 chữ (round.max = 2), màn live chuyển sang giao diện lửa.
+// · Chuỗi đủ CHAIN_SWAP từ: hệ thống tự ra một từ mới, người giữ từ vẫn giữ (chống quẩn quanh một cụm từ).
+// · Quà (tính theo xu của MỘT lần tặng, 1 hoa hồng = 1 xu), chỉ có tác dụng trong lượt Thế chữ đang chơi, bot không có:
+//     ≥ x2 xu   : thắng ván nào trong lượt thì điểm ván đó nhân đôi
+//     ≥ extra xu: mỗi extra xu được MỘT lần đổi 2 chữ cái ở ván từ 4 chữ (ván 5 chữ ai cũng đổi 2 chữ được nên không cần)
+//     ≥ swap xu : ra từ mới ngay và người tặng thành người giữ từ; mỗi người một lần trong lượt. Tặng lúc đang công bố thì áp vào ván kế.
+const CHAIN_SWAP = 30;
+// 20/11/2026: người dùng TẠM bỏ chữ khoá (ván nào cũng round.lock = -1). Bật lại: đặt true, rồi thêm lại câu "chữ có khoá/🔒 thì giữ nguyên"
+// ở SEGMENTS.chain.rule, tóm tắt cho MC AI (tìm "chữ đang bị khoá"), dòng luật + SEG_INTRO chain trong public/index.html, chain.gon + hoi_chain trong public/kich-ban.js.
+const CHAIN_LOCK = false;
+const CHAIN_FINAL_LEN = 5;
+const CHAIN_FINAL_GRACE = 4; // ván tăng tốc: đồng hồ đứng thêm chừng này giây cho màn chuyển "TĂNG TỐC"
+const CHAIN_GIFT = { x2: 1, extra: 3, swap: 10 };
+function chainClock(extra = 0) {
   setPhase('question', CHAIN_SEC);
-  timer.startedAt += CHAIN_GRACE * 1000; // màn live: chưa tới startedAt thì đồng hồ đứng ở CHAIN_SEC
-  timer.endsAt += (CHAIN_GRACE + CHAIN_LATE) * 1000; // màn live nhận endsAt đã trừ CHAIN_LATE (publicState) nên thấy 0 rồi mới hết thật
+  if (round) round.grace = CHAIN_GRACE + extra; // bot chờ hết khoảng đồng hồ đứng mới gõ
+  timer.startedAt += (CHAIN_GRACE + extra) * 1000; // màn live: chưa tới startedAt thì đồng hồ đứng ở CHAIN_SEC
+  timer.endsAt += (CHAIN_GRACE + extra + CHAIN_LATE) * 1000; // màn live nhận endsAt đã trừ CHAIN_LATE (publicState) nên thấy 0 rồi mới hết thật
 }
 const CHAIN_REC_FILE = path.join(__dirname, 'data', 'the-chu-record.json');
 let chainRec = { len: 0 };
 try { chainRec = JSON.parse(fs.readFileSync(CHAIN_REC_FILE, 'utf8')); } catch {}
 const CHAIN_LETTERS = 'abcdefghijklmnopqrstuvwxyz';
-let CHAINDICT = null;
-function chainDict() { // mọi chuỗi 4 chữ cái là từ hợp lệ (~2.700 từ, dựng một lần ~0,2 giây) + hàm láng giềng (đổi đúng 1 chữ cái)
-  if (CHAINDICT) return CHAINDICT;
-  const set = new Set();
-  const rec = (p, str) => { if (p === 4) { if (dict.isWord(str)) set.add(str); return; } for (const c of CHAIN_LETTERS) rec(p + 1, str + c); };
-  rec(0, '');
-  const neighbors = (w) => { const r = []; for (let i = 0; i < w.length; i++) for (const c of CHAIN_LETTERS) if (c !== w[i]) { const x = w.slice(0, i) + c + w.slice(i + 1); if (set.has(x)) r.push(x); } return r; };
-  // từ bắt đầu: từ 4 chữ trong bộ từ của mốc, có ít nhất 3 láng giềng (để đội đi trước không bị kẹt ngay)
+// Bộ từ hợp lệ theo độ dài: thử mọi chuỗi chữ cái qua từ điển. 4 chữ ~0,2 giây; 5 chữ ~4 giây nên dựng dần theo chữ cái đầu
+// (chainWarm, mỗi nhịp ~0,15 giây) ngay lúc bật server để ván tăng tốc không làm đứng màn live.
+const chainSets = {};
+function chainSet(L, budget = 26) {
+  const S = chainSets[L] || (chainSets[L] = { set: new Set(), k: 0 });
+  const rec = (p, str) => { if (p === L) { if (dict.isWord(str)) S.set.add(str); return; } for (const c of CHAIN_LETTERS) rec(p + 1, str + c); };
+  while (S.k < 26 && budget-- > 0) rec(1, CHAIN_LETTERS[S.k++]);
+  return S;
+}
+function chainWarm(L) { if (chainSet(L, 1).k < 26) setImmediate(() => chainWarm(L)); }
+const CHAINDICTS = {};
+function chainDict(L = 4) {
+  if (CHAINDICTS[L]) return CHAINDICTS[L];
+  const { set } = chainSet(L);
+  // láng giềng: đổi 1 chữ (max = 1) hoặc 1–2 chữ (max = 2), không đụng vị trí khoá
+  const neighbors = (w, max = 1, lock = -1) => {
+    const r = new Set();
+    for (let i = 0; i < L; i++) {
+      if (i === lock) continue;
+      for (const c of CHAIN_LETTERS) {
+        if (c === w[i]) continue;
+        const x = w.slice(0, i) + c + w.slice(i + 1);
+        if (set.has(x)) r.add(x);
+        if (max < 2) continue;
+        for (let j = i + 1; j < L; j++) {
+          if (j === lock) continue;
+          for (const d of CHAIN_LETTERS) { if (d === w[j]) continue; const y = x.slice(0, j) + d + x.slice(j + 1); if (set.has(y)) r.add(y); }
+        }
+      }
+    }
+    return [...r];
+  };
+  // từ bắt đầu: từ L chữ trong bộ từ của mốc, có ít nhất 3 láng giềng (để ván không kẹt ngay)
   let pool = [];
   try { pool = loadWordQ().words; } catch {}
   if (!pool.length) pool = BANK_ALL.map((x) => x.w);
-  const starts = [...new Set(pool.map((w) => String(w).toLowerCase()))].filter((w) => w.length === 4 && set.has(w) && neighbors(w).length >= 3);
-  const common = new Set(pool.map((w) => String(w).toLowerCase()).filter((w) => w.length === 4 && set.has(w)));
-  CHAINDICT = { set, neighbors, starts, common, recent: [] };
-  console.log(`🔗 Thế chữ: ${set.size} từ 4 chữ hợp lệ, ${starts.length} từ bắt đầu · kỷ lục hiện tại ${chainRec.len || 0} từ`);
-  return CHAINDICT;
+  const mine = [...new Set(pool.map((w) => String(w).toLowerCase()))].filter((w) => w.length === L && set.has(w));
+  const starts = mine.filter((w) => neighbors(w, L === 4 ? 1 : 2).length >= 3);
+  const D = CHAINDICTS[L] = { L, set, neighbors, starts, common: new Set(mine), recent: [] };
+  console.log(`🔗 Thế chữ: ${set.size} từ ${L} chữ hợp lệ, ${starts.length} từ bắt đầu · kỷ lục hiện tại ${chainRec.len || 0} từ`);
+  return D;
+}
+// Chọn từ mới (đầu ván, quà đổi từ, tự đổi sau CHAIN_SWAP từ) sao cho còn ít nhất 3 cách thế chưa dùng.
+// lock = null: chọn luôn vị trí khoá cho ván · lock = số: ván đã có vị trí khoá, giữ nguyên.
+function chainPick(D, max, used, lock = null) {
+  if (!CHAIN_LOCK) lock = -1;
+  const ok = (w) => !used.has(w);
+  let pool = D.starts.filter((w) => ok(w) && !D.recent.includes(w));
+  if (!pool.length) pool = D.starts.filter(ok);
+  if (!pool.length) pool = D.starts;
+  const left = (w, p) => D.neighbors(w, max, p).filter(ok).length;
+  let w = pool[Math.floor(Math.random() * pool.length)], lk = lock ?? -1;
+  for (let k = 0; k < 60; k++) {
+    const c = pool[Math.floor(Math.random() * pool.length)];
+    const locks = lock != null ? (left(c, lock) >= 3 ? [lock] : []) : [...Array(D.L).keys()].filter((p) => left(c, p) >= 3);
+    if (locks.length) { w = c; lk = locks[Math.floor(Math.random() * locks.length)]; break; }
+  }
+  D.recent.push(w);
+  if (D.recent.length > 20) D.recent.shift();
+  return { w, lock: lk };
 }
 const chainPlayer = (user) => {
   const P = game.chain.players;
   return P.get(user.uid) || P.set(user.uid, { uid: user.uid, name: user.name, avatar: user.avatar || '', attempts: 0, valid: 0, wins: 0, ...(user.bot && { bot: true }) }).get(user.uid);
 };
 
+const chainHolder = (user) => ({ uid: user.uid, name: user.name, avatar: user.avatar || '', ...(user.bot && { bot: true }) });
 function startChainMatch() {
-  const D = chainDict();
   game.qNo++;
   questionsTotal++;
-  const fresh = D.starts.filter((w) => !D.recent.includes(w));
-  const pool = fresh.length ? fresh : D.starts;
-  const start = pool[Math.floor(Math.random() * pool.length)];
-  D.recent.push(start);
-  if (D.recent.length > 20) D.recent.shift();
-  round = { mode: 'chain', stage: 'turn', sec: CHAIN_SEC, grace: CHAIN_GRACE, late: CHAIN_LATE, cur: start, holder: null, used: new Set([start]), log: [],
+  const final = game.total > 1 && game.qNo >= game.total; // ván cuối của lượt: tăng tốc
+  const L = final ? CHAIN_FINAL_LEN : 4, max = final ? 2 : 1, D = chainDict(L);
+  const { w: start, lock } = chainPick(D, max, new Set());
+  round = { mode: 'chain', stage: 'turn', sec: CHAIN_SEC, grace: CHAIN_GRACE, late: CHAIN_LATE, cur: start, holder: null, used: new Set([start]), log: [], t0: now(),
+    len: L, max, lock, final,
     chain: [{ w: start, by: null }], word: { w: start, m: '', r: '', pos: '' }, winners: [], realWinners: 0, answered: new Set(), feed: [], lastHint: 0 };
-  chainClock();
+  // quà "đổi từ" tặng lúc ván trước đang công bố: người tặng giữ luôn từ mở ván này
+  const pend = game.chain.swapNext;
+  if (pend) { game.chain.swapNext = null; round.holder = chainHolder(pend); round.chain[0] = { w: start, by: pend.name, sys: true }; }
+  chainClock(final ? CHAIN_FINAL_GRACE : 0);
   push();
   sim?.onChain?.(round, chainHelpers());
   botsChain(round);
 }
 
 function chainHelpers() {
-  const D = chainDict();
-  // cho bot / khán giả ảo: láng giềng của từ, kiểm từ, từ thông dụng (từ 4 chữ của bộ từ mốc) để bot không gõ từ hiếm
-  return { neighbors: D.neighbors, isWord: (w) => D.set.has(w), common: D.common };
+  const D = chainDict(round?.len || 4), R = round;
+  // cho bot / khán giả ảo: láng giềng theo luật của ván (số chữ được đổi, vị trí khoá), kiểm từ, từ thông dụng (từ trong bộ từ mốc) để bot không gõ từ hiếm
+  return { neighbors: (w) => D.neighbors(w, R?.max || 1, R?.lock ?? -1), isWord: (w) => D.set.has(w), common: D.common };
+}
+
+// Ra từ mới giữa ván. user: người tặng quà đổi từ (thành người giữ từ) · không có user: hệ thống tự đổi, người giữ từ giữ nguyên.
+function chainNewWord(user) {
+  const R = round, { w } = chainPick(chainDict(R.len), R.max, R.used, R.lock);
+  R.used.add(w);
+  R.chain.push({ w, by: user ? user.name : null, sys: true });
+  R.cur = w;
+  R.word.w = w;
+  if (user) R.holder = chainHolder(user);
+  broadcast({ type: 'chainFx', kind: user ? 'swap' : 'auto', name: user?.name || null, w, len: R.chain.length });
+}
+
+// Quà trong lượt Thế chữ (gọi từ onGift). total = số xu của lần tặng này.
+function chainGift(user, total) {
+  const C = game.chain, R = round;
+  const P = C.perks.get(user.uid) || C.perks.set(user.uid, { x2: false, extra: 0, swapped: false }).get(user.uid);
+  const got = [];
+  let left = total;
+  if (!P.x2 && total >= CHAIN_GIFT.x2) { P.x2 = true; got.push('x2'); }
+  if (left >= CHAIN_GIFT.swap && !P.swapped) {
+    const live = R?.mode === 'chain' && R.stage === 'turn' && phase === 'question';
+    if (live || game.qNo < game.total) { // hết ván cuối rồi thì không còn gì để đổi: phần xu này tính sang quyền đổi 2 chữ
+      P.swapped = true; left -= CHAIN_GIFT.swap; got.push('swap');
+      if (live) {
+        chainNewWord(user);
+        if (R.chain.length >= CHAIN_MAX) return endChainMatch();
+        chainClock();
+        sim?.onChain?.(R, chainHelpers());
+        botsChain(R);
+      } else C.swapNext = { uid: user.uid, name: user.name, avatar: user.avatar || '' };
+    }
+  }
+  const n = Math.floor(left / CHAIN_GIFT.extra);
+  if (n > 0) { P.extra += n; got.push('extra'); }
+  if (got.length) broadcast({ type: 'chainFx', kind: 'perk', name: user.name, got, extra: P.extra });
 }
 
 // hết giờ (hoặc người dẫn bấm "Công bố"): không ai thế được nữa → người đang giữ từ thắng ván, +CHAIN_WIN điểm (chỉ người thắng có điểm)
 function endChainMatch() {
   const C = game.chain, W = round.holder, len = round.chain.length;
+  const x2 = !!(W && !W.bot && C.perks.get(W.uid)?.x2), pts = CHAIN_WIN * (x2 ? 2 : 1);
   if (W) {
     chainPlayer(W).wins++;
     const gp = gamePlayer(W), dp = W.bot ? { score: 0, correct: 0 } : dayPlayer(W);
-    gp.score += CHAIN_WIN; gp.correct++;
-    dp.score += CHAIN_WIN; dp.correct++;
+    gp.score += pts; gp.correct++;
+    dp.score += pts; dp.correct++;
     if (!W.bot) correctTotal++;
   }
   const isNew = len > (chainRec.len || 0) && round.chain.some((c) => c.by && !c.bot); // chuỗi toàn bot không lập kỷ lục
@@ -502,7 +771,7 @@ function endChainMatch() {
   }
   C.matches.push({ len, winner: W?.name || null });
   round.stage = 'over';
-  round.stats = { winner: W ? { name: W.name, avatar: W.avatar } : null, pts: CHAIN_WIN, len, isNew, record: chainRec.len || 0 };
+  round.stats = { winner: W ? { name: W.name, avatar: W.avatar } : null, pts, x2, len, isNew, record: chainRec.len || 0 };
   console.log(`🔗 Ván ${game.qNo}: ${W ? W.name + ' thắng' : 'không ai thế được từ đầu'}, chuỗi ${len} từ${isNew ? ' (KỶ LỤC MỚI)' : ''}: ${round.chain.map((c) => c.w).join(' → ')}`);
   prev = { w: round.chain[0].w, m: `chuỗi ${len} từ`, n: 0 };
   saveScores();
@@ -526,9 +795,14 @@ function onChainChat(user, msg, item) {
   if (R?.mode === 'chain' && R.stage === 'turn' && phase === 'question' && /^[a-z]+$/.test(w) && w.length === R.cur.length) {
     const m = chainPlayer(user), cur = R.cur;
     m.attempts++;
-    let why = null, diff = 0;
-    for (let i = 0; i < w.length; i++) if (w[i] !== cur[i]) diff++;
-    if (diff !== 1) why = diff === 0 ? 'giống từ hiện tại' : 'chỉ được đổi 1 chữ cái';
+    let why = null, diff = 0, lockHit = false;
+    for (let i = 0; i < w.length; i++) if (w[i] !== cur[i]) { diff++; if (i === R.lock) lockHit = true; }
+    // ván 4 chữ: ai có quyền từ quà (perks.extra) thì được đổi 2 chữ một lần; ván 5 chữ: ai cũng được đổi 2 chữ
+    const perk = user.bot ? null : game.chain.perks.get(user.uid);
+    const allow = Math.max(R.max, R.max < 2 && perk?.extra > 0 ? 2 : 1);
+    if (diff === 0) why = 'giống từ hiện tại';
+    else if (diff > allow) why = allow > 1 ? 'chỉ được đổi tối đa 2 chữ cái' : 'chỉ được đổi 1 chữ cái';
+    else if (lockHit) why = `chữ ${cur[R.lock].toUpperCase()} bị khoá`;
     if (!why && R.holder?.uid === user.uid) why = 'bạn đang giữ từ, chờ người khác thế';
     if (!why && R.used.has(w)) why = 'từ đã dùng';
     if (!why && !dict.isWord(w)) why = 'không có trong từ điển';
@@ -540,11 +814,16 @@ function onChainChat(user, msg, item) {
     if (R.feed.length > 40) R.feed.splice(0, R.feed.length - 40);
     if (why) return push();
     m.valid++;
+    const usedPerk = diff > R.max; // đổi 2 chữ ở ván 4 chữ: trừ một quyền từ quà
+    if (usedPerk) perk.extra--;
     R.used.add(w);
     R.chain.push({ w, by: user.name, ...(user.bot && { bot: true }) });
     R.cur = w;
     R.word.w = w;
-    R.holder = { uid: user.uid, name: user.name, avatar: user.avatar || '', ...(user.bot && { bot: true }) };
+    R.holder = chainHolder(user);
+    if (usedPerk) broadcast({ type: 'chainFx', kind: 'used', name: user.name, extra: perk.extra });
+    if (R.chain.length >= CHAIN_MAX || now() - R.t0 >= CHAIN_MAX_SEC * 1000) return endChainMatch(); // ván đủ dài: người vừa thế thắng
+    if (R.chain.length % CHAIN_SWAP === 0) chainNewWord(); // chuỗi đủ dài: hệ thống ra từ mới, người vừa thế vẫn giữ từ
     chainClock();
     push();
     sim?.onChain?.(R, chainHelpers());
@@ -709,6 +988,18 @@ const pub = ({ name, avatar, score, correct, wins, first, uid, bot }) => ({ name
 const ranked = (map) => [...map.values()].sort((a, b) => b.score - a.score || b.correct - a.correct);
 const dayBoard = (n = 8) => ranked(scores).slice(0, n).map(pub);
 const gameBoard = (n = 8) => (game ? ranked(game.players).slice(0, n).map(pub) : []);
+// Khung Word = đua phi cơ (người dùng chốt 20/11/2026): điểm giữ nguyên cách tính, màn live ghi kèm "km/h" và vẽ mỗi người một phi cơ,
+// khoảng cách giữa các phi cơ theo điểm. Chỉ hiện ai TRÊN RACE_MIN điểm, tối đa RACE_MAX chiếc, người thật được ưu tiên chỗ trước bot.
+// ok (chỉ gửi khi công bố): câu này trả lời đúng hay không (sai hoặc bỏ câu = hỏng động cơ, chỉ là hình ảnh, không trừ điểm) · fast: người thật đúng nhanh nhất.
+const RACE_MIN = 2, RACE_MAX = 20, RACE_FINAL_GRACE = 4;
+function raceState(rev) {
+  const all = ranked(game.players).filter((p) => p.score > RACE_MIN);
+  const list = [...all.filter((p) => !p.bot), ...all.filter((p) => p.bot)].slice(0, RACE_MAX).sort((a, b) => b.score - a.score || b.correct - a.correct);
+  const ok = new Set(round.winners);
+  return { no: game.qNo, total: game.total, final: !!round.final, more: all.length - list.length,
+    planes: list.map((p) => ({ name: p.name, avatar: p.avatar || '', score: p.score, ...(boosts.get(p.uid) && { x2: true }), ...(p.bot && { bot: true }),
+      ...(rev && { ok: ok.has(p.uid), ...(round.fastUid === p.uid && { fast: true }) }) })) };
+}
 
 const now = () => pausedAt || Date.now();
 // Mức gợi ý theo thời gian: 0 = ô trống (biết số chữ cái), 1 = hiện chữ cái đầu, 2 = mở thêm 1 chữ.
@@ -763,7 +1054,7 @@ function publicState() {
     now: Date.now(),
     game: gameInfo(),
     nextGame: gameNo + 1,
-    cfg: { questions: CFG.questions, roundSec: CFG.roundSec, music: CFG.music, voice: CFG.voice, neu: tts.enabled, mode: CFG.mode, style: CFG.style, teachSec: CFG.teachSec, ...(MUTE && { mute: true }) },
+    cfg: { questions: CFG.questions, roundSec: CFG.roundSec, music: CFG.music, voice: CFG.voice, neu: tts.enabled, neuVoice: tts.VOICE, mode: CFG.mode, style: CFG.style, teachSec: CFG.teachSec, ...(MUTE && { mute: true }) },
     seg: segPub(curSeg()),
     next: segPub(segFor()),
     program: CFG.style === 'program' ? PROGRAM.map((k) => ({ id: k, icon: SEGMENTS[k].icon, name: SEGMENTS[k].name })) : null,
@@ -785,6 +1076,8 @@ function publicState() {
     s.podium = podium;
   } else {
     const rev = phase === 'reveal';
+    // chặng về đích dùng chung (markFinish): first = câu mở màn chuyển, unit = "Câu" / "Bảng" / "Hàng" cho thanh trên và màn chuyển
+    if (round.fin) s.fin = { mult: round.mult, first: !!round.finGrace, unit: round.stage === 'key' ? 'Từ khoá' : finUnit(game.seg) };
     if (round.mode === 'mcq') {
       // Từ tiếng Anh + phiên âm hiện NGAY (đáp án là nghĩa). Câu "nghe": giấu chữ/phiên âm tới lúc công bố.
       const showWord = rev || !round.listen;
@@ -805,6 +1098,8 @@ function publicState() {
         ...(round.wq && { wq: round.wq, ansAudio: rev && ['m2w', 'syn', 'ant', 'fill'].includes(round.wq.t) ? audioUrl(round.options[round.answerIdx]) : null }),
         ...(round.fill && { fill: { s: round.fill.s, ...(rev && fillReveal()) } }), // lời giải chỉ gửi khi công bố
         ...(round.lm && { lm: { slots: lmSlots(rev) } }),
+        // Tìm bất quy tắc: dạng quá khứ của cả 4 từ, bộ ba và nghĩa của từ bất quy tắc chỉ gửi khi công bố
+        ...(round.irrfind && { irr: rev ? { forms: round.irrfind.forms, show: round.irrfind.v.show, m: round.irrfind.v.m, say: round.irrfind.say.map(audioUrl) } : {} }),
         ...(round.read && { read: { kind: round.read.q.kind, title: round.read.q.title, p: round.read.q.p, q: round.read.q.q, key: rev ? round.read.q.key : null } }),
       };
       s.winners = round.winners.length;
@@ -812,6 +1107,7 @@ function publicState() {
       if (round.called) s.called = { name: round.called.name, avatar: round.called.avatar, result: rev ? round.called.result || 'none' : null };
       if (round.right) s.right = rev ? round.right : null; // tên người đúng (lớp học: tô xanh bàn)
       if (rev) s.wrongNames = round.feed.filter((f) => f.choice && !f.ok).map((f) => f.name);
+      if (game.seg === 'word') s.race = raceState(rev);
       s.prev = prev;
       s.board = gameBoard();
       s.feed = round.feed.slice(-12);
@@ -849,9 +1145,11 @@ function publicState() {
       return s;
     }
     if (round.mode === 'chain') {
-      s.q = { mode: 'chain', stage: round.stage, match: game.qNo, matches: game.total, cur: round.cur || null, sec: round.sec, pts: CHAIN_WIN,
-        holder: round.holder ? { name: round.holder.name, avatar: round.holder.avatar } : null,
-        chain: round.chain.slice(-16).map(({ w, by }) => ({ w, by })), chainLen: round.chain.length, log: round.log,
+      const hx2 = !!(round.holder && !round.holder.bot && game.chain.perks.get(round.holder.uid)?.x2);
+      s.q = { mode: 'chain', stage: round.stage, match: game.qNo, matches: game.total, cur: round.cur || null, sec: round.sec, pts: CHAIN_WIN * (hx2 ? 2 : 1),
+        len: round.len, max: round.max, lock: round.lock, final: !!round.final, swapAt: CHAIN_SWAP, gift: CHAIN_GIFT,
+        holder: round.holder ? { name: round.holder.name, avatar: round.holder.avatar, ...(hx2 && { x2: true }) } : null,
+        chain: round.chain.slice(-16).map(({ w, by, sys }) => ({ w, by, ...(sys && { sys: true }) })), chainLen: round.chain.length, log: round.log,
         record: { len: chainRec.len || 0, at: chainRec.at || null }, stats: round.stage === 'over' ? round.stats : null,
         turnKey: `${game.qNo}.${round.stage}.${round.chain.length}` };
       s.winners = game.chain.matches.filter((m) => m.winner).length; // số ván đã có người thắng
@@ -878,9 +1176,69 @@ function publicState() {
       s.feed = round.feed.slice(-12);
       return s;
     }
+    if (round.mode === 'emoji') {
+      // Nghĩa tiếng Việt và đáp án chỉ gửi khi công bố; lúc hỏi chỉ có emoji, loại câu và ô chữ đã mở
+      const q = round.emoji.q;
+      s.q = { mode: 'emoji', e: q.e, t: q.t, n: norm(q.a).length, slots: emojiSlots(rev), ...(rev && { w: q.a, m: q.m, audio: audioUrl(q.a) }) };
+      s.winners = round.winners.length;
+      s.prev = prev;
+      s.board = gameBoard();
+      s.feed = round.feed.slice(-12);
+      return s;
+    }
+    if (round.mode === 'haitu') {
+      // Ô chưa ai hái: chỉ gửi ảnh, tên tiếng Việt, số chữ cái (và chữ đầu khi tới mức gợi ý); tên tiếng Anh chỉ gửi khi đã rụng hoặc lúc công bố.
+      const F = round.fr, hint = !rev && brickyHint(), lead = haituLead();
+      s.q = { mode: 'haitu', topic: F.topic, left: F.tiles.filter((t) => !t.by).length, top: lead && { name: lead.name, n: lead.n }, pts: HAITU_PTS * (round.mult || 1), win: HAITU_TOP * (round.mult || 1),
+        tiles: F.tiles.map((t, i) => ({ k: 'ABCDEFGHIJKLMNOP'[i], img: t.img, vi: t.vi, n: norm(t.w).length,
+          ...(t.by ? { w: t.w, by: t.by, ...(t.av && { av: t.av }) } : rev ? { w: t.w } : hint ? { h: t.w[0] } : {}) })),
+        ...(rev && { bonus: F.bonus, say: F.tiles.filter((t) => !t.by).map((t) => audioUrl(t.w)) }) };
+      s.winners = F.picks.size;
+      s.prev = prev;
+      s.board = gameBoard();
+      s.feed = round.feed.slice(-12);
+      return s;
+    }
+    if (round.mode === 'bricky') {
+      // Từ chưa ai mở chỉ gửi số chữ cái (và chữ đầu khi đã tới mức gợi ý); chữ và nghĩa chỉ gửi khi đã có người mở hoặc lúc công bố.
+      const B = round.bk, hint = !rev && brickyHint();
+      s.q = { mode: 'bricky', tiles: B.tiles, all: B.valid.size, found: B.found.size, done: B.done, final: !!round.final, mult: round.mult, win: BRICKY_WIN * round.mult,
+        board: B.board.map((x) => (x.by || rev ? { n: x.w.length, w: x.w, m: x.m, ...(x.by && { by: x.by }) } : { n: x.w.length, ...(hint && { h: x.w[0] }) })),
+        extra: B.extra.slice(-10), more: Math.max(0, B.extra.length - 10),
+        ...(rev && { rest: B.p.extra.filter((w) => !B.found.has(w)).slice(0, 6), say: audioUrl(B.p.letters), top: B.p.board.find((x) => x.w === B.p.letters) }) };
+      s.winners = round.winners.length;
+      s.prev = prev;
+      s.board = gameBoard();
+      s.feed = round.feed.slice(-12);
+      return s;
+    }
+    if (round.mode === 'irrfill') {
+      // Ô khuyết của hàng đố gửi đi là null (chỉ có các chữ đã mở trong slots); đáp án và audio chỉ gửi khi công bố. Nghĩa tiếng Việt hiện từ đầu.
+      const I = round.irr, q = I.q;
+      s.q = { mode: 'irrfill', at: q.at, col: q.col, n: I.ans.length, m: q.v.m, slots: irrSlots(rev),
+        rows: q.rows.map((r, i) => (i === q.at ? r.map((x, c) => (c === q.col ? null : x)) : r)),
+        ...(rev && { w: q.v.show[q.col], audio: audioUrl(I.ans), say: q.say.map(audioUrl) }) };
+      s.winners = round.winners.length;
+      s.prev = prev;
+      s.board = gameBoard();
+      s.feed = round.feed.slice(-12);
+      return s;
+    }
+    if (round.mode === 'oneletter') {
+      // Lúc hỏi chỉ gửi chữ hiện ra, lệnh THÊM/BỚT, nghĩa và gợi ý đang mở; đáp án, chữ cái thêm/bớt, nghĩa của chữ hiện ra (về đích) chỉ gửi khi công bố
+      const q = round.one.q;
+      s.q = { mode: 'oneletter', k: q.k, s: q.s, m: q.m, pos: q.pos || '', n: q.w.length, red: !!round.red, redFirst: !!round.grace, mult: round.mult,
+        redNo: round.red ? round.one.redNo : 0, redN: round.red ? oneRedN() : 0, hint: oneHint(rev),
+        ...(rev && { w: q.w, i: q.i, ch: q.ch, sm: q.sm || null, audio: audioUrl(q.w), say: q.sm ? audioUrl(q.s) : null }) };
+      s.winners = round.winners.length;
+      s.prev = prev;
+      s.board = gameBoard();
+      s.feed = round.feed.slice(-12);
+      return s;
+    }
     if (round.mode === 'scramble') {
       const lv = rev ? 2 : hintLevel();
-      s.q = { mode: 'scramble', m: round.word.m, tiles: round.tiles, hint: rev ? [] : round.order.slice(0, lv), answer: rev ? round.order.map((i) => i + 1).join('') : null,
+      s.q = { mode: 'scramble', m: round.word.m, tiles: round.tiles, hint: rev ? [] : round.order.slice(0, lv), order: rev ? round.order : null,
         r: rev ? round.word.r : null, w: rev ? round.word.w : null, audio: rev ? audioUrl(round.word.w) : null };
       s.winners = round.winners.length;
       s.prev = prev;
@@ -923,7 +1281,8 @@ function controlState() {
           mode: round.mode, options: round.options, answerIdx: round.answerIdx, votes: round.votes, listen: round.listen, answered: round.answered.size, called: round.called,
           wq: round.wq, demo: round.demo, ...(round.fill && { fillS: round.fill.s }), ...(round.err && { errS: round.err.s }), ...(round.dict && { dictS: round.dict.q.s }), ...(round.read && { readQ: round.read.q.q }),
           ...(round.mode === 'cross' && { cross: { stage: round.stage, idx: round.idx, solved: game.cross.solved, n: game.cross.p.rows.length, key: game.cross.p.key, open: crossBigOpen() } }),
-          ...(round.mode === 'chain' && { chain: { stage: round.stage, cur: round.cur, len: round.chain.length, holder: round.holder?.name || null, players: game.chain.players.size } }) }
+          ...(round.mode === 'chain' && { chain: { stage: round.stage, cur: round.cur, len: round.chain.length, holder: round.holder?.name || null, players: game.chain.players.size } }),
+          ...(round.mode === 'oneletter' && { one: { k: round.one.q.k, s: round.one.q.s, red: !!round.red } }) }
       : null,
     lesson: phase === 'teach' && game?.lesson ? (({ words, i }) => ({ i, n: words.length, w: words[i].w, m: words[i].m, title: words[i].lesson }))(game.lesson) : null,
     cfg: CFG,
@@ -958,8 +1317,39 @@ function setPhase(p, sec) {
   pausedAt = null;
   const t = Date.now();
   timer = { startedAt: t, endsAt: sec == null ? null : t + sec * 1000 };
+  // Chốt đáp án trễ (20/11/2026): màn live TikTok trễ ~4 giây so với server, nên người xem thấy câu hỏi muộn và gõ ở giây cuối thì bình luận
+  // tới server khi câu đã công bố → mất. Mọi câu có đếm giờ: server nhận thêm CFG.lateSec giây; màn live nhận endsAt đã trừ round.late
+  // (publicState) nên đồng hồ vẫn về 0 đúng giờ rồi mới công bố. Thế chữ có nhịp riêng (CHAIN_LATE trong chainClock).
+  if (p === 'question' && sec != null && round && round.mode !== 'chain' && CFG.lateSec > 0) {
+    round.late = CFG.lateSec;
+    timer.endsAt += CFG.lateSec * 1000;
+  }
+  if (p === 'question') markFinish();
   stats.rec('phase');
 }
+
+// ---------- chặng VỀ ĐÍCH dùng chung ----------
+// Người dùng 20/11/2026: mọi game đều phải có chặng về đích màu đỏ. Word (đua phi cơ), Bricky (bảng cuối), Thế chữ (ván tăng tốc),
+// Thêm bớt 1 chữ (3 câu cuối) có cách riêng; các khung trong FINISH_SEGS dùng chung luật này: câu / bảng CUỐI của lượt là về đích:
+// màn chuyển Ninja đỏ "VỀ ĐÍCH" + giao diện lửa (#stage.fire), mọi điểm ×FINISH_MULT (kể cả quà x2 thì nhân tiếp), đồng hồ đứng
+// FINISH_GRACE giây cho màn chuyển (round.finGrace; bots.js / sim.js chờ hết rồi mới gõ). Giải ô chữ: về đích = hàng cuối, hoặc vòng
+// đoán từ khoá cuối nếu có (từ khoá lúc đó +100). Màn chuyển chạy một lần mỗi lượt (game.finShown), "Đổi từ khác" không chạy lại.
+// Gắn ở setPhase('question') ngay sau khi câu mới vừa dựng xong (round.fin chưa đặt), trước push() / bot / mô phỏng.
+const FINISH_SEGS = new Set(['emoji', 'irrfill', 'scramble', 'startend', 'irrfind', 'listenmean', 'hunt', 'haitu', 'fillin', 'errhunt', 'speedread', 'dictate', 'crossword']);
+const FINISH_MULT = 2, FINISH_GRACE = 4;
+function markFinish() {
+  if (!round || !game || round.fin !== undefined || !FINISH_SEGS.has(game.seg) || CFG.style !== 'program') return;
+  round.fin = game.seg === 'crossword' ? round.stage === 'key' || game.qNo >= game.total : game.total > 1 && game.qNo >= game.total;
+  if (!round.fin) return;
+  round.mult = FINISH_MULT;
+  if (!game.finShown) {
+    game.finShown = true;
+    round.finGrace = FINISH_GRACE; // màn live: chưa tới startedAt thì đồng hồ đứng ở mức đầy
+    timer.startedAt += FINISH_GRACE * 1000;
+    if (timer.endsAt != null) timer.endsAt += FINISH_GRACE * 1000;
+  }
+}
+const finUnit = (seg) => ({ hunt: 'Bảng', haitu: 'Bảng', crossword: 'Hàng' })[seg] || 'Câu';
 
 // hold = đứng ở màn chờ tới khi người dẫn bấm Bắt đầu (lúc mới bật server và sau "Chơi lại từ đầu")
 let holdBreak = false;
@@ -993,7 +1383,7 @@ function startGame() {
     return startTeach();
   }
   if (seg === 'chain') {
-    game.chain = { players: new Map(), matches: [] };
+    game.chain = { players: new Map(), matches: [], perks: new Map(), swapNext: null };
     return startChainMatch();
   }
   if (seg === 'crossword') return startCross();
@@ -1070,8 +1460,10 @@ function startWordQuestion() {
   const cap = (s) => (q.t === 'w2m' ? s.charAt(0).toUpperCase() + s.slice(1) : s); // đáp án tiếng Việt viết hoa chữ đầu như các khung khác
   const options = shuffle([q.a, ...q.d]).map(cap);
   round = { word, sec: CFG.roundSec, winners: [], realWinners: 0, answered: new Set(), feed: [], lastHint: 0, mode: 'mcq',
-    options, answerIdx: options.indexOf(cap(q.a)), votes: [0, 0, 0, 0], rev: q.t === 'm2w', listen: false, wq: { t: q.t }, secret: cap(q.a) };
+    options, answerIdx: options.indexOf(cap(q.a)), votes: [0, 0, 0, 0], rev: q.t === 'm2w', listen: false, wq: { t: q.t }, secret: cap(q.a),
+    final: game.total > 1 && game.qNo >= game.total }; // câu cuối của lượt = chặng về đích
   setPhase('question', CFG.roundSec);
+  if (round.final) { timer.startedAt += RACE_FINAL_GRACE * 1000; timer.endsAt += RACE_FINAL_GRACE * 1000; } // đồng hồ đứng trong lúc chạy màn chuyển "VỀ ĐÍCH"
   push();
   sim?.onQuestion(round);
   botsAsk(round);
@@ -1092,7 +1484,7 @@ function startEndQuestion() {
   botsAsk(round);
 }
 
-// Khung Săn từ: một ma trận, 120 giây. round.hunt.map = mọi từ hợp lệ của bảng → vị trí; found = từ đã có người tìm (để tô màu trên ma trận)
+// Khung Săn từ: một ma trận, SEGMENTS.hunt.sec giây (90 từ 20/11/2026). round.hunt.map = mọi từ hợp lệ của bảng → vị trí; found = từ đã có người tìm (để tô màu trên ma trận)
 function startHuntQuestion() {
   const b = pickBoard();
   game.qNo++;
@@ -1160,6 +1552,243 @@ function startDictQuestion() {
   botsAsk(round);
 }
 
+// Khung Đoán emoji. round.word.w = đáp án (màn điều khiển, "Câu trước", chặn AI lộ đáp án dùng chung với khung gõ từ)
+function startEmojiQuestion() {
+  const q = pickEmoji(), words = q.a.split(' ');
+  const sec = norm(q.a).length >= 12 ? 30 : SEGMENTS.emoji.sec; // cụm dài cần thêm giờ gõ
+  game.qNo++;
+  questionsTotal++;
+  // gợi ý mức 2: mỗi từ từ 3 chữ cái mở thêm 1 chữ (từ 8 chữ cái: 2 chữ), không tính chữ đầu
+  const open = words.map((w) => shuffle([...w].map((_, i) => i).slice(1)).slice(0, w.length >= 8 ? 2 : w.length >= 3 ? 1 : 0));
+  round = { word: { w: q.a, m: q.m, r: '', pos: '' }, sec, winners: [], realWinners: 0, answered: new Set(), feed: [], lastHint: 0, mode: 'emoji', demo: q.a,
+    emoji: { q, words, open, ok: new Set([q.a, ...(q.alt || [])].map(norm)) } };
+  setPhase('question', sec);
+  push();
+  sim?.onQuestion(round);
+  botsAsk(round);
+}
+
+// Khung Chia động từ (mode "Chia từ" của game Động từ bất quy tắc). round.word.w = đáp án (màn điều khiển, "Câu trước", chặn AI lộ đáp án, bot và
+// người xem ảo gõ đáp án đều dùng chung với khung gõ từ). Chấm đúng: gõ đúng từ còn thiếu (mọi dạng được chấp nhận) hoặc gõ lại cả hàng.
+function startIrrFillQuestion() {
+  const q = irrBank().pickFill(), sec = SEGMENTS.irrfill.sec, ans = q.ok[0];
+  game.qNo++;
+  questionsTotal++;
+  // gợi ý mức 2: đáp án từ 5 chữ cái mở thêm 1 chữ (không tính chữ đầu); từ ngắn hơn chỉ có chữ đầu
+  const open = ans.length >= 5 ? [1 + Math.floor(Math.random() * (ans.length - 1))] : [];
+  const row = (f) => q.say.map((x, c) => (c === q.col ? f : x)).join('');
+  round = { word: { w: ans, m: `${q.v.show.join(' – ')} (${q.v.m})`, r: '', pos: '' }, sec, winners: [], realWinners: 0, answered: new Set(), feed: [], lastHint: 0, mode: 'irrfill', demo: ans,
+    irr: { q, ans, open, ok: new Set(q.ok.flatMap((f) => [f, row(f)]).map(norm)) } };
+  setPhase('question', sec);
+  push();
+  sim?.onQuestion(round);
+  botsAsk(round);
+}
+
+// Khung Hái từ: một bảng HAITU_N ô cùng một chủ đề (round.fr.topic = tên chủ đề). round.fr: tiles = các ô (ok = mọi cách gõ được tính, by = tên người hái) · picks = uid → { name, n, at, bot }
+// (n = số quả đã hái, at = lúc đạt số đó, để phân hoà) · x2 = uid được nhân đôi bảng này · bonus = người nhận +HAITU_TOP (đặt lúc công bố).
+function startHaiTuQuestion() {
+  const { topic, items } = pickHaiTu(), sec = SEGMENTS.haitu.sec;
+  game.qNo++;
+  questionsTotal++;
+  const tiles = items.map((x) => ({ id: x.id, w: x.w, vi: x.vi, img: `img/hai-tu/${topic.id}/${x.id}.jpg`, ok: new Set([x.w, ...(x.ok || [])].map(norm)), by: null }));
+  round = { word: { w: topic.name, m: `${topic.name}: ${tiles.map((t) => t.w).join(', ')}`, r: '', pos: '' }, sec, winners: [], realWinners: 0, answered: new Set(), feed: [], lastHint: 0,
+    mode: 'haitu', demo: tiles[0].w, fr: { topic: topic.name, tiles, picks: new Map(), x2: new Map(), bonus: null } };
+  setPhase('question', sec);
+  push();
+  sim?.onQuestion(round);
+  botsAsk(round);
+}
+// Người THẬT đang hái nhiều nhất (hoà: người đạt số quả đó trước). Bot không được tính để không chiếm thưởng của người thật.
+function haituLead() {
+  let best = null;
+  for (const p of round.fr.picks.values()) if (!p.bot && (!best || p.n > best.n || (p.n === best.n && p.at < best.at))) best = p;
+  return best;
+}
+// Một bình luận chỉ hái được MỘT quả. Nhận "apple", "A apple", "a. apple": bỏ chữ ô đứng đầu (nếu có) rồi so cả bình luận với tên quả,
+// không dò tên quả nằm lẫn trong câu tán gẫu. Trả về true nếu hái được.
+function onHaiTuChat(user, msg, item) {
+  const F = round.fr, m = msg.trim().match(/^([a-p])[\s.:)\-]+(.+)$/i);
+  const tries = [norm(msg), ...(m ? [norm(m[2])] : [])];
+  const tile = F.tiles.find((t) => !t.by && tries.some((x) => t.ok.has(x)));
+  if (!tile) return false;
+  tile.by = user.name;
+  tile.av = user.avatar || ''; // ảnh đại diện TikTok: ô đã hái thay chữ A–P bằng avatar + tên (người dùng 20/11)
+  if (!F.x2.has(user.uid)) { // quà x2: tính một lần cho cả bảng
+    const b = boosts.get(user.uid) || 0;
+    F.x2.set(user.uid, b > 0);
+    if (b > 0) boosts.set(user.uid, b - 1);
+  }
+  const me = F.picks.get(user.uid) || { uid: user.uid, name: user.name, n: 0, at: 0, bot: !!user.bot };
+  me.n++;
+  me.at = Date.now();
+  F.picks.set(user.uid, me);
+  const pts = HAITU_PTS * (F.x2.get(user.uid) ? 2 : 1) * (round.mult || 1); // bảng cuối = về đích: ×2
+  const gp = gamePlayer(user);
+  if (user.bot) gp.bot = true;
+  const dp = user.bot ? { score: 0, correct: 0 } : dayPlayer(user); // bot không vào bảng vàng ngày
+  gp.score += pts;
+  gp.correct++;
+  dp.score += pts;
+  dp.correct++;
+  const st = seats.get(user.uid);
+  if (st) st.stars++;
+  if (!user.bot) {
+    game.correct++;
+    correctTotal++;
+  }
+  Object.assign(item, { ok: true, pts, words: tile.w, text: `${tile.w} · ${me.n} từ`, bot: !!user.bot });
+  round.feed.push(item);
+  if (round.feed.length > 40) round.feed.splice(0, round.feed.length - 40);
+  logFeed(item);
+  broadcast({ type: 'correct', ...item });
+  // hết ô: công bố sớm (để 1,5 giây cho ô cuối rụng xong)
+  if (F.tiles.every((t) => t.by) && timer.endsAt - Date.now() > 1500) timer.endsAt = Date.now() + 1500;
+  push();
+  return true;
+}
+// Công bố Hái từ (người dùng 20/11/2026): màn ẩn hết, các từ chưa ai hái hiện thành flash card lớn chạy lần lượt qua giữa màn (ảnh · tiếng Anh ·
+// tiếng Việt), Ninja đọc từng từ, để người xem học từ mới. Mỗi thẻ ~1,9 giây: 8 giây khi còn ít từ, tối đa 36 giây khi còn cả 16 từ.
+const haituRevealSec = () => Math.max(SEGMENTS.haitu.reveal, Math.min(36, Math.ceil(4 + 1.9 * round.fr.tiles.filter((t) => !t.by).length)));
+// Lúc công bố: người thật hái nhiều nhất +HAITU_TOP (có quà x2 thì nhân đôi). Không ai hái thì không có thưởng.
+function haituBonus() {
+  const F = round.fr, lead = haituLead();
+  if (!lead || F.bonus) return;
+  const pts = HAITU_TOP * (F.x2.get(lead.uid) ? 2 : 1) * (round.mult || 1), gp = game.players.get(lead.uid), dp = scores.get(lead.uid);
+  if (gp) { gp.score += pts; gp.first = (gp.first || 0) + 1; }
+  if (dp) dp.score += pts;
+  F.bonus = { name: lead.name, n: lead.n, pts };
+  round.winners.push(lead.uid);
+  const item = { name: lead.name, text: `hái nhiều nhất: ${lead.n} từ`, ok: true, pts, words: `${lead.n} từ` };
+  round.feed.push(item);
+  logFeed(item);
+}
+
+// Khung Bricky: một bảng 40 giây. round.word.w = từ dùng hết bộ chữ (màn điều khiển, "Câu trước"); KHÔNG dùng để chấm.
+// round.bk: tiles = bộ chữ đã xáo (không trùng một từ hợp lệ) · board = từ trên bảng kèm `by` (tên người mở đầu tiên) · valid = mọi từ được tính
+// mine = uid → các từ người đó đã được điểm · found = từ đã có người tìm · extra = từ ngoài bảng theo thứ tự tìm ra · done = tên người thật điền đủ bảng đầu tiên
+function startBrickyQuestion() {
+  game.qNo++;
+  questionsTotal++;
+  const final = game.total > 1 && game.qNo >= game.total && brickyBank().finals.length > 0;
+  const p = pickBricky(final), sec = Math.round(SEGMENTS.bricky.sec * (final ? BRICKY_FINAL_TIME : 1));
+  const valid = new Set([...p.board.map((x) => x.w), ...p.extra]);
+  let tiles = shuffle([...p.letters]);
+  for (let i = 0; i < 20 && valid.has(tiles.join('')); i++) tiles = shuffle([...p.letters]);
+  round = { word: { w: p.letters, m: `từ trên bảng: ${p.board.map((x) => x.w).join(', ')}`, r: '', pos: '' }, sec, winners: [], realWinners: 0, answered: new Set(), feed: [], lastHint: 0,
+    mode: 'bricky', demo: p.board.map((x) => x.w).join(' '),
+    final, mult: final ? BRICKY_FINAL_MULT : 1, grace: final ? BRICKY_FINAL_GRACE : 0,
+    bk: { p, tiles, board: p.board.map((x) => ({ ...x, by: null })), valid, mine: new Map(), found: new Set(), extra: [], x2: new Map(), done: null } };
+  setPhase('question', sec);
+  if (final) { // màn live: chưa tới startedAt thì đồng hồ đứng ở mức đầy (như ván tăng tốc của Thế chữ)
+    timer.startedAt += BRICKY_FINAL_GRACE * 1000;
+    timer.endsAt += BRICKY_FINAL_GRACE * 1000;
+  }
+  push();
+  sim?.onQuestion(round);
+  botsAsk(round);
+}
+// Gợi ý Bricky: còn nửa thời gian thì mở chữ cái đầu của các từ trên bảng chưa ai tìm ra
+const brickyHint = () => ((now() - timer.startedAt) / (timer.endsAt - timer.startedAt) >= 0.5 ? 1 : 0); // bảng cuối đang đứng đồng hồ: tỉ lệ âm → 0
+
+// Bình luận trong khung Bricky. Một bình luận có thể chứa nhiều từ (tối đa 8); chỉ nhận mục viết liền bằng chữ a–z để tiếng Việt có dấu
+// không bị cắt thành mảnh trùng một từ tiếng Anh. Trả về true nếu có ít nhất một từ được điểm (bình luận đã xử lý xong).
+function onBrickyChat(user, msg, item) {
+  const B = round.bk;
+  const toks = msg.toLowerCase().split(/[\s,;.!?/|+-]+/).filter((t) => /^[a-z]{3,8}$/.test(t)).slice(0, 8); // bảng cuối có từ 6 chữ
+  let mine = B.mine.get(user.uid);
+  const fresh = [];
+  for (const t of toks) {
+    if (!B.valid.has(t) || mine?.has(t)) continue;
+    (mine ||= new Set()).add(t);
+    fresh.push(t);
+    const slot = B.board.find((x) => x.w === t);
+    if (slot) slot.by ||= user.name;
+    else if (!B.found.has(t)) B.extra.push({ w: t, by: user.name });
+    B.found.add(t);
+  }
+  if (!fresh.length) return false;
+  B.mine.set(user.uid, mine);
+  // quà x2: tính một lần cho cả bảng (không trừ theo từng từ), mọi điểm của người đó trong bảng này nhân đôi
+  if (!B.x2.has(user.uid)) {
+    const b = boosts.get(user.uid) || 0;
+    B.x2.set(user.uid, b > 0);
+    if (b > 0) boosts.set(user.uid, b - 1);
+  }
+  const gp = gamePlayer(user);
+  if (user.bot) gp.bot = true;
+  const dp = user.bot ? { score: 0, correct: 0 } : dayPlayer(user); // bot không vào bảng vàng ngày
+  let pts = fresh.length * round.mult, first = false; // bảng cuối: mỗi từ +2, thưởng điền đủ +20
+  // điền đủ bảng: tính theo từ của chính người đó. Bot không bao giờ nhận thưởng (bots.js cũng không cho bot gõ đủ bảng).
+  if (!round.winners.includes(user.uid) && B.board.every((x) => mine.has(x.w))) {
+    round.winners.push(user.uid);
+    if (!user.bot) {
+      round.realWinners++;
+      if (!B.done) {
+        B.done = user.name;
+        first = true;
+        pts += BRICKY_WIN * round.mult;
+        gp.first++;
+      }
+    }
+  }
+  if (B.x2.get(user.uid)) pts *= 2;
+  gp.score += pts;
+  gp.correct += fresh.length;
+  dp.score += pts;
+  dp.correct += fresh.length;
+  const st = seats.get(user.uid);
+  if (st) st.stars++;
+  if (!user.bot) {
+    game.correct += fresh.length;
+    correctTotal += fresh.length;
+  }
+  Object.assign(item, { ok: true, pts, words: fresh.join(' '), text: `${fresh.join(', ')}${first ? ' · điền đủ bảng đầu tiên' : ''}`, bot: !!user.bot, ...(first && { rank: 1, bricky: true, final: !!round.final }) });
+  round.feed.push(item);
+  if (round.feed.length > 40) round.feed.splice(0, round.feed.length - 40);
+  logFeed(item);
+  broadcast({ type: 'correct', ...item });
+  push();
+  return true;
+}
+
+// Khung Thêm bớt 1 chữ. round.word.w = đáp án (màn điều khiển, "Câu trước", chặn AI lộ đáp án, bot và người xem ảo gõ đáp án dùng chung với khung gõ từ).
+// round.red = câu về đích, round.mult = hệ số điểm, round.grace = số giây đồng hồ đứng (chỉ câu đỏ đầu tiên, cho màn chuyển).
+// replace = người dẫn bấm "Đổi từ khác": đổi câu khác cùng số thứ tự (không tính thêm câu, không chạy lại màn chuyển về đích)
+function startOneLetterQuestion(replace = false) {
+  if (!replace) {
+    game.qNo++;
+    questionsTotal++;
+  }
+  const redN = oneRedN(), redNo = game.qNo - (game.total - redN), red = redN > 0 && redNo >= 1;
+  const q = pickOneLetter(red), sec = SEGMENTS.oneletter.sec, grace = red && redNo === 1 && !replace ? ONE_RED_GRACE : 0;
+  // BỚT: cặp 2 chữ khoanh làm gợi ý = chữ thừa + chữ bên cạnh (chữ đôi thì đúng cặp đó)
+  const i = q.i, pair = q.k !== 'cut' ? null : q.s[i - 1] === q.s[i] ? [i - 1, i] : q.s[i + 1] === q.s[i] || i === 0 ? [i, i + 1] : i === q.s.length - 1 || Math.random() < 0.5 ? [i - 1, i] : [i, i + 1];
+  round = { word: { w: q.w, m: q.m, r: '', pos: q.pos || '' }, sec, winners: [], realWinners: 0, answered: new Set(), feed: [], lastHint: 0, mode: 'oneletter', demo: q.w,
+    red, mult: red ? ONE_RED_MULT : 1, grace, one: { q, pair, redNo } };
+  setPhase('question', sec);
+  if (grace) { // màn live: chưa tới startedAt thì đồng hồ đứng ở mức đầy (như bảng cuối Bricky)
+    timer.startedAt += grace * 1000;
+    timer.endsAt += grace * 1000;
+  }
+  push();
+  sim?.onQuestion(round);
+  botsAsk(round);
+}
+
+// Khung Tìm bất quy tắc (mode "Tìm từ"): round.mode vẫn là 'mcq' (chấm điểm, mô phỏng, bot dùng lại phần trắc nghiệm); round.word.w KHÔNG phải đáp án
+function startIrrFindQuestion() {
+  const q = irrBank().pickFind(), sec = SEGMENTS.irrfind.sec;
+  game.qNo++;
+  questionsTotal++;
+  round = { word: { w: 'Bất quy tắc', m: `${q.v.show.join(' – ')} (${q.v.m})`, r: '', pos: '' }, sec, winners: [], realWinners: 0, answered: new Set(), feed: [], lastHint: 0, mode: 'mcq',
+    options: q.options, answerIdx: q.answerIdx, votes: [0, 0, 0, 0], rev: false, listen: false, wq: { t: 'irr' }, irrfind: q, secret: q.options[q.answerIdx] };
+  setPhase('question', sec);
+  push();
+  sim?.onQuestion(round);
+  botsAsk(round);
+}
+
 // Khung Săn lỗi: một câu có đúng 1 từ sai
 function startErrQuestion() {
   const q = pickErr(), sec = SEGMENTS.errhunt.sec;
@@ -1194,6 +1823,12 @@ function startQuestion(replace = false) {
   if (game.seg === 'errhunt') return startErrQuestion();
   if (game.seg === 'dictate') return startDictQuestion();
   if (game.seg === 'speedread') return startReadQuestion();
+  if (game.seg === 'emoji') return startEmojiQuestion();
+  if (game.seg === 'irrfill') return startIrrFillQuestion();
+  if (game.seg === 'irrfind') return startIrrFindQuestion();
+  if (game.seg === 'bricky') return startBrickyQuestion();
+  if (game.seg === 'haitu') return startHaiTuQuestion();
+  if (game.seg === 'oneletter') return startOneLetterQuestion(replace);
   const cls = game.style === 'class';
   const seg = game.seg;
   const word = cls && !replace && game.quiz?.length ? game.quiz.shift() : seg === 'scramble' ? pickWord(scramble3) : seg === 'type' || (CFG.style !== 'program' && CFG.mode === 'type') ? pickWord(typeOK) : pickWord();
@@ -1211,7 +1846,7 @@ function startQuestion(replace = false) {
     round.listen = seg === 'listen' || (seg === 'quiz' && Math.random() < LISTEN_RATE); // 🎧 nghe chọn nghĩa: giấu chữ, chỉ phát âm
   }
   if (round.mode === 'scramble') {
-    // thẻ đánh số 1..n; đáp án = thứ tự số (vd "312"). perm[j] = vị trí trong từ của thẻ j
+    // xáo chữ cái thành thẻ (16/11: thẻ không còn đánh số, người xem gõ cả từ). perm[j] = vị trí trong từ của thẻ j
     const sy = [...word.w.toLowerCase()]; // chữ thường hết: chữ hoa (August) sẽ lộ chữ cái đầu
     let perm = sy.map((_, i) => i);
     for (let k = 0; k < 30 && perm.map((i) => sy[i]).join('') === sy.join(''); k++) perm = [...perm].sort(() => Math.random() - 0.5);
@@ -1241,7 +1876,8 @@ function startQuestion(replace = false) {
 }
 
 function reveal() {
-  setPhase('reveal', SEGMENTS[game.seg]?.reveal || CFG.revealSec);
+  if (round.mode === 'haitu') haituBonus();
+  setPhase('reveal', round.mode === 'haitu' ? haituRevealSec() : SEGMENTS[game.seg]?.reveal || CFG.revealSec);
   prev = { w: round.word.w, m: round.word.m, n: round.winners.length };
   saveScores();
   push();
@@ -1325,7 +1961,14 @@ function tick() {
       push();
     }
   }
-  if (phase === 'question' && (round.mode === 'type' || round.mode === 'scramble')) {
+  if (phase === 'question' && (round.mode === 'bricky' || round.mode === 'haitu')) {
+    const lv = brickyHint();
+    if (lv !== round.lastHint) {
+      round.lastHint = lv;
+      push();
+    }
+  }
+  if (phase === 'question' && (round.mode === 'type' || round.mode === 'scramble' || round.mode === 'emoji' || round.mode === 'irrfill' || round.mode === 'oneletter')) {
     const lv = hintLevel();
     if (lv !== round.lastHint) {
       round.lastHint = lv;
@@ -1359,6 +2002,8 @@ function onChat(user, text) {
   }
   if (game?.seg === 'chain') return onChainChat(user, msg, item);
   if (game?.seg === 'crossword' && phase === 'question' && round?.mode === 'cross' && onCrossChat(user, msg, item)) return;
+  if (phase === 'question' && round?.mode === 'bricky' && onBrickyChat(user, msg, item)) return;
+  if (phase === 'question' && round?.mode === 'haitu' && onHaiTuChat(user, msg, item)) return;
   if (phase === 'question' && round && !round.answered.has(user.uid)) {
     let byHangul = false, byRomaja = false;
     if (round.mode === 'mcq') {
@@ -1380,23 +2025,18 @@ function onChat(user, text) {
         }
       }
     } else if (round.mode === 'scramble') {
-      // gõ thứ tự số "312" / "3 1 2" / "3-1-2" — chỉ tính LẦN ĐẦU gõ đủ số thẻ (không dò hết hoán vị được);
-      // gõ luôn từ tiếng Anh đúng cũng tính đủ điểm. Chữ cái trùng → thứ tự nào ra đúng từ đều được.
-      const digits = msg.trim().replace(/[\s,.\-→>]/g, '');
-      const n = norm(msg);
-      if (/^[1-9]+$/.test(digits) && digits.length === round.tiles.length) {
-        const got = [...digits].map((d) => round.tiles[+d - 1] ?? '?').join('');
-        round.answered.add(user.uid);
-        byHangul = got.toLowerCase() === round.word.w.toLowerCase();
-        if (!byHangul) {
-          item.choice = digits;
-          logFeed(item);
-          round.feed.push(item);
-          if (round.feed.length > 40) round.feed.splice(0, round.feed.length - 40);
-          broadcast({ type: 'feed', feed: round.feed.slice(-12) });
-          return;
-        }
-      } else byHangul = n === norm(round.word.w);
+      // 16/11/2026 người dùng bỏ gõ thứ tự số: chỉ gõ từ tiếng Anh. Gõ đúng từ = đúng. Gõ một từ dùng đúng bộ chữ cái trên thẻ
+      // nhưng sai thứ tự = 1 lần thử sai (hiện ✗, được gõ lại); bình luận khác là tán gẫu.
+      const t = msg.trim().toLowerCase();
+      byHangul = norm(msg) === norm(round.word.w);
+      if (!byHangul && /^[a-z]+$/.test(t) && [...t].sort().join('') === [...round.tiles].sort().join('')) {
+        item.choice = t;
+        logFeed(item);
+        round.feed.push(item);
+        if (round.feed.length > 40) round.feed.splice(0, round.feed.length - 40);
+        broadcast({ type: 'feed', feed: round.feed.slice(-12) });
+        return;
+      }
     } else if (round.mode === 'errhunt') {
       // "goning - going": tách 2 từ (bỏ dấu ngăn), so với từ sai và từ đúng (hoặc cách sửa khác trong accept). Đếm từ bị nghi nhầm để công bố.
       const parts = msg.trim().replace(/\s*(?:->|=>|→|[-–—:=/>])+\s*/g, ' ').split(/\s+/).filter(Boolean);
@@ -1420,8 +2060,35 @@ function onChat(user, text) {
           item.text = `${Math.min(dictate.goodWords(msg, q.s), want.length)}/${want.length} từ đúng`;
         }
       }
-    } else if (round.mode === 'cross') {
-      // đã xử lý ở onCrossChat; bình luận còn lại là tán gẫu
+    } else if (round.mode === 'emoji') {
+      // Gõ đúng đáp án hoặc một cách viết khác trong alt. Đúng thì KHÔNG hiện chữ lên màn (không để người sau chép); sai là tán gẫu, gõ lại được.
+      if (round.emoji.ok.has(norm(msg))) {
+        byHangul = true;
+        item.text = '✓ đoán đúng';
+      }
+    } else if (round.mode === 'irrfill') {
+      // Gõ đúng từ còn thiếu (hoặc cả hàng V1 V2 V3). Đúng thì KHÔNG hiện chữ lên màn; sai là tán gẫu, gõ lại được.
+      if (round.irr.ok.has(norm(msg))) {
+        byHangul = true;
+        item.text = '✓ chia đúng';
+      }
+    } else if (round.mode === 'oneletter') {
+      // Gõ đúng từ đáp án = đúng; màn KHÔNG hiện chữ (không để người sau chép). Gõ một từ a–z dài gần bằng đáp án mà sai
+      // (hay gặp nhất: gõ lại nguyên chữ trên màn) = 1 lần thử sai: hiện ✗ cho vui, vẫn gõ lại được. Bình luận khác là tán gẫu.
+      const t = msg.trim().toLowerCase(), w = round.word.w;
+      if (norm(msg) === norm(w)) {
+        byHangul = true;
+        item.text = '✓ đúng';
+      } else if (/^[a-z]+$/.test(t) && Math.abs(t.length - w.length) <= 2) {
+        item.choice = t;
+        logFeed(item);
+        round.feed.push(item);
+        if (round.feed.length > 40) round.feed.splice(0, round.feed.length - 40);
+        broadcast({ type: 'feed', feed: round.feed.slice(-12) });
+        return;
+      }
+    } else if (round.mode === 'cross' || round.mode === 'bricky' || round.mode === 'haitu') {
+      // đã xử lý ở onCrossChat / onBrickyChat; bình luận còn lại là tán gẫu
     } else if (round.mode === 'startend') {
       // Chỉ bình luận có đúng 5 mục mới tính là một lần trả lời. Sai thì gõ lại được (chưa vào answered), báo số từ đúng.
       const c = startEnd().check(msg, round.pat);
@@ -1465,7 +2132,7 @@ function onChat(user, text) {
     if (byHangul || byRomaja) {
       if (round.mode === 'mcq') item.choice = round.answerIdx + 1;
       else round.answered.add(user.uid);
-      if (round.mode === 'scramble') item.choice = round.order.map((i) => i + 1).join('');
+      if (round.mode === 'scramble') item.choice = round.word.w.toLowerCase();
       const gp = gamePlayer(user);
       if (user.bot) gp.bot = true;
       // Bot 🤖 không vào bảng vàng ngày; người thật xếp hạng nhanh chỉ tính giữa người thật (bot không cướp điểm)
@@ -1473,6 +2140,7 @@ function onChat(user, text) {
       const rank = user.bot ? round.winners.length : round.realWinners++;
       // Đúng nhanh nhất +10, rồi 8, 6, 4… tối thiểu 3 (khung Word/Start or End: 10, 5, 3, rồi +1); gõ romaja được một nửa.
       let pts = ptsFor(game.seg, rank);
+      if (round.mult > 1) pts *= round.mult; // chặng về đích: Thêm bớt 1 chữ và các khung dùng chung markFinish()
       if (byRomaja) pts = Math.ceil(pts / 2);
       const b = boosts.get(user.uid) || 0;
       if (b > 0) {
@@ -1496,7 +2164,7 @@ function onChat(user, text) {
         tm.m.score += pts;
         item.team = tm.team.i;
       }
-      if (rank === 0 && !user.bot) gp.first++;
+      if (rank === 0 && !user.bot) { gp.first++; round.fastUid = user.uid; }
       dp.score += pts;
       dp.correct++;
       if (!user.bot) {
@@ -1533,6 +2201,7 @@ function onGift(user, giftName, diamonds, count) {
   const inGame = game && (phase === 'question' || phase === 'reveal');
   if (inGame) gamePlayer(user).score += bonus;
   boosts.set(user.uid, (boosts.get(user.uid) || 0) + GIFT_BOOST);
+  if (inGame && game.chain && !user.bot) chainGift(user, total); // Thế chữ: quà đổi lấy quyền trong ván (xem khối Thế chữ)
   // So găng: quà kéo điểm cho đội (trần 100/lần — quà to vẫn không quyết định một mình)
   let teamBonus = 0, tm = null;
   if (inGame && game.teams) {
@@ -1570,10 +2239,12 @@ function resumeClock() {
 
 function applyConfig(c = {}) {
   if (c.questions != null) CFG.questions = clamp(c.questions, 5, 50, CFG.questions);
+  if (c.segTotal && typeof c.segTotal === 'object') setSegTotals(c.segTotal); // áp dụng từ lượt sau của khung đó
   if (c.roundSec != null) CFG.roundSec = clamp(c.roundSec, 5, 60, CFG.roundSec);
   if (c.revealSec != null) CFG.revealSec = clamp(c.revealSec, 2, 20, CFG.revealSec);
   if (c.podiumSec != null) CFG.podiumSec = clamp(c.podiumSec, 5, 60, CFG.podiumSec);
   if (c.breakSec != null) CFG.breakSec = clamp(c.breakSec, 5, 180, CFG.breakSec);
+  if (c.lateSec != null) CFG.lateSec = clamp(c.lateSec, 0, 8, CFG.lateSec); // áp dụng từ câu sau
   if (['easy', 'mid', 'hard', 'all'].includes(c.level) && bankFor(c.level).length) CFG.level = c.level;
   if (c.autoNext != null) CFG.autoNext = !!c.autoNext;
   if (c.music != null && Number.isFinite(+c.music)) CFG.music = Math.min(1, Math.max(0, +c.music));
@@ -1856,15 +2527,25 @@ const ai = require('./ai').create({
     const b = gameBoard(3).map((p, i) => `${i + 1}. ${p.name} ${p.score}đ`).join(', ');
     let summary = 'đang nghỉ giữa lượt, sắp vào lượt mới';
     if (phase === 'question' && round.wq)
-      summary = `đang đố câu ${game.qNo}/${game.total} khung Word (${{ w2m: 'cho từ chọn nghĩa', m2w: 'cho nghĩa chọn từ', syn: 'tìm từ đồng nghĩa', ant: 'tìm từ trái nghĩa', read: 'đọc nhanh một văn bản ngắn rồi trả lời một chi tiết', fill: 'điền từ còn thiếu trong câu', lm: 'nghe audio rồi chọn nghĩa tiếng Việt' }[round.wq.t]}): người xem gõ A, B, C hoặc D (đáp án BÍ MẬT, không được nói chữ cái hay từ đúng)`;
+      summary = `đang đố câu ${game.qNo}/${game.total} khung Word (${{ w2m: 'cho từ chọn nghĩa', m2w: 'cho nghĩa chọn từ', syn: 'tìm từ đồng nghĩa', ant: 'tìm từ trái nghĩa', read: 'đọc nhanh một văn bản ngắn rồi trả lời một chi tiết', fill: 'điền từ còn thiếu trong câu', lm: 'nghe audio rồi chọn nghĩa tiếng Việt', irr: 'khung Tìm bất quy tắc: tìm động từ bất quy tắc trong bốn động từ tiếng Anh' }[round.wq.t]}): người xem gõ A, B, C hoặc D (đáp án BÍ MẬT, không được nói chữ cái hay từ đúng)`;
+    else if (phase === 'question' && round.mode === 'irrfill')
+      summary = `đang đố câu ${game.qNo}/${game.total} khung Chia động từ: màn hiện bảng động từ bất quy tắc V1 – V2 – V3, một hàng khuyết một ô, người xem gõ từ còn thiếu; chữ cái gợi ý mở dần (không được nói đáp án, không đánh vần hay gợi ý chữ cái)`;
+    else if (phase === 'question' && round.mode === 'oneletter')
+      summary = `đang đố câu ${game.qNo}/${game.total} khung Thêm bớt 1 chữ: màn hiện một chữ viết sai kèm nghĩa tiếng Việt và lệnh ${round.one.q.k === 'add' ? 'THÊM' : 'BỚT'} 1 chữ cái, người xem thêm hoặc bớt đúng 1 chữ để thành từ có nghĩa rồi gõ cả từ${round.red ? '; đây là chặng về đích cuối lượt: từ rất dễ nhầm, điểm nhân đôi' : ''} (không được nói đáp án, không đánh vần hay gợi ý chữ cái nào cần thêm hoặc bớt)`;
+    else if (phase === 'question' && round.mode === 'haitu')
+      summary = `đang chơi bảng ${game.qNo}/${game.total} khung Hái từ, chủ đề "${round.fr.topic}": màn hiện lưới ${round.fr.tiles.length} ảnh kèm tên tiếng Việt, người xem gõ tên tiếng Anh để hái; mỗi ô ai gõ đúng trước được +2, hết bảng ai hái nhiều nhất +5 (không được nói tên tiếng Anh của ô nào chưa ai hái)`;
+    else if (phase === 'question' && round.mode === 'bricky')
+      summary = `đang chơi bảng ${game.qNo}/${game.total} khung Bricky: màn cho ${round.bk.tiles.length} chữ cái, người xem ghép thành các từ tiếng Anh từ 3 chữ trở lên rồi gõ vào bình luận, mỗi từ đúng +1, người đầu tiên điền đủ các từ trên bảng +10${round.final ? '; đây là bảng cuối của lượt: khó hơn, mọi điểm nhân đôi' : ''} (không được nói hay gợi ý từ nào ghép được)`;
     else if (phase === 'question' && round.mode === 'dictate')
       summary = `đang đố câu ${game.qNo}/${game.total} khung Nghe – chép: người xem nghe một câu tiếng Anh (phát lặp lại) rồi gõ lại nguyên câu; cứ 2 giây màn hiện thêm một loại chữ cái (không được nói nội dung câu). Bảng điểm: ${b}`;
+    else if (phase === 'question' && round.mode === 'emoji')
+      summary = `đang đố câu ${game.qNo}/${game.total} khung Đoán emoji: màn hiện vài emoji, người xem đoán rồi gõ từ hoặc cụm từ tiếng Anh; chữ cái gợi ý mở dần (không được nói đáp án, nghĩa tiếng Việt hay gợi ý chữ cái)`;
     else if (phase === 'question' && round.mode === 'errhunt')
       summary = `đang đố câu ${game.qNo}/${game.total} khung Săn lỗi: một câu tiếng Anh có đúng 1 từ sai (chính tả hoặc ngữ pháp), người xem gõ "từ sai - từ đúng" (không được nói từ nào sai hay cách sửa)`;
     else if (phase === 'question' && round.mode === 'cross')
       summary = `đang chơi Giải ô chữ: ${round.stage === 'key' ? 'vòng từ khoá hàng dọc (gõ CHỮ HOA)' : `hàng ${round.idx + 1}, người xem gõ từ tiếng Anh theo nghĩa tiếng Việt`}, đã giải ${game.cross.solved}/${game.cross.p.rows.length} hàng (không được nói đáp án)`;
     else if (phase === 'question' && round.mode === 'chain')
-      summary = `đang chơi Thế chữ (mọi người cùng chơi: đổi 1 chữ cái của từ hiện tại để ra từ mới và thành người giữ từ, hết 12 giây không ai thế được thì người giữ từ thắng ván +10 điểm; chuỗi đang có ${round.chain.length} từ${round.holder ? `, người giữ từ: ${round.holder.name}` : ''})`;
+      summary = `đang chơi Thế chữ (mọi người cùng chơi: đổi ${round.max > 1 ? '1 hoặc 2' : '1'} chữ cái của từ ${round.len} chữ hiện tại${round.lock >= 0 ? ', không đổi chữ đang bị khoá' : ''}, để ra từ mới và thành người giữ từ, hết 12 giây không ai thế được thì người giữ từ thắng ván +10 điểm; chuỗi đang có ${round.chain.length} từ${round.holder ? `, người giữ từ: ${round.holder.name}` : ''})`;
     else if (phase === 'question' && round.mode === 'hunt')
       summary = `đang đố câu ${game.qNo}/${game.total} khung Săn từ: ma trận chữ cái 10x10 có ${round.hunt.hidden.length} từ giấu theo mọi hướng, ai tìm đủ ${HUNT_NEED} từ trước thắng (không được nói từ nào nằm trong ma trận)`;
     else if (phase === 'question' && round.mode === 'startend')
@@ -1882,7 +2563,7 @@ const ai = require('./ai').create({
       summary,
       board: b,
       // mcq thường: đáp án là nghĩa; mcq ngược / gõ / ghép chữ: đáp án là từ tiếng Anh
-      secret: phase === 'question' && round ? (['startend', 'hunt', 'chain', 'errhunt', 'cross', 'dictate'].includes(round.mode) ? null : round.secret ? { w: round.secret } : round.mode === 'mcq' && !round.rev ? { w: round.word.m } : { w: round.word.w }) : null,
+      secret: phase === 'question' && round ? (['startend', 'hunt', 'chain', 'errhunt', 'cross', 'dictate', 'bricky', 'haitu'].includes(round.mode) ? null : round.secret ? { w: round.secret } : round.mode === 'mcq' && !round.rev ? { w: round.word.m } : { w: round.word.w }) : null,
     };
   },
   onReply(r) {
@@ -1924,6 +2605,7 @@ server.listen(PORT, () => {
   }
   console.log(`Kho ${BANK.length} từ (đã loại ${EXCLUDE.size} từ lỗi) · mức ${CFG.level} · ${CFG.questions} câu/lượt · ${CFG.roundSec}s/câu`);
   tts.init();
+  if (PROGRAM.includes('chain')) { chainDict(4); chainWarm(CHAIN_FINAL_LEN); } // dựng sẵn bộ từ Thế chữ (5 chữ dựng dần, không chặn server)
   if (TIKTOK_USER) tryConnect();
   setInterval(tick, 250);
   setInterval(sendControl, 1000); // màn điều khiển: số người xem, đồng hồ, bình luận

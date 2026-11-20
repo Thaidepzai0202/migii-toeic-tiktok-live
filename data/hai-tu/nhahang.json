@@ -1,0 +1,29 @@
+{
+  "id": "nhahang",
+  "name": "Nhà hàng",
+  "items": [
+    {"id": "restaurant", "w": "restaurant", "vi": "nhà hàng", "ok": ["restaurants"], "p": "a restaurant dining room with set tables"},
+    {"id": "menu", "w": "menu", "vi": "thực đơn", "ok": ["menus", "menu card"], "p": "an open restaurant menu with dishes listed"},
+    {"id": "tray", "w": "tray", "vi": "cái khay", "ok": ["trays", "serving tray"], "p": "a waiter's round silver serving tray"},
+    {"id": "bill", "w": "bill", "vi": "hóa đơn", "ok": ["check", "the bill", "the check", "bills"], "p": "a restaurant bill in a small folder with a pen"},
+    {"id": "tip", "w": "tip", "vi": "tiền boa", "ok": ["tips", "gratuity"], "p": "a few generic folded banknotes and coins beside an empty plate, no portraits or writing"},
+    {"id": "napkin", "w": "napkin", "vi": "khăn ăn", "ok": ["napkins", "serviette", "table napkin"], "p": "a folded cloth napkin on a plate"},
+    {"id": "tablecloth", "w": "tablecloth", "vi": "khăn trải bàn", "ok": ["table cloth", "tablecloths"], "p": "a red checkered tablecloth on a table"},
+    {"id": "toothpick", "w": "toothpick", "vi": "cái tăm", "ok": ["toothpicks", "tooth pick"], "p": "a small holder of wooden toothpicks"},
+    {"id": "salt-shaker", "w": "salt shaker", "vi": "lọ muối", "ok": ["salt shakers", "salt cellar"], "p": "a glass salt shaker with a metal top"},
+    {"id": "pepper-shaker", "w": "pepper shaker", "vi": "lọ tiêu", "ok": ["pepper shakers", "pepper pot"], "p": "a black pepper shaker with a metal top"},
+    {"id": "pitcher", "w": "pitcher", "vi": "bình rót nước", "ok": ["jug", "water jug", "pitchers", "water pitcher"], "p": "a glass water pitcher pouring water"},
+    {"id": "high-chair", "w": "high chair", "vi": "ghế ăn trẻ em", "ok": ["highchair", "baby chair", "high chairs"], "p": "a baby high chair at a restaurant table"},
+    {"id": "takeout-box", "w": "takeout box", "vi": "hộp mang về", "ok": ["takeaway box", "to-go box", "takeout container", "takeaway", "takeout", "food box"], "p": "a white takeout food box with chopsticks"},
+    {"id": "paper-cup", "w": "paper cup", "vi": "ly giấy", "ok": ["paper cups", "disposable cup", "takeaway cup"], "p": "a disposable paper coffee cup with a lid"},
+    {"id": "buffet", "w": "buffet", "vi": "tiệc tự chọn", "ok": ["buffets", "buffet table"], "p": "a buffet table with many trays of food"},
+    {"id": "chef-hat", "w": "chef hat", "vi": "mũ đầu bếp", "ok": ["chef's hat", "chefs hat", "toque", "chef hats", "cook hat"], "p": "a tall white chef's hat"},
+    {"id": "apron", "w": "apron", "vi": "tạp dề", "ok": ["aprons"], "p": "a kitchen apron hanging on a hook"},
+    {"id": "grill", "w": "grill", "vi": "bếp nướng", "ok": ["barbecue grill", "grills", "charcoal grill"], "p": "a charcoal grill with meat skewers cooking"},
+    {"id": "counter", "w": "counter", "vi": "quầy gọi món", "ok": ["order counter", "service counter", "counters"], "p": "a restaurant order counter with a cashier"},
+    {"id": "coffee-shop", "w": "coffee shop", "vi": "quán cà phê", "ok": ["cafe", "café", "coffeehouse", "coffee house", "coffee shops"], "p": "a cozy coffee shop with a counter and cups"},
+    {"id": "food-court", "w": "food court", "vi": "khu ẩm thực", "ok": ["food courts", "food hall"], "p": "a mall food court with many tables and counters"},
+    {"id": "food-truck", "w": "food truck", "vi": "xe bán đồ ăn", "ok": ["food trucks", "food van"], "p": "a colorful food truck selling burgers"},
+    {"id": "food-stall", "w": "food stall", "vi": "sạp đồ ăn", "ok": ["food stand", "street stall", "food stalls", "street food stall"], "p": "a street food stall with a cook and pots"}
+  ]
+}

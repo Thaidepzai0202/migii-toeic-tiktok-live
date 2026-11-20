@@ -1,15 +1,15 @@
 node_modules/
 .env
 data/scores-*.json
-data/server.log
-data/chrome-game/
+data/server*.log
+data/chrome-game*/
 data/used-words*.json
 data/tts-cache/
 data/backup*/
 data/*.bak*
 .DS_Store
 data/tmp/
-data/server.pid
+data/server*.pid
 data/en-audio/
 
 # Bản HTML cho Figma có nhúng font SVN-Avo (giấy phép chưa xác nhận): không đưa lên git
@@ -20,3 +20,4 @@ data/the-chu-record.json
 
 # Thống kê live (stats.js): có mã người xem đã băm, muối băm riêng của máy
 data/stats/
+data/hai-tu-goc/

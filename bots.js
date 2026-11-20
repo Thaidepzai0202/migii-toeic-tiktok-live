@@ -46,7 +46,8 @@ exports.create = ({ onChat, isLive = () => true }) => {
   const userOf = (n) => ({ uid: `bot:${n}`, name: n, avatar: '', bot: true });
   const crowd = (k, skip = new Set()) => shuffle(NAMES.filter((n) => !skip.has(`bot:${n}`))).slice(0, k).map(userOf);
   const later = (r, s, fn) => timers.push(setTimeout(() => isLive(r) && fn(), Math.max(0.3, s) * 1000));
-  const at = (r, u, s, text) => later(r, s, () => onChat(u, text));
+  // r.finGrace = giây đồng hồ đứng của câu về đích dùng chung (server.js markFinish): bot chờ hết màn chuyển rồi mới gõ
+  const at = (r, u, s, text) => later(r, s + (r.finGrace || 0), () => onChat(u, text));
 
   // Trắc nghiệm (Word, Điền từ, Đọc nhanh, Nghe – nghĩa, Đố nhanh…): ~60% đúng, chỉ tính lần chọn đầu.
   // Khung mới ghi đáp án A–D (round.wq) thì bot gõ chữ cái; khung gốc ghi 1–4 thì gõ số.
@@ -60,12 +61,17 @@ exports.create = ({ onChat, isLive = () => true }) => {
     }
   }
 
-  // Ghép chữ: gõ thứ tự số (đúng ~55%)
+  // Ghép chữ (16/11: gõ cả từ): ~55% gõ đúng; số còn lại gõ sai thứ tự chữ (✗), một nửa trong đó gõ lại đúng sau
   function scramble(r, users) {
-    const ok = r.order.map((i) => i + 1).join('');
+    const ok = r.word.w.toLowerCase();
     for (const u of users) {
       if (Math.random() < 0.25) continue;
-      at(r, u, rand(0.3 * r.sec, r.sec - 1.5), Math.random() < 0.55 ? ok : shuffle([...ok]).join(''));
+      const t = rand(0.3 * r.sec, r.sec - 2);
+      if (Math.random() < 0.55) { at(r, u, t, ok); continue; }
+      let bad = shuffle([...ok]).join('');
+      if (bad === ok) bad = [...ok].reverse().join('');
+      at(r, u, t, bad);
+      if (Math.random() < 0.5) at(r, u, Math.min(r.sec - 1, t + rand(1.5, 4)), ok);
     }
   }
 
@@ -134,15 +140,53 @@ exports.create = ({ onChat, isLive = () => true }) => {
     }
   }
 
-  // Nghe & gõ chính tả: phần lớn đợi gợi ý; thỉnh thoảng gõ sai chính tả trước rồi sửa
+  // Nghe & gõ chính tả: phần lớn đợi gợi ý; thỉnh thoảng gõ sai chính tả trước rồi sửa.
+  // Dùng chung cho Thêm bớt 1 chữ ('oneletter'): r.grace = giây đồng hồ đứng của câu về đích đầu tiên (màn chuyển) → bot chờ hết rồi mới gõ;
+  // gõ trật thì hay gõ lại nguyên chữ trên màn (r.one.q.s) như người thật.
   function typeWord(r, users, bank) {
-    const sec = r.sec, { w } = r.word;
+    const sec = r.sec, { w } = r.word, g = r.grace || 0, shown = r.one?.q.s;
+    const miss = () => (shown && Math.random() < 0.5 ? shown : typo(w));
     for (const u of users) {
       if (Math.random() < 0.25) continue;
       if (Math.random() < 0.5) {
-        if (Math.random() < 0.2) at(r, u, rand(0.2, 0.45) * sec, typo(w));
-        at(r, u, rand(0.4 * sec, sec - 1.5), w);
-      } else at(r, u, rand(0.2 * sec, sec - 1.5), Math.random() < 0.6 ? pick(bank()).w : typo(w));
+        if (Math.random() < 0.2) at(r, u, g + rand(0.2, 0.45) * sec, miss());
+        at(r, u, g + rand(0.4 * sec, sec - 1.5), w);
+      } else at(r, u, g + rand(0.2 * sec, sec - 1.5), Math.random() < 0.6 ? pick(bank()).w : miss());
+    }
+  }
+
+  // Bricky (người dùng chốt 19/11/2026): bot chỉ gõ chậm vài từ NGẮN trên bảng để bảng không đứng im lúc vắng người; không bao giờ gõ
+  // từ dài nhất (từ dùng hết bộ chữ) nên không thể điền đủ bảng và không bao giờ nhận +10. Có người thật thì ít bot gõ hơn và gõ muộn hơn.
+  // Hái từ: bot hái chậm vài ô để lưới không đứng im lúc vắng người; có người thật thì ít bot hơn, hái muộn hơn và mỗi bot chỉ 1 quả.
+  // Quả đã có người hái trước thì bình luận của bot thành tán gẫu (server không cộng). Thưởng "hái nhiều nhất" server chỉ tính người thật.
+  function haitu(r, users, real) {
+    const sec = r.sec, tiles = shuffle(r.fr.tiles.map((t) => t.w));
+    let k = 0;
+    for (const u of users.slice(0, real ? 2 : 4)) {
+      if (Math.random() < (real ? 0.4 : 0.15)) continue;
+      let t = rand(real ? 0.35 : 0.1, real ? 0.7 : 0.4) * sec;
+      for (let i = 0, n = real ? 1 : 1 + Math.floor(Math.random() * 3); i < n && k < tiles.length && t < sec - 1.5; i++) {
+        at(r, u, t, Math.random() < 0.12 ? typo(tiles[k]) : tiles[k]);
+        k++;
+        t += rand(6, 14);
+      }
+    }
+  }
+
+  function bricky(r, users, real) {
+    const sec = r.sec, B = r.bk, max = B.tiles.length, g = r.grace || 0; // bảng cuối: chờ hết khoảng đồng hồ đứng (màn chuyển) rồi mới gõ
+    const short = B.board.map((x) => x.w).filter((w) => w.length < max);
+    if (!short.length) return;
+    for (const u of users.slice(0, real ? 2 : 4)) {
+      if (Math.random() < (real ? 0.5 : 0.2)) continue;
+      const mine = shuffle(short).slice(0, Math.min(short.length, Math.random() < 0.4 ? 2 : 1));
+      let t = g + rand(real ? 0.45 : 0.15, real ? 0.7 : 0.5) * sec;
+      for (const w of mine) {
+        if (t > g + sec - 1.5) break;
+        at(r, u, t, w);
+        t += rand(5, 11);
+      }
+      if (Math.random() < 0.25) at(r, u, g + rand(0.3, 0.9) * sec, typo(pick(short))); // gõ trật như người thật (từ trật thường không hợp lệ)
     }
   }
 
@@ -151,7 +195,7 @@ exports.create = ({ onChat, isLive = () => true }) => {
     cancel: clear,
 
     // ctx = { active: số bot câu này, real: số người thật đang chơi, bank(): kho từ }
-    onQuestion(r, { active, bank }) {
+    onQuestion(r, { active, bank, real = 0 }) {
       clear();
       if (active <= 0) return;
       const users = crowd(active);
@@ -161,7 +205,9 @@ exports.create = ({ onChat, isLive = () => true }) => {
       if (r.mode === 'hunt') return hunt(r, users);
       if (r.mode === 'errhunt') return errhunt(r, users);
       if (r.mode === 'dictate') return dictate(r, users);
-      return typeWord(r, users, bank); // 'type' và chế độ gõ từ cũ
+      if (r.mode === 'bricky') return bricky(r, users, real);
+      if (r.mode === 'haitu') return haitu(r, users, real);
+      return typeWord(r, users, bank); // 'type', 'emoji', 'irrfill', 'oneletter' (Đoán emoji, Chia động từ, Thêm bớt 1 chữ: r.word.w là đáp án; Tìm bất quy tắc là 'mcq') và chế độ gõ từ cũ
     },
 
     // Giải ô chữ. C = game.cross. Chữ thường = giải hàng (người đầu tiên điền hàng, người sau còn 10 giây);
@@ -173,7 +219,7 @@ exports.create = ({ onChat, isLive = () => true }) => {
       const decoys = bank().map((x) => x.w.toLowerCase()).filter((w) => /^[a-z]{4,10}$/.test(w));
       const keyDecoys = decoys.filter((w) => w.length === key.length && w !== key);
       const bigOpen = () => C.solved * 2 > C.p.rows.length;
-      const guessKey = (u, s, right) => later(r, s, () => bigOpen() && onChat(u, (right ? key : pick(keyDecoys.length ? keyDecoys : decoys)).toUpperCase()));
+      const guessKey = (u, s, right) => later(r, s + (r.finGrace || 0), () => bigOpen() && onChat(u, (right ? key : pick(keyDecoys.length ? keyDecoys : decoys)).toUpperCase()));
       if (r.stage === 'clue') {
         const ans = C.p.rows[r.idx].w;
         // chưa có người thật: thường có 1 bot giải giữa giờ để ô chữ chạy tiếp; có người thật: ít khi giải và giải muộn

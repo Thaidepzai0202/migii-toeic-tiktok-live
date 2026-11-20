@@ -6,8 +6,8 @@
   "scripts": {
     "demo": "node server.js --sim",
     "demo:bot": "node server.js --autostart --tag demo-bot",
-    "demo:duoi450": "node server.js --sim --program-order word,startend,hunt,chain --word-file data/word-300.json,data/word-400.json",
-    "demo:450-650": "node server.js --sim --program-order word,fillin,listenmean,errhunt,crossword --word-file data/word-500.json,data/word-600.json --err-file data/san-loi-600.json --cross-file data/o-chu-600.json",
+    "demo:duoi450": "node server.js --sim --program-order word,emoji,irrfill,scramble,startend,irrfind,bricky,haitu,listenmean,oneletter,hunt,chain --word-file data/word-300.json,data/word-400.json --seg-total word=20,emoji=20,irrfill=16,scramble=20,irrfind=16,bricky=8,haitu=6,listenmean=16,oneletter=20",
+    "demo:450-650": "node server.js --sim --program-order word,scramble,fillin,listenmean,errhunt,crossword --seg-total word=20,fillin=10 --level mid --word-file data/word-500.json,data/word-600.json --err-file data/san-loi-600.json --cross-file data/o-chu-600.json",
     "demo:650-800": "node server.js --sim --program-order word,speedread,dictate --word-file data/word-700.json --read-file data/doc-nhanh-700.json --dict-file data/nghe-chep-700.json",
     "demo:tren800": "node server.js --sim --program-order word,speedread --word-file data/word-800.json,data/word-900.json --read-file data/doc-nhanh-800.json",
     "build:word300": "node build_word.js 300",
@@ -24,6 +24,9 @@
     "live": "./go_live.sh studio",
     "control": "open http://localhost:8788/control",
     "build:bank": "node build_bank.js",
+    "build:bricky": "node build_bricky.js",
+    "build:anh-hai-tu": "node build_hai_tu_anh.js",
+    "build:motchu": "node build_mot_chu.js",
     "build:audio": "node build_audio.js",
     "build:qr": "node build_qr.js"
   },

@@ -35,18 +35,23 @@ const W = (...n) => `--word-file ${n.map((x) => `data/word-${x}.json`).join(',')
 // 4 kênh theo mốc TOEIC (chốt 11/11/2026 sau buổi chơi thử): mỗi kênh có 1 mục "cả kênh" (các khung chạy xen kẽ như lúc live) và từng game riêng.
 // Người chơi thử đề nghị bỏ game nghe, Săn từ, Giải ô chữ, Săn lỗi, Giờ học; người dùng chưa muốn bỏ nên vẫn giữ ở kênh theo mốc cũ của game.
 const CH = {
-  duoi450: `--program-order word,startend,hunt,chain ${W(300, 400)}`,
-  k450: `--program-order word,fillin,listenmean,errhunt,crossword ${W(500, 600)} --err-file data/san-loi-600.json --cross-file data/o-chu-600.json`,
+  duoi450: `--program-order word,emoji,irrfill,scramble,startend,irrfind,bricky,haitu,listenmean,oneletter,hunt,chain ${W(300, 400)}`,
+  k450: `--program-order word,scramble,fillin,listenmean,errhunt,crossword --seg-total word=20,fillin=10 --level mid ${W(500, 600)} --err-file data/san-loi-600.json --cross-file data/o-chu-600.json`,
   k650: `--program-order word,speedread,dictate ${W(700)} --read-file data/doc-nhanh-700.json --dict-file data/nghe-chep-700.json`,
   tren800: `--program-order word,speedread ${W(800, 900)} --read-file data/doc-nhanh-800.json`,
 };
 const GAMES = [
-  { id: 'duoi-450', ch: 'duoi450', icon: '📺', name: 'Cả kênh dưới 450', note: 'Word → Start or End → Săn từ → Thế chữ, xen kẽ như lúc live', args: CH.duoi450 },
+  { id: 'duoi-450', ch: 'duoi450', icon: '📺', name: 'Cả kênh dưới 450', note: 'Word → Đoán emoji → Chia động từ → Ghép chữ → Start or End → Tìm bất quy tắc → Bricky → Hái từ → Nghe – nghĩa → Thêm bớt 1 chữ → Săn từ → Thế chữ, xen kẽ như lúc live', args: CH.duoi450 },
+  { id: 'bat-quy-tac', ch: 'duoi450', icon: '📝', name: 'Động từ bất quy tắc', note: 'hai mode luân phiên: Chia động từ (bảng V1–V2–V3 khuyết 1 ô, gõ từ còn thiếu) và Tìm bất quy tắc (chọn A–D trong 4 động từ)', args: '--program-order irrfill,irrfind' },
+  { id: 'hai-tu', ch: 'duoi450', icon: '🍎', name: 'Hái từ', note: 'mỗi bảng một chủ đề, lưới 16 ảnh kèm tên tiếng Việt: gõ tên tiếng Anh để hái, ai gõ đúng trước +2, hái nhiều nhất +5; 60 giây/bảng', args: '--program-order haitu' },
+  { id: 'bricky', ch: 'duoi450', icon: '🧱', name: 'Bricky', note: 'cho 4–5 chữ cái, ghép thành các từ tiếng Anh: mỗi từ +1 (kể cả từ ngoài bảng), người đầu tiên điền đủ bảng +10; 40 giây/bảng', args: '--program-order bricky' },
+  { id: 'mot-chu', ch: 'duoi450', icon: '✂️', name: 'Thêm bớt 1 chữ', note: 'chữ viết sai + nghĩa: THÊM hoặc BỚT 1 chữ cái rồi gõ cả từ, 15 giây/câu; 3 câu cuối là chặng về đích (từ rất dễ nhầm, điểm ×2)', args: '--program-order oneletter' },
+  { id: 'emoji', ch: 'duoi450', icon: '🤔', name: 'Đoán emoji', note: 'nhìn emoji đoán từ tiếng Anh (400 câu: từ ghép, đoán từ, cụm từ), 20 giây/câu', args: '--program-order emoji' },
   { id: 'word-duoi-450', ch: 'duoi450', icon: '🔤', name: 'Word', note: 'chọn nghĩa · nghĩa → từ · đồng nghĩa · trái nghĩa (từ mốc 300 + 400), 10 giây/câu', args: `--program-order word ${W(300, 400)}` },
   { id: 'startend', ch: 'duoi450', icon: '🎯', name: 'Start or End', note: 'tìm 5 từ bắt đầu / kết thúc bằng cụm chữ', args: `--program-order startend ${W(300, 400)}` },
   { id: 'hunt', ch: 'duoi450', icon: '🔎', name: 'Săn từ', note: 'ma trận 10×10, tìm từ theo 8 hướng', args: `--program-order hunt ${W(300, 400)}` },
   { id: 'chain', ch: 'duoi450', icon: '🔗', name: 'Thế chữ', note: 'hai đội Black / White đổi từng chữ cái', args: `--program-order chain ${W(300, 400)}` },
-  { id: '450-650', ch: 'k450', icon: '📺', name: 'Cả kênh 450–650', note: 'Word → Điền từ → Nghe – nghĩa → Săn lỗi → Giải ô chữ, xen kẽ như lúc live', args: CH.k450 },
+  { id: '450-650', ch: 'k450', icon: '📺', name: 'Cả kênh 450–650', note: 'Word → Ghép chữ → Điền từ → Nghe – nghĩa → Săn lỗi → Giải ô chữ, xen kẽ như lúc live', args: CH.k450 },
   { id: 'word-450-650', ch: 'k450', icon: '🔤', name: 'Word', note: 'từ mốc 500 + 600, 10 giây/câu', args: `--program-order word ${W(500, 600)}` },
   { id: 'fillin', ch: 'k450', icon: '✏️', name: 'Điền từ', note: 'câu thiếu 1 từ, có lời giải vì sao hay nhầm', args: `--program-order fillin ${W(500, 600)}` },
   { id: 'listenmean', ch: 'k450', icon: '🎧', name: 'Nghe – nghĩa', note: 'nghe một lần, chữ cái hiện dần, chọn nghĩa', args: `--program-order listenmean ${W(500, 600)}` },
@@ -62,7 +67,7 @@ const GAMES = [
   // game gốc từ bản Jaemy (kho từ bank.json của Migii), chưa xếp vào kênh nào
   { id: 'class', ch: 0, icon: '📖', name: 'Giờ học', note: 'Ninja dạy 3 từ rồi kiểm tra, gọi tên', args: '--program-order class' },
   { id: 'quiz', ch: 0, icon: '⚡', name: 'Đố nhanh', note: 'chọn nghĩa đúng của từ', args: '--program-order quiz' },
-  { id: 'scramble', ch: 0, icon: '🧩', name: 'Ghép chữ', note: 'ghép chữ cái bị xáo thành từ', args: '--program-order scramble' },
+  { id: 'scramble', ch: 'duoi450', icon: '🧩', name: 'Ghép chữ', note: 'ghép chữ cái bị xáo thành từ', args: '--program-order scramble' },
   { id: 'reverse', ch: 0, icon: '🔁', name: 'Chọn từ tiếng Anh', note: 'nhìn nghĩa, chọn từ tiếng Anh', args: '--program-order reverse' },
   { id: 'listen', ch: 0, icon: '🎧', name: 'Luyện tai', note: 'chỉ nghe, không hiện chữ', args: '--program-order listen' },
   { id: 'team', ch: 0, icon: '🥊', name: 'So găng 2 đội', note: 'hai đội đấu nhau', args: '--program-order team' },

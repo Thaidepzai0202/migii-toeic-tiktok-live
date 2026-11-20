@@ -22,7 +22,9 @@ const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
 exports.start = ({ onChat, onGift, onJoin, bank }) => {
   const crowd = NAMES.map((name, i) => ({ uid: `sim:${i}`, name, avatar: '', skill: rand(0.15, 0.7) }));
   const timers = [];
-  const later = (sec, fn) => timers.push(setTimeout(fn, sec * 1000));
+  // finG = số giây đồng hồ đứng của câu về đích dùng chung (round.finGrace, server.js markFinish): mọi lịch gõ của câu đó dời theo
+let finG = 0;
+const later = (sec, fn) => timers.push(setTimeout(fn, (sec + finG) * 1000));
 
   setInterval(() => Math.random() < 0.3 && onJoin({ name: pick(NAMES) }), 4000);
 
@@ -42,6 +44,7 @@ exports.start = ({ onChat, onGift, onJoin, bank }) => {
     },
     // Giải ô chữ: người giỏi gõ đúng hàng (chữ thường) sớm; thỉnh thoảng có người gõ sai. Khi đã mở từ khoá, vài người đoán CHỮ HOA (đa số sai trước khi có người đúng)
     onCross(round, C) {
+      finG = round.finGrace || 0;
       timers.splice(0).forEach(clearTimeout);
       const key = C.p.key;
       if (round.stage === 'clue') {
@@ -62,6 +65,7 @@ exports.start = ({ onChat, onGift, onJoin, bank }) => {
     },
     onQuestion(round) {
       timers.splice(0).forEach(clearTimeout);
+      finG = round.finGrace || 0;
       if (round.mode === 'dictate') {
         // Nghe – chép: gõ cả câu cần 10–25 giây; người kém hơn gõ sai (thiếu chữ ở một từ) rồi gõ lại; thỉnh thoảng chỉ gõ nửa câu
         const s = round.dict.q.s, words = s.replace(/[,.?]/g, '').split(' ');
@@ -102,6 +106,38 @@ exports.start = ({ onChat, onGift, onJoin, bank }) => {
         }
         return;
       }
+      if (round.mode === 'haitu') {
+        // Hái từ: mỗi người gõ tên vài ô bất kỳ trên lưới (quả đã rụng thì thành tán gẫu); thỉnh thoảng gõ kèm chữ ô, gõ sai chính tả hoặc tán gẫu
+        const tiles = round.fr.tiles;
+        for (const u of crowd) {
+          if (Math.random() < 0.25) continue;
+          let t = rand(3, 20);
+          for (let i = 0, n = 1 + Math.floor(Math.random() * (2 + 4 * u.skill)); i < n && t < round.sec - 1.5; i++) {
+            const k = Math.floor(Math.random() * tiles.length), w = tiles[k].w;
+            const text = Math.random() < 0.1 ? pick(['khó quá', 'quả gì đây', 'hello']) : Math.random() < 0.12 ? w.slice(0, -1) : Math.random() < 0.2 ? `${'ABCDEFGHIJKLMNOP'[k]} ${w}` : w;
+            later(t, () => onChat(u, text));
+            t += rand(3, 9) * (1.3 - u.skill);
+          }
+        }
+        return;
+      }
+      if (round.mode === 'bricky') {
+        // Bricky: người giỏi gõ lần lượt các từ trên bảng (có thể điền đủ bảng), người khác gõ lẫn từ trên bảng và từ thêm; thỉnh thoảng gõ từ lạ
+        // hoặc gõ hai từ trong một bình luận.
+        const B = round.bk, board = B.board.map((x) => x.w), all = [...B.valid];
+        for (const u of crowd) {
+          if (Math.random() < 0.2) continue;
+          const pro = Math.random() < u.skill * 0.6;
+          const list = pro ? [...board].sort(() => Math.random() - 0.5) : Array.from({ length: 2 + Math.floor(Math.random() * 5) }, () => pick(all));
+          let t = (round.grace || 0) + rand(3, 12);
+          for (let i = 0; i < list.length && t < (round.grace || 0) + round.sec - 1.5; i++) {
+            const text = Math.random() < 0.12 ? pick(['hello', 'xin chào', 'khó quá', 'tea time']) : Math.random() < 0.15 && list[i + 1] ? `${list[i]} ${list[++i]}` : list[i];
+            later(t, () => onChat(u, text));
+            t += rand(2.5, 7) * (1.2 - u.skill);
+          }
+        }
+        return;
+      }
       const { w } = round.word;
       const roundSec = round.sec;
       if (round.mode === 'mcq') {
@@ -125,7 +161,7 @@ exports.start = ({ onChat, onGift, onJoin, bank }) => {
         return;
       }
       if (round.mode === 'scramble') {
-        const ok = round.order.map((i) => i + 1).join('');
+        const ok = round.word.w.toLowerCase(); // 16/11: gõ cả từ, không gõ thứ tự số
         for (const u of crowd) {
           if (Math.random() < 0.2) continue;
           const right = Math.random() < u.skill + 0.25;
@@ -133,13 +169,15 @@ exports.start = ({ onChat, onGift, onJoin, bank }) => {
         }
         return;
       }
+      const g = round.grace || 0; // câu về đích đầu tiên (Thêm bớt 1 chữ): đồng hồ đứng g giây cho màn chuyển
       for (const u of crowd) {
         // Người giỏi trả lời sớm; người khác chờ gợi ý (35% / 70% thời gian).
         if (Math.random() < u.skill) {
           const at = Math.random() < 0.5 ? rand(3, roundSec * 0.4) : rand(roundSec * 0.35, roundSec * 0.95);
-          later(at, () => onChat(u, w));
+          later(g + at, () => onChat(u, w));
         } else if (Math.random() < 0.5) {
-          later(rand(2, roundSec * 0.9), () => onChat(u, pick(bank()).w));
+          // Thêm bớt 1 chữ: người chưa giỏi hay gõ lại nguyên chữ trên màn (hiện ✗ chưa đúng)
+          later(g + rand(2, roundSec * 0.9), () => onChat(u, round.one && Math.random() < 0.5 ? round.one.q.s : pick(bank()).w));
         }
         if (Math.random() < 0.12) later(rand(1, roundSec), () => onChat(u, pick(CHATTER)));
       }

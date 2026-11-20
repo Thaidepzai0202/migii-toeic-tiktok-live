@@ -26,8 +26,8 @@ GAME_PROFILE="$PWD/data/chrome-game"
 # Game của từng kênh (giữ giống các lệnh demo:<kênh> trong package.json)
 kenh_args() {
   case "$1" in
-    duoi450) echo "--program-order word,startend,hunt,chain --word-file data/word-300.json,data/word-400.json" ;;
-    450-650) echo "--program-order word,fillin,listenmean,errhunt,crossword --word-file data/word-500.json,data/word-600.json --err-file data/san-loi-600.json --cross-file data/o-chu-600.json" ;;
+    duoi450) echo "--program-order word,emoji,irrfill,scramble,startend,irrfind,bricky,haitu,listenmean,oneletter,hunt,chain --word-file data/word-300.json,data/word-400.json --seg-total word=20,emoji=20,irrfill=16,scramble=20,irrfind=16,bricky=8,haitu=6,listenmean=16,oneletter=20" ;;
+    450-650) echo "--program-order word,scramble,fillin,listenmean,errhunt,crossword --seg-total word=20,fillin=10 --level mid --word-file data/word-500.json,data/word-600.json --err-file data/san-loi-600.json --cross-file data/o-chu-600.json" ;;
     650-800) echo "--program-order word,speedread,dictate --word-file data/word-700.json --read-file data/doc-nhanh-700.json --dict-file data/nghe-chep-700.json" ;;
     tren800) echo "--program-order word,speedread --word-file data/word-800.json,data/word-900.json --read-file data/doc-nhanh-800.json" ;;
     *) echo "Kênh không hợp lệ: '$1' (chọn duoi450 · 450-650 · 650-800 · tren800)" >&2; exit 1 ;;
@@ -113,14 +113,27 @@ if [[ "${1:-}" == "studio" ]]; then
   WIN_H=$(( SCREEN_H - 25 - 4 ))            # trừ thanh menu
   CONTENT_H=$(( WIN_H - 28 ))               # trừ thanh tiêu đề
   WIN_W=$(( CONTENT_H * 9 / 16 ))
-  if [[ -n "$GAME_WIN_OPEN" ]]; then
+  # NO_GAME_WIN=1 (.env): LIVE Studio tự mở trang game bằng nguồn Link (live nhiều kênh: 2 LIVE Studio cùng quay cửa sổ thì
+  # ScreenCaptureKit hỏng, màn đen — 16/11/2026) → KHÔNG mở cửa sổ Chrome game, không thì tiếng game phát trùng 2 lần.
+  if [[ -n "${NO_GAME_WIN:-}" ]]; then
+    echo "Không mở cửa sổ game: LIVE Studio dùng nguồn Link http://localhost:$PORT/?loa=…&nguon=migii.live"
+  elif [[ -n "$GAME_WIN_OPEN" ]]; then
     echo "Giữ cửa sổ game đang mở (trang tự nối lại) — LIVE Studio không phải chọn lại nguồn."
   else
+  # LOA="BlackHole 2ch" trong .env (16/11/2026, live nhiều kênh một máy): game phát tiếng vào loa ảo đó thay vì loa máy.
+  # Khi đó LIVE Studio của kênh phải TẮT "Primary speaker" và lấy micro là loa ảo đó, không thì live mất tiếng.
+  # Cờ fake-ui: trang tự được quyền micro để đọc tên loa (KHÔNG thêm --use-fake-device-for-media-stream: cờ đó thay cả danh sách loa bằng loa giả).
+  GAME_URL="http://localhost:$PORT/"; LOA_ARGS=()
+  if [[ -n "${LOA:-}" ]]; then
+    GAME_URL+="?loa=$(node -e 'process.stdout.write(encodeURIComponent(process.argv[1]))' "$LOA")"
+    LOA_ARGS=(--use-fake-ui-for-media-stream)
+  fi
   # 3 cờ disable-*: Chrome KHÔNG giảm khung hình / hoãn đồng hồ khi cửa sổ bị LIVE Studio che → hình không đứng, tiếng không trễ
-  open -na "Google Chrome" --args --user-data-dir="$GAME_PROFILE" --app="http://localhost:$PORT/" \
+  env -u ELECTRON_RUN_AS_NODE open -na "Google Chrome" --args --user-data-dir="$GAME_PROFILE" --app="$GAME_URL" \
     --window-size=$WIN_W,$WIN_H --window-position=0,25 --autoplay-policy=no-user-gesture-required \
     --disable-backgrounding-occluded-windows --disable-renderer-backgrounding --disable-background-timer-throttling \
-    --no-first-run --no-default-browser-check
+    ${LOA_ARGS[@]+"${LOA_ARGS[@]}"} --no-first-run --no-default-browser-check
+  [[ -n "${LOA:-}" ]] && echo "Tiếng game ra loa ảo '$LOA' → LIVE Studio: tắt Primary speaker, micro chọn '$LOA'."
   echo "Cửa sổ game ${WIN_W}×${CONTENT_H} điểm ảnh (màn cao ${SCREEN_H})."
   fi
   # Camera ảo NÉT 1080×1920: OBS chạy ngầm dựng trang game (tắt tiếng) → LIVE Studio nguồn Camera "OBS Virtual Camera".

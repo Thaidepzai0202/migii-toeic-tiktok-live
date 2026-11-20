@@ -12,8 +12,12 @@ const dict = require('./dict');
 
 const PER_ANSWER = 5;
 const MIN_COMMON = 6; // cụm chữ chỉ được dùng khi có ít nhất ngần này từ thông dụng khớp (để có ví dụ công bố và cho khán giả ảo)
-const PREFIX = ['b', 'c', 'd', 'f', 'g', 'h', 'l', 'm', 'n', 'p', 'r', 's', 't', 'w', 'ca', 'co', 'de', 'ex', 'in', 'ma', 'mo', 'pa', 'pl', 'pr', 're', 'st', 'su', 'tr', 'un', 'ch', 'sh', 'th', 'pre', 'pro', 'con', 'dis', 'com', 'int'];
-const SUFFIX = ['ing', 'ed', 'er', 'ly', 'tion', 'ment', 'ness', 'able', 'ful', 'less', 'al', 'ity', 'ous', 'ive', 'ship', 'y', 'e', 't', 'n', 'r', 'd', 'l', 'k', 'st', 'nt', 'ck', 'ty'];
+// 17/11/2026: người dùng nâng lên 100 cụm (trước 62, lặp sau khoảng 2 giờ live). Cụm thêm đều có ≥ 10 từ khớp trong kho kênh dưới 450,
+// thêm nhiều cụm kết thúc hơn để hai loại gần ngang nhau (52 bắt đầu · 48 kết thúc). In danh sách: node startend.js
+const PREFIX = ['b', 'c', 'd', 'f', 'g', 'h', 'l', 'm', 'n', 'p', 'r', 's', 't', 'w', 'ca', 'co', 'de', 'ex', 'in', 'ma', 'mo', 'pa', 'pl', 'pr', 're', 'st', 'su', 'tr', 'un', 'ch', 'sh', 'th', 'pre', 'pro', 'con', 'dis', 'com', 'int',
+  'a', 'e', 'i', 'o', 'u', 'v', 'ba', 'be', 'di', 'fa', 'fi', 'me', 'po', 'se'];
+const SUFFIX = ['ing', 'ed', 'er', 'ly', 'tion', 'ment', 'ness', 'able', 'ful', 'less', 'al', 'ity', 'ous', 'ive', 'ship', 'y', 'e', 't', 'n', 'r', 'd', 'l', 'k', 'st', 'nt', 'ck', 'ty',
+  'h', 'm', 'p', 'w', 'ow', 'ay', 'ar', 'or', 'on', 'le', 'se', 're', 'te', 'ce', 'ge', 've', 'ry', 'ate', 'ure', 'age', 'ent', 'nd', 'll', 'ch'];
 
 const shuffle = (a) => {
   const r = [...a];
@@ -34,17 +38,21 @@ exports.create = (common) => {
       if (matches.length >= MIN_COMMON) patterns.push({ k, s, matches });
     }
   }
-  const recent = [];
+  const recent = [], done = new Set();
   let lastKind = null;
 
   return {
     patterns,
-    // chọn cụm chữ cho câu mới: không lặp 10 cụm gần nhất, luân phiên bắt đầu/kết thúc
+    // chọn cụm chữ cho câu mới: ra hết mọi cụm rồi mới lặp (17/11/2026; trước đó chọn ngẫu nhiên nên lặp sau ~20 câu),
+    // sang vòng mới thì tránh 10 cụm vừa ra; luân phiên bắt đầu/kết thúc
     pick() {
-      const fresh = patterns.filter((p) => !recent.includes(p.k + p.s));
-      const pool = fresh.length ? fresh : patterns;
+      if (done.size >= patterns.length) done.clear();
+      const left = patterns.filter((p) => !done.has(p.k + p.s));
+      const fresh = left.filter((p) => !recent.includes(p.k + p.s));
+      const pool = fresh.length ? fresh : left;
       const alt = pool.filter((p) => p.k !== lastKind);
       const p = (alt.length ? alt : pool)[Math.floor(Math.random() * (alt.length ? alt.length : pool.length))];
+      done.add(p.k + p.s);
       recent.push(p.k + p.s);
       if (recent.length > 10) recent.shift();
       lastKind = p.k;

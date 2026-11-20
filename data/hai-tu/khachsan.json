@@ -1,0 +1,25 @@
+{
+  "id": "khachsan",
+  "name": "Khách sạn",
+  "items": [
+    {"id": "hotel", "w": "hotel", "vi": "khách sạn", "ok": ["hotels"], "p": "a hotel building with a doorman at the entrance"},
+    {"id": "front-desk", "w": "front desk", "vi": "quầy lễ tân", "ok": ["reception", "reception desk", "front desks"], "p": "a hotel front desk counter with a receptionist"},
+    {"id": "lobby", "w": "lobby", "vi": "sảnh khách sạn", "ok": ["hotel lobby", "lobbies", "foyer"], "p": "a spacious hotel lobby with sofas and a chandelier"},
+    {"id": "hotel-room", "w": "hotel room", "vi": "phòng khách sạn", "ok": ["room", "guest room", "hotel rooms"], "p": "a hotel room with a made bed and folded towels"},
+    {"id": "room-key", "w": "room key", "vi": "chìa khóa phòng", "ok": ["key", "hotel key", "room keys"], "p": "a metal hotel room key with a big tag"},
+    {"id": "key-card", "w": "key card", "vi": "thẻ phòng", "ok": ["keycard", "key cards", "room card", "card key"], "p": "a plastic hotel key card held at a door lock"},
+    {"id": "double-bed", "w": "double bed", "vi": "giường đôi", "ok": ["double beds"], "p": "a wide double bed with two pillows"},
+    {"id": "single-bed", "w": "single bed", "vi": "giường đơn", "ok": ["single beds", "twin bed"], "p": "a narrow single bed with one pillow"},
+    {"id": "room-service", "w": "room service", "vi": "phục vụ phòng", "ok": [], "p": "a room service cart with covered dishes at a door"},
+    {"id": "minibar", "w": "minibar", "vi": "tủ lạnh mini", "ok": ["mini bar", "mini fridge", "minifridge"], "p": "a small open hotel fridge holding plain water bottles and juice, no labels or logos"},
+    {"id": "safe", "w": "safe", "vi": "két sắt", "ok": ["safes", "safe box", "safety box"], "p": "a small metal safe with a keypad in a closet"},
+    {"id": "elevator", "w": "elevator", "vi": "thang máy", "ok": ["lift", "elevators", "lifts"], "p": "an open elevator door with floor buttons"},
+    {"id": "luggage-cart", "w": "luggage cart", "vi": "xe đẩy hành lý", "ok": ["baggage cart", "luggage trolley", "trolley", "bellhop cart", "luggage carts"], "p": "a gold hotel luggage cart loaded with suitcases"},
+    {"id": "bathrobe", "w": "bathrobe", "vi": "áo choàng tắm", "ok": ["robe", "bath robe", "bathrobes", "dressing gown"], "p": "a white fluffy bathrobe on a hanger"},
+    {"id": "hallway", "w": "hallway", "vi": "hành lang", "ok": ["corridor", "hallways", "corridors"], "p": "a long hotel hallway with doors on both sides"},
+    {"id": "room-number", "w": "room number", "vi": "số phòng", "ok": ["room numbers", "door number"], "p": "a hotel room door with a number plate"},
+    {"id": "balcony", "w": "balcony", "vi": "ban công", "ok": ["balconies"], "p": "a hotel balcony with chairs overlooking the sea"},
+    {"id": "resort", "w": "resort", "vi": "khu nghỉ dưỡng", "ok": ["resorts", "holiday resort", "beach resort"], "p": "a beach resort with villas and palm trees"},
+    {"id": "fire-exit", "w": "fire exit", "vi": "lối thoát hiểm", "ok": ["emergency exit", "exit", "fire exits"], "p": "a green fire exit sign above a door"}
+  ]
+}

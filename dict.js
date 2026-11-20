@@ -19,7 +19,7 @@ const OFFENSIVE = new Set(['fuck', 'fucks', 'fucked', 'fucker', 'shit', 'shits',
   'slut', 'sluts', 'whore', 'whores', 'bitch', 'bitches', 'bastard', 'bastards', 'asshole', 'ass', 'arse', 'anal', 'anus', 'rape', 'raped', 'rapes', 'rapist',
   'nazi', 'nazis', 'porn', 'porno', 'sex', 'sexy', 'tits', 'tit', 'boob', 'boobs', 'penis', 'vagina', 'nigger', 'nigga', 'fag', 'fags', 'faggot', 'retard',
   'retarded', 'kike', 'spic', 'chink', 'gook', 'dyke', 'tranny', 'cum', 'jizz', 'wank', 'wanker', 'twat', 'prick', 'hooker', 'milf', 'hitler', 'dildo',
-  'incest', 'molest', 'pedo', 'horny']);
+  'incest', 'molest', 'pedo', 'horny', 'wog', 'wogs', 'yid', 'yids']);
 // Từ nhạy cảm nhẹ: người xem gõ vẫn được chấp nhận (không đáng loại) nhưng không để xuất hiện trong ma trận Săn từ vì ma trận do mình dựng sẵn
 const MILD = new Set(['damn', 'dammit', 'crap', 'butt', 'screw', 'naked', 'nude', 'nudes']);
 const BAD_IN_GRID = new Set([...OFFENSIVE, ...MILD]);

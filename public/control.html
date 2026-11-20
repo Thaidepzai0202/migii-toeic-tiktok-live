@@ -289,6 +289,9 @@ function render() {
     $('meta').textContent = A.mode === 'dictate' ? `🎙️ Nghe – chép · ${A.winners} người đã gõ đúng cả câu · cứ 2 giây hiện thêm 1 chữ cái` : A.mode === 'errhunt' ? `🔍 Săn lỗi · ${A.winners} người đã gõ đúng cặp từ sai - từ đúng`
       : A.mode === 'cross' ? `🔠 Giải ô chữ · đã giải ${A.cross.solved}/${A.cross.n} hàng · ${A.cross.open ? '🔓 đã mở từ khoá (CHỮ HOA)' : '🔒 chưa mở từ khoá'} · từ khoá: ${A.cross.key.toUpperCase()} · ${A.winners} người đúng`
       : s.answer.mode === 'chain' ? `🔗 Thế chữ · ${{ turn: 'đang chơi', over: 'hết ván' }[s.answer.chain.stage] || ''} · chuỗi ${s.answer.chain.len} từ · người giữ từ: ${s.answer.chain.holder || 'chưa có'} · ${s.answer.chain.players} người đã gõ từ`
+      : s.answer.mode === 'oneletter' ? `✂️ ${s.answer.one.red ? '🔥 VỀ ĐÍCH (điểm ×2) · ' : ''}${s.answer.one.k === 'add' ? 'THÊM' : 'BỚT'} 1 chữ · trên màn: ${s.answer.one.s} · ${s.answer.winners} người đúng`
+      : s.answer.mode === 'haitu' ? `🍎 Hái từ · chủ đề ${s.answer.w} · ${s.answer.winners} người đã hái · gõ thử: ${s.answer.demo}`
+      : s.answer.mode === 'bricky' ? `🧱 Bricky · ${s.answer.winners} người đã điền đủ bảng · gõ thử: ${s.answer.demo}`
       : s.answer.mode === 'hunt' ? `🔎 Săn từ · ${s.answer.winners} người đã tìm đủ 5 từ · đáp án mẫu: ${s.answer.demo}`
       : s.answer.mode === 'startend' ? `🎯 Start or End · ${s.answer.winners} người đã gõ đủ 5 từ đúng · đáp án mẫu: ${s.answer.demo}`
       : `${s.answer.course || ''} · ${s.answer.winners} người đúng · gợi ý mức ${s.answer.hint}/2`;

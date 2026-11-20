@@ -72,7 +72,10 @@ function synth(text, voice = VOICE) {
   const t = clean(text);
   if (!t) return Promise.reject(new Error('câu rỗng'));
   const file = path.join(CACHE, `${crypto.createHash('md5').update(`${voice}|${t}`).digest('hex').slice(0, 16)}.wav`);
-  if (fs.existsSync(file)) return Promise.resolve(file);
+  if (fs.existsSync(file)) {
+    fs.utimes(file, new Date(), new Date(), () => {}); // đánh dấu còn dùng, để prune() giữ lại
+    return Promise.resolve(file);
+  }
   if (pending.has(file)) return pending.get(file);
   const job = (chain = chain
     .catch(() => {})
@@ -103,7 +106,21 @@ async function handle(req, res, url) {
   }
 }
 
+// Mỗi câu ~280 KB, một giờ live sinh ~270 MB (phần lớn là câu có tên người xem, không dùng lại) → lúc bật server xoá câu
+// đã 3 ngày không đọc tới. Câu cố định trong kịch bản được đọc lại mỗi phiên nên vẫn ở lại.
+function prune(days = 3) {
+  let n = 0;
+  try {
+    for (const f of fs.readdirSync(CACHE)) {
+      const p = path.join(CACHE, f);
+      if (f.endsWith('.wav') && Date.now() - fs.statSync(p).mtimeMs > days * 864e5) { fs.unlinkSync(p); n++; }
+    }
+  } catch {}
+  if (n) console.log(`🧹 Xoá ${n} câu giọng đọc cũ trong data/tts-cache`);
+}
+
 function init() {
+  if (enabled) prune();
   if (enabled) start();
   else console.log('ℹ️  Không có VieNeu-TTS → dùng giọng đọc của trình duyệt');
 }
