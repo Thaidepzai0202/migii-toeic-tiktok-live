@@ -9,7 +9,6 @@ const NAMES = [
   'Minh Anh', 'Thu Trang', 'Hoàng Long', 'Ngọc Hân', 'Bảo Ngọc', 'Tuấn Kiệt', 'Linh Chi', 'Quang Huy',
   'Phương Thảo', 'Khánh Vy', 'Đức Anh', 'Mai Phương', 'Hải Yến', 'Thanh Tùng', 'Gia Bảo', 'Ngân Hà',
 ];
-const HUNT_NEED = 5; // Săn từ: số từ phải tìm (= HUNT_NEED trong server.js)
 const LETTERS = 'abcdefghijklmnopqrstuvwxyz';
 const rand = (a, b) => a + Math.random() * (b - a);
 const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
@@ -94,16 +93,19 @@ exports.create = ({ onChat, isLive = () => true }) => {
     }
   }
 
-  // Săn từ (120 giây, cần 5 từ): bot tìm chậm (15–25 giây một từ), phần lớn về đích ở nửa sau hoặc không kịp.
-  function hunt(r, users) {
-    const sec = r.sec, words = r.hunt.hidden.map((w) => w.toLowerCase()).filter((w) => r.hunt.map.has(w));
-    for (const u of users) {
-      if (Math.random() < 0.35) continue;
-      const mine = shuffle(words), pace = rand(15, 25);
-      let t = rand(12, 30);
-      for (let i = 0; i < HUNT_NEED && t < sec - 2; i++) {
-        at(r, u, t, mine[i]);
-        t += pace * rand(0.7, 1.3);
+  // Săn từ (luật 26/11/2026: lượt 30 giây, ai gõ một từ trước thì ăn điểm từ đó): như Hái từ, bot chỉ gõ chậm vài từ NGẮN của kho Migii để
+  // bảng không đứng im lúc vắng người; có người thật thì ít bot hơn, gõ muộn hơn và mỗi bot một từ. Không bao giờ gõ từ gợi ý
+  // (r.hunt.easy = từ Migii trên bảng, server đã bỏ từ gợi ý ra). Từ đã có người tìm thì bình luận của bot thành tán gẫu.
+  function hunt(r, users, real) {
+    const sec = r.sec, words = shuffle(r.hunt.easy.filter((w) => w.length <= 5));
+    let k = 0;
+    for (const u of users.slice(0, real ? 2 : 4)) {
+      if (Math.random() < (real ? 0.4 : 0.15)) continue;
+      let t = rand(real ? 0.4 : 0.15, real ? 0.75 : 0.45) * sec;
+      for (let i = 0, n = real ? 1 : 1 + Math.floor(Math.random() * 2); i < n && k < words.length && t < sec - 1.5; i++) {
+        at(r, u, t, Math.random() < 0.1 ? typo(words[k]) : words[k]);
+        k++;
+        t += rand(5, 10);
       }
     }
   }
@@ -202,7 +204,7 @@ exports.create = ({ onChat, isLive = () => true }) => {
       if (r.mode === 'mcq') return mcq(r, users);
       if (r.mode === 'scramble') return scramble(r, users);
       if (r.mode === 'startend') return startend(r, users);
-      if (r.mode === 'hunt') return hunt(r, users);
+      if (r.mode === 'hunt') return hunt(r, users, real);
       if (r.mode === 'errhunt') return errhunt(r, users);
       if (r.mode === 'dictate') return dictate(r, users);
       if (r.mode === 'bricky') return bricky(r, users, real);

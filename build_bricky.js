@@ -24,11 +24,8 @@ const OUT = path.join(__dirname, 'data', 'bricky.json');
 // Người dùng chốt 19/11/2026: tính mọi từ tiếng Anh CÓ TRONG TỪ ĐIỂN, kể cả từ hiếm (awn, erg, tarn…). Hunspell còn nhận thêm những thứ
 // không phải từ: chữ viết tắt (etc, hrs, amt), dạng cổ / phương ngữ (hast, nae), mảnh từ chỉ đi trong cụm (situ) → loại tay ở đây.
 // Danh sách này soát bằng mắt từ mọi từ ngoài kho mà các bộ chữ (kể cả bộ 6 chữ của bảng cuối) ghép được (node build_bricky.js --list); kho đổi thì soát lại.
-const BO = new Set(('attn cert ctn def enc furn ind inf rehi thru wot adv amt cal cir cor ctr diam div dob ecu ecus est etc ext fer gen hast hes hist hon hrs idem int lbw med meg nae neg nos obs org ' +
-  'rec reg rel res rte sen situ tel tho thous trad tron twas wast yer yest').split(' '));
-// Từ thô / nhạy cảm nhẹ: là từ thật nhưng không cộng điểm và không hiện ở dải "Từ thêm" trên màn live của thương hiệu giáo dục
-// (từ tục nặng đã bị dict.js chặn; dict.BAD_IN_GRID chặn thêm nhóm nhẹ như nude, butt).
-const THO = new Set('fart hos hots nob nobs nuder prat teat teats tush'.split(' '));
+// Danh sách loại (BO = chữ viết tắt, dạng cổ, mảnh từ · THO = từ thô / nhạy cảm nhẹ) nằm ở dict.js, dùng chung với khung Săn từ.
+const { BO, THO } = dict;
 
 let exclude = new Set();
 try { exclude = new Set(JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'exclude.json'), 'utf8')).map((x) => x.w)); } catch {}

@@ -35,6 +35,10 @@ Mục nào điền vào `.env` thì đã có sẵn dòng trong `.env.example`.
   dải ưu đãi hiện ngay trên màn chơi). Chưa đối chiếu với quy định của TikTok: một nguồn bên thứ ba dẫn lại mục
   *Inauthentic Gift Requests* (trong app: Live Center → Rules and Guidance) nói không chạy game tính điểm dựa trên quà. Cần đọc mục đó
   trong app trước khi lên live; nếu vướng thì tắt bằng cách cho `CHAIN_GIFT` giá trị rất lớn và bỏ dải `.cgift`.
+- **Ảnh nền mây của khung Săn từ** (`public/img/nen/`, thêm 26/11/2026): người dùng tự tải và xác nhận dùng được trên live công khai,
+  nhưng chưa ghi được trang nguồn và giấy phép. Có thì ghi vào `public/img/nen/NGUON.md`.
+- **Từ tính điểm ở Săn từ** (luật mới 26/11/2026): mọi từ tiếng Anh từ điển nhận đều được điểm và hiện tên trên màn (như Bricky), không riêng
+  kho Migii; đã chặn từ tục, từ thô, chữ viết tắt bằng danh sách trong `dict.js`. Gặp từ không nên lên sóng thì thêm vào `THO` / `BO` ở đó.
 - **Lời mời trên màn hình**: hiện chỉ ghi "Ôn lại từ vừa chơi trong app". Nếu muốn ghi "1.677 từ vựng", "miễn phí Part 1, 2, 5"
   hay mã ưu đãi riêng cho người xem live thì cần marketing chốt câu chữ (theo `thuong-hieu.md`: phải nói rõ phần nào miễn phí,
   không hứa "dự đoán chính xác điểm").

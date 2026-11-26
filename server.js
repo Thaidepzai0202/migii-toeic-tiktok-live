@@ -96,10 +96,10 @@ const SEGMENTS = {
   // sec/total/reveal: khung này có nhịp riêng (45 giây mỗi câu, 3 câu mỗi lượt, công bố 8 giây để đọc ví dụ).
   // 20/11/2026: 5 → 3 câu (người dùng duyệt): số liệu 16–20/11 tương tác thấp thứ hai (0,91 bình luận / người / phút, Word 2,61).
   startend: { icon: '🎯', name: 'Start or End', kind: 'giải trí', rule: 'Gõ 5 từ tiếng Anh bắt đầu hoặc kết thúc bằng chữ cho trước', sec: 45, total: 3, reveal: 8 },
-  // Săn từ: 90 giây mỗi bảng, 2 bảng mỗi lượt (bảng 2 là về đích). Điểm 10/5/3/1.
-  // 20/11/2026 (người dùng duyệt): trước 120 giây × 3 bảng; tương tác thấp nhất (0,59 bình luận / người / phút) mà chiếm nhiều giờ phát.
-  // Giữ 2 bảng chứ không 1 để còn chặng về đích (mọi khung đều có, chốt 20/11).
-  hunt: { icon: '🔎', name: 'Săn từ', kind: 'giải trí', rule: 'Ma trận 10×10: tìm từ nối liền theo mọi hướng, ai tìm đủ 5 từ trước ăn điểm', sec: 90, total: 2, reveal: 10 },
+  // Săn từ (luật mới người dùng chốt 26/11/2026, thay hẳn bản ma trận 10×10 giấu từ 8 hướng): bảng chữ 16×16, từ chỉ tính hàng ngang trái → phải
+  //   và cột dọc trên → xuống. total = số LƯỢT (15 lượt thường + lượt 16 về đích ×2), mỗi lượt 30 giây; `reveal` = 4 giây cho các từ đã tìm nổ và chữ
+  //   rơi xuống lấp bảng. Điểm RIÊNG của khung: ai gõ một từ trước tiên +2 cho mỗi chỗ từ đó nằm trên bảng. Xem khối Săn từ bên dưới và san-tu.js.
+  hunt: { icon: '🔎', name: 'Săn từ', kind: 'giải trí', rule: 'Bảng chữ 16×16: tìm từ tiếng Anh theo hàng ngang (trái sang phải) hoặc cột dọc (trên xuống) rồi gõ vào bình luận; ai gõ trước được +2 cho mỗi chỗ từ đó xuất hiện. Hết 30 giây các từ đã tìm nổ, chữ rơi xuống cho lượt mới. Mỗi từ nạp 1 mana: hết lượt đủ 10 mana thì 2 tên lửa nổ 3×3, đủ 20 thì bom nổ chữ thập, đủ 30 thì nổ nửa bảng kiểu bàn cờ. Lượt cuối về đích, điểm ×2', sec: 30, total: 16, reveal: 4 },
   // Thế chữ: Black vs White, mỗi lượt 12 giây đổi đúng 1 chữ cái (13/11: người dùng tăng từ 8 lên 12 và thêm 4 giây nghỉ trước khi đếm, CHAIN_GRACE). Luật 13/11: không chia đội, người giữ từ cuối cùng thắng ván +10 (xem khối Thế chữ bên dưới). total = số ván mỗi lượt.
   chain: { icon: '🔗', name: 'Thế chữ', kind: 'giải trí', rule: 'Mọi người cùng chơi: đổi 1 chữ cái để ra từ mới và giữ từ; hết 12 giây không ai thế được, hoặc chuỗi đủ 40 từ, thì người giữ từ thắng +10. Ván cuối tăng tốc: từ 5 chữ, được đổi 2 chữ', sec: 12, total: 3, reveal: 10 },
   // Điền từ (kênh 450–650, câu dùng từ mốc 500). Điểm 10/5/3/1 (như Word).
@@ -221,20 +221,40 @@ function startEnd() {
 }
 // Khung Word / Start or End: nhanh nhất +10, hạng 2 +5, hạng 3 +3, những người đúng sau đó +1. Khung khác: 10, 8, 6, 4… tối thiểu 3.
 const RANK_PTS = [10, 5, 3];
-const ptsFor = (seg, rank) => (['word', 'startend', 'hunt', 'fillin', 'listenmean', 'errhunt', 'crossword', 'dictate', 'speedread', 'emoji', 'irrfill', 'irrfind', 'oneletter'].includes(seg) ? RANK_PTS[rank] ?? 1 : Math.max(3, 10 - 2 * rank));
+const ptsFor = (seg, rank) => (['word', 'startend', 'fillin', 'listenmean', 'errhunt', 'crossword', 'dictate', 'speedread', 'emoji', 'irrfill', 'irrfind', 'oneletter'].includes(seg) ? RANK_PTS[rank] ?? 1 : Math.max(3, 10 - 2 * rank));
 
-// Săn từ: ma trận dựng sẵn trong data/san-tu-400.json (build_san_tu.js), mỗi bảng kèm danh sách MỌI từ hợp lệ có trong bảng
-// (từ giấu + từ thật vô tình mọc ra). Người xem gõ từ nào thì tra danh sách của bảng đó; tìm đủ HUNT_NEED từ khác nhau trước thì ăn điểm.
-const HUNT_FILE = path.resolve(__dirname, String(arg('hunt-file', 'data/san-tu-400.json')));
-const HUNT_NEED = 5;
-let HUNT = null;
-function pickBoard() {
-  if (!HUNT) {
-    HUNT = { boards: JSON.parse(fs.readFileSync(HUNT_FILE, 'utf8')).boards, bag: [] };
-    console.log(`🔎 Săn từ: ${HUNT.boards.length} ma trận từ ${path.relative(__dirname, HUNT_FILE)}`);
+// Săn từ: bảng dựng lúc chơi bằng san-tu.js (không còn file ma trận dựng sẵn). HUNT_PTS = điểm cho mỗi chỗ một từ nằm trên bảng;
+// HUNT_HINT_SEC = sau ngần ấy giây của lượt mà chưa ai tìm được từ nào thì một từ nhấp nháy gợi ý.
+const sanTu = require('./san-tu');
+const HUNT_PTS = 2, HUNT_HINT_SEC = 10;
+// Thanh mana (người dùng đặt 26/11/2026): mỗi từ có người tìm được +1 mana (tối đa 30), mana giữ qua các lượt. Hết lượt, mana đạt mốc nào cao nhất
+// thì dùng chiêu của mốc đó và mana về 0 (chưa tới 10 thì giữ nguyên cho lượt sau): 10 = hai tên lửa nhỏ, mỗi quả nổ 3×3 ở chỗ bất kỳ, ưu tiên gần đáy ·
+// 20 = một quả bom ở chỗ bất kỳ, nổ chữ thập ngang + dọc suốt bảng, dày 3 ô · 30 = coi bảng như bàn cờ vua, nổ hết ô đen. Ô bị chiêu phá nổ cùng các
+// chiêu phá cũng nổ rồi chữ rơi xuống; chiêu không cộng điểm cho ai. Thứ tự (người dùng chốt 26/11/2026): từ đã tìm nổ → chữ rơi xuống xong (bảng `mid`)
+// → chiêu đánh lên bảng `mid` → chữ rơi lần nữa (bảng `next`). HUNT_POWER_SEC = giây công bố cộng thêm để diễn chiêu và lần rơi thứ hai.
+const HUNT_MANA = [10, 20, 30], HUNT_POWER_SEC = 2.6;
+function huntPower(mana) {
+  const N = sanTu.N, lv = HUNT_MANA.filter((x) => mana >= x).length, rnd = (a, b) => a + Math.floor(Math.random() * (b - a + 1));
+  if (!lv) return null;
+  const cells = new Set(), add = (r, c) => { if (r >= 0 && c >= 0 && r < N && c < N) cells.add(r * N + c); };
+  let at;
+  if (lv === 1) {
+    // tâm cách mép 1 ô để đủ 3×3; hàng lệch về đáy (mũ 1.8: nửa số lần rơi vào 3 hàng dưới cùng); hai quả không chồng vùng nổ
+    const pick = () => [N - 2 - Math.floor(Math.pow(Math.random(), 1.8) * 9), rnd(1, N - 2)];
+    const a = pick();
+    let b = pick();
+    for (let i = 0; i < 40 && Math.abs(a[0] - b[0]) < 3 && Math.abs(a[1] - b[1]) < 3; i++) b = pick();
+    at = [a, b];
+    for (const [r, c] of at) for (let i = -1; i <= 1; i++) for (let j = -1; j <= 1; j++) add(r + i, c + j);
+  } else if (lv === 2) {
+    at = [[rnd(1, N - 2), rnd(1, N - 2)]];
+    const [r, c] = at[0];
+    for (let k = 0; k < N; k++) for (let i = -1; i <= 1; i++) { add(r + i, k); add(k, c + i); }
+  } else {
+    at = [];
+    for (let r = 0; r < N; r++) for (let c = 0; c < N; c++) if ((r + c) % 2) add(r, c); // ô đen: góc trên trái là ô trắng
   }
-  if (!HUNT.bag.length) HUNT.bag = shuffle(HUNT.boards);
-  return HUNT.bag.pop();
+  return { kind: ['rocket', 'bomb', 'checker'][lv - 1], need: HUNT_MANA[lv - 1], at, cells: [...cells] };
 }
 
 // ---------- khung 🍎 Hái từ ----------
@@ -1159,10 +1179,16 @@ function publicState() {
       return s;
     }
     if (round.mode === 'hunt') {
-      const h = round.hunt, cell = ({ w, r, c, d, by }) => ({ w, r, c, d, ...(by && { by }) });
-      s.q = { mode: 'hunt', grid: h.grid, need: HUNT_NEED, total: h.hidden.length, finished: round.winners.length,
-        found: [...h.found.values()].map(cell), hidden: rev ? h.hidden.map((w) => cell(h.found.get(w) || h.map.get(w))) : null };
-      s.winners = round.winners.length;
+      // grid = bảng của lượt này · found = từ đã có người tìm (ô để tô màu, tên, nghĩa, điểm) · hint = các ô của từ gợi ý đang nhấp nháy.
+      // Công bố: boom = các ô nổ (chỉ số r * 16 + c; all = nổ cả bảng vì không ai tìm được gì), next = bảng sau khi chữ rơi xuống.
+      const h = round.hunt;
+      // mana = mana hiện có (lúc công bố đã về 0 nếu vừa dùng chiêu) · power = chiêu vừa dùng { kind, need, at: tâm nổ, zone: vùng chiêu, cells: mọi ô nổ vì chiêu },
+      // toạ độ theo bảng `mid` (bảng sau khi các từ đã tìm nổ và chữ rơi xuống); không có chiêu thì không có mid, chữ rơi thẳng thành `next`
+      s.q = { mode: 'hunt', turn: game.qNo, turns: game.total, grid: h.grid, pts: HUNT_PTS * (round.mult || 1), words: h.found.size, mana: game.hunt.mana, manaLv: HUNT_MANA,
+        found: [...h.found.values()].map(({ w, by, n, pts, m, cells }) => ({ w, by, n, pts, m, cells })),
+        hint: !rev && h.hintOn && !h.found.has(h.hint) ? h.hintCells : null,
+        ...(rev && h.next && { boom: h.boom, all: h.all, next: h.next, ...(h.power && { power: h.power, mid: h.mid }) }) };
+      s.winners = h.found.size;
       s.prev = prev;
       s.board = gameBoard();
       s.feed = round.feed.slice(-12);
@@ -1349,7 +1375,7 @@ function markFinish() {
     if (timer.endsAt != null) timer.endsAt += FINISH_GRACE * 1000;
   }
 }
-const finUnit = (seg) => ({ hunt: 'Bảng', haitu: 'Bảng', crossword: 'Hàng' })[seg] || 'Câu';
+const finUnit = (seg) => ({ hunt: 'Lượt', haitu: 'Bảng', crossword: 'Hàng' })[seg] || 'Câu';
 
 // hold = đứng ở màn chờ tới khi người dẫn bấm Bắt đầu (lúc mới bật server và sau "Chơi lại từ đầu")
 let holdBreak = false;
@@ -1484,19 +1510,94 @@ function startEndQuestion() {
   botsAsk(round);
 }
 
-// Khung Săn từ: một ma trận, SEGMENTS.hunt.sec giây (90 từ 20/11/2026). round.hunt.map = mọi từ hợp lệ của bảng → vị trí; found = từ đã có người tìm (để tô màu trên ma trận)
-function startHuntQuestion() {
-  const b = pickBoard();
-  game.qNo++;
-  questionsTotal++;
-  const sec = SEGMENTS.hunt.sec;
-  round = { word: { w: 'Săn từ', m: `${b.hidden.length} từ giấu: ${b.hidden.join(', ')}`, r: '', pos: '' }, sec, winners: [], realWinners: 0, answered: new Set(),
-    feed: [], lastHint: 0, mode: 'hunt', demo: b.hidden.slice(0, HUNT_NEED).join(' '),
-    hunt: { grid: b.grid, hidden: b.hidden, map: new Map(b.words.map(([w, r, c, d]) => [w, { w, r, c, d }])), found: new Map(), progress: new Map() } };
+// ---------- khung 🔎 Săn từ ----------
+// Một LƯỢT = một "câu" của khung (game.qNo), 30 giây trên cùng một bảng; bảng sống suốt lượt chơi ở game.hunt.grid và đổi dần sau mỗi lượt.
+// round.hunt: grid = bảng lượt này · map = mọi từ hợp lệ đang có trên bảng → các chỗ nó nằm (san-tu.js scan) · found = từ → { w, by, n, pts, m, cells }
+// (by = người gõ ĐẦU TIÊN, n = số chỗ từ đó nằm, cells = mọi ô của từ) · x2 = uid được nhân đôi lượt này (quà) · hint = từ gợi ý chọn sẵn từ đầu lượt
+// (bot không gõ từ này), hintOn = đã cho nhấp nháy · boom / next / all / power = đặt lúc công bố (huntReveal). game.hunt.mana = thanh mana (xem HUNT_MANA).
+// "Đổi từ khác" trên màn điều khiển (replace) = thay cả bảng mới, không tính thêm lượt.
+function startHuntQuestion(replace = false) {
+  if (!game.hunt || replace) game.hunt = { grid: sanTu.newBoard(), mana: game.hunt?.mana || 0 };
+  if (!replace) {
+    game.qNo++;
+    questionsTotal++;
+  }
+  const grid = game.hunt.grid, map = sanTu.scan(grid), sec = SEGMENTS.hunt.sec;
+  const hint = sanTu.pickHint(map);
+  const migii = [...map.keys()].filter((w) => sanTu.mean(w));
+  round = { word: { w: 'Săn từ', m: `${map.size} từ trên bảng, ví dụ: ${migii.slice(0, 8).join(', ')}`, r: '', pos: '' }, sec, winners: [], realWinners: 0, answered: new Set(),
+    feed: [], lastHint: 0, mode: 'hunt', demo: migii.slice(0, 5).join(' '),
+    hunt: { grid, map, found: new Map(), x2: new Map(), hint, hintCells: hint ? sanTu.cellsOf(hint, map.get(hint)[0]) : null, hintOn: false, easy: migii.filter((w) => w !== hint) } };
   setPhase('question', sec);
   push();
   sim?.onQuestion(round);
   botsAsk(round);
+}
+// Một bình luận gõ được nhiều từ (tối đa 8). Mỗi từ: có nghĩa (san-tu.js playable, đã nằm sẵn trong map của bảng) và CHƯA ai tìm trong lượt này thì
+// người gõ được HUNT_PTS × số chỗ từ đó nằm trên bảng (có hai "her" thì ×2); người gõ sau không có điểm. Trả về true nếu có ít nhất một từ ăn điểm.
+function onHuntChat(user, msg, item) {
+  const h = round.hunt;
+  const toks = [...new Set(msg.toLowerCase().split(/[\s,;.]+/).map((t) => t.replace(/^[^a-z]+|[^a-z]+$/g, '')).filter((t) => t.length >= sanTu.MIN_LEN))].slice(0, 8);
+  const fresh = toks.filter((t) => h.map.has(t) && !h.found.has(t));
+  if (!fresh.length) return false;
+  if (!h.x2.has(user.uid)) { // quà x2: tính một lần cho cả lượt
+    const b = boosts.get(user.uid) || 0;
+    h.x2.set(user.uid, b > 0);
+    if (b > 0) boosts.set(user.uid, b - 1);
+  }
+  let pts = 0;
+  for (const w of fresh) {
+    const at = h.map.get(w), p = HUNT_PTS * at.length * (h.x2.get(user.uid) ? 2 : 1) * (round.mult || 1); // lượt cuối = về đích: ×2
+    h.found.set(w, { w, by: user.name, n: at.length, pts: p, m: sanTu.mean(w), cells: at.flatMap((o) => sanTu.cellsOf(w, o)), ...(user.bot && { bot: true }) });
+    pts += p;
+  }
+  const gp = gamePlayer(user);
+  if (user.bot) gp.bot = true;
+  const dp = user.bot ? { score: 0, correct: 0 } : dayPlayer(user); // bot không vào bảng vàng ngày
+  gp.score += pts;
+  gp.correct += fresh.length;
+  dp.score += pts;
+  dp.correct += fresh.length;
+  const st = seats.get(user.uid);
+  if (st) st.stars++;
+  if (!user.bot) {
+    game.correct += fresh.length;
+    correctTotal += fresh.length;
+    gp.first = (gp.first || 0) + fresh.length; // mỗi từ là một lần "gõ đầu tiên" (giải Nhanh tay nhất ở màn vinh danh)
+  }
+  if (!round.winners.includes(user.uid)) round.winners.push(user.uid);
+  game.hunt.mana = Math.min(HUNT_MANA[HUNT_MANA.length - 1], game.hunt.mana + fresh.length); // mỗi từ +1 mana (từ nằm nhiều chỗ vẫn +1)
+  const words = fresh.map((w) => (h.map.get(w).length > 1 ? `${w} ×${h.map.get(w).length}` : w)).join(', ');
+  Object.assign(item, { ok: true, pts, words, text: words, bot: !!user.bot });
+  round.feed.push(item);
+  if (round.feed.length > 40) round.feed.splice(0, round.feed.length - 40);
+  logFeed(item);
+  broadcast({ type: 'correct', ...item });
+  push();
+  return true;
+}
+// Hết lượt: các ô của mọi từ đã tìm nổ, chữ phía trên rơi xuống, chữ mới lấp đầy (san-tu.js refill). Không ai tìm được từ nào: nổ cả bảng, thả
+// bảng mới (người dùng chốt 26/11/2026). Bảng sau được tính ngay lúc này và gửi kèm trạng thái công bố để màn live diễn cảnh nổ + rơi;
+// lượt kế bắt đầu trên đúng bảng đó.
+function huntReveal() {
+  const h = round.hunt;
+  if (h.next) return;
+  const cleared = new Set();
+  for (const f of h.found.values()) for (const [r, c] of f.cells) cleared.add(r * sanTu.N + c);
+  if (!cleared.size) {
+    Object.assign(h, { all: true, boom: null, next: sanTu.newBoard(), power: null });
+  } else {
+    const R = sanTu.refill(h.grid, cleared);
+    Object.assign(h, { all: !!R.all, boom: R.all ? null : R.cleared, next: R.grid, power: null });
+    // chiêu mana: đánh lên bảng SAU khi chữ đã rơi (mid). Ô chiêu phá có thể rộng hơn vùng chiêu vài ô (san-tu.js cho nổ thêm để gỡ từ tục / đủ từ Migii).
+    const pw = R.all ? null : huntPower(game.hunt.mana);
+    if (pw) {
+      const R2 = sanTu.refill(R.grid, new Set(pw.cells));
+      game.hunt.mana = 0;
+      Object.assign(h, { mid: R.grid, next: R2.grid, power: { ...pw, cells: R2.all ? Array.from({ length: sanTu.N * sanTu.N }, (_, i) => i) : R2.cleared, zone: pw.cells } });
+    }
+  }
+  game.hunt.grid = h.next;
 }
 
 // Khung Điền từ: round.mode vẫn là 'mcq' (chấm điểm, mô phỏng, bot dùng lại phần trắc nghiệm); round.word.w KHÔNG phải đáp án để trạng thái gửi đi không lộ
@@ -1817,7 +1918,7 @@ function startListenMeanQuestion() {
 function startQuestion(replace = false) {
   if (game.seg === 'word') return startWordQuestion();
   if (game.seg === 'startend') return startEndQuestion();
-  if (game.seg === 'hunt') return startHuntQuestion();
+  if (game.seg === 'hunt') return startHuntQuestion(replace);
   if (game.seg === 'fillin') return startFillQuestion();
   if (game.seg === 'listenmean') return startListenMeanQuestion();
   if (game.seg === 'errhunt') return startErrQuestion();
@@ -1877,7 +1978,8 @@ function startQuestion(replace = false) {
 
 function reveal() {
   if (round.mode === 'haitu') haituBonus();
-  setPhase('reveal', round.mode === 'haitu' ? haituRevealSec() : SEGMENTS[game.seg]?.reveal || CFG.revealSec);
+  if (round.mode === 'hunt') huntReveal();
+  setPhase('reveal', round.mode === 'haitu' ? haituRevealSec() : (SEGMENTS[game.seg]?.reveal || CFG.revealSec) + (round.hunt?.power ? HUNT_POWER_SEC : 0));
   prev = { w: round.word.w, m: round.word.m, n: round.winners.length };
   saveScores();
   push();
@@ -1961,6 +2063,11 @@ function tick() {
       push();
     }
   }
+  // Săn từ: quá HUNT_HINT_SEC giây của lượt mà chưa ai tìm được từ nào → từ gợi ý nhấp nháy (màn chuyển về đích đang đứng đồng hồ thì chưa tính)
+  if (phase === 'question' && round.mode === 'hunt' && !round.hunt.hintOn && round.hunt.hint && !round.hunt.found.size && now() - timer.startedAt >= HUNT_HINT_SEC * 1000) {
+    round.hunt.hintOn = true;
+    push();
+  }
   if (phase === 'question' && (round.mode === 'bricky' || round.mode === 'haitu')) {
     const lv = brickyHint();
     if (lv !== round.lastHint) {
@@ -2004,6 +2111,7 @@ function onChat(user, text) {
   if (game?.seg === 'crossword' && phase === 'question' && round?.mode === 'cross' && onCrossChat(user, msg, item)) return;
   if (phase === 'question' && round?.mode === 'bricky' && onBrickyChat(user, msg, item)) return;
   if (phase === 'question' && round?.mode === 'haitu' && onHaiTuChat(user, msg, item)) return;
+  if (phase === 'question' && round?.mode === 'hunt' && onHuntChat(user, msg, item)) return;
   if (phase === 'question' && round && !round.answered.has(user.uid)) {
     let byHangul = false, byRomaja = false;
     if (round.mode === 'mcq') {
@@ -2087,8 +2195,8 @@ function onChat(user, text) {
         broadcast({ type: 'feed', feed: round.feed.slice(-12) });
         return;
       }
-    } else if (round.mode === 'cross' || round.mode === 'bricky' || round.mode === 'haitu') {
-      // đã xử lý ở onCrossChat / onBrickyChat; bình luận còn lại là tán gẫu
+    } else if (round.mode === 'cross' || round.mode === 'bricky' || round.mode === 'haitu' || round.mode === 'hunt') {
+      // đã xử lý ở onCrossChat / onBrickyChat / onHaiTuChat / onHuntChat; bình luận còn lại là tán gẫu
     } else if (round.mode === 'startend') {
       // Chỉ bình luận có đúng 5 mục mới tính là một lần trả lời. Sai thì gõ lại được (chưa vào answered), báo số từ đúng.
       const c = startEnd().check(msg, round.pat);
@@ -2096,34 +2204,6 @@ function onChat(user, text) {
         byHangul = c.ok;
         item.text = c.ok ? c.words.join(' ') : `${msg} · ${c.good}/5 từ đúng`;
         if (c.ok) item.words = c.words.join(' ');
-      }
-    } else if (round.mode === 'hunt') {
-      // Mỗi từ hợp lệ của bảng (tra danh sách) được cộng dồn cho người đó; đủ HUNT_NEED từ khác nhau thì về đích và ăn điểm theo thứ tự về đích.
-      // Bình luận có thể chứa nhiều từ. Từ lạ hoặc từ đã tìm rồi thì bỏ qua như tán gẫu.
-      const h = round.hunt;
-      const toks = msg.toLowerCase().split(/[\s,;]+/).map((t) => t.replace(/^[^a-z]+|[^a-z]+$/g, '')).filter(Boolean).slice(0, 8);
-      let mine = h.progress.get(user.uid);
-      const fresh = [];
-      for (const t of toks) {
-        const e = h.map.get(t);
-        if (!e || mine?.has(t)) continue;
-        (mine ||= new Set()).add(t);
-        fresh.push(t);
-        if (!h.found.has(t)) h.found.set(t, { ...e, by: user.name });
-      }
-      if (fresh.length) {
-        h.progress.set(user.uid, mine);
-        item.words = fresh.join(' ');
-        item.text = `${fresh.join(', ')} · ${mine.size}/${HUNT_NEED}`;
-        if (mine.size >= HUNT_NEED) byHangul = true;
-        else {
-          item.progress = mine.size;
-          logFeed(item);
-          round.feed.push(item);
-          if (round.feed.length > 40) round.feed.splice(0, round.feed.length - 40);
-          push();
-          return;
-        }
       }
     } else {
       // Nghe & gõ: phải đúng chính tả (không phân biệt hoa thường, bỏ dấu cách/dấu câu). byRomaja (½ điểm) không dùng ở bản tiếng Anh.
@@ -2547,7 +2627,7 @@ const ai = require('./ai').create({
     else if (phase === 'question' && round.mode === 'chain')
       summary = `đang chơi Thế chữ (mọi người cùng chơi: đổi ${round.max > 1 ? '1 hoặc 2' : '1'} chữ cái của từ ${round.len} chữ hiện tại${round.lock >= 0 ? ', không đổi chữ đang bị khoá' : ''}, để ra từ mới và thành người giữ từ, hết 12 giây không ai thế được thì người giữ từ thắng ván +10 điểm; chuỗi đang có ${round.chain.length} từ${round.holder ? `, người giữ từ: ${round.holder.name}` : ''})`;
     else if (phase === 'question' && round.mode === 'hunt')
-      summary = `đang đố câu ${game.qNo}/${game.total} khung Săn từ: ma trận chữ cái 10x10 có ${round.hunt.hidden.length} từ giấu theo mọi hướng, ai tìm đủ ${HUNT_NEED} từ trước thắng (không được nói từ nào nằm trong ma trận)`;
+      summary = `đang chơi lượt ${game.qNo}/${game.total} khung Săn từ: bảng chữ cái 16x16, người xem tìm từ tiếng Anh theo hàng ngang (trái sang phải) hoặc cột dọc (trên xuống) rồi gõ vào bình luận, ai gõ trước được điểm; đã có ${round.hunt.found.size} từ được tìm (không được nói từ nào đang nằm trên bảng)`;
     else if (phase === 'question' && round.mode === 'startend')
       summary = `đang đố câu ${game.qNo}/${game.total} khung Start or End: người xem gõ 5 từ tiếng Anh ${round.pat.k === 'start' ? 'bắt đầu' : 'kết thúc'} bằng "${round.pat.s}" trong một bình luận (không được liệt kê từ đáp án)`;
     else if (phase === 'question' && round.mode === 'mcq')

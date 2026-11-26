@@ -88,9 +88,9 @@ window.KB = {
     },
     hunt: {
       ten: 'săn từ',
-      gon: ['Tìm từ giấu trong ma trận, đủ năm từ trước là ăn điểm cao nhất!', 'Thấy từ nào gõ từ đó vào bình luận nhé!', 'Mười từ đang nấp trong ma trận, ai tinh mắt nào?'],
-      chao: ['Gõ các từ bạn tìm được trong ma trận để chơi cùng nha!', 'Vào chơi luôn nè, thấy từ nào gõ từ đó nhé!'],
-      moi: ['Mọi người đang xem ơi, tìm từ trong ma trận rồi gõ vào bình luận nhé!', 'Ai thấy từ nào chưa? Gõ vào để ghi điểm nha!'],
+      gon: ['Tìm từ tiếng Anh trên bảng chữ, hàng ngang hoặc cột dọc, ai gõ trước được hai điểm!', 'Thấy từ nào gõ từ đó vào bình luận nhé!', 'Hết ba mươi giây từ đã tìm sẽ nổ, chữ rơi xuống thành bảng mới!', 'Mỗi từ nạp một mana, đủ mười mana là có tên lửa đó!'],
+      chao: ['Gõ các từ bạn thấy trên bảng chữ để chơi cùng nha!', 'Vào chơi luôn nè, thấy từ nào gõ từ đó nhé!'],
+      moi: ['Mọi người đang xem ơi, tìm từ trên bảng chữ rồi gõ vào bình luận nhé!', 'Ai thấy từ nào chưa? Gõ trước là được điểm nha!'],
     },
     chain: {
       ten: 'Thế chữ',
@@ -146,7 +146,7 @@ window.KB = {
   // Câu nhắc cách gõ: chỉ đọc ở câu 1, câu 2 và mỗi ba câu một lần (màn hình luôn có hướng dẫn).
   nhac_abcd: ['Gõ A, B, C hoặc D!', 'Chọn A, B, C hay D nhé!', 'Gõ chữ cái đáp án vào bình luận nha!', 'A, B, C hay D đây?'],
   nhac_errhunt: ['Gõ từ sai, dấu gạch, rồi từ đúng!', 'Nhớ gõ từ sai trước, từ đúng sau nha!'],
-  nhac_hunt: ['Gõ từ bạn thấy vào bình luận nhé!', 'Thấy từ nào gõ từ đó nha!'],
+  nhac_hunt: ['Tìm từ theo hàng ngang hoặc cột dọc, gõ vào bình luận nhé!', 'Thấy từ nào gõ từ đó, ai gõ trước được điểm nha!'],
   nhac_startend: ['Gõ cả năm từ trong một bình luận nhé!', 'Năm từ, cách nhau bằng dấu cách nha!'],
   // Lời vào câu hỏi theo từng kiểu câu.
   hoi_w2m: ['Câu tiếp theo nè!', 'Từ này nghĩa là gì?', 'Nghe nè!', 'Ai biết nghĩa từ này?', 'Từ này quen không cả nhà?', 'Từ tiếp theo đây!'],
@@ -154,7 +154,7 @@ window.KB = {
   hoi_fill: ['Điền từ còn thiếu nào!', 'Từ nào điền vào chỗ trống đây?', 'Chỗ trống này cần từ gì?', 'Chọn từ hợp nhất với câu nha!', 'Câu này thiếu từ nào nhỉ?'],
   hoi_read: ['Đọc nhanh nào! Tìm chi tiết trong bài nhé!', 'Đọc lướt, tìm đúng chỗ rồi chọn nha!', 'Ai tìm ra trước nào?', 'Đáp án nằm trong bài đó, tìm nhé!', 'Bài mới đây, đọc nhanh nào!'],
   hoi_errhunt: ['Tìm từ sai trong câu nhé!', 'Câu này sai ở đâu nhỉ?', 'Từ nào viết sai đây?', 'Soi kỹ từng từ nào!', 'Lỗi nằm ở đâu ta?'],
-  hoi_hunt: ['Săn từ nào! Ma trận có mười từ giấu, tìm đủ năm từ trước để ăn điểm!', 'Ai tìm được từ nào? Đọc xuôi hay ngược đều được!', 'Mắt tinh lên nào, từ nấp khắp ma trận đó!', 'Dò từng hàng, từng cột xem nào!'],
+  hoi_hunt: ['Lượt {n}, săn từ nào!', 'Lượt {n}! Ai tìm được từ nào?', 'Lượt {n}, mắt tinh lên nào!', 'Lượt {n}, dò từng hàng, từng cột nhé!'],
   hoi_startend: ['Tìm năm từ tiếng Anh, bắt đầu hoặc kết thúc bằng chữ trên màn hình!', 'Ai tìm được năm từ nào?', 'Năm từ, bắt đầu hoặc kết thúc bằng chữ này nhé!', 'Nghĩ nhanh năm từ nào!'],
   hoi_chain: ['Đổi một chữ cái để giành từ nhé!', 'Ai thế được chữ nào trước?', 'Đổi một chữ thôi, ra từ mới là giữ từ!', 'Nhanh tay đổi chữ nào!'],
   // Thế chữ, ván cuối tăng tốc (từ 5 chữ, được đổi 1 hoặc 2 chữ)
@@ -206,7 +206,12 @@ window.KB = {
 
   // ---------- 3. Công bố đáp án ----------
   dap_an: ['Đáp án là {x}', 'Đáp án đúng là {x}', 'Chính là {x}', 'Câu này chọn {x}'],
-  het_gio_hunt: ['Hết giờ! Đây là các từ giấu trong ma trận.', 'Hết giờ rồi! Cùng xem các từ nấp ở đâu nhé.', 'Dừng tay nào! Đáp án hiện trên ma trận đây.'],
+  het_gio_hunt: ['Hết giờ! Nổ nào!', 'Hết giờ rồi, chữ rơi xuống nè!', 'Bùm! Bảng mới đây!'],
+  // Săn từ, chiêu mana lúc hết lượt: đủ 10 = hai tên lửa · đủ 20 = bom chữ thập · đủ 30 = nổ ô đen bàn cờ
+  hunt_rocket: ['Đủ mười mana! Hai tên lửa, bắn!', 'Mười mana rồi, tên lửa bay nè!', 'Tên lửa xuất kích!'],
+  hunt_bomb: ['Đủ hai mươi mana! Thả bom nào!', 'Hai mươi mana, bom nổ chữ thập luôn!', 'Bom tới đây, tránh ra nào!'],
+  hunt_checker: ['Ba mươi mana! Nổ nửa bàn cờ luôn!', 'Đầy mana rồi, cả bàn cờ nổ tung!', 'Tuyệt vời! Ba mươi mana, nổ hết ô đen!'],
+  hunt_doi_bang: ['Chưa ai tìm ra, đổi bảng mới nhé!', 'Bảng này khó quá, đổi bảng nào!'],
   het_gio_startend: ['Hết giờ! Ví dụ đáp án nè.', 'Hết giờ rồi! Vài từ gợi ý nhé.', 'Dừng tay nào! Ninja đọc vài đáp án nha.'],
   chain_thang: ['{ten} thắng ván! Cộng mười điểm!', '{ten} giữ được từ đến cùng, cộng mười điểm!', 'Ván này thuộc về {ten}! Cộng mười điểm!'],
   chain_thang_x2: ['{ten} thắng ván, điểm nhân đôi! Cộng hai mươi điểm!', '{ten} giữ được từ đến cùng, nhân đôi thành hai mươi điểm!', 'Ván này thuộc về {ten}! Nhân đôi, cộng hai mươi điểm!'],

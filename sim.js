@@ -91,17 +91,16 @@ const later = (sec, fn) => timers.push(setTimeout(fn, (sec + finG) * 1000));
         return;
       }
       if (round.mode === 'hunt') {
-        // Săn từ: mỗi người tìm lần lượt từng từ (ngẫu nhiên trong danh sách hợp lệ của bảng), người giỏi về đích sớm; thỉnh thoảng gõ từ lạ
-        const words = [...round.hunt.map.keys()];
+        // Săn từ: mỗi người gõ vài từ đang có trên bảng (từ đã có người tìm thì thành tán gẫu), đôi khi gõ hai từ một bình luận hoặc gõ từ lạ.
+        // Khoảng 1/6 số lượt cả đám đến muộn (sau 12 giây) để thấy từ gợi ý nhấp nháy; 1/12 số lượt không ai gõ đúng để thấy cảnh nổ cả bảng.
+        const words = [...round.hunt.map.keys()], mood = Math.random(), from = mood < 0.17 ? 13 : 3;
         for (const u of crowd) {
-          if (Math.random() < 0.2) continue;
-          const n = 5 + (Math.random() < u.skill ? 1 : 0), pace = rand(6, 26) * (1.15 - u.skill);
-          let t = rand(5, 14);
-          for (let i = 0; i < n + (Math.random() < 0.3 ? 1 : 0); i++) {
-            const word = i === n ? pick(['hello', 'qwerty', 'banana']) : pick(words);
+          if (Math.random() < 0.3) continue;
+          let t = rand(from, from + 12);
+          for (let i = 0; i < 1 + Math.floor(Math.random() * 3) && t < round.sec - 1; i++) {
+            const word = mood > 0.92 || Math.random() < 0.15 ? pick(['hello', 'qwerty', 'banana', 'hay quá']) : Math.random() < 0.15 ? `${pick(words)} ${pick(words)}` : pick(words);
             later(t, () => onChat(u, word));
-            t += pace * rand(0.6, 1.4);
-            if (t > round.sec - 3) break;
+            t += rand(3, 9);
           }
         }
         return;

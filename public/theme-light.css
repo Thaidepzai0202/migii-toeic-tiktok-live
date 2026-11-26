@@ -796,9 +796,11 @@ html[data-theme="light"] #stage.fire .dl.on { background: #ffd34d; color: #3a070
 /* Săn từ: ô lưới, chip từ, màu từ đã tìm (bỏ xanh bạc hà / xanh dương / xanh lá), từ chưa ai tìm lúc công bố */
 html[data-theme="light"] #stage.fire .hc { background: #fff3e0; color: #3a0705; }
 html[data-theme="light"] #stage.fire .hchip { background: #fff3e0; color: #3a0705; }
-html[data-theme="light"] #stage.fire .f1 { background: #ffb347; } html[data-theme="light"] #stage.fire .f3 { background: #ffd9b0; }
-html[data-theme="light"] #stage.fire .f5 { background: #ffc2a8; } html[data-theme="light"] #stage.fire .f6 { background: #ffe07a; }
-html[data-theme="light"] #stage.fire .hx { background: #ff8a1f; color: #3a0705; }
+/* từ đã tìm trên nền lửa: 8 màu vàng / cam / đỏ đậm nhạt xen kẽ cho khác hẳn ô kem chưa tìm (26/11/2026: bảng 16×16, bản màu nhạt cũ lẫn vào nền ô) */
+html[data-theme="light"] #stage.fire :is(.hc, .hchip).f0 { background: #ffd34d; color: #3a0705; } html[data-theme="light"] #stage.fire :is(.hc, .hchip).f1 { background: #e2260c; color: #fff; }
+html[data-theme="light"] #stage.fire :is(.hc, .hchip).f2 { background: #ff8a1f; color: #3a0705; } html[data-theme="light"] #stage.fire :is(.hc, .hchip).f3 { background: #7a0d05; color: #ffe07a; }
+html[data-theme="light"] #stage.fire :is(.hc, .hchip).f4 { background: #ffb347; color: #3a0705; } html[data-theme="light"] #stage.fire :is(.hc, .hchip).f5 { background: #c21807; color: #fff; }
+html[data-theme="light"] #stage.fire :is(.hc, .hchip).f6 { background: #ffe07a; color: #3a0705; } html[data-theme="light"] #stage.fire :is(.hc, .hchip).f7 { background: #ff5a1f; color: #fff; }
 /* Start or End: chip ví dụ đáp án */
 html[data-theme="light"] #stage.fire .se-ex .chip { background: linear-gradient(180deg, #ffe07a 0%, #ffb347 100%); color: #3a0705; }
 /* Hái từ: huy hiệu chữ cái, ô đã hái, chữ gợi ý */
@@ -821,3 +823,46 @@ html[data-theme="light"] #stage.fire #thanks { background: linear-gradient(180de
 /* thanh tên kênh trên cùng: tên app và chấm THỬ / LIVE đổi sang đỏ (ảnh Ninja giữ nguyên) */
 html[data-theme="light"] #stage.fire .site .nm b { color: #c21807; }
 html[data-theme="light"] #stage.fire .livedot.sim { background: #fff3e0; color: #c21807; }
+
+/* ---------- Săn từ (luật 26/11/2026): bố cục bảng 16×16 + nền mây trôi ----------
+   Bảng cao 941px nên khung chơi dùng hết vùng an toàn y 236–1600 (dòng ETS đã ẩn): thanh giờ, bảng, thanh mana, dải từ vừa tìm, dòng luật, hai bảng 3 hàng. */
+html[data-theme="light"] .wrap.hunt:not(.room) { height: 1600px; }
+html[data-theme="light"] .wrap.hunt:not(.room) .bb { flex: none; padding: 0; justify-content: flex-start; }
+html[data-theme="light"] .wrap.hunt .timer { margin-top: 0; }
+html[data-theme="light"] .wrap.hunt .howto { margin-top: 2px; font-size: 26px; line-height: 34px; white-space: nowrap; }
+html[data-theme="light"] .wrap.hunt :is(.slots, .tiles, .opts, #crossbox, #lessonbox) { display: none; } /* khối của khung khác: ẩn hẳn kẻo lề của chúng đẩy bảng điểm xuống quá y 1600 */
+/* thẻ "vươn lên dẫn đầu" vốn nằm ở y 246 sẽ che thanh giờ và hàng đầu của bảng chữ → đưa lên ngang thanh tên kênh */
+html[data-theme="light"] #stage[data-seg="hunt"] #moment { top: 154px; }
+html[data-theme="light"] .wrap.hunt .panels { margin-top: 4px; }
+html[data-theme="light"] .wrap.hunt .panel { height: 214px; padding: 12px 30px; }
+html[data-theme="light"] .wrap.hunt .panel h3 { margin-bottom: 6px; padding-bottom: 6px; }
+html[data-theme="light"] .wrap.hunt .row { height: 46px; }
+html[data-theme="light"] .wrap.hunt #board .row:nth-child(n+4), html[data-theme="light"] .wrap.hunt #feed .it:nth-child(n+4) { display: none; } /* đúng 3 hàng, không để hàng thứ tư ló nửa chừng */
+/* Nền mây (người dùng 26/11/2026: dùng nền của bản video TikTok): chỉ hiện trong lúc chơi Săn từ, lượt về đích nhường nền lửa. Mây chỉ đổi transform;
+   khung khác thì dừng hẳn animation. Biên độ ±75–120px: nhỏ hơn thì ở màn thu nhỏ gần như không thấy trôi (đã thử ở bản video). */
+#hsky { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; opacity: 0; transition: opacity .6s; background: #dff3f1 url(img/nen/troi-pastel.png) center / cover no-repeat; }
+#stage.hsky #hsky { opacity: 1; }
+#hsky i { position: absolute; display: block; animation: hskyX var(--tx) ease-in-out var(--tre) infinite alternate paused; }
+#hsky img { display: block; width: 100%; opacity: var(--mo, .92); animation: hskyY var(--ty) ease-in-out var(--tre) infinite alternate paused; }
+#stage.hsky #hsky i, #stage.hsky #hsky img { animation-play-state: running; }
+@keyframes hskyX { from { transform: translateX(calc(var(--dx) * -1)); } to { transform: translateX(var(--dx)); } }
+@keyframes hskyY { from { transform: translateY(calc(var(--dy) * -1)) scale(1); } to { transform: translateY(var(--dy)) scale(1.03); } }
+/* trên nền mây: ô chữ và hai bảng hơi trong để thấy mây trôi phía sau, chữ vẫn đậm */
+/* (:where để không thắng màu của từ đã tìm .f0–.f7 và ô gợi ý) */
+:where(#stage.hsky) .hc:not(.f0, .f1, .f2, .f3, .f4, .f5, .f6, .f7, .hh, .boom) { background: rgba(255, 255, 255, .86); }
+:where(#stage.hsky) .hc.nw:not(.f0, .f1, .f2, .f3, .f4, .f5, .f6, .f7, .hh) { background: rgba(233, 248, 244, .92); }
+html[data-theme="light"] #stage.hsky .panel { background: rgba(255, 255, 255, .9); }
+/* về đích (nền lửa): ô gợi ý và ô mới rơi theo tông cam */
+html[data-theme="light"] #stage.fire .hc.nw { background: #ffe9c2; }
+html[data-theme="light"] #stage.fire .hmana em { color: #ffe07a; }
+html[data-theme="light"] #stage.fire .hbolt .glow polyline { stroke: #ffb347; }
+html[data-theme="light"] #stage.fire .hray { --ray: #ffd34d; --rayglow: rgba(255, 150, 40, .9); }
+html[data-theme="light"] #stage.fire .hmana.gain .mt i { box-shadow: 0 0 22px 4px rgba(255, 190, 60, .95); }
+html[data-theme="light"] #stage.fire .hmana .mt { background: rgba(255, 255, 255, .2); }
+html[data-theme="light"] #stage.fire .hmana .mt i { background: linear-gradient(90deg, #ffe07a, #ff8a1f 55%, #ff3d17); box-shadow: 0 0 16px rgba(255, 150, 40, .9); }
+html[data-theme="light"] #stage.fire .hmana .mk { background: #fff3e0; color: #7a0d05; box-shadow: inset 0 0 0 2px #ff8a1f; }
+html[data-theme="light"] #stage.fire .hmana .mk.on { background: #e2260c; color: #fff; box-shadow: 0 0 0 3px #ffd34d, 0 0 18px rgba(255, 110, 20, .9); }
+html[data-theme="light"] #stage.fire .wrap.hunt .hchips { color: #ffe1c4; }
+html[data-theme="light"] #stage.fire .wrap.hunt .bb { background: transparent; box-shadow: none; animation: none; }
+html[data-theme="light"] #stage.fire .wrap.hunt .panel { padding: 0 30px 10px; }
+html[data-theme="light"] #stage.fire .wrap.hunt .panel h3 { margin: 0 -30px 4px; padding: 10px 30px 8px; }

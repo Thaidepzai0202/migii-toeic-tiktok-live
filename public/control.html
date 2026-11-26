@@ -292,7 +292,7 @@ function render() {
       : s.answer.mode === 'oneletter' ? `✂️ ${s.answer.one.red ? '🔥 VỀ ĐÍCH (điểm ×2) · ' : ''}${s.answer.one.k === 'add' ? 'THÊM' : 'BỚT'} 1 chữ · trên màn: ${s.answer.one.s} · ${s.answer.winners} người đúng`
       : s.answer.mode === 'haitu' ? `🍎 Hái từ · chủ đề ${s.answer.w} · ${s.answer.winners} người đã hái · gõ thử: ${s.answer.demo}`
       : s.answer.mode === 'bricky' ? `🧱 Bricky · ${s.answer.winners} người đã điền đủ bảng · gõ thử: ${s.answer.demo}`
-      : s.answer.mode === 'hunt' ? `🔎 Săn từ · ${s.answer.winners} người đã tìm đủ 5 từ · đáp án mẫu: ${s.answer.demo}`
+      : s.answer.mode === 'hunt' ? `🔎 Săn từ · ${s.answer.winners} người đã tìm được từ trong lượt này · vài từ đang có trên bảng: ${s.answer.demo}`
       : s.answer.mode === 'startend' ? `🎯 Start or End · ${s.answer.winners} người đã gõ đủ 5 từ đúng · đáp án mẫu: ${s.answer.demo}`
       : `${s.answer.course || ''} · ${s.answer.winners} người đúng · gợi ý mức ${s.answer.hint}/2`;
   } else if (ph === 'podium' && s.podium) {

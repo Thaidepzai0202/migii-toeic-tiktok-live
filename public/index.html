@@ -558,25 +558,87 @@
   .se-rules b { font-weight: 900; }
   .se-ex h4 { font-size: 30px; font-weight: 800; margin: 0 0 10px; text-align: center; opacity: .8; }
   .se-ex .chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; max-height: 128px; overflow: hidden; } /* tối đa 2 hàng: không đẩy bảng điểm xuống đè dòng ETS */
-  /* Săn từ: ma trận 10×10 thay ô câu hỏi; từ đã tìm được tô màu riêng từng từ */
-  #huntbox { display: none; width: 100%; flex-direction: column; align-items: center; }
+  /* Săn từ (luật 26/11/2026): bảng chữ 16×16 chiếm gần hết bề ngang, thay ô câu hỏi. Từ đã có người tìm tô màu riêng từng từ; hết lượt các ô đó
+     nổ (.boom), chữ phía trên và chữ mới rơi xuống (.fall). Ô 56px + khe 3px = bước 59px (HSTEP trong renderHunt; 26/11 thu từ 58px để có chỗ cho thanh mana). Nền mây, về đích: theme-light.css */
+  #huntbox { display: none; width: calc(100% + 16px); margin: 0 -8px; flex-direction: column; align-items: center; }
   .wrap.hunt #huntbox { display: flex; }
   .wrap.hunt .q, .wrap.hunt .sub, .wrap.hunt .prev, .wrap.hunt .footer { display: none; }
-  .wrap.hunt .panels { margin-top: 18px; } .wrap.hunt .panel { height: 190px; } .wrap.hunt .row { height: 46px; }
-  .hgrid { margin-top: 14px; display: grid; grid-template-columns: repeat(10, 58px); gap: 4px; }
-  .hc { width: 58px; height: 58px; display: grid; place-items: center; border-radius: 12px; font-size: 36px; font-weight: 900; text-transform: uppercase; background: #e4edea; color: #10201e; }
+  .hwrap { position: relative; margin-top: 10px; }
+  .hwrap.drop { clip-path: inset(-6px); } /* lúc chữ rơi: chữ mới đi vào từ mép trên bảng, không đè lên thanh giờ */
+  .hgrid { display: grid; grid-template-columns: repeat(16, 56px); gap: 3px; }
+  .hc { width: 56px; height: 56px; display: grid; place-items: center; border-radius: 10px; font-size: 37px; line-height: 1; font-weight: 900; text-transform: uppercase; background: #fff; color: #10201e; }
   /* từ vừa được tìm ra: từng chữ nổi to rồi thu lại và đổi màu, lần lượt từ chữ đầu (--d = độ trễ của chữ, --from = màu ô trước đó) */
   .hc.pop { position: relative; z-index: 2; animation: huntPop .6s cubic-bezier(.2, 1.4, .4, 1) var(--d, 0ms) backwards; }
-  .hc.intro { animation: huntIntro .5s cubic-bezier(.2, 1.4, .4, 1) calc(var(--base, 0ms) + var(--i, 0) * 45ms) backwards; }
-  @keyframes huntIntro { 0% { transform: scale(.2); opacity: 0; } 55% { transform: scale(1.35); opacity: 1; background: #bfe6de; } 100% { transform: none; } }
-  @keyframes huntPop { 0% { transform: none; background: var(--from, #e4edea); box-shadow: none; }
+  .hc.intro { animation: huntIntro .45s cubic-bezier(.2, 1.4, .4, 1) calc(var(--base, 0ms) + var(--i, 0) * 26ms) backwards; }
+  @keyframes huntIntro { 0% { transform: scale(.2); opacity: 0; } 55% { transform: scale(1.3); opacity: 1; background: #bfe6de; } 100% { transform: none; } }
+  @keyframes huntPop { 0% { transform: none; background: var(--from, #fff); box-shadow: none; }
     40% { transform: scale(1.7) rotate(-5deg); box-shadow: 0 10px 24px rgba(16, 32, 30, .28); } 100% { transform: none; box-shadow: none; } }
-  .hchips { margin-top: 12px; display: flex; flex-wrap: nowrap; gap: 8px; justify-content: center; height: 46px; overflow: hidden; }
-  .hchips.rev { flex-wrap: wrap; height: 100px; }
-  .hchip { padding: 2px 16px; border-radius: 999px; font-size: 28px; white-space: nowrap; font-weight: 800; color: #10201e; background: #e4edea; }
+  /* từ gợi ý (10 giây chưa ai tìm được gì): các ô của từ nhấp nháy vàng */
+  .hc.hh { position: relative; z-index: 1; animation: huntHint .55s ease-in-out infinite alternate; }
+  @keyframes huntHint { from { background: #fff; transform: none; box-shadow: none; } to { background: #ffd34d; transform: scale(1.14); box-shadow: 0 0 0 3px #ff9a1f, 0 6px 18px rgba(255, 154, 31, .55); } }
+  /* hết lượt: ô nổ */
+  .hc.boom { position: relative; z-index: 3; animation: huntBoom .5s cubic-bezier(.3, 0, .7, 1) var(--d, 0ms) forwards; }
+  @keyframes huntBoom { 0% { transform: none; } 32% { transform: scale(1.45) rotate(-6deg); background: #fff7c2; color: #c2562a; box-shadow: 0 0 0 5px rgba(255, 211, 77, .85), 0 0 30px 8px rgba(255, 154, 31, .8); }
+    100% { transform: scale(0) rotate(40deg); opacity: 0; } }
+  /* chữ rơi: --dy = quãng rơi (âm), --t = thời gian theo quãng, chạm đáy nảy nhẹ */
+  .hc.fall { animation: huntFall var(--t, .5s) var(--d, 0ms) backwards; }
+  @keyframes huntFall { 0% { transform: translateY(var(--dy)); animation-timing-function: cubic-bezier(.45, 0, .9, .55); } 76% { transform: translateY(0); animation-timing-function: ease-out; }
+    87% { transform: translateY(-8px); animation-timing-function: ease-in; } 100% { transform: none; } }
+  .hc.nw { background: #e9f8f4; }
+  /* tên người tìm + điểm bay lên từ chỗ từ vừa tìm */
+  #hfx { position: absolute; inset: 0; pointer-events: none; z-index: 4; }
+  .hpop { position: absolute; transform: translate(-50%, -100%); padding: 4px 16px; border-radius: 999px; background: #10201e; color: #fff; font-size: 26px; font-weight: 800; white-space: nowrap;
+    animation: huntName 1.7s ease-out forwards; }
+  .hpop b { color: #ffd34d; margin-left: 8px; }
+  @keyframes huntName { 0% { opacity: 0; margin-top: 16px; } 12% { opacity: 1; margin-top: 0; } 75% { opacity: 1; margin-top: -26px; } 100% { opacity: 0; margin-top: -44px; } }
+  /* Thanh mana (26/11/2026): mỗi từ +1; ba mốc 10 / 20 / 30 sáng lên khi đạt. Hết lượt đạt mốc nào thì dùng chiêu đó: tên lửa (.hrk), bom (.hbm + .hbeam), bàn cờ (.ck) */
+  .hmana { margin-top: 6px; width: 941px; height: 34px; display: flex; align-items: center; gap: 14px; }
+  .hmana .mt { position: relative; flex: 1; height: 18px; border-radius: 9px; background: rgba(91, 63, 214, .18); }
+  .hmana .mt i { position: absolute; left: 0; top: 0; bottom: 0; width: 0; border-radius: 9px; background: linear-gradient(90deg, #6aa8ff, #7b5cff 60%, #c05cff); box-shadow: 0 0 12px rgba(123, 92, 255, .6);
+    transition: width .5s cubic-bezier(.2, 1.2, .4, 1); }
+  .hmana .mk { position: absolute; top: 50%; transform: translate(-50%, -50%); height: 32px; padding: 0 10px; border-radius: 16px; background: #fff; box-shadow: inset 0 0 0 2px #b9aef5;
+    display: flex; align-items: center; gap: 4px; font-size: 20px; font-weight: 800; color: #5b3fd6; white-space: nowrap; }
+  .hmana .mk:last-child { transform: translate(-100%, -50%); }
+  .hmana .mk.on { background: #7b5cff; color: #fff; box-shadow: 0 0 0 3px #ffd34d, 0 0 16px rgba(123, 92, 255, .8); animation: manaOn .5s ease-in-out infinite alternate; }
+  @keyframes manaOn { to { box-shadow: 0 0 0 5px #ffd34d, 0 0 26px rgba(123, 92, 255, 1); } }
+  .hmana em { min-width: 72px; text-align: right; font-style: normal; font-size: 24px; font-weight: 800; color: #5b3fd6; }
+  .hmana.fire .mt i { animation: manaFire .5s ease-in-out 2; }
+  .hmana.gain .mt i { filter: brightness(1.7); box-shadow: 0 0 22px 4px rgba(160, 130, 255, .95); }
+  /* tia sáng bay từ các chữ vừa tìm được về đầu thanh mana (người dùng 26/11/2026): khối ngoài xoay về hướng thanh, vệt sáng bên trong chạy --dist px */
+  .hray { position: absolute; width: 0; height: 0; transform: rotate(var(--a)); }
+  .hray i { position: absolute; left: -76px; top: -7px; width: 76px; height: 14px; border-radius: 7px; opacity: 0; background: linear-gradient(90deg, rgba(123, 92, 255, 0), var(--ray, #7b5cff) 45%, #efe8ff 86%, #fff);
+    box-shadow: 0 0 20px 7px var(--rayglow, rgba(123, 92, 255, .85)); animation: huntRay .62s cubic-bezier(.55, 0, .85, .45) var(--d, 0ms) forwards; }
+  @keyframes huntRay { 0% { opacity: 0; transform: translateX(28px) scaleX(.3); } 14% { opacity: 1; transform: translateX(40px) scaleX(1); } 88% { opacity: 1; } 100% { opacity: 0; transform: translateX(var(--dist)) scaleX(.45); } }
+  @keyframes manaFire { 50% { filter: brightness(1.8); transform: scaleY(1.7); } }
+  /* chiêu mana, vẽ trong #hfx: tên lửa bay chéo từ trên trái xuống tâm nổ · bom rơi vào chỗ rồi hai vệt sáng ngang dọc · ô đen bàn cờ tối lại trước khi nổ */
+  .hrk, .hbm { position: absolute; font-size: 78px; line-height: 1; margin: -39px 0 0 -39px; opacity: 0; }
+  .hrk { animation: huntRocket .52s cubic-bezier(.5, 0, .9, .6) var(--d, 0ms) forwards; }
+  @keyframes huntRocket { 0% { opacity: 1; transform: translate(-640px, -640px) rotate(90deg) scale(.7); } 92% { opacity: 1; transform: rotate(90deg) scale(1.15); } 100% { opacity: 0; transform: rotate(90deg) scale(2); } }
+  .hbm { animation: huntBomb .5s cubic-bezier(.3, 0, .6, 1) var(--d, 0ms) forwards; }
+  @keyframes huntBomb { 0% { opacity: 0; transform: translateY(-260px) scale(2.4); } 55% { opacity: 1; transform: none; } 75% { transform: scale(1.3) rotate(-10deg); } 90% { opacity: 1; transform: scale(1.5) rotate(10deg); } 100% { opacity: 0; transform: scale(3); } }
+  .hbeam { position: absolute; opacity: 0; border-radius: 14px; background: linear-gradient(90deg, rgba(255, 211, 77, 0), #fff7c2 20%, #fff 50%, #fff7c2 80%, rgba(255, 211, 77, 0)); box-shadow: 0 0 40px 10px rgba(255, 154, 31, .8);
+    animation: huntBeam .65s ease-out var(--d, 0ms) forwards; }
+  .hbeam.v { background: linear-gradient(180deg, rgba(255, 211, 77, 0), #fff7c2 20%, #fff 50%, #fff7c2 80%, rgba(255, 211, 77, 0)); }
+  @keyframes huntBeam { 0% { opacity: 0; transform: scale(.2); } 25% { opacity: .95; transform: none; } 100% { opacity: 0; } }
+  .hc.ck { background: #10201e !important; color: #fff !important; transition: background .2s, color .2s; }
+  /* bom: rung màn (không đặt transform lên #stage vì #stage đang bị co giãn bằng transform) */
+  #stage.hshake .wrap, #stage.hshake #hsky { animation: huntShake .22s linear; }
+  #stage.hshake2 .wrap, #stage.hshake2 #hsky { animation: huntShake2 .6s linear; }
+  @keyframes huntShake { 0%, 100% { transform: none; } 30% { transform: translate(0, 14px); } 65% { transform: translate(0, -6px); } }
+  @keyframes huntShake2 { 0%, 100% { transform: none; } 8% { transform: translate(-22px, 14px) rotate(-.6deg); } 20% { transform: translate(20px, -16px) rotate(.6deg); } 32% { transform: translate(-16px, -10px) rotate(-.4deg); }
+    46% { transform: translate(14px, 12px) rotate(.4deg); } 60% { transform: translate(-9px, 6px); } 74% { transform: translate(7px, -5px); } 88% { transform: translate(-3px, 2px); } }
+  /* bàn cờ: tia sét lan từ ô đen này sang ô đen kia; hai lớp nét (quầng tím + lõi trắng), mỗi tia loé theo --d */
+  .hbolt { position: absolute; left: 0; top: 0; overflow: visible; }
+  .hbolt polyline { fill: none; stroke-linecap: round; stroke-linejoin: round; opacity: 0; animation: huntBolt .34s ease-out var(--d, 0ms) forwards; }
+  .hbolt .glow polyline { stroke: #8f6bff; stroke-width: 13; }
+  .hbolt .core polyline { stroke: #fff; stroke-width: 4; }
+  @keyframes huntBolt { 0% { opacity: 0; } 12% { opacity: 1; } 45% { opacity: .9; } 60% { opacity: .25; } 72% { opacity: .85; } 100% { opacity: 0; } }
+  .hchips { margin-top: 6px; display: flex; flex-wrap: nowrap; gap: 8px; justify-content: center; align-items: center; height: 46px; overflow: hidden; font-size: 28px; font-weight: 600; color: #3b524e; white-space: nowrap; }
+  .hchip { flex: none; padding: 2px 16px; border-radius: 999px; font-size: 26px; line-height: 40px; white-space: nowrap; font-weight: 500; color: #10201e; background: #e4edea; }
+  .hchip b { font-weight: 800; margin-right: 8px; }
+  .hchip.new { animation: pop .35s ease-out; }
   .f0 { background: #ffd34d; } .f1 { background: #7fdcc8; } .f2 { background: #ff9eb5; } .f3 { background: #9ec5ff; }
   .f4 { background: #ffb347; } .f5 { background: #c9a7ff; } .f6 { background: #a3e07c; } .f7 { background: #ff8a7a; }
-  .hx { background: #48bcaa; color: #06201c; } /* từ giấu không ai tìm ra (hiện khi công bố) */
   /* Thế chữ (luật 13/11: không đội): chuỗi từ, nhật ký lượt thử, thẻ người giữ từ ngay dưới từ */
   .wrap.chain .prev { display: none; }
   .cchips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; max-height: 112px; overflow: hidden; padding: 0 8px; }
@@ -875,6 +937,17 @@
   </div>
   <!-- Word = đua phi cơ: bầu trời làm nền cả màn, mỗi người một phi cơ (raceUpdate) -->
   <div id="sky"><div class="skc c1"></div><div class="skc c2"></div><div class="skl"></div><div class="skfin"><span>🏁 ĐÍCH</span></div><div class="sktitle" id="skTitle"></div><div id="planes"></div><div class="skmore" id="skMore"></div><div class="skwin" id="skWin"></div></div>
+  <!-- Săn từ: nền trời pastel + mây trôi (lấy từ bản video TikTok gia-su/thu-chua-bai, người dùng yêu cầu 26/11/2026; thêm 2 đám giữa màn cho thấy mây sau bảng chữ). Thẻ ngoài trôi ngang, ảnh trong nhấp nhô. -->
+  <div id="hsky">
+    <i style="left:-90px;top:40px;width:520px;--dx:90px;--dy:20px;--tx:8s;--ty:4.6s;--tre:-3s"><img src="img/nen/may-1.png" alt=""></i>
+    <i style="left:700px;top:70px;width:460px;--dx:80px;--dy:18px;--tx:9.5s;--ty:5.4s;--tre:-7s"><img src="img/nen/may-2.png" alt=""></i>
+    <i style="left:440px;top:240px;width:250px;--dx:120px;--dy:14px;--tx:11s;--ty:4s;--tre:-5s;--mo:.75"><img src="img/nen/may-3.png" alt=""></i>
+    <i style="left:-60px;top:640px;width:420px;--dx:110px;--dy:16px;--tx:10s;--ty:5.2s;--tre:-4s;--mo:.8"><img src="img/nen/may-2.png" alt=""></i>
+    <i style="left:640px;top:980px;width:480px;--dx:95px;--dy:18px;--tx:8.5s;--ty:4.8s;--tre:-8s;--mo:.8"><img src="img/nen/may-1.png" alt=""></i>
+    <i style="left:620px;top:1400px;width:640px;--dx:85px;--dy:18px;--tx:9s;--ty:5s;--tre:-10s"><img src="img/nen/may-6.png" alt=""></i>
+    <i style="left:-180px;top:1520px;width:860px;--dx:100px;--dy:16px;--tx:10.5s;--ty:6s;--tre:-2s"><img src="img/nen/may-4.png" alt=""></i>
+    <i style="left:230px;top:1700px;width:720px;--dx:75px;--dy:20px;--tx:7.5s;--ty:4.4s;--tre:-6s"><img src="img/nen/may-5.png" alt=""></i>
+  </div>
   <div class="wrap">
     <div class="bb">
     <div class="prev" id="prev">Gõ đáp án vào bình luận để ghi điểm!</div>
@@ -882,7 +955,7 @@
     <div class="q" id="q">…</div>
     <div class="sub" id="sub">nghĩa là gì?</div>
     <div class="timer"><div class="bar"><i id="bar"></i></div><div class="secs" id="secs">15</div></div>
-    <div id="huntbox"><div class="hgrid" id="hgrid"></div><div class="hchips" id="hchips"></div></div>
+    <div id="huntbox"><div class="hwrap" id="hwrap"><div class="hgrid" id="hgrid"></div><div id="hfx"></div></div><div class="hmana" id="hmana"></div><div class="hchips" id="hchips"></div></div>
     <div id="crossbox"><div class="cgrid" id="cgrid"></div><div class="ckey" id="ckey"></div></div>
     <div class="slots" id="slots"></div>
     <div class="tiles" id="tiles"></div>
@@ -1104,7 +1177,7 @@ const SEG_RULES = {
   type: [`🎧 Nghe Ninja đọc + nhìn <b>nghĩa tiếng Việt</b>`, `✍️ Gõ <b>từ tiếng Anh</b> vào bình luận · nhanh nhất <b>+10</b>`, `🔤 Gợi ý mở dần <b>c _ _ _ _ _ t</b> · phải đúng chính tả`],
   // chữ theo Figma node 46:12 (12/11/2026)
   word: [`🛩️ Mỗi người một <b>phi cơ</b> · gõ <b>A, B, C</b> hoặc <b>D</b>, đúng thì <b>tăng tốc</b>`, `⚡ Đúng nhanh nhất <b>+10 km/h</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`, `💥 Sai hoặc bỏ câu: <b>hỏng động cơ</b> · câu cuối <b>về đích</b>`],
-  hunt: [`🔎 Ma trận <b>10×10</b>: tìm từ theo <b>mọi hướng</b>, cả ngược`, `💬 Gõ từ vào bình luận · ai tìm đủ <b>5 từ</b> trước ăn điểm`, `⚡ Về đích nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
+  hunt: [`🔎 Bảng chữ <b>16×16</b>: tìm từ theo hàng <b>ngang →</b> hoặc cột <b>dọc ↓</b>`, `💬 Gõ từ vào bình luận · ai gõ <b>trước</b> được <b>+2</b> mỗi từ`, `💥 Hết <b>30 giây</b> từ đã tìm <b>nổ</b>, chữ rơi xuống cho lượt mới`, `✨ Mỗi từ <b>+1 mana</b> · đủ <b>10 / 20 / 30</b>: tên lửa, bom, nổ bàn cờ`],
   speedread: [`📰 Hiện <b>một văn bản ngắn</b> (email, thông báo, quảng cáo…) kèm <b>1 câu hỏi</b>`, `🔎 Tìm chi tiết trong bài rồi gõ <b>A, B, C</b> hoặc <b>D</b>`, `⚡ Nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
   dictate: [`🎧 Nghe <b>một câu tiếng Anh</b>, phát lặp lại, cách nhau 5 giây`, `💬 Gõ lại <b>cả câu</b> vào bình luận, cứ <b>2 giây</b> hiện thêm 1 chữ cái`, `⚡ Nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
   errhunt: [`🔍 Câu có <b>đúng 1 từ sai</b> (chính tả hoặc ngữ pháp)`, `💬 Gõ <b>từ sai - từ đúng</b>, vd <b>goning - going</b>`, `⚡ Nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
@@ -1138,7 +1211,7 @@ function renderBreak(s) {
   $('bLineup').innerHTML = prog ? s.program.map((x) => `<span class="${x.id === nx.id ? 'now' : ''}">${x.icon} ${esc(x.name)}</span>`).join('') : '';
   if (prog && SEG_RULES[nx.id]) {
     // dòng đầu (số câu · giây mỗi câu) và dòng cuối (Top 3) theo Figma node 46:12: "10 câu · 10s/câu", "Top 3 người điểm cao nhất…"
-    const don = nx.id === 'hunt' ? 'bảng' : 'câu';
+    const don = nx.id === 'hunt' ? 'lượt' : 'câu';
     $('bRules').innerHTML = [nx.id === 'chain' ? `🔗 <b>${nx.total} ván</b> · mỗi lượt <b>${nx.sec} giây</b>` : nx.id === 'crossword' ? `🔠 <b>1 ô chữ</b> · mỗi hàng <b>${nx.sec} giây</b>` : nx.id === 'speedread' ? `📰 <b>${nx.total}</b> bài - ${nx.sec}s/bài` : `⏱ <b>${nx.total || s.cfg.questions}</b> ${don} - ${nx.sec || s.cfg.roundSec}s/${don}`, ...SEG_RULES[nx.id],
       ...(nx.fin ? [`🔥 <b>Về đích</b>: ${nx.id === 'crossword' ? 'hàng cuối / vòng từ khoá' : `${nx.fin.unit.toLowerCase()} cuối`}, điểm <b>×${nx.fin.mult}</b>`] : []),
       ...(nx.id === 'team' ? [] : [`🏆 <b>Top 3</b> người điểm cao nhất sẽ được vinh danh`])]
@@ -1276,6 +1349,7 @@ function render() {
   $('stage').classList.toggle('fire', (((s.q?.mode === 'chain' || s.q?.mode === 'bricky') && !!s.q.final) || (s.q?.mode === 'oneletter' && !!s.q.red)) && ['question', 'reveal'].includes(s.phase));
   if (s.race?.final && ['question', 'reveal'].includes(s.phase)) $('stage').classList.add('fire'); // Word: câu cuối = chặng về đích, cùng giao diện lửa
   if (s.fin && ['question', 'reveal'].includes(s.phase)) $('stage').classList.add('fire'); // chặng về đích dùng chung (server.js markFinish): câu / bảng cuối của lượt
+  $('stage').classList.toggle('hsky', s.q?.mode === 'hunt' && ['question', 'reveal'].includes(s.phase) && !$('stage').classList.contains('fire')); // Săn từ: nền mây trôi (về đích thì nhường nền lửa)
   raceUpdate(s);
   if (s.phase === 'outro') { $('breakScr').classList.remove('on'); $('podiumScr').classList.remove('on'); return renderOutro(s); }
   $('outro').classList.remove('on');
@@ -1332,7 +1406,7 @@ function render() {
   $('prev').innerHTML = s.prev
     ? `Câu trước: <b class="ko">${esc(s.prev.w)}</b> = ${esc(s.prev.m)} · ${s.prev.n} người đúng`
     : 'Gõ đáp án vào bình luận để ghi điểm!';
-  $('pill').textContent = room ? `✏️ Kiểm tra · Câu ${s.game.qNo}/${s.game.total}` : s.q?.mode === 'chain' && s.q.final ? `🔥 TĂNG TỐC · Ván ${s.q.match}/${s.game.total}` : s.q?.mode === 'bricky' && s.q.final ? `🔥 BẢNG CUỐI · điểm ×${s.q.mult}` : s.q?.mode === 'oneletter' && s.q.red ? `🔥 VỀ ĐÍCH · Câu ${s.q.redNo}/${s.q.redN} · điểm ×${s.q.mult}` : s.program && s.seg ? `${s.seg.icon} ${s.seg.name} · ${{ hunt: 'Bảng', chain: 'Ván', bricky: 'Bảng', haitu: 'Bảng' }[s.seg.id] || 'Câu'} ${s.q?.mode === 'chain' ? s.q.match : s.game.qNo}/${s.game.total}` : `Lượt ${s.game.no} · Câu ${s.game.qNo}/${s.game.total}`;
+  $('pill').textContent = room ? `✏️ Kiểm tra · Câu ${s.game.qNo}/${s.game.total}` : s.q?.mode === 'chain' && s.q.final ? `🔥 TĂNG TỐC · Ván ${s.q.match}/${s.game.total}` : s.q?.mode === 'bricky' && s.q.final ? `🔥 BẢNG CUỐI · điểm ×${s.q.mult}` : s.q?.mode === 'oneletter' && s.q.red ? `🔥 VỀ ĐÍCH · Câu ${s.q.redNo}/${s.q.redN} · điểm ×${s.q.mult}` : s.program && s.seg ? `${s.seg.icon} ${s.seg.name} · ${{ hunt: 'Lượt', chain: 'Ván', bricky: 'Bảng', haitu: 'Bảng' }[s.seg.id] || 'Câu'} ${s.q?.mode === 'chain' ? s.q.match : s.game.qNo}/${s.game.total}` : `Lượt ${s.game.no} · Câu ${s.game.qNo}/${s.game.total}`;
   if (s.race?.final) $('pill').textContent = `🔥 VỀ ĐÍCH · Câu ${s.game.qNo}/${s.game.total}`;
   if (s.fin) {
     const fu = s.fin.unit === 'Từ khoá' ? 'Vòng từ khoá' : `${s.fin.unit} cuối`;
@@ -1349,7 +1423,7 @@ function render() {
   if (s.q.mode === 'errhunt') { renderErr(s); renderFillx(s); return renderSide(s); }
   if (s.q.mode === 'dictate') { renderDict(s); renderFillx(s); return renderSide(s); }
   if (s.q.mode === 'cross') { renderCross(s); renderSide(s); for (const id of ['board', 'feed']) [...$(id).children].slice(2).forEach((n) => n.remove()); return; }
-  if (s.q.mode === 'hunt') { renderHunt(s); renderSide(s); for (const id of ['board', 'feed']) [...$(id).children].slice(2).forEach((n) => n.remove()); return; } // 2 hàng vừa khít ô thấp của khung này
+  if (s.q.mode === 'hunt') { renderHunt(s); renderSide(s); for (const id of ['board', 'feed']) [...$(id).children].slice(3).forEach((n) => n.remove()); return; } // 3 hàng vừa khít ô thấp của khung này
   if (s.q.mode === 'chain') return renderChain(s);
   if (mcq) { renderMcq(s); renderFillx(s); return renderSide(s); }
   if (s.q.mode === 'scramble') return renderScramble(s);
@@ -1888,67 +1962,220 @@ function renderCross(s) {
   $('howto').innerHTML = rev ? '' : `Gõ <b>chữ thường</b> để giải hàng${q.key.open ? ' · <b>CHỮ HOA</b> để đoán từ khoá' : ''}`;
 }
 
-// ---- Săn từ: ma trận 10×10, từ đã tìm được tô màu riêng ----
-const HDIR = [[0, 1], [1, 0], [1, 1], [1, -1], [0, -1], [-1, 0], [-1, -1], [-1, 1]]; // phải khớp DIRS trong build_san_tu.js
+// ---- Săn từ (luật 26/11/2026): bảng chữ 16×16, từ ngang → và dọc ↓ ----
+// s.q.grid = 16 hàng chữ · s.q.found = từ đã có người tìm [{ w, by, n, pts, m, cells: [[r, c]…] }] · s.q.hint = các ô của từ gợi ý (hoặc null).
+// Công bố (4 giây): s.q.boom = chỉ số các ô nổ (s.q.all = nổ cả bảng), s.q.next = bảng sau khi chữ rơi. Diễn một lần mỗi lượt (huntDrop); xong thì
+// DOM đã là bảng `next`, lượt kế tới nơi không dựng lại. Ô dựng một lần cho mỗi bảng, sau đó chỉ đổi màu từng ô để hiệu ứng không bị cắt ngang.
+const HN = 16, HSTEP = 59, HMID = 28;
+const HPOWER = { rocket: ['🚀', '2 tên lửa!'], bomb: ['💣', 'bom chữ thập!'], checker: ['♟️', 'nổ bàn cờ!'] };
+// Thanh mana: n = số mana đang hiện (lúc công bố có chiêu thì giữ mức cũ tới khi chiêu nổ rồi mới tụt về 0)
+function huntMana(q, n) {
+  const el = $('hmana'), lv = q.manaLv || [10, 20, 30], max = lv[lv.length - 1];
+  if (!el.firstChild) el.innerHTML = `<div class="mt"><i></i>${lv.map((x, k) => `<span class="mk" style="left:${(x / max) * 100}%">${Object.values(HPOWER)[k][0]}${x}</span>`).join('')}</div><em></em>`;
+  el.querySelector('i').style.width = `${Math.min(1, n / max) * 100}%`;
+  el.querySelector('em').textContent = `${n}/${max}`;
+  [...el.querySelectorAll('.mk')].forEach((m, k) => m.classList.toggle('on', n >= lv[k]));
+}
+function huntBuild(grid, cell = () => '') {
+  const g = $('hgrid');
+  g.innerHTML = grid.map((row, r) => [...row].map((ch, c) => `<div ${cell(r, c)}>${esc(ch)}</div>`).join('')).join('');
+  g.dataset.key = grid.join('');
+  g.onanimationend = (e) => { if (!e.target.classList.contains('boom')) e.target.classList.remove('intro', 'pop', 'fall', 'nw'); };
+}
 function renderHunt(s) {
-  const q = s.q, rev = s.phase === 'reveal', cls = new Map();
-  const paint = (list, cl) => list.forEach((f, i) => { const [dr, dc] = HDIR[f.d]; for (let k = 0; k < f.w.length; k++) cls.set(`${f.r + dr * k},${f.c + dc * k}`, cl(f, i)); });
-  if (rev) paint(q.hidden, () => 'hx');                 // từ giấu không ai tìm ra: xanh ngọc
-  paint(q.found, (f, i) => 'f' + (i % 8));              // từ đã có người tìm: mỗi từ một màu (đè lên nếu trùng ô)
-  // Dựng ô một lần cho mỗi bảng, sau đó chỉ đổi màu từng ô (không thay cả lưới) để hiệu ứng nổi chữ không bị cắt ngang.
-  const g = $('hgrid'), gkey = q.grid.join('|'), W = q.grid[0].length;
-  const fresh = g.dataset.key !== gkey;
-  if (fresh) {
-    // bảng mới hiện ra: cả ma trận nổi lên theo làn sóng chéo từ góc trên trái (--i = hàng + cột). Đang đổi màn (Ninja lướt,
-    // các khối bay vào) thì chờ ~2,3 giây cho bảng vào chỗ rồi mới nổi.
-    const base = $('stage').classList.contains('fly') ? 2300 : 0;
-    g.innerHTML = q.grid.map((row, r) => [...row].map((ch, c) => `<div class="hc intro" style="--i:${r + c};--base:${base}ms">${esc(ch)}</div>`).join('')).join('');
-    g.onanimationend = (e) => e.target.classList.remove('intro', 'pop');
-    g.dataset.key = gkey;
-    renderHunt.seen = new Set();
-  }
-  // Từ vừa được tìm ra: từng chữ nổi to rồi thu lại, đổi sang màu của từ, lần lượt từ chữ đầu tới chữ cuối.
-  // Công bố đáp án: nổi lần lượt TỪNG TỪ một (cả từ đã có người tìm lẫn từ chưa ai tìm), hết từ này mới tới từ kế, gói trong ~7 giây.
-  // Mở trang giữa chừng (fresh) thì tô luôn, không nổi lại.
-  const seen = renderHunt.seen, popAt = new Map();
-  const walk = (f, start, step) => { const [dr, dc] = HDIR[f.d]; for (let k = 0; k < f.w.length; k++) popAt.set(`${f.r + dr * k},${f.c + dc * k}`, start + k * step); };
-  for (const f of q.found) {
-    if (seen.has(f.w)) continue;
-    seen.add(f.w);
-    if (!fresh && !rev) walk(f, 0, 110);
-  }
-  if (rev && !seen.has('#rev')) {
-    seen.add('#rev');
-    if (!fresh) {
-      const GAP = 160, letters = q.hidden.reduce((n, f) => n + f.w.length, 0);
-      const step = Math.max(40, Math.min(110, (7000 - q.hidden.length * GAP) / letters));
-      let t = 0;
-      for (const f of q.hidden) { walk(f, t, step); t += f.w.length * step + GAP; }
+  const q = s.q, rev = s.phase === 'reveal', g = $('hgrid'), R = renderHunt, turn = `${s.game.no}.${s.game.qNo}`;
+  const m1 = q.pts, fire = !!s.fin;
+  $('howto').innerHTML = `${fire ? '🔥 <b>Về đích</b>' : `Lượt <b>${q.turn}</b>/${q.turns}`} · tìm từ theo hàng <b>ngang →</b> hoặc cột <b>dọc ↓</b> · gõ trước được <b>+${m1}</b>`;
+  const chipsOf = () => { // các từ mới tìm nhất vừa một hàng (ước lượng bề ngang theo số chữ)
+    const out = []; let room = 960;
+    for (let i = q.found.length - 1; i >= 0; i--) {
+      const f = q.found[i]; room -= f.w.length * 17 + [...(f.m || '')].length * 13 + (f.n > 1 ? 40 : 0) + 52;
+      if (room < 0) break;
+      out.push(`<span class="hchip f${i % 8}${R.seen?.has(f.w) ? '' : ' new'}"><b class="ko">${esc(f.w)}${f.n > 1 ? ` ×${f.n}` : ''}</b>${esc(f.m || '')}</span>`);
     }
+    return out.join('');
+  };
+  const setChips = (h) => { if ($('hchips').dataset.h !== h) { $('hchips').dataset.h = h; $('hchips').innerHTML = h; } };
+  if (rev && q.next) {
+    if (R.pwShown !== turn) setChips(`<span>${q.all ? '💥 Chưa ai tìm được từ nào: <b>đổi bảng mới!</b>' : `💥 <b>${q.found.length} từ</b> nổ, chữ rơi xuống${q.power ? '' : ' cho lượt mới'}`}</span>`);
+    if (R.dropKey === turn) return;
+    R.dropKey = turn;
+    clearTimeout(R.t4);
+    huntMana(q, q.power ? Math.max(R.shown || 0, q.power.need) : q.mana);
+    if (g.dataset.key !== q.grid.join('')) { huntBuild(q.grid, () => 'class="hc"'); q.found.forEach((f, i) => f.cells.forEach(([r, c]) => g.children[r * HN + c].classList.add('f' + (i % 8)))); }
+    return huntDrop(q);
   }
+  for (const k of ['t1', 't2', 't3', 't5']) clearTimeout(R[k]);
+  $('hwrap').classList.remove('drop');
+  const fresh = g.dataset.key !== q.grid.join('');
+  if (fresh) {
+    // bảng mới hiện ra (lượt đầu, đổi bảng, mở trang giữa chừng): cả bảng nổi lên theo làn sóng chéo từ góc trên trái (--i = hàng + cột).
+    // Đang đổi màn (Ninja lướt, các khối bay vào) thì chờ ~2,3 giây cho bảng vào chỗ rồi mới nổi.
+    const base = $('stage').classList.contains('fly') ? 2300 : 0;
+    huntBuild(q.grid, (r, c) => `class="hc intro" style="--i:${r + c};--base:${base}ms"`);
+    R.seen = new Set(q.found.map((f) => f.w)); // mở trang giữa lượt: từ đã tìm tô luôn, không nổi lại
+    $('hfx').innerHTML = '';
+  }
+  if (R.turn !== turn) { R.turn = turn; if (!fresh) R.seen = new Set(); }
+  const cls = new Map(), popAt = new Map(), rays = [];
+  q.found.forEach((f, i) => f.cells.forEach(([r, c]) => cls.set(r * HN + c, 'f' + (i % 8)))); // mỗi từ một màu (đè lên nếu trùng ô)
+  for (const [r, c] of q.hint || []) if (!cls.has(r * HN + c)) cls.set(r * HN + c, 'hh');
+  // Từ vừa được tìm ra: từng chữ nổi to rồi thu lại, đổi sang màu của từ; tên người tìm + điểm bay lên từ giữa từ (chỗ đầu tiên từ đó nằm).
+  for (const f of q.found) {
+    if (R.seen.has(f.w)) continue;
+    f.cells.forEach(([r, c], k) => popAt.set(r * HN + c, (k % f.w.length) * 70));
+    const head = f.cells.slice(0, f.w.length);
+    const x = Math.min(HN * HSTEP - 110, Math.max(110, ((head[0][1] + head[head.length - 1][1]) / 2) * HSTEP + HMID));
+    $('hfx').insertAdjacentHTML('beforeend', `<div class="hpop" style="left:${x}px;top:${Math.max(34, head[0][0] * HSTEP - 4)}px">${esc(f.by)}<b>+${f.pts}</b></div>`);
+    rays.push(...head.slice(0, 6));
+  }
+  // Tia sáng từ các chữ vừa tìm được thu về đầu thanh mana; tia tới nơi (~0,9 giây) thì thanh mới dài ra và loé sáng. Không có từ mới thì cập nhật ngay.
+  if (rays.length && $('hmana').firstChild) {
+    const hw = $('hwrap').getBoundingClientRect(), mt = $('hmana').querySelector('.mt').getBoundingClientRect(), k = hw.width / (HN * HSTEP - 3);
+    const max = q.manaLv[q.manaLv.length - 1], tx = (mt.left - hw.left + mt.width * Math.min(1, q.mana / max)) / k, ty = (mt.top + mt.height / 2 - hw.top) / k;
+    $('hfx').insertAdjacentHTML('beforeend', rays.slice(0, 14).map(([r, c], i) => {
+      const x = c * HSTEP + HMID, y = r * HSTEP + HMID, dx = tx - x, dy = ty - y;
+      return `<div class="hray" style="left:${x}px;top:${y}px;--a:${Math.atan2(dy, dx).toFixed(3)}rad"><i style="--dist:${Math.round(Math.hypot(dx, dy))}px;--d:${280 + i * 55}ms"></i></div>`;
+    }).join(''));
+    clearTimeout(R.t4);
+    R.rayUntil = Date.now() + 860;
+    R.t4 = setTimeout(() => {
+      if (state?.q?.mode !== 'hunt' || state.phase !== 'question') return;
+      huntMana(state.q, state.q.mana);
+      $('hmana').classList.add('gain'); setTimeout(() => $('hmana').classList.remove('gain'), 420);
+      beep(1320, .07, .05);
+    }, 860);
+  } else if (Date.now() >= (R.rayUntil || 0)) huntMana(q, q.mana); // tia đang bay thì chờ nó tới nơi
+  R.shown = q.mana;
+  [...$('hfx').querySelectorAll('.hpop')].slice(0, -8).forEach((n) => n.remove());
+  $('hfx').onanimationend = (e) => (e.target.closest('.hray') || e.target).remove();
   [...g.children].forEach((el, i) => {
-    const pos = `${Math.floor(i / W)},${i % W}`, cl = cls.get(pos) || '', k = popAt.get(pos);
+    const cl = cls.get(i) || '', k = popAt.get(i);
     if (k != null) {
       el.style.setProperty('--from', getComputedStyle(el).backgroundColor);
-      el.style.setProperty('--d', Math.round(k) + 'ms');
+      el.style.setProperty('--d', k + 'ms');
       el.classList.remove('pop');
       void el.offsetWidth;
       el.className = `hc ${cl} pop`;
       el.dataset.c = cl;
-    } else if (el.dataset.c !== cl && (el.dataset.c || cl)) {
-      el.classList.remove(...(el.dataset.c ? [el.dataset.c] : []));
+    } else if ((el.dataset.c || '') !== cl) {
+      if (el.dataset.c) el.classList.remove(el.dataset.c);
       if (cl) el.classList.add(cl);
       el.dataset.c = cl;
     }
   });
-  const idx = new Map(q.found.map((f, i) => [f.w, i]));
-  const chips = rev ? q.hidden.map((f) => `<span class="hchip ${idx.has(f.w) ? 'f' + (idx.get(f.w) % 8) : 'hx'} ko">${esc(f.w)}</span>`)
-    : q.found.slice(-6).map((f) => `<span class="hchip f${idx.get(f.w) % 8} ko">${esc(f.w)}</span>`);
-  $('hchips').className = 'hchips' + (rev ? ' rev' : '');
-  const ch = chips.join('') || (rev ? '' : '<span style="font-size:26px;color:var(--muted)">Chưa ai tìm thấy từ nào, thử đi nào!</span>');
-  if ($('hchips').innerHTML !== ch) $('hchips').innerHTML = ch;
-  $('sub').innerHTML = rev ? 'Các từ giấu trong ma trận 👇' : `<b>${q.total}</b> từ giấu · mọi hướng, cả chiều ngược`;
-  $('howto').innerHTML = rev ? `${q.finished} người tìm đủ ${q.need} từ` : `Tìm <b>${q.total} từ</b> giấu (cả ngược) · đủ <b>${q.need} từ</b> trước ăn điểm`;
+  setChips(chipsOf() || `<span>${q.hint ? '💡 Gợi ý: gõ từ đang <b>nhấp nháy</b> trên bảng!' : 'Chưa ai tìm thấy từ nào, thử đi nào!'}</span>`);
+  q.found.forEach((f) => R.seen.add(f.w));
+}
+// Hết lượt (thứ tự người dùng chốt 26/11/2026): (1) các ô của từ đã tìm nổ lần lượt từng từ (không ai tìm được gì: cả bảng nổ theo làn sóng chéo),
+// (2) chữ rơi xuống: dựng bảng kế, mỗi ô rơi từ chỗ cũ của nó (ô mới rơi từ trên mép bảng vào), cột trái rơi trước, (3) nếu đủ mana: chữ rơi XONG
+// mới dùng chiêu (q.power) lên bảng vừa rơi (q.mid): tên lửa 3×3, bom chữ thập kèm rung màn, hoặc bàn cờ với tia sét lan từ ô đen này sang ô đen kia,
+// (4) chữ rơi lần nữa thành q.next. Không chiêu: ~2,3 giây trong 4 giây công bố; có chiêu: ~6 giây trong 6,6 giây (server cộng HUNT_POWER_SEC).
+function huntBoom(cells, at) { // at: chỉ số ô → độ trễ nổ (ms); trả về độ trễ lớn nhất
+  let last = 0;
+  for (const [i, d] of at) {
+    const el = cells[i]; if (!el) continue;
+    last = Math.max(last, d);
+    el.style.setProperty('--d', d + 'ms');
+    el.classList.remove('pop', 'intro', 'hh', 'fall');
+    el.classList.add('boom');
+  }
+  return last;
+}
+function huntFall(next, isBoom) {
+  // quãng rơi của từng ô trên bảng mới: ô cũ rơi bằng số ô nổ bên dưới nó trong cột; ô mới (k ô trên cùng của cột) rơi từ ngoài mép trên
+  const g = $('hgrid'), R = renderHunt, dy = new Array(HN * HN).fill(0), nw = new Array(HN * HN).fill(false);
+  for (let c = 0; c < HN; c++) {
+    let below = 0;
+    for (let r = HN - 1; r >= 0; r--) { if (isBoom(r * HN + c)) below++; else dy[(r + below) * HN + c] = below; }
+    for (let r = 0; r < below; r++) { dy[r * HN + c] = below + 1; nw[r * HN + c] = true; }
+  }
+  $('hfx').innerHTML = '';
+  $('hwrap').classList.add('drop');
+  huntBuild(next, (r, c) => {
+    const i = r * HN + c, d = dy[i];
+    return d ? `class="hc fall${nw[i] ? ' nw' : ''}" style="--dy:${-d * HSTEP}px;--t:${Math.round(300 + d * 36)}ms;--d:${c * 14 + (HN - 1 - r) * 6}ms"` : 'class="hc"';
+  });
+  for (const el of g.children) el.dataset.c = '';
+  beep(520, .08, .06); setTimeout(() => beep(660, .1, .06), 260);
+  clearTimeout(R.t2);
+  R.t2 = setTimeout(() => $('hwrap').classList.remove('drop'), 1500);
+}
+const huntBurst = (cells, [r, c], big) => { const el = cells[r * HN + c]; if (el?.isConnected) { const p = stagePos(el); sparks(p.x, p.y, big ? 16 : 10, big); } };
+function huntDrop(q) {
+  const g = $('hgrid'), R = renderHunt, cells = [...g.children], all = q.all || !q.boom, boom = new Set(q.boom || []), pw = all ? null : q.power;
+  const at = new Map();
+  if (all) for (let i = 0; i < HN * HN; i++) at.set(i, (Math.floor(i / HN) + (i % HN)) * 17);
+  else {
+    let t = 0;
+    const step = Math.min(90, 520 / Math.max(1, q.found.length)); // nhiều từ thì nổ dồn dập hơn: cả loạt gói trong ~0,9 giây trước khi chữ rơi
+    for (const f of q.found) { f.cells.forEach(([r, c], k) => { if (!at.has(r * HN + c)) at.set(r * HN + c, t + (k % f.w.length) * 32); }); t += step; }
+    for (const i of boom) if (!at.has(i)) at.set(i, t);
+  }
+  const last = huntBoom(cells, at);
+  $('hfx').innerHTML = '';
+  beep(220, .18, .1, 'sawtooth'); setTimeout(() => beep(140, .25, .1, 'sawtooth'), 120);
+  // vài chùm pháo hoa ở giữa các từ nổ (tối đa 6 chùm để không dựng quá nhiều phần tử)
+  const centers = all ? [[3, 3], [3, 12], [8, 8], [12, 4], [12, 12]] : q.found.slice(0, 6).map((f) => f.cells[Math.floor(Math.min(f.cells.length, f.w.length) / 2)]);
+  centers.forEach((rc, k) => setTimeout(() => huntBurst(cells, rc, all), k * 90 + 120));
+  for (const k of ['t1', 't2', 't3', 't5']) clearTimeout(R[k]);
+  const T1 = Math.min(1000, last + 480);
+  R.t1 = setTimeout(() => huntFall(pw ? q.mid : q.next, (i) => all || boom.has(i)), T1);
+  if (pw) R.t3 = setTimeout(() => huntPowerFx(q), T1 + 1350); // chữ rơi xong (~1,3 giây) mới dùng chiêu
+}
+// Chiêu mana trên bảng q.mid (đã dựng xong trong #hgrid): tên lửa bay vào rồi nổ 3×3 · bom rơi, màn rung, hai vệt sáng ngang dọc · bàn cờ: ô đen tối lại,
+// tia sét lan từ một ô đen sang các ô đen kề chéo, sét tới đâu ô nổ tới đó. Xong thì chữ rơi lần nữa thành q.next.
+function huntPowerFx(q) {
+  const g = $('hgrid'), R = renderHunt, pw = q.power, cells = [...g.children], zone = new Set(pw.zone || pw.cells), at = new Map();
+  const xy = ([r, c]) => `left:${c * HSTEP + HMID}px;top:${r * HSTEP + HMID}px`;
+  R.pwShown = R.dropKey;
+  $('hchips').dataset.h = ''; $('hchips').innerHTML = `<span>${HPOWER[pw.kind][0]} Đủ <b>${pw.need} mana</b>: <b>${HPOWER[pw.kind][1]}</b></span>`;
+  $('hmana').classList.add('fire'); setTimeout(() => $('hmana').classList.remove('fire'), 1100);
+  huntMana(q, q.mana); // mana tiêu hết
+  $('hwrap').classList.remove('drop');
+  if (pw.kind === 'rocket') {
+    for (const i of zone) at.set(i, 520 + Math.min(...pw.at.map(([a, b]) => Math.abs(a - Math.floor(i / HN)) + Math.abs(b - (i % HN)))) * 45);
+    $('hfx').innerHTML = pw.at.map((rc, k) => `<div class="hrk" style="${xy(rc)};--d:${k * 110}ms">🚀</div>`).join('');
+    pw.at.forEach((rc, k) => setTimeout(() => { huntBurst(cells, rc, true); beep(180, .2, .14, 'sawtooth'); }, 520 + k * 110));
+  } else if (pw.kind === 'bomb') {
+    const [r, c] = pw.at[0], W = HN * HSTEP - 3;
+    for (const i of zone) at.set(i, 480 + Math.max(Math.abs(r - Math.floor(i / HN)), Math.abs(c - (i % HN))) * 28);
+    $('hfx').innerHTML = `<div class="hbm" style="${xy(pw.at[0])}">💣</div>` +
+      `<div class="hbeam" style="left:0;top:${(r - 1) * HSTEP}px;width:${W}px;height:${3 * HSTEP - 3}px;--d:480ms"></div>` +
+      `<div class="hbeam v" style="top:0;left:${(c - 1) * HSTEP}px;height:${W}px;width:${3 * HSTEP - 3}px;--d:480ms"></div>`;
+    // bom chạm bảng (~0,28 giây: lúc quả bom rơi tới chỗ): rung màn một nhịp; bom nổ (0,48 giây): rung mạnh hơn
+    const shake = (cl, ms) => { const st = $('stage'); st.classList.remove('hshake', 'hshake2'); void st.offsetWidth; st.classList.add(cl); setTimeout(() => st.classList.remove(cl), ms); };
+    setTimeout(() => { shake('hshake', 240); beep(90, .12, .14, 'square'); }, 270);
+    setTimeout(() => { shake('hshake2', 620); huntBurst(cells, pw.at[0], true); beep(110, .35, .16, 'sawtooth'); setTimeout(() => beep(80, .3, .14, 'sawtooth'), 150); }, 480);
+  } else {
+    // Bàn cờ: ô đen tối lại, rồi sét lan theo từng lớp từ một ô đen bất kỳ (loang BFS qua 4 ô kề chéo). Mỗi cạnh là một tia sét gãy khúc vẽ bằng SVG.
+    for (const i of zone) cells[i]?.classList.add('ck');
+    const list = [...zone], start = list[Math.floor(Math.random() * list.length)], depth = new Map([[start, 0]]), queue = [start], bolts = [], STEP = 62, T0 = 380;
+    const mid = (i) => [(i % HN) * HSTEP + HMID, Math.floor(i / HN) * HSTEP + HMID];
+    for (let h = 0; h < queue.length; h++) {
+      const i = queue[h], r = Math.floor(i / HN), c = i % HN;
+      for (const [dr, dc] of [[1, 1], [1, -1], [-1, 1], [-1, -1]]) {
+        const rr = r + dr, cc = c + dc, j = rr * HN + cc;
+        if (rr < 0 || cc < 0 || rr >= HN || cc >= HN || !zone.has(j) || depth.has(j)) continue;
+        depth.set(j, depth.get(i) + 1); queue.push(j);
+        const [x1, y1] = mid(i), [x2, y2] = mid(j), jit = () => (Math.random() - .5) * 26;
+        const p1 = [x1 + (x2 - x1) * .35 + jit(), y1 + (y2 - y1) * .35 + jit()], p2 = [x1 + (x2 - x1) * .7 + jit(), y1 + (y2 - y1) * .7 + jit()];
+        bolts.push(`<polyline points="${x1},${y1} ${p1.map(Math.round)} ${p2.map(Math.round)} ${x2},${y2}" style="--d:${T0 + depth.get(i) * STEP}ms"/>`);
+      }
+    }
+    for (const i of zone) at.set(i, T0 + (depth.get(i) ?? 0) * STEP + 70);
+    const W = HN * HSTEP - 3;
+    $('hfx').innerHTML = `<svg class="hbolt" viewBox="0 0 ${W} ${W}" width="${W}" height="${W}"><g class="glow">${bolts.join('')}</g><g class="core">${bolts.join('')}</g></svg>`;
+    const deep = Math.max(...depth.values());
+    for (let k = 0; k <= deep; k += 3) setTimeout(() => beep(900 + Math.random() * 700, .05, .06, 'square'), T0 + k * STEP); // tiếng sét lách tách
+    setTimeout(() => beep(160, .3, .14, 'sawtooth'), T0);
+    [[3, 4], [8, 9], [12, 3], [12, 12]].forEach((rc, k) => setTimeout(() => huntBurst(cells, rc, true), T0 + 300 + k * 160));
+  }
+  let late = Math.max(0, ...at.values());
+  for (const i of pw.cells) if (!at.has(i)) at.set(i, late); // ô nổ thêm ngoài vùng chiêu (hiếm): nổ cùng nhịp cuối
+  late = huntBoom(cells, at);
+  const hit = new Set(pw.cells);
+  R.t5 = setTimeout(() => huntFall(q.next, (i) => hit.has(i)), late + 480);
 }
 
 // Ván cuối Thế chữ "tăng tốc": lớp lửa phủ màn ~3,4 giây, Ninja đỏ lướt qua (img/ninja-dash-red.png = 12 khung của ninja-dash.gif tô đỏ).
@@ -2562,7 +2789,7 @@ const SEG_INTRO = {
   team: ['So găng hai đội bắt đầu!', 300, 'Gõ tên đội vào bình luận để chọn phe. Trả lời đúng và tặng quà để kéo điểm cho đội mình!'],
   type: ['Thử thách nghe và gõ chính tả!', 300, 'Nghe Ninja đọc, nhìn nghĩa rồi gõ từ tiếng Anh vào bình luận, có gợi ý chữ cái mở dần nhé!'],
   word: ['Đến giờ chơi Word, đua phi cơ nào!', 300, 'Mỗi bạn một phi cơ. Gõ A, B, C hoặc D, trả lời đúng thì phi cơ tăng tốc, ai nhanh nhất tăng nhiều nhất.', 250, 'Trả lời sai là hỏng động cơ đó nha. Câu cuối là chặng về đích!'],
-  hunt: ['Đến giờ săn từ!', 300, 'Trong ma trận có mười từ giấu, đọc xuôi hay đọc ngược đều được. Ai tìm đủ năm từ trước thì ăn điểm cao nhất!'],
+  hunt: ['Đến giờ săn từ!', 300, 'Màn hình có một bảng chữ cái lớn. Tìm từ tiếng Anh theo hàng ngang, đọc từ trái sang phải, hoặc theo cột dọc, đọc từ trên xuống, rồi gõ vào bình luận.', 250, 'Ai gõ trước thì được hai điểm cho từ đó.', 250, 'Hết ba mươi giây các từ đã tìm sẽ nổ, chữ rơi xuống thành bảng mới.', 250, 'Mỗi từ nạp một mana, đủ mười, hai mươi hoặc ba mươi mana là có tên lửa, bom, hoặc nổ nửa bảng. Lượt cuối là về đích, điểm nhân đôi!'],
   speedread: ['Đến giờ đọc nhanh!', 300, 'Mỗi bài có một văn bản ngắn và một câu hỏi. Tìm chi tiết trong bài rồi gõ A, B, C hoặc D. Ai đúng nhanh nhất được mười điểm!'],
   dictate: ['Đến giờ nghe chép!', 300, 'Nghe câu tiếng Anh rồi gõ lại cả câu vào bình luận. Cứ hai giây màn hình hiện thêm một chữ cái. Ai đúng nhanh nhất được nhiều điểm nhất!'],
   errhunt: ['Đến giờ săn lỗi!', 300, 'Mỗi câu có đúng một từ sai. Gõ từ sai, dấu gạch, rồi từ đúng. Ví dụ goning gạch going. Ai nhanh nhất được nhiều điểm nhất!'],
@@ -2593,7 +2820,7 @@ const LINES = {
     }
     if (s.q.mode === 'errhunt') return [...lead, kb('hoi_errhunt'), ...nhac(g, 'nhac_errhunt')];
     if (s.q.mode === 'cross') return s.q.stage === 'key' ? ['Vòng từ khoá! Gõ chữ hoa để đoán từ khoá hàng dọc nhé!'] : [`Hàng số ${s.q.clue.no}.`, 200, s.q.clue.vi, 250, `${s.q.clue.len} chữ cái.`];
-    if (s.q.mode === 'hunt') return [...lead, kb('hoi_hunt'), ...nhac(g, 'nhac_hunt')];
+    if (s.q.mode === 'hunt') return g.qNo === 1 ? [kb('cau_dau', { n: g.no }), 300, kb('nhac_hunt')] : g.qNo === g.total ? [] : [kb('hoi_hunt', { n: g.qNo }), ...(g.qNo % 3 === 0 ? [250, kb('nhac_hunt')] : [])]; // lượt cuối: câu mở chặng về đích đã đọc ở render()
     if (s.q.mode === 'chain') return s.q.chainLen > 1 ? [] : s.q.final ? [1600, kb('tang_toc')] : [`Ván ${s.q.match}!`, 200, kb('hoi_chain')];
     if (s.q.mode === 'startend') return [...lead, kb('hoi_startend'), ...nhac(g, 'nhac_startend')];
     if (s.q.mode === 'mcq') {
@@ -2654,7 +2881,7 @@ const LINES = {
       : s.q.result ? [s.q.result.by ? 'Đáp án là' : 'Hết giờ! Đáp án là', 150, { audio: `api/say?w=${encodeURIComponent(s.q.result.answer)}` }, ...(s.q.result.by ? [200, `${s.q.result.by} giải đúng đầu tiên!`] : [])]
       : s.q.key.word ? ['Từ khoá là', 150, { audio: `api/say?w=${encodeURIComponent(s.q.key.word)}` }] : [])
     : s.q.mode === 'chain' ? [s.q.stats.winner ? kb(s.q.stats.x2 ? 'chain_thang_x2' : 'chain_thang', { ten: spokenName(s.q.stats.winner.name) }) : kb('chain_hoa'), ...(s.q.stats.len > 2 ? [200, `Chuỗi ${s.q.stats.len} từ!`] : []), ...(s.q.stats.isNew ? [200, 'Kỷ lục mới luôn!'] : [])]
-    : s.q.mode === 'hunt' ? [kb('het_gio_hunt')]
+    : s.q.mode === 'hunt' ? (s.q.power && !s.q.all ? [1500, kb(`hunt_${s.q.power.kind}`)] : [kb(s.q.all ? 'hunt_doi_bang' : 'het_gio_hunt')]) // có chiêu: chờ từ nổ + chữ rơi rồi mới hô
     : s.q.mode === 'haitu' ? [...(s.q.bonus ? [kb('haitu_top', { ten: spokenName(s.q.bonus.name), n: s.q.bonus.n }), 250] : []), ...(s.q.tiles.some((t) => !t.by) ? [kb('het_gio_haitu')] : [])] // từng từ: haituTicker đọc khi thẻ tới giữa màn
     : s.q.mode === 'bricky' ? [kb('het_gio_bricky'), 150, { audio: s.q.say }, ...(s.q.top?.m ? [200, `nghĩa là ${s.q.top.m}.`] : [])]
     : s.q.mode === 'startend' ? [kb('het_gio_startend'), 200, ...(s.q.examples || []).slice(0, 3).flatMap((w) => [250, { audio: `api/say?w=${encodeURIComponent(w)}` }])]

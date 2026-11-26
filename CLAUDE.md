@@ -19,7 +19,13 @@ Live là phát công khai, nên mọi chữ trên màn và lời đọc theo lu�
   dù `thuong-hieu.md` ghi câu này bắt buộc trên tài liệu quảng bá có chữ TOEIC.
 - Khung Bricky (`bricky`) tính điểm cho **mọi từ có trong từ điển** (`dict.js`), không riêng kho Migii: người dùng chốt 19/11/2026
   ("chỉ cần là từ tiếng Anh có nghĩa, có trong từ điển"). Từ lên bảng ô (5–7 từ mỗi bảng; bảng cuối "Về đích" 6 chữ cái, 8 từ, thời gian ×1,5, điểm ×2) vẫn là từ Migii có nghĩa (`bank.json`, thiếu thì `word-300/400.json`); từ thêm hiện trên màn không kèm nghĩa.
-  Gặp từ thô hoặc chữ viết tắt lọt lên màn thì thêm vào `THO` / `BO` trong `build_bricky.js` rồi `npm run build:bricky`.
+  Gặp từ thô hoặc chữ viết tắt lọt lên màn thì thêm vào `THO` / `BO` trong `dict.js` (dùng chung với Săn từ) rồi `npm run build:bricky`.
+- Khung Săn từ (`hunt`) theo luật người dùng chốt 26/11/2026, thay hẳn bản ma trận 10×10: bảng 16×16 dựng lúc chơi (`san-tu.js`), từ chỉ tính
+  hàng ngang trái → phải và cột dọc trên → xuống, từ 3 chữ cái; ai gõ trước +2 cho mỗi chỗ từ đó nằm; lượt 30 giây, 10 giây chưa ai đúng thì một từ
+  nhấp nháy gợi ý; hết lượt từ đã tìm nổ, chữ rơi xuống (không ai đúng: nổ cả bảng); 15 lượt + lượt 16 về đích ×2. Thanh mana: mỗi từ +1, hết lượt
+  đủ 10 / 20 / 30 thì tiêu hết mana để bắn 2 tên lửa 3×3 (ưu tiên gần đáy) / bom chữ thập dày 3 ô / nổ ô đen bàn cờ (`HUNT_MANA`, `huntPower` trong `server.js`).
+  Chiêu chỉ đánh SAU khi từ đã tìm nổ và chữ rơi xuống xong; bom rung màn, bàn cờ có tia sét lan giữa các ô đen (người dùng chốt 26/11/2026). Nền mây trôi là nền của bản
+  video TikTok, chỉ dùng cho khung này. Đừng tự đổi các con số trên; "từ có nghĩa" là `dict.isPlayable` (sau mỗi lần rơi bảng còn ít nhất 8 từ Migii).
 - Khung Hái từ (`haitu`, lúc đầu tên Fruity): hình phải là **ảnh thật hoặc ảnh vẽ dễ nhận, không dùng emoji** (người dùng chốt 19/11/2026).
   Ảnh sinh bằng AI qua cổng llm.eup.ai (`build_hai_tu_anh.js`, 9 vật/lần gọi): báo người dùng số lần gọi × giá và chờ đồng ý trước khi chạy
   kèm `--dong-y` (luật chi phí của PM). Nếu dùng ảnh chụp thì chỉ phạm vi công cộng / CC0; nguồn từng ảnh ghi vào `data/hai-tu-anh.json`. Bộ từ soạn tay theo
