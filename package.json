@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "description": "Game livestream TikTok đố từ vựng TOEIC cho app Migii TOEIC (fork từ tiktok-live-quiz của Jaemy)",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
+    "start": "node server.js --sim",
     "demo": "node server.js --sim",
     "demo:bot": "node server.js --autostart --tag demo-bot",
     "demo:duoi450": "node server.js --sim --program-order word,emoji,irrfill,scramble,startend,flag,irrfind,bricky,haitu,listenmean,oneletter,hunt,chain --word-file data/word-300.json,data/word-400.json --seg-total word=20,emoji=20,flag=20,irrfill=16,scramble=20,irrfind=16,bricky=8,haitu=6,listenmean=16,oneletter=20",

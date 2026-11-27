@@ -8,7 +8,38 @@ và vinh danh người chơi. Không cần người dẫn; có màn điều khi�
 > (pháp lý nội dung, tài khoản TikTok, link tải app, người chơi ảo…).
 
 Repo này là bản fork của [tiktok-live-quiz](https://github.com/eup-repo/tiktok-live-quiz) (bản cho app Jaemy, tiếng Hàn).
-Remote `upstream` trỏ về repo gốc. Repo này **chưa có remote riêng**: tạo repo trên GitHub rồi `git remote add origin …`.
+
+## Chạy ngay sau khi clone
+
+Cần **Node 18 trở lên** và một trình duyệt (Chrome). Chạy thử không cần tài khoản TikTok, không cần file `.env`.
+
+```bash
+git clone https://github.com/Thaidepzai0202/migii-toeic-tiktok-live.git
+cd migii-toeic-tiktok-live
+npm install
+npm start                     # = npm run demo: khán giả ảo tự bình luận
+```
+
+Mở `http://localhost:8788/` (màn live, khổ dọc) và `http://localhost:8788/control` (màn điều khiển), bấm **▶ Bắt đầu**.
+
+| Muốn xem | Lệnh | Mở |
+|---|---|---|
+| Một kênh theo mốc điểm | `npm run demo:duoi450` · `demo:450-650` · `demo:650-800` · `demo:tren800` | `localhost:8788` |
+| Mọi game cùng lúc, mỗi game một link | `npm run demo:all` | `localhost:8789` |
+| Demo gia sư tự động | `npm run demo:gia-su` | `localhost:8795` |
+
+Kho từ, bộ câu, ảnh Hái từ, cờ, nhạc và hiệu ứng đều có sẵn trong repo, không phải build gì thêm. Những thứ **không nằm trong repo**
+và cách game xử lý khi thiếu:
+
+| Thiếu | Game chạy thế nào | Muốn có thì |
+|---|---|---|
+| `.env` | Chạy thử bình thường; chỉ **lên live thật** mới cần | `cp .env.example .env` rồi điền theo [CAN-CUNG-CAP.md](CAN-CUNG-CAP.md) |
+| Phát âm tiếng Anh (`data/en-audio/`) | Tự tải từng từ lúc chơi (cần mạng); lỗi thì dùng giọng của trình duyệt | `npm run build:audio` (chạy một lần) |
+| Giọng đọc tiếng Việt VieNeu | Dùng giọng tiếng Việt của trình duyệt | cài theo mục 8 trong CAN-CUNG-CAP.md, điền `VIENEU_PY` |
+| Font SVN-Avo (chỉ video gia sư dùng) | Video dùng font thay thế | chép `SVN-Avo.ttf`, `SVN-Avo-Bold.ttf` vào `public/fonts/` |
+| Ảnh gốc Hái từ (`data/hai-tu-goc/`) | Không ảnh hưởng: ảnh đã cắt nằm ở `public/img/hai-tu/` | chỉ cần khi cắt lại ảnh |
+
+Lên live thật (`./go_live.sh`) viết cho **macOS** và cần TikTok LIVE Studio: xem mục [Lên live](#lên-live).
 
 ## Nội dung câu hỏi
 
@@ -138,12 +169,12 @@ Tặng quà: +điểm (tối đa 50) và x2 điểm cho 3 câu tiếp. Bảng v�
 
 ## Cài đặt và chạy thử
 
-Cần: macOS, Node 18+, Google Chrome, các lệnh `curl`, `unzip`, `sqlite3` (macOS có sẵn). Tuỳ chọn: OBS.
+Cần: Node 18+, Google Chrome. Để lên live và build lại kho từ: macOS với các lệnh `curl`, `unzip`, `sqlite3` (có sẵn). Tuỳ chọn: OBS.
 
 ```bash
 npm install
-cp .env.example .env          # điền theo CAN-CUNG-CAP.md
-npm run demo                  # = node server.js --sim: khán giả ảo, không cần TikTok
+npm run demo                  # = node server.js --sim: khán giả ảo, không cần TikTok, không cần .env
+cp .env.example .env          # chỉ khi lên live thật: điền theo CAN-CUNG-CAP.md
 ```
 
 Mở `http://localhost:8788/` (màn live) và `http://localhost:8788/control` (màn điều khiển). Cổng mặc định **8788**
@@ -249,6 +280,7 @@ Báo cáo chạy thẳng trên file `jsonl` mỗi lần mở trang, mặc địn
 ## Kéo bản sửa lỗi từ repo Jaemy
 
 ```bash
+git remote add upstream https://github.com/eup-repo/tiktok-live-quiz   # một lần, sau khi clone (repo gốc là private, cần quyền)
 git fetch upstream
 git merge upstream/main     # xung đột hay gặp ở public/index.html và server.js (chữ, màu, kho từ)
 ```
