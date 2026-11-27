@@ -1,0 +1,377 @@
+{
+ "id": "tv-khach-san",
+ "ten": "Từ vựng khách sạn",
+ "nhom": "Từ vựng · Khách sạn",
+ "so": 92,
+ "chuong": {
+  "so": 11,
+  "ten": "Khách sạn và du lịch",
+  "bai": 1,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "reservation",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|sự đặt chỗ]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "I have a [[e0a|reservation]] for two nights.",
+     "vi": "Tôi đã đặt phòng hai đêm."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "You can make a [[f0a|reservation]] on our website.",
+     "vi": "Bạn có thể đặt phòng trên trang web của chúng tôi."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[reservation]. Sự đặt chỗ.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[I have a reservation for two nights.] Tôi đã đặt phòng hai đêm.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[You can make a reservation on our website.] Bạn có thể đặt phòng trên trang web của chúng tôi.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "check in",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m1a|làm thủ tục nhận phòng]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "Guests can [[e1a|check in]] after 2 p.m.",
+     "vi": "Khách có thể nhận phòng sau 2 giờ chiều."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "Please show your passport when you [[f1a|check in]].",
+     "vi": "Vui lòng xuất trình hộ chiếu khi nhận phòng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[check in]. Làm thủ tục nhận phòng.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[Guests can check in after 2 p.m.] Khách có thể nhận phòng sau hai giờ chiều.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Please show your passport when you check in.] Vui lòng xuất trình hộ chiếu khi nhận phòng.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Chúng tôi nhận phòng lúc hai giờ.",
+     "tu": "check in",
+     "so_tu": 5,
+     "en": "We [[d0a|check in]] at two.",
+     "dap": [
+      "We check in at two.",
+      "We check in at two o'clock.",
+      "We will check in at two.",
+      "We checked in at two."
+     ],
+     "nhan": [
+      "check in"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Chúng tôi nhận phòng lúc hai giờ.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[We check in at two.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "amenities",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|tiện nghi]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "The hotel [[e2a|amenities]] include a pool and a gym.",
+     "vi": "Tiện nghi khách sạn gồm hồ bơi và phòng tập."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "All rooms have basic [[f2a|amenities]] such as a fridge and a kettle.",
+     "vi": "Mọi phòng đều có tiện nghi cơ bản như tủ lạnh và ấm đun nước."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[amenities]. Tiện nghi.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[The hotel amenities include a pool and a gym.] Tiện nghi khách sạn gồm hồ bơi và phòng tập.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[All rooms have basic amenities such as a fridge and a kettle.] Mọi phòng đều có tiện nghi cơ bản như tủ lạnh và ấm đun nước.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "vacancy",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|phòng trống]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "Sorry, we have no [[e3a|vacancy]] tonight.",
+     "vi": "Xin lỗi, tối nay chúng tôi không còn phòng trống."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The hotel has a few [[f3a|vacancies]] next week.",
+     "vi": "Tuần sau khách sạn còn vài phòng trống."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[vacancy]. Phòng trống.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[Sorry, we have no vacancy tonight.] Xin lỗi, tối nay chúng tôi không còn phòng trống.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The hotel has a few vacancies next week.] Tuần sau khách sạn còn vài phòng trống.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Khách sạn không còn phòng trống.",
+     "tu": "vacancy",
+     "so_tu": 5,
+     "en": "The hotel has no [[d1a|vacancies]].",
+     "dap": [
+      "The hotel has no vacancies.",
+      "The hotel has no vacancy.",
+      "There are no vacancies at the hotel."
+     ],
+     "nhan": [
+      "vacancies"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Khách sạn không còn phòng trống.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[The hotel has no vacancies.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "You can ___ at the front desk from 2 p.m.",
+     "lua_chon": [
+      "check in",
+      "reservation",
+      "vacancy",
+      "amenities"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Sau can cần động từ: check in, nhận phòng.",
+      "Đáp án là check in: sau can cần động từ: check in, nhận phòng.",
+      "Đáp án là check in: sau can cần động từ: check in, nhận phòng.",
+      "Đáp án là check in: sau can cần động từ: check in, nhận phòng."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau [can] cần động từ: [check in], nhận phòng."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: sau [can] cần động từ: [check in], nhận phòng. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: sau [can] cần động từ: [check in], nhận phòng. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: sau [can] cần động từ: [check in], nhận phòng. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[You can check in at the front desk from 2 p.m.]"
+     },
+     "giai": {
+      "noi": "Vì sau [can] cần động từ: [check in], nhận phòng."
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,385 @@
+{
+ "id": "tv-san-xuat",
+ "ten": "Từ vựng sản xuất",
+ "nhom": "Từ vựng · Sản xuất",
+ "so": 67,
+ "chuong": {
+  "so": 8,
+  "ten": "Sản xuất và giao hàng",
+  "bai": 1,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "manufacture",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m0a|sản xuất]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "The factory [[e0a|manufactures]] car parts.",
+     "vi": "Nhà máy sản xuất phụ tùng ô tô."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "These shoes are [[f0a|manufactured]] in Vietnam.",
+     "vi": "Những đôi giày này được sản xuất ở Việt Nam."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Chương tám: Sản xuất và giao hàng. Chương này có tám bài. Bài này mình học bốn từ về sản xuất.",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[manufacture]. Nghĩa là sản xuất.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[The factory manufactures car parts.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[These shoes are manufactured in Vietnam.]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "equipment",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|thiết bị]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "All [[e1a|equipment]] must be checked daily.",
+     "vi": "Mọi thiết bị phải được kiểm tra hằng ngày."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "The factory bought new [[f1a|equipment]] last year.",
+     "vi": "Năm ngoái nhà máy đã mua thiết bị mới."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[equipment]. Nghĩa là thiết bị.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[All equipment must be checked daily.]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The factory bought new equipment last year.]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Thiết bị này rất đắt.",
+     "tu": "equipment",
+     "so_tu": 5,
+     "en": "This [[d0a|equipment]] is very expensive.",
+     "dap": [
+      "This equipment is very expensive.",
+      "The equipment is very expensive."
+     ],
+     "nhan": [
+      "equipment"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Thiết bị này rất đắt. Nhớ dùng từ [equipment].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [This equipment is very expensive.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "assemble",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m2a|lắp ráp]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "Workers [[e2a|assemble]] the phones by hand.",
+     "vi": "Công nhân lắp ráp điện thoại bằng tay."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The chairs are easy to [[f2a|assemble]].",
+     "vi": "Những chiếc ghế này dễ lắp ráp."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[assemble]. Nghĩa là lắp ráp.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[Workers assemble the phones by hand.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The chairs are easy to assemble.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "factory",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|nhà máy]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "The new [[e3a|factory]] will open in Binh Duong.",
+     "vi": "Nhà máy mới sẽ mở ở Bình Dương."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The [[f3a|factory]] runs 24 hours a day.",
+     "vi": "Nhà máy chạy 24 giờ mỗi ngày."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[factory]. Nghĩa là nhà máy.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[The new factory will open in Binh Duong.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The factory runs 24 hours a day.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Nhà máy ở gần sông.",
+     "tu": "factory",
+     "so_tu": 6,
+     "en": "The [[d1a|factory]] is near the river.",
+     "dap": [
+      "The factory is near the river.",
+      "The factory is close to the river."
+     ],
+     "nhan": [
+      "factory"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Nhà máy ở gần sông. Nhớ dùng từ [factory].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [The factory is near the river.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The furniture arrives in pieces, so you have to ___ it yourself.",
+     "lua_chon": [
+      "manufacture",
+      "equipment",
+      "factory",
+      "assemble"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là assemble: đồ đến dạng rời thì phải assemble, lắp ráp.",
+      "Đáp án là assemble: đồ đến dạng rời thì phải assemble, lắp ráp.",
+      "Đáp án là assemble: đồ đến dạng rời thì phải assemble, lắp ráp.",
+      "Đồ đến dạng rời thì phải assemble, lắp ráp."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Đồ đến dạng rời thì phải [assemble], lắp ráp."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: đồ đến dạng rời thì phải [assemble], lắp ráp. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: đồ đến dạng rời thì phải [assemble], lắp ráp. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: đồ đến dạng rời thì phải [assemble], lắp ráp. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [assemble], vì đồ đến dạng rời thì phải [assemble], lắp ráp."
+     },
+     "giai": {
+      "noi": "Vì đồ đến dạng rời thì phải [assemble], lắp ráp."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,105 @@
+{
+  "id": "dong-tu-bat-quy-tac",
+  "ten": "5 động từ bất quy tắc hay gặp",
+  "nhom": "Từ vựng · Động từ bất quy tắc",
+  "phan": [
+    {
+      "id": "q1",
+      "nhan": "Là gì",
+      "tieu_de": "Không thêm -ed như động từ thường",
+      "khoi": [
+        { "id": "e1", "kieu": "doan", "chu": "Động từ thường chỉ cần [[e1a|thêm -ed]]: work → worked. Động từ bất quy tắc thì [[e1b|đổi hẳn hình dạng]], phải học thuộc." },
+        { "id": "e2", "kieu": "doan", "chu": "Mỗi động từ có [[e2a|3 dạng]]: dạng 1 nguyên mẫu · dạng 2 quá khứ · dạng 3 phân từ." }
+      ],
+      "giang": [
+        { "noi": "Chào bạn! Bài này mình học năm động từ bất quy tắc hay gặp trong đề thi.", "lam": [{ "tro": "q1" }] },
+        { "noi": "Động từ thường chỉ cần thêm đuôi, ví dụ [work] thành [worked].", "lam": [{ "to": "e1a" }] },
+        { "noi": "Còn động từ bất quy tắc thì đổi hẳn hình dạng, nên phải học thuộc.", "lam": [{ "to": "e1b" }] },
+        { "noi": "Mỗi động từ có ba dạng: nguyên mẫu, quá khứ, và phân từ.", "lam": [{ "to": "e2a" }] }
+      ]
+    },
+    {
+      "id": "q2",
+      "nhan": "Nhóm 1",
+      "tieu_de": "Quá khứ và phân từ giống nhau",
+      "khoi": [
+        { "id": "b1", "kieu": "bang", "cot": ["Dạng 1", "Dạng 2", "Dạng 3", "Nghĩa"], "dong": [
+          { "id": "r1", "o": ["send", "sent", "sent", "gửi"] },
+          { "id": "r2", "o": ["buy", "bought", "bought", "mua"] }
+        ] },
+        { "id": "v5", "kieu": "vi_du", "en": "The invoice was [[v5a|sent]] yesterday.", "vi": "Hoá đơn đã được gửi hôm qua." }
+      ],
+      "giang": [
+        { "noi": "Nhóm đầu tiên dễ nhớ nhất: dạng hai và dạng ba giống hệt nhau.", "lam": [{ "tro": "b1" }] },
+        { "noi": "[send], [sent], [sent]. Nghĩa là gửi.", "lam": [{ "to": "r1" }] },
+        { "noi": "[buy], [bought], [bought]. Nghĩa là mua.", "lam": [{ "to": "r2" }] },
+        { "noi": "Trong câu bị động, bạn sẽ gặp dạng ba: [The invoice was sent yesterday.]", "lam": [{ "khoanh": "v5a" }] }
+      ]
+    },
+    {
+      "id": "q3",
+      "nhan": "Nhóm 2",
+      "tieu_de": "Phân từ khác quá khứ",
+      "khoi": [
+        { "id": "b2", "kieu": "bang", "cot": ["Dạng 1", "Dạng 2", "Dạng 3", "Nghĩa"], "dong": [
+          { "id": "r3", "o": ["take", "took", "taken", "lấy, mang"] },
+          { "id": "r4", "o": ["choose", "chose", "chosen", "chọn"] },
+          { "id": "r5", "o": ["begin", "began", "begun", "bắt đầu"] }
+        ] },
+        { "id": "g2", "kieu": "ghi_nho", "chu": "Sau **have / has / had** và trong câu **bị động** (be + …) luôn dùng **dạng 3**." },
+        { "id": "bt4", "kieu": "bai_tap", "cau": "She has ___ a new supplier.", "lua_chon": ["chose", "chosen"], "dap_an": 1, "giai_thich": ["chose là dạng 2, sau has cần dạng 3.", "Sau has dùng dạng 3."] }
+      ],
+      "giang": [
+        { "noi": "Nhóm hai thì dạng ba khác dạng hai.", "lam": [{ "tro": "b2" }] },
+        { "noi": "[take], [took], [taken].", "lam": [{ "to": "r3" }, { "khoanh": "r3-2", "sau": 1500 }] },
+        { "noi": "[choose], [chose], [chosen].", "lam": [{ "to": "r4" }, { "khoanh": "r4-2", "sau": 1500 }] },
+        { "noi": "[begin], [began], [begun]. Chữ a đổi thành chữ u.", "lam": [{ "to": "r5" }, { "khoanh": "r5-2", "sau": 1500 }] },
+        { "noi": "Mẹo nhớ: sau [have], [has], [had], hoặc trong câu bị động, luôn dùng dạng ba.", "lam": [{ "to": "g2" }] },
+        {
+          "bai_tap": "bt4",
+          "noi": "Thử nhanh một câu nhé.",
+          "lam": [{ "tro": "bt4" }],
+          "dung": { "noi": "Đúng! Sau [has] dùng dạng ba: [chosen]." },
+          "sai": { "0": { "noi": "[chose] là dạng hai. Sau [has] cần dạng ba nhé. Bạn chọn lại." } },
+          "bo_qua": { "noi": "Đáp án là [chosen], vì sau [has] dùng dạng ba." }
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "nhan": "Luyện tập",
+      "tieu_de": "Hai câu giống đề thi",
+      "khoi": [
+        { "id": "bt5", "kieu": "bai_tap", "cau": "The new marketing campaign ___ last Monday.", "lua_chon": ["begin", "began", "begun", "beginning"], "dap_an": 1, "giai_thich": ["begin là hiện tại, câu có last Monday là quá khứ.", "last Monday là quá khứ nên dùng began.", "begun là dạng 3, phải có has/had đi trước.", "beginning không tự làm động từ chính được."] },
+        { "id": "bt6", "kieu": "bai_tap", "cau": "All orders must be ___ before noon.", "lua_chon": ["sent", "send", "sending", "sends"], "dap_an": 0, "giai_thich": ["must be + dạng 3: câu bị động.", "Sau be trong câu bị động phải dùng dạng 3.", "must be sending không hợp nghĩa: đơn hàng không tự gửi.", "Sau must be không dùng động từ chia ngôi."] }
+      ],
+      "giang": [
+        {
+          "bai_tap": "bt5",
+          "noi": "Giờ làm hai câu giống đề thật nhé.",
+          "lam": [{ "tro": "bt5" }],
+          "dung": { "noi": "Chuẩn! [last Monday] là quá khứ, nên dùng [began]." },
+          "sai": {
+            "0": { "noi": "[begin] là hiện tại, mà câu có [last Monday] là quá khứ. Bạn chọn lại nhé." },
+            "2": { "noi": "[begun] là dạng ba, phải có [has] hoặc [had] đi trước. Bạn chọn lại nhé." },
+            "3": { "noi": "[beginning] không tự làm động từ chính được. Bạn chọn lại nhé." }
+          },
+          "bo_qua": { "noi": "Đáp án là [began], vì [last Monday] là quá khứ." }
+        },
+        {
+          "bai_tap": "bt6",
+          "noi": "Câu cuối cùng.",
+          "lam": [{ "tro": "bt6" }],
+          "dung": { "noi": "Đúng rồi! [must be sent] là câu bị động, dùng dạng ba." },
+          "sai": {
+            "1": { "noi": "Sau [be] trong câu bị động phải dùng dạng ba. Bạn chọn lại nhé." },
+            "2": { "noi": "Đơn hàng không tự gửi đi được, nên câu này là bị động, cần dạng ba. Bạn chọn lại nhé." },
+            "3": { "noi": "Sau [must be] không dùng động từ chia ngôi. Bạn chọn lại nhé." }
+          },
+          "bo_qua": { "noi": "Đáp án là [sent]: [must be sent], câu bị động dùng dạng ba." }
+        },
+        { "noi": "Xong rồi! Năm động từ hôm nay là [send], [buy], [take], [choose], và [begin]. Hẹn gặp bạn ở bài sau nhé!" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+{
+ "id": "tv-tuyen-dung",
+ "ten": "Từ vựng tuyển dụng",
+ "nhom": "Từ vựng · Tuyển dụng",
+ "so": 20,
+ "chuong": {
+  "so": 3,
+  "ten": "Nhân sự",
+  "bai": 1,
+  "tong": 11
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "applicant",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|người ứng tuyển]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "Each [[e0a|applicant]] must send a cover letter.",
+     "vi": "Mỗi người ứng tuyển phải gửi thư xin việc."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "Over 200 [[f0a|applicants]] applied for the job.",
+     "vi": "Hơn 200 người đã ứng tuyển vị trí này."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Chương ba: Nhân sự. Chương này có mười một bài. Bài này mình học bốn từ về tuyển dụng.",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[applicant]. Nghĩa là người ứng tuyển.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Each applicant must send a cover letter.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Over 200 applicants applied for the job.]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "qualification",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|bằng cấp, trình độ]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "She has the right [[e1a|qualifications]] for the job.",
+     "vi": "Cô ấy có bằng cấp phù hợp với công việc."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "A degree in accounting is the main [[f1a|qualification]].",
+     "vi": "Bằng kế toán là yêu cầu chính về trình độ."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[qualification]. Nghĩa là bằng cấp, trình độ.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[She has the right qualifications for the job.]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[A degree in accounting is the main qualification.]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Anh ấy có bằng cấp tốt.",
+     "tu": "qualification",
+     "so_tu": 4,
+     "en": "He has good [[d0a|qualifications]].",
+     "dap": [
+      "He has good qualifications.",
+      "He has a good qualification."
+     ],
+     "nhan": [
+      "qualifications"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Anh ấy có bằng cấp tốt. Nhớ dùng từ [qualification].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [He has good qualifications.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "hire",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m2a|tuyển, thuê]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "We plan to [[e2a|hire]] five new engineers.",
+     "vi": "Chúng tôi dự định tuyển năm kỹ sư mới."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "We [[f2a|hired]] two new designers last month.",
+     "vi": "Tháng trước chúng tôi tuyển hai nhà thiết kế mới."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[hire]. Nghĩa là tuyển, thuê.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[We plan to hire five new engineers.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[We hired two new designers last month.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "position",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|vị trí công việc]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "The [[e3a|position]] requires two years of experience.",
+     "vi": "Vị trí này yêu cầu hai năm kinh nghiệm."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "She applied for the [[f3a|position]] of sales manager.",
+     "vi": "Cô ấy ứng tuyển vị trí quản lý bán hàng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[position]. Nghĩa là vị trí công việc.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[The position requires two years of experience.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[She applied for the position of sales manager.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Vị trí này vẫn còn trống.",
+     "tu": "position",
+     "so_tu": 5,
+     "en": "This [[d1a|position]] is still open.",
+     "dap": [
+      "This position is still open.",
+      "This position is still available.",
+      "This position is still vacant."
+     ],
+     "nhan": [
+      "position"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Vị trí này vẫn còn trống. Nhớ dùng từ [position].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [This position is still open.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The company will ___ ten new sales staff this month.",
+     "lua_chon": [
+      "applicant",
+      "qualification",
+      "hire",
+      "position"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là hire: sau will cần động từ, hire là tuyển.",
+      "Đáp án là hire: sau will cần động từ, hire là tuyển.",
+      "Sau will cần động từ, hire là tuyển.",
+      "Đáp án là hire: sau will cần động từ, hire là tuyển."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau [will] cần động từ, [hire] là tuyển."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: sau [will] cần động từ, [hire] là tuyển. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: sau [will] cần động từ, [hire] là tuyển. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: sau [will] cần động từ, [hire] là tuyển. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [hire], vì sau [will] cần động từ, [hire] là tuyển."
+     },
+     "giai": {
+      "noi": "Vì sau [will] cần động từ, [hire] là tuyển."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

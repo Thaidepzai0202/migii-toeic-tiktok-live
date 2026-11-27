@@ -1,0 +1,384 @@
+{
+ "id": "tv-make",
+ "ten": "Cụm từ đi với make",
+ "nhom": "Từ vựng · Cụm từ cố định",
+ "so": 32,
+ "chuong": {
+  "so": 4,
+  "ten": "Tài chính",
+  "bai": 2,
+  "tong": 10
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "make a decision",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m0a|đưa ra quyết định]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "We must [[e0a|make a decision]] today.",
+     "vi": "Chúng ta phải quyết định trong hôm nay."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "The board will [[f0a|make a decision]] on the budget next week.",
+     "vi": "Tuần sau hội đồng sẽ quyết định về ngân sách."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Tiếp chủ đề tài chính. Bài này mình học bốn từ về cụm từ đi với [make].",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[make a decision]. Nghĩa là đưa ra quyết định.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[We must make a decision today.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The board will make a decision on the budget next week.]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "make an effort",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m1a|nỗ lực, cố gắng]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "Please [[e1a|make an effort]] to arrive on time.",
+     "vi": "Vui lòng cố gắng đến đúng giờ."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "We must [[f1a|make an effort]] to cut costs.",
+     "vi": "Chúng ta phải cố gắng cắt giảm chi phí."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[make an effort]. Nghĩa là nỗ lực, cố gắng.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please make an effort to arrive on time.]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[We must make an effort to cut costs.]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Tôi sẽ cố gắng.",
+     "tu": "make an effort",
+     "so_tu": 5,
+     "en": "I will [[d0a|make an effort]].",
+     "dap": [
+      "I will make an effort."
+     ],
+     "nhan": [
+      "make an effort"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Tôi sẽ cố gắng. Nhớ dùng từ [make an effort].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [I will make an effort.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "make a profit",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m2a|có lãi]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "The store [[e2a|made a profit]] in its first year.",
+     "vi": "Cửa hàng có lãi ngay năm đầu."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The new branch has not [[f2a|made a profit]] yet.",
+     "vi": "Chi nhánh mới chưa có lãi."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[make a profit]. Nghĩa là có lãi.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[The store made a profit in its first year.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The new branch has not made a profit yet.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "make a call",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m3a|gọi điện]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "I need to [[e3a|make a call]] before the meeting.",
+     "vi": "Tôi cần gọi một cuộc điện thoại trước cuộc họp."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "Let me [[f3a|make a call]] to the bank.",
+     "vi": "Để tôi gọi cho ngân hàng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[make a call]. Nghĩa là gọi điện.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[I need to make a call before the meeting.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Let me make a call to the bank.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Tôi cần gọi một cuộc điện thoại.",
+     "tu": "make a call",
+     "so_tu": 6,
+     "en": "I need to [[d1a|make a call]].",
+     "dap": [
+      "I need to make a call.",
+      "I need to make a phone call."
+     ],
+     "nhan": [
+      "make a call"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Tôi cần gọi một cuộc điện thoại. Nhớ dùng từ [make a call].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [I need to make a call.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The company sold more than it spent, so it made a ___.",
+     "lua_chon": [
+      "profit",
+      "call",
+      "effort",
+      "decision"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Thu nhiều hơn chi là make a profit, có lãi.",
+      "Đáp án là profit: thu nhiều hơn chi là make a profit, có lãi.",
+      "Đáp án là profit: thu nhiều hơn chi là make a profit, có lãi.",
+      "Đáp án là profit: thu nhiều hơn chi là make a profit, có lãi."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Thu nhiều hơn chi là [make a profit], có lãi."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: thu nhiều hơn chi là [make a profit], có lãi. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: thu nhiều hơn chi là [make a profit], có lãi. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: thu nhiều hơn chi là [make a profit], có lãi. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [profit], vì thu nhiều hơn chi là [make a profit], có lãi."
+     },
+     "giai": {
+      "noi": "Vì thu nhiều hơn chi là [make a profit], có lãi."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

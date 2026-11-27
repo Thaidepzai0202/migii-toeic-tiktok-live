@@ -1,0 +1,318 @@
+{
+ "id": "np-a-an-the",
+ "ten": "Mạo từ a, an, the",
+ "nhom": "Ngữ pháp · Lượng từ và đại từ",
+ "so": 98,
+ "chuong": {
+  "so": 11,
+  "ten": "Khách sạn và du lịch",
+  "bai": 7,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Mạo từ a, an, the",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|a]] và [[y0b|an]] dùng cho thứ [[y0c|nhắc lần đầu, chưa xác định]]."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "[[y1a|the]] dùng cho thứ [[y1b|đã xác định]], hai bên cùng biết."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "a + âm phụ âm · an + âm nguyên âm"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học Mạo từ [a], [an], [the].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[a] và [an] dùng cho thứ nhắc lần đầu, chưa xác định.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b"
+      },
+      {
+       "to": "y0c",
+       "sau": 1500
+      }
+     ]
+    },
+    {
+     "noi": "[the] dùng cho thứ đã xác định, hai bên cùng biết.",
+     "lam": [
+      {
+       "to": "y1a"
+      },
+      {
+       "to": "y1b",
+       "sau": 1140
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [a] trước âm phụ âm, [an] trước âm nguyên âm, như [an hour].",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "I need [[v0a|an]] umbrella.",
+     "vi": "Tôi cần một cái ô."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "Please close [[v1a|the]] door.",
+     "vi": "Vui lòng đóng cửa lại."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [I need an umbrella.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "[umbrella] bắt đầu bằng âm nguyên âm, dùng [an].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [Please close the door.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Cái cửa mà cả hai đều biết, dùng [the].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Khách sạn và du lịch",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "We stayed in [[c0a|a]] small hotel near the beach.",
+     "vi": "Chúng tôi ở một khách sạn nhỏ gần bãi biển."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "[[c1a|The]] hotel had [[c1b|an]] excellent restaurant.",
+     "vi": "Khách sạn đó có một nhà hàng rất ngon."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề khách sạn và du lịch: [We stayed in a small hotel near the beach.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Nhắc tới lần đầu, chưa xác định, dùng [a].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [The hotel had an excellent restaurant.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Khách sạn đã nhắc rồi nên dùng [the]; [excellent] bắt đầu bằng nguyên âm nên dùng [an].",
+     "lam": [
+      {
+       "gach": "c1a"
+      },
+      {
+       "gach": "c1b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "nhan": "Mẹo nhớ",
+   "tieu_de": "Ghi nhớ nhanh",
+   "khoi": [
+    {
+     "id": "meo",
+     "kieu": "ghi_nho",
+     "chu": "Xét âm đọc, không xét chữ cái: an hour, an MBA, a university."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Nhớ xét âm đọc: [an hour], [an MBA], nhưng [a university].",
+     "lam": [
+      {
+       "to": "meo"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The interview will take about ___ hour.",
+     "lua_chon": [
+      "much",
+      "many",
+      "an",
+      "a"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là an: hour đọc bắt đầu bằng âm nguyên âm, dùng an.",
+      "Đáp án là an: hour đọc bắt đầu bằng âm nguyên âm, dùng an.",
+      "Hour đọc bắt đầu bằng âm nguyên âm, dùng an.",
+      "Đáp án là an: hour đọc bắt đầu bằng âm nguyên âm, dùng an."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "Ms. Lan has ___ MBA from a top business school.",
+     "lua_chon": [
+      "many",
+      "much",
+      "a",
+      "an"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là an: MBA đọc bắt đầu bằng âm nguyên âm, dùng an.",
+      "Đáp án là an: MBA đọc bắt đầu bằng âm nguyên âm, dùng an.",
+      "Đáp án là an: MBA đọc bắt đầu bằng âm nguyên âm, dùng an.",
+      "MBA đọc bắt đầu bằng âm nguyên âm, dùng an."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [hour] đọc bắt đầu bằng âm nguyên âm, dùng [an]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [hour] đọc bắt đầu bằng âm nguyên âm, dùng [an]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [hour] đọc bắt đầu bằng âm nguyên âm, dùng [an]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [hour] đọc bắt đầu bằng âm nguyên âm, dùng [an]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [an], vì [hour] đọc bắt đầu bằng âm nguyên âm, dùng [an]."
+     },
+     "giai": {
+      "noi": "Vì [hour] đọc bắt đầu bằng âm nguyên âm, dùng [an]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [MBA] đọc bắt đầu bằng âm nguyên âm, dùng [an]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [MBA] đọc bắt đầu bằng âm nguyên âm, dùng [an]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [MBA] đọc bắt đầu bằng âm nguyên âm, dùng [an]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: [MBA] đọc bắt đầu bằng âm nguyên âm, dùng [an]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [an], vì [MBA] đọc bắt đầu bằng âm nguyên âm, dùng [an]."
+     },
+     "giai": {
+      "noi": "Vì [MBA] đọc bắt đầu bằng âm nguyên âm, dùng [an]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,373 @@
+{
+ "id": "tv-di-lai",
+ "ten": "Từ vựng đi lại",
+ "nhom": "Từ vựng · Đi lại",
+ "so": 84,
+ "chuong": {
+  "so": 10,
+  "ten": "Đi lại và công tác",
+  "bai": 1,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "commute",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m0a|đi lại giữa nhà và nơi làm]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "I [[e0a|commute]] to work by bus.",
+     "vi": "Tôi đi làm bằng xe buýt."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "My [[f0a|commute]] takes about 40 minutes.",
+     "vi": "Đường đi làm của tôi mất khoảng 40 phút."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[commute]. Đi lại giữa nhà và nơi làm.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[I commute to work by bus.] Tôi đi làm bằng xe buýt.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[My commute takes about 40 minutes.] Đường đi làm của tôi mất khoảng 40 phút.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "fare",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|giá vé xe, tàu]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "The bus [[e1a|fare]] is 7,000 dong.",
+     "vi": "Giá vé xe buýt là 7.000 đồng."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "Train [[f1a|fares]] will go up next month.",
+     "vi": "Giá vé tàu sẽ tăng vào tháng sau."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[fare]. Giá vé xe, tàu.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[The bus fare is 7,000 dong.] Giá vé xe buýt là 7.000 đồng.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Train fares will go up next month.] Giá vé tàu sẽ tăng vào tháng sau.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Giá vé rất rẻ.",
+     "tu": "fare",
+     "so_tu": 5,
+     "en": "The [[d0a|fare]] is very cheap.",
+     "dap": [
+      "The fare is very cheap.",
+      "The fare is very low."
+     ],
+     "nhan": [
+      "fare"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Giá vé rất rẻ.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[The fare is very cheap.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "passenger",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|hành khách]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "The train carries 300 [[e2a|passengers]].",
+     "vi": "Đoàn tàu chở 300 hành khách."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "[[f2a|Passengers]] must wear a seat belt.",
+     "vi": "Hành khách phải thắt dây an toàn."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[passenger]. Hành khách.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[The train carries 300 passengers.] Đoàn tàu chở 300 hành khách.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Passengers must wear a seat belt.] Hành khách phải thắt dây an toàn.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "route",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|tuyến đường]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "This is the fastest [[e3a|route]] to the airport.",
+     "vi": "Đây là đường nhanh nhất ra sân bay."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The bus changed its [[f3a|route]] because of road work.",
+     "vi": "Xe buýt đổi tuyến vì sửa đường."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[route]. Tuyến đường.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[This is the fastest route to the airport.] Đây là đường nhanh nhất ra sân bay.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The bus changed its route because of road work.] Xe buýt đổi tuyến vì sửa đường.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Đây là tuyến đường ngắn nhất.",
+     "tu": "route",
+     "so_tu": 5,
+     "en": "This is the shortest [[d1a|route]].",
+     "dap": [
+      "This is the shortest route."
+     ],
+     "nhan": [
+      "route"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Đây là tuyến đường ngắn nhất.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[This is the shortest route.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The taxi ___ from the airport to the city is about 200,000 dong.",
+     "lua_chon": [
+      "commute",
+      "route",
+      "fare",
+      "passenger"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là fare: số tiền đi taxi là fare, giá cước.",
+      "Đáp án là fare: số tiền đi taxi là fare, giá cước.",
+      "Số tiền đi taxi là fare, giá cước.",
+      "Đáp án là fare: số tiền đi taxi là fare, giá cước."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Số tiền đi taxi là [fare], giá cước."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: số tiền đi taxi là [fare], giá cước. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: số tiền đi taxi là [fare], giá cước. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: số tiền đi taxi là [fare], giá cước. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The taxi fare from the airport to the city is about 200,000 dong.]"
+     },
+     "giai": {
+      "noi": "Vì số tiền đi taxi là [fare], giá cước."
+     }
+    }
+   ]
+  }
+ ]
+}

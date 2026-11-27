@@ -1,0 +1,283 @@
+{
+ "id": "np-dieu-kien-loai-2",
+ "ten": "Câu điều kiện loại 2",
+ "nhom": "Ngữ pháp · Câu điều kiện",
+ "so": 47,
+ "chuong": {
+  "so": 5,
+  "ten": "Ngân hàng và cuộc sống",
+  "bai": 7,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Câu điều kiện loại 2",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "Dùng cho việc [[y0a|không có thật]] hoặc [[y0b|khó xảy ra]] ở hiện tại."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "If + S + V2, S + would + V"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Câu điều kiện loại hai.",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Dùng cho việc không có thật hoặc khó xảy ra ở hiện tại.",
+     "lam": [
+      {
+       "to": "y0a",
+       "sau": 840
+      },
+      {
+       "to": "y0b",
+       "sau": 1980
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: vế [if] dùng quá khứ đơn, vế còn lại dùng [would] cộng động từ nguyên mẫu.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "If I [[v0a|had]] more time, I [[v0b|would join]] the course.",
+     "vi": "Nếu có nhiều thời gian hơn, tôi sẽ tham gia khoá học."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "If I [[v1a|were]] you, I [[v1b|would accept]] the offer.",
+     "vi": "Nếu tôi là bạn, tôi sẽ nhận lời."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[If I had more time, I would join the course.] Nếu có nhiều thời gian hơn, tôi sẽ tham gia khoá học.",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Thực tế là không có thời gian, dùng loại hai.",
+     "lam": [
+      {
+       "gach": "v0a"
+      },
+      {
+       "gach": "v0b"
+      }
+     ]
+    },
+    {
+     "noi": "[If I were you, I would accept the offer.] Nếu tôi là bạn, tôi sẽ nhận lời.",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Với [to be], dùng [were] cho mọi ngôi.",
+     "lam": [
+      {
+       "gach": "v1a"
+      },
+      {
+       "gach": "v1b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Ngân hàng và cuộc sống",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "If I [[c0a|had]] more money, I [[c0b|would buy]] a house instead of paying rent.",
+     "vi": "Nếu có nhiều tiền hơn, tôi sẽ mua nhà thay vì trả tiền thuê."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "If the bank [[c1a|lent]] us the money, we [[c1b|would open]] a new shop.",
+     "vi": "Nếu ngân hàng cho vay, chúng tôi sẽ mở cửa hàng mới."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[If I had more money, I would buy a house instead of paying rent.] Nếu có nhiều tiền hơn, tôi sẽ mua nhà thay vì trả tiền thuê.",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Không có thật ở hiện tại: vế [if] dùng quá khứ đơn, vế sau dùng [would].",
+     "lam": [
+      {
+       "gach": "c0a"
+      },
+      {
+       "gach": "c0b"
+      }
+     ]
+    },
+    {
+     "noi": "[If the bank lent us the money, we would open a new shop.] Nếu ngân hàng cho vay, chúng tôi sẽ mở cửa hàng mới.",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "[lend] ở quá khứ là [lent], vế sau dùng [would open].",
+     "lam": [
+      {
+       "gach": "c1a"
+      },
+      {
+       "gach": "c1b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "If the office ___ closer to the station, more people would apply.",
+     "lua_chon": [
+      "has been",
+      "were",
+      "will be",
+      "is"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là were: vế sau có would, loại hai dùng were.",
+      "Vế sau có would, loại hai dùng were.",
+      "Đáp án là were: vế sau có would, loại hai dùng were.",
+      "Đáp án là were: vế sau có would, loại hai dùng were."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "If we had a bigger budget, we ___ more staff.",
+     "lua_chon": [
+      "would hire",
+      "hire",
+      "had hired",
+      "will hire"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Vế if dùng quá khứ, vế sau dùng would cộng nguyên mẫu.",
+      "Đáp án là would hire: vế if dùng quá khứ, vế sau dùng would cộng nguyên mẫu.",
+      "Đáp án là would hire: vế if dùng quá khứ, vế sau dùng would cộng nguyên mẫu.",
+      "Đáp án là would hire: vế if dùng quá khứ, vế sau dùng would cộng nguyên mẫu."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Vế sau có [would], loại hai dùng [were]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: vế sau có [would], loại hai dùng [were]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: vế sau có [would], loại hai dùng [were]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: vế sau có [would], loại hai dùng [were]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[If the office were closer to the station, more people would apply.] Vế sau có [would], loại hai dùng [were]."
+     },
+     "giai": {
+      "noi": "Vì vế sau có [would], loại hai dùng [were]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Vế [if] dùng quá khứ, vế sau dùng [would] cộng nguyên mẫu."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: vế [if] dùng quá khứ, vế sau dùng [would] cộng nguyên mẫu. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: vế [if] dùng quá khứ, vế sau dùng [would] cộng nguyên mẫu. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: vế [if] dùng quá khứ, vế sau dùng [would] cộng nguyên mẫu. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[If we had a bigger budget, we would hire more staff.] Vế [if] dùng quá khứ, vế sau dùng [would] cộng nguyên mẫu."
+     },
+     "giai": {
+      "noi": "Vì vế [if] dùng quá khứ, vế sau dùng [would] cộng nguyên mẫu."
+     }
+    }
+   ]
+  }
+ ]
+}

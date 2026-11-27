@@ -1,0 +1,290 @@
+{
+ "id": "np-to-v-hay-v-ing",
+ "ten": "Động từ đi với to V hay V-ing",
+ "nhom": "Ngữ pháp · Từ loại",
+ "so": 65,
+ "chuong": {
+  "so": 7,
+  "ten": "Bán hàng và khách hàng",
+  "bai": 7,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Động từ đi với to V hay V-ing",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "Sau [[y0a|want, plan, decide, agree]] dùng [[y0b|to cộng động từ]]."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "Sau [[y1a|enjoy, avoid, consider, finish]] dùng [[y1b|động từ thêm ing]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "plan to do · avoid doing"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học Động từ đi với [to V] hay [V-ing].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [want], [plan], [decide], [agree] dùng [to] cộng động từ.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 2580
+      }
+     ]
+    },
+    {
+     "noi": "Sau [enjoy], [avoid], [consider], [finish] dùng động từ thêm [ing].",
+     "lam": [
+      {
+       "to": "y1a"
+      },
+      {
+       "to": "y1b",
+       "sau": 2880
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [plan to do], nhưng [avoid doing].",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "We [[v0a|plan to expand]] into Asia.",
+     "vi": "Chúng tôi dự định mở rộng sang châu Á."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "Please [[v1a|avoid using]] your phone during the meeting.",
+     "vi": "Vui lòng tránh dùng điện thoại trong cuộc họp."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [We plan to expand into Asia.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [plan] dùng [to expand].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [Please avoid using your phone during the meeting.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [avoid] dùng [using].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Bán hàng và khách hàng",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "The client [[c0a|agreed to sign]] the contract.",
+     "vi": "Khách hàng đã đồng ý ký hợp đồng."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "We [[c1a|suggest reading]] the terms carefully.",
+     "vi": "Chúng tôi đề nghị đọc kỹ các điều khoản."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề bán hàng và khách hàng: [The client agreed to sign the contract.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "[agree] đi với [to] cộng động từ nguyên mẫu.",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [We suggest reading the terms carefully.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "[suggest] đi với động từ thêm [ing].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The company has decided ___ its prices next month.",
+     "lua_chon": [
+      "to raise",
+      "raise",
+      "raised",
+      "raising"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Sau decide dùng to cộng động từ.",
+      "Đáp án là to raise: sau decide dùng to cộng động từ.",
+      "Đáp án là to raise: sau decide dùng to cộng động từ.",
+      "Đáp án là to raise: sau decide dùng to cộng động từ."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "Mr. Tan is considering ___ a new car.",
+     "lua_chon": [
+      "bought",
+      "buying",
+      "to buy",
+      "buy"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là buying: sau consider dùng động từ thêm ing.",
+      "Sau consider dùng động từ thêm ing.",
+      "Đáp án là buying: sau consider dùng động từ thêm ing.",
+      "Đáp án là buying: sau consider dùng động từ thêm ing."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau [decide] dùng [to] cộng động từ."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: sau [decide] dùng [to] cộng động từ. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: sau [decide] dùng [to] cộng động từ. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: sau [decide] dùng [to] cộng động từ. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [to raise], vì sau [decide] dùng [to] cộng động từ."
+     },
+     "giai": {
+      "noi": "Vì sau [decide] dùng [to] cộng động từ."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau [consider] dùng động từ thêm [ing]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: sau [consider] dùng động từ thêm [ing]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: sau [consider] dùng động từ thêm [ing]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: sau [consider] dùng động từ thêm [ing]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [buying], vì sau [consider] dùng động từ thêm [ing]."
+     },
+     "giai": {
+      "noi": "Vì sau [consider] dùng động từ thêm [ing]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

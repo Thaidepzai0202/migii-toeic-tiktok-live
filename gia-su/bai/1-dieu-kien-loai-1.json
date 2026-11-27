@@ -1,0 +1,129 @@
+{
+  "id": "dieu-kien-loai-1",
+  "ten": "Câu điều kiện loại 1",
+  "nhom": "Ngữ pháp · Câu điều kiện",
+  "phan": [
+    {
+      "id": "p1",
+      "nhan": "Dùng khi nào",
+      "tieu_de": "Nói về việc có thể xảy ra thật",
+      "khoi": [
+        { "id": "d1", "kieu": "doan", "chu": "Câu điều kiện loại 1 nói về một việc [[d1a|có thể xảy ra thật]] ở [[d1b|hiện tại hoặc tương lai]]. Nếu điều kiện đúng, kết quả sẽ đến." },
+        { "id": "v1", "kieu": "vi_du", "en": "[[v1a|If it rains tomorrow]], [[v1b|we will cancel the trip]].", "vi": "Nếu mai trời mưa, chúng ta sẽ huỷ chuyến đi." },
+        { "id": "v1x", "kieu": "vi_du", "chi_gia_su": true, "nhan": "Ví dụ thêm", "en": "If the price is lower, I will buy two.", "vi": "Nếu giá rẻ hơn, tôi sẽ mua hai cái." }
+      ],
+      "giang": [
+        { "noi": "Chào bạn, mình là gia sư Migii. Hôm nay mình cùng học câu điều kiện loại một nhé.", "lam": [{ "tro": "p1" }] },
+        { "noi": "Loại một dùng khi nói về một việc có thể xảy ra thật.", "lam": [{ "to": "d1a" }] },
+        { "noi": "Việc đó nằm ở hiện tại, hoặc tương lai.", "lam": [{ "to": "d1b" }] },
+        { "noi": "Xem ví dụ này nhé: [If it rains tomorrow, we will cancel the trip.]", "lam": [{ "tro": "v1" }] },
+        { "noi": "Mai có mưa hay không thì chưa biết, nhưng hoàn toàn có thể xảy ra.", "lam": [{ "gach": "v1a" }] },
+        { "noi": "Và nếu mưa thật, thì kết quả là huỷ chuyến đi.", "lam": [{ "gach": "v1b" }] },
+        { "noi": "Thêm một ví dụ nữa: [If the price is lower, I will buy two.] Nếu giá rẻ hơn, tôi sẽ mua hai cái.", "lam": [{ "hien": "v1x" }] }
+      ]
+    },
+    {
+      "id": "p2",
+      "nhan": "Công thức",
+      "tieu_de": "Hai vế, hai thì khác nhau",
+      "khoi": [
+        { "id": "c1", "kieu": "cong_thuc", "chu": "[[c1a|If + S + V (hiện tại đơn)]], [[c1b|S + will + V (nguyên mẫu)]]", "chu_thich": "Vế If là điều kiện · vế còn lại là kết quả" },
+        { "id": "v2", "kieu": "vi_du", "en": "If you [[v2a|submit]] the form by Friday, we [[v2b|will process]] your request next week.", "vi": "Nếu bạn nộp đơn trước thứ Sáu, chúng tôi sẽ xử lý yêu cầu của bạn vào tuần sau." },
+        { "id": "v2s", "kieu": "vi_du", "sai": true, "en": "If you [[v2s1|will submit]] the form by Friday, we will process your request.", "vi": "Sai: vế If không dùng will." },
+        { "id": "g1", "kieu": "ghi_nho", "chu": "Vế If **không dùng will**, kể cả khi đang nói về tương lai." },
+        { "id": "bt1", "kieu": "bai_tap", "cau": "If she ___ me today, I will tell her the news.", "lua_chon": ["calls", "will call"], "dap_an": 0, "giai_thich": ["Vế If dùng hiện tại đơn.", "Vế If không dùng will."] }
+      ],
+      "giang": [
+        { "noi": "Giờ mình xem công thức. Câu này có hai vế.", "lam": [{ "tro": "c1" }] },
+        { "noi": "Vế có chữ [If] là điều kiện. Động từ chia ở thì hiện tại đơn.", "lam": [{ "to": "c1a" }] },
+        { "noi": "Vế còn lại là kết quả, dùng [will] cộng động từ nguyên mẫu.", "lam": [{ "to": "c1b" }] },
+        { "noi": "Áp vào câu này: [If you submit the form by Friday, we will process your request next week.]", "lam": [{ "tro": "v2" }] },
+        { "noi": "Vế điều kiện dùng [submit], là hiện tại đơn.", "lam": [{ "khoanh": "v2a" }] },
+        { "noi": "Vế kết quả dùng [will process].", "lam": [{ "khoanh": "v2b" }] },
+        { "noi": "Lỗi hay gặp nhất là thêm [will] vào vế [If]. Câu này sai nhé.", "lam": [{ "tro": "v2s" }, { "gach": "v2s1", "sau": 900 }] },
+        { "noi": "Nhớ giúp mình: vế [If] không dùng [will], kể cả khi đang nói về tương lai.", "lam": [{ "to": "g1" }] },
+        {
+          "bai_tap": "bt1",
+          "noi": "Bạn thử một câu nhanh nhé. Chọn từ đúng để điền vào chỗ trống.",
+          "lam": [{ "tro": "bt1" }],
+          "dung": { "noi": "Đúng rồi! Vế [If] dùng hiện tại đơn: [calls]." },
+          "sai": { "1": { "noi": "Chưa đúng. [will call] nằm trong vế [If] là sai. Bạn chọn lại nhé." } },
+          "bo_qua": { "noi": "Đáp án là [calls], vì vế [If] dùng hiện tại đơn." }
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "nhan": "Mẹo làm bài",
+      "tieu_de": "Đảo vế và dùng unless",
+      "khoi": [
+        { "id": "d3", "kieu": "doan", "chu": "Vế If có thể đứng sau. Khi đó [[d3a|không cần dấu phẩy]]." },
+        { "id": "v3", "kieu": "vi_du", "en": "We will process your [[v3a|request if]] you submit the form by Friday.", "vi": "Chúng tôi sẽ xử lý yêu cầu nếu bạn nộp đơn trước thứ Sáu." },
+        { "id": "d4", "kieu": "doan", "chu": "[[d4a|Unless]] = [[d4b|if … not]] (nếu … không). Sau unless vẫn dùng hiện tại đơn." },
+        { "id": "v4", "kieu": "vi_du", "en": "[[v4a|Unless you hurry]], you will miss the train.", "vi": "Nếu bạn không nhanh lên, bạn sẽ lỡ chuyến tàu." }
+      ],
+      "giang": [
+        { "noi": "Phần này có hai mẹo hay gặp trong đề thi.", "lam": [{ "tro": "p3" }] },
+        { "noi": "Mẹo một: vế [If] có thể đứng sau. Lúc đó không cần dấu phẩy.", "lam": [{ "to": "d3a" }] },
+        { "noi": "Bạn để ý chỗ này nhé, không có dấu phẩy trước chữ [if].", "lam": [{ "khoanh": "v3a" }] },
+        { "noi": "Mẹo hai: [Unless] nghĩa là nếu không.", "lam": [{ "to": "d4a" }, { "to": "d4b", "sau": 1400 }] },
+        { "noi": "[Unless you hurry, you will miss the train.] Nếu bạn không nhanh lên, bạn sẽ lỡ chuyến tàu.", "lam": [{ "gach": "v4a" }] },
+        { "noi": "Sau [unless] vẫn dùng hiện tại đơn, và không thêm chữ [not] nữa.", "lam": [{ "khoanh": "v4a" }] }
+      ]
+    },
+    {
+      "id": "p4",
+      "nhan": "Luyện tập",
+      "tieu_de": "Hai câu giống đề thi",
+      "khoi": [
+        { "id": "bt2", "kieu": "bai_tap", "cau": "If the shipment ___ on time, we will launch the promotion on Monday.", "lua_chon": ["arrives", "will arrive", "arrived", "arriving"], "dap_an": 0, "giai_thich": ["Vế If dùng hiện tại đơn.", "Vế If không dùng will.", "arrived là quá khứ, dùng cho câu điều kiện loại 2.", "arriving không tự làm động từ chính được."] },
+        { "id": "bt3", "kieu": "bai_tap", "cau": "The meeting will be postponed ___ the director returns by Thursday.", "lua_chon": ["unless", "if not", "despite", "because"], "dap_an": 0, "giai_thich": ["unless = nếu … không.", "if not không đứng ngay trước cả một mệnh đề như vậy.", "despite chỉ đi với danh từ, không đi với mệnh đề.", "because sai nghĩa: giám đốc về kịp thì sao phải hoãn họp?"] }
+      ],
+      "giang": [
+        {
+          "bai_tap": "bt2",
+          "noi": "Giờ làm hai câu giống đề thật nhé. Câu đầu tiên.",
+          "lam": [{ "tro": "bt2" }],
+          "dung": { "noi": "Chính xác! Vế [If] dùng hiện tại đơn: [arrives]." },
+          "sai": {
+            "1": { "noi": "[will arrive] có [will], mà vế [If] thì không dùng [will]. Bạn chọn lại nhé." },
+            "2": { "noi": "[arrived] là quá khứ. Câu này nói chuyện thứ Hai tới, nên dùng loại một. Bạn chọn lại nhé." },
+            "3": { "noi": "[arriving] không tự làm động từ chính được. Bạn chọn lại nhé." }
+          },
+          "bo_qua": { "noi": "Đáp án là [arrives], vì vế [If] dùng hiện tại đơn." }
+        },
+        {
+          "bai_tap": "bt3",
+          "noi": "Câu thứ hai, bạn để ý nghĩa của câu nhé.",
+          "lam": [{ "tro": "bt3" }],
+          "dung": { "noi": "Tuyệt! [Unless] nghĩa là nếu không: cuộc họp sẽ hoãn, nếu giám đốc không về kịp." },
+          "sai": {
+            "1": { "noi": "[if not] không đứng ngay trước cả một mệnh đề như vậy. Bạn chọn lại nhé." },
+            "2": { "noi": "[despite] chỉ đi với danh từ, mà phía sau là cả một mệnh đề. Bạn chọn lại nhé." },
+            "3": { "noi": "[because] thì sai nghĩa: giám đốc về kịp thì sao lại phải hoãn họp? Bạn chọn lại nhé." }
+          },
+          "bo_qua": { "noi": "Đáp án là [unless], nghĩa là nếu không." }
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "nhan": "Ghi nhớ",
+      "tieu_de": "Tóm tắt bài",
+      "khoi": [
+        { "id": "ds1", "kieu": "danh_sach", "y": [
+          { "id": "y1", "chu": "Loại 1: việc **có thể xảy ra** ở hiện tại, tương lai." },
+          { "id": "y2", "chu": "**If + hiện tại đơn**, **will + V nguyên mẫu**." },
+          { "id": "y3", "chu": "Vế If không dùng will. **Unless = if … not**." }
+        ] }
+      ],
+      "giang": [
+        { "noi": "Mình tóm tắt lại nhé.", "lam": [{ "tro": "p5" }] },
+        { "noi": "Một: loại một nói về việc có thể xảy ra thật.", "lam": [{ "to": "y1" }] },
+        { "noi": "Hai: vế [If] dùng hiện tại đơn, vế còn lại dùng [will] cộng động từ nguyên mẫu.", "lam": [{ "to": "y2" }] },
+        { "noi": "Ba: không dùng [will] sau [If], và [unless] nghĩa là nếu không.", "lam": [{ "to": "y3" }] },
+        { "noi": "Bài hôm nay đến đây là xong. Hẹn gặp bạn ở bài sau nhé!" }
+      ]
+    }
+  ]
+}

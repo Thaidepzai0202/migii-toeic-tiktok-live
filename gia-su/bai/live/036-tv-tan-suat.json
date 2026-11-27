@@ -1,0 +1,384 @@
+{
+ "id": "tv-tan-suat",
+ "ten": "Từ chỉ tần suất: daily, weekly, annual",
+ "nhom": "Từ vựng · Thời gian",
+ "so": 36,
+ "chuong": {
+  "so": 4,
+  "ten": "Tài chính",
+  "bai": 6,
+  "tong": 10
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "daily",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**tính từ** · [[m0a|hằng ngày]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "We have a [[e0a|daily]] meeting at 9 a.m.",
+     "vi": "Chúng tôi họp hằng ngày lúc 9 giờ sáng."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "The accountant checks the bank balance [[f0a|daily]].",
+     "vi": "Kế toán kiểm tra số dư ngân hàng hằng ngày."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Tiếp chủ đề tài chính. Bài này mình học bốn từ về tần suất.",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[daily]. Nghĩa là hằng ngày.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[We have a daily meeting at 9 a.m.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The accountant checks the bank balance daily.]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "weekly",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**tính từ** · [[m1a|hằng tuần]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "The [[e1a|weekly]] report is due on Friday.",
+     "vi": "Báo cáo hằng tuần nộp vào thứ Sáu."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "Sales figures are updated [[f1a|weekly]].",
+     "vi": "Số liệu bán hàng được cập nhật hằng tuần."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[weekly]. Nghĩa là hằng tuần.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[The weekly report is due on Friday.]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Sales figures are updated weekly.]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Chúng tôi có cuộc họp hằng tuần.",
+     "tu": "weekly",
+     "so_tu": 5,
+     "en": "We have a [[d0a|weekly]] meeting.",
+     "dap": [
+      "We have a weekly meeting.",
+      "We have weekly meetings."
+     ],
+     "nhan": [
+      "weekly"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Chúng tôi có cuộc họp hằng tuần. Nhớ dùng từ [weekly].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [We have a weekly meeting.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "quarterly",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**tính từ** · [[m2a|hằng quý]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "The [[e2a|quarterly]] results look good.",
+     "vi": "Kết quả hằng quý trông khả quan."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "Taxes are paid [[f2a|quarterly]].",
+     "vi": "Thuế được nộp theo quý."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[quarterly]. Nghĩa là hằng quý.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[The quarterly results look good.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Taxes are paid quarterly.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "annual",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**tính từ** · [[m3a|hằng năm]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "The [[e3a|annual]] party is in December.",
+     "vi": "Tiệc thường niên tổ chức vào tháng Mười hai."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "Our [[f3a|annual]] budget is 2 billion dong.",
+     "vi": "Ngân sách hằng năm của chúng tôi là 2 tỷ đồng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[annual]. Nghĩa là hằng năm.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[The annual party is in December.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Our annual budget is 2 billion dong.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Bữa tiệc thường niên vào tháng Mười Hai.",
+     "tu": "annual",
+     "so_tu": 6,
+     "en": "The [[d1a|annual]] party is in December.",
+     "dap": [
+      "The annual party is in December."
+     ],
+     "nhan": [
+      "annual"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Bữa tiệc thường niên vào tháng Mười Hai. Nhớ dùng từ [annual].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [The annual party is in December.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The company holds its ___ meeting once a year in March.",
+     "lua_chon": [
+      "annual",
+      "quarterly",
+      "weekly",
+      "daily"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Một năm một lần là annual, hằng năm.",
+      "Đáp án là annual: một năm một lần là annual, hằng năm.",
+      "Đáp án là annual: một năm một lần là annual, hằng năm.",
+      "Đáp án là annual: một năm một lần là annual, hằng năm."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Một năm một lần là [annual], hằng năm."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: một năm một lần là [annual], hằng năm. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: một năm một lần là [annual], hằng năm. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: một năm một lần là [annual], hằng năm. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [annual], vì một năm một lần là [annual], hằng năm."
+     },
+     "giai": {
+      "noi": "Vì một năm một lần là [annual], hằng năm."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

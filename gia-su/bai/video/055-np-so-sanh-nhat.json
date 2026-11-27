@@ -1,0 +1,271 @@
+{
+ "id": "np-so-sanh-nhat",
+ "ten": "So sánh nhất",
+ "nhom": "Ngữ pháp · So sánh",
+ "so": 55,
+ "chuong": {
+  "so": 6,
+  "ten": "Marketing và sản phẩm",
+  "bai": 6,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "So sánh nhất",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "Tính từ ngắn [[y0a|thêm est]], tính từ dài [[y0b|dùng most]], và luôn có the đứng trước."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "the + adj-est · the most + adj"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "So sánh nhất.",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Tính từ ngắn thêm [est], tính từ dài dùng [most], và luôn có [the] đứng trước.",
+     "lam": [
+      {
+       "to": "y0a",
+       "sau": 780
+      },
+      {
+       "to": "y0b",
+       "sau": 2220
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [the] cộng tính từ thêm [est], hoặc [the most] cộng tính từ dài.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "This is [[v0a|the largest]] hotel in the city.",
+     "vi": "Đây là khách sạn lớn nhất thành phố."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "She is [[v1a|the most experienced]] member of the team.",
+     "vi": "Cô ấy là người giàu kinh nghiệm nhất nhóm."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[This is the largest hotel in the city.] Đây là khách sạn lớn nhất thành phố.",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "[large] ngắn nên thêm [est].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "[She is the most experienced member of the team.] Cô ấy là người giàu kinh nghiệm nhất nhóm.",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "[experienced] dài nên dùng [the most].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Marketing và sản phẩm",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "This is [[c0a|the most affordable]] phone we sell.",
+     "vi": "Đây là chiếc điện thoại giá phải chăng nhất chúng tôi bán."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "The camera is [[c1a|the best]] feature of the new model.",
+     "vi": "Camera là tính năng tốt nhất của mẫu mới."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[This is the most affordable phone we sell.] Đây là chiếc điện thoại giá phải chăng nhất chúng tôi bán.",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Tính từ dài: [the most affordable].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "[The camera is the best feature of the new model.] Camera là tính năng tốt nhất của mẫu mới.",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "[good] ở so sánh nhất là [the best].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "This is the ___ product we have ever launched.",
+     "lua_chon": [
+      "more successful",
+      "most successful",
+      "successfully",
+      "successful"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là most successful: có the và ever, dùng so sánh nhất most successful.",
+      "Có the và ever, dùng so sánh nhất most successful.",
+      "Đáp án là most successful: có the và ever, dùng so sánh nhất most successful.",
+      "Đáp án là most successful: có the và ever, dùng so sánh nhất most successful."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "Friday is the ___ day of the week for our store.",
+     "lua_chon": [
+      "busier",
+      "busiest",
+      "busy",
+      "most busy"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là busiest: busy là tính từ ngắn, so sánh nhất là busiest.",
+      "Busy là tính từ ngắn, so sánh nhất là busiest.",
+      "Đáp án là busiest: busy là tính từ ngắn, so sánh nhất là busiest.",
+      "Đáp án là busiest: busy là tính từ ngắn, so sánh nhất là busiest."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Có [the] và [ever], dùng so sánh nhất [most successful]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: có [the] và [ever], dùng so sánh nhất [most successful]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: có [the] và [ever], dùng so sánh nhất [most successful]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: có [the] và [ever], dùng so sánh nhất [most successful]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[This is the most successful product we have ever launched.] Có [the] và [ever], dùng so sánh nhất [most successful]."
+     },
+     "giai": {
+      "noi": "Vì có [the] và [ever], dùng so sánh nhất [most successful]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [busy] là tính từ ngắn, so sánh nhất là [busiest]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [busy] là tính từ ngắn, so sánh nhất là [busiest]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: [busy] là tính từ ngắn, so sánh nhất là [busiest]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [busy] là tính từ ngắn, so sánh nhất là [busiest]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Friday is the busiest day of the week for our store.] [busy] là tính từ ngắn, so sánh nhất là [busiest]."
+     },
+     "giai": {
+      "noi": "Vì [busy] là tính từ ngắn, so sánh nhất là [busiest]."
+     }
+    }
+   ]
+  }
+ ]
+}

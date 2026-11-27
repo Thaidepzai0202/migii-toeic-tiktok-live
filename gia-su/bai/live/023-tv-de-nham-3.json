@@ -1,0 +1,384 @@
+{
+ "id": "tv-de-nham-3",
+ "ten": "Từ dễ nhầm: personal, personnel, economic, economical",
+ "nhom": "Từ vựng · Từ dễ nhầm",
+ "so": 23,
+ "chuong": {
+  "so": 3,
+  "ten": "Nhân sự",
+  "bai": 4,
+  "tong": 11
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "personal",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**tính từ** · [[m0a|cá nhân]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "Do not use the office phone for [[e0a|personal]] calls.",
+     "vi": "Đừng dùng điện thoại văn phòng cho việc cá nhân."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "Please keep your [[f0a|personal]] items in the locker.",
+     "vi": "Vui lòng để đồ cá nhân trong tủ khoá."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Tiếp chủ đề nhân sự. Bài này mình học bốn từ về các từ dễ nhầm.",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[personal]. Nghĩa là cá nhân.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Do not use the office phone for personal calls.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Please keep your personal items in the locker.]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "personnel",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|nhân sự, nhân viên]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "Only authorized [[e1a|personnel]] may enter.",
+     "vi": "Chỉ nhân viên có thẩm quyền mới được vào."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "The [[f1a|personnel]] department handles all new hires.",
+     "vi": "Phòng nhân sự lo toàn bộ người mới tuyển."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[personnel]. Nghĩa là nhân sự, nhân viên.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[Only authorized personnel may enter.]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The personnel department handles all new hires.]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Phòng nhân sự ở tầng hai.",
+     "tu": "personnel",
+     "so_tu": 8,
+     "en": "The [[d0a|personnel]] department is on the second floor.",
+     "dap": [
+      "The personnel department is on the second floor.",
+      "The personnel office is on the second floor."
+     ],
+     "nhan": [
+      "personnel"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Phòng nhân sự ở tầng hai. Nhớ dùng từ [personnel].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [The personnel department is on the second floor.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "economic",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**tính từ** · [[m2a|thuộc về kinh tế]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "The [[e2a|economic]] situation is improving.",
+     "vi": "Tình hình kinh tế đang cải thiện."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The [[f2a|economic]] crisis made hiring difficult.",
+     "vi": "Khủng hoảng kinh tế khiến việc tuyển người khó khăn."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[economic]. Nghĩa là thuộc về kinh tế.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[The economic situation is improving.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The economic crisis made hiring difficult.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "economical",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**tính từ** · [[m3a|tiết kiệm]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "This car is very [[e3a|economical]] on fuel.",
+     "vi": "Chiếc xe này rất tiết kiệm xăng."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "Online interviews are more [[f3a|economical]] than face-to-face ones.",
+     "vi": "Phỏng vấn trực tuyến tiết kiệm hơn phỏng vấn trực tiếp."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[economical]. Nghĩa là tiết kiệm.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[This car is very economical on fuel.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Online interviews are more economical than face-to-face ones.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Chiếc xe này rất tiết kiệm.",
+     "tu": "economical",
+     "so_tu": 5,
+     "en": "This car is very [[d1a|economical]].",
+     "dap": [
+      "This car is very economical."
+     ],
+     "nhan": [
+      "economical"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Chiếc xe này rất tiết kiệm. Nhớ dùng từ [economical].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [This car is very economical.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Please contact the ___ department about your contract.",
+     "lua_chon": [
+      "economic",
+      "personal",
+      "economical",
+      "personnel"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là personnel: phòng nhân sự là personnel department.",
+      "Đáp án là personnel: phòng nhân sự là personnel department.",
+      "Đáp án là personnel: phòng nhân sự là personnel department.",
+      "Phòng nhân sự là personnel department."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Phòng nhân sự là [personnel department]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: phòng nhân sự là [personnel department]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: phòng nhân sự là [personnel department]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: phòng nhân sự là [personnel department]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [personnel], vì phòng nhân sự là [personnel department]."
+     },
+     "giai": {
+      "noi": "Vì phòng nhân sự là [personnel department]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

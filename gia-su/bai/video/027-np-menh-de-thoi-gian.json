@@ -1,0 +1,270 @@
+{
+ "id": "np-menh-de-thoi-gian",
+ "ten": "Mệnh đề thời gian chỉ tương lai",
+ "nhom": "Ngữ pháp · Các thì",
+ "so": 27,
+ "chuong": {
+  "so": 3,
+  "ten": "Nhân sự",
+  "bai": 8,
+  "tong": 11
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Mệnh đề thời gian chỉ tương lai",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "Sau [[y0a|when, before, after, as soon as, until]], nói về tương lai nhưng [[y0b|dùng thì hiện tại]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "When + S + V (hiện tại), S + will + V"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Mệnh đề thời gian chỉ tương lai.",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [when], [before], [after], [as soon as], [until], nói về tương lai nhưng dùng thì hiện tại.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 4620
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [when] cộng mệnh đề thì hiện tại, vế còn lại dùng [will].",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "I will call you when I [[v0a|arrive]] at the airport.",
+     "vi": "Tôi sẽ gọi bạn khi tôi đến sân bay."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "Please wait here until the manager [[v1a|returns]].",
+     "vi": "Vui lòng chờ ở đây cho tới khi quản lý quay lại."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[I will call you when I arrive at the airport.] Tôi sẽ gọi bạn khi tôi đến sân bay.",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [when] dùng [arrive], không dùng [will arrive].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please wait here until the manager returns.] Vui lòng chờ ở đây cho tới khi quản lý quay lại.",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [until] cũng dùng thì hiện tại.",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Nhân sự",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "You will get a certificate when you [[c0a|finish]] the workshop.",
+     "vi": "Bạn sẽ nhận chứng chỉ khi học xong buổi thực hành."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "Ms. Thu will lead the team after Mr. Nam [[c1a|retires]].",
+     "vi": "Chị Thu sẽ dẫn dắt nhóm sau khi anh Nam nghỉ hưu."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[You will get a certificate when you finish the workshop.] Bạn sẽ nhận chứng chỉ khi học xong buổi thực hành.",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [when] dùng hiện tại đơn, không dùng [will].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Ms. Thu will lead the team after Mr. Nam retires.] Chị Thu sẽ dẫn dắt nhóm sau khi anh Nam nghỉ hưu.",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [after], dù là chuyện tương lai vẫn dùng [retires].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "As soon as the shipment ___, we will contact you.",
+     "lua_chon": [
+      "arrived",
+      "arrives",
+      "arriving",
+      "will arrive"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là arrives: sau as soon as dùng thì hiện tại cho tương lai.",
+      "Sau as soon as dùng thì hiện tại cho tương lai.",
+      "Đáp án là arrives: sau as soon as dùng thì hiện tại cho tương lai.",
+      "Đáp án là arrives: sau as soon as dùng thì hiện tại cho tương lai."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "Before you ___ the office, please turn off the lights.",
+     "lua_chon": [
+      "leaving",
+      "will leave",
+      "left",
+      "leave"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là leave: sau before dùng thì hiện tại, không dùng will.",
+      "Đáp án là leave: sau before dùng thì hiện tại, không dùng will.",
+      "Đáp án là leave: sau before dùng thì hiện tại, không dùng will.",
+      "Sau before dùng thì hiện tại, không dùng will."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau [as soon as] dùng thì hiện tại cho tương lai."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: sau [as soon as] dùng thì hiện tại cho tương lai. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: sau [as soon as] dùng thì hiện tại cho tương lai. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: sau [as soon as] dùng thì hiện tại cho tương lai. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[As soon as the shipment arrives, we will contact you.] Sau [as soon as] dùng thì hiện tại cho tương lai."
+     },
+     "giai": {
+      "noi": "Vì sau [as soon as] dùng thì hiện tại cho tương lai."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau [before] dùng thì hiện tại, không dùng [will]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: sau [before] dùng thì hiện tại, không dùng [will]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: sau [before] dùng thì hiện tại, không dùng [will]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: sau [before] dùng thì hiện tại, không dùng [will]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Before you leave the office, please turn off the lights.] Sau [before] dùng thì hiện tại, không dùng [will]."
+     },
+     "giai": {
+      "noi": "Vì sau [before] dùng thì hiện tại, không dùng [will]."
+     }
+    }
+   ]
+  }
+ ]
+}

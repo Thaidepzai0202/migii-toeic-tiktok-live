@@ -21,3 +21,15 @@ data/the-chu-record.json
 # Thống kê live (stats.js): có mã người xem đã băm, muối băm riêng của máy
 data/stats/
 data/hai-tu-goc/
+
+# Live thử gia sư tự động (gia-su/live.sh): vị trí bài đang phát, log, pid, profile Chrome cửa sổ phát
+data/gia-su-live.*
+data/chrome-gia-su/
+# Nhật ký live gia sư (gia-su/nhat-ky.js): nội dung bình luận người xem, mã người đã băm
+data/gia-su-stats/
+# Trang control gia sư (gia-su/control.js): log, pid
+data/gia-su-control.*
+# Video bài gia sư xuất ra (gia-su/xuat-video.js)
+data/video/
+# Đoạn thử giọng AI cho video chữa bài (sinh lại được)
+data/thu-giong/

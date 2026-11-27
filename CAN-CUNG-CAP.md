@@ -30,7 +30,7 @@ Mục nào điền vào `.env` thì đã có sẵn dòng trong `.env.example`.
 
 - **App Store ID `1615348376`**: lấy từ code iOS (`HomeVC.swift`), chưa kiểm tra trên store. Chỉ ảnh hưởng nếu dùng làm link QR.
 - **Font SVN-Avo** (font chữ chính của app): bản quyền dùng trên web/quảng bá chưa xác nhận, nên màn live đang dùng
-  Be Vietnam Pro. Tiêu đề dùng Migii Serif (giấy phép SIL OFL, kèm file `public/fonts/OFL-MigiiSerif.txt`).
+  Be Vietnam Pro. Riêng video gia sư dùng SVN-Avo từ 25/11/2026 (người dùng yêu cầu), file chép vào `public/fonts/`. Tiêu đề dùng Migii Serif (giấy phép SIL OFL, kèm file `public/fonts/OFL-MigiiSerif.txt`).
 - **Quà đổi quyền trong Thế chữ** (thêm 19/11/2026 theo yêu cầu người dùng: 1 hoa ×2 điểm, 3 hoa đổi 2 chữ, 10 hoa ra từ mới và giữ từ;
   dải ưu đãi hiện ngay trên màn chơi). Chưa đối chiếu với quy định của TikTok: một nguồn bên thứ ba dẫn lại mục
   *Inauthentic Gift Requests* (trong app: Live Center → Rules and Guidance) nói không chạy game tính điểm dựa trên quà. Cần đọc mục đó

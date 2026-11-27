@@ -1,0 +1,285 @@
+{
+ "id": "np-so-such",
+ "ten": "So và such",
+ "nhom": "Ngữ pháp · Liên từ",
+ "so": 80,
+ "chuong": {
+  "so": 9,
+  "ten": "Công nghệ và công trình",
+  "bai": 6,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "So và such",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|so]] cộng [[y0b|tính từ hoặc trạng từ]]."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "[[y1a|such]] cộng [[y1b|cụm danh từ]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "so + adj + that · such + a + adj + N + that"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[So] và [such].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[so] cộng tính từ hoặc trạng từ.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b"
+      }
+     ]
+    },
+    {
+     "noi": "[such] cộng cụm danh từ.",
+     "lam": [
+      {
+       "to": "y1a"
+      },
+      {
+       "to": "y1b"
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [so] cộng tính từ, [such] cộng cụm danh từ, rồi tới [that].",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "The demand was [[v0a|so high]] that we ran out of stock.",
+     "vi": "Nhu cầu cao tới mức chúng tôi hết hàng."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "It was [[v1a|such a long meeting]] that everyone was tired.",
+     "vi": "Cuộc họp dài tới mức ai cũng mệt."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[The demand was so high that we ran out of stock.] Nhu cầu cao tới mức chúng tôi hết hàng.",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "[high] là tính từ, dùng [so].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "[It was such a long meeting that everyone was tired.] Cuộc họp dài tới mức ai cũng mệt.",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Có danh từ [meeting], dùng [such].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Công nghệ và công trình",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "The update was [[c0a|so large]] that it took an hour to install.",
+     "vi": "Bản cập nhật lớn tới mức cài mất một tiếng."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "It was [[c1a|such a noisy]] construction site that we closed the windows.",
+     "vi": "Công trường ồn tới mức chúng tôi phải đóng cửa sổ."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[The update was so large that it took an hour to install.] Bản cập nhật lớn tới mức cài mất một tiếng.",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "[so] đi với tính từ: [so large].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "[It was such a noisy construction site that we closed the windows.] Công trường ồn tới mức chúng tôi phải đóng cửa sổ.",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "[such] đi với cụm danh từ: [such a noisy construction site].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The instructions were ___ clear that nobody had questions.",
+     "lua_chon": [
+      "too",
+      "very",
+      "such",
+      "so"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là so: sau chỗ trống là tính từ clear và có that, dùng so.",
+      "Đáp án là so: sau chỗ trống là tính từ clear và có that, dùng so.",
+      "Đáp án là so: sau chỗ trống là tính từ clear và có that, dùng so.",
+      "Sau chỗ trống là tính từ clear và có that, dùng so."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "It was ___ a successful event that we will repeat it next year.",
+     "lua_chon": [
+      "such",
+      "so",
+      "enough",
+      "too"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Sau chỗ trống là cụm danh từ a successful event, dùng such.",
+      "Đáp án là such: sau chỗ trống là cụm danh từ a successful event, dùng such.",
+      "Đáp án là such: sau chỗ trống là cụm danh từ a successful event, dùng such.",
+      "Đáp án là such: sau chỗ trống là cụm danh từ a successful event, dùng such."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau chỗ trống là tính từ [clear] và có [that], dùng [so]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: sau chỗ trống là tính từ [clear] và có [that], dùng [so]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: sau chỗ trống là tính từ [clear] và có [that], dùng [so]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: sau chỗ trống là tính từ [clear] và có [that], dùng [so]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The instructions were so clear that nobody had questions.] Sau chỗ trống là tính từ [clear] và có [that], dùng [so]."
+     },
+     "giai": {
+      "noi": "Vì sau chỗ trống là tính từ [clear] và có [that], dùng [so]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau chỗ trống là cụm danh từ [a successful event], dùng [such]."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: sau chỗ trống là cụm danh từ [a successful event], dùng [such]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: sau chỗ trống là cụm danh từ [a successful event], dùng [such]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: sau chỗ trống là cụm danh từ [a successful event], dùng [such]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[It was such a successful event that we will repeat it next year.] Sau chỗ trống là cụm danh từ [a successful event], dùng [such]."
+     },
+     "giai": {
+      "noi": "Vì sau chỗ trống là cụm danh từ [a successful event], dùng [such]."
+     }
+    }
+   ]
+  }
+ ]
+}

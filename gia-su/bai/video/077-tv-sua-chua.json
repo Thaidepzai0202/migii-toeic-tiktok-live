@@ -1,0 +1,376 @@
+{
+ "id": "tv-sua-chua",
+ "ten": "Từ vựng xây dựng và sửa chữa",
+ "nhom": "Từ vựng · Sửa chữa",
+ "so": 77,
+ "chuong": {
+  "so": 9,
+  "ten": "Công nghệ và công trình",
+  "bai": 3,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "renovate",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m0a|cải tạo, sửa sang]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "They are [[e0a|renovating]] the lobby.",
+     "vi": "Họ đang sửa sang sảnh."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "The old building will be [[f0a|renovated]] next year.",
+     "vi": "Toà nhà cũ sẽ được cải tạo vào năm sau."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[renovate]. Cải tạo, sửa sang.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[They are renovating the lobby.] Họ đang sửa sang sảnh.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The old building will be renovated next year.] Toà nhà cũ sẽ được cải tạo vào năm sau.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "construction",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|việc xây dựng]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "The [[e1a|construction]] of the bridge took two years.",
+     "vi": "Việc xây cầu mất hai năm."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "The road is closed because of [[f1a|construction]].",
+     "vi": "Con đường bị đóng vì đang thi công."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[construction]. Việc xây dựng.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[The construction of the bridge took two years.] Việc xây cầu mất hai năm.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The road is closed because of construction.] Con đường bị đóng vì đang thi công.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Việc xây dựng sẽ mất một năm.",
+     "tu": "construction",
+     "so_tu": 6,
+     "en": "The [[d0a|construction]] will take one year.",
+     "dap": [
+      "The construction will take one year.",
+      "The construction will take a year.",
+      "Construction will take one year.",
+      "Construction will take a year."
+     ],
+     "nhan": [
+      "construction"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Việc xây dựng sẽ mất một năm.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[The construction will take one year.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "maintenance",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|việc bảo trì]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "The elevator is closed for [[e2a|maintenance]].",
+     "vi": "Thang máy tạm dừng để bảo trì."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "Regular [[f2a|maintenance]] keeps the machines working well.",
+     "vi": "Bảo trì định kỳ giúp máy chạy tốt."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[maintenance]. Việc bảo trì.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[The elevator is closed for maintenance.] Thang máy tạm dừng để bảo trì.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Regular maintenance keeps the machines working well.] Bảo trì định kỳ giúp máy chạy tốt.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "repair",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m3a|sửa chữa]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "A technician will [[e3a|repair]] the printer.",
+     "vi": "Một kỹ thuật viên sẽ sửa máy in."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The [[f3a|repairs]] will cost about 10 million dong.",
+     "vi": "Việc sửa chữa tốn khoảng 10 triệu đồng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[repair]. Sửa chữa.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[A technician will repair the printer.] Một kỹ thuật viên sẽ sửa máy in.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The repairs will cost about 10 million dong.] Việc sửa chữa tốn khoảng mười triệu đồng.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Tôi cần sửa máy tính.",
+     "tu": "repair",
+     "so_tu": 6,
+     "en": "I need to [[d1a|repair]] my computer.",
+     "dap": [
+      "I need to repair my computer.",
+      "I need to repair the computer."
+     ],
+     "nhan": [
+      "repair"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Tôi cần sửa máy tính.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[I need to repair my computer.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The swimming pool is closed today for regular ___.",
+     "lua_chon": [
+      "repaired",
+      "maintenance",
+      "renovate",
+      "construction"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là maintenance: đóng cửa để regular maintenance, bảo trì định kỳ.",
+      "Đóng cửa để regular maintenance, bảo trì định kỳ.",
+      "Đáp án là maintenance: đóng cửa để regular maintenance, bảo trì định kỳ.",
+      "Đáp án là maintenance: đóng cửa để regular maintenance, bảo trì định kỳ."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Đóng cửa để [regular maintenance], bảo trì định kỳ."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: đóng cửa để [regular maintenance], bảo trì định kỳ. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: đóng cửa để [regular maintenance], bảo trì định kỳ. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: đóng cửa để [regular maintenance], bảo trì định kỳ. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The swimming pool is closed today for regular maintenance.]"
+     },
+     "giai": {
+      "noi": "Vì đóng cửa để [regular maintenance], bảo trì định kỳ."
+     }
+    }
+   ]
+  }
+ ]
+}

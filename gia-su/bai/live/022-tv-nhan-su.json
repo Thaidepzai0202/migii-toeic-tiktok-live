@@ -1,0 +1,385 @@
+{
+ "id": "tv-nhan-su",
+ "ten": "Từ vựng nhân sự",
+ "nhom": "Từ vựng · Nhân sự",
+ "so": 22,
+ "chuong": {
+  "so": 3,
+  "ten": "Nhân sự",
+  "bai": 3,
+  "tong": 11
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "employee",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|nhân viên]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "Every [[e0a|employee]] gets a free lunch.",
+     "vi": "Mỗi nhân viên được ăn trưa miễn phí."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "The company has about 500 [[f0a|employees]].",
+     "vi": "Công ty có khoảng 500 nhân viên."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Tiếp chủ đề nhân sự. Bài này mình học bốn từ về nhân sự.",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[employee]. Nghĩa là nhân viên.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Every employee gets a free lunch.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The company has about 500 employees.]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "promotion",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|sự thăng chức]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "He got a [[e1a|promotion]] after two years.",
+     "vi": "Anh ấy được thăng chức sau hai năm."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "Ms. Thu is hoping for a [[f1a|promotion]] this year.",
+     "vi": "Chị Thu đang mong được thăng chức năm nay."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[promotion]. Nghĩa là sự thăng chức.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[He got a promotion after two years.]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Ms. Thu is hoping for a promotion this year.]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Anh ấy muốn được thăng chức.",
+     "tu": "promotion",
+     "so_tu": 4,
+     "en": "He wants a [[d0a|promotion]].",
+     "dap": [
+      "He wants a promotion.",
+      "He wants to get a promotion."
+     ],
+     "nhan": [
+      "promotion"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Anh ấy muốn được thăng chức. Nhớ dùng từ [promotion].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [He wants a promotion.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "salary",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|tiền lương]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "The [[e2a|salary]] is paid at the end of each month.",
+     "vi": "Lương được trả vào cuối mỗi tháng."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The job offers a good [[f2a|salary]].",
+     "vi": "Công việc này có mức lương tốt."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[salary]. Nghĩa là tiền lương.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[The salary is paid at the end of each month.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The job offers a good salary.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "retire",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m3a|nghỉ hưu]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "Mr. Nam will [[e3a|retire]] next year.",
+     "vi": "Ông Nam sẽ nghỉ hưu vào năm sau."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "Most workers here [[f3a|retire]] at 60.",
+     "vi": "Phần lớn công nhân ở đây nghỉ hưu ở tuổi 60."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[retire]. Nghĩa là nghỉ hưu.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[Mr. Nam will retire next year.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Most workers here retire at 60.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Bố tôi đã nghỉ hưu năm ngoái.",
+     "tu": "retire",
+     "so_tu": 5,
+     "en": "My father [[d1a|retired]] last year.",
+     "dap": [
+      "My father retired last year.",
+      "My dad retired last year."
+     ],
+     "nhan": [
+      "retired"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Bố tôi đã nghỉ hưu năm ngoái. Nhớ dùng từ [retire].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [My father retired last year.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "After five years at the company, Ms. Thu received a ___ to manager.",
+     "lua_chon": [
+      "employee",
+      "promotion",
+      "salary",
+      "retire"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là promotion: promotion to manager là được thăng chức lên quản lý.",
+      "Promotion to manager là được thăng chức lên quản lý.",
+      "Đáp án là promotion: promotion to manager là được thăng chức lên quản lý.",
+      "Đáp án là promotion: promotion to manager là được thăng chức lên quản lý."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [promotion to manager] là được thăng chức lên quản lý."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [promotion to manager] là được thăng chức lên quản lý. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: [promotion to manager] là được thăng chức lên quản lý. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [promotion to manager] là được thăng chức lên quản lý. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [promotion], vì [promotion to manager] là được thăng chức lên quản lý."
+     },
+     "giai": {
+      "noi": "Vì [promotion to manager] là được thăng chức lên quản lý."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

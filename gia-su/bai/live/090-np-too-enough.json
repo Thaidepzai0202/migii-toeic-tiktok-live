@@ -1,0 +1,290 @@
+{
+ "id": "np-too-enough",
+ "ten": "Too và enough",
+ "nhom": "Ngữ pháp · Cấu trúc hay gặp",
+ "so": 90,
+ "chuong": {
+  "so": 10,
+  "ten": "Đi lại và công tác",
+  "bai": 7,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Too và enough",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|too đứng trước tính từ]]: [[y0b|quá]], tới mức không làm được."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "[[y1a|enough đứng sau tính từ]]: [[y1b|đủ]] để làm được."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "too + adj (+ to V) · adj + enough (+ to V)"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học [Too] và [enough].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[too] đứng trước tính từ: quá, tới mức không làm được.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 1560
+      }
+     ]
+    },
+    {
+     "noi": "[enough] đứng sau tính từ: đủ để làm được.",
+     "lam": [
+      {
+       "to": "y1a"
+      },
+      {
+       "to": "y1b",
+       "sau": 1620
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [too] đứng trước tính từ, [enough] đứng sau tính từ.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "The box is [[v0a|too heavy]] to lift.",
+     "vi": "Cái hộp nặng quá, không nâng nổi."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "The room is [[v1a|big enough]] for 50 people.",
+     "vi": "Căn phòng đủ rộng cho 50 người."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [The box is too heavy to lift.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "[too] đứng trước [heavy].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [The room is big enough for 50 people.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "[enough] đứng sau [big].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Đi lại và công tác",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "The bag is [[c0a|too heavy]] to carry on the plane.",
+     "vi": "Túi quá nặng để mang lên máy bay."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "Is there [[c1a|enough time]] to take the train?",
+     "vi": "Có đủ thời gian để đi tàu không?"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề đi lại và công tác: [The bag is too heavy to carry on the plane.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "[too] đứng trước tính từ: quá nặng.",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [Is there enough time to take the train?]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "[enough] đứng trước danh từ: [enough time].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The meeting room is not ___ for the whole team.",
+     "lua_chon": [
+      "largely",
+      "too large",
+      "large enough",
+      "enough large"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là large enough: enough đứng sau tính từ.",
+      "Đáp án là large enough: enough đứng sau tính từ.",
+      "Enough đứng sau tính từ.",
+      "Đáp án là large enough: enough đứng sau tính từ."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "The price was ___ high for most customers.",
+     "lua_chon": [
+      "very much",
+      "too",
+      "enough",
+      "so much"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là too: giá quá cao, too đứng trước tính từ.",
+      "Giá quá cao, too đứng trước tính từ.",
+      "Đáp án là too: giá quá cao, too đứng trước tính từ.",
+      "Đáp án là too: giá quá cao, too đứng trước tính từ."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [enough] đứng sau tính từ."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [enough] đứng sau tính từ. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [enough] đứng sau tính từ. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [enough] đứng sau tính từ. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [large enough], vì [enough] đứng sau tính từ."
+     },
+     "giai": {
+      "noi": "Vì [enough] đứng sau tính từ."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Giá quá cao, [too] đứng trước tính từ."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: giá quá cao, [too] đứng trước tính từ. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: giá quá cao, [too] đứng trước tính từ. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: giá quá cao, [too] đứng trước tính từ. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [too], vì giá quá cao, [too] đứng trước tính từ."
+     },
+     "giai": {
+      "noi": "Vì giá quá cao, [too] đứng trước tính từ."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

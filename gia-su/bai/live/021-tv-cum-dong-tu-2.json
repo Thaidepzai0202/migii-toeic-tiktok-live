@@ -1,0 +1,385 @@
+{
+ "id": "tv-cum-dong-tu-2",
+ "ten": "Cụm động từ hay gặp (2)",
+ "nhom": "Từ vựng · Cụm động từ",
+ "so": 21,
+ "chuong": {
+  "so": 3,
+  "ten": "Nhân sự",
+  "bai": 2,
+  "tong": 11
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "fill out",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m0a|điền đơn]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "Please [[e0a|fill out]] this form.",
+     "vi": "Vui lòng điền vào mẫu đơn này."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "Applicants must [[f0a|fill out]] the form online.",
+     "vi": "Người ứng tuyển phải điền đơn trực tuyến."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Tiếp chủ đề nhân sự. Bài này mình học bốn từ về cụm động từ.",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[fill out]. Nghĩa là điền đơn.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please fill out this form.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Applicants must fill out the form online.]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "turn down",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m1a|từ chối]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "She [[e1a|turned down]] the job offer.",
+     "vi": "Cô ấy đã từ chối lời mời làm việc."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "The company [[f1a|turned down]] his request for leave.",
+     "vi": "Công ty đã từ chối đơn xin nghỉ của anh ấy."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[turn down]. Nghĩa là từ chối.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[She turned down the job offer.]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The company turned down his request for leave.]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Cô ấy đã từ chối lời mời làm việc.",
+     "tu": "turn down",
+     "so_tu": 6,
+     "en": "She [[d0a|turned down]] the job offer.",
+     "dap": [
+      "She turned down the job offer.",
+      "She turned the job offer down."
+     ],
+     "nhan": [
+      "turned down"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Cô ấy đã từ chối lời mời làm việc. Nhớ dùng từ [turn down].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [She turned down the job offer.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "figure out",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m2a|tìm ra, hiểu ra]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "We need to [[e2a|figure out]] why sales dropped.",
+     "vi": "Chúng ta cần tìm ra vì sao doanh số giảm."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "New staff need time to [[f2a|figure out]] the system.",
+     "vi": "Nhân viên mới cần thời gian để hiểu hệ thống."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[figure out]. Nghĩa là tìm ra, hiểu ra.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[We need to figure out why sales dropped.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[New staff need time to figure out the system.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "run out of",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m3a|hết, cạn]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "The printer has [[e3a|run out of]] paper.",
+     "vi": "Máy in hết giấy rồi."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "We have [[f3a|run out of]] application forms.",
+     "vi": "Chúng tôi hết mẫu đơn ứng tuyển rồi."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[run out of]. Nghĩa là hết, cạn.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[The printer has run out of paper.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[We have run out of application forms.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Chúng tôi hết cà phê rồi.",
+     "tu": "run out of",
+     "so_tu": 6,
+     "en": "We have [[d1a|run out of]] coffee.",
+     "dap": [
+      "We have run out of coffee.",
+      "We ran out of coffee."
+     ],
+     "nhan": [
+      "run out of"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Chúng tôi hết cà phê rồi. Nhớ dùng từ [run out of].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [We have run out of coffee.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Applicants must ___ the application form in black ink.",
+     "lua_chon": [
+      "turn down",
+      "fill out",
+      "run out of",
+      "figure out"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là fill out: mẫu đơn thì fill out, điền vào.",
+      "Mẫu đơn thì fill out, điền vào.",
+      "Đáp án là fill out: mẫu đơn thì fill out, điền vào.",
+      "Đáp án là fill out: mẫu đơn thì fill out, điền vào."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Mẫu đơn thì [fill out], điền vào."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: mẫu đơn thì [fill out], điền vào. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: mẫu đơn thì [fill out], điền vào. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: mẫu đơn thì [fill out], điền vào. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [fill out], vì mẫu đơn thì [fill out], điền vào."
+     },
+     "giai": {
+      "noi": "Vì mẫu đơn thì [fill out], điền vào."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

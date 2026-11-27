@@ -1,0 +1,385 @@
+{
+ "id": "tv-cum-dong-tu-1",
+ "ten": "Cụm động từ hay gặp (1)",
+ "nhom": "Từ vựng · Cụm động từ",
+ "so": 76,
+ "chuong": {
+  "so": 9,
+  "ten": "Công nghệ và công trình",
+  "bai": 2,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "look into",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m0a|xem xét, tìm hiểu]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "We will [[e0a|look into]] your complaint.",
+     "vi": "Chúng tôi sẽ xem xét khiếu nại của bạn."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "The IT team is [[f0a|looking into]] the problem.",
+     "vi": "Nhóm IT đang xem xét sự cố."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Tiếp chủ đề công nghệ và công trình. Bài này mình học bốn từ về cụm động từ.",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[look into]. Nghĩa là xem xét, tìm hiểu.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[We will look into your complaint.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The IT team is looking into the problem.]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "set up",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m1a|lắp đặt, thiết lập]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "Can you [[e1a|set up]] the projector?",
+     "vi": "Bạn lắp máy chiếu giúp được không?"
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "We need to [[f1a|set up]] the new computers before Monday.",
+     "vi": "Phải lắp đặt máy tính mới trước thứ Hai."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[set up]. Nghĩa là lắp đặt, thiết lập.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[Can you set up the projector?]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[We need to set up the new computers before Monday.]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Anh ấy đang lắp đặt máy in.",
+     "tu": "set up",
+     "so_tu": 6,
+     "en": "He is [[d0a|setting up]] the printer.",
+     "dap": [
+      "He is setting up the printer.",
+      "He is setting the printer up."
+     ],
+     "nhan": [
+      "setting up"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Anh ấy đang lắp đặt máy in. Nhớ dùng từ [set up].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [He is setting up the printer.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "carry out",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m2a|thực hiện]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "The team will [[e2a|carry out]] a survey.",
+     "vi": "Nhóm sẽ thực hiện một cuộc khảo sát."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "Engineers will [[f2a|carry out]] safety checks tomorrow.",
+     "vi": "Ngày mai kỹ sư sẽ kiểm tra an toàn."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[carry out]. Nghĩa là thực hiện.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[The team will carry out a survey.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Engineers will carry out safety checks tomorrow.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "put off",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m3a|trì hoãn]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "Let us [[e3a|put off]] the meeting until Monday.",
+     "vi": "Hãy dời cuộc họp sang thứ Hai."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The system update was [[f3a|put off]] until the weekend.",
+     "vi": "Việc cập nhật hệ thống bị lùi tới cuối tuần."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[put off]. Nghĩa là trì hoãn.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[Let us put off the meeting until Monday.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The system update was put off until the weekend.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Đừng trì hoãn công việc của bạn.",
+     "tu": "put off",
+     "so_tu": 6,
+     "en": "Do not [[d1a|put off]] your work.",
+     "dap": [
+      "Do not put off your work.",
+      "Do not put your work off."
+     ],
+     "nhan": [
+      "put off"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Đừng trì hoãn công việc của bạn. Nhớ dùng từ [put off].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [Do not put off your work.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The manager promised to ___ the problem right away.",
+     "lua_chon": [
+      "carry out",
+      "set up",
+      "look into",
+      "put off"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là look into: hứa look into, xem xét vấn đề ngay.",
+      "Đáp án là look into: hứa look into, xem xét vấn đề ngay.",
+      "Hứa look into, xem xét vấn đề ngay.",
+      "Đáp án là look into: hứa look into, xem xét vấn đề ngay."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Hứa [look into], xem xét vấn đề ngay."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: hứa [look into], xem xét vấn đề ngay. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: hứa [look into], xem xét vấn đề ngay. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: hứa [look into], xem xét vấn đề ngay. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [look into], vì hứa [look into], xem xét vấn đề ngay."
+     },
+     "giai": {
+      "noi": "Vì hứa [look into], xem xét vấn đề ngay."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

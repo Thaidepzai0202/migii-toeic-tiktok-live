@@ -1,0 +1,389 @@
+{
+ "id": "tv-tai-chinh",
+ "ten": "Từ vựng tài chính",
+ "nhom": "Từ vựng · Tài chính",
+ "so": 31,
+ "chuong": {
+  "so": 4,
+  "ten": "Tài chính",
+  "bai": 1,
+  "tong": 10
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "budget",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|ngân sách]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "The marketing [[e0a|budget]] was cut by 10%.",
+     "vi": "Ngân sách marketing bị cắt 10%."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "We need to stay within the [[f0a|budget]].",
+     "vi": "Chúng ta phải chi trong giới hạn ngân sách."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Chương bốn: Tài chính. Chương này có mười bài. Bài này mình học bốn từ về tài chính.",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[budget]. Nghĩa là ngân sách.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[The marketing budget was cut by 10%.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[We need to stay within the budget.]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "expense",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|khoản chi phí]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "Travel [[e1a|expenses]] are paid by the company.",
+     "vi": "Chi phí đi lại do công ty trả."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "Rent is our biggest [[f1a|expense]].",
+     "vi": "Tiền thuê là khoản chi lớn nhất của chúng tôi."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[expense]. Nghĩa là khoản chi phí.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[Travel expenses are paid by the company.]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Rent is our biggest expense.]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Chi phí năm nay rất cao.",
+     "tu": "expense",
+     "so_tu": 7,
+     "en": "The [[d0a|expenses]] are very high this year.",
+     "dap": [
+      "The expenses are very high this year.",
+      "Expenses are very high this year.",
+      "The expenses this year are very high.",
+      "This year the expenses are very high."
+     ],
+     "nhan": [
+      "expenses"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Chi phí năm nay rất cao. Nhớ dùng từ [expense].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [The expenses are very high this year.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "revenue",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|doanh thu]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "Our [[e2a|revenue]] grew by 20% this year.",
+     "vi": "Doanh thu năm nay tăng 20%."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "Most of our [[f2a|revenue]] comes from online sales.",
+     "vi": "Phần lớn doanh thu đến từ bán hàng trực tuyến."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[revenue]. Nghĩa là doanh thu.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[Our revenue grew by 20% this year.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Most of our revenue comes from online sales.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "profit",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|lợi nhuận]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "The company made a large [[e3a|profit]] last year.",
+     "vi": "Năm ngoái công ty lãi lớn."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The [[f3a|profits]] will be shared with all staff.",
+     "vi": "Lợi nhuận sẽ được chia cho mọi nhân viên."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[profit]. Nghĩa là lợi nhuận.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[The company made a large profit last year.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The profits will be shared with all staff.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Công ty có lợi nhuận lớn.",
+     "tu": "profit",
+     "so_tu": 6,
+     "en": "The company has a big [[d1a|profit]].",
+     "dap": [
+      "The company has a big profit.",
+      "The company has a large profit.",
+      "The company made a big profit.",
+      "The company made a large profit."
+     ],
+     "nhan": [
+      "profit"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Công ty có lợi nhuận lớn. Nhớ dùng từ [profit].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [The company has a big profit.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "We must stay within the ___ for this project.",
+     "lua_chon": [
+      "profit",
+      "revenue",
+      "expense",
+      "budget"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là budget: stay within the budget là giữ trong ngân sách.",
+      "Đáp án là budget: stay within the budget là giữ trong ngân sách.",
+      "Đáp án là budget: stay within the budget là giữ trong ngân sách.",
+      "Stay within the budget là giữ trong ngân sách."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [stay within the budget] là giữ trong ngân sách."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [stay within the budget] là giữ trong ngân sách. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [stay within the budget] là giữ trong ngân sách. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: [stay within the budget] là giữ trong ngân sách. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [budget], vì [stay within the budget] là giữ trong ngân sách."
+     },
+     "giai": {
+      "noi": "Vì [stay within the budget] là giữ trong ngân sách."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

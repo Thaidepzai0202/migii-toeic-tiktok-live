@@ -1,0 +1,274 @@
+{
+ "id": "np-qua-khu-hoan-thanh",
+ "ten": "Thì quá khứ hoàn thành",
+ "nhom": "Ngữ pháp · Các thì",
+ "so": 19,
+ "chuong": {
+  "so": 2,
+  "ten": "Họp và sự kiện",
+  "bai": 10,
+  "tong": 10
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Thì quá khứ hoàn thành",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "Dùng cho việc [[y0a|xảy ra trước]] một việc khác [[y0b|trong quá khứ]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "S + had + V3"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học Thì quá khứ hoàn thành.",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Dùng cho việc xảy ra trước một việc khác trong quá khứ.",
+     "lam": [
+      {
+       "to": "y0a",
+       "sau": 840
+      },
+      {
+       "to": "y0b",
+       "sau": 2460
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: chủ ngữ cộng [had], cộng động từ dạng ba.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "The meeting [[v0a|had started]] before I arrived.",
+     "vi": "Cuộc họp đã bắt đầu trước khi tôi đến."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "By the time we called, the store [[v1a|had closed]].",
+     "vi": "Lúc chúng tôi gọi thì cửa hàng đã đóng cửa."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [The meeting had started before I arrived.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Việc xảy ra trước dùng [had started].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [By the time we called, the store had closed.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Có [by the time] với quá khứ, việc trước dùng [had].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Họp và sự kiện",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "When we arrived, the banquet [[c0a|had already begun]].",
+     "vi": "Khi chúng tôi tới thì bữa tiệc đã bắt đầu rồi."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "They [[c1a|had called off]] the event before the storm came.",
+     "vi": "Họ đã huỷ sự kiện trước khi bão tới."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề họp và sự kiện: [When we arrived, the banquet had already begun.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Bữa tiệc bắt đầu trước lúc chúng tôi tới, nên dùng [had begun].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [They had called off the event before the storm came.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Có [before], việc xảy ra trước dùng [had] cộng động từ dạng ba.",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "By the time the client arrived, the team ___ the samples.",
+     "lua_chon": [
+      "will prepare",
+      "prepares",
+      "had prepared",
+      "has prepared"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là had prepared: by the time đi với quá khứ đơn thì việc xảy ra trước dùng had cộng dạng ba.",
+      "Đáp án là had prepared: by the time đi với quá khứ đơn thì việc xảy ra trước dùng had cộng dạng ba.",
+      "By the time đi với quá khứ đơn thì việc xảy ra trước dùng had cộng dạng ba.",
+      "Đáp án là had prepared: by the time đi với quá khứ đơn thì việc xảy ra trước dùng had cộng dạng ba."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "Mr. Vu said that he ___ the contract the day before.",
+     "lua_chon": [
+      "sign",
+      "signs",
+      "had signed",
+      "will sign"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là had signed: việc ký xảy ra trước lúc nói trong quá khứ, dùng had signed.",
+      "Đáp án là had signed: việc ký xảy ra trước lúc nói trong quá khứ, dùng had signed.",
+      "Việc ký xảy ra trước lúc nói trong quá khứ, dùng had signed.",
+      "Đáp án là had signed: việc ký xảy ra trước lúc nói trong quá khứ, dùng had signed."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [by the time] đi với quá khứ đơn thì việc xảy ra trước dùng [had] cộng dạng ba."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [by the time] đi với quá khứ đơn thì việc xảy ra trước dùng [had] cộng dạng ba. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [by the time] đi với quá khứ đơn thì việc xảy ra trước dùng [had] cộng dạng ba. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [by the time] đi với quá khứ đơn thì việc xảy ra trước dùng [had] cộng dạng ba. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [had prepared], vì [by the time] đi với quá khứ đơn thì việc xảy ra trước dùng [had] cộng dạng ba."
+     },
+     "giai": {
+      "noi": "Vì [by the time] đi với quá khứ đơn thì việc xảy ra trước dùng [had] cộng dạng ba."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Việc ký xảy ra trước lúc nói trong quá khứ, dùng [had signed]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: việc ký xảy ra trước lúc nói trong quá khứ, dùng [had signed]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: việc ký xảy ra trước lúc nói trong quá khứ, dùng [had signed]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: việc ký xảy ra trước lúc nói trong quá khứ, dùng [had signed]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [had signed], vì việc ký xảy ra trước lúc nói trong quá khứ, dùng [had signed]."
+     },
+     "giai": {
+      "noi": "Vì việc ký xảy ra trước lúc nói trong quá khứ, dùng [had signed]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="vi">
+<!-- Trang chạy thử một bài giảng có giọng AI: "Câu điều kiện 0, 1, 2, 3 khác nhau ở đâu".
+     Mở thẳng file này bằng trình duyệt. Lời + thứ tự hiện: cau-dieu-kien.json (dựng lại giọng: xem dung/).
+     Xem tĩnh một bước (để chụp màn): thêm ?xem=<số bước>. Xuất video: dung/6-video.js (mở trang với ?video=1: khung kín màn, ẩn nút). -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chạy thử: câu điều kiện</title>
+<style>
+@font-face { font-family: 'SVN-Avo'; src: url('../../public/fonts/SVN-Avo.ttf') format('truetype'); font-weight: 400; }
+@font-face { font-family: 'SVN-Avo'; src: url('../../public/fonts/SVN-Avo-Bold.ttf') format('truetype'); font-weight: 700; }
+:root {
+  --bg: #EDF3F1; --text: #10201E; --text2: #3B524E; --hint: #506762;
+  --primary-text: #1C7A6C; --accent: #A85600;
+  --font: 'SVN-Avo', 'Avenir Next', 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: #1b2422; overflow: hidden; font-family: var(--font); }
+button { font: 600 14px/1 system-ui, sans-serif; color: #dfe9e6; background: #2c3a37; border: 0; border-radius: 8px; padding: 10px 14px; cursor: pointer; }
+button:hover { background: #3a4b47; }
+button.chinh { background: #48BCAA; color: #06201C; }
+
+#khung { position: absolute; left: 50%; top: 0; width: 1080px; height: 1920px; transform-origin: 0 0; background: var(--bg) url(nen/troi-pastel.png) center / cover no-repeat; color: var(--text); overflow: hidden; }
+#tien { position: absolute; left: 0; top: 0; height: 6px; width: 0; background: var(--primary-text); opacity: .55; transition: width .4s linear; }
+
+/* Mỗi cảnh chiếm cả khung, nội dung nằm giữa vùng an toàn y 150–1600 */
+/* Mây trôi nhẹ sau nội dung: khung ngoài đưa ngang, ảnh bên trong nhấp nhô, hai nhịp khác nhau để không lặp đều. */
+#may { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+#may i { position: absolute; display: block; animation: may-ngang var(--tx) ease-in-out var(--tre) infinite alternate; }
+#may img { display: block; width: 100%; opacity: var(--mo, .92); animation: may-doc var(--ty) ease-in-out var(--tre) infinite alternate; }
+@keyframes may-ngang { from { transform: translateX(calc(var(--dx) * -1)); } to { transform: translateX(var(--dx)); } }
+@keyframes may-doc { from { transform: translateY(calc(var(--dy) * -1)) scale(1); } to { transform: translateY(var(--dy)) scale(1.03); } }
+.canh { position: absolute; left: 80px; right: 80px; top: 150px; height: 1450px; display: flex; flex-direction: column; justify-content: center; gap: 56px; opacity: 0; pointer-events: none; transition: opacity .35s ease; }
+.canh.bat { opacity: 1; }
+.khoi { margin: 0; }
+.an { display: none !important; }
+
+.to { font: 700 96px/1.22 var(--font); text-align: center; }
+.to .so { display: inline-block; font-size: 128px; letter-spacing: 28px; margin: 16px 0 16px 28px; }
+.vua { font: 400 62px/1.4 var(--font); text-align: center; color: var(--text2); }
+.ten { font: 400 44px/1.2 var(--font); color: var(--hint); }
+.ten .y { display: block; font: 700 88px/1.2 var(--font); color: var(--text); margin-top: 10px; }
+.en { font: 400 68px/1.34 var(--font); }
+.vi { font: 400 46px/1.4 var(--font); color: var(--text2); }
+.vi small { display: block; font-size: 40px; color: var(--hint); margin-top: 8px; }
+.ct { font: 700 50px/1.4 var(--font); }
+.ct small { display: block; font: 400 42px/1.4 var(--font); color: var(--hint); margin-top: 10px; }
+
+/* Chữ được nhấn: từng chữ cái lớn lên + đổi cam lần lượt từ trái sang phải (hàm nhan), nói xong dịu về teal đậm, cỡ thường */
+.n { display: inline-block; transition: color .35s ease; }
+.n.dang { color: var(--accent); font-weight: 700; }
+.n.xong { color: var(--primary-text); font-weight: 700; }
+.n .c { display: inline-block; transform-origin: 50% 82%; transition: transform .35s ease; }
+.n.dang .c { transform: scale(1.08); }
+
+/* Bảng so sánh */
+#c-ss { gap: 44px; }
+.hang { display: flex; gap: 36px; align-items: flex-start; }
+.hang .so { font: 700 92px/1 var(--font); color: var(--hint); width: 70px; flex: none; }
+.hang .y { font: 700 54px/1.2 var(--font); margin: 0 0 8px; }
+.hang .cau { font: 400 40px/1.36 var(--font); color: var(--text2); margin: 0; }
+.hang .cau b { color: var(--primary-text); }
+#ss-chot { font: 700 64px/1.3 var(--font); text-align: center; margin-top: 36px; }
+
+/* Câu hỏi */
+.trong { display: inline-block; min-width: 190px; border-bottom: 5px solid var(--text); text-align: center; line-height: 1.1; }
+.trong.co { border-color: transparent; }
+.pa { display: grid; grid-template-columns: 1fr 1fr; gap: 26px 40px; font: 400 58px/1.3 var(--font); }
+.pa span { transition: opacity .4s ease, color .4s ease; }
+.pa i { font-style: normal; font-weight: 700; color: var(--hint); margin-right: 18px; }
+.pa.xong span { opacity: .32; }
+.pa.xong span.dung { opacity: 1; color: var(--accent); font-weight: 700; }
+.pa.xong span.dung i { color: var(--accent); }
+#dem { align-self: center; width: 150px; height: 150px; position: relative; }
+#dem svg { width: 150px; height: 150px; transform: rotate(-90deg); }
+#dem circle { fill: none; stroke-width: 8; }
+#dem .nen { stroke: rgba(16, 32, 30, .1); }
+#dem .chay { stroke: var(--primary-text); stroke-linecap: round; stroke-dasharray: 427; }
+#dem b { position: absolute; inset: 0; display: grid; place-items: center; font: 700 64px/1 var(--font); color: var(--primary-text); }
+#hoi-luu { font: 700 60px/1.3 var(--font); text-align: center; color: var(--primary-text); margin-top: 20px; }
+
+/* Màn mời theo dõi kênh (cuối bài): avatar kênh có chấm "+" đỏ kiểu TikTok, chạm thì "+" xoay thành dấu tích */
+#c-ket { align-items: center; text-align: center; gap: 40px; }
+#ket-av { position: relative; width: 280px; height: 280px; margin-bottom: 36px; }
+#ket-av .anh { display: grid; place-items: center; width: 280px; height: 280px; border-radius: 999px; background: #D6F0EB; overflow: hidden; box-shadow: 0 0 0 8px #FFFFFF; }
+#ket-av .anh img { width: 350px; margin: -30px 0 0 -30px; }
+#ket-av .cong { position: absolute; left: 50%; bottom: -36px; width: 76px; height: 76px; margin-left: -38px; border-radius: 999px; background: #FE2C55; box-shadow: 0 0 0 7px #FFFFFF; display: grid; place-items: center; }
+#ket-av .cong svg { width: 46px; height: 46px; fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+#ket-av .cong .p { stroke: #FFFFFF; }
+#ket-av .cong .t { stroke: #FE2C55; stroke-dasharray: 20; stroke-dashoffset: 20; }
+#ket-av .cham { position: absolute; left: 50%; bottom: -66px; width: 136px; height: 136px; margin-left: -68px; border-radius: 999px; background: rgba(16, 32, 30, .18); opacity: 0; }
+#ket-av.cham-vao .cham { animation: kCham 480ms ease-out both; }
+#ket-av.cham-vao .cong { animation: kAn 260ms ease-in-out; }
+#ket-av.da .cong { background: #FFFFFF; transition: background 120ms 140ms; }
+#ket-av.da .cong svg { animation: kXoay 450ms cubic-bezier(.3, .7, .3, 1) both; }
+#ket-av.da .cong .p { opacity: 0; transition: opacity 80ms 150ms; }
+#ket-av.da .cong .t { stroke-dashoffset: 0; transition: stroke-dashoffset 260ms 220ms ease-out; }
+#ket-av.tinh * { animation: none !important; transition: none !important; }
+@keyframes kCham { 0% { opacity: .9; transform: scale(.4); } 100% { opacity: 0; transform: scale(1.3); } }
+@keyframes kAn { 50% { transform: scale(.82); } }
+@keyframes kXoay { from { transform: rotate(-180deg); } to { transform: rotate(0); } }
+#ket-ten { font: 700 46px/1.2 var(--font); color: var(--text2); }
+#ket-tieu { font: 700 92px/1.2 var(--font); }
+#ket-phu { font: 400 52px/1.45 var(--font); color: var(--text2); }
+
+/* Nút ngoài khung (chỉ của trang xem thử) */
+#nut { position: fixed; left: 0; right: 0; bottom: 0; height: 56px; display: flex; gap: 8px; align-items: center; justify-content: center; flex-wrap: wrap; padding: 0 12px; }
+#mo { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(237, 243, 241, .25); cursor: pointer; }
+body.video :is(#nut, #mo, #tien) { display: none !important; }
+#mo b { font: 700 60px/1 var(--font); color: #06201C; background: #48BCAA; border-radius: 28px; padding: 44px 72px; }
+</style>
+
+<div id="khung">
+  <div id="may">
+    <i style="left:-90px;top:40px;width:520px;--dx:90px;--dy:20px;--tx:8s;--ty:4.6s;--tre:-3s"><img src="nen/may-1.png" alt=""></i>
+    <i style="left:700px;top:70px;width:460px;--dx:80px;--dy:18px;--tx:9.5s;--ty:5.4s;--tre:-7s"><img src="nen/may-2.png" alt=""></i>
+    <i style="left:440px;top:240px;width:250px;--dx:120px;--dy:14px;--tx:11s;--ty:4s;--tre:-5s;--mo:.75"><img src="nen/may-3.png" alt=""></i>
+    <i style="left:620px;top:1400px;width:640px;--dx:85px;--dy:18px;--tx:9s;--ty:5s;--tre:-10s"><img src="nen/may-6.png" alt=""></i>
+    <i style="left:-180px;top:1520px;width:860px;--dx:100px;--dy:16px;--tx:10.5s;--ty:6s;--tre:-2s"><img src="nen/may-4.png" alt=""></i>
+    <i style="left:230px;top:1700px;width:720px;--dx:75px;--dy:20px;--tx:7.5s;--ty:4.4s;--tre:-6s"><img src="nen/may-5.png" alt=""></i>
+  </div>
+  <section class="canh" id="c-mo">
+    <p class="khoi to an" id="mo-1">Câu điều kiện<br><span class="so n" id="mo-so">0123</span><br>khác nhau ở đâu?</p>
+    <p class="khoi vua an" id="mo-2">Càng <span class="n" id="mo-xa">xa sự thật</span>,<br>động từ càng <span class="n" id="mo-lui">lùi về quá khứ</span></p>
+  </section>
+
+  <section class="canh" id="c-l0">
+    <p class="khoi ten an" id="l0-ten">Loại 0<span class="y n" id="l0-y">luôn luôn đúng</span></p>
+    <p class="khoi en an" id="l0-en">If it <span class="n" id="l0-v1">rains</span>,<br>the ground <span class="n" id="l0-v2">gets</span> wet.</p>
+    <p class="khoi vi an" id="l0-vi">Trời mưa thì đất ướt.</p>
+    <p class="khoi ct an" id="l0-ct">If + hiện tại đơn, hiện tại đơn</p>
+  </section>
+
+  <section class="canh" id="c-l1">
+    <p class="khoi ten an" id="l1-ten">Loại 1<span class="y n" id="l1-y">có thể xảy ra</span></p>
+    <p class="khoi en an" id="l1-en">If it <span class="n" id="l1-v1">rains</span> tomorrow,<br>I <span class="n" id="l1-v2">will stay</span> home.</p>
+    <p class="khoi vi an" id="l1-vi">Mai mà mưa, tôi sẽ ở nhà.</p>
+    <p class="khoi ct an" id="l1-ct">If + hiện tại đơn, will + V</p>
+  </section>
+
+  <section class="canh" id="c-l2">
+    <p class="khoi ten an" id="l2-ten">Loại 2<span class="y n" id="l2-y">không có thật<br>ở hiện tại</span></p>
+    <p class="khoi en an" id="l2-en">If it <span class="n" id="l2-v1">rained</span> now,<br>I <span class="n" id="l2-v2">would stay</span> home.</p>
+    <p class="khoi vi an" id="l2-vi">Nếu bây giờ trời mưa, tôi sẽ ở nhà.<small>Thực tế: bây giờ không mưa</small></p>
+    <p class="khoi ct an" id="l2-ct">If + quá khứ đơn, would + V<small>rains → rained &nbsp;&nbsp; will → would</small></p>
+  </section>
+
+  <section class="canh" id="c-l3">
+    <p class="khoi ten an" id="l3-ten">Loại 3<span class="y n" id="l3-y">không có thật<br>ở quá khứ</span></p>
+    <p class="khoi en an" id="l3-en">If it <span class="n" id="l3-v1">had rained</span> yesterday,<br>I <span class="n" id="l3-v2">would have stayed</span> home.</p>
+    <p class="khoi vi an" id="l3-vi">Nếu hôm qua trời mưa, tôi đã ở nhà.<small>Thực tế: hôm qua không mưa, tôi đã ra ngoài</small></p>
+    <p class="khoi ct an" id="l3-ct">If + had V3, would have + V3<small>rained → had rained &nbsp;&nbsp; would → would have</small></p>
+  </section>
+
+  <section class="canh" id="c-ss">
+    <div class="khoi hang an" id="ss-0"><span class="so">0</span><div><p class="y n" id="ss-y0">luôn luôn đúng</p><p class="cau">If it <b>rains</b>, the ground <b>gets</b> wet.</p></div></div>
+    <div class="khoi hang an" id="ss-1"><span class="so">1</span><div><p class="y n" id="ss-y1">có thể xảy ra</p><p class="cau">If it <b>rains</b> tomorrow, I <b>will stay</b> home.</p></div></div>
+    <div class="khoi hang an" id="ss-2"><span class="so">2</span><div><p class="y n" id="ss-y2">không thật ở hiện tại</p><p class="cau">If it <b>rained</b> now, I <b>would stay</b> home.</p></div></div>
+    <div class="khoi hang an" id="ss-3"><span class="so">3</span><div><p class="y n" id="ss-y3">không thật ở quá khứ</p><p class="cau">If it <b>had rained</b> yesterday, I <b>would have stayed</b> home.</p></div></div>
+    <p class="khoi n an" id="ss-chot">Càng xa sự thật, càng lùi thì</p>
+  </section>
+
+  <section class="canh" id="c-hoi">
+    <p class="khoi en an" id="hoi-cau">If I <span class="trong n" id="hoi-trong">&nbsp;</span> more time,<br>I <span class="n" id="hoi-v2">would learn</span> Japanese.</p>
+    <div class="khoi pa an" id="hoi-pa"><span><i>A</i>have</span><span class="dung"><i>B</i>had</span><span><i>C</i>will have</span><span><i>D</i>had had</span></div>
+    <div class="khoi an" id="dem"><svg viewBox="0 0 150 150"><circle class="nen" cx="75" cy="75" r="68"/><circle class="chay" cx="75" cy="75" r="68"/></svg><b>10</b></div>
+    <p class="khoi vi an" id="hoi-vi">Nếu có nhiều thời gian hơn, tôi sẽ học tiếng Nhật.</p>
+    <p class="khoi ct n an" id="hoi-loai">Loại 2: bây giờ không có thời gian</p>
+    <p class="khoi an" id="hoi-luu">Lưu lại để ôn tập nhé</p>
+  </section>
+
+  <section class="canh" id="c-ket">
+    <div class="khoi an" id="ket-av">
+      <span class="anh"><img src="../../public/img/ninja.png" alt=""></span>
+      <i class="cham"></i>
+      <span class="cong"><svg viewBox="0 0 24 24"><path class="p" d="M12 6v12M6 12h12"/><path class="t" d="M6.5 12.5l3.8 3.8 7.2-7.6"/></svg></span>
+    </div>
+    <p class="khoi an" id="ket-ten">Migii TOEIC</p>
+    <p class="khoi an" id="ket-tieu">Bấm <span class="n" id="ket-td">theo dõi</span><br>kênh nhé!</p>
+    <p class="khoi an" id="ket-phu">Mỗi video <span class="n" id="ket-meo">một mẹo ngữ pháp</span><br><span class="n" id="ket-gon">ngắn gọn</span>, <span class="n" id="ket-nho">dễ nhớ</span></p>
+  </section>
+
+  <div id="tien"></div>
+  <div id="mo"><b>▶ Phát</b></div>
+</div>
+<div id="nut"></div>
+
+<script src="cau-dieu-kien.data.js"></script>
+<script>
+const B = window.BAI.buoc, $ = (id) => document.getElementById(id);
+const khung = $('khung');
+const Q = new URLSearchParams(location.search), VIDEO = Q.get('video') === '1';
+if (VIDEO) document.body.classList.add('video');
+const CANH = [...new Set(B.map((b) => b.canh))];
+const TEN = { mo: 'Mở', l0: 'Loại 0', l1: 'Loại 1', l2: 'Loại 2', l3: 'Loại 3', ss: 'So sánh', hoi: 'Câu hỏi', ket: 'Theo dõi kênh' };
+const DEM = 10; // giây đếm trước khi hiện đáp án (theo bản video gia sư đã chốt)
+let ti = 1, luot = 0, tam = false, am = null, cho = [];
+
+function vua() {
+  ti = VIDEO ? innerWidth / 1080 : Math.min(innerWidth / 1080, (innerHeight - 64) / 1920);
+  khung.style.transform = `translateX(${-540 * ti}px) scale(${ti})`;
+}
+addEventListener('resize', vua); vua();
+
+// Toạ độ của phần tử trong khung 1080×1920
+const o = (el) => { const a = el.getBoundingClientRect(), k = khung.getBoundingClientRect(); return { x: (a.left - k.left) / ti, y: (a.top - k.top) / ti, w: a.width / ti, h: a.height / ti }; };
+const ngu = (ms) => new Promise((r) => { const t = setTimeout(r, ms); cho.push(() => { clearTimeout(t); r(); }); });
+const choTam = async () => { while (tam) await new Promise((r) => setTimeout(r, 80)); };
+
+// Hiện một khối: các khối đang có trượt êm về chỗ mới để cả phần vẫn ở giữa màn
+function hien(el, tinh) {
+  if (!el.classList.contains('an')) return;
+  const cu = [...el.closest('.canh').querySelectorAll('.khoi:not(.an)')].map((e) => [e, o(e).y]);
+  el.classList.remove('an');
+  if (tinh) return;
+  for (const [e, y] of cu) { const d = y - o(e).y; if (Math.abs(d) > 1) e.animate([{ transform: `translateY(${d}px)` }, { transform: 'none' }], { duration: 520, easing: 'cubic-bezier(.2,.8,.2,1)' }); }
+  el.animate([{ opacity: 0, transform: 'translateY(36px)' }, { opacity: 1, transform: 'none' }], { duration: 520, easing: 'cubic-bezier(.2,.8,.2,1)' });
+}
+
+// Tách chữ của phần tử thành từng chữ cái (span.c) để cho lớn lên lần lượt; giữ nguyên <br> và khoảng trắng
+function tachChu(el) {
+  if (el.querySelector('.c')) return;
+  const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT), nut = [];
+  while (w.nextNode()) nut.push(w.currentNode);
+  for (const t of nut) {
+    const f = document.createDocumentFragment();
+    for (const ch of Array.from(t.textContent.normalize('NFC'))) {
+      if (/\s/.test(ch)) f.append(ch); else { const c = document.createElement('span'); c.className = 'c'; c.textContent = ch; f.append(c); }
+    }
+    t.replaceWith(f);
+  }
+}
+// Nhấn: từng chữ cái lớn lên rồi đổi cam + đậm, lần lượt từ trái sang phải; xong vẫn lớn hơn thường một chút cho tới khi dịu
+function nhan(el, tinh) {
+  const mauCu = getComputedStyle(el).color, damCu = getComputedStyle(el).fontWeight;
+  tachChu(el);
+  el.classList.remove('xong'); el.classList.add('dang');
+  if (tinh) return;
+  const cs = [...el.querySelectorAll('.c')], buoc = Math.max(28, Math.min(75, 760 / Math.max(1, cs.length)));
+  cs.forEach((c, k) => c.animate([
+    { transform: 'scale(1)', color: mauCu, fontWeight: damCu },
+    { transform: 'scale(1.36)', color: 'var(--accent)', fontWeight: 700, offset: .5 },
+    { transform: 'scale(1.08)', color: 'var(--accent)', fontWeight: 700 },
+  ], { duration: 460, delay: k * buoc, easing: 'ease-out', fill: 'backwards' }));
+}
+const diu = () => document.querySelectorAll('.n.dang').forEach((e) => { e.classList.remove('dang'); e.classList.add('xong'); });
+
+function dap() {
+  const t = $('hoi-trong'); t.textContent = 'had'; t.classList.add('co');
+  $('hoi-pa').classList.add('xong'); $('dem').classList.add('an');
+}
+// Chạm chấm "+" dưới avatar: vòng mờ, rồi "+" xoay thành dấu tích (như bấm follow trên TikTok)
+function theoDoi(tinh) {
+  const a = $('ket-av');
+  if (tinh) { a.classList.add('tinh', 'da'); return; }
+  a.classList.add('cham-vao'); setTimeout(() => a.classList.add('da'), 130);
+}
+function doiCanh(c) {
+  document.querySelectorAll('.canh').forEach((e) => e.classList.toggle('bat', e.id === 'c-' + c));
+  document.querySelectorAll('#nut button[data-c]').forEach((b) => b.classList.toggle('chinh', b.dataset.c === c));
+}
+function xoa() {
+  document.querySelectorAll('.khoi').forEach((e) => e.classList.add('an'));
+  document.querySelectorAll('.n').forEach((e) => { e.classList.remove('dang', 'xong'); e.getAnimations({ subtree: true }).forEach((x) => x.cancel()); });
+  $('ket-av').classList.remove('cham-vao', 'da', 'tinh');
+  const t = $('hoi-trong'); t.innerHTML = '&nbsp;'; t.classList.remove('co'); $('hoi-pa').classList.remove('xong');
+}
+// Bày ngay (không tiếng, không hiệu ứng) mọi thứ từ đầu cảnh tới bước i
+function bay(i) {
+  xoa(); doiCanh(B[i].canh);
+  for (let k = B.findIndex((b) => b.canh === B[i].canh); k <= i; k++) {
+    diu(); (B[k].hien || []).forEach((id) => hien($(id), true)); (B[k].nhan || []).forEach((id) => nhan($(id), true));
+    if (B[k].viec === 'dem' && k < i) $('dem').classList.add('an');
+    if (B[k].viec === 'dem' && k === i) $('dem').classList.remove('an');
+    if (B[k].viec === 'dap') dap();
+    if (B[k].viec === 'theo-doi') theoDoi(true);
+  }
+}
+
+async function dem(l) {
+  const d = $('dem'), so = d.querySelector('b'), v = d.querySelector('.chay');
+  hien(d);
+  for (let s = DEM; s > 0 && l === luot; s--) {
+    so.textContent = s; v.style.strokeDashoffset = 427 * (1 - s / DEM);
+    await ngu(1000); await choTam();
+  }
+}
+
+async function chay(tu) {
+  const l = ++luot;
+  cho.splice(0).forEach((f) => f()); if (am) am.pause();
+  tam = false; $('nut-tam').textContent = 'Tạm dừng'; $('mo').style.display = 'none';
+  xoa(); doiCanh(B[tu].canh); await ngu(350);
+  for (let i = tu; i < B.length && l === luot; i++) {
+    const b = B[i];
+    if (i > tu && b.canh !== B[i - 1].canh) { xoa(); doiCanh(b.canh); await ngu(420); if (l !== luot) return; }
+    $('tien').style.width = (100 * (i + 1) / B.length) + '%';
+    diu();
+    (b.hien || []).forEach((id) => hien($(id)));
+    am = new Audio('am/' + b.file);
+    const xong = new Promise((r) => { am.onended = r; am.onerror = r; });
+    await new Promise((r) => { am.onloadedmetadata = r; am.onerror = r; setTimeout(r, 1500); });
+    if (l !== luot) return;
+    const dai = (isFinite(am.duration) && am.duration ? am.duration : 2.5) * 1000, n = (b.nhan || []).length;
+    (window.__am ||= []).push({ file: b.file, t: Date.now() }); // 6-video.js ghép tiếng theo mốc này
+    am.play().catch(() => {});
+    (b.nhan || []).forEach((id, k) => setTimeout(() => l === luot && nhan($(id)), Math.max(150, dai * (k + 1) / (n + 1) - 250)));
+    if (b.viec === 'dap') setTimeout(() => l === luot && dap(), dai * 0.62);
+    if (b.viec === 'theo-doi') setTimeout(() => l === luot && theoDoi(), dai * 0.7);
+    await xong; if (l !== luot) return;
+    await choTam();
+    if (b.viec === 'dem') await dem(l);
+    await ngu(b.nghi * 1000); await choTam();
+  }
+  if (l === luot) window.__xongVideo = 1;
+}
+
+// Nút của trang xem thử
+const nut = $('nut');
+nut.insertAdjacentHTML('beforeend', '<button class="chinh" id="nut-dau">Phát từ đầu</button><button id="nut-tam">Tạm dừng</button>');
+for (const c of CANH) nut.insertAdjacentHTML('beforeend', `<button data-c="${c}">${TEN[c] || c}</button>`);
+nut.onclick = (e) => {
+  const b = e.target.closest('button'); if (!b) return;
+  if (b.id === 'nut-dau') chay(0);
+  else if (b.id === 'nut-tam') { tam = !tam; b.textContent = tam ? 'Tiếp tục' : 'Tạm dừng'; if (am) tam ? am.pause() : (am.ended || am.play().catch(() => {})); }
+  else chay(B.findIndex((x) => x.canh === b.dataset.c));
+};
+$('mo').onclick = () => chay(0);
+
+const xem = Q.get('xem');
+if (xem !== null) { $('mo').style.display = 'none'; document.fonts.ready.then(() => bay(Math.min(B.length - 1, +xem))); }
+else if (VIDEO) { xoa(); doiCanh(B[0].canh); document.fonts.ready.then(() => { window.__sanSang = 1; }); }
+else bay(0);
+</script>
+</html>

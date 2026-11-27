@@ -1,0 +1,374 @@
+{
+ "id": "tv-ke-toan",
+ "ten": "Từ vựng kế toán",
+ "nhom": "Từ vựng · Kế toán",
+ "so": 34,
+ "chuong": {
+  "so": 4,
+  "ten": "Tài chính",
+  "bai": 4,
+  "tong": 10
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "invoice",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|hoá đơn đòi thanh toán]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "Please pay the [[e0a|invoice]] within 30 days.",
+     "vi": "Vui lòng thanh toán hoá đơn trong vòng 30 ngày."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "The [[f0a|invoice]] was sent to the wrong address.",
+     "vi": "Hoá đơn bị gửi nhầm địa chỉ."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[invoice]. Hoá đơn đòi thanh toán.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please pay the invoice within 30 days.] Vui lòng thanh toán hoá đơn trong vòng 30 ngày.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The invoice was sent to the wrong address.] Hoá đơn bị gửi nhầm địa chỉ.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "receipt",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|biên lai]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "Keep your [[e1a|receipt]] in case you need a refund.",
+     "vi": "Hãy giữ biên lai phòng khi cần hoàn tiền."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "Please attach all [[f1a|receipts]] to your expense report.",
+     "vi": "Vui lòng đính kèm mọi biên lai vào báo cáo chi phí."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[receipt]. Biên lai.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[Keep your receipt in case you need a refund.] Hãy giữ biên lai phòng khi cần hoàn tiền.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Please attach all receipts to your expense report.] Vui lòng đính kèm mọi biên lai vào báo cáo chi phí.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Đây là biên lai của bạn.",
+     "tu": "receipt",
+     "so_tu": 4,
+     "en": "Here is your [[d0a|receipt]].",
+     "dap": [
+      "Here is your receipt.",
+      "This is your receipt."
+     ],
+     "nhan": [
+      "receipt"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Đây là biên lai của bạn.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[Here is your receipt.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "reimburse",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m2a|hoàn trả chi phí]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "The company will [[e2a|reimburse]] your taxi fare.",
+     "vi": "Công ty sẽ hoàn lại tiền taxi cho bạn."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "You will be [[f2a|reimbursed]] within two weeks.",
+     "vi": "Bạn sẽ được hoàn tiền trong hai tuần."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[reimburse]. Hoàn trả chi phí.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[The company will reimburse your taxi fare.] Công ty sẽ hoàn lại tiền taxi cho bạn.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[You will be reimbursed within two weeks.] Bạn sẽ được hoàn tiền trong hai tuần.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "audit",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|cuộc kiểm toán]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "The annual [[e3a|audit]] starts next week.",
+     "vi": "Cuộc kiểm toán hằng năm bắt đầu tuần sau."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The [[f3a|audit]] found no problems.",
+     "vi": "Cuộc kiểm toán không phát hiện vấn đề gì."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[audit]. Cuộc kiểm toán.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[The annual audit starts next week.] Cuộc kiểm toán hằng năm bắt đầu tuần sau.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The audit found no problems.] Cuộc kiểm toán không phát hiện vấn đề gì.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Cuộc kiểm toán bắt đầu hôm nay.",
+     "tu": "audit",
+     "so_tu": 4,
+     "en": "The [[d1a|audit]] starts today.",
+     "dap": [
+      "The audit starts today.",
+      "The audit begins today."
+     ],
+     "nhan": [
+      "audit"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Cuộc kiểm toán bắt đầu hôm nay.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[The audit starts today.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Customers need the original ___ to return an item to the store.",
+     "lua_chon": [
+      "deadline",
+      "reimburse",
+      "audit",
+      "receipt"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là receipt: trả hàng cần receipt, tức biên lai mua hàng.",
+      "Đáp án là receipt: trả hàng cần receipt, tức biên lai mua hàng.",
+      "Đáp án là receipt: trả hàng cần receipt, tức biên lai mua hàng.",
+      "Trả hàng cần receipt, tức biên lai mua hàng."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Trả hàng cần [receipt], tức biên lai mua hàng."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: trả hàng cần [receipt], tức biên lai mua hàng. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: trả hàng cần [receipt], tức biên lai mua hàng. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: trả hàng cần [receipt], tức biên lai mua hàng. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Customers need the original receipt to return an item to the store.]"
+     },
+     "giai": {
+      "noi": "Vì trả hàng cần [receipt], tức biên lai mua hàng."
+     }
+    }
+   ]
+  }
+ ]
+}

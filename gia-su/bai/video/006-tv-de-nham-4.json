@@ -1,0 +1,374 @@
+{
+ "id": "tv-de-nham-4",
+ "ten": "Từ dễ nhầm: advice, advise, stationery, stationary",
+ "nhom": "Từ vựng · Từ dễ nhầm",
+ "so": 6,
+ "chuong": {
+  "so": 1,
+  "ten": "Văn phòng",
+  "bai": 6,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "advice",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|lời khuyên]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "Thank you for your [[e0a|advice]].",
+     "vi": "Cảm ơn lời khuyên của bạn."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "My supervisor gave me some good [[f0a|advice]].",
+     "vi": "Cấp trên cho tôi vài lời khuyên hay."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[advice]. Lời khuyên.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Thank you for your advice.] Cảm ơn lời khuyên của bạn.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[My supervisor gave me some good advice.] Cấp trên cho tôi vài lời khuyên hay.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "advise",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m1a|khuyên]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "I [[e1a|advise]] you to book early.",
+     "vi": "Tôi khuyên bạn nên đặt sớm."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "We [[f1a|advise]] all staff to save their files often.",
+     "vi": "Chúng tôi khuyên mọi nhân viên lưu tệp thường xuyên."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[advise]. Khuyên.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[I advise you to book early.] Tôi khuyên bạn nên đặt sớm.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[We advise all staff to save their files often.] Chúng tôi khuyên mọi nhân viên lưu tệp thường xuyên.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Tôi khuyên bạn nên nghỉ ngơi.",
+     "tu": "advise",
+     "so_tu": 5,
+     "en": "I [[d0a|advise]] you to rest.",
+     "dap": [
+      "I advise you to rest.",
+      "I advise you to take a rest.",
+      "I advise you to have a rest."
+     ],
+     "nhan": [
+      "advise"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Tôi khuyên bạn nên nghỉ ngơi.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[I advise you to rest.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "stationery",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|văn phòng phẩm]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "Please order more [[e2a|stationery]] for the office.",
+     "vi": "Vui lòng đặt thêm văn phòng phẩm cho văn phòng."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "Pens and paper are kept in the [[f2a|stationery]] cabinet.",
+     "vi": "Bút và giấy để trong tủ văn phòng phẩm."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[stationery]. Văn phòng phẩm.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please order more stationery for the office.] Vui lòng đặt thêm văn phòng phẩm cho văn phòng.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Pens and paper are kept in the stationery cabinet.] Bút và giấy để trong tủ văn phòng phẩm.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "stationary",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**tính từ** · [[m3a|đứng yên]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "The car was [[e3a|stationary]] at the red light.",
+     "vi": "Chiếc xe đứng yên ở đèn đỏ."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "Keep the cart [[f3a|stationary]] while you load the boxes.",
+     "vi": "Giữ xe đẩy đứng yên khi bạn chất hộp lên."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[stationary]. Đứng yên.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[The car was stationary at the red light.] Chiếc xe đứng yên ở đèn đỏ.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Keep the cart stationary while you load the boxes.] Giữ xe đẩy đứng yên khi bạn chất hộp lên.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Chiếc xe buýt đang đứng yên.",
+     "tu": "stationary",
+     "so_tu": 4,
+     "en": "The bus is [[d1a|stationary]].",
+     "dap": [
+      "The bus is stationary."
+     ],
+     "nhan": [
+      "stationary"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Chiếc xe buýt đang đứng yên.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[The bus is stationary.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The doctor ___ him to rest for a week.",
+     "lua_chon": [
+      "stationery",
+      "stationary",
+      "advice",
+      "advised"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là advised: cần động từ: advised, đã khuyên.",
+      "Đáp án là advised: cần động từ: advised, đã khuyên.",
+      "Đáp án là advised: cần động từ: advised, đã khuyên.",
+      "Cần động từ: advised, đã khuyên."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Cần động từ: [advised], đã khuyên."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: cần động từ: [advised], đã khuyên. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: cần động từ: [advised], đã khuyên. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: cần động từ: [advised], đã khuyên. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The doctor advised him to rest for a week.]"
+     },
+     "giai": {
+      "noi": "Vì cần động từ: [advised], đã khuyên."
+     }
+    }
+   ]
+  }
+ ]
+}

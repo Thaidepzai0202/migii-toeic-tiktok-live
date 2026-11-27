@@ -1,0 +1,295 @@
+{
+ "id": "np-gioi-tu-v-ing",
+ "ten": "Giới từ đi với V-ing",
+ "nhom": "Ngữ pháp · Từ loại",
+ "so": 66,
+ "chuong": {
+  "so": 7,
+  "ten": "Bán hàng và khách hàng",
+  "bai": 8,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Giới từ đi với V-ing",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "Sau [[y0a|giới từ]] như in, for, about, before, động từ luôn [[y0b|thêm ing]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "preposition + V-ing"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học Giới từ đi với [V-ing].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau giới từ như [in], [for], [about], [before], động từ luôn thêm [ing].",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 3660
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: giới từ cộng động từ thêm [ing].",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "Thank you [[v0a|for attending]] the seminar.",
+     "vi": "Cảm ơn bạn đã tham dự hội thảo."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "She is interested [[v1a|in learning]] Japanese.",
+     "vi": "Cô ấy muốn học tiếng Nhật."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [Thank you for attending the seminar.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [for] dùng [attending].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [She is interested in learning Japanese.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [in] dùng [learning].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Bán hàng và khách hàng",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "Thank you [[c0a|for choosing]] our store.",
+     "vi": "Cảm ơn bạn đã chọn cửa hàng của chúng tôi."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "Read the terms [[c1a|before signing]] the contract.",
+     "vi": "Hãy đọc các điều khoản trước khi ký hợp đồng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề bán hàng và khách hàng: [Thank you for choosing our store.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Sau giới từ [for] dùng động từ thêm [ing].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [Read the terms before signing the contract.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [before] dùng [signing].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "nhan": "Mẹo nhớ",
+   "tieu_de": "Ghi nhớ nhanh",
+   "khoi": [
+    {
+     "id": "meo",
+     "kieu": "ghi_nho",
+     "chu": "look forward to + V-ing: to ở đây là giới từ."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Cẩn thận: [look forward to] cộng động từ thêm [ing], vì [to] ở đây là giới từ.",
+     "lam": [
+      {
+       "to": "meo"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Please read the instructions carefully before ___ the machine.",
+     "lua_chon": [
+      "operate",
+      "to operate",
+      "operating",
+      "operated"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là operating: sau giới từ before dùng động từ thêm ing.",
+      "Đáp án là operating: sau giới từ before dùng động từ thêm ing.",
+      "Sau giới từ before dùng động từ thêm ing.",
+      "Đáp án là operating: sau giới từ before dùng động từ thêm ing."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "We look forward to ___ from you soon.",
+     "lua_chon": [
+      "be heard",
+      "hearing",
+      "heard",
+      "hear"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là hearing: to trong look forward to là giới từ, nên dùng hearing.",
+      "To trong look forward to là giới từ, nên dùng hearing.",
+      "Đáp án là hearing: to trong look forward to là giới từ, nên dùng hearing.",
+      "Đáp án là hearing: to trong look forward to là giới từ, nên dùng hearing."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau giới từ [before] dùng động từ thêm [ing]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: sau giới từ [before] dùng động từ thêm [ing]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: sau giới từ [before] dùng động từ thêm [ing]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: sau giới từ [before] dùng động từ thêm [ing]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [operating], vì sau giới từ [before] dùng động từ thêm [ing]."
+     },
+     "giai": {
+      "noi": "Vì sau giới từ [before] dùng động từ thêm [ing]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [to] trong [look forward to] là giới từ, nên dùng [hearing]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [to] trong [look forward to] là giới từ, nên dùng [hearing]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: [to] trong [look forward to] là giới từ, nên dùng [hearing]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [to] trong [look forward to] là giới từ, nên dùng [hearing]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [hearing], vì [to] trong [look forward to] là giới từ, nên dùng [hearing]."
+     },
+     "giai": {
+      "noi": "Vì [to] trong [look forward to] là giới từ, nên dùng [hearing]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

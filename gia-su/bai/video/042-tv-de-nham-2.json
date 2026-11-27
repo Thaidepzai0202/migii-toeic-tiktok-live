@@ -1,0 +1,377 @@
+{
+ "id": "tv-de-nham-2",
+ "ten": "Từ dễ nhầm: lend, borrow, remind, remember",
+ "nhom": "Từ vựng · Từ dễ nhầm",
+ "so": 42,
+ "chuong": {
+  "so": 5,
+  "ten": "Ngân hàng và cuộc sống",
+  "bai": 2,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "lend",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m0a|cho mượn]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "Can you [[e0a|lend]] me your pen?",
+     "vi": "Bạn cho tôi mượn bút được không?"
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "The bank will [[f0a|lend]] us the money.",
+     "vi": "Ngân hàng sẽ cho chúng tôi vay tiền."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[lend]. Cho mượn.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Can you lend me your pen?] Bạn cho tôi mượn bút được không?",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The bank will lend us the money.] Ngân hàng sẽ cho chúng tôi vay tiền.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "borrow",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m1a|mượn]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "May I [[e1a|borrow]] your charger?",
+     "vi": "Tôi mượn sạc của bạn được không?"
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "We [[f1a|borrowed]] 200 million dong from the bank.",
+     "vi": "Chúng tôi đã vay ngân hàng 200 triệu đồng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[borrow]. Mượn.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[May I borrow your charger?] Tôi mượn sạc của bạn được không?",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[We borrowed 200 million dong from the bank.] Chúng tôi đã vay ngân hàng 200 triệu đồng.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Tôi mượn bút của bạn được không?",
+     "tu": "borrow",
+     "so_tu": 5,
+     "en": "Can I [[d0a|borrow]] your pen?",
+     "dap": [
+      "Can I borrow your pen?",
+      "May I borrow your pen?",
+      "Could I borrow your pen?"
+     ],
+     "nhan": [
+      "borrow"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Tôi mượn bút của bạn được không?",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[Can I borrow your pen?]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "remind",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m2a|nhắc nhở]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "Please [[e2a|remind]] me about the meeting.",
+     "vi": "Vui lòng nhắc tôi về cuộc họp."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The app [[f2a|reminds]] you when a bill is due.",
+     "vi": "Ứng dụng nhắc bạn khi hoá đơn tới hạn."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[remind]. Nhắc nhở.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please remind me about the meeting.] Vui lòng nhắc tôi về cuộc họp.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The app reminds you when a bill is due.] Ứng dụng nhắc bạn khi hoá đơn tới hạn.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "remember",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m3a|nhớ]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "I cannot [[e3a|remember]] his name.",
+     "vi": "Tôi không nhớ tên anh ấy."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "Please [[f3a|remember]] to pay the electricity bill.",
+     "vi": "Nhớ trả tiền điện nhé."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[remember]. Nhớ.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[I cannot remember his name.] Tôi không nhớ tên anh ấy.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Please remember to pay the electricity bill.] Nhớ trả tiền điện nhé.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Tôi không nhớ mật khẩu.",
+     "tu": "remember",
+     "so_tu": 6,
+     "en": "I do not [[d1a|remember]] the password.",
+     "dap": [
+      "I do not remember the password.",
+      "I do not remember my password.",
+      "I cannot remember the password.",
+      "I cannot remember my password."
+     ],
+     "nhan": [
+      "remember"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Tôi không nhớ mật khẩu.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[I do not remember the password.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Could I ___ your laptop for an hour?",
+     "lua_chon": [
+      "remind",
+      "lend",
+      "borrow",
+      "remember"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là borrow: người nói mượn của người khác: borrow.",
+      "Đáp án là borrow: người nói mượn của người khác: borrow.",
+      "Người nói mượn của người khác: borrow.",
+      "Đáp án là borrow: người nói mượn của người khác: borrow."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Người nói mượn của người khác: [borrow]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: người nói mượn của người khác: [borrow]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: người nói mượn của người khác: [borrow]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: người nói mượn của người khác: [borrow]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Could I borrow your laptop for an hour?]"
+     },
+     "giai": {
+      "noi": "Vì người nói mượn của người khác: [borrow]."
+     }
+    }
+   ]
+  }
+ ]
+}

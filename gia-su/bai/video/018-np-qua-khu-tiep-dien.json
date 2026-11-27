@@ -1,0 +1,271 @@
+{
+ "id": "np-qua-khu-tiep-dien",
+ "ten": "Thì quá khứ tiếp diễn",
+ "nhom": "Ngữ pháp · Các thì",
+ "so": 18,
+ "chuong": {
+  "so": 2,
+  "ten": "Họp và sự kiện",
+  "bai": 9,
+  "tong": 10
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Thì quá khứ tiếp diễn",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "Dùng cho việc [[y0a|đang diễn ra]] tại một lúc trong quá khứ, thường bị [[y0b|một việc khác xen vào]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "S + was/were + V-ing"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Thì quá khứ tiếp diễn.",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Dùng cho việc đang diễn ra tại một lúc trong quá khứ, thường bị một việc khác xen vào.",
+     "lam": [
+      {
+       "to": "y0a",
+       "sau": 840
+      },
+      {
+       "to": "y0b",
+       "sau": 3840
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: chủ ngữ cộng [was] hoặc [were], cộng động từ thêm [ing].",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "I [[v0a|was checking]] my email when the power went out.",
+     "vi": "Tôi đang kiểm tra email thì mất điện."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "At 9 a.m. yesterday, they [[v1a|were preparing]] for the meeting.",
+     "vi": "Lúc 9 giờ sáng hôm qua, họ đang chuẩn bị cho cuộc họp."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[I was checking my email when the power went out.] Tôi đang kiểm tra email thì mất điện.",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Việc đang làm dùng tiếp diễn, việc xen vào dùng quá khứ đơn.",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "[At 9 a.m. yesterday, they were preparing for the meeting.] Lúc chín giờ sáng hôm qua, họ đang chuẩn bị cho cuộc họp.",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Có giờ cụ thể trong quá khứ, việc đang diễn ra.",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Họp và sự kiện",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "I [[c0a|was taking notes]] when the fire alarm rang.",
+     "vi": "Tôi đang ghi chép thì chuông báo cháy reo."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "While the keynote speaker [[c1a|was talking]], the lights went out.",
+     "vi": "Diễn giả chính đang nói thì mất điện."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[I was taking notes when the fire alarm rang.] Tôi đang ghi chép thì chuông báo cháy reo.",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Việc đang làm dở thì có việc khác xen vào.",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "[While the keynote speaker was talking, the lights went out.] Diễn giả chính đang nói thì mất điện.",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Có [while], việc đang diễn ra dùng [was talking].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "While Ms. Ho ___ the presentation, the projector stopped working.",
+     "lua_chon": [
+      "gives",
+      "has given",
+      "give",
+      "was giving"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là was giving: sau while là việc đang diễn ra trong quá khứ.",
+      "Đáp án là was giving: sau while là việc đang diễn ra trong quá khứ.",
+      "Đáp án là was giving: sau while là việc đang diễn ra trong quá khứ.",
+      "Sau while là việc đang diễn ra trong quá khứ."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "The staff were working late when the manager ___.",
+     "lua_chon": [
+      "has arrived",
+      "arrives",
+      "arrived",
+      "arriving"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là arrived: việc xen vào một việc đang diễn ra dùng quá khứ đơn.",
+      "Đáp án là arrived: việc xen vào một việc đang diễn ra dùng quá khứ đơn.",
+      "Việc xen vào một việc đang diễn ra dùng quá khứ đơn.",
+      "Đáp án là arrived: việc xen vào một việc đang diễn ra dùng quá khứ đơn."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau [while] là việc đang diễn ra trong quá khứ."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: sau [while] là việc đang diễn ra trong quá khứ. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: sau [while] là việc đang diễn ra trong quá khứ. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: sau [while] là việc đang diễn ra trong quá khứ. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[While Ms. Ho was giving the presentation, the projector stopped working.] Sau [while] là việc đang diễn ra trong quá khứ."
+     },
+     "giai": {
+      "noi": "Vì sau [while] là việc đang diễn ra trong quá khứ."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Việc xen vào một việc đang diễn ra dùng quá khứ đơn."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: việc xen vào một việc đang diễn ra dùng quá khứ đơn. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: việc xen vào một việc đang diễn ra dùng quá khứ đơn. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: việc xen vào một việc đang diễn ra dùng quá khứ đơn. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The staff were working late when the manager arrived.] Việc xen vào một việc đang diễn ra dùng quá khứ đơn."
+     },
+     "giai": {
+      "noi": "Vì việc xen vào một việc đang diễn ra dùng quá khứ đơn."
+     }
+    }
+   ]
+  }
+ ]
+}

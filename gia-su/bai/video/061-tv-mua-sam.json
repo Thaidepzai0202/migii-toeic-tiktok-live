@@ -1,0 +1,375 @@
+{
+ "id": "tv-mua-sam",
+ "ten": "Từ vựng mua sắm",
+ "nhom": "Từ vựng · Mua sắm",
+ "so": 61,
+ "chuong": {
+  "so": 7,
+  "ten": "Bán hàng và khách hàng",
+  "bai": 3,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "purchase",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m0a|mua]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "You can [[e0a|purchase]] tickets online.",
+     "vi": "Bạn có thể mua vé trên mạng."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "Thank you for your [[f0a|purchase]].",
+     "vi": "Cảm ơn bạn đã mua hàng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[purchase]. Mua.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[You can purchase tickets online.] Bạn có thể mua vé trên mạng.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Thank you for your purchase.] Cảm ơn bạn đã mua hàng.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "refund",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|tiền hoàn lại]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "You will get a full [[e1a|refund]] within 7 days.",
+     "vi": "Bạn sẽ được hoàn tiền đầy đủ trong 7 ngày."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "The customer asked for a [[f1a|refund]].",
+     "vi": "Khách hàng yêu cầu hoàn tiền."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[refund]. Tiền hoàn lại.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[You will get a full refund within 7 days.] Bạn sẽ được hoàn tiền đầy đủ trong bảy ngày.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The customer asked for a refund.] Khách hàng yêu cầu hoàn tiền.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Tôi muốn được hoàn tiền.",
+     "tu": "refund",
+     "so_tu": 4,
+     "en": "I want a [[d0a|refund]].",
+     "dap": [
+      "I want a refund.",
+      "I would like a refund.",
+      "I want to get a refund."
+     ],
+     "nhan": [
+      "refund"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Tôi muốn được hoàn tiền.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[I want a refund.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "discount",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|sự giảm giá]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "Members get a 15% [[e2a|discount]].",
+     "vi": "Thành viên được giảm giá 15%."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "We offer a [[f2a|discount]] on large orders.",
+     "vi": "Chúng tôi giảm giá cho đơn hàng lớn."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[discount]. Sự giảm giá.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[Members get a 15% discount.] Thành viên được giảm giá 15%.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[We offer a discount on large orders.] Chúng tôi giảm giá cho đơn hàng lớn.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "warranty",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|sự bảo hành]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "The laptop comes with a two-year [[e3a|warranty]].",
+     "vi": "Laptop được bảo hành hai năm."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The repair is free because the phone is still under [[f3a|warranty]].",
+     "vi": "Sửa miễn phí vì điện thoại vẫn còn bảo hành."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[warranty]. Sự bảo hành.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[The laptop comes with a two-year warranty.] Laptop được bảo hành hai năm.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The repair is free because the phone is still under warranty.] Sửa miễn phí vì điện thoại vẫn còn bảo hành.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Chiếc tivi này được bảo hành một năm.",
+     "tu": "warranty",
+     "so_tu": 6,
+     "en": "This TV has a one-year [[d1a|warranty]].",
+     "dap": [
+      "This TV has a one-year warranty.",
+      "This TV comes with a one-year warranty."
+     ],
+     "nhan": [
+      "warranty"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Chiếc tivi này được bảo hành một năm.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[This TV has a one-year warranty.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "If the product breaks, it is covered by the ___.",
+     "lua_chon": [
+      "purchase",
+      "warranty",
+      "discount",
+      "refund"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là warranty: hàng hỏng thì được warranty, tức bảo hành.",
+      "Hàng hỏng thì được warranty, tức bảo hành.",
+      "Đáp án là warranty: hàng hỏng thì được warranty, tức bảo hành.",
+      "Đáp án là warranty: hàng hỏng thì được warranty, tức bảo hành."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Hàng hỏng thì được [warranty], tức bảo hành."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: hàng hỏng thì được [warranty], tức bảo hành. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: hàng hỏng thì được [warranty], tức bảo hành. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: hàng hỏng thì được [warranty], tức bảo hành. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[If the product breaks, it is covered by the warranty.]"
+     },
+     "giai": {
+      "noi": "Vì hàng hỏng thì được [warranty], tức bảo hành."
+     }
+    }
+   ]
+  }
+ ]
+}

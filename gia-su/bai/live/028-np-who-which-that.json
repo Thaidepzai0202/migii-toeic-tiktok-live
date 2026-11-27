@@ -1,0 +1,286 @@
+{
+ "id": "np-who-which-that",
+ "ten": "Mệnh đề quan hệ: who, which, that",
+ "nhom": "Ngữ pháp · Mệnh đề quan hệ",
+ "so": 28,
+ "chuong": {
+  "so": 3,
+  "ten": "Nhân sự",
+  "bai": 9,
+  "tong": 11
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Mệnh đề quan hệ: who, which, that",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|who]] thay cho người, [[y0b|which]] thay cho vật."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "[[y1a|that]] thay được cho cả người lẫn vật."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "N (người) + who · N (vật) + which"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học Mệnh đề quan hệ: [who], [which], [that].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[who] thay cho người, [which] thay cho vật.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 1320
+      }
+     ]
+    },
+    {
+     "noi": "[that] thay được cho cả người lẫn vật.",
+     "lam": [
+      {
+       "to": "y1a"
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: danh từ chỉ người dùng [who], danh từ chỉ vật dùng [which].",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "The woman [[v0a|who]] called you is my manager.",
+     "vi": "Người phụ nữ gọi cho bạn là quản lý của tôi."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "The laptop [[v1a|which]] I bought is very light.",
+     "vi": "Chiếc laptop tôi mua rất nhẹ."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [The woman who called you is my manager.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "[woman] là người, dùng [who].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [The laptop which I bought is very light.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "[laptop] là vật, dùng [which].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Nhân sự",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "The applicant [[c0a|who]] has the best qualifications will get the job.",
+     "vi": "Người ứng tuyển có bằng cấp tốt nhất sẽ được nhận."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "The workshop [[c1a|which]] you joined was very useful.",
+     "vi": "Buổi học thực hành bạn tham gia rất hữu ích."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề nhân sự: [The applicant who has the best qualifications will get the job.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Thay cho người, dùng [who].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [The workshop which you joined was very useful.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Thay cho vật, dùng [which].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Applicants ___ have management experience are preferred.",
+     "lua_chon": [
+      "which",
+      "whose",
+      "where",
+      "who"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là who: applicants là người, dùng who.",
+      "Đáp án là who: applicants là người, dùng who.",
+      "Đáp án là who: applicants là người, dùng who.",
+      "Applicants là người, dùng who."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "The printer ___ is on the second floor needs repair.",
+     "lua_chon": [
+      "which",
+      "who",
+      "whom",
+      "whose"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Printer là vật, dùng which.",
+      "Đáp án là which: printer là vật, dùng which.",
+      "Đáp án là which: printer là vật, dùng which.",
+      "Đáp án là which: printer là vật, dùng which."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [applicants] là người, dùng [who]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [applicants] là người, dùng [who]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [applicants] là người, dùng [who]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: [applicants] là người, dùng [who]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [who], vì [applicants] là người, dùng [who]."
+     },
+     "giai": {
+      "noi": "Vì [applicants] là người, dùng [who]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [printer] là vật, dùng [which]."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [printer] là vật, dùng [which]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: [printer] là vật, dùng [which]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [printer] là vật, dùng [which]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [which], vì [printer] là vật, dùng [which]."
+     },
+     "giai": {
+      "noi": "Vì [printer] là vật, dùng [which]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

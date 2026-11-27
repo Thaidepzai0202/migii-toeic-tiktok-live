@@ -1,0 +1,296 @@
+{
+ "id": "np-hien-tai-hoan-thanh",
+ "ten": "Thì hiện tại hoàn thành",
+ "nhom": "Ngữ pháp · Các thì",
+ "so": 9,
+ "chuong": {
+  "so": 1,
+  "ten": "Văn phòng",
+  "bai": 9,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Thì hiện tại hoàn thành",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "Dùng cho việc [[y0a|bắt đầu trong quá khứ]] và [[y0b|kéo dài tới bây giờ]], hoặc vừa mới xong."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "S + have/has + V3"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học Thì hiện tại hoàn thành.",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Dùng cho việc bắt đầu trong quá khứ và kéo dài tới bây giờ, hoặc vừa mới xong.",
+     "lam": [
+      {
+       "to": "y0a",
+       "sau": 840
+      },
+      {
+       "to": "y0b",
+       "sau": 2340
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: chủ ngữ cộng [have] hoặc [has], cộng động từ dạng ba.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "She [[v0a|has worked]] here since 2020.",
+     "vi": "Cô ấy làm ở đây từ năm 2020."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "We [[v1a|have already sent]] the invoice.",
+     "vi": "Chúng tôi đã gửi hoá đơn rồi."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [She has worked here since 2020.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Có [since], việc kéo dài tới giờ.",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [We have already sent the invoice.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Có [already], việc vừa xong.",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Văn phòng",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "I [[c0a|have attached]] the agenda to this email.",
+     "vi": "Tôi đã đính kèm chương trình họp trong email này."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "The director [[c1a|has not approved]] the plan yet.",
+     "vi": "Giám đốc vẫn chưa duyệt kế hoạch."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề văn phòng: [I have attached the agenda to this email.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Việc vừa làm xong, dùng [have attached].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [The director has not approved the plan yet.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Câu phủ định có [yet] ở cuối, dùng hiện tại hoàn thành.",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "nhan": "Mẹo nhớ",
+   "tieu_de": "Ghi nhớ nhanh",
+   "khoi": [
+    {
+     "id": "meo",
+     "kieu": "ghi_nho",
+     "chu": "Dấu hiệu: since, for, already, yet, so far."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Gặp [since], [for], [already], [yet] là nghĩ tới hiện tại hoàn thành.",
+     "lam": [
+      {
+       "to": "meo"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The sales team ___ its target every month since January.",
+     "lua_chon": [
+      "exceeds",
+      "has exceeded",
+      "will exceed",
+      "exceeded"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là has exceeded: có since nên dùng hiện tại hoàn thành.",
+      "Có since nên dùng hiện tại hoàn thành.",
+      "Đáp án là has exceeded: có since nên dùng hiện tại hoàn thành.",
+      "Đáp án là has exceeded: có since nên dùng hiện tại hoàn thành."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "We have not received the shipment ___.",
+     "lua_chon": [
+      "yet",
+      "already",
+      "ago",
+      "since"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Câu phủ định ở hiện tại hoàn thành dùng yet ở cuối câu.",
+      "Đáp án là yet: câu phủ định ở hiện tại hoàn thành dùng yet ở cuối câu.",
+      "Đáp án là yet: câu phủ định ở hiện tại hoàn thành dùng yet ở cuối câu.",
+      "Đáp án là yet: câu phủ định ở hiện tại hoàn thành dùng yet ở cuối câu."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Có [since] nên dùng hiện tại hoàn thành."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: có [since] nên dùng hiện tại hoàn thành. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: có [since] nên dùng hiện tại hoàn thành. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: có [since] nên dùng hiện tại hoàn thành. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [has exceeded], vì có [since] nên dùng hiện tại hoàn thành."
+     },
+     "giai": {
+      "noi": "Vì có [since] nên dùng hiện tại hoàn thành."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Câu phủ định ở hiện tại hoàn thành dùng [yet] ở cuối câu."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: câu phủ định ở hiện tại hoàn thành dùng [yet] ở cuối câu. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: câu phủ định ở hiện tại hoàn thành dùng [yet] ở cuối câu. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: câu phủ định ở hiện tại hoàn thành dùng [yet] ở cuối câu. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [yet], vì câu phủ định ở hiện tại hoàn thành dùng [yet] ở cuối câu."
+     },
+     "giai": {
+      "noi": "Vì câu phủ định ở hiện tại hoàn thành dùng [yet] ở cuối câu."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

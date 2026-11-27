@@ -1,0 +1,375 @@
+{
+ "id": "tv-bat-quy-tac",
+ "ten": "Động từ bất quy tắc hay gặp",
+ "nhom": "Từ vựng · Động từ bất quy tắc",
+ "so": 15,
+ "chuong": {
+  "so": 2,
+  "ten": "Họp và sự kiện",
+  "bai": 6,
+  "tong": 10
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "begin, began, begun",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m0a|bắt đầu]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "The meeting has already [[e0a|begun]].",
+     "vi": "Cuộc họp đã bắt đầu rồi."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "The meeting [[f0a|began]] at 9 a.m.",
+     "vi": "Cuộc họp bắt đầu lúc 9 giờ sáng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[begin, began, begun]. Bắt đầu.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[The meeting has already begun.] Cuộc họp đã bắt đầu rồi.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The meeting began at 9 a.m.] Cuộc họp bắt đầu lúc chín giờ sáng.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "bring, brought, brought",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m1a|mang tới]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "She [[e1a|brought]] the samples yesterday.",
+     "vi": "Hôm qua cô ấy đã mang mẫu tới."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "Have you [[f1a|brought]] the name cards?",
+     "vi": "Bạn đã mang thẻ tên tới chưa?"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[bring, brought, brought]. Mang tới.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[She brought the samples yesterday.] Hôm qua cô ấy đã mang mẫu tới.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Have you brought the name cards?] Bạn đã mang thẻ tên tới chưa?",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Anh ấy đã mang bánh tới văn phòng.",
+     "tu": "bring, brought, brought",
+     "so_tu": 6,
+     "en": "He [[d0a|brought]] cakes to the office.",
+     "dap": [
+      "He brought cakes to the office.",
+      "He brought a cake to the office.",
+      "He brought cake to the office."
+     ],
+     "nhan": [
+      "brought"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Anh ấy đã mang bánh tới văn phòng.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[He brought cakes to the office.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "write, wrote, written",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m2a|viết]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "The report was [[e2a|written]] by Mr. Hai.",
+     "vi": "Báo cáo do ông Hải viết."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "Ms. Lan [[f2a|wrote]] the minutes of the meeting.",
+     "vi": "Chị Lan đã viết biên bản cuộc họp."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[write, wrote, written]. Viết.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[The report was written by Mr. Hai.] Báo cáo do ông Hải viết.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Ms. Lan wrote the minutes of the meeting.] Chị Lan đã viết biên bản cuộc họp.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "leave, left, left",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m3a|rời đi]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "The train [[e3a|left]] at 6 a.m.",
+     "vi": "Tàu đã rời ga lúc 6 giờ sáng."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The guests have [[f3a|left]] the hall.",
+     "vi": "Khách đã rời hội trường."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[leave, left, left]. Rời đi.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[The train left at 6 a.m.] Tàu đã rời ga lúc sáu giờ sáng.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The guests have left the hall.] Khách đã rời hội trường.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Cô ấy đã rời văn phòng lúc năm giờ.",
+     "tu": "leave, left, left",
+     "so_tu": 6,
+     "en": "She [[d1a|left]] the office at five.",
+     "dap": [
+      "She left the office at five.",
+      "She left the office at five o'clock."
+     ],
+     "nhan": [
+      "left"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Cô ấy đã rời văn phòng lúc năm giờ.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[She left the office at five.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The new manual was ___ by our technical team.",
+     "lua_chon": [
+      "wrote",
+      "writing",
+      "written",
+      "write"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là written: bị động dùng dạng ba written.",
+      "Đáp án là written: bị động dùng dạng ba written.",
+      "Bị động dùng dạng ba written.",
+      "Đáp án là written: bị động dùng dạng ba written."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Bị động dùng dạng ba [written]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: bị động dùng dạng ba [written]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: bị động dùng dạng ba [written]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: bị động dùng dạng ba [written]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The new manual was written by our technical team.]"
+     },
+     "giai": {
+      "noi": "Vì bị động dùng dạng ba [written]."
+     }
+    }
+   ]
+  }
+ ]
+}

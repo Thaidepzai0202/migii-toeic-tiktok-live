@@ -1,0 +1,377 @@
+{
+ "id": "tv-trang-tu",
+ "ten": "Trạng từ hay gặp trong đề",
+ "nhom": "Từ vựng · Trạng từ",
+ "so": 70,
+ "chuong": {
+  "so": 8,
+  "ten": "Sản xuất và giao hàng",
+  "bai": 4,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "approximately",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**trạng từ** · [[m0a|khoảng chừng]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "The trip takes [[e0a|approximately]] two hours.",
+     "vi": "Chuyến đi mất khoảng hai tiếng."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "The factory makes [[f0a|approximately]] 1,000 chairs a day.",
+     "vi": "Nhà máy làm khoảng 1.000 chiếc ghế mỗi ngày."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[approximately]. Khoảng chừng.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[The trip takes approximately two hours.] Chuyến đi mất khoảng hai tiếng.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The factory makes approximately 1,000 chairs a day.] Nhà máy làm khoảng 1.000 chiếc ghế mỗi ngày.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "immediately",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**trạng từ** · [[m1a|ngay lập tức]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "Please call me [[e1a|immediately]].",
+     "vi": "Vui lòng gọi cho tôi ngay."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "Damaged items should be returned [[f1a|immediately]].",
+     "vi": "Hàng hỏng nên được trả lại ngay."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[immediately]. Ngay lập tức.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please call me immediately.] Vui lòng gọi cho tôi ngay.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Damaged items should be returned immediately.] Hàng hỏng nên được trả lại ngay.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Gọi cho tôi ngay lập tức.",
+     "tu": "immediately",
+     "so_tu": 3,
+     "en": "Call me [[d0a|immediately]].",
+     "dap": [
+      "Call me immediately.",
+      "Please call me immediately."
+     ],
+     "nhan": [
+      "immediately"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Gọi cho tôi ngay lập tức.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[Call me immediately.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "currently",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**trạng từ** · [[m2a|hiện tại]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "Mr. Long is [[e2a|currently]] on a business trip.",
+     "vi": "Ông Long hiện đang đi công tác."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The item is [[f2a|currently]] out of stock.",
+     "vi": "Mặt hàng này hiện đang hết."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[currently]. Hiện tại.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[Mr. Long is currently on a business trip.] Ông Long hiện đang đi công tác.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The item is currently out of stock.] Mặt hàng này hiện đang hết.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "recently",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**trạng từ** · [[m3a|gần đây]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "We [[e3a|recently]] opened a new store.",
+     "vi": "Gần đây chúng tôi vừa mở một cửa hàng mới."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The warehouse was [[f3a|recently]] moved to Long An.",
+     "vi": "Nhà kho vừa chuyển về Long An."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[recently]. Gần đây.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[We recently opened a new store.] Gần đây chúng tôi vừa mở một cửa hàng mới.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The warehouse was recently moved to Long An.] Nhà kho vừa chuyển về Long An.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Gần đây tôi mới chuyển nhà.",
+     "tu": "recently",
+     "so_tu": 4,
+     "en": "I [[d1a|recently]] moved house.",
+     "dap": [
+      "I recently moved house.",
+      "I moved house recently.",
+      "I have recently moved house.",
+      "I recently moved.",
+      "I moved recently."
+     ],
+     "nhan": [
+      "recently"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Gần đây tôi mới chuyển nhà.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[I recently moved house.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The repair will cost ___ 2 million dong.",
+     "lua_chon": [
+      "approximately",
+      "immediately",
+      "recently",
+      "currently"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Trước một con số thì dùng approximately, khoảng chừng.",
+      "Đáp án là approximately: trước một con số thì dùng approximately, khoảng chừng.",
+      "Đáp án là approximately: trước một con số thì dùng approximately, khoảng chừng.",
+      "Đáp án là approximately: trước một con số thì dùng approximately, khoảng chừng."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Trước một con số thì dùng [approximately], khoảng chừng."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: trước một con số thì dùng [approximately], khoảng chừng. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: trước một con số thì dùng [approximately], khoảng chừng. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: trước một con số thì dùng [approximately], khoảng chừng. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The repair will cost approximately 2 million dong.]"
+     },
+     "giai": {
+      "noi": "Vì trước một con số thì dùng [approximately], khoảng chừng."
+     }
+    }
+   ]
+  }
+ ]
+}

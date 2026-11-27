@@ -1,0 +1,385 @@
+{
+ "id": "tv-moi-truong",
+ "ten": "Từ vựng môi trường",
+ "nhom": "Từ vựng · Môi trường",
+ "so": 78,
+ "chuong": {
+  "so": 9,
+  "ten": "Công nghệ và công trình",
+  "bai": 4,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "recycle",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m0a|tái chế]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "Please [[e0a|recycle]] plastic bottles.",
+     "vi": "Vui lòng tái chế chai nhựa."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "This bag is made from [[f0a|recycled]] paper.",
+     "vi": "Túi này làm từ giấy tái chế."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Tiếp chủ đề công nghệ và công trình. Bài này mình học bốn từ về môi trường.",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[recycle]. Nghĩa là tái chế.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please recycle plastic bottles.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[This bag is made from recycled paper.]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "reduce",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m1a|giảm]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "We want to [[e1a|reduce]] paper use.",
+     "vi": "Chúng tôi muốn giảm dùng giấy."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "The new system [[f1a|reduces]] energy use by 20%.",
+     "vi": "Hệ thống mới giảm 20% lượng điện dùng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[reduce]. Nghĩa là giảm.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[We want to reduce paper use.]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The new system reduces energy use by 20%.]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Chúng ta cần giảm rác thải nhựa.",
+     "tu": "reduce",
+     "so_tu": 6,
+     "en": "We need to [[d0a|reduce]] plastic waste.",
+     "dap": [
+      "We need to reduce plastic waste.",
+      "We must reduce plastic waste."
+     ],
+     "nhan": [
+      "reduce"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Chúng ta cần giảm rác thải nhựa. Nhớ dùng từ [reduce].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [We need to reduce plastic waste.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "energy",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|năng lượng]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "Turn off the lights to save [[e2a|energy]].",
+     "vi": "Hãy tắt đèn để tiết kiệm năng lượng."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "Solar [[f2a|energy]] powers the whole building.",
+     "vi": "Năng lượng mặt trời cấp điện cho cả toà nhà."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[energy]. Nghĩa là năng lượng.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[Turn off the lights to save energy.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Solar energy powers the whole building.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "waste",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|rác thải, sự lãng phí]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "The factory produces less [[e3a|waste]] now.",
+     "vi": "Nhà máy giờ thải ra ít rác hơn."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "Building work creates a lot of [[f3a|waste]].",
+     "vi": "Việc xây dựng tạo ra nhiều rác thải."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[waste]. Nghĩa là rác thải, sự lãng phí.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[The factory produces less waste now.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Building work creates a lot of waste.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Đây là sự lãng phí thời gian.",
+     "tu": "waste",
+     "so_tu": 6,
+     "en": "This is a [[d1a|waste]] of time.",
+     "dap": [
+      "This is a waste of time.",
+      "It is a waste of time."
+     ],
+     "nhan": [
+      "waste"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Đây là sự lãng phí thời gian. Nhớ dùng từ [waste].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [This is a waste of time.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Solar panels help the building save ___.",
+     "lua_chon": [
+      "energy",
+      "waste",
+      "reduce",
+      "recycle"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Pin mặt trời giúp tiết kiệm energy, năng lượng.",
+      "Đáp án là energy: pin mặt trời giúp tiết kiệm energy, năng lượng.",
+      "Đáp án là energy: pin mặt trời giúp tiết kiệm energy, năng lượng.",
+      "Đáp án là energy: pin mặt trời giúp tiết kiệm energy, năng lượng."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Pin mặt trời giúp tiết kiệm [energy], năng lượng."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: pin mặt trời giúp tiết kiệm [energy], năng lượng. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: pin mặt trời giúp tiết kiệm [energy], năng lượng. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: pin mặt trời giúp tiết kiệm [energy], năng lượng. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [energy], vì pin mặt trời giúp tiết kiệm [energy], năng lượng."
+     },
+     "giai": {
+      "noi": "Vì pin mặt trời giúp tiết kiệm [energy], năng lượng."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

@@ -12,3 +12,18 @@
 
 CC0 là hiến tặng vào phạm vi công cộng, không cần credit. Giữ file này để lưu
 vết nguồn gốc cho nội bộ.
+
+# Nhạc nền video gia sư (gia-su/xuat-video.js, thêm 25/11/2026)
+
+Cả bốn bản đều **CC0 1.0** trên OpenGameArt.org (đã kiểm mục License(s) trên trang ngày 25/11/2026). Đã chuẩn hoá về
+-16 LUFS, nén AAC 128 kbps. CC0 không bắt buộc ghi công; ghi lại nguồn để lưu vết.
+
+| File | Tên gốc · tác giả | Trang |
+|---|---|---|
+| `video-chill-lofi.m4a` | "Chill lofi inspired" (ChillLofiR.mp3, 2:03) · omfgdude | https://opengameart.org/content/chill-lofi-inspired |
+| `video-lofi-again.m4a` | "Lofi again" (lofiagain.ogg, 1:28) · omfgdude | https://opengameart.org/content/lofi-again |
+| `video-lofi-loop.m4a` | "Lofi Hip Hop Loop" (LofiLoop.ogg, 2:08) · omfgdude | https://opengameart.org/content/lofi-hip-hop-loop |
+| `video-midsummer.m4a` | "Midsummer" (midsummer.mp3, 2:24) · iamoneabe | https://opengameart.org/node/140425 |
+
+Lưu ý: CC0 không loại trừ chuyện bên thứ ba tự đăng ký Content ID cho bản nhạc; nếu TikTok báo vi phạm bản quyền âm thanh
+thì đổi bản khác hoặc đăng video không nhạc rồi chọn nhạc trong thư viện của TikTok.

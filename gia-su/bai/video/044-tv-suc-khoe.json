@@ -1,0 +1,374 @@
+{
+ "id": "tv-suc-khoe",
+ "ten": "Từ vựng sức khoẻ",
+ "nhom": "Từ vựng · Sức khoẻ",
+ "so": 44,
+ "chuong": {
+  "so": 5,
+  "ten": "Ngân hàng và cuộc sống",
+  "bai": 4,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "appointment",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|cuộc hẹn]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "I have an [[e0a|appointment]] with the dentist at 3 p.m.",
+     "vi": "Tôi có hẹn với nha sĩ lúc 3 giờ chiều."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "I need to change my [[f0a|appointment]] to Friday.",
+     "vi": "Tôi cần đổi lịch hẹn sang thứ Sáu."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[appointment]. Cuộc hẹn.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[I have an appointment with the dentist at 3 p.m.] Tôi có hẹn với nha sĩ lúc ba giờ chiều.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[I need to change my appointment to Friday.] Tôi cần đổi lịch hẹn sang thứ Sáu.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "prescription",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|đơn thuốc]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "The doctor gave me a [[e1a|prescription]].",
+     "vi": "Bác sĩ kê đơn thuốc cho tôi."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "You need a [[f1a|prescription]] for this medicine.",
+     "vi": "Bạn cần đơn thuốc để mua thuốc này."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[prescription]. Đơn thuốc.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[The doctor gave me a prescription.] Bác sĩ kê đơn thuốc cho tôi.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[You need a prescription for this medicine.] Bạn cần đơn thuốc để mua thuốc này.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Bác sĩ đã viết đơn thuốc.",
+     "tu": "prescription",
+     "so_tu": 5,
+     "en": "The doctor wrote a [[d0a|prescription]].",
+     "dap": [
+      "The doctor wrote a prescription.",
+      "The doctor wrote the prescription.",
+      "The doctor has written a prescription."
+     ],
+     "nhan": [
+      "prescription"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Bác sĩ đã viết đơn thuốc.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[The doctor wrote a prescription.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "pharmacy",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|hiệu thuốc]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "You can buy this at any [[e2a|pharmacy]].",
+     "vi": "Bạn có thể mua thứ này ở bất kỳ hiệu thuốc nào."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The [[f2a|pharmacy]] is open 24 hours a day.",
+     "vi": "Hiệu thuốc mở cửa 24 giờ."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[pharmacy]. Hiệu thuốc.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[You can buy this at any pharmacy.] Bạn có thể mua thứ này ở bất kỳ hiệu thuốc nào.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The pharmacy is open 24 hours a day.] Hiệu thuốc mở cửa 24 giờ.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "insurance",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|bảo hiểm]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "Health [[e3a|insurance]] is provided for all staff.",
+     "vi": "Mọi nhân viên đều có bảo hiểm y tế."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "Does your [[f3a|insurance]] cover dental care?",
+     "vi": "Bảo hiểm của bạn có chi trả nha khoa không?"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[insurance]. Bảo hiểm.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[Health insurance is provided for all staff.] Mọi nhân viên đều có bảo hiểm y tế.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Does your insurance cover dental care?] Bảo hiểm của bạn có chi trả nha khoa không?",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Tôi cần mua bảo hiểm.",
+     "tu": "insurance",
+     "so_tu": 5,
+     "en": "I need to buy [[d1a|insurance]].",
+     "dap": [
+      "I need to buy insurance."
+     ],
+     "nhan": [
+      "insurance"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Tôi cần mua bảo hiểm.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[I need to buy insurance.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Please call to make an ___ with Dr. Minh.",
+     "lua_chon": [
+      "insurance",
+      "pharmacy",
+      "appointment",
+      "prescription"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là appointment: make an appointment là đặt lịch hẹn.",
+      "Đáp án là appointment: make an appointment là đặt lịch hẹn.",
+      "Make an appointment là đặt lịch hẹn.",
+      "Đáp án là appointment: make an appointment là đặt lịch hẹn."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [make an appointment] là đặt lịch hẹn."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [make an appointment] là đặt lịch hẹn. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [make an appointment] là đặt lịch hẹn. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [make an appointment] là đặt lịch hẹn. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Please call to make an appointment with Dr. Minh.]"
+     },
+     "giai": {
+      "noi": "Vì [make an appointment] là đặt lịch hẹn."
+     }
+    }
+   ]
+  }
+ ]
+}

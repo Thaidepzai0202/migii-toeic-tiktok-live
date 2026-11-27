@@ -1,0 +1,290 @@
+{
+ "id": "np-ing-ed",
+ "ten": "Tính từ đuôi ing và ed",
+ "nhom": "Ngữ pháp · Từ loại",
+ "so": 57,
+ "chuong": {
+  "so": 6,
+  "ten": "Marketing và sản phẩm",
+  "bai": 8,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Tính từ đuôi ing và ed",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "Đuôi [[y0a|ing]] chỉ [[y0b|tính chất của vật, của việc]]."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "Đuôi [[y1a|ed]] chỉ [[y1b|cảm xúc của người]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "interesting (vật) · interested (người)"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học Tính từ đuôi [ing] và [ed].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Đuôi [ing] chỉ tính chất của vật, của việc.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 900
+      }
+     ]
+    },
+    {
+     "noi": "Đuôi [ed] chỉ cảm xúc của người.",
+     "lam": [
+      {
+       "to": "y1a"
+      },
+      {
+       "to": "y1b",
+       "sau": 840
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [interesting] cho vật, [interested] cho người.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "The presentation was very [[v0a|interesting]].",
+     "vi": "Bài thuyết trình rất thú vị."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "The staff were [[v1a|interested]] in the new plan.",
+     "vi": "Nhân viên quan tâm tới kế hoạch mới."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [The presentation was very interesting.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Bài thuyết trình gây thú vị, dùng [interesting].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [The staff were interested in the new plan.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Con người cảm thấy quan tâm, dùng [interested].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Marketing và sản phẩm",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "The survey results were very [[c0a|surprising]].",
+     "vi": "Kết quả khảo sát rất bất ngờ."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "Customers were [[c1a|excited]] about the new features.",
+     "vi": "Khách hàng rất hào hứng với các tính năng mới."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề marketing và sản phẩm: [The survey results were very surprising.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Kết quả gây ra cảm giác, nên dùng đuôi [ing].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [Customers were excited about the new features.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Người cảm thấy hào hứng, nên dùng đuôi [ed].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Customers were ___ with the quick delivery.",
+     "lua_chon": [
+      "satisfying",
+      "satisfaction",
+      "satisfy",
+      "satisfied"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là satisfied: khách hàng cảm thấy hài lòng, dùng đuôi ed.",
+      "Đáp án là satisfied: khách hàng cảm thấy hài lòng, dùng đuôi ed.",
+      "Đáp án là satisfied: khách hàng cảm thấy hài lòng, dùng đuôi ed.",
+      "Khách hàng cảm thấy hài lòng, dùng đuôi ed."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "The sales figures for this quarter are ___.",
+     "lua_chon": [
+      "disappointment",
+      "disappoint",
+      "disappointed",
+      "disappointing"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là disappointing: số liệu gây thất vọng, dùng đuôi ing.",
+      "Đáp án là disappointing: số liệu gây thất vọng, dùng đuôi ing.",
+      "Đáp án là disappointing: số liệu gây thất vọng, dùng đuôi ing.",
+      "Số liệu gây thất vọng, dùng đuôi ing."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Khách hàng cảm thấy hài lòng, dùng đuôi [ed]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: khách hàng cảm thấy hài lòng, dùng đuôi [ed]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: khách hàng cảm thấy hài lòng, dùng đuôi [ed]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: khách hàng cảm thấy hài lòng, dùng đuôi [ed]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [satisfied], vì khách hàng cảm thấy hài lòng, dùng đuôi [ed]."
+     },
+     "giai": {
+      "noi": "Vì khách hàng cảm thấy hài lòng, dùng đuôi [ed]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Số liệu gây thất vọng, dùng đuôi [ing]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: số liệu gây thất vọng, dùng đuôi [ing]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: số liệu gây thất vọng, dùng đuôi [ing]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: số liệu gây thất vọng, dùng đuôi [ing]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [disappointing], vì số liệu gây thất vọng, dùng đuôi [ing]."
+     },
+     "giai": {
+      "noi": "Vì số liệu gây thất vọng, dùng đuôi [ing]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

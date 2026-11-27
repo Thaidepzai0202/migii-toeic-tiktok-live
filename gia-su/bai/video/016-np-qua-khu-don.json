@@ -1,0 +1,293 @@
+{
+ "id": "np-qua-khu-don",
+ "ten": "Thì quá khứ đơn",
+ "nhom": "Ngữ pháp · Các thì",
+ "so": 16,
+ "chuong": {
+  "so": 2,
+  "ten": "Họp và sự kiện",
+  "bai": 7,
+  "tong": 10
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Thì quá khứ đơn",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "Dùng cho việc [[y0a|đã xảy ra và kết thúc]] tại [[y0b|một thời điểm xác định]] trong quá khứ."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "S + V2 (V-ed)"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Thì quá khứ đơn.",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Dùng cho việc đã xảy ra và kết thúc tại một thời điểm xác định trong quá khứ.",
+     "lam": [
+      {
+       "to": "y0a",
+       "sau": 840
+      },
+      {
+       "to": "y0b",
+       "sau": 2400
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: chủ ngữ cộng động từ dạng hai; động từ thường thì thêm [ed].",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "The CEO [[v0a|visited]] our branch last week.",
+     "vi": "Giám đốc điều hành đã đến thăm chi nhánh tuần trước."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "I [[v1a|sent]] the file two days ago.",
+     "vi": "Tôi đã gửi tệp hai ngày trước."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[The CEO visited our branch last week.] Giám đốc điều hành đã đến thăm chi nhánh tuần trước.",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Có [last week], dùng quá khứ đơn.",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "[I sent the file two days ago.] Tôi đã gửi tệp hai ngày trước.",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Có [ago], và [send] đổi thành [sent].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Họp và sự kiện",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "The conference [[c0a|took place]] in Hanoi last year.",
+     "vi": "Hội nghị năm ngoái diễn ra ở Hà Nội."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "We [[c1a|celebrated]] our tenth anniversary in May.",
+     "vi": "Chúng tôi kỷ niệm mười năm thành lập vào tháng Năm."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[The conference took place in Hanoi last year.] Hội nghị năm ngoái diễn ra ở Hà Nội.",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Có [last year], và [take] đổi thành [took].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "[We celebrated our tenth anniversary in May.] Chúng tôi kỷ niệm mười năm thành lập vào tháng Năm.",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Việc đã xong trong quá khứ, động từ thường thêm [ed].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "nhan": "Mẹo nhớ",
+   "tieu_de": "Ghi nhớ nhanh",
+   "khoi": [
+    {
+     "id": "meo",
+     "kieu": "ghi_nho",
+     "chu": "Dấu hiệu: yesterday, last week, ago, in 2019."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Gặp [yesterday], [last], [ago] là dùng quá khứ đơn.",
+     "lam": [
+      {
+       "to": "meo"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The board of directors ___ the proposal last Friday.",
+     "lua_chon": [
+      "approves",
+      "approved",
+      "has approved",
+      "will approve"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là approved: có last Friday là thời điểm đã qua.",
+      "Có last Friday là thời điểm đã qua.",
+      "Đáp án là approved: có last Friday là thời điểm đã qua.",
+      "Đáp án là approved: có last Friday là thời điểm đã qua."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "Ms. Lee ___ the company three years ago.",
+     "lua_chon": [
+      "joined",
+      "is joining",
+      "joins",
+      "has joined"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Có ago thì dùng quá khứ đơn, không dùng hiện tại hoàn thành.",
+      "Đáp án là joined: có ago thì dùng quá khứ đơn, không dùng hiện tại hoàn thành.",
+      "Đáp án là joined: có ago thì dùng quá khứ đơn, không dùng hiện tại hoàn thành.",
+      "Đáp án là joined: có ago thì dùng quá khứ đơn, không dùng hiện tại hoàn thành."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Có [last Friday] là thời điểm đã qua."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: có [last Friday] là thời điểm đã qua. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: có [last Friday] là thời điểm đã qua. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: có [last Friday] là thời điểm đã qua. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The board of directors approved the proposal last Friday.] Có [last Friday] là thời điểm đã qua."
+     },
+     "giai": {
+      "noi": "Vì có [last Friday] là thời điểm đã qua."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Có [ago] thì dùng quá khứ đơn, không dùng hiện tại hoàn thành."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: có [ago] thì dùng quá khứ đơn, không dùng hiện tại hoàn thành. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: có [ago] thì dùng quá khứ đơn, không dùng hiện tại hoàn thành. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: có [ago] thì dùng quá khứ đơn, không dùng hiện tại hoàn thành. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Ms. Lee joined the company three years ago.] Có [ago] thì dùng quá khứ đơn, không dùng hiện tại hoàn thành."
+     },
+     "giai": {
+      "noi": "Vì có [ago] thì dùng quá khứ đơn, không dùng hiện tại hoàn thành."
+     }
+    }
+   ]
+  }
+ ]
+}

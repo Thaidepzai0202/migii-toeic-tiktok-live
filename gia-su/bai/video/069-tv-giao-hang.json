@@ -1,0 +1,377 @@
+{
+ "id": "tv-giao-hang",
+ "ten": "Từ vựng giao hàng",
+ "nhom": "Từ vựng · Giao hàng",
+ "so": 69,
+ "chuong": {
+  "so": 8,
+  "ten": "Sản xuất và giao hàng",
+  "bai": 3,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "shipment",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|lô hàng]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "The [[e0a|shipment]] arrived two days late.",
+     "vi": "Lô hàng đến trễ hai ngày."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "The next [[f0a|shipment]] will leave the factory on Friday.",
+     "vi": "Lô hàng tiếp theo sẽ rời nhà máy vào thứ Sáu."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[shipment]. Lô hàng.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[The shipment arrived two days late.] Lô hàng đến trễ hai ngày.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The next shipment will leave the factory on Friday.] Lô hàng tiếp theo sẽ rời nhà máy vào thứ Sáu.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "deliver",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m1a|giao hàng]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "We [[e1a|deliver]] orders within 24 hours.",
+     "vi": "Chúng tôi giao đơn hàng trong vòng 24 giờ."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "The parts were [[f1a|delivered]] to the wrong factory.",
+     "vi": "Phụ tùng bị giao nhầm nhà máy."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[deliver]. Giao hàng.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[We deliver orders within 24 hours.] Chúng tôi giao đơn hàng trong vòng 24 giờ.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The parts were delivered to the wrong factory.] Phụ tùng bị giao nhầm nhà máy.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Họ sẽ giao hàng vào ngày mai.",
+     "tu": "deliver",
+     "so_tu": 6,
+     "en": "They will [[d0a|deliver]] the goods tomorrow.",
+     "dap": [
+      "They will deliver the goods tomorrow.",
+      "They will deliver tomorrow.",
+      "They will deliver the order tomorrow.",
+      "They will deliver the products tomorrow."
+     ],
+     "nhan": [
+      "deliver"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Họ sẽ giao hàng vào ngày mai.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[They will deliver the goods tomorrow.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "warehouse",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|nhà kho]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "The boxes are stored in the [[e2a|warehouse]].",
+     "vi": "Các thùng hàng được cất trong nhà kho."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The [[f2a|warehouse]] is full, so we need more space.",
+     "vi": "Nhà kho đã đầy nên chúng tôi cần thêm chỗ."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[warehouse]. Nhà kho.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[The boxes are stored in the warehouse.] Các thùng hàng được cất trong nhà kho.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The warehouse is full, so we need more space.] Nhà kho đã đầy nên chúng tôi cần thêm chỗ.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "track",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m3a|theo dõi đơn hàng]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "You can [[e3a|track]] your order online.",
+     "vi": "Bạn có thể theo dõi đơn hàng trên mạng."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The system [[f3a|tracks]] every shipment.",
+     "vi": "Hệ thống theo dõi mọi lô hàng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[track]. Theo dõi đơn hàng.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[You can track your order online.] Bạn có thể theo dõi đơn hàng trên mạng.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The system tracks every shipment.] Hệ thống theo dõi mọi lô hàng.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Bạn có thể theo dõi đơn hàng trên điện thoại.",
+     "tu": "track",
+     "so_tu": 8,
+     "en": "You can [[d1a|track]] your order on your phone.",
+     "dap": [
+      "You can track your order on your phone.",
+      "You can track the order on your phone.",
+      "You can track your order on the phone."
+     ],
+     "nhan": [
+      "track"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Bạn có thể theo dõi đơn hàng trên điện thoại.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[You can track your order on your phone.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Enter the tracking number to ___ your package online.",
+     "lua_chon": [
+      "warehouse",
+      "shipment",
+      "deliver",
+      "track"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là track: dùng mã vận đơn để track, theo dõi gói hàng.",
+      "Đáp án là track: dùng mã vận đơn để track, theo dõi gói hàng.",
+      "Đáp án là track: dùng mã vận đơn để track, theo dõi gói hàng.",
+      "Dùng mã vận đơn để track, theo dõi gói hàng."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Dùng mã vận đơn để [track], theo dõi gói hàng."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: dùng mã vận đơn để [track], theo dõi gói hàng. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: dùng mã vận đơn để [track], theo dõi gói hàng. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: dùng mã vận đơn để [track], theo dõi gói hàng. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Enter the tracking number to track your package online.]"
+     },
+     "giai": {
+      "noi": "Vì dùng mã vận đơn để [track], theo dõi gói hàng."
+     }
+    }
+   ]
+  }
+ ]
+}

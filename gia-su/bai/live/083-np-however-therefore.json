@@ -1,0 +1,282 @@
+{
+ "id": "np-however-therefore",
+ "ten": "However, therefore, moreover",
+ "nhom": "Ngữ pháp · Liên từ",
+ "so": 83,
+ "chuong": {
+  "so": 9,
+  "ten": "Công nghệ và công trình",
+  "bai": 9,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "However, therefore, moreover",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|however]] là tuy nhiên, [[y0b|therefore]] là vì vậy, [[y0c|moreover]] là hơn nữa."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "Các từ này thường [[y1a|đứng đầu câu]], rồi tới [[y1b|dấu phẩy]]."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học [However], [therefore], [moreover].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[however] là tuy nhiên, [therefore] là vì vậy, [moreover] là hơn nữa.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 1440
+      },
+      {
+       "to": "y0c",
+       "sau": 2820
+      }
+     ]
+    },
+    {
+     "noi": "Các từ này thường đứng đầu câu, rồi tới dấu phẩy.",
+     "lam": [
+      {
+       "to": "y1a",
+       "sau": 1080
+      },
+      {
+       "to": "y1b",
+       "sau": 2400
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "The plan is good. [[v0a|However]], it is expensive.",
+     "vi": "Kế hoạch tốt. Tuy nhiên, nó tốn kém."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "Sales fell. [[v1a|Therefore]], we cut costs.",
+     "vi": "Doanh số giảm. Vì vậy, chúng tôi cắt giảm chi phí."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [The plan is good. However, it is expensive.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Hai ý trái ngược, dùng [however].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [Sales fell. Therefore, we cut costs.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Ý sau là kết quả, dùng [therefore].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Công nghệ và công trình",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "The elevator is under maintenance. [[c0a|Therefore]], please use the stairs.",
+     "vi": "Thang máy đang bảo trì. Vì vậy, vui lòng đi thang bộ."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "The renovation was expensive. [[c1a|However]], the lobby looks great now.",
+     "vi": "Việc cải tạo tốn kém. Tuy nhiên, giờ sảnh trông rất đẹp."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề công nghệ và công trình: [The elevator is under maintenance. Therefore, please use the stairs.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "[therefore] nghĩa là vì vậy, nói về kết quả.",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [The renovation was expensive. However, the lobby looks great now.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "[however] nghĩa là tuy nhiên, nói ý trái ngược.",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The hotel is near the beach. ___, it offers free breakfast.",
+     "lua_chon": [
+      "Moreover",
+      "Therefore",
+      "Although",
+      "However"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Thêm một điểm tốt nữa, dùng moreover.",
+      "Đáp án là Moreover: thêm một điểm tốt nữa, dùng moreover.",
+      "Đáp án là Moreover: thêm một điểm tốt nữa, dùng moreover.",
+      "Đáp án là Moreover: thêm một điểm tốt nữa, dùng moreover."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "Our flight was cancelled. ___, we had to stay one more night.",
+     "lua_chon": [
+      "Therefore",
+      "Although",
+      "However",
+      "Moreover"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Ở lại thêm một đêm là kết quả, dùng therefore.",
+      "Đáp án là Therefore: ở lại thêm một đêm là kết quả, dùng therefore.",
+      "Đáp án là Therefore: ở lại thêm một đêm là kết quả, dùng therefore.",
+      "Đáp án là Therefore: ở lại thêm một đêm là kết quả, dùng therefore."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Thêm một điểm tốt nữa, dùng [moreover]."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: thêm một điểm tốt nữa, dùng [moreover]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: thêm một điểm tốt nữa, dùng [moreover]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: thêm một điểm tốt nữa, dùng [moreover]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [Moreover], vì thêm một điểm tốt nữa, dùng [moreover]."
+     },
+     "giai": {
+      "noi": "Vì thêm một điểm tốt nữa, dùng [moreover]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Ở lại thêm một đêm là kết quả, dùng [therefore]."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: ở lại thêm một đêm là kết quả, dùng [therefore]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: ở lại thêm một đêm là kết quả, dùng [therefore]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: ở lại thêm một đêm là kết quả, dùng [therefore]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [Therefore], vì ở lại thêm một đêm là kết quả, dùng [therefore]."
+     },
+     "giai": {
+      "noi": "Vì ở lại thêm một đêm là kết quả, dùng [therefore]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,387 @@
+{
+ "id": "tv-cong-nghe",
+ "ten": "Từ vựng công nghệ",
+ "nhom": "Từ vựng · Công nghệ",
+ "so": 75,
+ "chuong": {
+  "so": 9,
+  "ten": "Công nghệ và công trình",
+  "bai": 1,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "software",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|phần mềm]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "The new [[e0a|software]] saves us a lot of time.",
+     "vi": "Phần mềm mới giúp tiết kiệm nhiều thời gian."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "Our [[f0a|software]] is used by 200 companies.",
+     "vi": "Phần mềm của chúng tôi được 200 công ty dùng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Chương chín: Công nghệ và công trình. Chương này có chín bài. Bài này mình học bốn từ về công nghệ.",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[software]. Nghĩa là phần mềm.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[The new software saves us a lot of time.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Our software is used by 200 companies.]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "install",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m1a|cài đặt]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "Please [[e1a|install]] the update tonight.",
+     "vi": "Vui lòng cài bản cập nhật tối nay."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "The technician [[f1a|installed]] new cameras in the lobby.",
+     "vi": "Kỹ thuật viên đã lắp camera mới ở sảnh."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[install]. Nghĩa là cài đặt.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please install the update tonight.]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The technician installed new cameras in the lobby.]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Tôi đã cài đặt ứng dụng.",
+     "tu": "install",
+     "so_tu": 4,
+     "en": "I [[d0a|installed]] the app.",
+     "dap": [
+      "I installed the app.",
+      "I have installed the app.",
+      "I installed the application."
+     ],
+     "nhan": [
+      "installed"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Tôi đã cài đặt ứng dụng. Nhớ dùng từ [install].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [I installed the app.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "password",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|mật khẩu]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "Change your [[e2a|password]] every three months.",
+     "vi": "Hãy đổi mật khẩu ba tháng một lần."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "Never share your [[f2a|password]] with anyone.",
+     "vi": "Đừng bao giờ chia sẻ mật khẩu với ai."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[password]. Nghĩa là mật khẩu.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[Change your password every three months.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Never share your password with anyone.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "update",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|bản cập nhật]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "The latest [[e3a|update]] fixes several bugs.",
+     "vi": "Bản cập nhật mới nhất sửa nhiều lỗi."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The [[f3a|update]] will take about ten minutes.",
+     "vi": "Bản cập nhật mất khoảng mười phút."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[update]. Nghĩa là bản cập nhật.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[The latest update fixes several bugs.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The update will take about ten minutes.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Đã có bản cập nhật mới.",
+     "tu": "update",
+     "so_tu": 5,
+     "en": "A new [[d1a|update]] is available.",
+     "dap": [
+      "A new update is available.",
+      "The new update is available.",
+      "There is a new update."
+     ],
+     "nhan": [
+      "update"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Đã có bản cập nhật mới. Nhớ dùng từ [update].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [A new update is available.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Never share your ___ with anyone.",
+     "lua_chon": [
+      "install",
+      "password",
+      "software",
+      "updated"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là password: không chia sẻ password, mật khẩu.",
+      "Không chia sẻ password, mật khẩu.",
+      "Đáp án là password: không chia sẻ password, mật khẩu.",
+      "Đáp án là password: không chia sẻ password, mật khẩu."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Không chia sẻ [password], mật khẩu."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: không chia sẻ [password], mật khẩu. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: không chia sẻ [password], mật khẩu. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: không chia sẻ [password], mật khẩu. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [password], vì không chia sẻ [password], mật khẩu."
+     },
+     "giai": {
+      "noi": "Vì không chia sẻ [password], mật khẩu."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

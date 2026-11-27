@@ -1,0 +1,384 @@
+/* Demo gia sư — theo design system Migii (migii_design_system/docs/design) và luật trình bày người dùng chốt 23/11/2026:
+   - Đọc tới đâu hiện tới đó: chế độ Gia sư chỉ bày phần đang giảng, khối nào gia sư nói tới mới hiện.
+   - Không nền màu cho từng phần/khối nội dung: nhấn bằng màu chữ, tách khối bằng khoảng trắng.
+   - Không loè loẹt: mỗi lúc chỉ MỘT điểm nhấn cam (chỗ gia sư đang chỉ); chỗ đã giảng dịu về teal đậm.
+   - Chỉ bằng cây thước, không dùng ngón tay. */
+/* Font của app Migii TOEIC (người dùng chốt 25/11/2026 cho video): SVN-Avo (tên trong file: "UTM Aptima"), chép từ migii_toeic_ios.
+   Thiếu vài dấu (·, –, →, ✓): trình duyệt tự lấy dấu đó từ font kế tiếp trong --font. */
+@font-face { font-family: 'SVN-Avo'; src: url('fonts/SVN-Avo.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'SVN-Avo'; src: url('fonts/SVN-Avo-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Migii Serif'; src: url('fonts/MigiiSerif-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+
+:root {
+  --bg: #EDF3F1; --surface: #FFFFFF; --inner: #E4EDEA;
+  --text: #10201E; --text2: #3B524E; --hint: #506762;
+  --primary: #48BCAA; --primary-text: #1C7A6C; --primary-surface: #D3EEE8; --on-primary: #06201C;
+  --accent: #A85600; --error: #D33A49;
+  --thuoc: #E9DEC8; --thuoc-ria: #CDBD9D; --thuoc-vach: #8F7D58;
+  --laze: #F08A12; --laze-sang: rgba(255, 150, 40, .55);
+  --font: 'SVN-Avo', 'Avenir Next', 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --serif: 'Migii Serif', Georgia, serif;
+  --enter: 580ms; --normal: 300ms; --slow: 500ms;
+  color-scheme: light;
+}
+/* Luôn chạy giao diện sáng (người dùng chốt 23/11/2026: trình duyệt trong LIVE Studio báo "ưu tiên tối" làm màn live tối theo).
+   Bản tối chỉ khi thêm ?theme=dark (giống game live), đặt data-theme ở <head> của index.html. */
+:root[data-theme="dark"] {
+  --bg: #081615; --surface: #132724; --inner: #1B322E;
+  --text: #E4F1EE; --text2: #A9C0BB; --hint: #88A29C;
+  --primary-text: #72E4D1; --primary-surface: #1B4A43; --on-primary: #04110F;
+  --accent: #F7A033; --error: #F0626E;
+  --thuoc: #4A4132; --thuoc-ria: #5E523F; --thuoc-vach: #BCA983;
+  --laze: #FFB04D; --laze-sang: rgba(255, 170, 60, .5);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text); font: 400 16px/24px var(--font); }
+button { font: inherit; color: inherit; border: 0; background: none; padding: 0; cursor: pointer; }
+svg { width: 24px; height: 24px; display: block; }
+[hidden] { display: none !important; }
+
+/* Khung điện thoại: trên máy tính canh giữa, rộng tối đa 430 */
+#app { position: relative; height: 100%; max-width: 430px; margin: 0 auto; background: var(--bg); overflow: hidden; }
+.man { position: absolute; inset: 0; display: flex; flex-direction: column; }
+
+/* Thang chữ v2 */
+.title { font: 700 24px/30px var(--serif); margin: 0; color: var(--text); }
+.heading { font: 700 18px/24px var(--font); }
+.support { font: 400 14px/20px var(--font); color: var(--text2); margin: 0; }
+.nhan { font: 700 12px/16px var(--font); letter-spacing: .5px; text-transform: uppercase; color: var(--primary-text); }
+
+/* Nút */
+.chinh { height: 48px; border-radius: 20px; background: var(--primary); color: var(--on-primary); font-weight: 700; width: 100%; }
+.phu-chu { height: 48px; border-radius: 20px; color: var(--primary-text); font-weight: 700; width: 100%; }
+.dia { width: 44px; height: 44px; display: grid; place-items: center; flex: none; }
+.dia svg { width: 36px; height: 36px; padding: 9px; border-radius: 999px; background: var(--surface); }
+
+/* ---------- Danh sách bài ---------- */
+#ds-bai { padding: 32px 20px; gap: 24px; overflow: auto; }
+.dau-ds { display: grid; gap: 8px; }
+#the-bai { display: grid; gap: 16px; }
+.the-bai { text-align: left; background: var(--surface); border-radius: 28px; padding: 20px; display: grid; gap: 4px; }
+.the-bai .heading { margin-top: 4px; }
+
+/* ---------- Màn học ---------- */
+#dau { height: 56px; display: flex; align-items: center; gap: 4px; padding: 0 16px 0 8px; flex: none; }
+#dau .ten { min-width: 0; flex: 1; }
+#dau .nhom { font: 400 12px/16px var(--font); color: var(--hint); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#dau .tieu-de { font: 700 16px/22px var(--font); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#dau .dem { font: 400 12px/16px var(--font); color: var(--hint); flex: none; }
+
+.segment { margin: 0 20px 8px; height: 40px; padding: 4px; border-radius: 20px; background: var(--inner); display: grid; grid-template-columns: 1fr 1fr; flex: none; }
+.segment button { border-radius: 16px; font: 700 14px/20px var(--font); color: var(--text2); transition: background var(--normal), color var(--normal); }
+.segment button.dang { background: var(--surface); color: var(--text); }
+
+#tien-do { height: 4px; margin: 0 20px; border-radius: 2px; background: var(--inner); overflow: hidden; flex: none; }
+#tien-do i { display: block; height: 100%; width: 0; background: var(--primary); border-radius: 2px; transition: width var(--slow); }
+
+/* Chế độ Gia sư: phần đầu màn trượt lên ẩn khi đang giảng, chỉ còn vạch tiến độ mảnh ở mép trên; tạm dừng thì trượt xuống lại */
+#tren { flex: none; }
+body.gia-su #tren { position: absolute; top: 0; left: 0; right: 0; z-index: 15; background: var(--bg); padding: env(safe-area-inset-top) 0 8px;
+  transition: transform var(--normal) ease, opacity var(--normal); }
+body.gia-su.chay #tren { transform: translateY(-100%); opacity: 0; pointer-events: none; }
+body.gia-su #tien-do { position: absolute; z-index: 14; left: 24px; right: 24px; top: calc(10px + env(safe-area-inset-top)); height: 3px; margin: 0; }
+body.gia-su #trang { padding-top: calc(40px + env(safe-area-inset-top)); }
+/* Phần đang giảng nằm giữa màn theo chiều dọc; dài quá màn thì về đầu và cuộn như thường (margin auto không cắt mất phần trên) */
+body.gia-su #trang { display: flex; flex-direction: column; min-height: 100%; }
+body.gia-su .phan.dang { margin: auto 0; }
+
+#cuon { flex: 1; overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain; position: relative;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 16px, #000 calc(100% - 24px), transparent);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 16px, #000 calc(100% - 24px), transparent); }
+#trang { position: relative; padding: 28px 24px 64px; }
+
+/* Một phần của bài: không thẻ, không nền — chỉ chữ và khoảng trắng */
+.phan { display: grid; gap: 24px; margin-bottom: 56px; }
+.dau-phan { display: grid; gap: 4px; }
+.dau-phan .heading { font-size: 20px; line-height: 28px; }
+.dau-phan .nhan.chuong { color: var(--hint); margin-bottom: -2px; } /* live: chương đang học, nằm trên "Bài x/y · tên phần" */
+
+.doan { margin: 0; }
+.doan b, .ghi-nho b { font-weight: 700; }
+.cong-thuc { font: 700 16px/26px var(--font); }
+.cong-thuc .chu-thich { display: block; font: 400 14px/20px var(--font); color: var(--text2); margin-top: 6px; }
+.vi-du { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; align-items: start; }
+.vi-du > :not(.loa) { grid-column: 1; }
+.vi-du .en { font-weight: 700; }
+.vi-du .vi { font: 400 14px/20px var(--font); color: var(--text2); }
+.vi-du .loa { grid-column: 2; grid-row: 1 / span 3; align-self: center; width: 36px; height: 36px; display: grid; place-items: center; color: var(--hint); border-radius: 999px; }
+.vi-du .loa svg { width: 20px; height: 20px; }
+.vi-du .nhan-vd, .ghi-nho .nhan-gn { font: 700 12px/16px var(--font); letter-spacing: .5px; text-transform: uppercase; color: var(--hint); display: block; margin-bottom: 2px; }
+.vi-du.sai .nhan-vd { color: var(--error); }
+.vi-du.sai .en { font-weight: 400; color: var(--text2); text-decoration: line-through; text-decoration-color: var(--error); }
+.ghi-nho .nhan-gn { color: var(--accent); }
+.danh-sach { margin: 0; padding: 0; list-style: none; display: grid; gap: 16px; counter-reset: y; }
+.danh-sach li { position: relative; padding-left: 28px; counter-increment: y; }
+.danh-sach li::before { content: counter(y); position: absolute; left: 0; top: 0; font: 700 14px/24px var(--font); color: var(--hint); }
+
+/* Bảng động từ: chỉ cột chữ và khoảng trắng */
+.bang { display: grid; gap: 2px; }
+.bang .hang { display: grid; grid-template-columns: 1fr 1fr 1fr 1.1fr; gap: 4px; padding: 8px 0; align-items: baseline; }
+.bang .hang.dau-bang { padding: 0 0 4px; font: 400 12px/16px var(--font); color: var(--hint); }
+.bang .o { font-weight: 700; }
+.bang .o:last-child { font: 400 14px/20px var(--font); color: var(--text2); }
+.bang [data-doc] { cursor: pointer; }
+
+/* Bài tập: lựa chọn là nút bấm nên giữ nền nhạt để biết bấm được; đúng/sai báo bằng màu chữ và huy hiệu */
+.bai-tap { display: grid; gap: 10px; }
+.bai-tap .cau { font: 700 18px/26px var(--font); margin: 0 0 6px; }
+.bai-tap .trong { display: inline-block; min-width: 64px; border-bottom: 2px solid var(--hint); margin: 0 2px; height: 1em; vertical-align: -2px; }
+.bai-tap .trong.dien { border: 0; min-width: 0; height: auto; color: var(--primary-text); }
+.chon { height: 52px; border-radius: 26px; background: var(--inner); display: flex; align-items: center; gap: 12px; padding: 0 16px 0 10px; text-align: left; }
+.chon b { width: 32px; height: 32px; border-radius: 999px; background: var(--surface); display: grid; place-items: center; font: 700 14px/1 var(--font); flex: none; transition: background var(--normal), color var(--normal); }
+.chon.dung b { background: var(--primary); color: var(--on-primary); }
+.chon.dung span { color: var(--primary-text); font-weight: 700; }
+.chon.sai b { background: var(--error); color: #fff; }
+.chon.sai span { color: var(--hint); text-decoration: line-through; }
+.chon:disabled { cursor: default; }
+.bai-tap .loi-giai { font: 400 14px/20px var(--font); color: var(--text2); }
+.bai-tap .loi-giai:empty { display: none; }
+.bai-tap .xem { justify-self: start; height: 32px; font: 700 14px/20px var(--font); color: var(--primary-text); }
+.nhan-bt { font: 700 12px/16px var(--font); letter-spacing: .5px; text-transform: uppercase; color: var(--hint); }
+body.gia-su .bai-tap.cho .nhan-bt { color: var(--accent); }
+
+/* ---------- Chế độ Gia sư: chỉ phần đang giảng, khối nào gia sư nói tới mới hiện ---------- */
+body.gia-su .phan:not(.dang) { display: none; }
+body.gia-su .dv:not(.hien) { display: none; }
+body.doc .chi-gia-su { display: none; }
+body.gia-su .dv.vua-hien { animation: hienRa 360ms ease-out both; } /* phần không phải chữ (nút, loa) hiện mờ dần */
+@keyframes hienRa { from { opacity: 0; } }
+
+/* Từng chữ (span.tu, tách lúc dựng trang) có hiệu ứng riêng:
+   - vao: khối mới hiện ra, các chữ lần lượt nảy lên từ nhỏ tới đủ cỡ
+   - nay: lúc thước lướt qua, chữ phóng to rồi thu lại; đồng thời đổi màu và đậm lên (trễ theo --tre: đúng lúc thước tới chữ đó) */
+.tu { transition: color 320ms, -webkit-text-stroke-width 320ms; }
+body.gia-su .moi .tu, body.gia-su .moi.tu { transition-delay: var(--tre, 0ms); }
+body.gia-su .tu.vao { display: inline-block; animation: tuVao 460ms cubic-bezier(.3, 1.5, .5, 1) var(--tre, 0ms) backwards; }
+@keyframes tuVao { from { opacity: 0; transform: translateY(7px) scale(.8); } 70% { opacity: 1; transform: translateY(-1px) scale(1.03); } } /* trồi lên, phóng nhẹ để không lấn khoảng trắng */
+body.gia-su .tu.nay { display: inline-block; transform-origin: 50% 70%; animation: tuNay 440ms cubic-bezier(.3, 1.4, .5, 1) var(--tre, 0ms) both; }
+@keyframes tuNay { 45% { transform: translateY(-2px) scale(1.18); } }
+
+/* Dấu của gia sư: đổi màu + đậm (nét viền chữ, không đổi bề rộng nên chữ không nhảy dòng).
+   Cam = đang nói tới, teal đậm = đã giảng qua */
+body.gia-su .mk.to, body.gia-su .mk.gach, body.gia-su .k-to { -webkit-text-stroke-width: .55px; }
+body.gia-su .mk.to, body.gia-su .mk.gach { color: var(--primary-text); }
+body.gia-su .mk.to.moi, body.gia-su .mk.gach.moi { color: var(--accent); }
+body.gia-su .k-to, body.gia-su .k-to * { color: var(--primary-text); transition: color 320ms; }
+body.gia-su .k-to.moi, body.gia-su .k-to.moi * { color: var(--accent); }
+
+/* Vệt laze thước để lại khi lướt qua chỗ nhấn: sáng lúc đang nói, tắt dần khi sang câu sau.
+   Gạch chân (gach) thì vệt ở lại thành nét teal mảnh. */
+#lop .laze { position: absolute; height: 2px; border-radius: 2px; background: var(--laze); box-shadow: 0 0 6px 1px var(--laze-sang), 0 0 2px var(--laze);
+  transform-origin: left center; animation: quet var(--dai-quet, 300ms) linear var(--tre, 0ms) both; transition: opacity 600ms, background 600ms, box-shadow 600ms; }
+#lop .laze.tinh { animation: none; }
+#lop .laze.cu { opacity: 0; }
+#lop .laze.gach.cu { opacity: .8; background: var(--primary); box-shadow: none; }
+@keyframes quet { from { transform: scaleX(0); } }
+
+#lop { position: absolute; inset: 0; pointer-events: none; overflow: visible; }
+#lop svg.vong { position: absolute; overflow: visible; }
+#lop svg.vong path { fill: none; stroke: var(--accent); stroke-width: 1.8; stroke-linecap: round; transition: stroke var(--slow), opacity var(--slow); }
+#lop svg.vong.cu path { stroke: var(--primary); opacity: .4; }
+#lop svg.vong path.ve { animation: ve 700ms cubic-bezier(.4, .1, .3, 1) both; }
+@keyframes ve { from { stroke-dashoffset: var(--dai); } to { stroke-dashoffset: 0; } }
+
+/* Cây thước chỉ bảng: đầu thước ở (0; 5,5) chạm ngay dưới chữ, thân thước chìa xuống khoảng trắng bên dưới */
+#thuoc { position: absolute; left: 0; top: 0; width: 120px; height: 11px; transform-origin: 0 5.5px; z-index: 3; pointer-events: none;
+  opacity: 0; transition: opacity var(--normal); } /* đường đi của thước chạy bằng Web Animations (gia-su.js: diThuoc) */
+#thuoc.hien { opacity: .92; }
+#thuoc .than { width: 120px; height: 11px; transform-origin: 0 5.5px; }
+#thuoc.go .than { animation: go 720ms ease-in-out 560ms; } /* tới nơi rồi mới gõ */
+@keyframes go { 25% { transform: translateX(6px); } 50% { transform: translateX(0); } 75% { transform: translateX(4px); } }
+#thuoc svg { width: 120px; height: 11px; overflow: visible; }
+#thuoc rect { fill: var(--thuoc); stroke: var(--thuoc-ria); stroke-width: 1; }
+#thuoc line { stroke: var(--thuoc-vach); stroke-width: 1; stroke-linecap: round; }
+
+/* Chế độ tự đọc: trang sạch, không thước, không dock */
+body.doc #lop, body.doc #thuoc, body.doc #dock { display: none; }
+
+/* ---------- Dock: Ninja + phụ đề + điều khiển (không khung nền) ---------- */
+#dock { flex: none; padding: 4px 16px calc(12px + env(safe-area-inset-bottom)); display: grid; gap: 6px; }
+#phu-de { display: flex; gap: 12px; align-items: center; min-height: 48px; padding: 0 4px; }
+#ninja { width: 40px; height: 40px; border-radius: 999px; background: var(--primary-surface); flex: none; display: grid; place-items: center; overflow: hidden; }
+#ninja img { width: 54px; margin-top: 5px; transition: transform var(--normal); }
+#ninja.noi img { animation: noi .42s ease-in-out infinite alternate; }
+@keyframes noi { to { transform: translateY(-2px) scale(1.04); } }
+#phu-de .loi { font: 400 14px/20px var(--font); color: var(--hint); flex: 1; min-width: 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+#phu-de .loi .dang, #phu-de .loi .da { color: var(--text2); }
+#phu-de .loi .en { font-weight: 700; }
+body.tat-phu-de #phu-de .loi { visibility: hidden; }
+
+#nut { display: grid; grid-template-columns: 1fr auto auto auto 1fr; align-items: center; gap: 8px; }
+#nut .tron { width: 56px; height: 56px; border-radius: 999px; background: var(--primary); color: var(--on-primary); display: grid; place-items: center; }
+#nut .tron svg { width: 26px; height: 26px; }
+#nut .icon { width: 44px; height: 44px; display: grid; place-items: center; color: var(--text2); border-radius: 999px; }
+#nut .icon:disabled { opacity: .35; }
+#nut .chip { height: 32px; padding: 0 12px; border-radius: 16px; font: 700 14px/20px var(--font); color: var(--text2); }
+#nut .chip:first-child { justify-self: start; }
+#nut .chip:last-child { justify-self: end; }
+body.tat-phu-de #phu-de-nut { color: var(--hint); text-decoration: line-through; }
+
+/* ---------- Tạm dừng ---------- */
+#tam-dung { position: absolute; left: 0; right: 0; bottom: 0; z-index: 20; background: var(--surface); border-radius: 28px 28px 0 0; padding: 8px 20px calc(20px + env(safe-area-inset-bottom)); display: grid; gap: 12px; animation: len var(--normal) ease-out both; }
+#tam-dung .keo { width: 36px; height: 4px; border-radius: 2px; background: var(--inner); justify-self: center; margin-bottom: 4px; }
+@keyframes len { from { transform: translateY(100%); } }
+.hai-nut { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.hai-nut .phu { height: 64px; border-radius: 22px; background: var(--inner); display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; align-content: center; column-gap: 10px; padding: 0 14px; text-align: left; color: var(--text2); }
+.hai-nut .phu svg { grid-row: 1 / span 2; width: 22px; height: 22px; align-self: center; }
+.hai-nut .phu span { font: 700 14px/20px var(--font); }
+.hai-nut .phu em { font: 400 12px/16px var(--font); font-style: normal; color: var(--hint); }
+
+/* ---------- Mở đầu / kết thúc ---------- */
+.phu-man { position: absolute; inset: 0; z-index: 30; background: var(--bg); display: grid; align-items: end; overflow: auto; }
+.phu-man .khung { padding: 24px 20px calc(28px + env(safe-area-inset-bottom)); display: grid; gap: 8px; }
+.phu-man .hero { width: 56%; max-width: 220px; justify-self: center; margin-bottom: 16px; }
+.phu-man .title { margin-bottom: 4px; }
+.phu-man .support { margin-bottom: 24px; }
+
+#toast { position: absolute; left: 20px; right: 20px; bottom: 200px; z-index: 40; background: var(--text); color: var(--bg); border-radius: 20px; padding: 12px 16px; font: 400 14px/20px var(--font); text-align: center; }
+
+body.tuc *, body.tuc *::before { transition: none !important; animation-duration: 1ms !important; }
+@media (prefers-reduced-motion: reduce) { #thuoc.go .than, #ninja.noi img { animation: none; } }
+
+/* ---------- Trang live (?live=1): khung 450×800 (9:16) phóng vừa cửa sổ ----------
+   TikTok che mép trên (tên kênh) và phần dưới (khung bình luận, nút): nội dung nằm trong y 63–667 của khung
+   (= y 150–1600 của 1080×1920). Không nút bấm, không đầu màn; chỉ còn bài, Ninja và phụ đề. */
+body.live { overflow: hidden; }
+body.live #app { position: fixed; left: 50%; top: 50%; width: 450px; height: 800px; max-width: none; transform: translate(-50%, -50%) scale(var(--k, 1)); }
+body.live #hoc { display: block; }
+body.live #tren, body.live #nut, body.live #tam-dung, body.live #mo-dau, body.live #ket-thuc, body.live #ds-bai { display: none !important; }
+body.live #tien-do { position: absolute; top: 68px; left: 24px; right: 24px; height: 3px; margin: 0; }
+body.live #cuon { position: absolute; top: 76px; left: 0; right: 0; height: 432px; }
+body.live #trang { padding: 16px 24px 40px; }
+body.live #dock { position: absolute; top: 512px; left: 0; right: 0; padding: 0 20px; }
+body.live #phu-de { min-height: 80px; }
+/* Thẻ mời tải app (người dùng thêm 23/11/2026): kiểu .appcard bản sáng của game live (public/theme-light.css), thu theo khung 450.
+   Nằm y 600–662, sát mép dưới vùng TikTok không che (667); bài và phụ đề dời lên 64px để nhường chỗ. */
+#qc { display: none; }
+body.live #qc { display: flex; position: absolute; left: 20px; right: 20px; top: 600px; height: 62px; align-items: center; gap: 12px;
+  padding: 0 14px 0 9px; border-radius: 16px; background: var(--surface); }
+body.live #qc img { width: 44px; height: 44px; border-radius: 11px; flex: none; }
+body.live #qc .tx { flex: 1; min-width: 0; }
+body.live #qc .t1, body.live #qc .t2 { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+body.live #qc .t1 { font: 500 12px/16px var(--font); color: var(--hint); }
+body.live #qc .t2 { font: 500 13px/22px var(--font); color: var(--text); }
+body.live #qc .t2 b { font-size: 16px; font-weight: 600; color: var(--primary-text); }
+body.live .chon { height: 46px; }
+body.live .bai-tap .xem { display: none; }
+
+/* Câu hỏi live: số người chọn từng đáp án, vạch đếm giờ, tên người vừa trả lời */
+.chon .so { display: none; margin-left: auto; font: 700 14px/1 var(--font); color: var(--hint); font-style: normal; }
+body.live .chon .so { display: block; }
+.chon .so.nay { animation: soNay 420ms cubic-bezier(.3, 1.6, .5, 1); }
+@keyframes soNay { 40% { transform: scale(1.5); color: var(--accent); } }
+.dem-gio, .bai-tap .nguoi { display: none; }
+body.live .dich.live-mo .dem-gio, body.live .bai-tap.live-mo .dem-gio { display: block; height: 3px; border-radius: 2px; background: var(--inner); overflow: hidden; margin-top: 2px; }
+.dem-gio i { display: block; height: 100%; width: 100%; background: var(--accent); transition: width 250ms linear; }
+body.live .bai-tap .nguoi { display: block; font: 400 13px/18px var(--font); color: var(--hint); min-height: 18px; }
+body.live #cuon { scrollbar-width: none; }
+body.live #cuon::-webkit-scrollbar { display: none; }
+body.live .vi-du .loa { display: none; }
+
+/* ---------- Dịch câu (bài từ vựng) ----------
+   Đề tiếng Việt to, gợi ý từ cần dùng + số từ. Live: dòng câu người xem gửi lên (3 câu mới nhất, chưa báo đúng sai);
+   chốt thì hiện câu mẫu và nêu bật tối đa 3 bình luận. Không nền, không viền: tách bằng khoảng trắng, nhấn bằng màu chữ. */
+.dich { display: grid; gap: 8px; }
+.dich .de { font: 700 22px/30px var(--font); margin: 0; }
+.dich .goi-y { font: 400 14px/20px var(--font); color: var(--hint); margin: 0; }
+.dich .goi-y b { color: var(--primary-text); }
+.dich .dap-dich { margin-top: 6px; }
+.dich .dap-dich .en { display: block; font: 700 20px/28px var(--font); }
+.dich .xem { justify-self: start; height: 32px; font: 700 14px/20px var(--font); color: var(--primary-text); }
+body.gia-su .dich.cho .nhan-bt { color: var(--accent); }
+.dich .bl, .dich .nguoi { display: none; }
+body.live .dich .xem { display: none; }
+body.live .dich.live-mo .bl { display: grid; gap: 6px; margin-top: 8px; }
+body.live .dich.live-mo .nguoi { display: block; font: 400 13px/18px var(--font); color: var(--hint); min-height: 18px; }
+.dong-bl { margin: 0; font: 400 16px/22px var(--font); animation: blVao 380ms cubic-bezier(.3, .7, .2, 1) both; }
+.dong-bl:nth-child(2) { opacity: .7; }
+.dong-bl:nth-child(3) { opacity: .45; }
+.dong-bl .ten, .the-bl .ten { font: 700 12px/16px var(--font); letter-spacing: .3px; color: var(--hint); margin-right: 4px; }
+.dong-bl b, .the-bl .cau b { color: var(--accent); }
+.noi-bat { display: grid; gap: 12px; margin-top: 4px; }
+.noi-bat:empty { display: none; }
+.the-bl { display: grid; gap: 2px; animation: blVao 420ms cubic-bezier(.3, .7, .2, 1) var(--tre, 0ms) both; }
+.the-bl.cam_on .ten { color: var(--primary-text); }
+.the-bl.dang .ten { color: var(--accent); }
+.the-bl .cau { font: 400 17px/24px var(--font); }
+.the-bl s, .dong-bl s { color: var(--error); text-decoration-thickness: 2px; }
+.the-bl ins { text-decoration: none; color: var(--primary-text); font-weight: 700; }
+@keyframes blVao { from { opacity: 0; transform: translateY(8px); } }
+
+/* ---------- Video (?video=1) — người dùng chốt 25/11/2026: không phụ đề, không Ninja nhỏ ở dưới; bài chiếm luôn chỗ đó ---------- */
+body.video #dock { display: none; }
+body.video #cuon { height: 516px; }
+
+/* ---------- Video: màn kết — nhớ follow kênh + tải app (làm lại lần 2, 25/11/2026: nền trắng, đơn giản, follow kiểu TikTok) ----------
+   Chuyển màn như game live: Ninja lướt qua trên lớp trắng (#dash-gs, img/ninja-dash.gif), lớp trắng tan thì các khối bay vào.
+   Avatar kênh có chấm "+" đỏ như TikTok; chạm vào thì "+" xoay thành dấu tích rồi thu lại. Mọi thứ trong y 140–615. Lớp b1…b5: doanKet. */
+#ket-video { display: none; position: absolute; inset: 0; z-index: 30; pointer-events: none; background: #FFFFFF; }
+body.ket #ket-video { display: block; }
+body.ket #hoc, body.ket #qc { visibility: hidden; }
+#ket-video .muc { position: absolute; left: 0; right: 0; margin-inline: auto; width: fit-content; text-align: center; opacity: 0; }
+#ket-video .k-av { top: 140px; width: 112px; height: 112px; }
+#ket-video .k-av .anh { display: grid; place-items: center; width: 112px; height: 112px; border-radius: 999px; background: var(--primary-surface); overflow: hidden; }
+#ket-video .k-av .anh img { width: 150px; margin-top: 18px; }
+#ket-video .k-av .cong { position: absolute; left: 50%; bottom: -14px; width: 30px; height: 30px; margin-left: -15px; border-radius: 999px;
+  background: #FE2C55; box-shadow: 0 0 0 3px #FFFFFF; display: grid; place-items: center; }
+#ket-video .k-av .cong svg { width: 18px; height: 18px; fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+#ket-video .k-av .cong .p { stroke: #FFFFFF; }
+#ket-video .k-av .cong .t { stroke: #FE2C55; stroke-dasharray: 20; stroke-dashoffset: 20; }
+#ket-video .k-av .cham { position: absolute; left: 50%; bottom: -26px; width: 54px; height: 54px; margin-left: -27px; border-radius: 999px; background: rgba(16, 32, 30, .16); opacity: 0; }
+#ket-video .k-ten { top: 284px; font: 700 20px/26px var(--font); color: var(--text); max-width: 360px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#ket-video .k-tieu { top: 318px; margin-block: 0; font: 700 30px/38px var(--serif); color: var(--text); white-space: nowrap; }
+#ket-video .k-tieu b { color: var(--primary-text); }
+#ket-video .k-va { top: 400px; font: 400 16px/22px var(--font); color: var(--text2); }
+#ket-video .k-the { top: 432px; width: 340px; height: 84px; display: flex; align-items: center; gap: 14px; padding: 0 18px 0 12px; border-radius: 24px; background: var(--bg); text-align: left; }
+#ket-video .k-the img { width: 60px; height: 60px; border-radius: 15px; flex: none; }
+#ket-video .k-the .tx { display: grid; }
+#ket-video .k-the b { font: 700 22px/28px var(--font); color: var(--primary-text); }
+#ket-video .k-the span { font: 400 14px/20px var(--font); color: var(--text2); }
+#ket-video .k-store { top: 532px; display: flex; gap: 10px; }
+#ket-video .k-store img { height: 46px; display: block; }
+#ket-video .k-mien-phi { top: 592px; font: 400 14px/20px var(--font); color: var(--hint); }
+/* Bay vào như màn mới của game live (theme-light.css: flyIn) */
+#ket-video.b1 :is(.k-av, .k-ten, .k-tieu), #ket-video.b5 :is(.k-va, .k-the, .k-store, .k-mien-phi) {
+  animation: kBay .8s cubic-bezier(.16, 1, .3, 1) calc(var(--fd, 0) * 80ms) both; }
+#ket-video .k-av { --fy: -420px; }
+#ket-video .k-ten { --fx: -520px; --fr: -6deg; --fd: 1; }
+#ket-video .k-tieu { --fx: 520px; --fr: 6deg; --fd: 2; }
+#ket-video .k-va { --fx: -520px; --fr: -6deg; }
+#ket-video .k-the { --fx: 520px; --fr: 6deg; --fd: 1; }
+#ket-video .k-store { --fy: 420px; --fd: 2; }
+#ket-video .k-mien-phi { --fy: 420px; --fd: 3; }
+/* Follow kiểu TikTok: chạm (vòng mờ), "+" xoay một vòng thành dấu tích trên nền trắng, rồi chấm thu lại mất */
+#ket-video.b2 .cham { animation: kCham 480ms ease-out both; }
+#ket-video.b2 .cong { animation: kAn 260ms ease-in-out; }
+#ket-video.b3 .cong { background: #FFFFFF; transition: background 120ms 140ms; }
+#ket-video.b3 .cong svg { animation: kXoay 450ms cubic-bezier(.3, .7, .3, 1) both; }
+#ket-video.b3 .cong .p { opacity: 0; transition: opacity 80ms 150ms; }
+#ket-video.b3 .cong .t { stroke-dashoffset: 0; transition: stroke-dashoffset 260ms 220ms ease-out; }
+#ket-video.b4 .cong { animation: kThu 320ms cubic-bezier(.5, 0, .7, .4) forwards; }
+@keyframes kBay { from { opacity: 0; transform: translate(var(--fx, 0), var(--fy, 0)) scale(.82) rotate(var(--fr, 0deg)); } 70% { opacity: 1; } to { opacity: 1; transform: none; } }
+@keyframes kCham { 0% { opacity: .9; transform: scale(.4); } 100% { opacity: 0; transform: scale(1.3); } }
+@keyframes kAn { 50% { transform: scale(.82); } }
+@keyframes kXoay { from { transform: rotate(-180deg); } to { transform: rotate(0); } }
+@keyframes kThu { to { transform: scale(0); opacity: 0; } }
+/* Ninja lướt qua khi chuyển sang màn kết (giống game live: theme-light.css #dash). Nền GIF gần trắng → lớp trắng đặc phía sau */
+#dash-gs { position: absolute; inset: 0; z-index: 40; display: none; place-items: center; pointer-events: none; background: #FFFFFF; }
+#dash-gs.on { display: grid; animation: kMan 1.9s linear both; }
+#dash-gs img { width: 360px; height: auto; margin-top: -60px; filter: brightness(1.03); }
+@keyframes kMan { 0% { opacity: 0; } 8%, 84% { opacity: 1; } 100% { opacity: 0; } }
+
+/* ---------- Xem trước video (?video=1&xem=1): bảng chọn bên trái, ngoài khung 9:16 ---------- */
+#xem-truoc { position: fixed; left: 16px; top: 16px; width: 232px; z-index: 100; display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; padding: 16px; border-radius: 20px;
+  background: var(--surface); box-shadow: 0 6px 24px rgba(16, 32, 30, .12); font: 400 14px/20px var(--font); }
+#xem-truoc label { display: grid; gap: 4px; font: 500 13px/18px var(--font); color: var(--hint); }
+#xem-truoc select { width: 100%; min-width: 0; height: 40px; border-radius: 12px; border: 1px solid var(--inner); background: var(--bg); color: var(--text); font: 400 14px/20px var(--font); padding: 0 8px; }
+#xem-truoc .chinh, #xem-truoc .phu-chu { height: 44px; }
+#xem-truoc .xt-nhac { display: flex; align-items: center; gap: 8px; color: var(--text2); }
+#xem-truoc p { margin: 0; }
+#xem-truoc .xt-trang { color: var(--text2); font-variant-numeric: tabular-nums; }
+#xem-truoc .xt-lenh { font-size: 12px; line-height: 18px; color: var(--hint); }
+#xem-truoc code { font: 12px/18px ui-monospace, Menlo, monospace; color: var(--text); word-break: break-all; }

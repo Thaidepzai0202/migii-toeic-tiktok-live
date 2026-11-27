@@ -1,0 +1,374 @@
+{
+ "id": "tv-tinh-tu",
+ "ten": "Tính từ hay gặp trong đề",
+ "nhom": "Từ vựng · Tính từ",
+ "so": 52,
+ "chuong": {
+  "so": 6,
+  "ten": "Marketing và sản phẩm",
+  "bai": 3,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "efficient",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**tính từ** · [[m0a|hiệu quả, năng suất]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "The new machine is very [[e0a|efficient]].",
+     "vi": "Máy mới hoạt động rất hiệu quả."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "This printer is more [[f0a|efficient]] than the old one.",
+     "vi": "Máy in này năng suất hơn máy cũ."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[efficient]. Hiệu quả, năng suất.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[The new machine is very efficient.] Máy mới hoạt động rất hiệu quả.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[This printer is more efficient than the old one.] Máy in này năng suất hơn máy cũ.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "reliable",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**tính từ** · [[m1a|đáng tin cậy]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "We need a [[e1a|reliable]] supplier.",
+     "vi": "Chúng tôi cần một nhà cung cấp đáng tin cậy."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "Our products are known for being [[f1a|reliable]].",
+     "vi": "Sản phẩm của chúng tôi nổi tiếng là đáng tin cậy."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[reliable]. Đáng tin cậy.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[We need a reliable supplier.] Chúng tôi cần một nhà cung cấp đáng tin cậy.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Our products are known for being reliable.] Sản phẩm của chúng tôi nổi tiếng là đáng tin cậy.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Anh ấy là người đáng tin cậy.",
+     "tu": "reliable",
+     "so_tu": 5,
+     "en": "He is a [[d0a|reliable]] person.",
+     "dap": [
+      "He is a reliable person.",
+      "He is reliable."
+     ],
+     "nhan": [
+      "reliable"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Anh ấy là người đáng tin cậy.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[He is a reliable person.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "available",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**tính từ** · [[m2a|có sẵn, rảnh]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "Is Mr. Kim [[e2a|available]] this afternoon?",
+     "vi": "Chiều nay ông Kim có rảnh không?"
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The new model is [[f2a|available]] in three colors.",
+     "vi": "Mẫu mới có sẵn ba màu."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[available]. Có sẵn, rảnh.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[Is Mr. Kim available this afternoon?] Chiều nay ông Kim có rảnh không?",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The new model is available in three colors.] Mẫu mới có sẵn ba màu.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "affordable",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**tính từ** · [[m3a|giá phải chăng]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "The hotel offers [[e3a|affordable]] rooms.",
+     "vi": "Khách sạn có phòng giá phải chăng."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "We want to make our phones more [[f3a|affordable]].",
+     "vi": "Chúng tôi muốn điện thoại có giá phải chăng hơn."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[affordable]. Giá phải chăng.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[The hotel offers affordable rooms.] Khách sạn có phòng giá phải chăng.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[We want to make our phones more affordable.] Chúng tôi muốn điện thoại có giá phải chăng hơn.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Giá rất phải chăng.",
+     "tu": "affordable",
+     "so_tu": 5,
+     "en": "The price is very [[d1a|affordable]].",
+     "dap": [
+      "The price is very affordable.",
+      "The prices are very affordable."
+     ],
+     "nhan": [
+      "affordable"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Giá rất phải chăng.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[The price is very affordable.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Ms. Hanh is not ___ today because she is on vacation.",
+     "lua_chon": [
+      "efficient",
+      "reliable",
+      "available",
+      "affordable"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là available: đang nghỉ phép nên không available, không rảnh.",
+      "Đáp án là available: đang nghỉ phép nên không available, không rảnh.",
+      "Đang nghỉ phép nên không available, không rảnh.",
+      "Đáp án là available: đang nghỉ phép nên không available, không rảnh."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Đang nghỉ phép nên không [available], không rảnh."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: đang nghỉ phép nên không [available], không rảnh. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: đang nghỉ phép nên không [available], không rảnh. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: đang nghỉ phép nên không [available], không rảnh. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Ms. Hanh is not available today because she is on vacation.]"
+     },
+     "giai": {
+      "noi": "Vì đang nghỉ phép nên không [available], không rảnh."
+     }
+    }
+   ]
+  }
+ ]
+}

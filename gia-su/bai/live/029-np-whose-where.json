@@ -1,0 +1,288 @@
+{
+ "id": "np-whose-where",
+ "ten": "Mệnh đề quan hệ: whose, where",
+ "nhom": "Ngữ pháp · Mệnh đề quan hệ",
+ "so": 29,
+ "chuong": {
+  "so": 3,
+  "ten": "Nhân sự",
+  "bai": 10,
+  "tong": 11
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Mệnh đề quan hệ: whose, where",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|whose]] chỉ [[y0b|sở hữu]], theo sau là danh từ."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "[[y1a|where]] chỉ [[y1b|nơi chốn]], theo sau là cả một mệnh đề."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "whose + N · where + S + V"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học Mệnh đề quan hệ: [whose], [where].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[whose] chỉ sở hữu, theo sau là danh từ.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b"
+      }
+     ]
+    },
+    {
+     "noi": "[where] chỉ nơi chốn, theo sau là cả một mệnh đề.",
+     "lam": [
+      {
+       "to": "y1a"
+      },
+      {
+       "to": "y1b"
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [whose] cộng danh từ, [where] cộng chủ ngữ và động từ.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "This is the client [[v0a|whose]] order was delayed.",
+     "vi": "Đây là khách hàng có đơn hàng bị trễ."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "That is the hotel [[v1a|where]] we held the conference.",
+     "vi": "Đó là khách sạn nơi chúng tôi tổ chức hội nghị."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [This is the client whose order was delayed.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "[whose] chỉ đơn hàng của khách.",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [That is the hotel where we held the conference.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "[hotel] là nơi chốn, dùng [where].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Nhân sự",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "We need an employee [[c0a|whose]] English is very good.",
+     "vi": "Chúng tôi cần một nhân viên giỏi tiếng Anh."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "This is the room [[c1a|where]] the interviews take place.",
+     "vi": "Đây là phòng diễn ra các buổi phỏng vấn."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề nhân sự: [We need an employee whose English is very good.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "[whose] chỉ sự sở hữu: tiếng Anh của nhân viên đó.",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [This is the room where the interviews take place.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Thay cho nơi chốn, dùng [where].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "We need an assistant ___ English is fluent.",
+     "lua_chon": [
+      "where",
+      "who",
+      "which",
+      "whose"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là whose: tiếng Anh của trợ lý, chỉ sở hữu nên dùng whose.",
+      "Đáp án là whose: tiếng Anh của trợ lý, chỉ sở hữu nên dùng whose.",
+      "Đáp án là whose: tiếng Anh của trợ lý, chỉ sở hữu nên dùng whose.",
+      "Tiếng Anh của trợ lý, chỉ sở hữu nên dùng whose."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "The warehouse ___ the products are stored is near the port.",
+     "lua_chon": [
+      "whose",
+      "who",
+      "which",
+      "where"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là where: warehouse là nơi chốn, theo sau là cả mệnh đề nên dùng where.",
+      "Đáp án là where: warehouse là nơi chốn, theo sau là cả mệnh đề nên dùng where.",
+      "Đáp án là where: warehouse là nơi chốn, theo sau là cả mệnh đề nên dùng where.",
+      "Warehouse là nơi chốn, theo sau là cả mệnh đề nên dùng where."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Tiếng Anh của trợ lý, chỉ sở hữu nên dùng [whose]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: tiếng Anh của trợ lý, chỉ sở hữu nên dùng [whose]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: tiếng Anh của trợ lý, chỉ sở hữu nên dùng [whose]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: tiếng Anh của trợ lý, chỉ sở hữu nên dùng [whose]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [whose], vì tiếng Anh của trợ lý, chỉ sở hữu nên dùng [whose]."
+     },
+     "giai": {
+      "noi": "Vì tiếng Anh của trợ lý, chỉ sở hữu nên dùng [whose]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [warehouse] là nơi chốn, theo sau là cả mệnh đề nên dùng [where]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [warehouse] là nơi chốn, theo sau là cả mệnh đề nên dùng [where]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [warehouse] là nơi chốn, theo sau là cả mệnh đề nên dùng [where]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: [warehouse] là nơi chốn, theo sau là cả mệnh đề nên dùng [where]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [where], vì [warehouse] là nơi chốn, theo sau là cả mệnh đề nên dùng [where]."
+     },
+     "giai": {
+      "noi": "Vì [warehouse] là nơi chốn, theo sau là cả mệnh đề nên dùng [where]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

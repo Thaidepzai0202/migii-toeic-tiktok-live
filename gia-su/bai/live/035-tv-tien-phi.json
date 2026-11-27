@@ -1,0 +1,388 @@
+{
+ "id": "tv-tien-phi",
+ "ten": "Từ vựng các khoản tiền",
+ "nhom": "Từ vựng · Tiền",
+ "so": 35,
+ "chuong": {
+  "so": 4,
+  "ten": "Tài chính",
+  "bai": 5,
+  "tong": 10
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "fee",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|phí, lệ phí]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "There is no [[e0a|fee]] for this service.",
+     "vi": "Dịch vụ này không mất phí."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "The bank charges a small [[f0a|fee]] for transfers.",
+     "vi": "Ngân hàng thu một khoản phí nhỏ khi chuyển tiền."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Tiếp chủ đề tài chính. Bài này mình học bốn từ về các khoản tiền.",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[fee]. Nghĩa là phí, lệ phí.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[There is no fee for this service.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The bank charges a small fee for transfers.]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "fine",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|tiền phạt]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "He paid a [[e1a|fine]] for parking there.",
+     "vi": "Anh ấy bị phạt vì đỗ xe ở đó."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "Late payments will result in a [[f1a|fine]].",
+     "vi": "Trả chậm sẽ bị phạt tiền."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[fine]. Nghĩa là tiền phạt.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[He paid a fine for parking there.]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Late payments will result in a fine.]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Anh ấy phải trả tiền phạt.",
+     "tu": "fine",
+     "so_tu": 6,
+     "en": "He has to pay a [[d0a|fine]].",
+     "dap": [
+      "He has to pay a fine.",
+      "He must pay a fine.",
+      "He had to pay a fine."
+     ],
+     "nhan": [
+      "fine"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Anh ấy phải trả tiền phạt. Nhớ dùng từ [fine].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [He has to pay a fine.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "tax",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|thuế]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "The price includes [[e2a|tax]].",
+     "vi": "Giá đã bao gồm thuế."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The company paid more [[f2a|tax]] this year.",
+     "vi": "Năm nay công ty đóng thuế nhiều hơn."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[tax]. Nghĩa là thuế.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[The price includes tax.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The company paid more tax this year.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "payment",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|khoản thanh toán]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "We accept [[e3a|payment]] by card.",
+     "vi": "Chúng tôi nhận thanh toán bằng thẻ."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The first [[f3a|payment]] is due on March 1.",
+     "vi": "Khoản thanh toán đầu tiên đến hạn ngày 1 tháng 3."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[payment]. Nghĩa là khoản thanh toán.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[We accept payment by card.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The first payment is due on March 1.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Chúng tôi đã nhận được khoản thanh toán.",
+     "tu": "payment",
+     "so_tu": 4,
+     "en": "We received the [[d1a|payment]].",
+     "dap": [
+      "We received the payment.",
+      "We have received the payment.",
+      "We received your payment.",
+      "We have received your payment."
+     ],
+     "nhan": [
+      "payment"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Chúng tôi đã nhận được khoản thanh toán. Nhớ dùng từ [payment].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [We received the payment.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "You will get a ___ if you drive too fast.",
+     "lua_chon": [
+      "payment",
+      "fine",
+      "tax",
+      "fee"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là fine: lái xe quá nhanh thì bị fine, phạt tiền.",
+      "Lái xe quá nhanh thì bị fine, phạt tiền.",
+      "Đáp án là fine: lái xe quá nhanh thì bị fine, phạt tiền.",
+      "Đáp án là fine: lái xe quá nhanh thì bị fine, phạt tiền."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Lái xe quá nhanh thì bị [fine], phạt tiền."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: lái xe quá nhanh thì bị [fine], phạt tiền. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: lái xe quá nhanh thì bị [fine], phạt tiền. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: lái xe quá nhanh thì bị [fine], phạt tiền. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [fine], vì lái xe quá nhanh thì bị [fine], phạt tiền."
+     },
+     "giai": {
+      "noi": "Vì lái xe quá nhanh thì bị [fine], phạt tiền."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

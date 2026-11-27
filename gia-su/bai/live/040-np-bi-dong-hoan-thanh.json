@@ -1,0 +1,274 @@
+{
+ "id": "np-bi-dong-hoan-thanh",
+ "ten": "Bị động thì hoàn thành",
+ "nhom": "Ngữ pháp · Câu bị động",
+ "so": 40,
+ "chuong": {
+  "so": 4,
+  "ten": "Tài chính",
+  "bai": 10,
+  "tong": 10
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Bị động thì hoàn thành",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "Bị động ở hiện tại hoàn thành dùng [[y0a|has been hoặc have been]] cộng [[y0b|động từ dạng ba]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "S + have/has been + V3"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học Bị động thì hoàn thành.",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Bị động ở hiện tại hoàn thành dùng [has been] hoặc [have been] cộng động từ dạng ba.",
+     "lam": [
+      {
+       "to": "y0a",
+       "sau": 2100
+      },
+      {
+       "to": "y0b",
+       "sau": 4080
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: chủ ngữ cộng [has been] hoặc [have been], cộng động từ dạng ba.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "The meeting [[v0a|has been postponed]].",
+     "vi": "Cuộc họp đã bị hoãn."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "Three new stores [[v1a|have been opened]] this year.",
+     "vi": "Ba cửa hàng mới đã được mở trong năm nay."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [The meeting has been postponed.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Cuộc họp bị hoãn, dùng [has been postponed].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [Three new stores have been opened this year.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Chủ ngữ số nhiều nên dùng [have been].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Tài chính",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "The quarterly report [[c0a|has been sent]] to the director.",
+     "vi": "Báo cáo quý đã được gửi cho giám đốc."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "Prices [[c1a|have been raised]] twice this year.",
+     "vi": "Năm nay giá đã bị tăng hai lần."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề tài chính: [The quarterly report has been sent to the director.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Việc vừa xong: [has been sent].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [Prices have been raised twice this year.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Tính tới giờ, dùng [have been] cộng [raised].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The budget proposal has ___ by the director.",
+     "lua_chon": [
+      "approving",
+      "been approved",
+      "approved",
+      "be approved"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là been approved: có by the director, bị động hoàn thành là has been cộng dạng ba.",
+      "Có by the director, bị động hoàn thành là has been cộng dạng ba.",
+      "Đáp án là been approved: có by the director, bị động hoàn thành là has been cộng dạng ba.",
+      "Đáp án là been approved: có by the director, bị động hoàn thành là has been cộng dạng ba."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "Several complaints ___ about the delay.",
+     "lua_chon": [
+      "receiving",
+      "have received",
+      "have been received",
+      "has been received"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là have been received: chủ ngữ số nhiều, khiếu nại được nhận nên dùng have been received.",
+      "Đáp án là have been received: chủ ngữ số nhiều, khiếu nại được nhận nên dùng have been received.",
+      "Chủ ngữ số nhiều, khiếu nại được nhận nên dùng have been received.",
+      "Đáp án là have been received: chủ ngữ số nhiều, khiếu nại được nhận nên dùng have been received."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Có [by the director], bị động hoàn thành là [has been] cộng dạng ba."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: có [by the director], bị động hoàn thành là [has been] cộng dạng ba. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: có [by the director], bị động hoàn thành là [has been] cộng dạng ba. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: có [by the director], bị động hoàn thành là [has been] cộng dạng ba. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [been approved], vì có [by the director], bị động hoàn thành là [has been] cộng dạng ba."
+     },
+     "giai": {
+      "noi": "Vì có [by the director], bị động hoàn thành là [has been] cộng dạng ba."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Chủ ngữ số nhiều, khiếu nại được nhận nên dùng [have been received]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: chủ ngữ số nhiều, khiếu nại được nhận nên dùng [have been received]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: chủ ngữ số nhiều, khiếu nại được nhận nên dùng [have been received]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: chủ ngữ số nhiều, khiếu nại được nhận nên dùng [have been received]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [have been received], vì chủ ngữ số nhiều, khiếu nại được nhận nên dùng [have been received]."
+     },
+     "giai": {
+      "noi": "Vì chủ ngữ số nhiều, khiếu nại được nhận nên dùng [have been received]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

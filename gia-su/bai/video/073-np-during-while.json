@@ -1,0 +1,287 @@
+{
+ "id": "np-during-while",
+ "ten": "During và while",
+ "nhom": "Ngữ pháp · Giới từ",
+ "so": 73,
+ "chuong": {
+  "so": 8,
+  "ten": "Sản xuất và giao hàng",
+  "bai": 7,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "During và while",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|during]] đi với [[y0b|danh từ]]."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "[[y1a|while]] đi với [[y1b|cả một mệnh đề]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "during + N · while + S + V"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[During] và [while].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[during] đi với danh từ.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 960
+      }
+     ]
+    },
+    {
+     "noi": "[while] đi với cả một mệnh đề.",
+     "lam": [
+      {
+       "to": "y1a"
+      },
+      {
+       "to": "y1b",
+       "sau": 900
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [during] cộng danh từ, [while] cộng chủ ngữ và động từ.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "Please keep quiet [[v0a|during]] the meeting.",
+     "vi": "Vui lòng giữ trật tự trong suốt cuộc họp."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "He called [[v1a|while]] I was driving.",
+     "vi": "Anh ấy gọi khi tôi đang lái xe."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[Please keep quiet during the meeting.] Vui lòng giữ trật tự trong suốt cuộc họp.",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "[the meeting] là danh từ, dùng [during].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "[He called while I was driving.] Anh ấy gọi khi tôi đang lái xe.",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [while] là mệnh đề [I was driving].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Sản xuất và giao hàng",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "Two machines broke down [[c0a|during]] the night shift.",
+     "vi": "Hai máy bị hỏng trong ca đêm."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "Please wear a helmet [[c1a|while]] you are in the factory.",
+     "vi": "Hãy đội mũ bảo hộ khi ở trong nhà máy."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[Two machines broke down during the night shift.] Hai máy bị hỏng trong ca đêm.",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [during] là danh từ: [the night shift].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please wear a helmet while you are in the factory.] Hãy đội mũ bảo hộ khi ở trong nhà máy.",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [while] là một mệnh đề có chủ ngữ và động từ.",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Mobile phones must be turned off ___ the performance.",
+     "lua_chon": [
+      "as",
+      "during",
+      "while",
+      "when"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là during: the performance là danh từ, dùng during.",
+      "The performance là danh từ, dùng during.",
+      "Đáp án là during: the performance là danh từ, dùng during.",
+      "Đáp án là during: the performance là danh từ, dùng during."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "___ the manager was away, Ms. Nga handled all requests.",
+     "lua_chon": [
+      "While",
+      "During",
+      "Because of",
+      "Despite"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Theo sau là mệnh đề có chủ ngữ và động từ, dùng while.",
+      "Đáp án là While: theo sau là mệnh đề có chủ ngữ và động từ, dùng while.",
+      "Đáp án là While: theo sau là mệnh đề có chủ ngữ và động từ, dùng while.",
+      "Đáp án là While: theo sau là mệnh đề có chủ ngữ và động từ, dùng while."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [the performance] là danh từ, dùng [during]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [the performance] là danh từ, dùng [during]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: [the performance] là danh từ, dùng [during]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [the performance] là danh từ, dùng [during]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Mobile phones must be turned off during the performance.] [the performance] là danh từ, dùng [during]."
+     },
+     "giai": {
+      "noi": "Vì [the performance] là danh từ, dùng [during]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Theo sau là mệnh đề có chủ ngữ và động từ, dùng [while]."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: theo sau là mệnh đề có chủ ngữ và động từ, dùng [while]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: theo sau là mệnh đề có chủ ngữ và động từ, dùng [while]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: theo sau là mệnh đề có chủ ngữ và động từ, dùng [while]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[While the manager was away, Ms. Nga handled all requests.] Theo sau là mệnh đề có chủ ngữ và động từ, dùng [while]."
+     },
+     "giai": {
+      "noi": "Vì theo sau là mệnh đề có chủ ngữ và động từ, dùng [while]."
+     }
+    }
+   ]
+  }
+ ]
+}

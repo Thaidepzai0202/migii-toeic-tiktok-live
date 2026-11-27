@@ -1,0 +1,386 @@
+{
+ "id": "tv-ban-hang",
+ "ten": "Từ vựng bán hàng",
+ "nhom": "Từ vựng · Bán hàng",
+ "so": 59,
+ "chuong": {
+  "so": 7,
+  "ten": "Bán hàng và khách hàng",
+  "bai": 1,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "quote",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|bảng báo giá]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "Please send us a [[e0a|quote]] for 100 units.",
+     "vi": "Vui lòng gửi báo giá cho 100 sản phẩm."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "Can you give me a [[f0a|quote]] for the whole order?",
+     "vi": "Bạn báo giá cho tôi cả đơn hàng được không?"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Chương bảy: Bán hàng và khách hàng. Chương này có tám bài. Bài này mình học bốn từ về bán hàng.",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[quote]. Nghĩa là bảng báo giá.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please send us a quote for 100 units.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Can you give me a quote for the whole order?]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "negotiate",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m1a|đàm phán]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "We need to [[e1a|negotiate]] a better price.",
+     "vi": "Chúng ta cần đàm phán giá tốt hơn."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "They [[f1a|negotiated]] for two hours before they agreed.",
+     "vi": "Họ đàm phán hai tiếng rồi mới đồng ý."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[negotiate]. Nghĩa là đàm phán.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[We need to negotiate a better price.]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[They negotiated for two hours before they agreed.]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Chúng tôi sẽ đàm phán giá.",
+     "tu": "negotiate",
+     "so_tu": 5,
+     "en": "We will [[d0a|negotiate]] the price.",
+     "dap": [
+      "We will negotiate the price."
+     ],
+     "nhan": [
+      "negotiate"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Chúng tôi sẽ đàm phán giá. Nhớ dùng từ [negotiate].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [We will negotiate the price.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "contract",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|hợp đồng]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "Both sides signed the [[e2a|contract]].",
+     "vi": "Hai bên đã ký hợp đồng."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The [[f2a|contract]] is valid for one year.",
+     "vi": "Hợp đồng có hiệu lực một năm."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[contract]. Nghĩa là hợp đồng.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[Both sides signed the contract.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The contract is valid for one year.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "client",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|khách hàng]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "Our biggest [[e3a|client]] is a bank.",
+     "vi": "Khách hàng lớn nhất của chúng tôi là một ngân hàng."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "We will meet a new [[f3a|client]] this afternoon.",
+     "vi": "Chiều nay chúng tôi gặp một khách hàng mới."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[client]. Nghĩa là khách hàng.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[Our biggest client is a bank.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[We will meet a new client this afternoon.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Khách hàng hài lòng với dịch vụ.",
+     "tu": "client",
+     "so_tu": 7,
+     "en": "The [[d1a|client]] is happy with the service.",
+     "dap": [
+      "The client is happy with the service.",
+      "The client is satisfied with the service.",
+      "The client was happy with the service.",
+      "The client was satisfied with the service."
+     ],
+     "nhan": [
+      "client"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Khách hàng hài lòng với dịch vụ. Nhớ dùng từ [client].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [The client is happy with the service.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The two companies ___ for weeks before they agreed on a price.",
+     "lua_chon": [
+      "contract",
+      "quote",
+      "client",
+      "negotiated"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là negotiated: hai công ty negotiated, đàm phán nhiều tuần.",
+      "Đáp án là negotiated: hai công ty negotiated, đàm phán nhiều tuần.",
+      "Đáp án là negotiated: hai công ty negotiated, đàm phán nhiều tuần.",
+      "Hai công ty negotiated, đàm phán nhiều tuần."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Hai công ty [negotiated], đàm phán nhiều tuần."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: hai công ty [negotiated], đàm phán nhiều tuần. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: hai công ty [negotiated], đàm phán nhiều tuần. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: hai công ty [negotiated], đàm phán nhiều tuần. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [negotiated], vì hai công ty [negotiated], đàm phán nhiều tuần."
+     },
+     "giai": {
+      "noi": "Vì hai công ty [negotiated], đàm phán nhiều tuần."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

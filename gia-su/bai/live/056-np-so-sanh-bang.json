@@ -1,0 +1,290 @@
+{
+ "id": "np-so-sanh-bang",
+ "ten": "So sánh bằng as … as",
+ "nhom": "Ngữ pháp · So sánh",
+ "so": 56,
+ "chuong": {
+  "so": 6,
+  "ten": "Marketing và sản phẩm",
+  "bai": 7,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "So sánh bằng as … as",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|as cộng tính từ cộng as]] nghĩa là [[y0b|bằng]]."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "[[y1a|not as … as]] nghĩa là [[y1b|không bằng]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "as + adj/adv + as"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học So sánh bằng [as … as].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[as] cộng tính từ cộng [as] nghĩa là bằng.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 2220
+      }
+     ]
+    },
+    {
+     "noi": "[not as], [as] nghĩa là không bằng.",
+     "lam": [
+      {
+       "to": "y1a"
+      },
+      {
+       "to": "y1b",
+       "sau": 1500
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [as] cộng tính từ hoặc trạng từ, cộng [as].",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "The new phone is [[v0a|as fast as]] a laptop.",
+     "vi": "Điện thoại mới nhanh ngang một chiếc laptop."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "This road is [[v1a|not as busy as]] the highway.",
+     "vi": "Con đường này không đông bằng đường cao tốc."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [The new phone is as fast as a laptop.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Giữa hai chữ [as] là tính từ nguyên mẫu.",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [This road is not as busy as the highway.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "[not as], [as] là không bằng.",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Marketing và sản phẩm",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "Our brand is [[c0a|as popular as]] theirs.",
+     "vi": "Thương hiệu của chúng tôi phổ biến ngang thương hiệu của họ."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "The prototype is [[c1a|not as efficient as]] we hoped.",
+     "vi": "Mẫu thử không hiệu quả như chúng tôi mong."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề marketing và sản phẩm: [Our brand is as popular as theirs.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Ngang nhau thì dùng [as popular as].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [The prototype is not as efficient as we hoped.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Phủ định: [not as] cộng tính từ cộng [as].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Please reply as ___ as possible.",
+     "lua_chon": [
+      "quickly",
+      "quick",
+      "quickest",
+      "quicker"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Bổ nghĩa cho động từ reply cần trạng từ, giữ nguyên mẫu giữa hai chữ as.",
+      "Đáp án là quickly: bổ nghĩa cho động từ reply cần trạng từ, giữ nguyên mẫu giữa hai chữ as.",
+      "Đáp án là quickly: bổ nghĩa cho động từ reply cần trạng từ, giữ nguyên mẫu giữa hai chữ as.",
+      "Đáp án là quickly: bổ nghĩa cho động từ reply cần trạng từ, giữ nguyên mẫu giữa hai chữ as."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "The rent here is not as ___ as in the city center.",
+     "lua_chon": [
+      "more expensive",
+      "expensively",
+      "expensive",
+      "most expensive"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là expensive: giữa as và as dùng tính từ nguyên mẫu.",
+      "Đáp án là expensive: giữa as và as dùng tính từ nguyên mẫu.",
+      "Giữa as và as dùng tính từ nguyên mẫu.",
+      "Đáp án là expensive: giữa as và as dùng tính từ nguyên mẫu."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Bổ nghĩa cho động từ [reply] cần trạng từ, giữ nguyên mẫu giữa hai chữ [as]."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: bổ nghĩa cho động từ [reply] cần trạng từ, giữ nguyên mẫu giữa hai chữ [as]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: bổ nghĩa cho động từ [reply] cần trạng từ, giữ nguyên mẫu giữa hai chữ [as]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: bổ nghĩa cho động từ [reply] cần trạng từ, giữ nguyên mẫu giữa hai chữ [as]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [quickly], vì bổ nghĩa cho động từ [reply] cần trạng từ, giữ nguyên mẫu giữa hai chữ [as]."
+     },
+     "giai": {
+      "noi": "Vì bổ nghĩa cho động từ [reply] cần trạng từ, giữ nguyên mẫu giữa hai chữ [as]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Giữa [as] và [as] dùng tính từ nguyên mẫu."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: giữa [as] và [as] dùng tính từ nguyên mẫu. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: giữa [as] và [as] dùng tính từ nguyên mẫu. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: giữa [as] và [as] dùng tính từ nguyên mẫu. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [expensive], vì giữa [as] và [as] dùng tính từ nguyên mẫu."
+     },
+     "giai": {
+      "noi": "Vì giữa [as] và [as] dùng tính từ nguyên mẫu."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

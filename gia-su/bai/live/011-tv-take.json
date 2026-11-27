@@ -1,0 +1,385 @@
+{
+ "id": "tv-take",
+ "ten": "Cụm từ đi với take",
+ "nhom": "Từ vựng · Cụm từ cố định",
+ "so": 11,
+ "chuong": {
+  "so": 2,
+  "ten": "Họp và sự kiện",
+  "bai": 2,
+  "tong": 10
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "take part in",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m0a|tham gia]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "Ten companies will [[e0a|take part in]] the fair.",
+     "vi": "Mười công ty sẽ tham gia hội chợ."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "All staff are invited to [[f0a|take part in]] the sports day.",
+     "vi": "Mọi nhân viên được mời tham gia ngày hội thể thao."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Tiếp chủ đề họp và sự kiện. Bài này mình học bốn từ về cụm từ đi với [take].",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[take part in]. Nghĩa là tham gia.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Ten companies will take part in the fair.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[All staff are invited to take part in the sports day.]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "take place",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m1a|diễn ra]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "The meeting will [[e1a|take place]] in Room 3.",
+     "vi": "Cuộc họp sẽ diễn ra ở phòng 3."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "The conference [[f1a|took place]] in Da Nang last year.",
+     "vi": "Hội nghị năm ngoái diễn ra ở Đà Nẵng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[take place]. Nghĩa là diễn ra.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[The meeting will take place in Room 3.]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The conference took place in Da Nang last year.]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Buổi tiệc diễn ra tối nay.",
+     "tu": "take place",
+     "so_tu": 5,
+     "en": "The party [[d0a|takes place]] tonight.",
+     "dap": [
+      "The party takes place tonight.",
+      "The party will take place tonight.",
+      "The party is taking place tonight."
+     ],
+     "nhan": [
+      "takes place"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Buổi tiệc diễn ra tối nay. Nhớ dùng từ [take place].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [The party takes place tonight.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "take notes",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m2a|ghi chép]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "Please [[e2a|take notes]] during the lecture.",
+     "vi": "Vui lòng ghi chép trong buổi giảng."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "Mr. Duc will [[f2a|take notes]] at the meeting.",
+     "vi": "Anh Đức sẽ ghi chép trong cuộc họp."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[take notes]. Nghĩa là ghi chép.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please take notes during the lecture.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Mr. Duc will take notes at the meeting.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "take a break",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m3a|nghỉ giải lao]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "Let us [[e3a|take a break]] for ten minutes.",
+     "vi": "Hãy nghỉ giải lao mười phút."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "We [[f3a|took a break]] after the first speaker.",
+     "vi": "Chúng tôi nghỉ giải lao sau diễn giả đầu tiên."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[take a break]. Nghĩa là nghỉ giải lao.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[Let us take a break for ten minutes.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[We took a break after the first speaker.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Mình nghỉ giải lao nhé.",
+     "tu": "take a break",
+     "so_tu": 5,
+     "en": "Let us [[d1a|take a break]].",
+     "dap": [
+      "Let us take a break."
+     ],
+     "nhan": [
+      "take a break"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Mình nghỉ giải lao nhé. Nhớ dùng từ [take a break].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [Let us take a break.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The annual festival will ___ in the city park.",
+     "lua_chon": [
+      "take notes",
+      "take a break",
+      "take place",
+      "take part in"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là take place: lễ hội take place, diễn ra ở công viên.",
+      "Đáp án là take place: lễ hội take place, diễn ra ở công viên.",
+      "Lễ hội take place, diễn ra ở công viên.",
+      "Đáp án là take place: lễ hội take place, diễn ra ở công viên."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Lễ hội [take place], diễn ra ở công viên."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: lễ hội [take place], diễn ra ở công viên. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: lễ hội [take place], diễn ra ở công viên. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: lễ hội [take place], diễn ra ở công viên. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [take place], vì lễ hội [take place], diễn ra ở công viên."
+     },
+     "giai": {
+      "noi": "Vì lễ hội [take place], diễn ra ở công viên."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

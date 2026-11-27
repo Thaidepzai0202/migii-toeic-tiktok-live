@@ -1,0 +1,291 @@
+{
+ "id": "np-both-either-neither",
+ "ten": "Both, either, neither",
+ "nhom": "Ngữ pháp · Liên từ",
+ "so": 81,
+ "chuong": {
+  "so": 9,
+  "ten": "Công nghệ và công trình",
+  "bai": 7,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Both, either, neither",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|both … and]]: cả hai."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "[[y1a|either … or]]: một trong hai."
+    },
+    {
+     "id": "y2",
+     "kieu": "doan",
+     "chu": "[[y2a|neither … nor]]: không cái nào."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[Both], [either], [neither].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[both], [and]: cả hai.",
+     "lam": [
+      {
+       "to": "y0a"
+      }
+     ]
+    },
+    {
+     "noi": "[either], [or]: một trong hai.",
+     "lam": [
+      {
+       "to": "y1a"
+      }
+     ]
+    },
+    {
+     "noi": "[neither], [nor]: không cái nào.",
+     "lam": [
+      {
+       "to": "y2a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "You can pay [[v0a|either]] by card [[v0b|or]] in cash.",
+     "vi": "Bạn có thể trả bằng thẻ hoặc tiền mặt."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "[[v1a|Neither]] the manager [[v1b|nor]] the assistant was available.",
+     "vi": "Cả quản lý lẫn trợ lý đều không rảnh."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[You can pay either by card or in cash.] Bạn có thể trả bằng thẻ hoặc tiền mặt.",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "[either] đi với [or].",
+     "lam": [
+      {
+       "gach": "v0a"
+      },
+      {
+       "gach": "v0b"
+      }
+     ]
+    },
+    {
+     "noi": "[Neither the manager nor the assistant was available.] Cả quản lý lẫn trợ lý đều không rảnh.",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "[neither] đi với [nor].",
+     "lam": [
+      {
+       "gach": "v1a"
+      },
+      {
+       "gach": "v1b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Công nghệ và công trình",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "[[c0a|Both]] the printer [[c0b|and]] the scanner need repairs.",
+     "vi": "Cả máy in và máy quét đều cần sửa."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "You can [[c1a|either]] restart the computer [[c1b|or]] install the update.",
+     "vi": "Bạn có thể khởi động lại máy hoặc cài bản cập nhật."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[Both the printer and the scanner need repairs.] Cả máy in và máy quét đều cần sửa.",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "[both] đi với [and], động từ số nhiều.",
+     "lam": [
+      {
+       "gach": "c0a"
+      },
+      {
+       "gach": "c0b"
+      }
+     ]
+    },
+    {
+     "noi": "[You can either restart the computer or install the update.] Bạn có thể khởi động lại máy hoặc cài bản cập nhật.",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "[either] đi với [or]: chọn một trong hai.",
+     "lam": [
+      {
+       "gach": "c1a"
+      },
+      {
+       "gach": "c1b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The position requires both experience ___ good communication skills.",
+     "lua_chon": [
+      "nor",
+      "but",
+      "or",
+      "and"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là and: both đi với and.",
+      "Đáp án là and: both đi với and.",
+      "Đáp án là and: both đi với and.",
+      "Both đi với and."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "Neither the printer ___ the scanner is working today.",
+     "lua_chon": [
+      "nor",
+      "or",
+      "but",
+      "and"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Neither đi với nor.",
+      "Đáp án là nor: neither đi với nor.",
+      "Đáp án là nor: neither đi với nor.",
+      "Đáp án là nor: neither đi với nor."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [both] đi với [and]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [both] đi với [and]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [both] đi với [and]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: [both] đi với [and]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The position requires both experience and good communication skills.] [both] đi với [and]."
+     },
+     "giai": {
+      "noi": "Vì [both] đi với [and]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [neither] đi với [nor]."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [neither] đi với [nor]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: [neither] đi với [nor]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [neither] đi với [nor]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Neither the printer nor the scanner is working today.] [neither] đi với [nor]."
+     },
+     "giai": {
+      "noi": "Vì [neither] đi với [nor]."
+     }
+    }
+   ]
+  }
+ ]
+}

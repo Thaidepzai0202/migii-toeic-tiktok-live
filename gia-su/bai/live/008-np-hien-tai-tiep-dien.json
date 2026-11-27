@@ -1,0 +1,296 @@
+{
+ "id": "np-hien-tai-tiep-dien",
+ "ten": "Thì hiện tại tiếp diễn",
+ "nhom": "Ngữ pháp · Các thì",
+ "so": 8,
+ "chuong": {
+  "so": 1,
+  "ten": "Văn phòng",
+  "bai": 8,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Thì hiện tại tiếp diễn",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "Dùng cho việc [[y0a|đang diễn ra]] lúc nói, hoặc [[y0b|kế hoạch đã hẹn]] trong tương lai gần."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "S + am/is/are + V-ing"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học Thì hiện tại tiếp diễn.",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Dùng cho việc đang diễn ra lúc nói, hoặc kế hoạch đã hẹn trong tương lai gần.",
+     "lam": [
+      {
+       "to": "y0a",
+       "sau": 840
+      },
+      {
+       "to": "y0b",
+       "sau": 2460
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: chủ ngữ cộng [am], [is] hoặc [are], cộng động từ thêm [ing].",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "The manager [[v0a|is talking]] to a client right now.",
+     "vi": "Quản lý đang nói chuyện với khách hàng."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "We [[v1a|are meeting]] the supplier tomorrow.",
+     "vi": "Ngày mai chúng tôi gặp nhà cung cấp."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [The manager is talking to a client right now.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Có [right now], việc đang diễn ra.",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [We are meeting the supplier tomorrow.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Lịch hẹn đã sắp xếp, cũng dùng tiếp diễn.",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Văn phòng",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "The director [[c0a|is reading]] the agenda now.",
+     "vi": "Giám đốc đang đọc chương trình họp."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "Please hold. Ms. Lan [[c1a|is talking]] on another line.",
+     "vi": "Vui lòng giữ máy. Chị Lan đang nghe một cuộc gọi khác."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề văn phòng: [The director is reading the agenda now.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Có [now], việc đang diễn ra.",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [Please hold. Ms. Lan is talking on another line.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Chị Lan đang bận đúng lúc này, nên dùng [is talking].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "nhan": "Mẹo nhớ",
+   "tieu_de": "Ghi nhớ nhanh",
+   "khoi": [
+    {
+     "id": "meo",
+     "kieu": "ghi_nho",
+     "chu": "Dấu hiệu: now, right now, at the moment, currently."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Gặp [now], [at the moment], [currently] là dùng tiếp diễn.",
+     "lam": [
+      {
+       "to": "meo"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Mr. Kim cannot answer the phone because he ___ a presentation at the moment.",
+     "lua_chon": [
+      "gave",
+      "is giving",
+      "has given",
+      "gives"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là is giving: có at the moment là việc đang diễn ra.",
+      "Có at the moment là việc đang diễn ra.",
+      "Đáp án là is giving: có at the moment là việc đang diễn ra.",
+      "Đáp án là is giving: có at the moment là việc đang diễn ra."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "The company ___ its old office building this year.",
+     "lua_chon": [
+      "renovating",
+      "is renovating",
+      "renovate",
+      "to renovate"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là is renovating: việc đang diễn ra, cần is cộng động từ thêm ing.",
+      "Việc đang diễn ra, cần is cộng động từ thêm ing.",
+      "Đáp án là is renovating: việc đang diễn ra, cần is cộng động từ thêm ing.",
+      "Đáp án là is renovating: việc đang diễn ra, cần is cộng động từ thêm ing."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Có [at the moment] là việc đang diễn ra."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: có [at the moment] là việc đang diễn ra. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: có [at the moment] là việc đang diễn ra. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: có [at the moment] là việc đang diễn ra. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [is giving], vì có [at the moment] là việc đang diễn ra."
+     },
+     "giai": {
+      "noi": "Vì có [at the moment] là việc đang diễn ra."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Việc đang diễn ra, cần [is] cộng động từ thêm [ing]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: việc đang diễn ra, cần [is] cộng động từ thêm [ing]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: việc đang diễn ra, cần [is] cộng động từ thêm [ing]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: việc đang diễn ra, cần [is] cộng động từ thêm [ing]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [is renovating], vì việc đang diễn ra, cần [is] cộng động từ thêm [ing]."
+     },
+     "giai": {
+      "noi": "Vì việc đang diễn ra, cần [is] cộng động từ thêm [ing]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

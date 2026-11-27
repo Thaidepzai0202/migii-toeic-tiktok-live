@@ -1,0 +1,375 @@
+{
+ "id": "tv-hop-dong",
+ "ten": "Từ vựng hợp đồng",
+ "nhom": "Từ vựng · Hợp đồng",
+ "so": 60,
+ "chuong": {
+  "so": 7,
+  "ten": "Bán hàng và khách hàng",
+  "bai": 2,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "agreement",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|thoả thuận]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "The two firms reached an [[e0a|agreement]].",
+     "vi": "Hai công ty đã đạt được thoả thuận."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "Both sides signed the [[f0a|agreement]] today.",
+     "vi": "Hôm nay hai bên đã ký thoả thuận."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[agreement]. Thoả thuận.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[The two firms reached an agreement.] Hai công ty đã đạt được thoả thuận.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Both sides signed the agreement today.] Hôm nay hai bên đã ký thoả thuận.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "terms",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|điều khoản]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "Please read the [[e1a|terms]] carefully.",
+     "vi": "Vui lòng đọc kỹ các điều khoản."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "The [[f1a|terms]] of payment are 30 days.",
+     "vi": "Điều khoản thanh toán là 30 ngày."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[terms]. Điều khoản.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please read the terms carefully.] Vui lòng đọc kỹ các điều khoản.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The terms of payment are 30 days.] Điều khoản thanh toán là 30 ngày.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Tôi đồng ý với các điều khoản.",
+     "tu": "terms",
+     "so_tu": 5,
+     "en": "I agree with the [[d0a|terms]].",
+     "dap": [
+      "I agree with the terms.",
+      "I agree to the terms."
+     ],
+     "nhan": [
+      "terms"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Tôi đồng ý với các điều khoản.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[I agree with the terms.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "sign",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m2a|ký]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "Please [[e2a|sign]] at the bottom of the page.",
+     "vi": "Vui lòng ký ở cuối trang."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The client [[f2a|signed]] the contract this morning.",
+     "vi": "Sáng nay khách hàng đã ký hợp đồng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[sign]. Ký.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please sign at the bottom of the page.] Vui lòng ký ở cuối trang.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The client signed the contract this morning.] Sáng nay khách hàng đã ký hợp đồng.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "expire",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m3a|hết hạn]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "Your contract will [[e3a|expire]] in June.",
+     "vi": "Hợp đồng của bạn sẽ hết hạn vào tháng Sáu."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The special offer [[f3a|expires]] on Sunday.",
+     "vi": "Ưu đãi đặc biệt hết hạn vào Chủ nhật."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[expire]. Hết hạn.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[Your contract will expire in June.] Hợp đồng của bạn sẽ hết hạn vào tháng Sáu.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The special offer expires on Sunday.] Ưu đãi đặc biệt hết hạn vào Chủ nhật.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Thẻ của tôi đã hết hạn.",
+     "tu": "expire",
+     "so_tu": 4,
+     "en": "My card has [[d1a|expired]].",
+     "dap": [
+      "My card has expired.",
+      "My card expired.",
+      "My card is expired."
+     ],
+     "nhan": [
+      "expired"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thẻ của tôi đã hết hạn.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[My card has expired.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "My passport will ___ next month, so I need a new one.",
+     "lua_chon": [
+      "agreement",
+      "terms",
+      "sign",
+      "expire"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là expire: cần hộ chiếu mới vì sắp expire, hết hạn.",
+      "Đáp án là expire: cần hộ chiếu mới vì sắp expire, hết hạn.",
+      "Đáp án là expire: cần hộ chiếu mới vì sắp expire, hết hạn.",
+      "Cần hộ chiếu mới vì sắp expire, hết hạn."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Cần hộ chiếu mới vì sắp [expire], hết hạn."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: cần hộ chiếu mới vì sắp [expire], hết hạn. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: cần hộ chiếu mới vì sắp [expire], hết hạn. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: cần hộ chiếu mới vì sắp [expire], hết hạn. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[My passport will expire next month, so I need a new one.]"
+     },
+     "giai": {
+      "noi": "Vì cần hộ chiếu mới vì sắp [expire], hết hạn."
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,271 @@
+{
+ "id": "np-bi-dong-hien-tai",
+ "ten": "Câu bị động thì hiện tại",
+ "nhom": "Ngữ pháp · Câu bị động",
+ "so": 37,
+ "chuong": {
+  "so": 4,
+  "ten": "Tài chính",
+  "bai": 7,
+  "tong": 10
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Câu bị động thì hiện tại",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "Dùng bị động khi [[y0a|người làm không quan trọng]], ta [[y0b|nhấn vào vật chịu tác động]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "S + am/is/are + V3 (+ by …)"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Câu bị động thì hiện tại.",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Dùng bị động khi người làm không quan trọng, ta nhấn vào vật chịu tác động.",
+     "lam": [
+      {
+       "to": "y0a",
+       "sau": 1020
+      },
+      {
+       "to": "y0b",
+       "sau": 2880
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: chủ ngữ cộng [am], [is] hoặc [are], cộng động từ dạng ba.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "All orders [[v0a|are shipped]] within two days.",
+     "vi": "Mọi đơn hàng được giao trong vòng hai ngày."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "This room [[v1a|is cleaned]] every evening.",
+     "vi": "Phòng này được dọn vào mỗi tối."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[All orders are shipped within two days.] Mọi đơn hàng được giao trong vòng hai ngày.",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Đơn hàng không tự giao, nên dùng [are shipped].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "[This room is cleaned every evening.] Phòng này được dọn vào mỗi tối.",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Phòng được dọn, dùng [is cleaned].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Tài chính",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "All travel expenses [[c0a|are reimbursed]] by the company.",
+     "vi": "Mọi chi phí đi lại đều được công ty hoàn trả."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "Invoices [[c1a|are sent]] on the first day of each month.",
+     "vi": "Hoá đơn được gửi vào ngày đầu mỗi tháng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[All travel expenses are reimbursed by the company.] Mọi chi phí đi lại đều được công ty hoàn trả.",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Chi phí không tự hoàn trả được, nên dùng bị động [are reimbursed].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Invoices are sent on the first day of each month.] Hoá đơn được gửi vào ngày đầu mỗi tháng.",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Việc lặp lại mỗi tháng: [are] cộng [sent].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Visitor badges ___ at the front desk.",
+     "lua_chon": [
+      "issue",
+      "are issuing",
+      "issuing",
+      "are issued"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là are issued: thẻ khách được cấp, cần bị động are issued.",
+      "Đáp án là are issued: thẻ khách được cấp, cần bị động are issued.",
+      "Đáp án là are issued: thẻ khách được cấp, cần bị động are issued.",
+      "Thẻ khách được cấp, cần bị động are issued."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "The report ___ by the finance team every quarter.",
+     "lua_chon": [
+      "is prepared",
+      "is preparing",
+      "prepare",
+      "prepares"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Có by the finance team nên dùng bị động.",
+      "Đáp án là is prepared: có by the finance team nên dùng bị động.",
+      "Đáp án là is prepared: có by the finance team nên dùng bị động.",
+      "Đáp án là is prepared: có by the finance team nên dùng bị động."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Thẻ khách được cấp, cần bị động [are issued]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: thẻ khách được cấp, cần bị động [are issued]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: thẻ khách được cấp, cần bị động [are issued]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: thẻ khách được cấp, cần bị động [are issued]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Visitor badges are issued at the front desk.] Thẻ khách được cấp, cần bị động [are issued]."
+     },
+     "giai": {
+      "noi": "Vì thẻ khách được cấp, cần bị động [are issued]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Có [by the finance team] nên dùng bị động."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: có [by the finance team] nên dùng bị động. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: có [by the finance team] nên dùng bị động. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: có [by the finance team] nên dùng bị động. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The report is prepared by the finance team every quarter.] Có [by the finance team] nên dùng bị động."
+     },
+     "giai": {
+      "noi": "Vì có [by the finance team] nên dùng bị động."
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,377 @@
+{
+ "id": "tv-cum-dong-tu-3",
+ "ten": "Cụm động từ hay gặp (3)",
+ "nhom": "Từ vựng · Cụm động từ",
+ "so": 12,
+ "chuong": {
+  "so": 2,
+  "ten": "Họp và sự kiện",
+  "bai": 3,
+  "tong": 10
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "call off",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m0a|huỷ bỏ]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "They [[e0a|called off]] the trip because of the rain.",
+     "vi": "Họ huỷ chuyến đi vì trời mưa."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "The outdoor party was [[f0a|called off]] because of the storm.",
+     "vi": "Bữa tiệc ngoài trời bị huỷ vì bão."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[call off]. Huỷ bỏ.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[They called off the trip because of the rain.] Họ huỷ chuyến đi vì trời mưa.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The outdoor party was called off because of the storm.] Bữa tiệc ngoài trời bị huỷ vì bão.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "take over",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m1a|tiếp quản]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "Ms. Thao will [[e1a|take over]] the project next month.",
+     "vi": "Cô Thảo sẽ tiếp quản dự án vào tháng sau."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "Mr. Tuan will [[f1a|take over]] as event manager.",
+     "vi": "Anh Tuấn sẽ tiếp quản vị trí quản lý sự kiện."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[take over]. Tiếp quản.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[Ms. Thao will take over the project next month.] Cô Thảo sẽ tiếp quản dự án vào tháng sau.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Mr. Tuan will take over as event manager.] Anh Tuấn sẽ tiếp quản vị trí quản lý sự kiện.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Chị Lan sẽ tiếp quản dự án.",
+     "tu": "take over",
+     "so_tu": 7,
+     "en": "Ms. Lan will [[d0a|take over]] the project.",
+     "dap": [
+      "Ms. Lan will take over the project.",
+      "Lan will take over the project.",
+      "Miss Lan will take over the project.",
+      "Mrs. Lan will take over the project."
+     ],
+     "nhan": [
+      "take over"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Chị Lan sẽ tiếp quản dự án.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[Ms. Lan will take over the project.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "go over",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m2a|xem lại kỹ]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "Let us [[e2a|go over]] the contract once more.",
+     "vi": "Hãy xem kỹ lại hợp đồng thêm một lần."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "Let us [[f2a|go over]] the agenda before we start.",
+     "vi": "Mình cùng xem lại chương trình họp trước khi bắt đầu."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[go over]. Xem lại kỹ.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[Let us go over the contract once more.] Hãy xem kỹ lại hợp đồng thêm một lần.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Let us go over the agenda before we start.] Mình cùng xem lại chương trình họp trước khi bắt đầu.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "drop off",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m3a|đưa tới, để lại]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "Please [[e3a|drop off]] the documents at reception.",
+     "vi": "Vui lòng để tài liệu ở quầy lễ tân."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "I will [[f3a|drop off]] the name cards at the hall.",
+     "vi": "Tôi sẽ để thẻ tên ở hội trường."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[drop off]. Đưa tới, để lại.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please drop off the documents at reception.] Vui lòng để tài liệu ở quầy lễ tân.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[I will drop off the name cards at the hall.] Tôi sẽ để thẻ tên ở hội trường.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Tôi sẽ để tài liệu ở lễ tân.",
+     "tu": "drop off",
+     "so_tu": 8,
+     "en": "I will [[d1a|drop off]] the documents at reception.",
+     "dap": [
+      "I will drop off the documents at reception.",
+      "I will drop off the documents at the reception.",
+      "I will drop the documents off at reception."
+     ],
+     "nhan": [
+      "drop off"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Tôi sẽ để tài liệu ở lễ tân.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[I will drop off the documents at reception.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "When Mr. Hai retires, his daughter will ___ the business.",
+     "lua_chon": [
+      "take over",
+      "drop off",
+      "go over",
+      "call off"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Con gái take over, tiếp quản việc kinh doanh.",
+      "Đáp án là take over: con gái take over, tiếp quản việc kinh doanh.",
+      "Đáp án là take over: con gái take over, tiếp quản việc kinh doanh.",
+      "Đáp án là take over: con gái take over, tiếp quản việc kinh doanh."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Con gái [take over], tiếp quản việc kinh doanh."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: con gái [take over], tiếp quản việc kinh doanh. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: con gái [take over], tiếp quản việc kinh doanh. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: con gái [take over], tiếp quản việc kinh doanh. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[When Mr. Hai retires, his daughter will take over the business.]"
+     },
+     "giai": {
+      "noi": "Vì con gái [take over], tiếp quản việc kinh doanh."
+     }
+    }
+   ]
+  }
+ ]
+}

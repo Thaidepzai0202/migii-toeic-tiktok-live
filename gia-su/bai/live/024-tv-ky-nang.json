@@ -1,0 +1,383 @@
+{
+ "id": "tv-ky-nang",
+ "ten": "Từ vựng kỹ năng làm việc",
+ "nhom": "Từ vựng · Kỹ năng",
+ "so": 24,
+ "chuong": {
+  "so": 3,
+  "ten": "Nhân sự",
+  "bai": 5,
+  "tong": 11
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "cooperate",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m0a|hợp tác]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "All departments must [[e0a|cooperate]].",
+     "vi": "Mọi phòng ban phải hợp tác với nhau."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "New staff should [[f0a|cooperate]] with their team.",
+     "vi": "Nhân viên mới nên hợp tác với nhóm."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Tiếp chủ đề nhân sự. Bài này mình học bốn từ về kỹ năng làm việc.",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[cooperate]. Nghĩa là hợp tác.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[All departments must cooperate.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[New staff should cooperate with their team.]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "responsible",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**tính từ** · [[m1a|chịu trách nhiệm]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "Ms. Yen is [[e1a|responsible]] for training.",
+     "vi": "Cô Yến phụ trách việc đào tạo."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "Who is [[f1a|responsible]] for hiring?",
+     "vi": "Ai chịu trách nhiệm tuyển dụng?"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[responsible]. Nghĩa là chịu trách nhiệm.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[Ms. Yen is responsible for training.]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Who is responsible for hiring?]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Tôi chịu trách nhiệm về dự án này.",
+     "tu": "responsible",
+     "so_tu": 6,
+     "en": "I am [[d0a|responsible]] for this project.",
+     "dap": [
+      "I am responsible for this project."
+     ],
+     "nhan": [
+      "responsible"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Tôi chịu trách nhiệm về dự án này. Nhớ dùng từ [responsible].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [I am responsible for this project.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "flexible",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**tính từ** · [[m2a|linh hoạt]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "We offer [[e2a|flexible]] working hours.",
+     "vi": "Chúng tôi có giờ làm việc linh hoạt."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "We are looking for someone [[f2a|flexible]] and friendly.",
+     "vi": "Chúng tôi tìm người linh hoạt và thân thiện."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[flexible]. Nghĩa là linh hoạt.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[We offer flexible working hours.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[We are looking for someone flexible and friendly.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "punctual",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**tính từ** · [[m3a|đúng giờ]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "Please be [[e3a|punctual]] for the interview.",
+     "vi": "Vui lòng đến phỏng vấn đúng giờ."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "Mr. Dung is always [[f3a|punctual]] for meetings.",
+     "vi": "Anh Dũng luôn đến họp đúng giờ."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[punctual]. Nghĩa là đúng giờ.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please be punctual for the interview.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Mr. Dung is always punctual for meetings.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Cô ấy luôn đúng giờ.",
+     "tu": "punctual",
+     "so_tu": 4,
+     "en": "She is always [[d1a|punctual]].",
+     "dap": [
+      "She is always punctual."
+     ],
+     "nhan": [
+      "punctual"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Cô ấy luôn đúng giờ. Nhớ dùng từ [punctual].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [She is always punctual.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Mr. Tung is ___ for checking all invoices.",
+     "lua_chon": [
+      "responsible",
+      "punctual",
+      "cooperate",
+      "flexible"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Responsible for là chịu trách nhiệm về việc gì.",
+      "Đáp án là responsible: responsible for là chịu trách nhiệm về việc gì.",
+      "Đáp án là responsible: responsible for là chịu trách nhiệm về việc gì.",
+      "Đáp án là responsible: responsible for là chịu trách nhiệm về việc gì."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [responsible for] là chịu trách nhiệm về việc gì."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [responsible for] là chịu trách nhiệm về việc gì. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: [responsible for] là chịu trách nhiệm về việc gì. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [responsible for] là chịu trách nhiệm về việc gì. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [responsible], vì [responsible for] là chịu trách nhiệm về việc gì."
+     },
+     "giai": {
+      "noi": "Vì [responsible for] là chịu trách nhiệm về việc gì."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,374 @@
+{
+ "id": "tv-van-phong",
+ "ten": "Từ vựng văn phòng",
+ "nhom": "Từ vựng · Văn phòng",
+ "so": 1,
+ "chuong": {
+  "so": 1,
+  "ten": "Văn phòng",
+  "bai": 1,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "deadline",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|hạn chót]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "The [[e0a|deadline]] for the report is Friday.",
+     "vi": "Hạn chót nộp báo cáo là thứ Sáu."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "Can we extend the [[f0a|deadline]] by two days?",
+     "vi": "Mình lùi hạn chót thêm hai ngày được không?"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[deadline]. Hạn chót.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[The deadline for the report is Friday.] Hạn chót nộp báo cáo là thứ Sáu.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Can we extend the deadline by two days?] Mình lùi hạn chót thêm hai ngày được không?",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "agenda",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|chương trình cuộc họp]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "Please read the [[e1a|agenda]] before the meeting.",
+     "vi": "Vui lòng đọc chương trình trước cuộc họp."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "I have added your topic to the [[f1a|agenda]].",
+     "vi": "Tôi đã thêm chủ đề của bạn vào chương trình họp."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[agenda]. Chương trình cuộc họp.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please read the agenda before the meeting.] Vui lòng đọc chương trình trước cuộc họp.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[I have added your topic to the agenda.] Tôi đã thêm chủ đề của bạn vào chương trình họp.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Chương trình họp ở trên bàn.",
+     "tu": "agenda",
+     "so_tu": 6,
+     "en": "The [[d0a|agenda]] is on the table.",
+     "dap": [
+      "The agenda is on the table.",
+      "The agenda is on the desk."
+     ],
+     "nhan": [
+      "agenda"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Chương trình họp ở trên bàn.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[The agenda is on the table.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "colleague",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|đồng nghiệp]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "My [[e2a|colleague]] will help you with the order.",
+     "vi": "Đồng nghiệp của tôi sẽ giúp bạn với đơn hàng."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "She often has lunch with her [[f2a|colleagues]].",
+     "vi": "Cô ấy thường ăn trưa cùng các đồng nghiệp."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[colleague]. Đồng nghiệp.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[My colleague will help you with the order.] Đồng nghiệp của tôi sẽ giúp bạn với đơn hàng.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[She often has lunch with her colleagues.] Cô ấy thường ăn trưa cùng các đồng nghiệp.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "supervisor",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|người giám sát, cấp trên]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "Ask your [[e3a|supervisor]] for permission.",
+     "vi": "Hãy xin phép cấp trên của bạn."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "My [[f3a|supervisor]] checks my work every Friday.",
+     "vi": "Cấp trên kiểm tra công việc của tôi mỗi thứ Sáu."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[supervisor]. Người giám sát, cấp trên.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[Ask your supervisor for permission.] Hãy xin phép cấp trên của bạn.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[My supervisor checks my work every Friday.] Cấp trên kiểm tra công việc của tôi mỗi thứ Sáu.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Cấp trên của tôi rất tốt bụng.",
+     "tu": "supervisor",
+     "so_tu": 5,
+     "en": "My [[d1a|supervisor]] is very kind.",
+     "dap": [
+      "My supervisor is very kind.",
+      "My supervisor is very nice."
+     ],
+     "nhan": [
+      "supervisor"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Cấp trên của tôi rất tốt bụng.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[My supervisor is very kind.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The first item on the ___ is the budget.",
+     "lua_chon": [
+      "deadline",
+      "colleague",
+      "agenda",
+      "supervisor"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là agenda: agenda là chương trình họp, gồm các mục cần bàn.",
+      "Đáp án là agenda: agenda là chương trình họp, gồm các mục cần bàn.",
+      "Agenda là chương trình họp, gồm các mục cần bàn.",
+      "Đáp án là agenda: agenda là chương trình họp, gồm các mục cần bàn."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [agenda] là chương trình họp, gồm các mục cần bàn."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [agenda] là chương trình họp, gồm các mục cần bàn. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [agenda] là chương trình họp, gồm các mục cần bàn. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [agenda] là chương trình họp, gồm các mục cần bàn. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The first item on the agenda is the budget.]"
+     },
+     "giai": {
+      "noi": "Vì [agenda] là chương trình họp, gồm các mục cần bàn."
+     }
+    }
+   ]
+  }
+ ]
+}

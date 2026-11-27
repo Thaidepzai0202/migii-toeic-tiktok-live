@@ -1,0 +1,292 @@
+{
+ "id": "np-few-little",
+ "ten": "A few và a little",
+ "nhom": "Ngữ pháp · Lượng từ và đại từ",
+ "so": 96,
+ "chuong": {
+  "so": 11,
+  "ten": "Khách sạn và du lịch",
+  "bai": 5,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "A few và a little",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|a few]] đi với [[y0b|danh từ đếm được]]; [[y0c|a little]] đi với [[y0d|danh từ không đếm được]]."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "Bỏ chữ a thì nghĩa thành [[y1a|rất ít, gần như không có]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "a few + N số nhiều · a little + N không đếm được"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[A few] và [a little].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[a few] đi với danh từ đếm được; [a little] đi với danh từ không đếm được.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 900
+      },
+      {
+       "to": "y0c",
+       "sau": 1980
+      },
+      {
+       "to": "y0d",
+       "sau": 3060
+      }
+     ]
+    },
+    {
+     "noi": "Bỏ chữ [a] thì nghĩa thành rất ít, gần như không có.",
+     "lam": [
+      {
+       "to": "y1a",
+       "sau": 1620
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [a few] cộng danh từ số nhiều, [a little] cộng danh từ không đếm được.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "We still have [[v0a|a few]] seats left.",
+     "vi": "Chúng tôi vẫn còn vài chỗ trống."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "There is [[v1a|little]] time before the deadline.",
+     "vi": "Còn rất ít thời gian trước hạn chót."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[We still have a few seats left.] Chúng tôi vẫn còn vài chỗ trống.",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "[seats] đếm được, vẫn còn một ít.",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "[There is little time before the deadline.] Còn rất ít thời gian trước hạn chót.",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "[time] không đếm được, gần như hết.",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Khách sạn và du lịch",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "The hotel still has [[c0a|a few]] vacancies.",
+     "vi": "Khách sạn vẫn còn vài phòng trống."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "Add [[c1a|a little]] salt to the soup.",
+     "vi": "Thêm một chút muối vào súp."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[The hotel still has a few vacancies.] Khách sạn vẫn còn vài phòng trống.",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "[vacancies] đếm được, dùng [a few].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Add a little salt to the soup.] Thêm một chút muối vào súp.",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "[salt] không đếm được, dùng [a little].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Could you give me ___ advice about the interview?",
+     "lua_chon": [
+      "many",
+      "a few",
+      "several",
+      "a little"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là a little: advice không đếm được, dùng a little.",
+      "Đáp án là a little: advice không đếm được, dùng a little.",
+      "Đáp án là a little: advice không đếm được, dùng a little.",
+      "Advice không đếm được, dùng a little."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "Only ___ employees attended the optional training.",
+     "lua_chon": [
+      "a little",
+      "much",
+      "a few",
+      "little"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là a few: employees đếm được, số nhiều, dùng a few.",
+      "Đáp án là a few: employees đếm được, số nhiều, dùng a few.",
+      "Employees đếm được, số nhiều, dùng a few.",
+      "Đáp án là a few: employees đếm được, số nhiều, dùng a few."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [advice] không đếm được, dùng [a little]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [advice] không đếm được, dùng [a little]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [advice] không đếm được, dùng [a little]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: [advice] không đếm được, dùng [a little]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Could you give me a little advice about the interview?] [advice] không đếm được, dùng [a little]."
+     },
+     "giai": {
+      "noi": "Vì [advice] không đếm được, dùng [a little]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [employees] đếm được, số nhiều, dùng [a few]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [employees] đếm được, số nhiều, dùng [a few]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [employees] đếm được, số nhiều, dùng [a few]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [employees] đếm được, số nhiều, dùng [a few]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Only a few employees attended the optional training.] [employees] đếm được, số nhiều, dùng [a few]."
+     },
+     "giai": {
+      "noi": "Vì [employees] đếm được, số nhiều, dùng [a few]."
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,373 @@
+{
+ "id": "tv-marketing",
+ "ten": "Từ vựng marketing",
+ "nhom": "Từ vựng · Marketing",
+ "so": 50,
+ "chuong": {
+  "so": 6,
+  "ten": "Marketing và sản phẩm",
+  "bai": 1,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "advertise",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m0a|quảng cáo]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "We [[e0a|advertise]] our products on social media.",
+     "vi": "Chúng tôi quảng cáo sản phẩm trên mạng xã hội."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "The new phone is [[f0a|advertised]] on TV.",
+     "vi": "Điện thoại mới được quảng cáo trên tivi."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[advertise]. Quảng cáo.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[We advertise our products on social media.] Chúng tôi quảng cáo sản phẩm trên mạng xã hội.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The new phone is advertised on TV.] Điện thoại mới được quảng cáo trên tivi.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "campaign",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|chiến dịch]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "The new [[e1a|campaign]] starts in June.",
+     "vi": "Chiến dịch mới bắt đầu vào tháng Sáu."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "The [[f1a|campaign]] increased sales by 30%.",
+     "vi": "Chiến dịch đã tăng doanh số 30%."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[campaign]. Chiến dịch.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[The new campaign starts in June.] Chiến dịch mới bắt đầu vào tháng Sáu.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The campaign increased sales by 30%.] Chiến dịch đã tăng doanh số 30%.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Chiến dịch rất thành công.",
+     "tu": "campaign",
+     "so_tu": 5,
+     "en": "The [[d0a|campaign]] was very successful.",
+     "dap": [
+      "The campaign was very successful.",
+      "The campaign is very successful."
+     ],
+     "nhan": [
+      "campaign"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Chiến dịch rất thành công.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[The campaign was very successful.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "brand",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|thương hiệu]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "This [[e2a|brand]] is popular with young people.",
+     "vi": "Thương hiệu này được giới trẻ yêu thích."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "Customers trust our [[f2a|brand]].",
+     "vi": "Khách hàng tin thương hiệu của chúng tôi."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[brand]. Thương hiệu.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[This brand is popular with young people.] Thương hiệu này được giới trẻ yêu thích.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Customers trust our brand.] Khách hàng tin thương hiệu của chúng tôi.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "target",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m3a|nhắm tới]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "The product [[e3a|targets]] busy office workers.",
+     "vi": "Sản phẩm nhắm tới dân văn phòng bận rộn."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The ads [[f3a|target]] students and young workers.",
+     "vi": "Quảng cáo nhắm tới sinh viên và người trẻ đi làm."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[target]. Nhắm tới.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[The product targets busy office workers.] Sản phẩm nhắm tới dân văn phòng bận rộn.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The ads target students and young workers.] Quảng cáo nhắm tới sinh viên và người trẻ đi làm.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Sản phẩm này nhắm tới học sinh.",
+     "tu": "target",
+     "so_tu": 4,
+     "en": "This product [[d1a|targets]] students.",
+     "dap": [
+      "This product targets students."
+     ],
+     "nhan": [
+      "targets"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Sản phẩm này nhắm tới học sinh.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[This product targets students.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The advertising ___ increased sales by 30%.",
+     "lua_chon": [
+      "campaign",
+      "brand",
+      "target",
+      "advertise"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Advertising campaign là chiến dịch quảng cáo.",
+      "Đáp án là campaign: advertising campaign là chiến dịch quảng cáo.",
+      "Đáp án là campaign: advertising campaign là chiến dịch quảng cáo.",
+      "Đáp án là campaign: advertising campaign là chiến dịch quảng cáo."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [advertising campaign] là chiến dịch quảng cáo."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [advertising campaign] là chiến dịch quảng cáo. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: [advertising campaign] là chiến dịch quảng cáo. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [advertising campaign] là chiến dịch quảng cáo. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The advertising campaign increased sales by 30%.]"
+     },
+     "giai": {
+      "noi": "Vì [advertising campaign] là chiến dịch quảng cáo."
+     }
+    }
+   ]
+  }
+ ]
+}

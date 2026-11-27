@@ -1,0 +1,273 @@
+{
+ "id": "np-have-something-done",
+ "ten": "Cấu trúc have something done",
+ "nhom": "Ngữ pháp · Cấu trúc hay gặp",
+ "so": 88,
+ "chuong": {
+  "so": 10,
+  "ten": "Đi lại và công tác",
+  "bai": 5,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Cấu trúc have something done",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|have cộng vật cộng động từ dạng ba]] nghĩa là [[y0b|nhờ người khác làm]] việc gì đó."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "have / get + something + V3"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học Cấu trúc [have something done].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[have] cộng vật cộng động từ dạng ba nghĩa là nhờ người khác làm việc gì đó.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 2760
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [have] hoặc [get], cộng vật, cộng động từ dạng ba.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "I [[v0a|had my car repaired]] yesterday.",
+     "vi": "Hôm qua tôi đã mang xe đi sửa."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "We will [[v1a|have the documents translated]].",
+     "vi": "Chúng tôi sẽ thuê người dịch các tài liệu."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [I had my car repaired yesterday.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Tôi không tự sửa, người khác sửa giúp.",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [We will have the documents translated.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Tài liệu được dịch, dùng dạng ba [translated].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Đi lại và công tác",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "I [[c0a|had my luggage sent]] to the hotel.",
+     "vi": "Tôi nhờ người gửi hành lý tới khách sạn."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "You can [[c1a|have your ticket changed]] at the counter.",
+     "vi": "Bạn có thể nhờ đổi vé ở quầy."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề đi lại và công tác: [I had my luggage sent to the hotel.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Nhờ người khác làm: [had] cộng vật cộng động từ dạng ba.",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [You can have your ticket changed at the counter.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Vé được nhân viên quầy đổi giúp: [have your ticket changed].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Ms. Kim had the contract ___ by a lawyer.",
+     "lua_chon": [
+      "to review",
+      "reviewing",
+      "reviewed",
+      "review"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là reviewed: have cộng vật cộng động từ dạng ba.",
+      "Đáp án là reviewed: have cộng vật cộng động từ dạng ba.",
+      "Have cộng vật cộng động từ dạng ba.",
+      "Đáp án là reviewed: have cộng vật cộng động từ dạng ba."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "We need to get the air conditioner ___ before summer.",
+     "lua_chon": [
+      "fixing",
+      "fix",
+      "fixed",
+      "to fix"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là fixed: get cộng vật cộng dạng ba: nhờ người sửa.",
+      "Đáp án là fixed: get cộng vật cộng dạng ba: nhờ người sửa.",
+      "Get cộng vật cộng dạng ba: nhờ người sửa.",
+      "Đáp án là fixed: get cộng vật cộng dạng ba: nhờ người sửa."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [have] cộng vật cộng động từ dạng ba."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [have] cộng vật cộng động từ dạng ba. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [have] cộng vật cộng động từ dạng ba. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [have] cộng vật cộng động từ dạng ba. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [reviewed], vì [have] cộng vật cộng động từ dạng ba."
+     },
+     "giai": {
+      "noi": "Vì [have] cộng vật cộng động từ dạng ba."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [get] cộng vật cộng dạng ba: nhờ người sửa."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [get] cộng vật cộng dạng ba: nhờ người sửa. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [get] cộng vật cộng dạng ba: nhờ người sửa. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [get] cộng vật cộng dạng ba: nhờ người sửa. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [fixed], vì [get] cộng vật cộng dạng ba: nhờ người sửa."
+     },
+     "giai": {
+      "noi": "Vì [get] cộng vật cộng dạng ba: nhờ người sửa."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

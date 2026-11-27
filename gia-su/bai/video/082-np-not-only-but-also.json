@@ -1,0 +1,282 @@
+{
+ "id": "np-not-only-but-also",
+ "ten": "Not only … but also",
+ "nhom": "Ngữ pháp · Liên từ",
+ "so": 82,
+ "chuong": {
+  "so": 9,
+  "ten": "Công nghệ và công trình",
+  "bai": 8,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Not only … but also",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|not only … but also]] nghĩa là [[y0b|không những … mà còn]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "not only A but also B"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[Not only … but also].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[not only], [but also] nghĩa là không những, mà còn.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 1980
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [not only] A, [but also] B.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "The hotel is [[v0a|not only]] cheap [[v0b|but also]] comfortable.",
+     "vi": "Khách sạn không những rẻ mà còn thoải mái."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "She speaks [[v1a|not only]] English [[v1b|but also]] Korean.",
+     "vi": "Cô ấy nói không những tiếng Anh mà còn cả tiếng Hàn."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[The hotel is not only cheap but also comfortable.] Khách sạn không những rẻ mà còn thoải mái.",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Hai vế cùng loại: đều là tính từ.",
+     "lam": [
+      {
+       "gach": "v0a"
+      },
+      {
+       "gach": "v0b"
+      }
+     ]
+    },
+    {
+     "noi": "[She speaks not only English but also Korean.] Cô ấy nói không những tiếng Anh mà còn cả tiếng Hàn.",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Hai vế đều là danh từ.",
+     "lam": [
+      {
+       "gach": "v1a"
+      },
+      {
+       "gach": "v1b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Công nghệ và công trình",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "The new lights [[c0a|not only]] save energy [[c0b|but also]] last longer.",
+     "vi": "Đèn mới không chỉ tiết kiệm điện mà còn bền hơn."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "Recycling [[c1a|not only]] reduces waste [[c1b|but also]] saves money.",
+     "vi": "Tái chế không chỉ giảm rác thải mà còn tiết kiệm tiền."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[The new lights not only save energy but also last longer.] Đèn mới không chỉ tiết kiệm điện mà còn bền hơn.",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "[not only] đi với [but also].",
+     "lam": [
+      {
+       "gach": "c0a"
+      },
+      {
+       "gach": "c0b"
+      }
+     ]
+    },
+    {
+     "noi": "[Recycling not only reduces waste but also saves money.] Tái chế không chỉ giảm rác thải mà còn tiết kiệm tiền.",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Hai lợi ích nối bằng [not only] và [but also].",
+     "lam": [
+      {
+       "gach": "c1a"
+      },
+      {
+       "gach": "c1b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The software is not only fast ___ easy to use.",
+     "lua_chon": [
+      "or",
+      "but also",
+      "and also",
+      "so"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là but also: not only đi với but also.",
+      "Not only đi với but also.",
+      "Đáp án là but also: not only đi với but also.",
+      "Đáp án là but also: not only đi với but also."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "The new policy will benefit not only employees but ___ customers.",
+     "lua_chon": [
+      "neither",
+      "either",
+      "also",
+      "too"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là also: cặp đúng là not only … but also.",
+      "Đáp án là also: cặp đúng là not only … but also.",
+      "Cặp đúng là not only … but also.",
+      "Đáp án là also: cặp đúng là not only … but also."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [not only] đi với [but also]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [not only] đi với [but also]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: [not only] đi với [but also]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [not only] đi với [but also]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The software is not only fast but also easy to use.] [not only] đi với [but also]."
+     },
+     "giai": {
+      "noi": "Vì [not only] đi với [but also]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Cặp đúng là [not only], [but also]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: cặp đúng là [not only], [but also]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: cặp đúng là [not only], [but also]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: cặp đúng là [not only], [but also]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The new policy will benefit not only employees but also customers.] Cặp đúng là [not only], [but also]."
+     },
+     "giai": {
+      "noi": "Vì cặp đúng là [not only], [but also]."
+     }
+    }
+   ]
+  }
+ ]
+}

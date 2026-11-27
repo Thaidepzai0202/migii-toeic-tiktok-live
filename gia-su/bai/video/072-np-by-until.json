@@ -1,0 +1,287 @@
+{
+ "id": "np-by-until",
+ "ten": "By và until",
+ "nhom": "Ngữ pháp · Giới từ",
+ "so": 72,
+ "chuong": {
+  "so": 8,
+  "ten": "Sản xuất và giao hàng",
+  "bai": 6,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "By và until",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|by]] nghĩa là [[y0b|không muộn hơn]] một mốc."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "[[y1a|until]] nghĩa là [[y1b|kéo dài cho tới]] một mốc."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "by Friday (trước hạn) · until Friday (kéo dài tới)"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[By] và [until].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[by] nghĩa là không muộn hơn một mốc.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 840
+      }
+     ]
+    },
+    {
+     "noi": "[until] nghĩa là kéo dài cho tới một mốc.",
+     "lam": [
+      {
+       "to": "y1a"
+      },
+      {
+       "to": "y1b",
+       "sau": 1020
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [by Friday] là xong trước thứ Sáu, [until Friday] là kéo dài tới thứ Sáu.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "Please submit the form [[v0a|by]] Friday.",
+     "vi": "Vui lòng nộp biểu mẫu trước thứ Sáu."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "The store is open [[v1a|until]] 9 p.m.",
+     "vi": "Cửa hàng mở tới 9 giờ tối."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[Please submit the form by Friday.] Vui lòng nộp biểu mẫu trước thứ Sáu.",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Hạn chót dùng [by].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "[The store is open until 9 p.m.] Cửa hàng mở tới chín giờ tối.",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Mở liên tục tới chín giờ, dùng [until].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Sản xuất và giao hàng",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "The parts must be delivered [[c0a|by]] Friday.",
+     "vi": "Phụ tùng phải được giao chậm nhất vào thứ Sáu."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "This item will be out of stock [[c1a|until]] next month.",
+     "vi": "Mặt hàng này sẽ hết tới tận tháng sau."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[The parts must be delivered by Friday.] Phụ tùng phải được giao chậm nhất vào thứ Sáu.",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "[by] là hạn chót, không được muộn hơn thứ Sáu.",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "[This item will be out of stock until next month.] Mặt hàng này sẽ hết tới tận tháng sau.",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "[until] là kéo dài tới lúc đó.",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "All reports must be completed ___ the end of the month.",
+     "lua_chon": [
+      "since",
+      "during",
+      "until",
+      "by"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là by: hạn hoàn thành dùng by.",
+      "Đáp án là by: hạn hoàn thành dùng by.",
+      "Đáp án là by: hạn hoàn thành dùng by.",
+      "Hạn hoàn thành dùng by."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "The road will be closed ___ next Monday.",
+     "lua_chon": [
+      "at",
+      "until",
+      "by",
+      "since"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là until: việc đóng đường kéo dài tới thứ Hai, dùng until.",
+      "Việc đóng đường kéo dài tới thứ Hai, dùng until.",
+      "Đáp án là until: việc đóng đường kéo dài tới thứ Hai, dùng until.",
+      "Đáp án là until: việc đóng đường kéo dài tới thứ Hai, dùng until."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Hạn hoàn thành dùng [by]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: hạn hoàn thành dùng [by]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: hạn hoàn thành dùng [by]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: hạn hoàn thành dùng [by]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[All reports must be completed by the end of the month.] Hạn hoàn thành dùng [by]."
+     },
+     "giai": {
+      "noi": "Vì hạn hoàn thành dùng [by]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Việc đóng đường kéo dài tới thứ Hai, dùng [until]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: việc đóng đường kéo dài tới thứ Hai, dùng [until]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: việc đóng đường kéo dài tới thứ Hai, dùng [until]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: việc đóng đường kéo dài tới thứ Hai, dùng [until]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The road will be closed until next Monday.] Việc đóng đường kéo dài tới thứ Hai, dùng [until]."
+     },
+     "giai": {
+      "noi": "Vì việc đóng đường kéo dài tới thứ Hai, dùng [until]."
+     }
+    }
+   ]
+  }
+ ]
+}

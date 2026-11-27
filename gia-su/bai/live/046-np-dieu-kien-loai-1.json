@@ -1,0 +1,304 @@
+{
+ "id": "np-dieu-kien-loai-1",
+ "ten": "Câu điều kiện loại 1",
+ "nhom": "Ngữ pháp · Câu điều kiện",
+ "so": 46,
+ "chuong": {
+  "so": 5,
+  "ten": "Ngân hàng và cuộc sống",
+  "bai": 6,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Câu điều kiện loại 1",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "Dùng cho việc [[y0a|có thể xảy ra]] ở hiện tại hoặc tương lai."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "If + S + V (hiện tại), S + will + V"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học Câu điều kiện loại một.",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Dùng cho việc có thể xảy ra ở hiện tại hoặc tương lai.",
+     "lam": [
+      {
+       "to": "y0a",
+       "sau": 840
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: vế [if] dùng hiện tại đơn, vế còn lại dùng [will] cộng động từ nguyên mẫu.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "If it [[v0a|rains]], the event [[v0b|will be moved]] indoors.",
+     "vi": "Nếu trời mưa, sự kiện sẽ chuyển vào trong nhà."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "If you [[v1a|need]] help, I [[v1b|will stay]] late.",
+     "vi": "Nếu bạn cần giúp, tôi sẽ ở lại muộn."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [If it rains, the event will be moved indoors.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Vế [if] dùng [rains], vế sau dùng [will].",
+     "lam": [
+      {
+       "gach": "v0a"
+      },
+      {
+       "gach": "v0b"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [If you need help, I will stay late.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Việc có thể xảy ra, dùng loại một.",
+     "lam": [
+      {
+       "gach": "v1a"
+      },
+      {
+       "gach": "v1b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Ngân hàng và cuộc sống",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "If you [[c0a|deposit]] the money today, it [[c0b|will arrive]] tomorrow.",
+     "vi": "Nếu bạn gửi tiền hôm nay thì mai tiền sẽ vào tài khoản."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "If the tenant [[c1a|breaks]] the lease, he [[c1b|will lose]] his deposit.",
+     "vi": "Nếu người thuê phá hợp đồng thì sẽ mất tiền cọc."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề ngân hàng và cuộc sống: [If you deposit the money today, it will arrive tomorrow.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Có thể xảy ra: vế [if] dùng hiện tại đơn, vế sau dùng [will].",
+     "lam": [
+      {
+       "gach": "c0a"
+      },
+      {
+       "gach": "c0b"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [If the tenant breaks the lease, he will lose his deposit.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Vế [if] dùng [breaks], vế sau dùng [will lose].",
+     "lam": [
+      {
+       "gach": "c1a"
+      },
+      {
+       "gach": "c1b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p3",
+   "nhan": "Mẹo nhớ",
+   "tieu_de": "Ghi nhớ nhanh",
+   "khoi": [
+    {
+     "id": "meo",
+     "kieu": "ghi_nho",
+     "chu": "Vế If không dùng will."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Nhớ nhé: vế [if] không dùng [will].",
+     "lam": [
+      {
+       "to": "meo"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "If the client ___ the offer, we will start the project next week.",
+     "lua_chon": [
+      "accepting",
+      "accepts",
+      "will accept",
+      "accepted"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là accepts: vế if của loại một dùng hiện tại đơn.",
+      "Vế if của loại một dùng hiện tại đơn.",
+      "Đáp án là accepts: vế if của loại một dùng hiện tại đơn.",
+      "Đáp án là accepts: vế if của loại một dùng hiện tại đơn."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "If you register early, you ___ a 10% discount.",
+     "lua_chon": [
+      "received",
+      "receiving",
+      "will receive",
+      "would have received"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là will receive: vế if ở hiện tại thì vế sau dùng will.",
+      "Đáp án là will receive: vế if ở hiện tại thì vế sau dùng will.",
+      "Vế if ở hiện tại thì vế sau dùng will.",
+      "Đáp án là will receive: vế if ở hiện tại thì vế sau dùng will."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Vế [if] của loại một dùng hiện tại đơn."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: vế [if] của loại một dùng hiện tại đơn. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: vế [if] của loại một dùng hiện tại đơn. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: vế [if] của loại một dùng hiện tại đơn. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [accepts], vì vế [if] của loại một dùng hiện tại đơn."
+     },
+     "giai": {
+      "noi": "Vì vế [if] của loại một dùng hiện tại đơn."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Vế [if] ở hiện tại thì vế sau dùng [will]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: vế [if] ở hiện tại thì vế sau dùng [will]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: vế [if] ở hiện tại thì vế sau dùng [will]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: vế [if] ở hiện tại thì vế sau dùng [will]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [will receive], vì vế [if] ở hiện tại thì vế sau dùng [will]."
+     },
+     "giai": {
+      "noi": "Vì vế [if] ở hiện tại thì vế sau dùng [will]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,287 @@
+{
+ "id": "np-although-despite",
+ "ten": "Although và despite",
+ "nhom": "Ngữ pháp · Liên từ",
+ "so": 79,
+ "chuong": {
+  "so": 9,
+  "ten": "Công nghệ và công trình",
+  "bai": 5,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Although và despite",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|although]] cộng [[y0b|mệnh đề]]."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "[[y1a|despite]] cộng [[y1b|danh từ hoặc động từ thêm ing]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "although + S + V · despite + N / V-ing"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[Although] và [despite].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[although] cộng mệnh đề.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 960
+      }
+     ]
+    },
+    {
+     "noi": "[despite] cộng danh từ hoặc động từ thêm [ing].",
+     "lam": [
+      {
+       "to": "y1a"
+      },
+      {
+       "to": "y1b",
+       "sau": 900
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [although] cộng mệnh đề, [despite] cộng danh từ.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "[[v0a|Although]] it rained, the event continued.",
+     "vi": "Dù trời mưa, sự kiện vẫn tiếp tục."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "[[v1a|Despite]] the rain, the event continued.",
+     "vi": "Dù mưa, sự kiện vẫn tiếp tục."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[Although it rained, the event continued.] Dù trời mưa, sự kiện vẫn tiếp tục.",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [although] là mệnh đề [it rained].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Despite the rain, the event continued.] Dù mưa, sự kiện vẫn tiếp tục.",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [despite] là danh từ [the rain].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Công nghệ và công trình",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "[[c0a|Although]] the software is new, it runs very slowly.",
+     "vi": "Dù phần mềm còn mới nhưng chạy rất chậm."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "[[c1a|Despite]] the rain, the construction work continued.",
+     "vi": "Dù trời mưa, việc thi công vẫn tiếp tục."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[Although the software is new, it runs very slowly.] Dù phần mềm còn mới nhưng chạy rất chậm.",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [although] là một mệnh đề.",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Despite the rain, the construction work continued.] Dù trời mưa, việc thi công vẫn tiếp tục.",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [despite] là danh từ: [the rain].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "___ the high price, the product sold well.",
+     "lua_chon": [
+      "Even though",
+      "Despite",
+      "Because",
+      "Although"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là Despite: the high price là danh từ, dùng despite.",
+      "The high price là danh từ, dùng despite.",
+      "Đáp án là Despite: the high price là danh từ, dùng despite.",
+      "Đáp án là Despite: the high price là danh từ, dùng despite."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "___ he was tired, he finished the report.",
+     "lua_chon": [
+      "Despite",
+      "Although",
+      "In spite of",
+      "Because of"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là Although: sau chỗ trống là mệnh đề, dùng although.",
+      "Sau chỗ trống là mệnh đề, dùng although.",
+      "Đáp án là Although: sau chỗ trống là mệnh đề, dùng although.",
+      "Đáp án là Although: sau chỗ trống là mệnh đề, dùng although."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [the high price] là danh từ, dùng [despite]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [the high price] là danh từ, dùng [despite]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: [the high price] là danh từ, dùng [despite]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [the high price] là danh từ, dùng [despite]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Despite the high price, the product sold well.] [the high price] là danh từ, dùng [despite]."
+     },
+     "giai": {
+      "noi": "Vì [the high price] là danh từ, dùng [despite]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau chỗ trống là mệnh đề, dùng [although]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: sau chỗ trống là mệnh đề, dùng [although]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: sau chỗ trống là mệnh đề, dùng [although]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: sau chỗ trống là mệnh đề, dùng [although]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Although he was tired, he finished the report.] Sau chỗ trống là mệnh đề, dùng [although]."
+     },
+     "giai": {
+      "noi": "Vì sau chỗ trống là mệnh đề, dùng [although]."
+     }
+    }
+   ]
+  }
+ ]
+}

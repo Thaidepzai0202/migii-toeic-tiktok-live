@@ -1,0 +1,287 @@
+{
+ "id": "np-tinh-tu-trang-tu",
+ "ten": "Tính từ hay trạng từ",
+ "nhom": "Ngữ pháp · Từ loại",
+ "so": 64,
+ "chuong": {
+  "so": 7,
+  "ten": "Bán hàng và khách hàng",
+  "bai": 6,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Tính từ hay trạng từ",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|Tính từ]] bổ nghĩa cho [[y0b|danh từ]]."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "[[y1a|Trạng từ]], thường có đuôi ly, bổ nghĩa cho [[y1b|động từ]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "adj + N · V + adv"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Tính từ hay trạng từ.",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Tính từ bổ nghĩa cho danh từ.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 1260
+      }
+     ]
+    },
+    {
+     "noi": "Trạng từ, thường có đuôi [ly], bổ nghĩa cho động từ.",
+     "lam": [
+      {
+       "to": "y1a"
+      },
+      {
+       "to": "y1b",
+       "sau": 2640
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: tính từ đứng trước danh từ, trạng từ bổ nghĩa cho động từ.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "She gave a [[v0a|clear]] explanation.",
+     "vi": "Cô ấy đưa ra lời giải thích rõ ràng."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "She explained the plan [[v1a|clearly]].",
+     "vi": "Cô ấy giải thích kế hoạch rõ ràng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[She gave a clear explanation.] Cô ấy đưa ra lời giải thích rõ ràng.",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "[clear] là tính từ, đứng trước danh từ.",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "[She explained the plan clearly.] Cô ấy giải thích kế hoạch rõ ràng.",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "[clearly] là trạng từ, bổ nghĩa cho [explained].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Bán hàng và khách hàng",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "The staff responded [[c0a|quickly]] to the complaint.",
+     "vi": "Nhân viên đã phản hồi lời phàn nàn rất nhanh."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "The client was very [[c1a|satisfied]] with the service.",
+     "vi": "Khách hàng rất hài lòng với dịch vụ."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[The staff responded quickly to the complaint.] Nhân viên đã phản hồi lời phàn nàn rất nhanh.",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Bổ nghĩa cho động từ [responded], cần trạng từ [quickly].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "[The client was very satisfied with the service.] Khách hàng rất hài lòng với dịch vụ.",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [was very] cần tính từ [satisfied].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The new manager speaks very ___ during meetings.",
+     "lua_chon": [
+      "confident",
+      "confidence",
+      "confide",
+      "confidently"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là confidently: bổ nghĩa cho động từ speaks cần trạng từ.",
+      "Đáp án là confidently: bổ nghĩa cho động từ speaks cần trạng từ.",
+      "Đáp án là confidently: bổ nghĩa cho động từ speaks cần trạng từ.",
+      "Bổ nghĩa cho động từ speaks cần trạng từ."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "Our company offers ___ prices to all members.",
+     "lua_chon": [
+      "competition",
+      "competitively",
+      "competitive",
+      "compete"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là competitive: đứng trước danh từ prices cần tính từ.",
+      "Đáp án là competitive: đứng trước danh từ prices cần tính từ.",
+      "Đứng trước danh từ prices cần tính từ.",
+      "Đáp án là competitive: đứng trước danh từ prices cần tính từ."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Bổ nghĩa cho động từ [speaks] cần trạng từ."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: bổ nghĩa cho động từ [speaks] cần trạng từ. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: bổ nghĩa cho động từ [speaks] cần trạng từ. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: bổ nghĩa cho động từ [speaks] cần trạng từ. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The new manager speaks very confidently during meetings.] Bổ nghĩa cho động từ [speaks] cần trạng từ."
+     },
+     "giai": {
+      "noi": "Vì bổ nghĩa cho động từ [speaks] cần trạng từ."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Đứng trước danh từ [prices] cần tính từ."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: đứng trước danh từ [prices] cần tính từ. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: đứng trước danh từ [prices] cần tính từ. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: đứng trước danh từ [prices] cần tính từ. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Our company offers competitive prices to all members.] Đứng trước danh từ [prices] cần tính từ."
+     },
+     "giai": {
+      "noi": "Vì đứng trước danh từ [prices] cần tính từ."
+     }
+    }
+   ]
+  }
+ ]
+}

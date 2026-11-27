@@ -1,0 +1,285 @@
+{
+ "id": "np-dieu-kien-loai-0",
+ "ten": "Câu điều kiện loại 0",
+ "nhom": "Ngữ pháp · Câu điều kiện",
+ "so": 45,
+ "chuong": {
+  "so": 5,
+  "ten": "Ngân hàng và cuộc sống",
+  "bai": 5,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Câu điều kiện loại 0",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "Dùng cho [[y0a|sự thật luôn đúng]] hoặc [[y0b|quy định]]: cả hai vế đều dùng hiện tại đơn."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "If + S + V (hiện tại), S + V (hiện tại)"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Xong phần từ vựng của chương. Giờ sang ngữ pháp, ví dụ dùng luôn các từ vừa học. Bài này mình học Câu điều kiện loại không.",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Dùng cho sự thật luôn đúng hoặc quy định: cả hai vế đều dùng hiện tại đơn.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 1920
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: cả hai vế đều dùng thì hiện tại đơn.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "If you [[v0a|heat]] ice, it [[v0b|melts]].",
+     "vi": "Nếu làm nóng đá, đá sẽ tan."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "If an item [[v1a|is]] damaged, we [[v1b|replace]] it for free.",
+     "vi": "Nếu hàng bị hỏng, chúng tôi đổi miễn phí."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [If you heat ice, it melts.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Sự thật luôn đúng, hai vế đều ở hiện tại.",
+     "lam": [
+      {
+       "gach": "v0a"
+      },
+      {
+       "gach": "v0b"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [If an item is damaged, we replace it for free.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Quy định của cửa hàng, dùng loại không.",
+     "lam": [
+      {
+       "gach": "v1a"
+      },
+      {
+       "gach": "v1b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Ngân hàng và cuộc sống",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "If you [[c0a|pay]] the rent late, the landlord [[c0b|charges]] a fee.",
+     "vi": "Nếu trả tiền thuê trễ thì chủ nhà tính phí."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "If you [[c1a|enter]] the wrong PIN three times, the ATM [[c1b|keeps]] your card.",
+     "vi": "Nếu nhập sai mã PIN ba lần, cây ATM sẽ giữ thẻ của bạn."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề ngân hàng và cuộc sống: [If you pay the rent late, the landlord charges a fee.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Quy định luôn đúng, hai vế đều dùng hiện tại đơn.",
+     "lam": [
+      {
+       "gach": "c0a"
+      },
+      {
+       "gach": "c0b"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [If you enter the wrong PIN three times, the ATM keeps your card.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Chuyện lần nào cũng xảy ra như vậy, nên cả hai vế dùng hiện tại đơn.",
+     "lam": [
+      {
+       "gach": "c1a"
+      },
+      {
+       "gach": "c1b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "If customers ___ before noon, they receive their orders the same day.",
+     "lua_chon": [
+      "will order",
+      "ordering",
+      "order",
+      "ordered"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là order: quy định luôn đúng, hai vế đều dùng hiện tại đơn.",
+      "Đáp án là order: quy định luôn đúng, hai vế đều dùng hiện tại đơn.",
+      "Quy định luôn đúng, hai vế đều dùng hiện tại đơn.",
+      "Đáp án là order: quy định luôn đúng, hai vế đều dùng hiện tại đơn."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "If the printer runs out of paper, it ___ automatically.",
+     "lua_chon": [
+      "would stop",
+      "stopping",
+      "stopped",
+      "stops"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là stops: việc luôn xảy ra như vậy, vế sau dùng hiện tại đơn.",
+      "Đáp án là stops: việc luôn xảy ra như vậy, vế sau dùng hiện tại đơn.",
+      "Đáp án là stops: việc luôn xảy ra như vậy, vế sau dùng hiện tại đơn.",
+      "Việc luôn xảy ra như vậy, vế sau dùng hiện tại đơn."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Quy định luôn đúng, hai vế đều dùng hiện tại đơn."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: quy định luôn đúng, hai vế đều dùng hiện tại đơn. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: quy định luôn đúng, hai vế đều dùng hiện tại đơn. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: quy định luôn đúng, hai vế đều dùng hiện tại đơn. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [order], vì quy định luôn đúng, hai vế đều dùng hiện tại đơn."
+     },
+     "giai": {
+      "noi": "Vì quy định luôn đúng, hai vế đều dùng hiện tại đơn."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Việc luôn xảy ra như vậy, vế sau dùng hiện tại đơn."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: việc luôn xảy ra như vậy, vế sau dùng hiện tại đơn. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: việc luôn xảy ra như vậy, vế sau dùng hiện tại đơn. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: việc luôn xảy ra như vậy, vế sau dùng hiện tại đơn. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [stops], vì việc luôn xảy ra như vậy, vế sau dùng hiện tại đơn."
+     },
+     "giai": {
+      "noi": "Vì việc luôn xảy ra như vậy, vế sau dùng hiện tại đơn."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

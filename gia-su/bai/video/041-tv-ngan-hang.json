@@ -1,0 +1,374 @@
+{
+ "id": "tv-ngan-hang",
+ "ten": "Từ vựng ngân hàng",
+ "nhom": "Từ vựng · Ngân hàng",
+ "so": 41,
+ "chuong": {
+  "so": 5,
+  "ten": "Ngân hàng và cuộc sống",
+  "bai": 1,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "account",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|tài khoản]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "I opened a bank [[e0a|account]] last week.",
+     "vi": "Tôi mở tài khoản ngân hàng tuần trước."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "Your salary will be paid into your [[f0a|account]].",
+     "vi": "Lương sẽ được trả vào tài khoản của bạn."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[account]. Tài khoản.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[I opened a bank account last week.] Tôi mở tài khoản ngân hàng tuần trước.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Your salary will be paid into your account.] Lương sẽ được trả vào tài khoản của bạn.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "deposit",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m1a|gửi tiền vào]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "You can [[e1a|deposit]] money at any branch.",
+     "vi": "Bạn có thể gửi tiền ở bất kỳ chi nhánh nào."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "I [[f1a|deposited]] 5 million dong this morning.",
+     "vi": "Sáng nay tôi đã gửi 5 triệu đồng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[deposit]. Gửi tiền vào.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[You can deposit money at any branch.] Bạn có thể gửi tiền ở bất kỳ chi nhánh nào.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[I deposited 5 million dong this morning.] Sáng nay tôi đã gửi năm triệu đồng.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Tôi muốn gửi tiền vào tài khoản.",
+     "tu": "deposit",
+     "so_tu": 8,
+     "en": "I want to [[d0a|deposit]] money into my account.",
+     "dap": [
+      "I want to deposit money into my account.",
+      "I want to deposit money in my account.",
+      "I would like to deposit money into my account."
+     ],
+     "nhan": [
+      "deposit"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Tôi muốn gửi tiền vào tài khoản.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[I want to deposit money into my account.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "withdraw",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m2a|rút tiền]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "I need to [[e2a|withdraw]] some cash.",
+     "vi": "Tôi cần rút một ít tiền mặt."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "You can [[f2a|withdraw]] money from any ATM.",
+     "vi": "Bạn có thể rút tiền ở bất kỳ cây ATM nào."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[withdraw]. Rút tiền.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[I need to withdraw some cash.] Tôi cần rút một ít tiền mặt.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[You can withdraw money from any ATM.] Bạn có thể rút tiền ở bất kỳ cây ATM nào.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "loan",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|khoản vay]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "The bank approved our [[e3a|loan]].",
+     "vi": "Ngân hàng đã duyệt khoản vay của chúng tôi."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "They took out a [[f3a|loan]] to buy a house.",
+     "vi": "Họ vay một khoản để mua nhà."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[loan]. Khoản vay.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[The bank approved our loan.] Ngân hàng đã duyệt khoản vay của chúng tôi.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[They took out a loan to buy a house.] Họ vay một khoản để mua nhà.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Họ cần một khoản vay.",
+     "tu": "loan",
+     "so_tu": 4,
+     "en": "They need a [[d1a|loan]].",
+     "dap": [
+      "They need a loan."
+     ],
+     "nhan": [
+      "loan"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Họ cần một khoản vay.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[They need a loan.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "You can ___ cash from any ATM in the city.",
+     "lua_chon": [
+      "withdraw",
+      "loan",
+      "account",
+      "deposit"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Lấy tiền ra từ cây ATM là withdraw.",
+      "Đáp án là withdraw: lấy tiền ra từ cây ATM là withdraw.",
+      "Đáp án là withdraw: lấy tiền ra từ cây ATM là withdraw.",
+      "Đáp án là withdraw: lấy tiền ra từ cây ATM là withdraw."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Lấy tiền ra từ cây [ATM] là [withdraw]."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: lấy tiền ra từ cây [ATM] là [withdraw]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: lấy tiền ra từ cây [ATM] là [withdraw]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: lấy tiền ra từ cây [ATM] là [withdraw]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[You can withdraw cash from any ATM in the city.]"
+     },
+     "giai": {
+      "noi": "Vì lấy tiền ra từ cây [ATM] là [withdraw]."
+     }
+    }
+   ]
+  }
+ ]
+}

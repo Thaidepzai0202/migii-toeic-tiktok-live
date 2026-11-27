@@ -1,0 +1,287 @@
+{
+ "id": "np-because-because-of",
+ "ten": "Because và because of",
+ "nhom": "Ngữ pháp · Liên từ",
+ "so": 74,
+ "chuong": {
+  "so": 8,
+  "ten": "Sản xuất và giao hàng",
+  "bai": 8,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Because và because of",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|because]] cộng [[y0b|mệnh đề]]."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "[[y1a|because of]] cộng [[y1b|danh từ]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "because + S + V · because of + N"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[Because] và [because of].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[because] cộng mệnh đề.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 900
+      }
+     ]
+    },
+    {
+     "noi": "[because of] cộng danh từ.",
+     "lam": [
+      {
+       "to": "y1a"
+      },
+      {
+       "to": "y1b",
+       "sau": 1080
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [because] cộng mệnh đề, [because of] cộng danh từ.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "The flight was delayed [[v0a|because of]] the storm.",
+     "vi": "Chuyến bay bị hoãn vì cơn bão."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "The flight was delayed [[v1a|because]] the weather was bad.",
+     "vi": "Chuyến bay bị hoãn vì thời tiết xấu."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[The flight was delayed because of the storm.] Chuyến bay bị hoãn vì cơn bão.",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "[the storm] là danh từ.",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "[The flight was delayed because the weather was bad.] Chuyến bay bị hoãn vì thời tiết xấu.",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [because] là mệnh đề.",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Sản xuất và giao hàng",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "The shipment was late [[c0a|because of]] bad weather.",
+     "vi": "Lô hàng bị trễ vì thời tiết xấu."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "We placed a big order [[c1a|because]] our inventory was low.",
+     "vi": "Chúng tôi đặt một đơn lớn vì hàng tồn kho còn ít."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[The shipment was late because of bad weather.] Lô hàng bị trễ vì thời tiết xấu.",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [because of] là cụm danh từ.",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "[We placed a big order because our inventory was low.] Chúng tôi đặt một đơn lớn vì hàng tồn kho còn ít.",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [because] là mệnh đề: [our inventory was low].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The meeting was cancelled ___ the director was ill.",
+     "lua_chon": [
+      "because of",
+      "despite",
+      "because",
+      "due to"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là because: sau chỗ trống là mệnh đề, dùng because.",
+      "Đáp án là because: sau chỗ trống là mệnh đề, dùng because.",
+      "Sau chỗ trống là mệnh đề, dùng because.",
+      "Đáp án là because: sau chỗ trống là mệnh đề, dùng because."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "Sales increased ___ the new advertising campaign.",
+     "lua_chon": [
+      "although",
+      "because",
+      "because of",
+      "so"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là because of: sau chỗ trống là cụm danh từ, dùng because of.",
+      "Đáp án là because of: sau chỗ trống là cụm danh từ, dùng because of.",
+      "Sau chỗ trống là cụm danh từ, dùng because of.",
+      "Đáp án là because of: sau chỗ trống là cụm danh từ, dùng because of."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau chỗ trống là mệnh đề, dùng [because]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: sau chỗ trống là mệnh đề, dùng [because]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: sau chỗ trống là mệnh đề, dùng [because]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: sau chỗ trống là mệnh đề, dùng [because]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The meeting was cancelled because the director was ill.] Sau chỗ trống là mệnh đề, dùng [because]."
+     },
+     "giai": {
+      "noi": "Vì sau chỗ trống là mệnh đề, dùng [because]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau chỗ trống là cụm danh từ, dùng [because of]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: sau chỗ trống là cụm danh từ, dùng [because of]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: sau chỗ trống là cụm danh từ, dùng [because of]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: sau chỗ trống là cụm danh từ, dùng [because of]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Sales increased because of the new advertising campaign.] Sau chỗ trống là cụm danh từ, dùng [because of]."
+     },
+     "giai": {
+      "noi": "Vì sau chỗ trống là cụm danh từ, dùng [because of]."
+     }
+    }
+   ]
+  }
+ ]
+}

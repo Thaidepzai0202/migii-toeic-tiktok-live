@@ -1,0 +1,388 @@
+{
+ "id": "tv-dao-tao",
+ "ten": "Từ vựng đào tạo",
+ "nhom": "Từ vựng · Đào tạo",
+ "so": 25,
+ "chuong": {
+  "so": 3,
+  "ten": "Nhân sự",
+  "bai": 6,
+  "tong": 11
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "workshop",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|buổi học thực hành]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "Join our free [[e0a|workshop]] on public speaking.",
+     "vi": "Hãy tham gia buổi thực hành miễn phí về nói trước đám đông."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "The [[f0a|workshop]] is for new employees only.",
+     "vi": "Buổi học thực hành này chỉ dành cho nhân viên mới."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Tiếp chủ đề nhân sự. Bài này mình học bốn từ về đào tạo.",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[workshop]. Nghĩa là buổi học thực hành.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Join our free workshop on public speaking.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The workshop is for new employees only.]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "trainee",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|người được đào tạo]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "Each [[e1a|trainee]] gets a handbook.",
+     "vi": "Mỗi học viên được phát một cuốn sổ tay."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "The [[f1a|trainees]] will work in different departments.",
+     "vi": "Các học viên sẽ làm ở nhiều phòng ban khác nhau."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[trainee]. Nghĩa là người được đào tạo.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[Each trainee gets a handbook.]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The trainees will work in different departments.]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Có mười học viên trong lớp.",
+     "tu": "trainee",
+     "so_tu": 7,
+     "en": "There are ten [[d0a|trainees]] in the class.",
+     "dap": [
+      "There are ten trainees in the class."
+     ],
+     "nhan": [
+      "trainees"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Có mười học viên trong lớp. Nhớ dùng từ [trainee].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [There are ten trainees in the class.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "instructor",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|người hướng dẫn]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "The [[e2a|instructor]] explained the rules.",
+     "vi": "Người hướng dẫn đã giải thích các quy tắc."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "Our [[f2a|instructor]] has ten years of experience.",
+     "vi": "Người hướng dẫn của chúng tôi có mười năm kinh nghiệm."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[instructor]. Nghĩa là người hướng dẫn.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[The instructor explained the rules.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Our instructor has ten years of experience.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "certificate",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|chứng chỉ]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "You will receive a [[e3a|certificate]] after the course.",
+     "vi": "Bạn sẽ nhận chứng chỉ sau khoá học."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "You need a first aid [[f3a|certificate]] for this job.",
+     "vi": "Bạn cần chứng chỉ sơ cứu cho công việc này."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[certificate]. Nghĩa là chứng chỉ.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[You will receive a certificate after the course.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[You need a first aid certificate for this job.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Tôi đã nhận được chứng chỉ.",
+     "tu": "certificate",
+     "so_tu": 4,
+     "en": "I received the [[d1a|certificate]].",
+     "dap": [
+      "I received the certificate.",
+      "I received a certificate.",
+      "I got the certificate.",
+      "I got a certificate.",
+      "I have received the certificate.",
+      "I have received a certificate."
+     ],
+     "nhan": [
+      "certificate"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Tôi đã nhận được chứng chỉ. Nhớ dùng từ [certificate].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [I received the certificate.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The ___ showed the trainees how to use the machine.",
+     "lua_chon": [
+      "workshop",
+      "certificate",
+      "trainee",
+      "instructor"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là instructor: người chỉ cho học viên là instructor.",
+      "Đáp án là instructor: người chỉ cho học viên là instructor.",
+      "Đáp án là instructor: người chỉ cho học viên là instructor.",
+      "Người chỉ cho học viên là instructor."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Người chỉ cho học viên là [instructor]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: người chỉ cho học viên là [instructor]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: người chỉ cho học viên là [instructor]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: người chỉ cho học viên là [instructor]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [instructor], vì người chỉ cho học viên là [instructor]."
+     },
+     "giai": {
+      "noi": "Vì người chỉ cho học viên là [instructor]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

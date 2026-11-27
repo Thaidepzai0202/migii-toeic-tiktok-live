@@ -1,0 +1,286 @@
+{
+ "id": "np-dieu-kien-loai-3",
+ "ten": "Câu điều kiện loại 3",
+ "nhom": "Ngữ pháp · Câu điều kiện",
+ "so": 48,
+ "chuong": {
+  "so": 5,
+  "ten": "Ngân hàng và cuộc sống",
+  "bai": 8,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Câu điều kiện loại 3",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "Dùng cho việc [[y0a|đã không xảy ra]] trong quá khứ, và [[y0b|kết quả chỉ là tưởng tượng]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "If + S + had + V3, S + would have + V3"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học Câu điều kiện loại ba.",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Dùng cho việc đã không xảy ra trong quá khứ, và kết quả chỉ là tưởng tượng.",
+     "lam": [
+      {
+       "to": "y0a",
+       "sau": 840
+      },
+      {
+       "to": "y0b",
+       "sau": 2880
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: vế [if] dùng [had] cộng dạng ba, vế sau dùng [would have] cộng dạng ba.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "If we [[v0a|had left]] earlier, we [[v0b|would have caught]] the train.",
+     "vi": "Nếu đi sớm hơn thì chúng tôi đã kịp tàu."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "If she [[v1a|had applied]], she [[v1b|would have got]] the job.",
+     "vi": "Nếu cô ấy nộp đơn thì đã được nhận rồi."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [If we had left earlier, we would have caught the train.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Thực tế là đi muộn và lỡ tàu.",
+     "lam": [
+      {
+       "gach": "v0a"
+      },
+      {
+       "gach": "v0b"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [If she had applied, she would have got the job.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Chuyện đã qua, không thay đổi được.",
+     "lam": [
+      {
+       "gach": "v1a"
+      },
+      {
+       "gach": "v1b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Ngân hàng và cuộc sống",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "If I [[c0a|had remembered]] my appointment, I [[c0b|would have gone]] to the dentist.",
+     "vi": "Nếu nhớ lịch hẹn thì tôi đã đi nha sĩ rồi."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "If we [[c1a|had read]] the lease carefully, we [[c1b|would have seen]] the extra fees.",
+     "vi": "Nếu đọc kỹ hợp đồng thuê thì chúng tôi đã thấy các khoản phí thêm."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề ngân hàng và cuộc sống: [If I had remembered my appointment, I would have gone to the dentist.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Chuyện đã qua và không xảy ra: [had remembered], vế sau [would have gone].",
+     "lam": [
+      {
+       "gach": "c0a"
+      },
+      {
+       "gach": "c0b"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [If we had read the lease carefully, we would have seen the extra fees.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Tiếc một chuyện trong quá khứ, dùng điều kiện loại ba.",
+     "lam": [
+      {
+       "gach": "c1a"
+      },
+      {
+       "gach": "c1b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "If the report had been ready, the manager ___ it at the meeting.",
+     "lua_chon": [
+      "will present",
+      "would have presented",
+      "is presenting",
+      "presents"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là would have presented: vế if dùng had been, vế sau dùng would have cộng dạng ba.",
+      "Vế if dùng had been, vế sau dùng would have cộng dạng ba.",
+      "Đáp án là would have presented: vế if dùng had been, vế sau dùng would have cộng dạng ba.",
+      "Đáp án là would have presented: vế if dùng had been, vế sau dùng would have cộng dạng ba."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "If I ___ about the sale, I would have bought more.",
+     "lua_chon": [
+      "had known",
+      "will know",
+      "know",
+      "have known"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Vế sau có would have nên vế if dùng had cộng dạng ba.",
+      "Đáp án là had known: vế sau có would have nên vế if dùng had cộng dạng ba.",
+      "Đáp án là had known: vế sau có would have nên vế if dùng had cộng dạng ba.",
+      "Đáp án là had known: vế sau có would have nên vế if dùng had cộng dạng ba."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Vế [if] dùng [had been], vế sau dùng [would have] cộng dạng ba."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: vế [if] dùng [had been], vế sau dùng [would have] cộng dạng ba. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: vế [if] dùng [had been], vế sau dùng [would have] cộng dạng ba. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: vế [if] dùng [had been], vế sau dùng [would have] cộng dạng ba. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [would have presented], vì vế [if] dùng [had been], vế sau dùng [would have] cộng dạng ba."
+     },
+     "giai": {
+      "noi": "Vì vế [if] dùng [had been], vế sau dùng [would have] cộng dạng ba."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Vế sau có [would have] nên vế [if] dùng [had] cộng dạng ba."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: vế sau có [would have] nên vế [if] dùng [had] cộng dạng ba. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: vế sau có [would have] nên vế [if] dùng [had] cộng dạng ba. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: vế sau có [would have] nên vế [if] dùng [had] cộng dạng ba. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [had known], vì vế sau có [would have] nên vế [if] dùng [had] cộng dạng ba."
+     },
+     "giai": {
+      "noi": "Vì vế sau có [would have] nên vế [if] dùng [had] cộng dạng ba."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

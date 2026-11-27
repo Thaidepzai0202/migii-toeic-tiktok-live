@@ -1,0 +1,376 @@
+{
+ "id": "tv-cham-soc-khach-hang",
+ "ten": "Từ vựng chăm sóc khách hàng",
+ "nhom": "Từ vựng · Dịch vụ khách hàng",
+ "so": 62,
+ "chuong": {
+  "so": 7,
+  "ten": "Bán hàng và khách hàng",
+  "bai": 4,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "complaint",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|lời phàn nàn]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "We received a [[e0a|complaint]] about the noise.",
+     "vi": "Chúng tôi nhận được lời phàn nàn về tiếng ồn."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "Most [[f0a|complaints]] are about late delivery.",
+     "vi": "Phần lớn lời phàn nàn là về giao hàng trễ."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[complaint]. Lời phàn nàn.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[We received a complaint about the noise.] Chúng tôi nhận được lời phàn nàn về tiếng ồn.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Most complaints are about late delivery.] Phần lớn lời phàn nàn là về giao hàng trễ.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "inquiry",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|câu hỏi, yêu cầu thông tin]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "Thank you for your [[e1a|inquiry]] about our prices.",
+     "vi": "Cảm ơn bạn đã hỏi về giá của chúng tôi."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "We answer all [[f1a|inquiries]] within 24 hours.",
+     "vi": "Chúng tôi trả lời mọi yêu cầu trong 24 giờ."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[inquiry]. Câu hỏi, yêu cầu thông tin.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[Thank you for your inquiry about our prices.] Cảm ơn bạn đã hỏi về giá của chúng tôi.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[We answer all inquiries within 24 hours.] Chúng tôi trả lời mọi yêu cầu trong 24 giờ.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Chúng tôi đã nhận được câu hỏi của bạn.",
+     "tu": "inquiry",
+     "so_tu": 4,
+     "en": "We received your [[d0a|inquiry]].",
+     "dap": [
+      "We received your inquiry.",
+      "We have received your inquiry.",
+      "We received your enquiry.",
+      "We have received your enquiry."
+     ],
+     "nhan": [
+      "inquiry"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Chúng tôi đã nhận được câu hỏi của bạn.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[We received your inquiry.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "respond",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m2a|phản hồi]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "We will [[e2a|respond]] to your email within a day.",
+     "vi": "Chúng tôi sẽ phản hồi email trong vòng một ngày."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The manager [[f2a|responded]] quickly to the complaint.",
+     "vi": "Quản lý đã phản hồi lời phàn nàn rất nhanh."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[respond]. Phản hồi.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[We will respond to your email within a day.] Chúng tôi sẽ phản hồi email trong vòng một ngày.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The manager responded quickly to the complaint.] Quản lý đã phản hồi lời phàn nàn rất nhanh.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "satisfaction",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|sự hài lòng]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "Customer [[e3a|satisfaction]] is our top goal.",
+     "vi": "Sự hài lòng của khách hàng là mục tiêu hàng đầu."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The survey measures customer [[f3a|satisfaction]].",
+     "vi": "Khảo sát đo mức độ hài lòng của khách hàng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[satisfaction]. Sự hài lòng.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[Customer satisfaction is our top goal.] Sự hài lòng của khách hàng là mục tiêu hàng đầu.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The survey measures customer satisfaction.] Khảo sát đo mức độ hài lòng của khách hàng.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Sự hài lòng của khách hàng rất quan trọng.",
+     "tu": "satisfaction",
+     "so_tu": 5,
+     "en": "Customer [[d1a|satisfaction]] is very important.",
+     "dap": [
+      "Customer satisfaction is very important.",
+      "Customer satisfaction is really important."
+     ],
+     "nhan": [
+      "satisfaction"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Sự hài lòng của khách hàng rất quan trọng.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[Customer satisfaction is very important.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Our staff will ___ to all messages within 24 hours.",
+     "lua_chon": [
+      "inquiry",
+      "respond",
+      "satisfaction",
+      "complaint"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là respond: sau will cần động từ, respond to là phản hồi.",
+      "Sau will cần động từ, respond to là phản hồi.",
+      "Đáp án là respond: sau will cần động từ, respond to là phản hồi.",
+      "Đáp án là respond: sau will cần động từ, respond to là phản hồi."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau [will] cần động từ, [respond to] là phản hồi."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: sau [will] cần động từ, [respond to] là phản hồi. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: sau [will] cần động từ, [respond to] là phản hồi. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: sau [will] cần động từ, [respond to] là phản hồi. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Our staff will respond to all messages within 24 hours.]"
+     },
+     "giai": {
+      "noi": "Vì sau [will] cần động từ, [respond to] là phản hồi."
+     }
+    }
+   ]
+  }
+ ]
+}

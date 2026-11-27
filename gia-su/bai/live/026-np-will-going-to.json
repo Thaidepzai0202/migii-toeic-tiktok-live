@@ -1,0 +1,290 @@
+{
+ "id": "np-will-going-to",
+ "ten": "Tương lai: will và be going to",
+ "nhom": "Ngữ pháp · Các thì",
+ "so": 26,
+ "chuong": {
+  "so": 3,
+  "ten": "Nhân sự",
+  "bai": 7,
+  "tong": 11
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Tương lai: will và be going to",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|will]] dùng cho [[y0b|quyết định ngay lúc nói]] và dự đoán."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "[[y1a|be going to]] dùng cho [[y1b|kế hoạch đã có từ trước]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "will + V · am/is/are going to + V"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Xong phần từ vựng của chương. Giờ sang ngữ pháp, ví dụ dùng luôn các từ vừa học. Bài này mình học Tương lai: [will] và [be going to].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[will] dùng cho quyết định ngay lúc nói và dự đoán.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 960
+      }
+     ]
+    },
+    {
+     "noi": "[be going to] dùng cho kế hoạch đã có từ trước.",
+     "lam": [
+      {
+       "to": "y1a"
+      },
+      {
+       "to": "y1b",
+       "sau": 1380
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [will] cộng động từ nguyên mẫu, hoặc [be going to] cộng động từ nguyên mẫu.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "The phone is ringing. I [[v0a|will answer]] it.",
+     "vi": "Điện thoại đang reo. Tôi sẽ nghe."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "We [[v1a|are going to open]] a new branch next year.",
+     "vi": "Chúng tôi sẽ mở chi nhánh mới vào năm sau."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [The phone is ringing. I will answer it.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Quyết định ngay lúc đó, dùng [will].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [We are going to open a new branch next year.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Kế hoạch đã có, dùng [going to].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Nhân sự",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "We [[c0a|are going to hire]] three new engineers next month.",
+     "vi": "Tháng sau chúng tôi sẽ tuyển ba kỹ sư mới."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "Do not worry. I [[c1a|will fill out]] the form for you.",
+     "vi": "Đừng lo. Tôi sẽ điền đơn giúp bạn."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề nhân sự: [We are going to hire three new engineers next month.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Kế hoạch đã có từ trước, dùng [be going to].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [Do not worry. I will fill out the form for you.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Quyết định ngay lúc nói, dùng [will].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The new policy ___ effect next month.",
+     "lua_chon": [
+      "taking",
+      "took",
+      "has taken",
+      "will take"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là will take: có next month là tương lai, dùng will cộng động từ nguyên mẫu.",
+      "Đáp án là will take: có next month là tương lai, dùng will cộng động từ nguyên mẫu.",
+      "Đáp án là will take: có next month là tương lai, dùng will cộng động từ nguyên mẫu.",
+      "Có next month là tương lai, dùng will cộng động từ nguyên mẫu."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "Ms. Mai is going to ___ the training session on Friday.",
+     "lua_chon": [
+      "leading",
+      "leads",
+      "led",
+      "lead"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là lead: sau going to là động từ nguyên mẫu.",
+      "Đáp án là lead: sau going to là động từ nguyên mẫu.",
+      "Đáp án là lead: sau going to là động từ nguyên mẫu.",
+      "Sau going to là động từ nguyên mẫu."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Có [next month] là tương lai, dùng [will] cộng động từ nguyên mẫu."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: có [next month] là tương lai, dùng [will] cộng động từ nguyên mẫu. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: có [next month] là tương lai, dùng [will] cộng động từ nguyên mẫu. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: có [next month] là tương lai, dùng [will] cộng động từ nguyên mẫu. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [will take], vì có [next month] là tương lai, dùng [will] cộng động từ nguyên mẫu."
+     },
+     "giai": {
+      "noi": "Vì có [next month] là tương lai, dùng [will] cộng động từ nguyên mẫu."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau [going to] là động từ nguyên mẫu."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: sau [going to] là động từ nguyên mẫu. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: sau [going to] là động từ nguyên mẫu. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: sau [going to] là động từ nguyên mẫu. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [lead], vì sau [going to] là động từ nguyên mẫu."
+     },
+     "giai": {
+      "noi": "Vì sau [going to] là động từ nguyên mẫu."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,374 @@
+{
+ "id": "tv-khao-sat",
+ "ten": "Từ vựng khảo sát và phân tích",
+ "nhom": "Từ vựng · Khảo sát",
+ "so": 53,
+ "chuong": {
+  "so": 6,
+  "ten": "Marketing và sản phẩm",
+  "bai": 4,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "survey",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|cuộc khảo sát]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "Please complete our short [[e0a|survey]].",
+     "vi": "Vui lòng làm bài khảo sát ngắn của chúng tôi."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "The [[f0a|survey]] shows that customers like the new design.",
+     "vi": "Khảo sát cho thấy khách hàng thích thiết kế mới."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[survey]. Cuộc khảo sát.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please complete our short survey.] Vui lòng làm bài khảo sát ngắn của chúng tôi.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The survey shows that customers like the new design.] Khảo sát cho thấy khách hàng thích thiết kế mới.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "analyze",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m1a|phân tích]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "The team will [[e1a|analyze]] the data.",
+     "vi": "Nhóm sẽ phân tích dữ liệu."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "We [[f1a|analyzed]] the feedback from 300 users.",
+     "vi": "Chúng tôi đã phân tích phản hồi của 300 người dùng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[analyze]. Phân tích.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[The team will analyze the data.] Nhóm sẽ phân tích dữ liệu.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[We analyzed the feedback from 300 users.] Chúng tôi đã phân tích phản hồi của 300 người dùng.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Chúng tôi sẽ phân tích kết quả.",
+     "tu": "analyze",
+     "so_tu": 5,
+     "en": "We will [[d0a|analyze]] the results.",
+     "dap": [
+      "We will analyze the results.",
+      "We will analyse the results."
+     ],
+     "nhan": [
+      "analyze"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Chúng tôi sẽ phân tích kết quả.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[We will analyze the results.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "result",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|kết quả]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "The [[e2a|results]] will be shared on Friday.",
+     "vi": "Kết quả sẽ được chia sẻ vào thứ Sáu."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The [[f2a|results]] of the campaign were better than expected.",
+     "vi": "Kết quả chiến dịch tốt hơn dự kiến."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[result]. Kết quả.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[The results will be shared on Friday.] Kết quả sẽ được chia sẻ vào thứ Sáu.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The results of the campaign were better than expected.] Kết quả chiến dịch tốt hơn dự kiến.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "data",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|dữ liệu]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "We collected [[e3a|data]] from 500 customers.",
+     "vi": "Chúng tôi thu thập dữ liệu từ 500 khách hàng."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The [[f3a|data]] shows a rise in online sales.",
+     "vi": "Dữ liệu cho thấy doanh số trực tuyến tăng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[data]. Dữ liệu.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[We collected data from 500 customers.] Chúng tôi thu thập dữ liệu từ 500 khách hàng.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The data shows a rise in online sales.] Dữ liệu cho thấy doanh số trực tuyến tăng.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Dữ liệu này rất hữu ích.",
+     "tu": "data",
+     "so_tu": 5,
+     "en": "This [[d1a|data]] is very useful.",
+     "dap": [
+      "This data is very useful.",
+      "These data are very useful."
+     ],
+     "nhan": [
+      "data"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Dữ liệu này rất hữu ích.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[This data is very useful.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "More than 1,000 customers took part in the ___.",
+     "lua_chon": [
+      "data",
+      "result",
+      "survey",
+      "analyze"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là survey: khách hàng tham gia survey, cuộc khảo sát.",
+      "Đáp án là survey: khách hàng tham gia survey, cuộc khảo sát.",
+      "Khách hàng tham gia survey, cuộc khảo sát.",
+      "Đáp án là survey: khách hàng tham gia survey, cuộc khảo sát."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Khách hàng tham gia [survey], cuộc khảo sát."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: khách hàng tham gia [survey], cuộc khảo sát. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: khách hàng tham gia [survey], cuộc khảo sát. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: khách hàng tham gia [survey], cuộc khảo sát. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[More than 1,000 customers took part in the survey.]"
+     },
+     "giai": {
+      "noi": "Vì khách hàng tham gia [survey], cuộc khảo sát."
+     }
+    }
+   ]
+  }
+ ]
+}

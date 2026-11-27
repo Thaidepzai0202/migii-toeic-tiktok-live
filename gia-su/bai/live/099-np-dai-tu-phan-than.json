@@ -1,0 +1,277 @@
+{
+ "id": "np-dai-tu-phan-than",
+ "ten": "Đại từ phản thân",
+ "nhom": "Ngữ pháp · Lượng từ và đại từ",
+ "so": 99,
+ "chuong": {
+  "so": 11,
+  "ten": "Khách sạn và du lịch",
+  "bai": 8,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Đại từ phản thân",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "Dùng [[y0a|myself, himself, themselves]] khi [[y0b|người làm và người chịu là một]], hoặc để nhấn mạnh [[y0c|tự mình làm]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "by myself = một mình, tự mình"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học Đại từ phản thân.",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Dùng [myself], [himself], [themselves] khi người làm và người chịu là một, hoặc để nhấn mạnh tự mình làm.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 2580
+      },
+      {
+       "to": "y0c",
+       "sau": 5580
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [by myself] nghĩa là tự mình làm, một mình.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "Ms. Ha introduced [[v0a|herself]] to the guests.",
+     "vi": "Cô Hà tự giới thiệu với khách."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "I fixed the printer [[v1a|by myself]].",
+     "vi": "Tôi tự sửa máy in."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [Ms. Ha introduced herself to the guests.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Người giới thiệu và người được giới thiệu là một.",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [I fixed the printer by myself.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "[by myself] là tự mình làm.",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Khách sạn và du lịch",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "Please help [[c0a|yourself]] to the buffet.",
+     "vi": "Xin cứ tự nhiên dùng tiệc buffet."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "We planned the itinerary [[c1a|ourselves]].",
+     "vi": "Chúng tôi tự lên lịch trình."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề khách sạn và du lịch: [Please help yourself to the buffet.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "[help yourself] nghĩa là cứ tự nhiên lấy.",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [We planned the itinerary ourselves.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Tự mình làm, dùng [ourselves].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Mr. Long prefers to check the figures ___.",
+     "lua_chon": [
+      "him",
+      "his",
+      "he",
+      "himself"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là himself: nhấn mạnh anh ấy tự làm, dùng himself.",
+      "Đáp án là himself: nhấn mạnh anh ấy tự làm, dùng himself.",
+      "Đáp án là himself: nhấn mạnh anh ấy tự làm, dùng himself.",
+      "Nhấn mạnh anh ấy tự làm, dùng himself."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "The new employees introduced ___ at the meeting.",
+     "lua_chon": [
+      "their",
+      "themselves",
+      "them",
+      "they"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là themselves: người làm và người chịu là một, dùng themselves.",
+      "Người làm và người chịu là một, dùng themselves.",
+      "Đáp án là themselves: người làm và người chịu là một, dùng themselves.",
+      "Đáp án là themselves: người làm và người chịu là một, dùng themselves."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Nhấn mạnh anh ấy tự làm, dùng [himself]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: nhấn mạnh anh ấy tự làm, dùng [himself]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: nhấn mạnh anh ấy tự làm, dùng [himself]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: nhấn mạnh anh ấy tự làm, dùng [himself]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [himself], vì nhấn mạnh anh ấy tự làm, dùng [himself]."
+     },
+     "giai": {
+      "noi": "Vì nhấn mạnh anh ấy tự làm, dùng [himself]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Người làm và người chịu là một, dùng [themselves]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: người làm và người chịu là một, dùng [themselves]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: người làm và người chịu là một, dùng [themselves]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: người làm và người chịu là một, dùng [themselves]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [themselves], vì người làm và người chịu là một, dùng [themselves]."
+     },
+     "giai": {
+      "noi": "Vì người làm và người chịu là một, dùng [themselves]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,377 @@
+{
+ "id": "tv-du-lich",
+ "ten": "Từ vựng du lịch",
+ "nhom": "Từ vựng · Du lịch",
+ "so": 94,
+ "chuong": {
+  "so": 11,
+  "ten": "Khách sạn và du lịch",
+  "bai": 3,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "itinerary",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|lịch trình]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "The [[e0a|itinerary]] includes three cities.",
+     "vi": "Lịch trình gồm ba thành phố."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "Please check the [[f0a|itinerary]] before the trip.",
+     "vi": "Vui lòng xem lịch trình trước chuyến đi."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[itinerary]. Lịch trình.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[The itinerary includes three cities.] Lịch trình gồm ba thành phố.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Please check the itinerary before the trip.] Vui lòng xem lịch trình trước chuyến đi.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "destination",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|điểm đến]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "Da Lat is a popular [[e1a|destination]].",
+     "vi": "Đà Lạt là điểm đến được yêu thích."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "Our first [[f1a|destination]] is Hoi An.",
+     "vi": "Điểm đến đầu tiên là Hội An."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[destination]. Điểm đến.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[Da Lat is a popular destination.] Đà Lạt là điểm đến được yêu thích.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Our first destination is Hoi An.] Điểm đến đầu tiên là Hội An.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Đà Nẵng là điểm đến yêu thích của tôi.",
+     "tu": "destination",
+     "so_tu": 6,
+     "en": "Da Nang is my favorite [[d0a|destination]].",
+     "dap": [
+      "Da Nang is my favorite destination.",
+      "Da Nang is my favourite destination.",
+      "Danang is my favorite destination.",
+      "Danang is my favourite destination."
+     ],
+     "nhan": [
+      "destination"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Đà Nẵng là điểm đến yêu thích của tôi.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[Da Nang is my favorite destination.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "souvenir",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|quà lưu niệm]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "I bought a [[e2a|souvenir]] for my mother.",
+     "vi": "Tôi mua quà lưu niệm cho mẹ."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "This shop sells [[f2a|souvenirs]] and postcards.",
+     "vi": "Cửa hàng này bán quà lưu niệm và bưu thiếp."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[souvenir]. Quà lưu niệm.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[I bought a souvenir for my mother.] Tôi mua quà lưu niệm cho mẹ.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[This shop sells souvenirs and postcards.] Cửa hàng này bán quà lưu niệm và bưu thiếp.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "forecast",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|dự báo thời tiết]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "The weather [[e3a|forecast]] says it will rain.",
+     "vi": "Dự báo thời tiết nói trời sẽ mưa."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The [[f3a|forecast]] says it will be sunny tomorrow.",
+     "vi": "Dự báo nói mai trời nắng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[forecast]. Dự báo thời tiết.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[The weather forecast says it will rain.] Dự báo thời tiết nói trời sẽ mưa.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The forecast says it will be sunny tomorrow.] Dự báo nói mai trời nắng.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Tôi luôn xem dự báo thời tiết.",
+     "tu": "forecast",
+     "so_tu": 6,
+     "en": "I always check the weather [[d1a|forecast]].",
+     "dap": [
+      "I always check the weather forecast.",
+      "I always watch the weather forecast.",
+      "I always look at the weather forecast."
+     ],
+     "nhan": [
+      "forecast"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Tôi luôn xem dự báo thời tiết.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[I always check the weather forecast.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Please check the ___ for the times of all tours.",
+     "lua_chon": [
+      "forecast",
+      "itinerary",
+      "souvenir",
+      "destination"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là itinerary: giờ của các tour nằm trong itinerary, lịch trình.",
+      "Giờ của các tour nằm trong itinerary, lịch trình.",
+      "Đáp án là itinerary: giờ của các tour nằm trong itinerary, lịch trình.",
+      "Đáp án là itinerary: giờ của các tour nằm trong itinerary, lịch trình."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Giờ của các tour nằm trong [itinerary], lịch trình."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: giờ của các tour nằm trong [itinerary], lịch trình. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: giờ của các tour nằm trong [itinerary], lịch trình. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: giờ của các tour nằm trong [itinerary], lịch trình. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Please check the itinerary for the times of all tours.]"
+     },
+     "giai": {
+      "noi": "Vì giờ của các tour nằm trong [itinerary], lịch trình."
+     }
+    }
+   ]
+  }
+ ]
+}

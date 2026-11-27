@@ -1,0 +1,290 @@
+{
+ "id": "np-much-many",
+ "ten": "Much và many",
+ "nhom": "Ngữ pháp · Lượng từ và đại từ",
+ "so": 95,
+ "chuong": {
+  "so": 11,
+  "ten": "Khách sạn và du lịch",
+  "bai": 4,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Much và many",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|many]] đi với [[y0b|danh từ đếm được số nhiều]]."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "[[y1a|much]] đi với [[y1b|danh từ không đếm được]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "many + N số nhiều · much + N không đếm được"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Xong phần từ vựng của chương. Giờ sang ngữ pháp, ví dụ dùng luôn các từ vừa học. Bài này mình học [Much] và [many].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[many] đi với danh từ đếm được số nhiều.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 840
+      }
+     ]
+    },
+    {
+     "noi": "[much] đi với danh từ không đếm được.",
+     "lam": [
+      {
+       "to": "y1a"
+      },
+      {
+       "to": "y1b",
+       "sau": 840
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [many] cộng danh từ số nhiều, [much] cộng danh từ không đếm được.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "We received [[v0a|many]] applications.",
+     "vi": "Chúng tôi nhận được nhiều đơn ứng tuyển."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "We do not have [[v1a|much]] time.",
+     "vi": "Chúng tôi không có nhiều thời gian."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [We received many applications.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "[applications] đếm được, dùng [many].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [We do not have much time.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "[time] không đếm được, dùng [much].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Khách sạn và du lịch",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "How [[c0a|many]] rooms did you reserve?",
+     "vi": "Bạn đã đặt bao nhiêu phòng?"
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "We did not spend [[c1a|much]] money on souvenirs.",
+     "vi": "Chúng tôi không tiêu nhiều tiền vào quà lưu niệm."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề khách sạn và du lịch: [How many rooms did you reserve?]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "[rooms] đếm được, dùng [many].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [We did not spend much money on souvenirs.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "[money] không đếm được, dùng [much].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "How ___ information do you need for the report?",
+     "lua_chon": [
+      "a few",
+      "much",
+      "few",
+      "many"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là much: information không đếm được, dùng much.",
+      "Information không đếm được, dùng much.",
+      "Đáp án là much: information không đếm được, dùng much.",
+      "Đáp án là much: information không đếm được, dùng much."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "There were not ___ visitors at the trade show this year.",
+     "lua_chon": [
+      "little",
+      "a little",
+      "much",
+      "many"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là many: visitors đếm được, số nhiều, dùng many.",
+      "Đáp án là many: visitors đếm được, số nhiều, dùng many.",
+      "Đáp án là many: visitors đếm được, số nhiều, dùng many.",
+      "Visitors đếm được, số nhiều, dùng many."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [information] không đếm được, dùng [much]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [information] không đếm được, dùng [much]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: [information] không đếm được, dùng [much]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [information] không đếm được, dùng [much]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [much], vì [information] không đếm được, dùng [much]."
+     },
+     "giai": {
+      "noi": "Vì [information] không đếm được, dùng [much]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [visitors] đếm được, số nhiều, dùng [many]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [visitors] đếm được, số nhiều, dùng [many]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [visitors] đếm được, số nhiều, dùng [many]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: [visitors] đếm được, số nhiều, dùng [many]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [many], vì [visitors] đếm được, số nhiều, dùng [many]."
+     },
+     "giai": {
+      "noi": "Vì [visitors] đếm được, số nhiều, dùng [many]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

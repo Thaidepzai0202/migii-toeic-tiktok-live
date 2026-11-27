@@ -1,0 +1,288 @@
+{
+ "id": "np-danh-tu",
+ "ten": "Từ loại: nhận ra chỗ cần danh từ",
+ "nhom": "Ngữ pháp · Từ loại",
+ "so": 63,
+ "chuong": {
+  "so": 7,
+  "ten": "Bán hàng và khách hàng",
+  "bai": 5,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Từ loại: nhận ra chỗ cần danh từ",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "Danh từ hay đứng [[y0a|sau the, a, an]] hoặc [[y0b|sau tính từ sở hữu]] như our, their."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "Danh từ thường có đuôi như trong [[y1a|information, payment, security]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "the / a / our + (adj) + NOUN"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Xong phần từ vựng của chương. Giờ sang ngữ pháp, ví dụ dùng luôn các từ vừa học. Bài này mình học Từ loại: nhận ra chỗ cần danh từ.",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Danh từ hay đứng sau [the], [a], [an] hoặc sau tính từ sở hữu như [our], [their].",
+     "lam": [
+      {
+       "to": "y0a",
+       "sau": 1020
+      },
+      {
+       "to": "y0b",
+       "sau": 2580
+      }
+     ]
+    },
+    {
+     "noi": "Danh từ thường có đuôi như trong [information], [payment], [security].",
+     "lam": [
+      {
+       "to": "y1a",
+       "sau": 1980
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [the], [a] hoặc [our], có thể thêm tính từ, rồi tới danh từ.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "We appreciate your [[v0a|cooperation]].",
+     "vi": "Chúng tôi cảm ơn sự hợp tác của bạn."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "The [[v1a|development]] of the app took six months.",
+     "vi": "Việc phát triển ứng dụng mất sáu tháng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [We appreciate your cooperation.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [your] là danh từ [cooperation].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [The development of the app took six months.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [the] là danh từ [development].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Bán hàng và khách hàng",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "The [[c0a|negotiation]] with the client took three hours.",
+     "vi": "Cuộc đàm phán với khách hàng kéo dài ba tiếng."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "We will send you a [[c1a|response]] within 24 hours.",
+     "vi": "Chúng tôi sẽ gửi phản hồi cho bạn trong 24 giờ."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề bán hàng và khách hàng: [The negotiation with the client took three hours.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [the] cần danh từ: [negotiation], từ động từ [negotiate].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [We will send you a response within 24 hours.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau mạo từ [a] cần danh từ [response], không dùng động từ [respond].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Please send your ___ to the HR department by Friday.",
+     "lua_chon": [
+      "applied",
+      "applicable",
+      "apply",
+      "application"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là application: sau your cần danh từ application.",
+      "Đáp án là application: sau your cần danh từ application.",
+      "Đáp án là application: sau your cần danh từ application.",
+      "Sau your cần danh từ application."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "The ___ of the new system will take two weeks.",
+     "lua_chon": [
+      "install",
+      "installation",
+      "installs",
+      "installed"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là installation: sau the và trước of cần danh từ.",
+      "Sau the và trước of cần danh từ.",
+      "Đáp án là installation: sau the và trước of cần danh từ.",
+      "Đáp án là installation: sau the và trước of cần danh từ."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau [your] cần danh từ [application]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: sau [your] cần danh từ [application]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: sau [your] cần danh từ [application]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: sau [your] cần danh từ [application]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [application], vì sau [your] cần danh từ [application]."
+     },
+     "giai": {
+      "noi": "Vì sau [your] cần danh từ [application]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau [the] và trước [of] cần danh từ."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: sau [the] và trước [of] cần danh từ. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: sau [the] và trước [of] cần danh từ. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: sau [the] và trước [of] cần danh từ. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [installation], vì sau [the] và trước [of] cần danh từ."
+     },
+     "giai": {
+      "noi": "Vì sau [the] và trước [of] cần danh từ."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

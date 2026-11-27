@@ -1,0 +1,386 @@
+{
+ "id": "tv-thue-nha",
+ "ten": "Từ vựng thuê nhà",
+ "nhom": "Từ vựng · Thuê nhà",
+ "so": 43,
+ "chuong": {
+  "so": 5,
+  "ten": "Ngân hàng và cuộc sống",
+  "bai": 3,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "rent",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|tiền thuê]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "The [[e0a|rent]] is due on the first of each month.",
+     "vi": "Tiền thuê phải trả vào ngày đầu mỗi tháng."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "The [[f0a|rent]] includes water and internet.",
+     "vi": "Tiền thuê đã gồm nước và internet."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Tiếp chủ đề ngân hàng và cuộc sống. Bài này mình học bốn từ về thuê nhà.",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[rent]. Nghĩa là tiền thuê.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[The rent is due on the first of each month.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The rent includes water and internet.]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "lease",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|hợp đồng thuê]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "We signed a two-year [[e1a|lease]] for the office.",
+     "vi": "Chúng tôi đã ký hợp đồng thuê văn phòng hai năm."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "The [[f1a|lease]] ends in December.",
+     "vi": "Hợp đồng thuê kết thúc vào tháng Mười Hai."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[lease]. Nghĩa là hợp đồng thuê.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[We signed a two-year lease for the office.]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The lease ends in December.]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Chúng tôi đã ký hợp đồng thuê.",
+     "tu": "lease",
+     "so_tu": 4,
+     "en": "We signed the [[d0a|lease]].",
+     "dap": [
+      "We signed the lease.",
+      "We signed a lease.",
+      "We have signed the lease."
+     ],
+     "nhan": [
+      "lease"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Chúng tôi đã ký hợp đồng thuê. Nhớ dùng từ [lease].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [We signed the lease.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "tenant",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|người thuê nhà]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "The [[e2a|tenant]] must keep the apartment clean.",
+     "vi": "Người thuê phải giữ căn hộ sạch sẽ."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The new [[f2a|tenants]] will move in on Monday.",
+     "vi": "Người thuê mới sẽ dọn vào thứ Hai."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[tenant]. Nghĩa là người thuê nhà.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[The tenant must keep the apartment clean.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The new tenants will move in on Monday.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "landlord",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|chủ nhà cho thuê]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "Call the [[e3a|landlord]] if the heater breaks.",
+     "vi": "Hãy gọi chủ nhà nếu máy sưởi hỏng."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The [[f3a|landlord]] raised the rent this year.",
+     "vi": "Chủ nhà đã tăng tiền thuê năm nay."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[landlord]. Nghĩa là chủ nhà cho thuê.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[Call the landlord if the heater breaks.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The landlord raised the rent this year.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Chủ nhà rất thân thiện.",
+     "tu": "landlord",
+     "so_tu": 5,
+     "en": "The [[d1a|landlord]] is very friendly.",
+     "dap": [
+      "The landlord is very friendly.",
+      "The landlord is very nice."
+     ],
+     "nhan": [
+      "landlord"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Chủ nhà rất thân thiện. Nhớ dùng từ [landlord].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [The landlord is very friendly.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The ___ raised the rent for all tenants.",
+     "lua_chon": [
+      "lease",
+      "tenant",
+      "rent",
+      "landlord"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là landlord: người tăng tiền thuê là landlord, chủ nhà.",
+      "Đáp án là landlord: người tăng tiền thuê là landlord, chủ nhà.",
+      "Đáp án là landlord: người tăng tiền thuê là landlord, chủ nhà.",
+      "Người tăng tiền thuê là landlord, chủ nhà."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Người tăng tiền thuê là [landlord], chủ nhà."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: người tăng tiền thuê là [landlord], chủ nhà. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: người tăng tiền thuê là [landlord], chủ nhà. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: người tăng tiền thuê là [landlord], chủ nhà. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [landlord], vì người tăng tiền thuê là [landlord], chủ nhà."
+     },
+     "giai": {
+      "noi": "Vì người tăng tiền thuê là [landlord], chủ nhà."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

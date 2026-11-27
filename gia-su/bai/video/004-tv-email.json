@@ -1,0 +1,373 @@
+{
+ "id": "tv-email",
+ "ten": "Từ vựng email công việc",
+ "nhom": "Từ vựng · Email",
+ "so": 4,
+ "chuong": {
+  "so": 1,
+  "ten": "Văn phòng",
+  "bai": 4,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "attach",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m0a|đính kèm]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "I have [[e0a|attached]] the price list.",
+     "vi": "Tôi đã đính kèm bảng giá."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "Please [[f0a|attach]] your CV to the email.",
+     "vi": "Vui lòng đính kèm CV vào email."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[attach]. Đính kèm.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[I have attached the price list.] Tôi đã đính kèm bảng giá.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Please attach your CV to the email.] Vui lòng đính kèm CV vào email.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "forward",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m1a|chuyển tiếp]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "Please [[e1a|forward]] this email to your team.",
+     "vi": "Vui lòng chuyển tiếp email này cho nhóm của bạn."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "Can you [[f1a|forward]] me the invoice?",
+     "vi": "Bạn chuyển tiếp hoá đơn cho tôi được không?"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[forward]. Chuyển tiếp.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please forward this email to your team.] Vui lòng chuyển tiếp email này cho nhóm của bạn.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Can you forward me the invoice?] Bạn chuyển tiếp hoá đơn cho tôi được không?",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Tôi sẽ chuyển tiếp email cho bạn.",
+     "tu": "forward",
+     "so_tu": 7,
+     "en": "I will [[d0a|forward]] the email to you.",
+     "dap": [
+      "I will forward the email to you.",
+      "I will forward you the email."
+     ],
+     "nhan": [
+      "forward"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Tôi sẽ chuyển tiếp email cho bạn.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[I will forward the email to you.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "recipient",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|người nhận]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "Check the [[e2a|recipient]] before you send it.",
+     "vi": "Hãy kiểm tra người nhận trước khi gửi."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The email has five [[f2a|recipients]].",
+     "vi": "Email này có năm người nhận."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[recipient]. Người nhận.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[Check the recipient before you send it.] Hãy kiểm tra người nhận trước khi gửi.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The email has five recipients.] Email này có năm người nhận.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "reply",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m3a|trả lời]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "Please [[e3a|reply]] by Friday.",
+     "vi": "Vui lòng trả lời trước thứ Sáu."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "She has not [[f3a|replied]] to my email yet.",
+     "vi": "Cô ấy vẫn chưa trả lời email của tôi."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[reply]. Trả lời.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please reply by Friday.] Vui lòng trả lời trước thứ Sáu.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[She has not replied to my email yet.] Cô ấy vẫn chưa trả lời email của tôi.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Vui lòng trả lời email này.",
+     "tu": "reply",
+     "so_tu": 5,
+     "en": "Please [[d1a|reply]] to this email.",
+     "dap": [
+      "Please reply to this email."
+     ],
+     "nhan": [
+      "reply"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Vui lòng trả lời email này.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[Please reply to this email.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Please find the contract ___ to this email.",
+     "lua_chon": [
+      "replied",
+      "attached",
+      "recipient",
+      "forwarded"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là attached: attached to this email là đính kèm trong email.",
+      "Attached to this email là đính kèm trong email.",
+      "Đáp án là attached: attached to this email là đính kèm trong email.",
+      "Đáp án là attached: attached to this email là đính kèm trong email."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [attached to this email] là đính kèm trong email."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [attached to this email] là đính kèm trong email. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: [attached to this email] là đính kèm trong email. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [attached to this email] là đính kèm trong email. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Please find the contract attached to this email.]"
+     },
+     "giai": {
+      "noi": "Vì [attached to this email] là đính kèm trong email."
+     }
+    }
+   ]
+  }
+ ]
+}

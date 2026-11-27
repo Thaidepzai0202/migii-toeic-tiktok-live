@@ -1,0 +1,277 @@
+{
+ "id": "np-in-on-at",
+ "ten": "Giới từ thời gian: in, on, at",
+ "nhom": "Ngữ pháp · Giới từ",
+ "so": 71,
+ "chuong": {
+  "so": 8,
+  "ten": "Sản xuất và giao hàng",
+  "bai": 5,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Giới từ thời gian: in, on, at",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|at]] cho giờ, [[y0b|on]] cho ngày và thứ, [[y0c|in]] cho tháng, năm và mùa."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "at 9 a.m. · on Monday · in May"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Xong phần từ vựng của chương. Giờ sang ngữ pháp, ví dụ dùng luôn các từ vừa học. Bài này mình học Giới từ thời gian: [in], [on], [at].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[at] cho giờ, [on] cho ngày và thứ, [in] cho tháng, năm và mùa.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 840
+      },
+      {
+       "to": "y0c",
+       "sau": 2160
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [at 9 a.m.], [on Monday], [in May].",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "The meeting starts [[v0a|at]] 10 a.m.",
+     "vi": "Cuộc họp bắt đầu lúc 10 giờ sáng."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "The store is closed [[v1a|on]] Sundays.",
+     "vi": "Cửa hàng đóng cửa vào các ngày Chủ nhật."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [The meeting starts at 10 a.m.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Giờ cụ thể dùng [at].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [The store is closed on Sundays.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Thứ trong tuần dùng [on].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Sản xuất và giao hàng",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "The shipment will arrive [[c0a|on]] Monday.",
+     "vi": "Lô hàng sẽ tới vào thứ Hai."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "The warehouse closes [[c1a|at]] 6 p.m.",
+     "vi": "Nhà kho đóng cửa lúc 6 giờ chiều."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề sản xuất và giao hàng: [The shipment will arrive on Monday.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Trước thứ trong tuần dùng [on].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [The warehouse closes at 6 p.m.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Trước giờ cụ thể dùng [at].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The annual sale will begin ___ July 1.",
+     "lua_chon": [
+      "for",
+      "on",
+      "in",
+      "at"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là on: ngày cụ thể dùng on.",
+      "Ngày cụ thể dùng on.",
+      "Đáp án là on: ngày cụ thể dùng on.",
+      "Đáp án là on: ngày cụ thể dùng on."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "Our company was founded ___ 2015.",
+     "lua_chon": [
+      "in",
+      "on",
+      "for",
+      "at"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Năm thì dùng in.",
+      "Đáp án là in: năm thì dùng in.",
+      "Đáp án là in: năm thì dùng in.",
+      "Đáp án là in: năm thì dùng in."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Ngày cụ thể dùng [on]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: ngày cụ thể dùng [on]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: ngày cụ thể dùng [on]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: ngày cụ thể dùng [on]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [on], vì ngày cụ thể dùng [on]."
+     },
+     "giai": {
+      "noi": "Vì ngày cụ thể dùng [on]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Năm thì dùng [in]."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: năm thì dùng [in]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: năm thì dùng [in]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: năm thì dùng [in]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [in], vì năm thì dùng [in]."
+     },
+     "giai": {
+      "noi": "Vì năm thì dùng [in]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

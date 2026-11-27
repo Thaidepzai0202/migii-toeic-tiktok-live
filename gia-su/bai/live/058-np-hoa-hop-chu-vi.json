@@ -1,0 +1,277 @@
+{
+ "id": "np-hoa-hop-chu-vi",
+ "ten": "Hoà hợp chủ ngữ và động từ",
+ "nhom": "Ngữ pháp · Cấu trúc hay gặp",
+ "so": 58,
+ "chuong": {
+  "so": 6,
+  "ten": "Marketing và sản phẩm",
+  "bai": 9,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Hoà hợp chủ ngữ và động từ",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|Chủ ngữ số ít]] đi với [[y0b|động từ số ít]], kể cả khi có cụm of chen giữa."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "[[y1a|the number of]] đi với số ít, [[y1b|a number of]] đi với số nhiều."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học Hoà hợp chủ ngữ và động từ.",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Chủ ngữ số ít đi với động từ số ít, kể cả khi có cụm [of] chen giữa.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 1260
+      }
+     ]
+    },
+    {
+     "noi": "[the number of] đi với số ít, [a number of] đi với số nhiều.",
+     "lam": [
+      {
+       "to": "y1a"
+      },
+      {
+       "to": "y1b",
+       "sau": 1800
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "The list of participants [[v0a|is]] on the table.",
+     "vi": "Danh sách người tham dự ở trên bàn."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "A number of customers [[v1a|have]] complained.",
+     "vi": "Một số khách hàng đã phàn nàn."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [The list of participants is on the table.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Chủ ngữ chính là [the list], số ít.",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [A number of customers have complained.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "[a number of] nghĩa là nhiều, đi với số nhiều.",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Marketing và sản phẩm",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "The results of the survey [[c0a|are]] on your desk.",
+     "vi": "Kết quả khảo sát ở trên bàn của bạn."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "Each of our products [[c1a|has]] a two-year warranty.",
+     "vi": "Sản phẩm nào của chúng tôi cũng được bảo hành hai năm."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề marketing và sản phẩm: [The results of the survey are on your desk.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Chủ ngữ chính là [results], số nhiều, nên dùng [are].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [Each of our products has a two-year warranty.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "[each of] đi với động từ số ít: [has].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The quality of our products ___ improved significantly.",
+     "lua_chon": [
+      "were",
+      "are",
+      "has",
+      "have"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là has: chủ ngữ chính là the quality, số ít.",
+      "Đáp án là has: chủ ngữ chính là the quality, số ít.",
+      "Chủ ngữ chính là the quality, số ít.",
+      "Đáp án là has: chủ ngữ chính là the quality, số ít."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "The number of applicants ___ increasing every year.",
+     "lua_chon": [
+      "are",
+      "were",
+      "is",
+      "have"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là is: the number of đi với động từ số ít.",
+      "Đáp án là is: the number of đi với động từ số ít.",
+      "The number of đi với động từ số ít.",
+      "Đáp án là is: the number of đi với động từ số ít."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Chủ ngữ chính là [the quality], số ít."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: chủ ngữ chính là [the quality], số ít. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: chủ ngữ chính là [the quality], số ít. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: chủ ngữ chính là [the quality], số ít. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [has], vì chủ ngữ chính là [the quality], số ít."
+     },
+     "giai": {
+      "noi": "Vì chủ ngữ chính là [the quality], số ít."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [the number of] đi với động từ số ít."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [the number of] đi với động từ số ít. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [the number of] đi với động từ số ít. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [the number of] đi với động từ số ít. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [is], vì [the number of] đi với động từ số ít."
+     },
+     "giai": {
+      "noi": "Vì [the number of] đi với động từ số ít."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

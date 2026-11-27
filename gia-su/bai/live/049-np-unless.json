@@ -1,0 +1,290 @@
+{
+ "id": "np-unless",
+ "ten": "Unless và provided that",
+ "nhom": "Ngữ pháp · Câu điều kiện",
+ "so": 49,
+ "chuong": {
+  "so": 5,
+  "ten": "Ngân hàng và cuộc sống",
+  "bai": 9,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Unless và provided that",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|Unless]] nghĩa là [[y0b|nếu không]]."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "[[y1a|Provided that]] nghĩa là [[y1b|với điều kiện là]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "Unless + S + V = If + S + do not + V"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học [Unless] và [provided that].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[Unless] nghĩa là nếu không.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 1080
+      }
+     ]
+    },
+    {
+     "noi": "[Provided that] nghĩa là với điều kiện là.",
+     "lam": [
+      {
+       "to": "y1a"
+      },
+      {
+       "to": "y1b",
+       "sau": 1500
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [unless] bằng [if] cộng phủ định.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "[[v0a|Unless]] you hurry, you will miss the bus.",
+     "vi": "Nếu không nhanh lên, bạn sẽ lỡ xe buýt."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "You can borrow the car [[v1a|provided that]] you return it by 6 p.m.",
+     "vi": "Bạn được mượn xe với điều kiện trả trước 6 giờ tối."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [Unless you hurry, you will miss the bus.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "[Unless] đã mang nghĩa phủ định rồi.",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [You can borrow the car provided that you return it by 6 p.m.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "[Provided that] nêu điều kiện.",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Ngân hàng và cuộc sống",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "You cannot buy this medicine [[c0a|unless]] you have a prescription.",
+     "vi": "Bạn không mua được thuốc này trừ khi có đơn thuốc."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "The bank will lend you money [[c1a|provided that]] you have a stable job.",
+     "vi": "Ngân hàng sẽ cho vay với điều kiện bạn có việc làm ổn định."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề ngân hàng và cuộc sống: [You cannot buy this medicine unless you have a prescription.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "[unless] nghĩa là trừ khi, bằng [if not].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [The bank will lend you money provided that you have a stable job.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "[provided that] nghĩa là với điều kiện là.",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The order will be cancelled ___ payment is received by Monday.",
+     "lua_chon": [
+      "if",
+      "so that",
+      "unless",
+      "because"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là unless: đơn bị huỷ nếu không trả tiền, dùng unless.",
+      "Đáp án là unless: đơn bị huỷ nếu không trả tiền, dùng unless.",
+      "Đơn bị huỷ nếu không trả tiền, dùng unless.",
+      "Đáp án là unless: đơn bị huỷ nếu không trả tiền, dùng unless."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "Visitors may enter the lab ___ they wear safety glasses.",
+     "lua_chon": [
+      "unless",
+      "provided that",
+      "even though",
+      "so that"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là provided that: được vào với điều kiện đeo kính, dùng provided that.",
+      "Được vào với điều kiện đeo kính, dùng provided that.",
+      "Đáp án là provided that: được vào với điều kiện đeo kính, dùng provided that.",
+      "Đáp án là provided that: được vào với điều kiện đeo kính, dùng provided that."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Đơn bị huỷ nếu không trả tiền, dùng [unless]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: đơn bị huỷ nếu không trả tiền, dùng [unless]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: đơn bị huỷ nếu không trả tiền, dùng [unless]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: đơn bị huỷ nếu không trả tiền, dùng [unless]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [unless], vì đơn bị huỷ nếu không trả tiền, dùng [unless]."
+     },
+     "giai": {
+      "noi": "Vì đơn bị huỷ nếu không trả tiền, dùng [unless]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Được vào với điều kiện đeo kính, dùng [provided that]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: được vào với điều kiện đeo kính, dùng [provided that]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: được vào với điều kiện đeo kính, dùng [provided that]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: được vào với điều kiện đeo kính, dùng [provided that]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [provided that], vì được vào với điều kiện đeo kính, dùng [provided that]."
+     },
+     "giai": {
+      "noi": "Vì được vào với điều kiện đeo kính, dùng [provided that]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

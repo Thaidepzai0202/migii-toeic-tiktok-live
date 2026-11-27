@@ -1,0 +1,389 @@
+{
+ "id": "tv-nha-hang",
+ "ten": "Từ vựng nhà hàng",
+ "nhom": "Từ vựng · Nhà hàng",
+ "so": 93,
+ "chuong": {
+  "so": 11,
+  "ten": "Khách sạn và du lịch",
+  "bai": 2,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "cuisine",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|ẩm thực, món ăn của một vùng]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "The restaurant serves Italian [[e0a|cuisine]].",
+     "vi": "Nhà hàng phục vụ ẩm thực Ý."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "Hue is famous for its local [[f0a|cuisine]].",
+     "vi": "Huế nổi tiếng với ẩm thực địa phương."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Tiếp chủ đề khách sạn và du lịch. Bài này mình học bốn từ về nhà hàng.",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[cuisine]. Nghĩa là ẩm thực, món ăn của một vùng.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[The restaurant serves Italian cuisine.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Hue is famous for its local cuisine.]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "bill",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|hoá đơn tính tiền]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "Could we have the [[e1a|bill]], please?",
+     "vi": "Cho chúng tôi xin hoá đơn được không?"
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "The [[f1a|bill]] includes a service charge.",
+     "vi": "Hoá đơn đã gồm phí phục vụ."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[bill]. Nghĩa là hoá đơn tính tiền.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[Could we have the bill, please?]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The bill includes a service charge.]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Cho tôi xin hoá đơn.",
+     "tu": "bill",
+     "so_tu": 6,
+     "en": "Can I have the [[d0a|bill]], please?",
+     "dap": [
+      "Can I have the bill, please?",
+      "Could I have the bill, please?",
+      "Can I have the bill?",
+      "Could I have the bill?",
+      "The bill, please."
+     ],
+     "nhan": [
+      "bill"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Cho tôi xin hoá đơn. Nhớ dùng từ [bill].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [Can I have the bill, please?]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "reserve",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m2a|đặt trước]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "I would like to [[e2a|reserve]] a table for four.",
+     "vi": "Tôi muốn đặt trước một bàn cho bốn người."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "This table is [[f2a|reserved]] for Mr. Kim.",
+     "vi": "Bàn này đã được đặt cho ông Kim."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[reserve]. Nghĩa là đặt trước.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[I would like to reserve a table for four.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[This table is reserved for Mr. Kim.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "serve",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m3a|phục vụ món ăn]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "Breakfast is [[e3a|served]] from 6 to 10 a.m.",
+     "vi": "Bữa sáng được phục vụ từ 6 tới 10 giờ."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The restaurant [[f3a|serves]] seafood all day.",
+     "vi": "Nhà hàng phục vụ hải sản cả ngày."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[serve]. Nghĩa là phục vụ món ăn.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[Breakfast is served from 6 to 10 a.m.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The restaurant serves seafood all day.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Nhà hàng phục vụ món Việt.",
+     "tu": "serve",
+     "so_tu": 5,
+     "en": "The restaurant [[d1a|serves]] Vietnamese food.",
+     "dap": [
+      "The restaurant serves Vietnamese food.",
+      "This restaurant serves Vietnamese food.",
+      "The restaurant serves Vietnamese dishes."
+     ],
+     "nhan": [
+      "serves"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Nhà hàng phục vụ món Việt. Nhớ dùng từ [serve].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [The restaurant serves Vietnamese food.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Please call ahead to ___ a table on weekends.",
+     "lua_chon": [
+      "cuisine",
+      "bill",
+      "reserve",
+      "serve"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là reserve: gọi trước để reserve, đặt bàn trước.",
+      "Đáp án là reserve: gọi trước để reserve, đặt bàn trước.",
+      "Gọi trước để reserve, đặt bàn trước.",
+      "Đáp án là reserve: gọi trước để reserve, đặt bàn trước."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Gọi trước để [reserve], đặt bàn trước."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: gọi trước để [reserve], đặt bàn trước. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: gọi trước để [reserve], đặt bàn trước. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: gọi trước để [reserve], đặt bàn trước. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [reserve], vì gọi trước để [reserve], đặt bàn trước."
+     },
+     "giai": {
+      "noi": "Vì gọi trước để [reserve], đặt bàn trước."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

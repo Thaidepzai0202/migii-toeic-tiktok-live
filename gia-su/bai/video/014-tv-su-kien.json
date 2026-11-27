@@ -1,0 +1,376 @@
+{
+ "id": "tv-su-kien",
+ "ten": "Từ vựng sự kiện công ty",
+ "nhom": "Từ vựng · Sự kiện",
+ "so": 14,
+ "chuong": {
+  "so": 2,
+  "ten": "Họp và sự kiện",
+  "bai": 5,
+  "tong": 10
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "anniversary",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|lễ kỷ niệm]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "We will celebrate our 10th [[e0a|anniversary]] in May.",
+     "vi": "Chúng tôi sẽ kỷ niệm 10 năm thành lập vào tháng Năm."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "Every employee got a gift for the company [[f0a|anniversary]].",
+     "vi": "Mỗi nhân viên được tặng quà nhân dịp kỷ niệm thành lập công ty."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[anniversary]. Lễ kỷ niệm.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[We will celebrate our 10th anniversary in May.] Chúng tôi sẽ kỷ niệm mười năm thành lập vào tháng Năm.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Every employee got a gift for the company anniversary.] Mỗi nhân viên được tặng quà nhân dịp kỷ niệm thành lập công ty.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "banquet",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|bữa tiệc lớn]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "The awards [[e1a|banquet]] starts at 7 p.m.",
+     "vi": "Tiệc trao giải bắt đầu lúc 7 giờ tối."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "The [[f1a|banquet]] was held at a hotel downtown.",
+     "vi": "Bữa tiệc lớn được tổ chức ở một khách sạn trung tâm."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[banquet]. Bữa tiệc lớn.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[The awards banquet starts at 7 p.m.] Tiệc trao giải bắt đầu lúc bảy giờ tối.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The banquet was held at a hotel downtown.] Bữa tiệc lớn được tổ chức ở một khách sạn trung tâm.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Bữa tiệc bắt đầu lúc bảy giờ.",
+     "tu": "banquet",
+     "so_tu": 5,
+     "en": "The [[d0a|banquet]] starts at seven.",
+     "dap": [
+      "The banquet starts at seven.",
+      "The banquet begins at seven.",
+      "The banquet starts at seven o'clock."
+     ],
+     "nhan": [
+      "banquet"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Bữa tiệc bắt đầu lúc bảy giờ.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[The banquet starts at seven.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "award",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|giải thưởng]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "Ms. Hoa won the best employee [[e2a|award]].",
+     "vi": "Cô Hoa giành giải nhân viên xuất sắc nhất."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "Our team received an [[f2a|award]] for customer service.",
+     "vi": "Nhóm chúng tôi nhận giải thưởng về dịch vụ khách hàng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[award]. Giải thưởng.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[Ms. Hoa won the best employee award.] Cô Hoa giành giải nhân viên xuất sắc nhất.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Our team received an award for customer service.] Nhóm chúng tôi nhận giải thưởng về dịch vụ khách hàng.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "celebrate",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m3a|ăn mừng, kỷ niệm]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "Let us [[e3a|celebrate]] our success!",
+     "vi": "Hãy cùng ăn mừng thành công!"
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "We [[f3a|celebrated]] the opening of the new office.",
+     "vi": "Chúng tôi đã ăn mừng khai trương văn phòng mới."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[celebrate]. Ăn mừng, kỷ niệm.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[Let us celebrate our success!] Hãy cùng ăn mừng thành công!",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[We celebrated the opening of the new office.] Chúng tôi đã ăn mừng khai trương văn phòng mới.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Chúng tôi ăn mừng thành công của mình.",
+     "tu": "celebrate",
+     "so_tu": 4,
+     "en": "We [[d1a|celebrate]] our success.",
+     "dap": [
+      "We celebrate our success.",
+      "We celebrated our success.",
+      "We are celebrating our success."
+     ],
+     "nhan": [
+      "celebrate"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Chúng tôi ăn mừng thành công của mình.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[We celebrate our success.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The company is planning a party to ___ its 20th anniversary.",
+     "lua_chon": [
+      "banquet",
+      "award",
+      "celebrate",
+      "anniversary"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là celebrate: sau to cần động từ, celebrate là kỷ niệm.",
+      "Đáp án là celebrate: sau to cần động từ, celebrate là kỷ niệm.",
+      "Sau to cần động từ, celebrate là kỷ niệm.",
+      "Đáp án là celebrate: sau to cần động từ, celebrate là kỷ niệm."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau [to] cần động từ, [celebrate] là kỷ niệm."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: sau [to] cần động từ, [celebrate] là kỷ niệm. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: sau [to] cần động từ, [celebrate] là kỷ niệm. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: sau [to] cần động từ, [celebrate] là kỷ niệm. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The company is planning a party to celebrate its 20th anniversary.]"
+     },
+     "giai": {
+      "noi": "Vì sau [to] cần động từ, [celebrate] là kỷ niệm."
+     }
+    }
+   ]
+  }
+ ]
+}

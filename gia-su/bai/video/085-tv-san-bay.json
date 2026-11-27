@@ -1,0 +1,377 @@
+{
+ "id": "tv-san-bay",
+ "ten": "Từ vựng sân bay",
+ "nhom": "Từ vựng · Sân bay",
+ "so": 85,
+ "chuong": {
+  "so": 10,
+  "ten": "Đi lại và công tác",
+  "bai": 2,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "boarding pass",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|thẻ lên máy bay]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "Please show your [[e0a|boarding pass]] at the gate.",
+     "vi": "Vui lòng xuất trình thẻ lên máy bay ở cửa."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "You can print your [[f0a|boarding pass]] at home.",
+     "vi": "Bạn có thể in thẻ lên máy bay ở nhà."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[boarding pass]. Thẻ lên máy bay.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please show your boarding pass at the gate.] Vui lòng xuất trình thẻ lên máy bay ở cửa.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[You can print your boarding pass at home.] Bạn có thể in thẻ lên máy bay ở nhà.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "departure",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|sự khởi hành]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "The [[e1a|departure]] time is 7:30 a.m.",
+     "vi": "Giờ khởi hành là 7 giờ 30 sáng."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "Please arrive two hours before [[f1a|departure]].",
+     "vi": "Vui lòng có mặt hai tiếng trước giờ khởi hành."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[departure]. Sự khởi hành.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[The departure time is 7:30 a.m.] Giờ khởi hành là bảy giờ 30 sáng.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Please arrive two hours before departure.] Vui lòng có mặt hai tiếng trước giờ khởi hành.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Vui lòng kiểm tra giờ khởi hành.",
+     "tu": "departure",
+     "so_tu": 5,
+     "en": "Please check the [[d0a|departure]] time.",
+     "dap": [
+      "Please check the departure time.",
+      "Please check the time of departure."
+     ],
+     "nhan": [
+      "departure"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Vui lòng kiểm tra giờ khởi hành.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[Please check the departure time.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "luggage",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|hành lý]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "Each passenger can bring one piece of [[e2a|luggage]].",
+     "vi": "Mỗi hành khách được mang một kiện hành lý."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "My [[f2a|luggage]] did not arrive with me.",
+     "vi": "Hành lý của tôi không về cùng tôi."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[luggage]. Hành lý.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[Each passenger can bring one piece of luggage.] Mỗi hành khách được mang một kiện hành lý.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[My luggage did not arrive with me.] Hành lý của tôi không về cùng tôi.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "delay",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|sự chậm trễ]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "There is a two-hour [[e3a|delay]] because of the weather.",
+     "vi": "Chuyến bay trễ hai tiếng vì thời tiết."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "We apologize for the [[f3a|delay]].",
+     "vi": "Chúng tôi xin lỗi vì sự chậm trễ."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[delay]. Sự chậm trễ.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[There is a two-hour delay because of the weather.] Chuyến bay trễ hai tiếng vì thời tiết.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[We apologize for the delay.] Chúng tôi xin lỗi vì sự chậm trễ.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Chuyến bay bị chậm hai tiếng.",
+     "tu": "delay",
+     "so_tu": 6,
+     "en": "The flight has a two-hour [[d1a|delay]].",
+     "dap": [
+      "The flight has a two-hour delay.",
+      "The flight is delayed by two hours.",
+      "The flight is delayed two hours.",
+      "The flight was delayed by two hours.",
+      "The flight was delayed two hours."
+     ],
+     "nhan": [
+      "delay"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Chuyến bay bị chậm hai tiếng.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[The flight has a two-hour delay.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Passengers must show a ___ before getting on the plane.",
+     "lua_chon": [
+      "luggage",
+      "departure",
+      "boarding pass",
+      "delay"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là boarding pass: lên máy bay cần boarding pass, thẻ lên máy bay.",
+      "Đáp án là boarding pass: lên máy bay cần boarding pass, thẻ lên máy bay.",
+      "Lên máy bay cần boarding pass, thẻ lên máy bay.",
+      "Đáp án là boarding pass: lên máy bay cần boarding pass, thẻ lên máy bay."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Lên máy bay cần [boarding pass], thẻ lên máy bay."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: lên máy bay cần [boarding pass], thẻ lên máy bay. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: lên máy bay cần [boarding pass], thẻ lên máy bay. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: lên máy bay cần [boarding pass], thẻ lên máy bay. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Passengers must show a boarding pass before getting on the plane.]"
+     },
+     "giai": {
+      "noi": "Vì lên máy bay cần [boarding pass], thẻ lên máy bay."
+     }
+    }
+   ]
+  }
+ ]
+}

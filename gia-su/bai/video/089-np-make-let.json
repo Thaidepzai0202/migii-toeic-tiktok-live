@@ -1,0 +1,287 @@
+{
+ "id": "np-make-let",
+ "ten": "Make và let cộng động từ nguyên mẫu",
+ "nhom": "Ngữ pháp · Cấu trúc hay gặp",
+ "so": 89,
+ "chuong": {
+  "so": 10,
+  "ten": "Đi lại và công tác",
+  "bai": 6,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Make và let cộng động từ nguyên mẫu",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|make cộng người cộng động từ]]: [[y0b|bắt ai đó làm]]."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "[[y1a|let cộng người cộng động từ]]: [[y1b|để ai đó làm]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "make / let + sb + V"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[Make] và [let] cộng động từ nguyên mẫu.",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[make] cộng người cộng động từ: bắt ai đó làm.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 1920
+      }
+     ]
+    },
+    {
+     "noi": "[let] cộng người cộng động từ: để ai đó làm.",
+     "lam": [
+      {
+       "to": "y1a"
+      },
+      {
+       "to": "y1b",
+       "sau": 1860
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [make] hoặc [let], cộng người, cộng động từ nguyên mẫu không có [to].",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "The manager [[v0a|made us redo]] the report.",
+     "vi": "Quản lý bắt chúng tôi làm lại báo cáo."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "Please [[v1a|let me know]] if you have questions.",
+     "vi": "Vui lòng cho tôi biết nếu bạn có câu hỏi."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[The manager made us redo the report.] Quản lý bắt chúng tôi làm lại báo cáo.",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [made us] là [redo], không có [to].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please let me know if you have questions.] Vui lòng cho tôi biết nếu bạn có câu hỏi.",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [let me] là [know].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Đi lại và công tác",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "The delay [[c0a|made us miss]] our connecting flight.",
+     "vi": "Chuyến bay trễ khiến chúng tôi lỡ chuyến nối."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "The airline [[c1a|let passengers change]] their seats for free.",
+     "vi": "Hãng bay cho hành khách đổi chỗ miễn phí."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[The delay made us miss our connecting flight.] Chuyến bay trễ khiến chúng tôi lỡ chuyến nối.",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "[make] cộng người cộng động từ nguyên mẫu: [made us miss].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "[The airline let passengers change their seats for free.] Hãng bay cho hành khách đổi chỗ miễn phí.",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "[let] cũng đi với động từ nguyên mẫu, không có [to].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The new software lets users ___ files quickly.",
+     "lua_chon": [
+      "sharing",
+      "to share",
+      "share",
+      "shared"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là share: sau let cộng người là động từ nguyên mẫu.",
+      "Đáp án là share: sau let cộng người là động từ nguyên mẫu.",
+      "Sau let cộng người là động từ nguyên mẫu.",
+      "Đáp án là share: sau let cộng người là động từ nguyên mẫu."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "Our supervisor made everyone ___ the safety rules.",
+     "lua_chon": [
+      "review",
+      "to review",
+      "reviewed",
+      "reviewing"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Sau make cộng người là động từ nguyên mẫu, không có to.",
+      "Đáp án là review: sau make cộng người là động từ nguyên mẫu, không có to.",
+      "Đáp án là review: sau make cộng người là động từ nguyên mẫu, không có to.",
+      "Đáp án là review: sau make cộng người là động từ nguyên mẫu, không có to."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau [let] cộng người là động từ nguyên mẫu."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: sau [let] cộng người là động từ nguyên mẫu. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: sau [let] cộng người là động từ nguyên mẫu. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: sau [let] cộng người là động từ nguyên mẫu. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The new software lets users share files quickly.] Sau [let] cộng người là động từ nguyên mẫu."
+     },
+     "giai": {
+      "noi": "Vì sau [let] cộng người là động từ nguyên mẫu."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau [make] cộng người là động từ nguyên mẫu, không có [to]."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: sau [make] cộng người là động từ nguyên mẫu, không có [to]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: sau [make] cộng người là động từ nguyên mẫu, không có [to]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: sau [make] cộng người là động từ nguyên mẫu, không có [to]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Our supervisor made everyone review the safety rules.] Sau [make] cộng người là động từ nguyên mẫu, không có [to]."
+     },
+     "giai": {
+      "noi": "Vì sau [make] cộng người là động từ nguyên mẫu, không có [to]."
+     }
+    }
+   ]
+  }
+ ]
+}

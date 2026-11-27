@@ -1,0 +1,386 @@
+{
+ "id": "tv-cong-ty",
+ "ten": "Từ vựng tổ chức công ty",
+ "nhom": "Từ vựng · Công ty",
+ "so": 2,
+ "chuong": {
+  "so": 1,
+  "ten": "Văn phòng",
+  "bai": 2,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "headquarters",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|trụ sở chính]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "Our [[e0a|headquarters]] is in Hanoi.",
+     "vi": "Trụ sở chính của chúng tôi ở Hà Nội."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "The [[f0a|headquarters]] will move to a new building next year.",
+     "vi": "Trụ sở chính sẽ chuyển sang toà nhà mới vào năm sau."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Tiếp chủ đề văn phòng. Bài này mình học bốn từ về tổ chức công ty.",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[headquarters]. Nghĩa là trụ sở chính.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Our headquarters is in Hanoi.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The headquarters will move to a new building next year.]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "branch",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|chi nhánh]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "The bank has a new [[e1a|branch]] near my house.",
+     "vi": "Ngân hàng có chi nhánh mới gần nhà tôi."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "We have three [[f1a|branches]] in Ho Chi Minh City.",
+     "vi": "Chúng tôi có ba chi nhánh ở Thành phố Hồ Chí Minh."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[branch]. Nghĩa là chi nhánh.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[The bank has a new branch near my house.]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[We have three branches in Ho Chi Minh City.]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Chúng tôi sẽ mở một chi nhánh mới.",
+     "tu": "branch",
+     "so_tu": 6,
+     "en": "We will open a new [[d0a|branch]].",
+     "dap": [
+      "We will open a new branch.",
+      "We are going to open a new branch."
+     ],
+     "nhan": [
+      "branch"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Chúng tôi sẽ mở một chi nhánh mới. Nhớ dùng từ [branch].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [We will open a new branch.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "department",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|phòng ban]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "She works in the sales [[e2a|department]].",
+     "vi": "Cô ấy làm ở phòng kinh doanh."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The IT [[f2a|department]] is on the fifth floor.",
+     "vi": "Phòng IT ở tầng năm."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[department]. Nghĩa là phòng ban.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[She works in the sales department.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The IT department is on the fifth floor.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "director",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|giám đốc]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "The [[e3a|director]] will visit the factory.",
+     "vi": "Giám đốc sẽ đến thăm nhà máy."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The sales [[f3a|director]] approved the new plan.",
+     "vi": "Giám đốc kinh doanh đã duyệt kế hoạch mới."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[director]. Nghĩa là giám đốc.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[The director will visit the factory.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The sales director approved the new plan.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Giám đốc đang ở trong văn phòng.",
+     "tu": "director",
+     "so_tu": 6,
+     "en": "The [[d1a|director]] is in the office.",
+     "dap": [
+      "The director is in the office.",
+      "The director is in his office.",
+      "The director is in her office."
+     ],
+     "nhan": [
+      "director"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Giám đốc đang ở trong văn phòng. Nhớ dùng từ [director].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [The director is in the office.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The company has its ___ in Tokyo and branches in ten countries.",
+     "lua_chon": [
+      "director",
+      "headquarters",
+      "department",
+      "branch"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là headquarters: nơi đặt trụ sở chính là headquarters.",
+      "Nơi đặt trụ sở chính là headquarters.",
+      "Đáp án là headquarters: nơi đặt trụ sở chính là headquarters.",
+      "Đáp án là headquarters: nơi đặt trụ sở chính là headquarters."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Nơi đặt trụ sở chính là [headquarters]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: nơi đặt trụ sở chính là [headquarters]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: nơi đặt trụ sở chính là [headquarters]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: nơi đặt trụ sở chính là [headquarters]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [headquarters], vì nơi đặt trụ sở chính là [headquarters]."
+     },
+     "giai": {
+      "noi": "Vì nơi đặt trụ sở chính là [headquarters]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

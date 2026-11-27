@@ -1,0 +1,273 @@
+{
+ "id": "np-htht-hay-qkd",
+ "ten": "Hiện tại hoàn thành hay quá khứ đơn",
+ "nhom": "Ngữ pháp · Các thì",
+ "so": 17,
+ "chuong": {
+  "so": 2,
+  "ten": "Họp và sự kiện",
+  "bai": 8,
+  "tong": 10
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Hiện tại hoàn thành hay quá khứ đơn",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "Có [[y0a|thời điểm cụ thể trong quá khứ]] thì dùng quá khứ đơn."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "Có since, for, hoặc [[y1a|kết quả còn tới bây giờ]] thì dùng hiện tại hoàn thành."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học Hiện tại hoàn thành hay quá khứ đơn.",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Có thời điểm cụ thể trong quá khứ thì dùng quá khứ đơn.",
+     "lam": [
+      {
+       "to": "y0a"
+      }
+     ]
+    },
+    {
+     "noi": "Có [since], [for], hoặc kết quả còn tới bây giờ thì dùng hiện tại hoàn thành.",
+     "lam": [
+      {
+       "to": "y1a",
+       "sau": 1440
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "I [[v0a|finished]] the report yesterday.",
+     "vi": "Tôi đã làm xong báo cáo hôm qua."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "I [[v1a|have finished]] the report, so you can read it now.",
+     "vi": "Tôi làm xong báo cáo rồi, bạn đọc được rồi đấy."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [I finished the report yesterday.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Có [yesterday], dùng quá khứ đơn.",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [I have finished the report, so you can read it now.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Kết quả còn tới bây giờ, dùng hiện tại hoàn thành.",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Họp và sự kiện",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "The meeting [[c0a|began]] at nine, but the director [[c0b|has not arrived]] yet.",
+     "vi": "Cuộc họp bắt đầu lúc chín giờ, nhưng giám đốc vẫn chưa tới."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "Ms. Hoa [[c1a|has won]] three awards so far.",
+     "vi": "Tới nay chị Hoa đã giành ba giải thưởng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề họp và sự kiện: [The meeting began at nine, but the director has not arrived yet.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Có giờ cụ thể thì dùng [began]; tới giờ vẫn chưa tới thì dùng [has not arrived].",
+     "lam": [
+      {
+       "gach": "c0a"
+      },
+      {
+       "gach": "c0b"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [Ms. Hoa has won three awards so far.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Có [so far], tính tới bây giờ, dùng hiện tại hoàn thành.",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The new software ___ installed on all computers in 2021.",
+     "lua_chon": [
+      "was",
+      "is",
+      "will be",
+      "has been"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Có in 2021 là thời điểm cụ thể đã qua.",
+      "Đáp án là was: có in 2021 là thời điểm cụ thể đã qua.",
+      "Đáp án là was: có in 2021 là thời điểm cụ thể đã qua.",
+      "Đáp án là was: có in 2021 là thời điểm cụ thể đã qua."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "Since the merger, the company ___ two new factories.",
+     "lua_chon": [
+      "opened",
+      "has opened",
+      "opens",
+      "was opening"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là has opened: có since thì dùng hiện tại hoàn thành.",
+      "Có since thì dùng hiện tại hoàn thành.",
+      "Đáp án là has opened: có since thì dùng hiện tại hoàn thành.",
+      "Đáp án là has opened: có since thì dùng hiện tại hoàn thành."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Có [in 2021] là thời điểm cụ thể đã qua."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: có [in 2021] là thời điểm cụ thể đã qua. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: có [in 2021] là thời điểm cụ thể đã qua. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: có [in 2021] là thời điểm cụ thể đã qua. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [was], vì có [in 2021] là thời điểm cụ thể đã qua."
+     },
+     "giai": {
+      "noi": "Vì có [in 2021] là thời điểm cụ thể đã qua."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Có [since] thì dùng hiện tại hoàn thành."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: có [since] thì dùng hiện tại hoàn thành. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: có [since] thì dùng hiện tại hoàn thành. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: có [since] thì dùng hiện tại hoàn thành. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [has opened], vì có [since] thì dùng hiện tại hoàn thành."
+     },
+     "giai": {
+      "noi": "Vì có [since] thì dùng hiện tại hoàn thành."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

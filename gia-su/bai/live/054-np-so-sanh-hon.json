@@ -1,0 +1,274 @@
+{
+ "id": "np-so-sanh-hon",
+ "ten": "So sánh hơn",
+ "nhom": "Ngữ pháp · So sánh",
+ "so": 54,
+ "chuong": {
+  "so": 6,
+  "ten": "Marketing và sản phẩm",
+  "bai": 5,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "So sánh hơn",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "Tính từ ngắn [[y0a|thêm er]], tính từ dài [[y0b|dùng more]], rồi tới than."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "adj-er than · more + adj than"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Xong phần từ vựng của chương. Giờ sang ngữ pháp, ví dụ dùng luôn các từ vừa học. Bài này mình học So sánh hơn.",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Tính từ ngắn thêm [er], tính từ dài dùng [more], rồi tới [than].",
+     "lam": [
+      {
+       "to": "y0a",
+       "sau": 780
+      },
+      {
+       "to": "y0b",
+       "sau": 2160
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: tính từ ngắn thêm [er], tính từ dài dùng [more], sau đó là [than].",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "This model is [[v0a|cheaper than]] the old one.",
+     "vi": "Mẫu này rẻ hơn mẫu cũ."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "The new system is [[v1a|more efficient than]] the old one.",
+     "vi": "Hệ thống mới hiệu quả hơn hệ thống cũ."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [This model is cheaper than the old one.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "[cheap] là tính từ ngắn nên thêm [er].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [The new system is more efficient than the old one.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "[efficient] là tính từ dài nên dùng [more].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Marketing và sản phẩm",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "The new model is [[c0a|lighter than]] the old one.",
+     "vi": "Mẫu mới nhẹ hơn mẫu cũ."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "This campaign was [[c1a|more successful than]] the last one.",
+     "vi": "Chiến dịch này thành công hơn chiến dịch trước."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề marketing và sản phẩm: [The new model is lighter than the old one.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Tính từ ngắn [light] thêm [er], rồi tới [than].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [This campaign was more successful than the last one.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Tính từ dài nên dùng [more successful than].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The second proposal is ___ than the first one.",
+     "lua_chon": [
+      "more practical",
+      "practical",
+      "practically",
+      "most practical"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Có than và tính từ dài, dùng more practical.",
+      "Đáp án là more practical: có than và tính từ dài, dùng more practical.",
+      "Đáp án là more practical: có than và tính từ dài, dùng more practical.",
+      "Đáp án là more practical: có than và tính từ dài, dùng more practical."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "Sales this year are ___ than last year.",
+     "lua_chon": [
+      "high",
+      "highest",
+      "higher",
+      "more high"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là higher: high là tính từ ngắn, so sánh hơn thì thêm er.",
+      "Đáp án là higher: high là tính từ ngắn, so sánh hơn thì thêm er.",
+      "High là tính từ ngắn, so sánh hơn thì thêm er.",
+      "Đáp án là higher: high là tính từ ngắn, so sánh hơn thì thêm er."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Có [than] và tính từ dài, dùng [more practical]."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: có [than] và tính từ dài, dùng [more practical]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: có [than] và tính từ dài, dùng [more practical]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: có [than] và tính từ dài, dùng [more practical]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [more practical], vì có [than] và tính từ dài, dùng [more practical]."
+     },
+     "giai": {
+      "noi": "Vì có [than] và tính từ dài, dùng [more practical]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [high] là tính từ ngắn, so sánh hơn thì thêm [er]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [high] là tính từ ngắn, so sánh hơn thì thêm [er]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [high] là tính từ ngắn, so sánh hơn thì thêm [er]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [high] là tính từ ngắn, so sánh hơn thì thêm [er]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [higher], vì [high] là tính từ ngắn, so sánh hơn thì thêm [er]."
+     },
+     "giai": {
+      "noi": "Vì [high] là tính từ ngắn, so sánh hơn thì thêm [er]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

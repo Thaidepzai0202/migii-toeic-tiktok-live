@@ -1,0 +1,291 @@
+{
+ "id": "np-must-should-may",
+ "ten": "Must, should, may",
+ "nhom": "Ngữ pháp · Cấu trúc hay gặp",
+ "so": 87,
+ "chuong": {
+  "so": 10,
+  "ten": "Đi lại và công tác",
+  "bai": 4,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Must, should, may",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|must]] là bắt buộc, [[y0b|should]] là nên, [[y0c|may]] là có thể hoặc được phép."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "Sau các từ này luôn là [[y1a|động từ nguyên mẫu]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "must / should / may + V"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Xong phần từ vựng của chương. Giờ sang ngữ pháp, ví dụ dùng luôn các từ vừa học. Bài này mình học [Must], [should], [may].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[must] là bắt buộc, [should] là nên, [may] là có thể hoặc được phép.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 1200
+      },
+      {
+       "to": "y0c",
+       "sau": 2220
+      }
+     ]
+    },
+    {
+     "noi": "Sau các từ này luôn là động từ nguyên mẫu.",
+     "lam": [
+      {
+       "to": "y1a",
+       "sau": 1380
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [must], [should], [may] cộng động từ nguyên mẫu.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "Visitors [[v0a|must]] sign in at the front desk.",
+     "vi": "Khách phải đăng ký ở quầy lễ tân."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "You [[v1a|should]] back up your files regularly.",
+     "vi": "Bạn nên sao lưu tệp thường xuyên."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [Visitors must sign in at the front desk.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Quy định bắt buộc, dùng [must].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [You should back up your files regularly.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Lời khuyên, dùng [should].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Đi lại và công tác",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "Passengers [[c0a|must]] show their boarding pass at the gate.",
+     "vi": "Hành khách phải xuất trình thẻ lên máy bay ở cửa."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "You [[c1a|should]] leave early because of the traffic.",
+     "vi": "Bạn nên đi sớm vì kẹt xe."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề đi lại và công tác: [Passengers must show their boarding pass at the gate.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Quy định bắt buộc, dùng [must].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [You should leave early because of the traffic.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Lời khuyên, dùng [should].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "All employees must ___ their ID badges at all times.",
+     "lua_chon": [
+      "wear",
+      "wearing",
+      "to wear",
+      "wears"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Sau must là động từ nguyên mẫu.",
+      "Đáp án là wear: sau must là động từ nguyên mẫu.",
+      "Đáp án là wear: sau must là động từ nguyên mẫu.",
+      "Đáp án là wear: sau must là động từ nguyên mẫu."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "Passengers ___ not use mobile phones during takeoff.",
+     "lua_chon": [
+      "are",
+      "has",
+      "may",
+      "will be"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là may: may not là không được phép, sau đó là động từ nguyên mẫu.",
+      "Đáp án là may: may not là không được phép, sau đó là động từ nguyên mẫu.",
+      "May not là không được phép, sau đó là động từ nguyên mẫu.",
+      "Đáp án là may: may not là không được phép, sau đó là động từ nguyên mẫu."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau [must] là động từ nguyên mẫu."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: sau [must] là động từ nguyên mẫu. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: sau [must] là động từ nguyên mẫu. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: sau [must] là động từ nguyên mẫu. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [wear], vì sau [must] là động từ nguyên mẫu."
+     },
+     "giai": {
+      "noi": "Vì sau [must] là động từ nguyên mẫu."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [may not] là không được phép, sau đó là động từ nguyên mẫu."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [may not] là không được phép, sau đó là động từ nguyên mẫu. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [may not] là không được phép, sau đó là động từ nguyên mẫu. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [may not] là không được phép, sau đó là động từ nguyên mẫu. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [may], vì [may not] là không được phép, sau đó là động từ nguyên mẫu."
+     },
+     "giai": {
+      "noi": "Vì [may not] là không được phép, sau đó là động từ nguyên mẫu."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

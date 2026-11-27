@@ -1,0 +1,389 @@
+{
+ "id": "tv-cong-tac",
+ "ten": "Từ vựng đi công tác",
+ "nhom": "Từ vựng · Công tác",
+ "so": 86,
+ "chuong": {
+  "so": 10,
+  "ten": "Đi lại và công tác",
+  "bai": 3,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "business trip",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|chuyến công tác]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "Mr. Phong is on a [[e0a|business trip]] to Seoul.",
+     "vi": "Ông Phong đang đi công tác ở Seoul."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "She goes on a [[f0a|business trip]] every month.",
+     "vi": "Tháng nào cô ấy cũng đi công tác."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Tiếp chủ đề đi lại và công tác. Bài này mình học bốn từ về đi công tác.",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[business trip]. Nghĩa là chuyến công tác.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Mr. Phong is on a business trip to Seoul.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[She goes on a business trip every month.]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "accommodation",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|chỗ ở]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "The company will pay for your [[e1a|accommodation]].",
+     "vi": "Công ty sẽ trả tiền chỗ ở cho bạn."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "The [[f1a|accommodation]] is near the client office.",
+     "vi": "Chỗ ở gần văn phòng khách hàng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[accommodation]. Nghĩa là chỗ ở.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[The company will pay for your accommodation.]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The accommodation is near the client office.]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Công ty trả tiền chỗ ở.",
+     "tu": "accommodation",
+     "so_tu": 6,
+     "en": "The company pays for the [[d0a|accommodation]].",
+     "dap": [
+      "The company pays for the accommodation.",
+      "The company pays for accommodation.",
+      "The company will pay for the accommodation.",
+      "The company will pay for accommodation."
+     ],
+     "nhan": [
+      "accommodation"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Công ty trả tiền chỗ ở. Nhớ dùng từ [accommodation].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [The company pays for the accommodation.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "transportation",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|phương tiện đi lại]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "Public [[e2a|transportation]] is cheap here.",
+     "vi": "Phương tiện công cộng ở đây rẻ."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The hotel offers free [[f2a|transportation]] to the airport.",
+     "vi": "Khách sạn đưa đón sân bay miễn phí."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[transportation]. Nghĩa là phương tiện đi lại.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[Public transportation is cheap here.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The hotel offers free transportation to the airport.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "expense report",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|báo cáo chi phí]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "Submit your [[e3a|expense report]] after the trip.",
+     "vi": "Hãy nộp báo cáo chi phí sau chuyến đi."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "Your [[f3a|expense report]] must include all receipts.",
+     "vi": "Báo cáo chi phí phải kèm mọi biên lai."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[expense report]. Nghĩa là báo cáo chi phí.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[Submit your expense report after the trip.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Your expense report must include all receipts.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Tôi đã nộp báo cáo chi phí.",
+     "tu": "expense report",
+     "so_tu": 5,
+     "en": "I submitted my [[d1a|expense report]].",
+     "dap": [
+      "I submitted my expense report.",
+      "I submitted the expense report.",
+      "I have submitted my expense report.",
+      "I have submitted the expense report."
+     ],
+     "nhan": [
+      "expense report"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Tôi đã nộp báo cáo chi phí. Nhớ dùng từ [expense report].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [I submitted my expense report.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The hotel is close to the station, so getting ___ is easy.",
+     "lua_chon": [
+      "transportation",
+      "accommodation",
+      "business trip",
+      "expense report"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Gần ga nên dễ tìm transportation, phương tiện đi lại.",
+      "Đáp án là transportation: gần ga nên dễ tìm transportation, phương tiện đi lại.",
+      "Đáp án là transportation: gần ga nên dễ tìm transportation, phương tiện đi lại.",
+      "Đáp án là transportation: gần ga nên dễ tìm transportation, phương tiện đi lại."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Gần ga nên dễ tìm [transportation], phương tiện đi lại."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: gần ga nên dễ tìm [transportation], phương tiện đi lại. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: gần ga nên dễ tìm [transportation], phương tiện đi lại. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: gần ga nên dễ tìm [transportation], phương tiện đi lại. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [transportation], vì gần ga nên dễ tìm [transportation], phương tiện đi lại."
+     },
+     "giai": {
+      "noi": "Vì gần ga nên dễ tìm [transportation], phương tiện đi lại."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

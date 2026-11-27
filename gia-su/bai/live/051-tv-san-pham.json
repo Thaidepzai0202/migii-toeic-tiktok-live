@@ -1,0 +1,390 @@
+{
+ "id": "tv-san-pham",
+ "ten": "Từ vựng sản phẩm mới",
+ "nhom": "Từ vựng · Sản phẩm",
+ "so": 51,
+ "chuong": {
+  "so": 6,
+  "ten": "Marketing và sản phẩm",
+  "bai": 2,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "launch",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m0a|ra mắt]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "We will [[e0a|launch]] the new phone in May.",
+     "vi": "Chúng tôi sẽ ra mắt điện thoại mới vào tháng Năm."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "The company [[f0a|launched]] two new products this year.",
+     "vi": "Năm nay công ty ra mắt hai sản phẩm mới."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Tiếp chủ đề marketing và sản phẩm. Bài này mình học bốn từ về sản phẩm mới.",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[launch]. Nghĩa là ra mắt.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[We will launch the new phone in May.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The company launched two new products this year.]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "feature",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|tính năng]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "The camera is the best [[e1a|feature]] of this phone.",
+     "vi": "Camera là tính năng tốt nhất của chiếc điện thoại này."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "The new model has many useful [[f1a|features]].",
+     "vi": "Mẫu mới có nhiều tính năng hữu ích."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[feature]. Nghĩa là tính năng.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[The camera is the best feature of this phone.]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The new model has many useful features.]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Điện thoại này có nhiều tính năng.",
+     "tu": "feature",
+     "so_tu": 5,
+     "en": "This phone has many [[d0a|features]].",
+     "dap": [
+      "This phone has many features.",
+      "This phone has a lot of features.",
+      "This phone has lots of features."
+     ],
+     "nhan": [
+      "features"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Điện thoại này có nhiều tính năng. Nhớ dùng từ [feature].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [This phone has many features.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "prototype",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|mẫu thử]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "Engineers are testing the [[e2a|prototype]].",
+     "vi": "Các kỹ sư đang thử nghiệm mẫu thử."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The [[f2a|prototype]] will be ready next month.",
+     "vi": "Mẫu thử sẽ xong vào tháng sau."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[prototype]. Nghĩa là mẫu thử.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[Engineers are testing the prototype.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The prototype will be ready next month.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "demand",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|nhu cầu]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "There is high [[e3a|demand]] for electric cars.",
+     "vi": "Nhu cầu về xe điện đang cao."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The [[f3a|demand]] for the new model is very high.",
+     "vi": "Nhu cầu với mẫu mới rất cao."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[demand]. Nghĩa là nhu cầu.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[There is high demand for electric cars.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The demand for the new model is very high.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Nhu cầu đang tăng.",
+     "tu": "demand",
+     "so_tu": 4,
+     "en": "The [[d1a|demand]] is rising.",
+     "dap": [
+      "The demand is rising.",
+      "Demand is rising.",
+      "Demand is increasing.",
+      "The demand is increasing.",
+      "Demand is growing.",
+      "The demand is growing."
+     ],
+     "nhan": [
+      "demand"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Nhu cầu đang tăng. Nhớ dùng từ [demand].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [The demand is rising.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Because of strong ___, the product sold out in two days.",
+     "lua_chon": [
+      "feature",
+      "launch",
+      "prototype",
+      "demand"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là demand: bán hết trong hai ngày vì demand, nhu cầu cao.",
+      "Đáp án là demand: bán hết trong hai ngày vì demand, nhu cầu cao.",
+      "Đáp án là demand: bán hết trong hai ngày vì demand, nhu cầu cao.",
+      "Bán hết trong hai ngày vì demand, nhu cầu cao."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Bán hết trong hai ngày vì [demand], nhu cầu cao."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: bán hết trong hai ngày vì [demand], nhu cầu cao. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: bán hết trong hai ngày vì [demand], nhu cầu cao. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: bán hết trong hai ngày vì [demand], nhu cầu cao. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [demand], vì bán hết trong hai ngày vì [demand], nhu cầu cao."
+     },
+     "giai": {
+      "noi": "Vì bán hết trong hai ngày vì [demand], nhu cầu cao."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

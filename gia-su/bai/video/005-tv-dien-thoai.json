@@ -1,0 +1,373 @@
+{
+ "id": "tv-dien-thoai",
+ "ten": "Từ vựng gọi điện",
+ "nhom": "Từ vựng · Điện thoại",
+ "so": 5,
+ "chuong": {
+  "so": 1,
+  "ten": "Văn phòng",
+  "bai": 5,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "extension",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|số máy lẻ]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "Please call me at [[e0a|extension]] 205.",
+     "vi": "Vui lòng gọi tôi theo số máy lẻ 205."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "The front desk is [[f0a|extension]] 100.",
+     "vi": "Lễ tân là số máy lẻ 100."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[extension]. Số máy lẻ.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please call me at extension 205.] Vui lòng gọi tôi theo số máy lẻ 205.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The front desk is extension 100.] Lễ tân là số máy lẻ 100.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "voicemail",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|hộp thư thoại]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "I left a message on her [[e1a|voicemail]].",
+     "vi": "Tôi đã để lại lời nhắn trong hộp thư thoại của cô ấy."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "Please check your [[f1a|voicemail]] after lunch.",
+     "vi": "Hãy kiểm tra hộp thư thoại sau giờ trưa."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[voicemail]. Hộp thư thoại.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[I left a message on her voicemail.] Tôi đã để lại lời nhắn trong hộp thư thoại của cô ấy.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Please check your voicemail after lunch.] Hãy kiểm tra hộp thư thoại sau giờ trưa.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Tôi sẽ kiểm tra hộp thư thoại.",
+     "tu": "voicemail",
+     "so_tu": 5,
+     "en": "I will check my [[d0a|voicemail]].",
+     "dap": [
+      "I will check my voicemail.",
+      "I will check the voicemail."
+     ],
+     "nhan": [
+      "voicemail"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Tôi sẽ kiểm tra hộp thư thoại.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[I will check my voicemail.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "hold",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m2a|giữ máy]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "Please [[e2a|hold]] while I transfer your call.",
+     "vi": "Vui lòng giữ máy trong lúc tôi chuyển cuộc gọi."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "Could you [[f2a|hold]] for a moment, please?",
+     "vi": "Bạn vui lòng giữ máy một chút nhé?"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[hold]. Giữ máy.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please hold while I transfer your call.] Vui lòng giữ máy trong lúc tôi chuyển cuộc gọi.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Could you hold for a moment, please?] Bạn vui lòng giữ máy một chút nhé?",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "transfer",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m3a|chuyển cuộc gọi]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "I will [[e3a|transfer]] you to the sales department.",
+     "vi": "Tôi sẽ chuyển bạn tới phòng kinh doanh."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "Your call has been [[f3a|transferred]] to Ms. Lan.",
+     "vi": "Cuộc gọi của bạn đã được chuyển cho chị Lan."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[transfer]. Chuyển cuộc gọi.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[I will transfer you to the sales department.] Tôi sẽ chuyển bạn tới phòng kinh doanh.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Your call has been transferred to Ms. Lan.] Cuộc gọi của bạn đã được chuyển cho chị Lan.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Tôi sẽ chuyển cuộc gọi của bạn.",
+     "tu": "transfer",
+     "so_tu": 5,
+     "en": "I will [[d1a|transfer]] your call.",
+     "dap": [
+      "I will transfer your call."
+     ],
+     "nhan": [
+      "transfer"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Tôi sẽ chuyển cuộc gọi của bạn.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[I will transfer your call.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "If no one answers, please leave a message on my ___.",
+     "lua_chon": [
+      "voicemail",
+      "hold",
+      "extension",
+      "transfer"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Để lại lời nhắn trong voicemail, hộp thư thoại.",
+      "Đáp án là voicemail: để lại lời nhắn trong voicemail, hộp thư thoại.",
+      "Đáp án là voicemail: để lại lời nhắn trong voicemail, hộp thư thoại.",
+      "Đáp án là voicemail: để lại lời nhắn trong voicemail, hộp thư thoại."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Để lại lời nhắn trong [voicemail], hộp thư thoại."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: để lại lời nhắn trong [voicemail], hộp thư thoại. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: để lại lời nhắn trong [voicemail], hộp thư thoại. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: để lại lời nhắn trong [voicemail], hộp thư thoại. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[If no one answers, please leave a message on my voicemail.]"
+     },
+     "giai": {
+      "noi": "Vì để lại lời nhắn trong [voicemail], hộp thư thoại."
+     }
+    }
+   ]
+  }
+ ]
+}

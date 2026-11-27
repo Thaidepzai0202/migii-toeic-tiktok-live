@@ -1,0 +1,375 @@
+{
+ "id": "tv-dat-hang",
+ "ten": "Từ vựng đặt hàng",
+ "nhom": "Từ vựng · Đặt hàng",
+ "so": 68,
+ "chuong": {
+  "so": 8,
+  "ten": "Sản xuất và giao hàng",
+  "bai": 2,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "supplier",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|nhà cung cấp]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "We found a new [[e0a|supplier]] for paper.",
+     "vi": "Chúng tôi tìm được nhà cung cấp giấy mới."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "Our [[f0a|supplier]] delivers every Monday.",
+     "vi": "Nhà cung cấp giao hàng vào mỗi thứ Hai."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[supplier]. Nhà cung cấp.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[We found a new supplier for paper.] Chúng tôi tìm được nhà cung cấp giấy mới.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Our supplier delivers every Monday.] Nhà cung cấp giao hàng vào mỗi thứ Hai.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "inventory",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|hàng tồn kho]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "We check the [[e1a|inventory]] every Friday.",
+     "vi": "Chúng tôi kiểm hàng tồn kho mỗi thứ Sáu."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "We keep a small [[f1a|inventory]] of spare parts.",
+     "vi": "Chúng tôi giữ một ít phụ tùng tồn kho."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[inventory]. Hàng tồn kho.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[We check the inventory every Friday.] Chúng tôi kiểm hàng tồn kho mỗi thứ Sáu.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[We keep a small inventory of spare parts.] Chúng tôi giữ một ít phụ tùng tồn kho.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Chúng tôi kiểm tra hàng tồn kho mỗi tuần.",
+     "tu": "inventory",
+     "so_tu": 6,
+     "en": "We check the [[d0a|inventory]] every week.",
+     "dap": [
+      "We check the inventory every week.",
+      "We check inventory every week.",
+      "We check the inventory weekly."
+     ],
+     "nhan": [
+      "inventory"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Chúng tôi kiểm tra hàng tồn kho mỗi tuần.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[We check the inventory every week.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "out of stock",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m2a|hết hàng]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "This item is [[e2a|out of stock]] right now.",
+     "vi": "Mặt hàng này hiện đang hết."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The blue shirts are [[f2a|out of stock]] until May.",
+     "vi": "Áo sơ mi xanh hết hàng tới tháng Năm."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[out of stock]. Hết hàng.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[This item is out of stock right now.] Mặt hàng này hiện đang hết.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The blue shirts are out of stock until May.] Áo sơ mi xanh hết hàng tới tháng Năm.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "place an order",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**cụm từ** · [[m3a|đặt hàng]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "I would like to [[e3a|place an order]] for 50 chairs.",
+     "vi": "Tôi muốn đặt mua 50 chiếc ghế."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "We [[f3a|placed an order]] for new equipment yesterday.",
+     "vi": "Hôm qua chúng tôi đã đặt mua thiết bị mới."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[place an order]. Đặt hàng.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[I would like to place an order for 50 chairs.] Tôi muốn đặt mua 50 chiếc ghế.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[We placed an order for new equipment yesterday.] Hôm qua chúng tôi đã đặt mua thiết bị mới.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Tôi muốn đặt hàng.",
+     "tu": "place an order",
+     "so_tu": 6,
+     "en": "I want to [[d1a|place an order]].",
+     "dap": [
+      "I want to place an order.",
+      "I would like to place an order."
+     ],
+     "nhan": [
+      "place an order"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Tôi muốn đặt hàng.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[I want to place an order.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Sorry, the blue model is ___, but the black one is available.",
+     "lua_chon": [
+      "out of stock",
+      "supplier",
+      "inventory",
+      "place an order"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Out of stock là hết hàng, trái nghĩa với available.",
+      "Đáp án là out of stock: out of stock là hết hàng, trái nghĩa với available.",
+      "Đáp án là out of stock: out of stock là hết hàng, trái nghĩa với available.",
+      "Đáp án là out of stock: out of stock là hết hàng, trái nghĩa với available."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [out of stock] là hết hàng, trái nghĩa với [available]."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: [out of stock] là hết hàng, trái nghĩa với [available]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: [out of stock] là hết hàng, trái nghĩa với [available]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [out of stock] là hết hàng, trái nghĩa với [available]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Sorry, the blue model is out of stock, but the black one is available.]"
+     },
+     "giai": {
+      "noi": "Vì [out of stock] là hết hàng, trái nghĩa với [available]."
+     }
+    }
+   ]
+  }
+ ]
+}

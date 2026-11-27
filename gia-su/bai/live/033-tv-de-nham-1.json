@@ -1,0 +1,389 @@
+{
+ "id": "tv-de-nham-1",
+ "ten": "Từ dễ nhầm: affect, effect, raise, rise",
+ "nhom": "Từ vựng · Từ dễ nhầm",
+ "so": 33,
+ "chuong": {
+  "so": 4,
+  "ten": "Tài chính",
+  "bai": 3,
+  "tong": 10
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "affect",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m0a|ảnh hưởng tới]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "The weather may [[e0a|affect]] our sales.",
+     "vi": "Thời tiết có thể ảnh hưởng tới doanh số."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "High costs [[f0a|affected]] our profit this year.",
+     "vi": "Chi phí cao đã ảnh hưởng tới lợi nhuận năm nay."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Tiếp chủ đề tài chính. Bài này mình học bốn từ về các từ dễ nhầm.",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[affect]. Nghĩa là ảnh hưởng tới.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[The weather may affect our sales.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[High costs affected our profit this year.]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "effect",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|tác động, hiệu quả]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "The new rule had a good [[e1a|effect]].",
+     "vi": "Quy định mới có tác động tốt."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "The price cut had a big [[f1a|effect]] on sales.",
+     "vi": "Việc giảm giá tác động lớn tới doanh số."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[effect]. Nghĩa là tác động, hiệu quả.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[The new rule had a good effect.]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The price cut had a big effect on sales.]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Cơn mưa tác động lớn tới doanh số.",
+     "tu": "effect",
+     "so_tu": 8,
+     "en": "The rain had a big [[d0a|effect]] on sales.",
+     "dap": [
+      "The rain had a big effect on sales.",
+      "The rain has a big effect on sales.",
+      "Rain had a big effect on sales.",
+      "Rain has a big effect on sales."
+     ],
+     "nhan": [
+      "effect"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Cơn mưa tác động lớn tới doanh số. Nhớ dùng từ [effect].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [The rain had a big effect on sales.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "raise",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m2a|nâng, tăng, cần có tân ngữ]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "The company will [[e2a|raise]] prices in May.",
+     "vi": "Công ty sẽ tăng giá vào tháng Năm."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The bank [[f2a|raised]] its interest rate.",
+     "vi": "Ngân hàng đã tăng lãi suất."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[raise]. Nghĩa là nâng, tăng, cần có tân ngữ.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[The company will raise prices in May.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The bank raised its interest rate.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "rise",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m3a|tự tăng lên, không cần tân ngữ]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "Prices [[e3a|rise]] every year.",
+     "vi": "Giá cả tăng lên mỗi năm."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "Our revenue [[f3a|rose]] by 5% last quarter.",
+     "vi": "Doanh thu quý trước tăng 5%."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[rise]. Nghĩa là tự tăng lên, không cần tân ngữ.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[Prices rise every year.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Our revenue rose by 5% last quarter.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Giá nhà tăng mỗi năm.",
+     "tu": "rise",
+     "so_tu": 5,
+     "en": "House prices [[d1a|rise]] every year.",
+     "dap": [
+      "House prices rise every year.",
+      "Housing prices rise every year.",
+      "Home prices rise every year.",
+      "The price of houses rises every year."
+     ],
+     "nhan": [
+      "rise"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Giá nhà tăng mỗi năm. Nhớ dùng từ [rise].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [House prices rise every year.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The new law will ___ many small businesses.",
+     "lua_chon": [
+      "risen",
+      "effect",
+      "rise",
+      "affect"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là affect: sau will cần động từ, affect là ảnh hưởng tới.",
+      "Đáp án là affect: sau will cần động từ, affect là ảnh hưởng tới.",
+      "Đáp án là affect: sau will cần động từ, affect là ảnh hưởng tới.",
+      "Sau will cần động từ, affect là ảnh hưởng tới."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau [will] cần động từ, [affect] là ảnh hưởng tới."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: sau [will] cần động từ, [affect] là ảnh hưởng tới. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: sau [will] cần động từ, [affect] là ảnh hưởng tới. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: sau [will] cần động từ, [affect] là ảnh hưởng tới. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [affect], vì sau [will] cần động từ, [affect] là ảnh hưởng tới."
+     },
+     "giai": {
+      "noi": "Vì sau [will] cần động từ, [affect] là ảnh hưởng tới."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

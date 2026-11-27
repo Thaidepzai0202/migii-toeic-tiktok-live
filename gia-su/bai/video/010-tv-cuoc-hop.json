@@ -1,0 +1,373 @@
+{
+ "id": "tv-cuoc-hop",
+ "ten": "Từ vựng về cuộc họp",
+ "nhom": "Từ vựng · Cuộc họp",
+ "so": 10,
+ "chuong": {
+  "so": 2,
+  "ten": "Họp và sự kiện",
+  "bai": 1,
+  "tong": 10
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "postpone",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m0a|hoãn lại]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "They [[e0a|postponed]] the meeting until Friday.",
+     "vi": "Họ đã hoãn cuộc họp tới thứ Sáu."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "The training has been [[f0a|postponed]] until next week.",
+     "vi": "Buổi đào tạo đã bị hoãn tới tuần sau."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[postpone]. Hoãn lại.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[They postponed the meeting until Friday.] Họ đã hoãn cuộc họp tới thứ Sáu.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The training has been postponed until next week.] Buổi đào tạo đã bị hoãn tới tuần sau.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "attend",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m1a|tham dự]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "All managers must [[e1a|attend]] the meeting.",
+     "vi": "Mọi quản lý phải tham dự cuộc họp."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "Ms. Hanh cannot [[f1a|attend]] the meeting today.",
+     "vi": "Chị Hạnh không dự họp hôm nay được."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[attend]. Tham dự.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[All managers must attend the meeting.] Mọi quản lý phải tham dự cuộc họp.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Ms. Hanh cannot attend the meeting today.] Chị Hạnh không dự họp hôm nay được.",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Tôi sẽ tham dự cuộc họp.",
+     "tu": "attend",
+     "so_tu": 5,
+     "en": "I will [[d0a|attend]] the meeting.",
+     "dap": [
+      "I will attend the meeting."
+     ],
+     "nhan": [
+      "attend"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Tôi sẽ tham dự cuộc họp.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[I will attend the meeting.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "minutes",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|biên bản cuộc họp]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "Ms. Lan took the [[e2a|minutes]] of the meeting.",
+     "vi": "Cô Lan ghi biên bản cuộc họp."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The [[f2a|minutes]] will be sent to everyone by email.",
+     "vi": "Biên bản sẽ được gửi cho mọi người qua email."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[minutes]. Biên bản cuộc họp.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[Ms. Lan took the minutes of the meeting.] Cô Lan ghi biên bản cuộc họp.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The minutes will be sent to everyone by email.] Biên bản sẽ được gửi cho mọi người qua email.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "schedule",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m3a|lên lịch]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "Let us [[e3a|schedule]] a call for next week.",
+     "vi": "Hãy lên lịch một cuộc gọi vào tuần sau."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The meeting is [[f3a|scheduled]] for 2 p.m.",
+     "vi": "Cuộc họp được lên lịch lúc 2 giờ chiều."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[schedule]. Lên lịch.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[Let us schedule a call for next week.] Hãy lên lịch một cuộc gọi vào tuần sau.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The meeting is scheduled for 2 p.m.] Cuộc họp được lên lịch lúc hai giờ chiều.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Mình lên lịch họp vào thứ Hai nhé.",
+     "tu": "schedule",
+     "so_tu": 7,
+     "en": "Let us [[d1a|schedule]] a meeting on Monday.",
+     "dap": [
+      "Let us schedule a meeting on Monday.",
+      "Let us schedule a meeting for Monday."
+     ],
+     "nhan": [
+      "schedule"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Mình lên lịch họp vào thứ Hai nhé.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[Let us schedule a meeting on Monday.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The meeting was ___ because the director was sick.",
+     "lua_chon": [
+      "agenda",
+      "minutes",
+      "postponed",
+      "attended"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là postponed: giám đốc ốm nên cuộc họp bị hoãn: postponed.",
+      "Đáp án là postponed: giám đốc ốm nên cuộc họp bị hoãn: postponed.",
+      "Giám đốc ốm nên cuộc họp bị hoãn: postponed.",
+      "Đáp án là postponed: giám đốc ốm nên cuộc họp bị hoãn: postponed."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Giám đốc ốm nên cuộc họp bị hoãn: [postponed]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: giám đốc ốm nên cuộc họp bị hoãn: [postponed]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: giám đốc ốm nên cuộc họp bị hoãn: [postponed]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: giám đốc ốm nên cuộc họp bị hoãn: [postponed]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The meeting was postponed because the director was sick.]"
+     },
+     "giai": {
+      "noi": "Vì giám đốc ốm nên cuộc họp bị hoãn: [postponed]."
+     }
+    }
+   ]
+  }
+ ]
+}

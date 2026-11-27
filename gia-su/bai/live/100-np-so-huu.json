@@ -1,0 +1,290 @@
+{
+ "id": "np-so-huu",
+ "ten": "Tính từ sở hữu và đại từ sở hữu",
+ "nhom": "Ngữ pháp · Lượng từ và đại từ",
+ "so": 100,
+ "chuong": {
+  "so": 11,
+  "ten": "Khách sạn và du lịch",
+  "bai": 9,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Tính từ sở hữu và đại từ sở hữu",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|Tính từ sở hữu]] như my, their [[y0b|luôn đi kèm danh từ]]."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "[[y1a|Đại từ sở hữu]] như mine, theirs [[y1b|đứng một mình]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "my book = mine · their car = theirs"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học Tính từ sở hữu và đại từ sở hữu.",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Tính từ sở hữu như [my], [their] luôn đi kèm danh từ.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 1980
+      }
+     ]
+    },
+    {
+     "noi": "Đại từ sở hữu như [mine], [theirs] đứng một mình.",
+     "lam": [
+      {
+       "to": "y1a"
+      },
+      {
+       "to": "y1b",
+       "sau": 2100
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [my book] bằng [mine], [their car] bằng [theirs].",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "This is [[v0a|my]] desk.",
+     "vi": "Đây là bàn của tôi."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "This desk is [[v1a|mine]].",
+     "vi": "Cái bàn này là của tôi."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [This is my desk.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "[my] đi với danh từ [desk].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [This desk is mine.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "[mine] đứng một mình.",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Khách sạn và du lịch",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "Is this suitcase [[c0a|yours]]?",
+     "vi": "Va li này là của bạn phải không?"
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "The guests left [[c1a|their]] luggage at the front desk.",
+     "vi": "Khách để hành lý ở quầy lễ tân."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề khách sạn và du lịch: [Is this suitcase yours?]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Đứng một mình, không có danh từ theo sau, dùng đại từ sở hữu [yours].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [The guests left their luggage at the front desk.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Trước danh từ [luggage] dùng tính từ sở hữu [their].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The clients thanked us for ___ quick response.",
+     "lua_chon": [
+      "we",
+      "us",
+      "ours",
+      "our"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là our: trước danh từ response cần tính từ sở hữu our.",
+      "Đáp án là our: trước danh từ response cần tính từ sở hữu our.",
+      "Đáp án là our: trước danh từ response cần tính từ sở hữu our.",
+      "Trước danh từ response cần tính từ sở hữu our."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "That umbrella is not mine; it is ___.",
+     "lua_chon": [
+      "her",
+      "she",
+      "hers",
+      "herself"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là hers: đứng một mình, không có danh từ theo sau, dùng hers.",
+      "Đáp án là hers: đứng một mình, không có danh từ theo sau, dùng hers.",
+      "Đứng một mình, không có danh từ theo sau, dùng hers.",
+      "Đáp án là hers: đứng một mình, không có danh từ theo sau, dùng hers."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Trước danh từ [response] cần tính từ sở hữu [our]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: trước danh từ [response] cần tính từ sở hữu [our]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: trước danh từ [response] cần tính từ sở hữu [our]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: trước danh từ [response] cần tính từ sở hữu [our]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [our], vì trước danh từ [response] cần tính từ sở hữu [our]."
+     },
+     "giai": {
+      "noi": "Vì trước danh từ [response] cần tính từ sở hữu [our]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Đứng một mình, không có danh từ theo sau, dùng [hers]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: đứng một mình, không có danh từ theo sau, dùng [hers]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: đứng một mình, không có danh từ theo sau, dùng [hers]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: đứng một mình, không có danh từ theo sau, dùng [hers]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [hers], vì đứng một mình, không có danh từ theo sau, dùng [hers]."
+     },
+     "giai": {
+      "noi": "Vì đứng một mình, không có danh từ theo sau, dùng [hers]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

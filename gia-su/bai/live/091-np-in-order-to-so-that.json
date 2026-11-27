@@ -1,0 +1,290 @@
+{
+ "id": "np-in-order-to-so-that",
+ "ten": "In order to và so that",
+ "nhom": "Ngữ pháp · Cấu trúc hay gặp",
+ "so": 91,
+ "chuong": {
+  "so": 10,
+  "ten": "Đi lại và công tác",
+  "bai": 8,
+  "tong": 8
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "In order to và so that",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|in order to cộng động từ]]: [[y0b|để]] làm gì."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "[[y1a|so that cộng mệnh đề]]: cũng là [[y1b|để]], thường có can hoặc will."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "in order to + V · so that + S + can + V"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học [In order to] và [so that].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[in order to] cộng động từ: để làm gì.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 1680
+      }
+     ]
+    },
+    {
+     "noi": "[so that] cộng mệnh đề: cũng là để, thường có [can] hoặc [will].",
+     "lam": [
+      {
+       "to": "y1a"
+      },
+      {
+       "to": "y1b",
+       "sau": 1920
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [in order to] cộng động từ, [so that] cộng chủ ngữ và [can].",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "We hired more staff [[v0a|in order to]] reduce waiting time.",
+     "vi": "Chúng tôi tuyển thêm người để giảm thời gian chờ."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "Speak clearly [[v1a|so that]] everyone can hear you.",
+     "vi": "Hãy nói rõ để mọi người đều nghe được."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [We hired more staff in order to reduce waiting time.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [in order to] là động từ [reduce].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [Speak clearly so that everyone can hear you.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [so that] là mệnh đề.",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Đi lại và công tác",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "She left home early [[c0a|in order to]] avoid the traffic.",
+     "vi": "Cô ấy rời nhà sớm để tránh kẹt xe."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "Keep all receipts [[c1a|so that]] you can write your expense report.",
+     "vi": "Hãy giữ mọi biên lai để có thể viết báo cáo chi phí."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề đi lại và công tác: [She left home early in order to avoid the traffic.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [in order to] là động từ nguyên mẫu.",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [Keep all receipts so that you can write your expense report.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [so that] là mệnh đề, thường có [can].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Please arrive early in order to ___ a good seat.",
+     "lua_chon": [
+      "get",
+      "getting",
+      "got",
+      "gets"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Sau in order to là động từ nguyên mẫu.",
+      "Đáp án là get: sau in order to là động từ nguyên mẫu.",
+      "Đáp án là get: sau in order to là động từ nguyên mẫu.",
+      "Đáp án là get: sau in order to là động từ nguyên mẫu."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "The manual was rewritten ___ customers can understand it easily.",
+     "lua_chon": [
+      "so that",
+      "despite",
+      "because of",
+      "in order to"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Theo sau là mệnh đề có can, dùng so that.",
+      "Đáp án là so that: theo sau là mệnh đề có can, dùng so that.",
+      "Đáp án là so that: theo sau là mệnh đề có can, dùng so that.",
+      "Đáp án là so that: theo sau là mệnh đề có can, dùng so that."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau [in order to] là động từ nguyên mẫu."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: sau [in order to] là động từ nguyên mẫu. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: sau [in order to] là động từ nguyên mẫu. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: sau [in order to] là động từ nguyên mẫu. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [get], vì sau [in order to] là động từ nguyên mẫu."
+     },
+     "giai": {
+      "noi": "Vì sau [in order to] là động từ nguyên mẫu."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Theo sau là mệnh đề có [can], dùng [so that]."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: theo sau là mệnh đề có [can], dùng [so that]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: theo sau là mệnh đề có [can], dùng [so that]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: theo sau là mệnh đề có [can], dùng [so that]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [so that], vì theo sau là mệnh đề có [can], dùng [so that]."
+     },
+     "giai": {
+      "noi": "Vì theo sau là mệnh đề có [can], dùng [so that]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

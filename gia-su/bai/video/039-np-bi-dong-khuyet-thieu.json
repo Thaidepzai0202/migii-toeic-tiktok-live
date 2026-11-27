@@ -1,0 +1,270 @@
+{
+ "id": "np-bi-dong-khuyet-thieu",
+ "ten": "Bị động với can, must, should, will",
+ "nhom": "Ngữ pháp · Câu bị động",
+ "so": 39,
+ "chuong": {
+  "so": 4,
+  "ten": "Tài chính",
+  "bai": 9,
+  "tong": 10
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Bị động với can, must, should, will",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "Sau [[y0a|can, must, should, will]], bị động dùng [[y0b|be cộng động từ dạng ba]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "modal + be + V3"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bị động với [can], [must], [should], [will].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [can], [must], [should], [will], bị động dùng [be] cộng động từ dạng ba.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 3000
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [can], [must], [will] cộng [be], cộng động từ dạng ba.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "The form [[v0a|must be submitted]] by Friday.",
+     "vi": "Biểu mẫu phải được nộp trước thứ Sáu."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "The results [[v1a|will be posted]] online.",
+     "vi": "Kết quả sẽ được đăng trên mạng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[The form must be submitted by Friday.] Biểu mẫu phải được nộp trước thứ Sáu.",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Biểu mẫu được nộp, dùng [must be submitted].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "[The results will be posted online.] Kết quả sẽ được đăng trên mạng.",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [will] dùng [be posted].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Tài chính",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "All receipts [[c0a|must be kept]] for the audit.",
+     "vi": "Mọi biên lai phải được giữ lại cho đợt kiểm toán."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "A fee [[c1a|will be charged]] for late payments.",
+     "vi": "Thanh toán trễ sẽ bị tính phí."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[All receipts must be kept for the audit.] Mọi biên lai phải được giữ lại cho đợt kiểm toán.",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [must] là [be] cộng động từ dạng ba.",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "[A fee will be charged for late payments.] Thanh toán trễ sẽ bị tính phí.",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [will] là [be charged].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "All receipts should ___ to the accounting department.",
+     "lua_chon": [
+      "sending",
+      "send",
+      "sent",
+      "be sent"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là be sent: hoá đơn được gửi, sau should dùng be sent.",
+      "Đáp án là be sent: hoá đơn được gửi, sau should dùng be sent.",
+      "Đáp án là be sent: hoá đơn được gửi, sau should dùng be sent.",
+      "Hoá đơn được gửi, sau should dùng be sent."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "The package can ___ at the front desk after 5 p.m.",
+     "lua_chon": [
+      "be picked up",
+      "picking up",
+      "pick up",
+      "picked up"
+     ],
+     "dap_an": 0,
+     "giai_thich": [
+      "Gói hàng được nhận, cần be picked up.",
+      "Đáp án là be picked up: gói hàng được nhận, cần be picked up.",
+      "Đáp án là be picked up: gói hàng được nhận, cần be picked up.",
+      "Đáp án là be picked up: gói hàng được nhận, cần be picked up."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Hoá đơn được gửi, sau [should] dùng [be sent]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: hoá đơn được gửi, sau [should] dùng [be sent]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: hoá đơn được gửi, sau [should] dùng [be sent]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: hoá đơn được gửi, sau [should] dùng [be sent]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[All receipts should be sent to the accounting department.] Hoá đơn được gửi, sau [should] dùng [be sent]."
+     },
+     "giai": {
+      "noi": "Vì hoá đơn được gửi, sau [should] dùng [be sent]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Gói hàng được nhận, cần [be picked up]."
+     },
+     "sai": {
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: gói hàng được nhận, cần [be picked up]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: gói hàng được nhận, cần [be picked up]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: gói hàng được nhận, cần [be picked up]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The package can be picked up at the front desk after 5 p.m.] Gói hàng được nhận, cần [be picked up]."
+     },
+     "giai": {
+      "noi": "Vì gói hàng được nhận, cần [be picked up]."
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,385 @@
+{
+ "id": "tv-hoi-nghi",
+ "ten": "Từ vựng hội nghị",
+ "nhom": "Từ vựng · Hội nghị",
+ "so": 13,
+ "chuong": {
+  "so": 2,
+  "ten": "Họp và sự kiện",
+  "bai": 4,
+  "tong": 10
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "conference",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m0a|hội nghị]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "The [[e0a|conference]] will be held in Singapore.",
+     "vi": "Hội nghị sẽ được tổ chức ở Singapore."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "More than 300 people attended the [[f0a|conference]].",
+     "vi": "Hơn 300 người đã dự hội nghị."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Tiếp chủ đề họp và sự kiện. Bài này mình học bốn từ về hội nghị.",
+     "lam": [
+      {
+       "tro": "w0"
+      }
+     ]
+    },
+    {
+     "noi": "[conference]. Nghĩa là hội nghị.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[The conference will be held in Singapore.]",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[More than 300 people attended the conference.]",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "venue",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m1a|địa điểm tổ chức]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "The [[e1a|venue]] can hold 500 guests.",
+     "vi": "Địa điểm có thể chứa 500 khách."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "We are still looking for a [[f1a|venue]] for the party.",
+     "vi": "Chúng tôi vẫn đang tìm địa điểm cho bữa tiệc."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[venue]. Nghĩa là địa điểm tổ chức.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[The venue can hold 500 guests.]",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[We are still looking for a venue for the party.]",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Địa điểm rất gần khách sạn.",
+     "tu": "venue",
+     "so_tu": 8,
+     "en": "The [[d0a|venue]] is very close to the hotel.",
+     "dap": [
+      "The venue is very close to the hotel.",
+      "The venue is very near the hotel."
+     ],
+     "nhan": [
+      "venue"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Thử dịch sang tiếng Anh nhé: Địa điểm rất gần khách sạn. Nhớ dùng từ [venue].",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [The venue is very close to the hotel.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "registration",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m2a|sự đăng ký]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "Online [[e2a|registration]] closes on May 1.",
+     "vi": "Đăng ký trên mạng kết thúc ngày 1 tháng 5."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "The [[f2a|registration]] fee is 500,000 dong.",
+     "vi": "Phí đăng ký là 500.000 đồng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[registration]. Nghĩa là sự đăng ký.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[Online registration closes on May 1.]",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The registration fee is 500,000 dong.]",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "keynote speaker",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**danh từ** · [[m3a|diễn giả chính]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "The [[e3a|keynote speaker]] is a famous economist.",
+     "vi": "Diễn giả chính là một nhà kinh tế học nổi tiếng."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "The [[f3a|keynote speaker]] will talk about AI.",
+     "vi": "Diễn giả chính sẽ nói về trí tuệ nhân tạo."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[keynote speaker]. Nghĩa là diễn giả chính.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[The keynote speaker is a famous economist.]",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The keynote speaker will talk about AI.]",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Diễn giả chính đến từ Nhật Bản.",
+     "tu": "keynote speaker",
+     "so_tu": 6,
+     "en": "The [[d1a|keynote speaker]] is from Japan.",
+     "dap": [
+      "The keynote speaker is from Japan.",
+      "The keynote speaker comes from Japan."
+     ],
+     "nhan": [
+      "keynote speaker"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Thử dịch sang tiếng Anh nhé: Diễn giả chính đến từ Nhật Bản. Nhớ dùng từ [keynote speaker].",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "Đáp án: [The keynote speaker is from Japan.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The hotel was chosen as the ___ for the awards ceremony.",
+     "lua_chon": [
+      "keynote speaker",
+      "venue",
+      "registration",
+      "conference"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là venue: nơi tổ chức lễ trao giải là venue.",
+      "Nơi tổ chức lễ trao giải là venue.",
+      "Đáp án là venue: nơi tổ chức lễ trao giải là venue.",
+      "Đáp án là venue: nơi tổ chức lễ trao giải là venue."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ kiểm tra nhanh nhé. Chọn từ đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Nơi tổ chức lễ trao giải là [venue]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: nơi tổ chức lễ trao giải là [venue]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: nơi tổ chức lễ trao giải là [venue]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: nơi tổ chức lễ trao giải là [venue]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [venue], vì nơi tổ chức lễ trao giải là [venue]."
+     },
+     "giai": {
+      "noi": "Vì nơi tổ chức lễ trao giải là [venue]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

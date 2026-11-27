@@ -1,0 +1,274 @@
+{
+ "id": "np-bi-dong-qua-khu",
+ "ten": "Câu bị động thì quá khứ",
+ "nhom": "Ngữ pháp · Câu bị động",
+ "so": 38,
+ "chuong": {
+  "so": 4,
+  "ten": "Tài chính",
+  "bai": 8,
+  "tong": 10
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Câu bị động thì quá khứ",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "Bị động ở quá khứ dùng [[y0a|was hoặc were]] cộng [[y0b|động từ dạng ba]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "S + was/were + V3"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học Câu bị động thì quá khứ.",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "Bị động ở quá khứ dùng [was] hoặc [were] cộng động từ dạng ba.",
+     "lam": [
+      {
+       "to": "y0a",
+       "sau": 1380
+      },
+      {
+       "to": "y0b",
+       "sau": 2760
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: chủ ngữ cộng [was] hoặc [were], cộng động từ dạng ba.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "The contract [[v0a|was signed]] last week.",
+     "vi": "Hợp đồng đã được ký tuần trước."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "Two new managers [[v1a|were hired]] in May.",
+     "vi": "Hai quản lý mới đã được tuyển vào tháng Năm."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [The contract was signed last week.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Hợp đồng được ký, dùng [was signed].",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [Two new managers were hired in May.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Chủ ngữ số nhiều nên dùng [were].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Tài chính",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "The annual budget [[c0a|was approved]] last week.",
+     "vi": "Ngân sách năm đã được duyệt tuần trước."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "The invoices [[c1a|were paid]] on time.",
+     "vi": "Các hoá đơn đã được thanh toán đúng hạn."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề tài chính: [The annual budget was approved last week.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Có [last week], bị động quá khứ: [was approved].",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [The invoices were paid on time.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Chủ ngữ số nhiều nên dùng [were paid].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The conference room ___ yesterday afternoon.",
+     "lua_chon": [
+      "cleaned",
+      "is cleaning",
+      "cleans",
+      "was cleaned"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là was cleaned: phòng được dọn, có yesterday, dùng was cộng dạng ba.",
+      "Đáp án là was cleaned: phòng được dọn, có yesterday, dùng was cộng dạng ba.",
+      "Đáp án là was cleaned: phòng được dọn, có yesterday, dùng was cộng dạng ba.",
+      "Phòng được dọn, có yesterday, dùng was cộng dạng ba."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "The winners ___ at the end of the ceremony.",
+     "lua_chon": [
+      "announcing",
+      "announced",
+      "were announced",
+      "was announced"
+     ],
+     "dap_an": 2,
+     "giai_thich": [
+      "Đáp án là were announced: chủ ngữ số nhiều và được công bố, dùng were announced.",
+      "Đáp án là were announced: chủ ngữ số nhiều và được công bố, dùng were announced.",
+      "Chủ ngữ số nhiều và được công bố, dùng were announced.",
+      "Đáp án là were announced: chủ ngữ số nhiều và được công bố, dùng were announced."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Phòng được dọn, có [yesterday], dùng [was] cộng dạng ba."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: phòng được dọn, có [yesterday], dùng [was] cộng dạng ba. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: phòng được dọn, có [yesterday], dùng [was] cộng dạng ba. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: phòng được dọn, có [yesterday], dùng [was] cộng dạng ba. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [was cleaned], vì phòng được dọn, có [yesterday], dùng [was] cộng dạng ba."
+     },
+     "giai": {
+      "noi": "Vì phòng được dọn, có [yesterday], dùng [was] cộng dạng ba."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Chủ ngữ số nhiều và được công bố, dùng [were announced]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: chủ ngữ số nhiều và được công bố, dùng [were announced]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: chủ ngữ số nhiều và được công bố, dùng [were announced]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: chủ ngữ số nhiều và được công bố, dùng [were announced]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [were announced], vì chủ ngữ số nhiều và được công bố, dùng [were announced]."
+     },
+     "giai": {
+      "noi": "Vì chủ ngữ số nhiều và được công bố, dùng [were announced]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}

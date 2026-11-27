@@ -1,0 +1,375 @@
+{
+ "id": "tv-dong-tu-cong-viec",
+ "ten": "Động từ công việc hay gặp",
+ "nhom": "Từ vựng · Động từ",
+ "so": 3,
+ "chuong": {
+  "so": 1,
+  "ten": "Văn phòng",
+  "bai": 3,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "w0",
+   "nhan": "Từ 1/4",
+   "tieu_de": "announce",
+   "khoi": [
+    {
+     "id": "m0",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m0a|thông báo, công bố]]"
+    },
+    {
+     "id": "e0",
+     "kieu": "vi_du",
+     "en": "The CEO will [[e0a|announce]] the results tomorrow.",
+     "vi": "Giám đốc điều hành sẽ công bố kết quả vào ngày mai."
+    },
+    {
+     "id": "f0",
+     "kieu": "vi_du",
+     "en": "The company [[f0a|announced]] a new office in Da Nang.",
+     "vi": "Công ty đã công bố văn phòng mới ở Đà Nẵng."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[announce]. Thông báo, công bố.",
+     "lam": [
+      {
+       "to": "m0a"
+      }
+     ]
+    },
+    {
+     "noi": "[The CEO will announce the results tomorrow.] Giám đốc điều hành sẽ công bố kết quả vào ngày mai.",
+     "lam": [
+      {
+       "tro": "e0"
+      },
+      {
+       "gach": "e0a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[The company announced a new office in Da Nang.] Công ty đã công bố văn phòng mới ở Đà Nẵng.",
+     "lam": [
+      {
+       "tro": "f0"
+      },
+      {
+       "gach": "f0a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w1",
+   "nhan": "Từ 2/4",
+   "tieu_de": "confirm",
+   "khoi": [
+    {
+     "id": "m1",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m1a|xác nhận]]"
+    },
+    {
+     "id": "e1",
+     "kieu": "vi_du",
+     "en": "Please [[e1a|confirm]] your booking by email.",
+     "vi": "Vui lòng xác nhận đặt chỗ qua email."
+    },
+    {
+     "id": "f1",
+     "kieu": "vi_du",
+     "en": "Could you [[f1a|confirm]] the meeting time?",
+     "vi": "Bạn xác nhận giúp tôi giờ họp được không?"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[confirm]. Xác nhận.",
+     "lam": [
+      {
+       "to": "m1a"
+      }
+     ]
+    },
+    {
+     "noi": "[Please confirm your booking by email.] Vui lòng xác nhận đặt chỗ qua email.",
+     "lam": [
+      {
+       "tro": "e1"
+      },
+      {
+       "gach": "e1a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Could you confirm the meeting time?] Bạn xác nhận giúp tôi giờ họp được không?",
+     "lam": [
+      {
+       "tro": "f1"
+      },
+      {
+       "gach": "f1a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd0",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d0",
+     "kieu": "dich",
+     "vi": "Vui lòng xác nhận đơn hàng của bạn.",
+     "tu": "confirm",
+     "so_tu": 4,
+     "en": "Please [[d0a|confirm]] your order.",
+     "dap": [
+      "Please confirm your order."
+     ],
+     "nhan": [
+      "confirm"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d0",
+     "noi": "Vui lòng xác nhận đơn hàng của bạn.",
+     "lam": [
+      {
+       "tro": "d0"
+      }
+     ],
+     "dap": {
+      "noi": "[Please confirm your order.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "w2",
+   "nhan": "Từ 3/4",
+   "tieu_de": "approve",
+   "khoi": [
+    {
+     "id": "m2",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m2a|phê duyệt]]"
+    },
+    {
+     "id": "e2",
+     "kieu": "vi_du",
+     "en": "The director [[e2a|approved]] the budget.",
+     "vi": "Giám đốc đã phê duyệt ngân sách."
+    },
+    {
+     "id": "f2",
+     "kieu": "vi_du",
+     "en": "Your leave request has been [[f2a|approved]].",
+     "vi": "Đơn xin nghỉ phép của bạn đã được duyệt."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[approve]. Phê duyệt.",
+     "lam": [
+      {
+       "to": "m2a"
+      }
+     ]
+    },
+    {
+     "noi": "[The director approved the budget.] Giám đốc đã phê duyệt ngân sách.",
+     "lam": [
+      {
+       "tro": "e2"
+      },
+      {
+       "gach": "e2a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Your leave request has been approved.] Đơn xin nghỉ phép của bạn đã được duyệt.",
+     "lam": [
+      {
+       "tro": "f2"
+      },
+      {
+       "gach": "f2a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "w3",
+   "nhan": "Từ 4/4",
+   "tieu_de": "cancel",
+   "khoi": [
+    {
+     "id": "m3",
+     "kieu": "doan",
+     "chu": "**động từ** · [[m3a|huỷ]]"
+    },
+    {
+     "id": "e3",
+     "kieu": "vi_du",
+     "en": "We had to [[e3a|cancel]] the order.",
+     "vi": "Chúng tôi phải huỷ đơn hàng."
+    },
+    {
+     "id": "f3",
+     "kieu": "vi_du",
+     "en": "Please [[f3a|cancel]] my appointment at 3 p.m.",
+     "vi": "Vui lòng huỷ lịch hẹn lúc 3 giờ chiều của tôi."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[cancel]. Huỷ.",
+     "lam": [
+      {
+       "to": "m3a"
+      }
+     ]
+    },
+    {
+     "noi": "[We had to cancel the order.] Chúng tôi phải huỷ đơn hàng.",
+     "lam": [
+      {
+       "tro": "e3"
+      },
+      {
+       "gach": "e3a",
+       "sau": 700
+      }
+     ]
+    },
+    {
+     "noi": "[Please cancel my appointment at 3 p.m.] Vui lòng huỷ lịch hẹn lúc ba giờ chiều của tôi.",
+     "lam": [
+      {
+       "tro": "f3"
+      },
+      {
+       "gach": "f3a",
+       "sau": 700
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pd1",
+   "nhan": "Dịch câu",
+   "tieu_de": "Dịch sang tiếng Anh",
+   "khoi": [
+    {
+     "id": "d1",
+     "kieu": "dich",
+     "vi": "Chúng tôi đã huỷ cuộc họp.",
+     "tu": "cancel",
+     "so_tu": 4,
+     "en": "We [[d1a|canceled]] the meeting.",
+     "dap": [
+      "We canceled the meeting.",
+      "We cancelled the meeting.",
+      "We have canceled the meeting.",
+      "We have cancelled the meeting."
+     ],
+     "nhan": [
+      "canceled"
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "dich": "d1",
+     "noi": "Chúng tôi đã huỷ cuộc họp.",
+     "lam": [
+      {
+       "tro": "d1"
+      }
+     ],
+     "dap": {
+      "noi": "[We canceled the meeting.]"
+     }
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "Một câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "The company will ___ the winner of the contest on its website.",
+     "lua_chon": [
+      "approve",
+      "confirm",
+      "cancel",
+      "announce"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là announce: công bố người thắng cuộc là announce.",
+      "Đáp án là announce: công bố người thắng cuộc là announce.",
+      "Đáp án là announce: công bố người thắng cuộc là announce.",
+      "Công bố người thắng cuộc là announce."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Công bố người thắng cuộc là [announce]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: công bố người thắng cuộc là [announce]. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: công bố người thắng cuộc là [announce]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: công bố người thắng cuộc là [announce]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The company will announce the winner of the contest on its website.]"
+     },
+     "giai": {
+      "noi": "Vì công bố người thắng cuộc là [announce]."
+     }
+    }
+   ]
+  }
+ ]
+}

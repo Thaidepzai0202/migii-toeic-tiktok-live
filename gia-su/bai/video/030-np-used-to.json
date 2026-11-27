@@ -1,0 +1,287 @@
+{
+ "id": "np-used-to",
+ "ten": "Used to và be used to",
+ "nhom": "Ngữ pháp · Cấu trúc hay gặp",
+ "so": 30,
+ "chuong": {
+  "so": 3,
+  "ten": "Nhân sự",
+  "bai": 11,
+  "tong": 11
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Used to và be used to",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|used to cộng động từ]]: [[y0b|thói quen trong quá khứ]], nay không còn."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "[[y1a|be used to cộng động từ thêm ing]]: [[y1b|đã quen với]] việc gì."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "used to + V · be used to + V-ing"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[Used to] và [be used to].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[used to] cộng động từ: thói quen trong quá khứ, nay không còn.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b",
+       "sau": 1440
+      }
+     ]
+    },
+    {
+     "noi": "[be used to] cộng động từ thêm [ing]: đã quen với việc gì.",
+     "lam": [
+      {
+       "to": "y1a"
+      },
+      {
+       "to": "y1b",
+       "sau": 2280
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [used to] cộng động từ nguyên mẫu, [be used to] cộng động từ thêm [ing].",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "I [[v0a|used to work]] in Da Nang.",
+     "vi": "Tôi từng làm việc ở Đà Nẵng."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "She [[v1a|is used to working]] late.",
+     "vi": "Cô ấy đã quen làm việc muộn."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[I used to work in Da Nang.] Tôi từng làm việc ở Đà Nẵng.",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Trước kia làm, giờ không còn.",
+     "lam": [
+      {
+       "gach": "v0a"
+      }
+     ]
+    },
+    {
+     "noi": "[She is used to working late.] Cô ấy đã quen làm việc muộn.",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Đã quen rồi, dùng [working].",
+     "lam": [
+      {
+       "gach": "v1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Nhân sự",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "Mr. Long [[c0a|used to be]] a trainee here.",
+     "vi": "Anh Long từng là học viên ở đây."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "Our trainees [[c1a|are used to working]] long hours.",
+     "vi": "Học viên của chúng tôi đã quen làm việc nhiều giờ."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "[Mr. Long used to be a trainee here.] Anh Long từng là học viên ở đây.",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "Trước đây đúng, giờ không còn, dùng [used to] cộng động từ nguyên mẫu.",
+     "lam": [
+      {
+       "gach": "c0a"
+      }
+     ]
+    },
+    {
+     "noi": "[Our trainees are used to working long hours.] Học viên của chúng tôi đã quen làm việc nhiều giờ.",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "Đã quen với việc gì, dùng [be used to] cộng động từ thêm [ing].",
+     "lam": [
+      {
+       "gach": "c1a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Mr. Bao used to ___ for a bank before he started his own business.",
+     "lua_chon": [
+      "works",
+      "working",
+      "worked",
+      "work"
+     ],
+     "dap_an": 3,
+     "giai_thich": [
+      "Đáp án là work: sau used to là động từ nguyên mẫu.",
+      "Đáp án là work: sau used to là động từ nguyên mẫu.",
+      "Đáp án là work: sau used to là động từ nguyên mẫu.",
+      "Sau used to là động từ nguyên mẫu."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "The staff are used to ___ with international clients.",
+     "lua_chon": [
+      "dealt",
+      "dealing",
+      "deals",
+      "deal"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là dealing: sau be used to là động từ thêm ing.",
+      "Sau be used to là động từ thêm ing.",
+      "Đáp án là dealing: sau be used to là động từ thêm ing.",
+      "Đáp án là dealing: sau be used to là động từ thêm ing."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau [used to] là động từ nguyên mẫu."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: sau [used to] là động từ nguyên mẫu. Bạn chọn lại nhé."
+      },
+      "1": {
+       "noi": "Chưa đúng. Gợi ý: sau [used to] là động từ nguyên mẫu. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: sau [used to] là động từ nguyên mẫu. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[Mr. Bao used to work for a bank before he started his own business.] Sau [used to] là động từ nguyên mẫu."
+     },
+     "giai": {
+      "noi": "Vì sau [used to] là động từ nguyên mẫu."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau [be used to] là động từ thêm [ing]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: sau [be used to] là động từ thêm [ing]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: sau [be used to] là động từ thêm [ing]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: sau [be used to] là động từ thêm [ing]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "[The staff are used to dealing with international clients.] Sau [be used to] là động từ thêm [ing]."
+     },
+     "giai": {
+      "noi": "Vì sau [be used to] là động từ thêm [ing]."
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,305 @@
+{
+ "id": "np-each-every-all",
+ "ten": "Each, every và all",
+ "nhom": "Ngữ pháp · Lượng từ và đại từ",
+ "so": 97,
+ "chuong": {
+  "so": 11,
+  "ten": "Khách sạn và du lịch",
+  "bai": 6,
+  "tong": 9
+ },
+ "phan": [
+  {
+   "id": "p1",
+   "nhan": "Ý chính",
+   "tieu_de": "Each, every và all",
+   "khoi": [
+    {
+     "id": "y0",
+     "kieu": "doan",
+     "chu": "[[y0a|each]] và [[y0b|every]] đi với [[y0c|danh từ số ít]]."
+    },
+    {
+     "id": "y1",
+     "kieu": "doan",
+     "chu": "[[y1a|all]] đi với [[y1b|danh từ số nhiều]]."
+    },
+    {
+     "id": "ct",
+     "kieu": "cong_thuc",
+     "chu": "each / every + N số ít · all + N số nhiều"
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Bài này mình học [Each], [every] và [all].",
+     "lam": [
+      {
+       "tro": "p1"
+      }
+     ]
+    },
+    {
+     "noi": "[each] và [every] đi với danh từ số ít.",
+     "lam": [
+      {
+       "to": "y0a"
+      },
+      {
+       "to": "y0b"
+      },
+      {
+       "to": "y0c",
+       "sau": 1500
+      }
+     ]
+    },
+    {
+     "noi": "[all] đi với danh từ số nhiều.",
+     "lam": [
+      {
+       "to": "y1a"
+      },
+      {
+       "to": "y1b",
+       "sau": 780
+      }
+     ]
+    },
+    {
+     "noi": "Công thức: [each] và [every] cộng danh từ số ít, [all] cộng danh từ số nhiều.",
+     "lam": [
+      {
+       "to": "ct"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2",
+   "nhan": "Ví dụ",
+   "tieu_de": "Áp vào câu",
+   "khoi": [
+    {
+     "id": "v0",
+     "kieu": "vi_du",
+     "en": "[[v0a|Every]] employee [[v0b|has]] a parking card.",
+     "vi": "Mỗi nhân viên đều có thẻ đỗ xe."
+    },
+    {
+     "id": "v1",
+     "kieu": "vi_du",
+     "en": "[[v1a|All]] employees [[v1b|have]] a parking card.",
+     "vi": "Tất cả nhân viên đều có thẻ đỗ xe."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Ví dụ nhé: [Every employee has a parking card.]",
+     "lam": [
+      {
+       "tro": "v0"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [every] là số ít, động từ dùng [has].",
+     "lam": [
+      {
+       "gach": "v0a"
+      },
+      {
+       "gach": "v0b"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [All employees have a parking card.]",
+     "lam": [
+      {
+       "tro": "v1"
+      }
+     ]
+    },
+    {
+     "noi": "Sau [all] là số nhiều, động từ dùng [have].",
+     "lam": [
+      {
+       "gach": "v1a"
+      },
+      {
+       "gach": "v1b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p2c",
+   "nhan": "Theo chủ đề",
+   "tieu_de": "Khách sạn và du lịch",
+   "khoi": [
+    {
+     "id": "c0",
+     "kieu": "vi_du",
+     "en": "[[c0a|Every]] room [[c0b|has]] a sea view.",
+     "vi": "Phòng nào cũng nhìn ra biển."
+    },
+    {
+     "id": "c1",
+     "kieu": "vi_du",
+     "en": "[[c1a|All]] guests [[c1b|receive]] a free breakfast.",
+     "vi": "Mọi khách đều được ăn sáng miễn phí."
+    }
+   ],
+   "giang": [
+    {
+     "noi": "Giờ áp vào chủ đề khách sạn và du lịch: [Every room has a sea view.]",
+     "lam": [
+      {
+       "tro": "c0"
+      }
+     ]
+    },
+    {
+     "noi": "[every] đi với danh từ số ít và động từ số ít.",
+     "lam": [
+      {
+       "gach": "c0a"
+      },
+      {
+       "gach": "c0b"
+      }
+     ]
+    },
+    {
+     "noi": "Thêm một câu: [All guests receive a free breakfast.]",
+     "lam": [
+      {
+       "tro": "c1"
+      }
+     ]
+    },
+    {
+     "noi": "[all] đi với danh từ số nhiều: [guests receive].",
+     "lam": [
+      {
+       "gach": "c1a"
+      },
+      {
+       "gach": "c1b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pbt",
+   "nhan": "Luyện tập",
+   "tieu_de": "2 câu kiểu đề thi",
+   "khoi": [
+    {
+     "id": "bt0",
+     "kieu": "bai_tap",
+     "cau": "Each participant ___ a certificate at the end of the course.",
+     "lua_chon": [
+      "are receiving",
+      "receives",
+      "receive",
+      "have received"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là receives: sau each là số ít, động từ thêm s.",
+      "Sau each là số ít, động từ thêm s.",
+      "Đáp án là receives: sau each là số ít, động từ thêm s.",
+      "Đáp án là receives: sau each là số ít, động từ thêm s."
+     ]
+    },
+    {
+     "id": "bt1",
+     "kieu": "bai_tap",
+     "cau": "___ the documents are stored in the shared folder.",
+     "lua_chon": [
+      "Every",
+      "All",
+      "Much",
+      "Each"
+     ],
+     "dap_an": 1,
+     "giai_thich": [
+      "Đáp án là All: documents số nhiều và động từ are, dùng all.",
+      "Documents số nhiều và động từ are, dùng all.",
+      "Đáp án là All: documents số nhiều và động từ are, dùng all.",
+      "Đáp án là All: documents số nhiều và động từ are, dùng all."
+     ]
+    }
+   ],
+   "giang": [
+    {
+     "bai_tap": "bt0",
+     "noi": "Giờ thử sức nhé. Chọn đáp án đúng.",
+     "lam": [
+      {
+       "tro": "bt0"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! Sau [each] là số ít, động từ thêm [s]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: sau [each] là số ít, động từ thêm [s]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: sau [each] là số ít, động từ thêm [s]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: sau [each] là số ít, động từ thêm [s]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [receives], vì sau [each] là số ít, động từ thêm [s]."
+     },
+     "giai": {
+      "noi": "Vì sau [each] là số ít, động từ thêm [s]."
+     }
+    },
+    {
+     "bai_tap": "bt1",
+     "noi": "Câu tiếp theo.",
+     "lam": [
+      {
+       "tro": "bt1"
+      }
+     ],
+     "dung": {
+      "noi": "Chính xác! [documents] số nhiều và động từ [are], dùng [all]."
+     },
+     "sai": {
+      "0": {
+       "noi": "Chưa đúng. Gợi ý: [documents] số nhiều và động từ [are], dùng [all]. Bạn chọn lại nhé."
+      },
+      "2": {
+       "noi": "Chưa đúng. Gợi ý: [documents] số nhiều và động từ [are], dùng [all]. Bạn chọn lại nhé."
+      },
+      "3": {
+       "noi": "Chưa đúng. Gợi ý: [documents] số nhiều và động từ [are], dùng [all]. Bạn chọn lại nhé."
+      }
+     },
+     "bo_qua": {
+      "noi": "Đáp án là [All], vì [documents] số nhiều và động từ [are], dùng [all]."
+     },
+     "giai": {
+      "noi": "Vì [documents] số nhiều và động từ [are], dùng [all]."
+     }
+    },
+    {
+     "noi": "Xong bài rồi, bạn nhớ ôn lại nhé!"
+    }
+   ]
+  }
+ ]
+}
