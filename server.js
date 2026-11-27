@@ -88,7 +88,7 @@ const SEGMENTS = {
   team: { icon: '🥊', name: 'So găng 2 đội', kind: 'giải trí', rule: 'Gõ tên đội để vào đội · trả lời đúng & tặng quà kéo điểm cho đội' },
   type: { icon: '✍️', name: 'Nghe & gõ chính tả', kind: 'học', rule: 'Nghe đọc + nhìn nghĩa, gõ từ tiếng Anh — gợi ý chữ cái mở dần', sec: 15 },
   // 4 kênh theo mốc TOEIC (11/11/2026): dưới 450 · 450–650 · 650–800 · 800+. Lệnh chạy từng kênh: npm run demo:duoi450 … (package.json).
-  //   dưới 450: word (từ 300+400), emoji (17/11), irrfill + irrfind (17/11, động từ bất quy tắc), bricky (19/11), oneletter (19/11, Thêm bớt 1 chữ), scramble, startend, listenmean, hunt, chain (16/11 thêm Ghép chữ + Nghe – nghĩa cho nhiều game) · 450–650: word (500+600), scramble (17/11, --level mid), fillin, listenmean, errhunt, crossword
+  //   dưới 450: word (từ 300+400), emoji (17/11), flag (26/11, Đoán quốc kỳ), irrfill + irrfind (17/11, động từ bất quy tắc), bricky (19/11), oneletter (19/11, Thêm bớt 1 chữ), scramble, startend, listenmean, hunt, chain (16/11 thêm Ghép chữ + Nghe – nghĩa cho nhiều game) · 450–650: word (500+600), scramble (17/11, --level mid), fillin, listenmean, errhunt, crossword
   //   650–800: word (700), speedread, dictate · 800+: word (800+900), speedread (bài 800)
   // Các khung mới (word trở xuống) tính điểm riêng: nhanh nhất +10, hạng 2 +5, hạng 3 +3, người đúng sau đó +1.
   // Người chơi thử 11/11 đề nghị bỏ khung nghe, Săn từ, Giải ô chữ, Săn lỗi, Giờ học; người dùng chưa muốn bỏ nên vẫn giữ trong kênh.
@@ -130,9 +130,12 @@ const SEGMENTS = {
   // Thêm bớt 1 chữ (19/11/2026, kênh dưới 450): --mot-chu-file data/mot-chu.json (build_mot_chu.js). Điểm 10/5/3/1; VỀ ĐÍCH = ONE_RED câu cuối lượt
   // (từ rất dễ nhầm), điểm ×ONE_RED_MULT, giao diện lửa dùng chung với Bricky / Thế chữ. Xem khối Thêm bớt 1 chữ bên dưới.
   oneletter: { icon: '✂️', name: 'Thêm bớt 1 chữ', kind: 'học', rule: 'Thêm hoặc bớt đúng 1 chữ cái (theo lệnh trên màn) để thành từ có nghĩa, gõ cả từ vào bình luận (sai được gõ lại). Câu cuối là VỀ ĐÍCH: từ rất dễ nhầm, điểm ×2', sec: 15, total: 10, reveal: 6 },
+  // Đoán quốc kỳ (người dùng đặt 26/11/2026, kênh dưới 450): --flag-file data/quoc-ky.json (quoc-ky.js). 20 giây mỗi cờ; gõ tên nước bằng TIẾNG ANH
+  // (gõ tiếng Việt không tính); sau FLAG_OPTS_SEC giây mà chưa ai đúng thì hiện 4 tên nước để chọn và gõ lại. Điểm 10/5/3/1. Xem khối Đoán quốc kỳ bên dưới.
+  flag: { icon: '🚩', name: 'Đoán quốc kỳ', kind: 'giải trí', rule: 'Nhìn quốc kỳ, gõ tên nước bằng tiếng Anh vào bình luận (gõ tiếng Việt không tính, sai được gõ lại); sau 10 giây chưa ai đúng thì hiện 4 đáp án gợi ý', sec: 20, total: 10, reveal: 6 },
 };
 // Mặc định = kênh dưới 450 (11/11/2026). Chương trình cũ của bản Jaemy: --program-order class,quiz,scramble,listen,reverse,type
-const PROGRAM = String(arg('program-order', 'word,emoji,irrfill,scramble,startend,irrfind,bricky,haitu,listenmean,oneletter,hunt,chain')).split(',').filter((k) => SEGMENTS[k]);
+const PROGRAM = String(arg('program-order', 'word,emoji,irrfill,scramble,startend,flag,irrfind,bricky,haitu,listenmean,oneletter,hunt,chain')).split(',').filter((k) => SEGMENTS[k]);
 // Số câu mỗi lượt riêng từng khung, vd --seg-total word=20,fillin=10 (17/11/2026: kênh 450–650 gấp đôi Word, Điền từ).
 // Khung không đặt thì giữ `total` ở SEGMENTS, không có thì theo --questions. Đổi lúc đang chạy: /cmd {"cmd":"config","cfg":{"segTotal":{…}}}.
 function setSegTotals(m) {
@@ -221,7 +224,7 @@ function startEnd() {
 }
 // Khung Word / Start or End: nhanh nhất +10, hạng 2 +5, hạng 3 +3, những người đúng sau đó +1. Khung khác: 10, 8, 6, 4… tối thiểu 3.
 const RANK_PTS = [10, 5, 3];
-const ptsFor = (seg, rank) => (['word', 'startend', 'fillin', 'listenmean', 'errhunt', 'crossword', 'dictate', 'speedread', 'emoji', 'irrfill', 'irrfind', 'oneletter'].includes(seg) ? RANK_PTS[rank] ?? 1 : Math.max(3, 10 - 2 * rank));
+const ptsFor = (seg, rank) => (['word', 'startend', 'fillin', 'listenmean', 'errhunt', 'crossword', 'dictate', 'speedread', 'emoji', 'irrfill', 'irrfind', 'oneletter', 'flag'].includes(seg) ? RANK_PTS[rank] ?? 1 : Math.max(3, 10 - 2 * rank));
 
 // Săn từ: bảng dựng lúc chơi bằng san-tu.js (không còn file ma trận dựng sẵn). HUNT_PTS = điểm cho mỗi chỗ một từ nằm trên bảng;
 // HUNT_HINT_SEC = sau ngần ấy giây của lượt mà chưa ai tìm được từ nào thì một từ nhấp nháy gợi ý.
@@ -369,6 +372,30 @@ function pickEmoji() {
 function emojiSlots(rev) {
   const E = round.emoji, lv = rev ? 0 : hintLevel();
   return E.words.map((w, k) => [...w].map((ch, i) => (rev ? { ch, kind: 'full' } : (lv >= 1 && i === 0) || (lv >= 2 && E.open[k].includes(i)) ? { ch, kind: 'cho' } : { ch: '', kind: 'empty' })));
+}
+// ---------- khung 🚩 Đoán quốc kỳ ----------
+// Kho soạn tay trong data/quoc-ky.json (kiểm bằng node check_quoc_ky.js), ảnh ở public/img/co/<mã>.svg; chọn cờ, 4 gợi ý và chấm bình luận ở quoc-ky.js.
+// Luật (người dùng đặt 26/11/2026): 20 giây mỗi cờ; phải gõ tên nước bằng TIẾNG ANH mới tính (gõ đúng nước bằng tiếng Việt thì màn nhắc "gõ tiếng Anh");
+// đúng FLAG_OPTS_SEC giây mà CHƯA AI đúng thì hiện 4 tên nước (1 tên đúng) để người xem chọn và gõ lại; đã có người đúng trước mốc đó thì không hiện.
+// round.flag.opts: 'wait' = chưa tới mốc · 'on' = đang hiện 4 gợi ý · 'off' = đã có người đúng trước mốc. Bot chỉ gõ đúng sau mốc (bots.js) để
+// lúc vắng người thật gợi ý vẫn hiện.
+const FLAG_FILE = path.resolve(__dirname, String(arg('flag-file', 'data/quoc-ky.json')));
+const FLAG_OPTS_SEC = 10;
+let FLAGQ = null;
+function flagBank() {
+  if (!FLAGQ) {
+    FLAGQ = require('./quoc-ky').create(JSON.parse(fs.readFileSync(FLAG_FILE, 'utf8')), path.join(__dirname, 'public', 'img', 'co'));
+    if (!FLAGQ.all.length) throw new Error(`Đoán quốc kỳ: chưa có nước nào đủ ảnh trong public/img/co/`);
+    console.log(`🚩 Đoán quốc kỳ: ${FLAGQ.all.length} nước (${FLAGQ.easy} quen thuộc, ${FLAGQ.hard} khó hơn) từ ${path.relative(__dirname, FLAG_FILE)}`);
+  }
+  return FLAGQ;
+}
+// Tới mốc FLAG_OPTS_SEC giây (tính từ lúc đồng hồ chạy: câu về đích đứng FINISH_GRACE giây đầu) thì chốt có hiện 4 gợi ý hay không. true = vừa đổi trạng thái.
+function flagTick() {
+  const F = round.flag;
+  if (F.opts !== 'wait' || now() - timer.startedAt < FLAG_OPTS_SEC * 1000) return false;
+  F.opts = round.winners.length ? 'off' : 'on';
+  return true;
 }
 // Hai khung Động từ bất quy tắc: kho soạn tay trong data/dong-tu-bqt.json (kiểm bằng node check_bqt.js), câu hỏi dựng ở irregular.js.
 const IRR_FILE = path.resolve(__dirname, String(arg('irr-file', 'data/dong-tu-bqt.json')));
@@ -1212,6 +1239,19 @@ function publicState() {
       s.feed = round.feed.slice(-12);
       return s;
     }
+    if (round.mode === 'flag') {
+      // Lúc hỏi chỉ gửi ảnh cờ; 4 tên nước chỉ gửi khi đã tới mốc gợi ý (opts === 'on'); đáp án, tên tiếng Việt, audio chỉ gửi khi công bố.
+      // optsIn = số giây còn lại tới mốc gợi ý lúc gửi (màn live tự đếm), chỉ có khi chưa ai đúng.
+      const F = round.flag, on = F.opts === 'on';
+      s.q = { mode: 'flag', img: `img/co/${F.q.c}.svg`, options: on ? F.options : null,
+        ...(!rev && F.opts === 'wait' && !round.winners.length && { optsAt: timer.startedAt + FLAG_OPTS_SEC * 1000 }),
+        ...(rev && { w: F.q.en, m: F.q.vi, answer: on ? F.answerIdx : null, audio: audioUrl(F.q.en) }) };
+      s.winners = round.winners.length;
+      s.prev = prev;
+      s.board = gameBoard();
+      s.feed = round.feed.slice(-12);
+      return s;
+    }
     if (round.mode === 'haitu') {
       // Ô chưa ai hái: chỉ gửi ảnh, tên tiếng Việt, số chữ cái (và chữ đầu khi tới mức gợi ý); tên tiếng Anh chỉ gửi khi đã rụng hoặc lúc công bố.
       const F = round.fr, hint = !rev && brickyHint(), lead = haituLead();
@@ -1361,7 +1401,7 @@ function setPhase(p, sec) {
 // FINISH_GRACE giây cho màn chuyển (round.finGrace; bots.js / sim.js chờ hết rồi mới gõ). Giải ô chữ: về đích = hàng cuối, hoặc vòng
 // đoán từ khoá cuối nếu có (từ khoá lúc đó +100). Màn chuyển chạy một lần mỗi lượt (game.finShown), "Đổi từ khác" không chạy lại.
 // Gắn ở setPhase('question') ngay sau khi câu mới vừa dựng xong (round.fin chưa đặt), trước push() / bot / mô phỏng.
-const FINISH_SEGS = new Set(['emoji', 'irrfill', 'scramble', 'startend', 'irrfind', 'listenmean', 'hunt', 'haitu', 'fillin', 'errhunt', 'speedread', 'dictate', 'crossword']);
+const FINISH_SEGS = new Set(['emoji', 'flag', 'irrfill', 'scramble', 'startend', 'irrfind', 'listenmean', 'hunt', 'haitu', 'fillin', 'errhunt', 'speedread', 'dictate', 'crossword']);
 const FINISH_MULT = 2, FINISH_GRACE = 4;
 function markFinish() {
   if (!round || !game || round.fin !== undefined || !FINISH_SEGS.has(game.seg) || CFG.style !== 'program') return;
@@ -1669,6 +1709,22 @@ function startEmojiQuestion() {
   botsAsk(round);
 }
 
+// Khung Đoán quốc kỳ. round.word.w = tên nước tiếng Anh (màn điều khiển, "Câu trước", chặn AI lộ đáp án dùng chung với khung gõ từ).
+// 4 gợi ý chọn sẵn từ đầu câu nhưng chỉ gửi ra màn khi flagTick() bật. Câu về đích (markFinish, gắn sau khi dựng câu) lấy nước khó hơn:
+// biết trước nhờ cùng điều kiện với markFinish.
+function startFlagQuestion() {
+  const Q = flagBank(), final = CFG.style === 'program' && game.total > 1 && game.qNo + 1 >= game.total;
+  const q = Q.pick(final), sec = SEGMENTS.flag.sec;
+  game.qNo++;
+  questionsTotal++;
+  round = { word: { w: q.en, m: q.vi, r: '', pos: '' }, sec, winners: [], realWinners: 0, answered: new Set(), feed: [], lastHint: 0, mode: 'flag', demo: q.en,
+    flag: { q, opts: 'wait', ...Q.options(q) } };
+  setPhase('question', sec);
+  push();
+  sim?.onQuestion(round);
+  botsAsk(round);
+}
+
 // Khung Chia động từ (mode "Chia từ" của game Động từ bất quy tắc). round.word.w = đáp án (màn điều khiển, "Câu trước", chặn AI lộ đáp án, bot và
 // người xem ảo gõ đáp án đều dùng chung với khung gõ từ). Chấm đúng: gõ đúng từ còn thiếu (mọi dạng được chấp nhận) hoặc gõ lại cả hàng.
 function startIrrFillQuestion() {
@@ -1925,6 +1981,7 @@ function startQuestion(replace = false) {
   if (game.seg === 'dictate') return startDictQuestion();
   if (game.seg === 'speedread') return startReadQuestion();
   if (game.seg === 'emoji') return startEmojiQuestion();
+  if (game.seg === 'flag') return startFlagQuestion();
   if (game.seg === 'irrfill') return startIrrFillQuestion();
   if (game.seg === 'irrfind') return startIrrFindQuestion();
   if (game.seg === 'bricky') return startBrickyQuestion();
@@ -2075,6 +2132,7 @@ function tick() {
       push();
     }
   }
+  if (phase === 'question' && round.mode === 'flag' && flagTick()) push();
   if (phase === 'question' && (round.mode === 'type' || round.mode === 'scramble' || round.mode === 'emoji' || round.mode === 'irrfill' || round.mode === 'oneletter')) {
     const lv = hintLevel();
     if (lv !== round.lastHint) {
@@ -2174,6 +2232,23 @@ function onChat(user, text) {
         byHangul = true;
         item.text = '✓ đoán đúng';
       }
+    } else if (round.mode === 'flag') {
+      // Đúng tên nước bằng tiếng Anh = đúng; màn KHÔNG hiện chữ (không để người sau chép). Gõ đúng nước nhưng bằng tiếng Việt: không tính, màn nhắc
+      // gõ tiếng Anh. Gõ tên tiếng Anh của nước khác = 1 lần đoán sai (hiện ✗), vẫn gõ lại được. Bình luận khác là tán gẫu.
+      flagTick(); // bình luận tới đúng lúc qua mốc gợi ý: chốt trạng thái gợi ý trước khi tính người đúng
+      const c = flagBank().check(round.flag.q, msg);
+      if (c === 'ok') {
+        byHangul = true;
+        item.text = '✓ đoán đúng';
+      } else if (c) {
+        if (c === 'vi') item.text = '✗ gõ tiếng Anh nhé'; // không hiện chữ người xem gõ: tên tiếng Việt cũng làm lộ đáp án
+        else item.choice = c.other;
+        logFeed(item);
+        round.feed.push(item);
+        if (round.feed.length > 40) round.feed.splice(0, round.feed.length - 40);
+        broadcast({ type: 'feed', feed: round.feed.slice(-12) });
+        return;
+      }
     } else if (round.mode === 'irrfill') {
       // Gõ đúng từ còn thiếu (hoặc cả hàng V1 V2 V3). Đúng thì KHÔNG hiện chữ lên màn; sai là tán gẫu, gõ lại được.
       if (round.irr.ok.has(norm(msg))) {
@@ -2260,6 +2335,8 @@ function onChat(user, text) {
       return;
     }
   }
+  // Đoán quốc kỳ: người ĐÃ đúng gõ lại tên nước (tiếng Anh hay tiếng Việt) thì không hiện chữ, kẻo người sau chép
+  if (phase === 'question' && round?.mode === 'flag' && typeof flagBank().check(round.flag.q, msg) === 'string') item.text = '✓ đã đoán đúng';
   // Bình luận sai/tán gẫu: chỉ hiện mờ trong feed; AI chọn câu đáng đáp.
   logFeed(item);
   if (!user.bot) ai.hear(user, msg);
@@ -2620,6 +2697,8 @@ const ai = require('./ai').create({
       summary = `đang đố câu ${game.qNo}/${game.total} khung Nghe – chép: người xem nghe một câu tiếng Anh (phát lặp lại) rồi gõ lại nguyên câu; cứ 2 giây màn hiện thêm một loại chữ cái (không được nói nội dung câu). Bảng điểm: ${b}`;
     else if (phase === 'question' && round.mode === 'emoji')
       summary = `đang đố câu ${game.qNo}/${game.total} khung Đoán emoji: màn hiện vài emoji, người xem đoán rồi gõ từ hoặc cụm từ tiếng Anh; chữ cái gợi ý mở dần (không được nói đáp án, nghĩa tiếng Việt hay gợi ý chữ cái)`;
+    else if (phase === 'question' && round.mode === 'flag')
+      summary = `đang đố câu ${game.qNo}/${game.total} khung Đoán quốc kỳ: màn hiện quốc kỳ một nước, người xem gõ tên nước bằng tiếng Anh; sau 10 giây chưa ai đúng thì hiện 4 tên nước gợi ý (không được nói tên nước, kể cả tên tiếng Việt, châu lục hay đặc điểm nhận ra nước đó)`;
     else if (phase === 'question' && round.mode === 'errhunt')
       summary = `đang đố câu ${game.qNo}/${game.total} khung Săn lỗi: một câu tiếng Anh có đúng 1 từ sai (chính tả hoặc ngữ pháp), người xem gõ "từ sai - từ đúng" (không được nói từ nào sai hay cách sửa)`;
     else if (phase === 'question' && round.mode === 'cross')

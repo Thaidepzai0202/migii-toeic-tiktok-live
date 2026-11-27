@@ -44,6 +44,12 @@ window.KB = {
       chao: ['Nhìn emoji trên màn hình rồi gõ từ tiếng Anh để chơi cùng nha!', 'Vào chơi luôn nè, đoán được từ nào gõ từ đó nhé!'],
       moi: ['Mọi người đang xem ơi, mấy emoji này là từ tiếng Anh nào? Gõ thử vào bình luận nhé!', 'Ai đoán ra chưa? Gõ từ tiếng Anh vào bình luận nha!'],
     },
+    flag: {
+      ten: 'đoán quốc kỳ',
+      gon: ['Nhìn quốc kỳ, gõ tên nước bằng tiếng Anh vào bình luận nhé!', 'Phải gõ tên nước bằng tiếng Anh mới tính điểm nha!', 'Sau mười giây chưa ai đoán ra là có bốn đáp án gợi ý đó!', 'Gõ sai thì gõ lại được, cứ thử nha!'],
+      chao: ['Nhìn quốc kỳ trên màn hình rồi gõ tên nước bằng tiếng Anh để chơi cùng nha!', 'Vào chơi luôn nè, biết cờ nước nào thì gõ tên tiếng Anh nhé!'],
+      moi: ['Mọi người đang xem ơi, đây là quốc kỳ nước nào? Gõ tên tiếng Anh vào bình luận nhé!', 'Ai nhận ra lá cờ này không? Gõ tên nước bằng tiếng Anh nha!'],
+    },
     irrfill: {
       ten: 'chia động từ bất quy tắc',
       gon: ['Bảng ba cột đang khuyết một ô, gõ từ còn thiếu vào bình luận nhé!', 'Nguyên mẫu, quá khứ, phân từ hai: ô nào trống thì gõ từ đó nha!', 'Chữ cái gợi ý sẽ mở dần, gõ sai thì gõ lại được nha!'],
@@ -165,6 +171,10 @@ window.KB = {
   nhac_emoji: ['Gõ từ tiếng Anh vào bình luận nhé!', 'Đoán ra thì gõ liền nha!'],
   hoi_emoji: ['Mấy emoji này là từ gì?', 'Đoán xem đây là từ tiếng Anh nào!', 'Nhìn emoji, đoán từ nào!', 'Ai đoán ra trước nào?', 'Ghép nghĩa các emoji lại xem!', 'Từ nào đây cả nhà?', 'Emoji này nói gì nhỉ?'],
   dap_an_emoji: ['Đáp án là', 'Đáp án đúng là', 'Chính là'],
+  // Đoán quốc kỳ: câu hỏi, câu nhắc, và câu Ninja nói lúc 4 đáp án gợi ý vừa hiện (sau 10 giây chưa ai đúng)
+  nhac_flag: ['Gõ tên nước bằng tiếng Anh nhé!', 'Nhớ gõ tiếng Anh mới tính điểm nha!'],
+  hoi_flag: ['Đây là quốc kỳ nước nào?', 'Lá cờ này của nước nào nhỉ?', 'Ai nhận ra lá cờ này nào?', 'Cờ nước nào đây cả nhà?', 'Nước nào đây ta?', 'Nhìn cờ, đoán tên nước nào!'],
+  goi_y_flag: ['Gợi ý nè! Chọn một trong bốn tên rồi gõ lại nhé!', 'Bốn đáp án đây, chọn một tên rồi gõ vào bình luận nha!', 'Khó hả? Ninja gợi ý bốn tên nè, gõ lại tên đúng nhé!', 'Gợi ý tới rồi! Một trong bốn tên này đó, gõ thử đi nào!'],
   nhac_haitu: ['Gõ tên tiếng Anh của hình nhé!', 'Biết từ nào gõ từ đó nha!'],
   // Hái từ: {chu_de} = tên chủ đề của bảng (Trường học, Động vật hoang dã…)
   hoi_haitu: ['Chủ đề {chu_de}! Hái từ nào cả nhà!', 'Bảng mới, chủ đề {chu_de}. Ai hái được nhiều nhất nào?', 'Chủ đề {chu_de} nè, hình nào bạn biết tên tiếng Anh?', 'Nhanh tay hái từ nào, chủ đề {chu_de}!'],

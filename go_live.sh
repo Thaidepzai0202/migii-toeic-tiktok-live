@@ -26,7 +26,7 @@ GAME_PROFILE="$PWD/data/chrome-game"
 # Game của từng kênh (giữ giống các lệnh demo:<kênh> trong package.json)
 kenh_args() {
   case "$1" in
-    duoi450) echo "--program-order word,emoji,irrfill,scramble,startend,irrfind,bricky,haitu,listenmean,oneletter,hunt,chain --word-file data/word-300.json,data/word-400.json --seg-total word=20,emoji=20,irrfill=16,scramble=20,irrfind=16,bricky=8,haitu=6,listenmean=16,oneletter=20" ;;
+    duoi450) echo "--program-order word,emoji,irrfill,scramble,startend,flag,irrfind,bricky,haitu,listenmean,oneletter,hunt,chain --word-file data/word-300.json,data/word-400.json --seg-total word=20,emoji=20,flag=20,irrfill=16,scramble=20,irrfind=16,bricky=8,haitu=6,listenmean=16,oneletter=20" ;;
     450-650) echo "--program-order word,scramble,fillin,listenmean,errhunt,crossword --seg-total word=20,fillin=10 --level mid --word-file data/word-500.json,data/word-600.json --err-file data/san-loi-600.json --cross-file data/o-chu-600.json" ;;
     650-800) echo "--program-order word,speedread,dictate --word-file data/word-700.json --read-file data/doc-nhanh-700.json --dict-file data/nghe-chep-700.json" ;;
     tren800) echo "--program-order word,speedread --word-file data/word-800.json,data/word-900.json --read-file data/doc-nhanh-800.json" ;;

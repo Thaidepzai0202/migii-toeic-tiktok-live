@@ -168,6 +168,18 @@ const later = (sec, fn) => timers.push(setTimeout(fn, (sec + finG) * 1000));
         }
         return;
       }
+      if (round.mode === 'flag') {
+        // Đoán quốc kỳ: một nửa số câu là cờ "khó", không ai đoán ra trước mốc 10 giây (để thử cảnh hiện 4 gợi ý); hay gõ tên tiếng Việt
+        // (màn nhắc gõ tiếng Anh) hoặc nhầm sang một nước trong 4 gợi ý.
+        const F = round.flag, hard = Math.random() < 0.5, wrong = F.options.filter((_, i) => i !== F.answerIdx);
+        for (const u of crowd) {
+          if (Math.random() < 0.3) continue;
+          if (Math.random() < u.skill + 0.2) later(hard ? rand(11, roundSec - 1) : rand(3, roundSec - 1), () => onChat(u, Math.random() < 0.5 ? F.q.en : F.q.en.toLowerCase()));
+          else if (Math.random() < 0.5) later(rand(3, roundSec - 1), () => onChat(u, Math.random() < 0.35 ? F.q.vi : pick(wrong).toLowerCase()));
+          if (Math.random() < 0.12) later(rand(1, roundSec), () => onChat(u, pick(CHATTER)));
+        }
+        return;
+      }
       const g = round.grace || 0; // câu về đích đầu tiên (Thêm bớt 1 chữ): đồng hồ đứng g giây cho màn chuyển
       for (const u of crowd) {
         // Người giỏi trả lời sớm; người khác chờ gợi ý (35% / 70% thời gian).

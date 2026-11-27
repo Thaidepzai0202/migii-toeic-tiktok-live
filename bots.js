@@ -157,6 +157,20 @@ exports.create = ({ onChat, isLive = () => true }) => {
     }
   }
 
+  // Đoán quốc kỳ (26/11/2026): bot KHÔNG gõ đúng trước mốc 10 giây (FLAG_OPTS_SEC của server.js), để lúc chưa có người thật đoán đúng thì
+  // 4 gợi ý vẫn hiện như luật người dùng đặt. Trước mốc chỉ có vài bot đoán trật sang nước khác (hiện ✗); sau mốc ~55% gõ đúng, số còn lại
+  // gõ nhầm một trong 3 tên nhiễu. Có người thật đang chơi thì ít bot gõ đúng hơn và gõ muộn hơn.
+  const FLAG_OPTS = 10;
+  function flag(r, users, real) {
+    const sec = r.sec, F = r.flag, ok = F.q.en.toLowerCase(), wrong = F.options.filter((_, i) => i !== F.answerIdx).map((w) => w.toLowerCase());
+    for (const u of users) {
+      if (Math.random() < 0.25) continue;
+      if (Math.random() < 0.3) at(r, u, rand(3, FLAG_OPTS - 1), pick(wrong));
+      if (Math.random() < (real ? 0.4 : 0.55)) at(r, u, rand(FLAG_OPTS + (real ? 3 : 1.2), sec - 1.5), ok);
+      else if (Math.random() < 0.4) at(r, u, rand(FLAG_OPTS + 1, sec - 1.5), pick(wrong));
+    }
+  }
+
   // Bricky (người dùng chốt 19/11/2026): bot chỉ gõ chậm vài từ NGẮN trên bảng để bảng không đứng im lúc vắng người; không bao giờ gõ
   // từ dài nhất (từ dùng hết bộ chữ) nên không thể điền đủ bảng và không bao giờ nhận +10. Có người thật thì ít bot gõ hơn và gõ muộn hơn.
   // Hái từ: bot hái chậm vài ô để lưới không đứng im lúc vắng người; có người thật thì ít bot hơn, hái muộn hơn và mỗi bot chỉ 1 quả.
@@ -209,6 +223,7 @@ exports.create = ({ onChat, isLive = () => true }) => {
       if (r.mode === 'dictate') return dictate(r, users);
       if (r.mode === 'bricky') return bricky(r, users, real);
       if (r.mode === 'haitu') return haitu(r, users, real);
+      if (r.mode === 'flag') return flag(r, users, real);
       return typeWord(r, users, bank); // 'type', 'emoji', 'irrfill', 'oneletter' (Đoán emoji, Chia động từ, Thêm bớt 1 chữ: r.word.w là đáp án; Tìm bất quy tắc là 'mcq') và chế độ gõ từ cũ
     },
 

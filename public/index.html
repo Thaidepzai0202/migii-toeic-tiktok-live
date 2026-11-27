@@ -197,6 +197,26 @@
   #stage .slots.emo.many .wd { gap: 14px; }
   #stage .slots.emo.xmany .wd { gap: 8px; }
   #stage[data-seg="emoji"] #hurry { display: none; }
+  /* Đoán quốc kỳ (26/11/2026): ảnh cờ thay chữ câu hỏi (bo góc, viền mảnh để cờ nền trắng như Nhật không lẫn vào thẻ); 4 gợi ý là ô chữ
+     không gắn A–D; chưa tới mốc gợi ý thì chỗ đó là một dòng đếm giây. Số đếm lớn 3-2-1 nằm đúng chỗ cờ nên bỏ ở khung này. */
+  #stage .q.flagq { display: flex; flex-direction: column; align-items: center; gap: 18px; font-size: 76px; line-height: 1.1; text-shadow: none; }
+  #stage .q.flagq .fl { display: block; width: 460px; height: 345px; object-fit: cover; border-radius: 28px; box-shadow: 0 0 0 3px rgba(16, 32, 30, .14), 0 14px 34px rgba(16, 32, 30, .2); animation: flagIn .5s cubic-bezier(.2, 1.3, .4, 1) both; }
+  #stage .q.flagq.rev .fl { width: 330px; height: 248px; animation: none; }
+  #stage[data-seg="flag"] .wrap .sub { margin-top: 22px; }
+  #stage .q.flagq .fn { color: #12806f; font-weight: 800; animation: pop .35s ease-out; }
+  #stage .q.flagq .fn.lg { font-size: 60px; }
+  @keyframes flagIn { 0% { transform: scale(.7) rotate(-4deg); opacity: 0 } 100% { transform: none; opacity: 1 } }
+  #stage[data-seg="flag"] .opts.flago { display: grid; margin-top: 28px; }
+  #stage[data-seg="flag"] .opts.flago.wait { display: block; }
+  #stage .opts.flago .opt { justify-content: center; text-align: center; min-height: 104px; padding: 12px 20px; animation: pop .35s ease-out both; }
+  #stage .opts.flago .opt:nth-child(2) { animation-delay: .06s; } #stage .opts.flago .opt:nth-child(3) { animation-delay: .12s; } #stage .opts.flago .opt:nth-child(4) { animation-delay: .18s; }
+  #stage .opts.flago .opt .t { flex: none; font-size: 40px; font-weight: 700; }
+  #stage .opts.flago .opt .t.sm { font-size: 30px; }
+  #stage .opts.flago .fw { margin: 6px auto 0; width: fit-content; max-width: 100%; padding: 16px 30px; border-radius: 60px; background: #e4edea; color: #3b524e; font-size: 30px; font-weight: 500; text-align: center; }
+  #stage .opts.flago .fw b { color: #12806f; font-weight: 800; }
+  #stage[data-seg="flag"] #hurry { display: none; }
+  #stage.fire .q.flagq .fn { color: #ffe07a; }
+  #stage.fire .opts.flago .fw { background: rgba(255, 255, 255, .16); color: #ffe9d6; } #stage.fire .opts.flago .fw b { color: #fff; }
   /* Chia động từ (17/11/2026): bảng V1–V2–V3 ba hàng đặt trong #q. Hàng đố viền teal, ô khuyết rộng hơn hai ô kia (cột --c0/1/2 đặt lúc vẽ)
      và chứa ô chữ cái mở dần; hai hàng ví dụ nền xám nhạt. Bảng nằm đúng chỗ số đếm 3-2-1 nên bỏ số đếm ở khung này. */
   #stage .q.irrt { width: 888px; max-width: 888px; font-size: 48px; line-height: 1; letter-spacing: 0; text-shadow: none; }
@@ -1186,6 +1206,7 @@ const SEG_RULES = {
   listenmean: [`🎧 Nghe audio <b>một lần</b> · chữ cái hiện sẵn <b>một nửa</b>, mỗi giây thêm 1`, `💬 Gõ <b>A, B, C hoặc D</b> chọn nghĩa đúng`, `⚡ Nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
   chain: [`🔗 Đổi <b>1 chữ cái</b> để ra từ mới và <b>giữ từ</b> · chữ có <b>🔒</b> thì giữ nguyên`, `🏆 Hết <b>12 giây</b> không ai thế được, hoặc chuỗi đủ <b>40 từ</b>: người giữ từ thắng <b>+10</b>`, `🔥 Ván cuối <b>tăng tốc</b>: từ <b>5 chữ</b>, được đổi <b>2 chữ</b>`],
   emoji: [`🤔 Nhìn <b>emoji</b>, đoán <b>từ tiếng Anh</b>`, `💬 Gõ từ vào bình luận · sai thì <b>gõ lại</b> được · chữ gợi ý <b>mở dần</b>`, `⚡ Nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
+  flag: [`🚩 Nhìn <b>quốc kỳ</b>, đoán <b>tên nước</b>`, `💬 Gõ tên nước bằng <b>tiếng Anh</b> vào bình luận · sai thì <b>gõ lại</b> được`, `💡 Sau <b>10 giây</b> chưa ai đúng: hiện <b>4 đáp án gợi ý</b>`, `⚡ Nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
   irrfill: [`📝 Bảng động từ bất quy tắc <b>V1 – V2 – V3</b> khuyết <b>1 ô</b>`, `💬 Gõ <b>từ còn thiếu</b> vào bình luận · sai thì <b>gõ lại</b> được · chữ gợi ý <b>mở dần</b>`, `⚡ Nhanh nhất <b>+10</b> · rồi <b>+5</b>, <b>+3</b> · còn lại <b>+1</b>`],
   haitu: [`🍎 Mỗi bảng <b>một chủ đề</b>: lưới <b>16 ảnh</b> kèm tên tiếng Việt`, `💬 Gõ <b>tên tiếng Anh</b> để hái · ai gõ đúng trước thì từ rụng, <b>+2</b>`, `🏆 Hết bảng ai <b>hái nhiều nhất</b> được <b>+5</b>`],
   bricky: [`🧱 Cho <b>4–5 chữ cái</b>: ghép thành <b>từ tiếng Anh</b> từ 3 chữ trở lên`, `💬 Gõ từ vào bình luận · mỗi từ đúng <b>+1</b>, kể cả từ <b>ngoài bảng</b>`, `🏆 Người đầu tiên <b>điền đủ bảng</b> được <b>+10</b>`, `🔥 Bảng cuối: <b>6 chữ cái</b>, nhiều từ hơn, mọi điểm <b>×2</b>`],
@@ -1428,6 +1449,7 @@ function render() {
   if (mcq) { renderMcq(s); renderFillx(s); return renderSide(s); }
   if (s.q.mode === 'scramble') return renderScramble(s);
   if (s.q.mode === 'emoji') return renderEmoji(s);
+  if (s.q.mode === 'flag') return renderFlag(s);
   if (s.q.mode === 'irrfill') return renderIrrFill(s);
   if (s.q.mode === 'bricky') return renderBricky(s);
   if (s.q.mode === 'haitu') return renderHaiTu(s);
@@ -1462,6 +1484,43 @@ function renderEmoji(s) {
   if (sl.innerHTML !== html) sl.innerHTML = html;
   $('howto').innerHTML = rev ? `Đáp án: <b style="color:var(--green)">${esc(q.w)}</b> · ${s.winners} người đoán đúng` :
     `Gõ <b>từ tiếng Anh</b> vào bình luận · sai thì gõ lại`;
+  renderSide(s);
+}
+
+// ---- Đoán quốc kỳ (26/11/2026) ----
+// s.q.img = ảnh cờ. s.q.options = 4 tên nước, chỉ có sau 10 giây mà chưa ai đoán đúng (server chốt); ô gợi ý KHÔNG gắn chữ A–D vì người xem
+// phải gõ tên nước bằng tiếng Anh chứ không gõ chữ cái. Chưa tới mốc (s.q.optsAt) thì chỗ đó ghi "gợi ý sau N giây" và tự đếm.
+// Công bố: tên tiếng Anh thay câu hỏi dưới cờ, tên tiếng Việt ở dòng phụ, ô gợi ý đúng (nếu đang hiện) tô xanh.
+let flagView = { key: '', opts: false }, flagTimer = 0;
+function renderFlag(s) {
+  const rev = s.phase === 'reveal', q = s.q, key = `${s.game.no}.${s.game.qNo}`;
+  const el = $('q'), html = `<img class="fl" src="${esc(q.img)}" alt="">${rev ? `<b class="fn ko${q.w.length > 14 ? ' lg' : ''}">${esc(q.w)}</b>` : ''}`;
+  el.className = 'q flagq' + (rev ? ' rev' : '');
+  if (el.innerHTML !== html) el.innerHTML = html;
+  const won = s.winners ? `${s.winners} người đoán đúng` : 'Chưa ai đoán đúng';
+  $('sub').innerHTML = rev ? (q.m && q.m !== q.w ? `Tiếng Việt: <b>${esc(q.m)}</b>` : won) : 'Đây là quốc kỳ nước nào?';
+  $('slots').innerHTML = '';
+  const op = $('opts'), on = !!q.options;
+  op.className = 'opts flago' + (on ? '' : ' wait') + (rev ? ' rev' : '');
+  const oh = on ? q.options.map((o, i) => `<div class="opt${rev && i === q.answer ? ' right' : ''}"><span class="t ko${o.length > 14 ? ' sm' : ''}">${esc(o)}</span></div>`).join('')
+    : !rev && q.optsAt ? '<div class="fw">💡 Chưa ai đoán ra thì <b id="flagIn"></b> giây nữa có <b>4 đáp án gợi ý</b></div>'
+    : !rev && s.winners ? '<div class="fw">✅ Đã có người đoán đúng · câu này <b>không có gợi ý</b></div>' : '';
+  if (op.innerHTML !== oh) op.innerHTML = oh;
+  if (flagView.key !== key) flagView = { key, opts: false };
+  if (on && !rev && !flagView.opts) { // 4 gợi ý vừa bật: Ninja nhắc một câu
+    flagView.opts = true;
+    beep(880, .12, .12); setTimeout(() => beep(1175, .16, .12), 120);
+    say([kb('goi_y_flag')]);
+  }
+  clearInterval(flagTimer);
+  const cd = () => {
+    const b = $('flagIn');
+    if (!b) return clearInterval(flagTimer); // đã sang màn khác
+    b.textContent = Math.max(1, Math.ceil((q.optsAt - (state?.paused ? state.pausedAt : Date.now() + clockSkew)) / 1000));
+  };
+  if (!on && !rev && q.optsAt) { cd(); flagTimer = setInterval(cd, 250); }
+  $('howto').innerHTML = rev ? (q.m && q.m !== q.w ? won : '') :
+    on ? `Chọn 1 trong 4 tên rồi <b>gõ lại tên đó</b> vào bình luận` : `Gõ <b>tên nước bằng tiếng Anh</b> vào bình luận · sai thì gõ lại`;
   renderSide(s);
 }
 
@@ -2798,6 +2857,7 @@ const SEG_INTRO = {
   listenmean: ['Đến giờ nghe và chọn nghĩa!', 300, 'Ninja chỉ đọc một lần, chữ cái sẽ hiện dần. Nghe thật kỹ rồi chọn nghĩa đúng nha!'],
   chain: ['Đến giờ Thế chữ!', 300, 'Mọi người cùng chơi nhé. Đổi một chữ cái để ra từ mới, ai nhanh tay thì giữ từ.', 250, 'Chữ nào có ổ khoá thì phải giữ nguyên.', 250, 'Hết mười hai giây không ai thế được thì người giữ từ thắng, cộng mười điểm!', 250, 'Ván cuối là ván tăng tốc: từ năm chữ cái, được đổi tới hai chữ.'],
   emoji: ['Đến giờ đoán emoji!', 300, 'Mỗi câu có vài emoji, mọi người đoán xem đó là từ tiếng Anh nào rồi gõ vào bình luận. Chữ cái gợi ý sẽ mở dần, ai đúng nhanh nhất được nhiều điểm nhất!'],
+  flag: ['Đến giờ đoán quốc kỳ!', 300, 'Màn hình hiện quốc kỳ của một nước, mọi người gõ tên nước đó bằng tiếng Anh vào bình luận nhé. Gõ tiếng Việt là không tính đâu nha.', 250, 'Sau mười giây mà chưa ai đoán ra thì Ninja cho bốn đáp án gợi ý. Ai đúng nhanh nhất được nhiều điểm nhất!'],
   startend: ['Thử thách Start or End!', 300, 'Gõ năm từ tiếng Anh bắt đầu hoặc kết thúc bằng chữ cho trước, cách nhau bằng dấu cách. Ai nhanh nhất được nhiều điểm nhất!'],
   irrfill: ['Đến giờ chia động từ bất quy tắc!', 300, 'Màn hình có bảng ba cột: nguyên mẫu, quá khứ và phân từ hai. Một ô đang bị khuyết, mọi người gõ từ còn thiếu vào bình luận nhé. Chữ cái gợi ý sẽ mở dần, ai đúng nhanh nhất được nhiều điểm nhất!'],
   haitu: ['Đến giờ Hái từ!', 300, 'Mỗi bảng là một chủ đề, có mười sáu ảnh kèm tên tiếng Việt. Biết hình nào thì gõ tên tiếng Anh của hình đó vào bình luận. Ai gõ đúng trước thì từ rụng và được hai điểm. Hết bảng, ai hái nhiều nhất được thưởng năm điểm!'],
@@ -2844,6 +2904,7 @@ const LINES = {
       ])];
     }
     if (s.q.mode === 'emoji') return [...lead, kb('hoi_emoji'), ...nhac(g, 'nhac_emoji')];
+    if (s.q.mode === 'flag') return [...lead, kb('hoi_flag'), ...nhac(g, 'nhac_flag')];
     if (s.q.mode === 'irrfill') return [...lead, kb('hoi_irrfill'), ...nhac(g, 'nhac_irrfill')];
     // Thêm bớt 1 chữ: đọc lệnh + nghĩa (người chỉ nghe vẫn biết đang đố gì); câu đỏ đầu tiên trễ 1,6 giây cho khớp màn chuyển
     if (s.q.mode === 'oneletter') return [...(s.q.redFirst ? [1600, kb('mot_chu_do'), 250] : s.q.red ? [] : lead), kb(s.q.k === 'add' ? 'hoi_mot_chu_them' : 'hoi_mot_chu_bot'), 200, `Nghĩa là ${m}.`, ...(s.q.red ? [] : nhac(g, 'nhac_mot_chu'))];
@@ -2899,6 +2960,7 @@ const LINES = {
     : s.q.mode === 'irrfill' ? [kb('dap_an_emoji'), 150, { audio: s.q.audio }, 250, ...(s.q.say || []).flatMap((a) => [200, { audio: a }])]
     : s.q.wq ? [kb('dap_an', { x: 'ABCD'[s.q.answer] }) + (s.q.wq.t === 'w2m' ? `, ${s.q.m}` : '') + '!', ...(s.q.wq.t === 'w2m' ? [] : [150, { audio: s.q.ansAudio }]), ...fx.callout(s)]
     : s.q.mode === 'emoji' ? [kb('dap_an_emoji'), 150, { audio: s.q.audio }, 200, `nghĩa là ${s.q.m}.`]
+    : s.q.mode === 'flag' ? [kb('dap_an_emoji'), 150, { audio: s.q.audio }, ...(s.q.m && s.q.m !== s.q.w ? [200, `tiếng Việt là ${s.q.m.replace(/\s*\(.*\)/, '')}.`] : [])]
     // Thêm bớt 1 chữ: cặp từ dễ nhầm thì đọc cả từ trên màn để so sánh
     : s.q.mode === 'oneletter' ? [kb('dap_an_emoji'), 150, { audio: s.q.audio }, ...(s.q.sm ? [250, kb('mot_chu_nham'), 150, { audio: s.q.say }, 150, `là ${s.q.sm}.`] : [])]
     : s.q.mode === 'scramble' ? ['Đáp án là', 150, { audio: s.q.audio }]
