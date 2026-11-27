@@ -24,7 +24,7 @@ Mục nào điền vào `.env` thì đã có sẵn dòng trong `.env.example`.
 | 10 | **Chạy `npm run build:audio` một lần trên máy live** để tạo sẵn phát âm ~1.400 từ | Phát âm được lấy lúc chơi; mất mạng thì chuyển sang giọng tiếng Anh của trình duyệt | — |
 | 11 | **Lịch live** để hiện trên màn cảm ơn cuối buổi | Màn cảm ơn ghi "Hẹn gặp lại ở phiên sau" | `NEXT_LIVE` |
 | 12 | **Mã mở màn điều khiển từ điện thoại** | Tự sinh mỗi lần chạy, in ra trong `data/server.log` | `CONTROL_KEY` |
-| 13 | **Repo GitHub** để đẩy code lên (tên, org, private/public) | Code chỉ nằm trên máy | `git remote add origin …` |
+| 13 | ~~Repo GitHub~~ **Đã có 27/11/2026**: `github.com/Thaidepzai0202/migii-toeic-tiktok-live`, tài khoản cá nhân, **public** (người dùng chọn). Font SVN-Avo không đẩy lên: máy khác cần video gia sư thì chép tay vào `public/fonts/` | — | remote `origin` |
 
 ## C. Cần xác nhận thêm
 

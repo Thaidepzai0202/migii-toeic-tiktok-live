@@ -96,7 +96,9 @@ Cách viết bài và chụp thử: [gia-su/README.md](gia-su/README.md).
 
 ## Git
 
-- Chưa có remote `origin`: đẩy lên GitHub khi người dùng cho tên repo. Commit message viết tiếng Việt như repo gốc.
-- `.env`, `data/scores-*.json` (chứa tên người xem), `data/en-audio/` nằm ngoài git.
+- `origin` là `github.com/Thaidepzai0202/migii-toeic-tiktok-live` (từ 27/11/2026), repo **public** do người dùng chọn: mọi thứ commit đều
+  công khai, nên không đưa khoá, tên người xem hay file bản quyền chưa rõ lên. Nhánh làm việc và nhánh mặc định: `migii-toeic-live`.
+  Commit message viết tiếng Việt như repo gốc.
+- `.env`, `data/scores-*.json` (chứa tên người xem), `data/en-audio/`, font SVN-Avo (`public/fonts/SVN-Avo*.ttf`, bản quyền chưa xác nhận) nằm ngoài git.
 - Kéo sửa lỗi từ bản Jaemy: `git fetch upstream && git merge upstream/main`. Xung đột thường ở `public/index.html`
   và `server.js` (chữ, màu, kho từ): giữ phần Migii, nhận phần sửa logic.
